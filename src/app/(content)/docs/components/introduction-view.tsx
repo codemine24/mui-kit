@@ -24,8 +24,8 @@ const sections = [
 
 export const IntroView = () => {
   return (
-    <Grid container spacing={2}>
-      <Grid size={{ xs: 12, md: 10 }}>
+    <Grid container spacing={2} columns={10}>
+      <Grid size={{ md: 10, lg: 8 }}>
         <Box>
           <CustomBreadCrumbs
             pathArr={[
@@ -220,7 +220,7 @@ export const IntroView = () => {
         </Box>
       </Grid>
 
-      <Grid size={{ xs: 0, md: 2 }}>
+      <Grid size={{ md: 0, lg: 2 }}>
         <OnThisPage sections={sections} />
       </Grid>
     </Grid>

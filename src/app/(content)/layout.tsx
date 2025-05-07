@@ -1,22 +1,19 @@
 "use client";
+import { Container } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import { ContentSidebar } from "./components/content-sidebar";
-import { Container, useTheme } from "@mui/material";
 
 export default function ContentLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const theme = useTheme();
   return (
     <Container maxWidth="xl" sx={{ position: "relative" }}>
       <Grid
         container
         spacing={0}
         sx={{
-          borderLeft: `.5px solid ${theme.palette.divider}`,
-          borderRight: `.5px solid ${theme.palette.divider}`,
           height: "calc(100vh - 124px)",
         }}
       >
@@ -24,8 +21,6 @@ export default function ContentLayout({
           size={{ xs: 0, md: 2 }}
           sx={{
             display: { xs: "none", md: "block" },
-            p: 2,
-            borderRight: `.5px solid ${theme.palette.divider}`,
             position: "sticky",
             top: 0,
             height: "calc(100vh - 124px)",

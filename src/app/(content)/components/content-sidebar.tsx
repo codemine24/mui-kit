@@ -77,7 +77,7 @@ export const ContentSidebar = ({
         borderColor: { xl: "divider" },
         display: "flex",
         flexDirection: "column",
-        p: variant === "drawer" ? 3 : 1,
+        p: variant === "drawer" ? 3 : 0,
         pt: variant === "drawer" ? 3 : 3,
         scrollbarWidth: "none",
         "&::-webkit-scrollbar": {
@@ -325,32 +325,7 @@ export const ContentSidebar = ({
         )}
       </List>
 
-      <Box
-        sx={{
-          mt: "auto",
-          p: 2,
-          bgcolor: "background.paper",
-          border: `.5px solid`,
-          borderColor: "divider",
-          textAlign: "center",
-        }}
-      >
-        <Typography variant="body2" color="text.secondary" sx={{ mb: 1 }}>
-          Want to contribute?
-        </Typography>
-        <Link href="/contribute" passHref>
-          <Typography
-            variant="body2"
-            sx={{
-              color: "primary.main",
-              textDecoration: "none",
-              "&:hover": { textDecoration: "underline" },
-            }}
-          >
-            Join our community!
-          </Typography>
-        </Link>
-      </Box>
+        
     </Box>
   );
 };

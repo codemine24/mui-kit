@@ -44,6 +44,7 @@ export const Header = () => {
   return (
     <AppBar
       position="sticky"
+      // top={30}
       color="default"
       elevation={0}
       sx={{
@@ -52,6 +53,7 @@ export const Header = () => {
       }}
     >
       <Container maxWidth="xl">
+        
         <Toolbar disableGutters>
           <Box sx={{ display: { xs: "none", md: "block" } }}>
             <Logo />
