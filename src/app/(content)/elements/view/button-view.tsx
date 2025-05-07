@@ -6,11 +6,11 @@ import { SectionTitle } from "@/components/core/section-title";
 import { OnThisPage } from "@/components/on-this-page";
 import { Box, Divider, Grid } from "@mui/material";
 import { button1CodeString } from "../code-string/button-code-string";
-import { Button1Preview } from "../preview/button1-preview";
-import { Button2Preview } from "../preview/button2-preview";
-import { Button3Preview } from "../preview/button3-preview";
-import { Button4Preview } from "../preview/button4-preview";
-import { Button5Preview } from "../preview/button5-preview";
+import { Button1Preview } from "../components/button/button-1";
+import { Button2Preview } from "../components/button/button-2";
+import { Button3Preview } from "../components/button/button-3.";
+import { Button4Preview } from "../components/button/button-4";
+import { Button5Preview } from "../components/button/button-5";
 
 export const ButtonView = () => {
   const sections = [
