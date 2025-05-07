@@ -12,7 +12,7 @@ export const lightPalette: PaletteOptions = {
     primary: "#111",
     secondary: "#555",
   },
-  divider: "#ddd",
+  divider: "#ebebeb",
 };
 
 export const darkPalette: PaletteOptions = {
@@ -27,5 +27,5 @@ export const darkPalette: PaletteOptions = {
     primary: "#fff",
     secondary: "#bbb",
   },
-  divider: "#3e3f3f",
+  divider: "#383939",
 };

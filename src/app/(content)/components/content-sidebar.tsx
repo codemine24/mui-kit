@@ -77,7 +77,7 @@ export const ContentSidebar = ({
         borderColor: { xl: "divider" },
         display: "flex",
         flexDirection: "column",
-        p: variant === "drawer" ? 3 : 1,
+        p: variant === "drawer" ? 3 : 0,
         pt: variant === "drawer" ? 3 : 3,
         scrollbarWidth: "none",
         "&::-webkit-scrollbar": {
@@ -222,7 +222,7 @@ export const ContentSidebar = ({
                           "&:before": {
                             content: '""',
                             position: "absolute",
-                            left: "5px",
+                            left: "8.5px",
                             top: 0,
                             height: "100%",
                             width: "1px",
@@ -251,7 +251,7 @@ export const ContentSidebar = ({
                                     left: 0,
                                     top: "25%",
                                     height: "50%",
-                                    width: "4px",
+                                    width: "2px",
                                     bgcolor: "primary.main",
                                     borderRadius: "0 2px 2px 0",
                                   },
@@ -261,7 +261,7 @@ export const ContentSidebar = ({
                                     left: 0,
                                     top: "25%",
                                     height: "50%",
-                                    width: "4px",
+                                    width: "2px",
                                     bgcolor: isActive(item.path)
                                       ? "primary.main"
                                       : "transparent",
@@ -305,7 +305,6 @@ export const ContentSidebar = ({
                         }}
                       >
                         <ListItemText
-                          sx={{ fontWeight: "bold" }}
                           primary={label}
                           primaryTypographyProps={{
                             variant: "body2",
@@ -325,32 +324,7 @@ export const ContentSidebar = ({
         )}
       </List>
 
-      <Box
-        sx={{
-          mt: "auto",
-          p: 2,
-          bgcolor: "background.paper",
-          border: `.5px solid`,
-          borderColor: "divider",
-          textAlign: "center",
-        }}
-      >
-        <Typography variant="body2" color="text.secondary" sx={{ mb: 1 }}>
-          Want to contribute?
-        </Typography>
-        <Link href="/contribute" passHref>
-          <Typography
-            variant="body2"
-            sx={{
-              color: "primary.main",
-              textDecoration: "none",
-              "&:hover": { textDecoration: "underline" },
-            }}
-          >
-            Join our community!
-          </Typography>
-        </Link>
-      </Box>
+        
     </Box>
   );
 };

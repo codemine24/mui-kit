@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
-import { AccordionView } from "../components/accordion-view";
-import { ButtonView } from "../components/button-view";
+import { AccordionView } from "../view/accordion-view";
+import { ButtonView } from "../view/button-view";
 
 export default async function Page({
   params,

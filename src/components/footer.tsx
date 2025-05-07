@@ -25,7 +25,7 @@ export const Footer = () => {
         >
           Built with ♥ by{" "}
           <Link
-            href="https://www.linkedin.com/in/fazlyalahiru/"
+            href="https://www.linkedin.com/company/codemine24/"
             target="_blank"
             sx={{
               color: "primary.main",
@@ -36,7 +36,7 @@ export const Footer = () => {
               },
             }}
           >
-            Fazly
+            Codemine
           </Link>
         </Typography>
       </Container>

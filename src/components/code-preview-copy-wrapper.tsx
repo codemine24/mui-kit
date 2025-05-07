@@ -54,7 +54,13 @@ export const CodePreviewCopyWrapper: React.FC<CodePreviewWrapperProps> = ({
         <Tab value="code" label="Code" />
       </Tabs>
 
-      <Box sx={{ bgcolor: "background.default",  p: 2, borderRadius: theme.shape.borderRadius}}>
+      <Box
+        sx={{
+          bgcolor: "background.default",
+          p: 2,
+          borderRadius: theme.shape.borderRadius,
+        }}
+      >
         {tab === "preview" ? (
           <Box>{preview}</Box>
         ) : (
@@ -64,7 +70,6 @@ export const CodePreviewCopyWrapper: React.FC<CodePreviewWrapperProps> = ({
               height: "410px",
               overflow: "auto",
               scrollbarWidth: "none",
-              
             }}
           >
             <Button
@@ -93,7 +98,7 @@ export const CodePreviewCopyWrapper: React.FC<CodePreviewWrapperProps> = ({
               {copySuccess ? "Copied" : "Copy"}
             </Button>
             <SyntaxHighlighter
-              language="tsx"              
+              language="tsx"
               style={getCustomSyntaxStyle(theme.palette.mode)}
             >
               {codeString}
