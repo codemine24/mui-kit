@@ -33,7 +33,6 @@ export default function ContentLayout({
         <Grid
           size={{ xs: 12, md: 10 }}
           sx={{
-            px: { xs: 2, lg: 4 },
             py: 4,
             overflowY: "auto",
             height: "calc(100vh - 124px)",

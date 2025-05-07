@@ -30,6 +30,7 @@ export const OnThisPage = ({ sections }: IProps) => {
         display: { md: "none", lg: "block" },
         pl: 2,
         width: { md: pxToRem(140), lg: pxToRem(210) },
+        border: "1px solid #e7e8e9",
       }}
     >
       <Typography variant="h6">On this page</Typography>
@@ -72,16 +73,15 @@ export const OnThisPage = ({ sections }: IProps) => {
       <Box
         sx={{
           mt: "auto",
-          p: { md: 0.7, lg: 1 },
+          p: 1,
           bgcolor: "background.paper",
           border: `.5px solid`,
           borderColor: "divider",
-          textAlign: "center",
           maxWidth: pxToRem(200),
         }}
       >
         <Typography variant="body2" color="text.secondary" sx={{ mb: 1 }}>
-          We are looking for sponsors!
+          We&apos;re looking for sponsors!
         </Typography>
         <Link href="/contribute">
           <Typography
