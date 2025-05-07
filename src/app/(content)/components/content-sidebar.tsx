@@ -222,7 +222,7 @@ export const ContentSidebar = ({
                           "&:before": {
                             content: '""',
                             position: "absolute",
-                            left: "5px",
+                            left: "8.5px",
                             top: 0,
                             height: "100%",
                             width: "1px",
@@ -251,7 +251,7 @@ export const ContentSidebar = ({
                                     left: 0,
                                     top: "25%",
                                     height: "50%",
-                                    width: "4px",
+                                    width: "2px",
                                     bgcolor: "primary.main",
                                     borderRadius: "0 2px 2px 0",
                                   },
@@ -261,7 +261,7 @@ export const ContentSidebar = ({
                                     left: 0,
                                     top: "25%",
                                     height: "50%",
-                                    width: "4px",
+                                    width: "2px",
                                     bgcolor: isActive(item.path)
                                       ? "primary.main"
                                       : "transparent",
