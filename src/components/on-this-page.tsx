@@ -1,3 +1,4 @@
+import { useOnThisPage } from "@/contexts/on-thispage-context";
 import { pxToRem } from "@/utils/pxToRem";
 import {
   Box,
@@ -9,13 +10,8 @@ import {
   useTheme,
 } from "@mui/material";
 
-interface IProps {
-  sections: {
-    id: string;
-    title: string;
-  }[];
-}
-export const OnThisPage = ({ sections }: IProps) => {
+export const OnThisPage = () => {
+  const { sections } = useOnThisPage();
   const handleScrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -28,12 +24,13 @@ export const OnThisPage = ({ sections }: IProps) => {
     <Box
       sx={{
         display: { md: "none", lg: "block" },
-        pl: 2,
+        py: 2,
         width: { md: pxToRem(140), lg: pxToRem(210) },
-        border: "1px solid #e7e8e9",
       }}
     >
-      <Typography variant="h6">On this page</Typography>
+      <Typography variant="body2" textTransform={"uppercase"} fontWeight={600}>
+        On this page
+      </Typography>
       <List dense>
         {sections.map((section) => (
           <ListItem
@@ -51,12 +48,12 @@ export const OnThisPage = ({ sections }: IProps) => {
                   component="button"
                   onClick={() => handleScrollToSection(section.id)}
                   sx={{
-                    color: "text.secondary",
-                    // textDecoration: "none",
+                    color: "text.primary",
+                    pl: 2,
                     textAlign: "left",
                     fontSize: { md: pxToRem(14), lg: pxToRem(15) },
-                    textDecoration: "underline",
-                    textDecorationColor: "#e7e8e9",
+                    textDecoration: "none",
+                    fontWeight: 500,
                     "&:hover": {
                       color: "primary.main",
                     },
@@ -73,28 +70,30 @@ export const OnThisPage = ({ sections }: IProps) => {
       <Box
         sx={{
           mt: "auto",
-          p: 1,
+          p: 2,
           bgcolor: "background.paper",
           border: `.5px solid`,
           borderColor: "divider",
           maxWidth: pxToRem(200),
         }}
       >
-        <Typography variant="body2" color="text.secondary" sx={{ mb: 1 }}>
+        <Typography
+          variant="body2"
+          color="text.primary"
+          sx={{ mb: 1, fontSize: { md: pxToRem(14), lg: pxToRem(15) } }}
+        >
           We&apos;re looking for sponsors!
         </Typography>
-        <Link href="/contribute">
-          <Typography
-            variant="body2"
-            sx={{
-              color: "primary.main",
-              textDecoration: "none",
-              "&:hover": { textDecoration: "underline" },
-            }}
-          >
-            Support this project
-          </Typography>
-        </Link>
+        <Typography
+          component={Link}
+          href="/"
+          variant="body2"
+          sx={{
+            color: "primary.main",
+          }}
+        >
+          Support this project
+        </Typography>
       </Box>
     </Box>
   );

@@ -305,7 +305,6 @@ export const ContentSidebar = ({
                         }}
                       >
                         <ListItemText
-                          sx={{ fontWeight: "bold" }}
                           primary={label}
                           primaryTypographyProps={{
                             variant: "body2",
