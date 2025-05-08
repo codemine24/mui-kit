@@ -1,3 +1,4 @@
+"use client";
 import { CodePreviewCopyWrapper } from "@/components/code-preview-copy-wrapper";
 import { CustomBreadCrumbs } from "@/components/core/breadcrumbs";
 import { PageTitle } from "@/components/core/page-title";
@@ -5,8 +6,16 @@ import { SectionTitle } from "@/components/core/section-title";
 import { Box, Divider } from "@mui/material";
 import { button1CodeString } from "../code-string/button-code-string";
 import Accordion1 from "../components/accordion/accordion-1";
+import { useOnThisPage } from "@/contexts/on-thispage-context";
+import React from "react";
 
 export const AccordionView = () => {
+  const { setOnThisPage, setSections } = useOnThisPage();
+
+  React.useEffect(() => {
+    setSections([]);
+    setOnThisPage(true);
+  }, []);
   return (
     <Box>
       <CustomBreadCrumbs

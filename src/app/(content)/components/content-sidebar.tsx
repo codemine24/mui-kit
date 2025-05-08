@@ -98,18 +98,44 @@ export const ContentSidebar = ({
 
       {/* Search */}
       <TextField
-        placeholder="Search..."
-        id="outlined-size-small"
+        placeholder="Search components..."
         size="small"
-        sx={{ width: "100%" }}
-        onChange={handleSearch}
+        variant="outlined"
         value={searchValue}
+        onChange={handleSearch}
+        fullWidth
+        InputProps={{
+          startAdornment: (
+            <Iconify
+              icon="eva:search-outline"
+              width={20}
+              style={{ marginRight: "10px" }}
+            />
+          ),
+        }}
+        sx={{
+          mb: 2,
+          backgroundColor: theme.palette.background.paper,
+          borderRadius: 1.5,
+          "& .MuiOutlinedInput-root": {
+            borderRadius: 1.5,
+            paddingLeft: 1,
+            fontSize: "0.875rem",
+            "&.Mui-focused fieldset": {
+              borderColor: "primary.main",
+              boxShadow: theme.shadows[1],
+            },
+          },
+          "& .MuiOutlinedInput-notchedOutline": {
+            borderColor: theme.palette.divider,
+          },
+          // border: "1px solid blue ",
+        }}
       />
-
-      <List sx={{ flexGrow: 1, mt: 2 }}>
+      <List sx={{ flexGrow: 1 }}>
         {/* search results */}
         {searchValue ? (
-          <Box>
+          <Box >
             <Typography
               variant="subtitle2"
               sx={{ mb: 2, color: "text.secondary" }}
@@ -180,7 +206,11 @@ export const ContentSidebar = ({
               return (
                 <React.Fragment key={key}>
                   {type === "button" && (
-                    <ListItem key={path || key} disablePadding >
+                    <ListItem
+                      key={path || key}
+                      disablePadding
+                      
+                    >
                       <Link href={path || ""} legacyBehavior passHref>
                         <ListItemButton
                           disableRipple
@@ -294,14 +324,14 @@ export const ContentSidebar = ({
                           },
                         }}
                       >
-                         <ListItemText
-                                    primary={label}
-                                    primaryTypographyProps={{
-                                      variant: "body2",
-                                      color: "text.primary",
-                                      fontSize: { xs: 15, sm: 16 },
-                                    }}
-                                  />
+                        <ListItemText
+                          primary={label}
+                          primaryTypographyProps={{
+                            variant: "body2",
+                            color: "text.primary",
+                            fontSize: { xs: 15, sm: 16 },
+                          }}
+                        />
                         {/* {label} */}
                         <ChevronRightIcon
                           sx={{

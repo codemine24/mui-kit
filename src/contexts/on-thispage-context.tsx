@@ -23,6 +23,7 @@ export const OnThisPageProvider = ({
   children: React.ReactNode;
 }) => {
   const [onThisPage, setOnThisPage] = React.useState<boolean>(false);
+  console.log(onThisPage, "onthispage from context...");
   const [sections, setSections] = React.useState<
     { id: string; title: string }[]
   >([]);
@@ -36,6 +37,8 @@ export const OnThisPageProvider = ({
     }),
     [onThisPage, sections]
   );
+
+  console.log(memoizedValue, "memoizedValue");
   return (
     <onThisPageContext.Provider value={memoizedValue}>
       {children}

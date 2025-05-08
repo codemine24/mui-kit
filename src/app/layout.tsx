@@ -6,6 +6,7 @@ import { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { TopHeader } from "@/components/top-header";
+import { OnThisPageProvider } from "@/contexts/on-thispage-context";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,21 +32,23 @@ export default function RootLayout({
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
       <body>
         <AppProvider>
-          <TopHeader />
-          <Header />
+          <OnThisPageProvider>
+            <TopHeader />
+            <Header />
 
-          <Box
-            sx={{
-              width: "100%",
-              px: 0,
-              overflow: "auto",
-              minHeight: "calc(100vh - 240px)",
-            }}
-          >
-            {children}
-          </Box>
+            <Box
+              sx={{
+                width: "100%",
+                px: 0,
+                overflow: "auto",
+                minHeight: "calc(100vh - 240px)",
+              }}
+            >
+              {children}
+            </Box>
 
-          <Footer />
+            <Footer />
+          </OnThisPageProvider>
         </AppProvider>
       </body>
     </html>
