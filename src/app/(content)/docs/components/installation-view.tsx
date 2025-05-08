@@ -21,12 +21,11 @@ const sections = [
 ];
 
 export const InstallationView = () => {
-  const { setSections, setOnThisPage } = useOnThisPage();
+  const { setSections } = useOnThisPage();
 
   React.useEffect(() => {
     setSections(sections);
-    setOnThisPage(true);
-  });
+  }, []);
   return (
     <Box>
       <CustomBreadCrumbs

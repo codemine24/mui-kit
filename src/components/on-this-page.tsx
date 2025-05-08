@@ -23,7 +23,7 @@ export const OnThisPage = () => {
   return (
     <Box
       sx={{
-        display: { md: "none", lg: "block" },
+        display: { xs: "none", md: "block" },
         py: 2,
         width: { md: pxToRem(140), lg: pxToRem(210) },
       }}

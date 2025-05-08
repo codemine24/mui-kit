@@ -1,5 +1,6 @@
 export type TContentSidebarMode =
-  | "DOCS"
+  | "INTRODUCTION"
+  | "INSTALLATION"
   | "ELEMENTS"
   | "BLOCKS"
   | "TEMPLATES"
