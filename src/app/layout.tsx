@@ -38,10 +38,10 @@ export default function RootLayout({
 
             <Box
               sx={{
-                width: "100%",
-                px: 0,
-                overflow: "auto",
-                minHeight: "calc(100vh - 240px)",
+                // width: "100%",
+                // px: 0,
+                // overflow: "auto",
+                // minHeight: "calc(100vh - 140px)",
               }}
             >
               {children}
