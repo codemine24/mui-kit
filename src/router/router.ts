@@ -93,7 +93,7 @@ export const contentSidebarPathGroups: ContentSidebarPathGroup[] = [
     items: [],
   },
   {
-    key: "ELEMENTS_COMPONENTS",
+    key: "ELEMENTS",
     label: "Elements",
     items: elements,
     path: PATHS.ELEMENTS.OVERVIEW,

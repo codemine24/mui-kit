@@ -4,6 +4,7 @@ import { Logo } from "@/components/core/logo";
 import { Iconify } from "@/components/iconify";
 import { contentSidebarPathGroups } from "@/router/router";
 import { TContentSidebarMode } from "@/types/content.types";
+import { getRandomColor } from "@/utils/colors";
 import { ChevronRight as ChevronRightIcon } from "@mui/icons-material";
 import {
   Box,
@@ -16,7 +17,6 @@ import {
   Typography,
   useTheme,
 } from "@mui/material";
-import { alpha } from "@mui/material/styles";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -30,7 +30,7 @@ export const ContentSidebar = ({
   variant = "sidebar",
 }: ContentSidebarProps) => {
   const theme = useTheme();
-  const [open, setOpen] = useState<TContentSidebarMode | "">("INTRODUCTION");
+  const [open, setOpen] = useState<TContentSidebarMode | "">("ELEMENTS");
   const [searchValue, setSearchValue] = useState("");
   const [searchResults, setSearchResults] = useState<
     { key: string; label: string; path: string }[]
@@ -176,26 +176,29 @@ export const ContentSidebar = ({
           </Box>
         ) : (
           contentSidebarPathGroups.map(
-            ({ key, label, items, path, type, icon }) => {
+            ({ key, label, items, path, type, icon }, index) => {
               return (
                 <React.Fragment key={key}>
                   {type === "button" && (
-                    <ListItem key={path || key} disablePadding>
+                    <ListItem key={path || key} disablePadding >
                       <Link href={path || ""} legacyBehavior passHref>
                         <ListItemButton
                           disableRipple
                           sx={{
-                            borderRadius: 2,
-                            px: 1,
+                            px: 0,
                             py: 1,
                             gap: 1.5,
                             mb: 1,
                             alignItems: "center",
+
                             color: isActive(path || "")
-                              ? "primary.main"
+                              ? "text.primary"
                               : "text.secondary",
                             "&:hover": {
-                              bgcolor: "none",
+                              bgcolor: "transparent",
+                            },
+                            ".MuiTypography-root": {
+                              fontSize: { md: "0.9rem", lg: "1rem" },
                             },
                           }}
                         >
@@ -206,14 +209,16 @@ export const ContentSidebar = ({
                               height: 32,
                               borderRadius: 1,
                               bgcolor: isActive(path || "")
-                                ? alpha(theme.palette.primary.main, 0.09)
-                                : "grey.100",
+                                ? getRandomColor(index)
+                                : "none",
                               display: "flex",
                               alignItems: "center",
                               justifyContent: "center",
                               color: isActive(path || "")
-                                ? "text.primary"
-                                : "text.secondary",
+                                ? "white"
+                                : getRandomColor(index),
+                              border: ".5px solid",
+                              borderColor: theme.palette.divider,
                             }}
                           >
                             <Iconify icon={icon} />
@@ -241,13 +246,15 @@ export const ContentSidebar = ({
                             position: "relative",
                             pl: 2,
                             px: 0,
-                            color: "text.secondary",
-                            // textTransform: "uppercase",
+
                             "&:hover": {
                               bgcolor: "transparent",
                             },
                             "&:hover .MuiTypography-root": {
                               color: "primary.main",
+                            },
+                            ".MuiTypography-root": {
+                              fontSize: { md: "0.9rem", lg: "1rem" },
                             },
                           }}
                         >
@@ -257,7 +264,7 @@ export const ContentSidebar = ({
                               variant: "body2",
                               color: isActive(path || "")
                                 ? "primary.main"
-                                : "text.secondary",
+                                : "text.primary",
                               fontWeight: 500,
                             }}
                           />
@@ -282,27 +289,28 @@ export const ContentSidebar = ({
                           "&:hover .MuiTypography-root": {
                             color: "primary.main",
                           },
+                          ".MuiTypography-root": {
+                            fontSize: { md: "0.9rem", lg: "1rem" },
+                          },
                         }}
                       >
-                        <Typography
-                          variant="subtitle2"
-                          sx={{
-                            px: 0,
-                            py: 1,
-                            color: "text.secondary",
-
-                          }}
-                        >
-                          {label}
-                        </Typography>
+                         <ListItemText
+                                    primary={label}
+                                    primaryTypographyProps={{
+                                      variant: "body2",
+                                      color: "text.primary",
+                                      fontSize: { xs: 15, sm: 16 },
+                                    }}
+                                  />
+                        {/* {label} */}
                         <ChevronRightIcon
                           sx={{
                             transform:
                               open === key ? "rotate(90deg)" : "rotate(0deg)",
                             transition: "transform 200ms",
                             color: "text.secondary",
-                            fontSize: 16, 
-                            ml: 1
+                            fontSize: 16,
+                            ml: 1,
                           }}
                         />
                       </ListItemButton>
@@ -357,6 +365,9 @@ export const ContentSidebar = ({
                                         ? "primary.main"
                                         : "transparent",
                                       borderRadius: "0 2px 2px 0",
+                                    },
+                                    ".MuiTypography-root": {
+                                      fontSize: { md: "0.9rem", lg: "1rem" },
                                     },
                                   }}
                                 >
