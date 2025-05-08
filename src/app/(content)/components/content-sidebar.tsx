@@ -135,7 +135,7 @@ export const ContentSidebar = ({
       <List sx={{ flexGrow: 1 }}>
         {/* search results */}
         {searchValue ? (
-          <Box >
+          <Box>
             <Typography
               variant="subtitle2"
               sx={{ mb: 2, color: "text.secondary" }}
@@ -206,11 +206,7 @@ export const ContentSidebar = ({
               return (
                 <React.Fragment key={key}>
                   {type === "button" && (
-                    <ListItem
-                      key={path || key}
-                      disablePadding
-                      
-                    >
+                    <ListItem key={path || key} disablePadding>
                       <Link href={path || ""} legacyBehavior passHref>
                         <ListItemButton
                           disableRipple
@@ -221,11 +217,10 @@ export const ContentSidebar = ({
                             mb: 1,
                             alignItems: "center",
 
-                            color: isActive(path || "")
-                              ? "text.primary"
-                              : "text.secondary",
+                            color: "text.primary",
                             "&:hover": {
                               bgcolor: "transparent",
+                              color: getRandomColor(index),
                             },
                             ".MuiTypography-root": {
                               fontSize: { md: "0.9rem", lg: "1rem" },
