@@ -20,14 +20,11 @@ const sections = [
   { title: "#5 Icon Buttons", id: "button-section-5" },
 ];
 export const ButtonView = () => {
-  const { setOnThisPage, setSections, isOnThisPage } = useOnThisPage();
+  const {  setSections } = useOnThisPage();
 
   React.useEffect(() => {
     setSections(sections);
-    setOnThisPage(true);
   }, []);
-
-  console.log(isOnThisPage, "`isOnThisPage button view`");
 
   return (
     <Box>

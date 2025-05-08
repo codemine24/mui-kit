@@ -10,11 +10,10 @@ import { useOnThisPage } from "@/contexts/on-thispage-context";
 import React from "react";
 
 export const AccordionView = () => {
-  const { setOnThisPage, setSections } = useOnThisPage();
+  const { setSections } = useOnThisPage();
 
   React.useEffect(() => {
     setSections([]);
-    setOnThisPage(true);
   }, []);
   return (
     <Box>

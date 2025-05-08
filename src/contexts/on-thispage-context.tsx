@@ -8,7 +8,6 @@ interface IOnThisPageContext {
   }[];
   setSections: (sections: { id: string; title: string }[]) => void;
   isOnThisPage: boolean;
-  setOnThisPage: (isOnThisPage: boolean) => void;
 }
 
 // context
@@ -22,8 +21,7 @@ export const OnThisPageProvider = ({
 }: {
   children: React.ReactNode;
 }) => {
-  const [onThisPage, setOnThisPage] = React.useState<boolean>(false);
-  console.log(onThisPage, "onthispage from context...");
+  // const [onThisPage, setOnThisPage] = React.useState<boolean>(false);
   const [sections, setSections] = React.useState<
     { id: string; title: string }[]
   >([]);
@@ -32,13 +30,11 @@ export const OnThisPageProvider = ({
     () => ({
       sections,
       setSections,
-      isOnThisPage: onThisPage,
-      setOnThisPage,
+      isOnThisPage: sections.length > 0,
     }),
-    [onThisPage, sections]
+    [sections]
   );
 
-  console.log(memoizedValue, "memoizedValue");
   return (
     <onThisPageContext.Provider value={memoizedValue}>
       {children}

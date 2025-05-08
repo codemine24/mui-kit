@@ -116,9 +116,8 @@ export const ContentSidebar = ({
         sx={{
           mb: 2,
           backgroundColor: theme.palette.background.paper,
-          borderRadius: 1.5,
           "& .MuiOutlinedInput-root": {
-            borderRadius: 1.5,
+            borderRadius: theme.shape.borderRadius,
             paddingLeft: 1,
             fontSize: "0.875rem",
             "&.Mui-focused fieldset": {

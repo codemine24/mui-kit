@@ -1,7 +1,9 @@
-import { Box, Button, Typography } from "@mui/material";
+"use client";
+import { Box, Typography, useTheme } from "@mui/material";
 import Link from "next/link";
 
 export default function NotFound() {
+  const theme = useTheme();
   return (
     <Box
       sx={{
@@ -31,25 +33,16 @@ export default function NotFound() {
           color: "text.secondary",
           mb: 4,
           textAlign: "center",
-          maxWidth: "600px",
+          // maxWidth: "600px",
         }}
       >
         Oops! The page you&apos;re looking for doesn&apos;t exist.
       </Typography>
-      <Link href="/" passHref>
-        <Button
-          variant="text"
-          color="primary"
-          size="small"
-          sx={{
-            textTransform: "none",
-            borderRadius: "8px",
-            px: 4,
-            py: 1.5,
-          }}
-        >
-          Back to Home
-        </Button>
+      <Link
+        href="/"
+        style={{ textDecoration: "none", color: theme.palette.primary.main }}
+      >
+        Back to home
       </Link>
     </Box>
   );

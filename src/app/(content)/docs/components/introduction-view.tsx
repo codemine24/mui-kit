@@ -23,12 +23,11 @@ const sections = [
 ];
 
 export const IntroView = () => {
-  const { setSections, setOnThisPage } = useOnThisPage();
+  const { setSections } = useOnThisPage();
 
   React.useEffect(() => {
     setSections(sections);
-    setOnThisPage(true);
-  });
+  }, []);
   return (
     <Box>
       <CustomBreadCrumbs

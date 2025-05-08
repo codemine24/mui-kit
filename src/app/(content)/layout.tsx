@@ -34,6 +34,7 @@ export default function ContentLayout({
           sx={{
             pl: { md: 2, lg: 4 },
             pr: { md: isOnThisPage ? 2 : 0, lg: isOnThisPage ? 4 : 0 },
+            pt: { xs: 2, md: 3 },
             overflowY: "auto",
             scrollbarWidth: "none",
           }}
