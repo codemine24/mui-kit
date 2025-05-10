@@ -1,16 +1,19 @@
 "use client";
+import React from "react";
 import { CodePreviewCopyWrapper } from "@/components/code-preview-copy-wrapper";
 import { CustomBreadCrumbs } from "@/components/core/breadcrumbs";
 import { PageTitle } from "@/components/core/page-title";
 import { SectionTitle } from "@/components/core/section-title";
 import { Box, Divider } from "@mui/material";
 import { useOnThisPage } from "@/contexts/on-thispage-context";
-import React from "react";
-import { Accordion1CodeString } from "../code-string/accordion/accordion-1";
 import SoftAlerts from "../components/alert/alert-1";
 import OutlinedAlerts from "../components/alert/alert-2";
 import SolidAlerts from "../components/alert/alert-3";
 import DescriptionAlerts from "../components/alert/alert-4";
+import { SoftAlertsCodeString } from "../code-string/alert/alert-1";
+import { OutlinedAlertsCodeString } from "../code-string/alert/alert-2";
+import { SolidAlertsCodeString } from "../code-string/alert/alert-3";
+import { DescriptionAlertsCodeString } from "../code-string/alert/alert-4";
 
 export const AlertView = () => {
   const { setSections } = useOnThisPage();
@@ -39,7 +42,7 @@ export const AlertView = () => {
         <SectionTitle title="Soft" id="button-section-1" />
 
         <CodePreviewCopyWrapper
-          codeString={Accordion1CodeString}
+          codeString={SoftAlertsCodeString}
           preview={<SoftAlerts />}
         />
       </Box>
@@ -49,7 +52,7 @@ export const AlertView = () => {
         <SectionTitle title="Outlined" id="button-section-1" />
 
         <CodePreviewCopyWrapper
-          codeString={Accordion1CodeString}
+          codeString={OutlinedAlertsCodeString}
           preview={<OutlinedAlerts />}
         />
       </Box>
@@ -59,7 +62,7 @@ export const AlertView = () => {
         <SectionTitle title="Solid" id="button-section-1" />
 
         <CodePreviewCopyWrapper
-          codeString={Accordion1CodeString}
+          codeString={SolidAlertsCodeString}
           preview={<SolidAlerts />}
         />
       </Box>
@@ -69,7 +72,7 @@ export const AlertView = () => {
         <SectionTitle title="With Description" id="button-section-1" />
 
         <CodePreviewCopyWrapper
-          codeString={Accordion1CodeString}
+          codeString={DescriptionAlertsCodeString}
           preview={<DescriptionAlerts />}
         />
       </Box>
