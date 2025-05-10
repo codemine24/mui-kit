@@ -4,15 +4,22 @@ import { CustomBreadCrumbs } from "@/components/core/breadcrumbs";
 import { PageTitle } from "@/components/core/page-title";
 import { SectionTitle } from "@/components/core/section-title";
 import { Box, Divider } from "@mui/material";
-import { button1CodeString } from "../code-string/button-code-string";
 import Accordion1 from "../components/accordion/accordion-1";
 import Accordion2 from "../components/accordion/accordion-2";
 import Accordion3 from "../components/accordion/accordion-3";
 import Accordion4 from "../components/accordion/accordion-4";
 import Accordion5 from "../components/accordion/accordion-5";
 import Accordion6 from "../components/accordion/accordion-6";
+import Accordion7 from "../components/accordion/accordion-7";
+import Accordion8 from "../components/accordion/accordion-8";
 import { useOnThisPage } from "@/contexts/on-thispage-context";
 import React from "react";
+import { Accordion1CodeString } from "../code-string/accordion/accordion-1";
+import { Accordion2CodeString } from "../code-string/accordion/accordion-2";
+import { Accordion3CodeString } from "../code-string/accordion/accordion-3";
+import { Accordion4CodeString } from "../code-string/accordion/accordion-4";
+import { Accordion5CodeString } from "../code-string/accordion/accordion-5";
+import { Accordion6CodeString } from "../code-string/accordion/accordion-6";
 
 export const AccordionView = () => {
   const { setSections } = useOnThisPage();
@@ -41,7 +48,7 @@ export const AccordionView = () => {
         <SectionTitle title="Regular" id="button-section-1" />
 
         <CodePreviewCopyWrapper
-          codeString={button1CodeString}
+          codeString={Accordion1CodeString}
           preview={<Accordion1 />}
         />
       </Box>
@@ -51,7 +58,7 @@ export const AccordionView = () => {
         <SectionTitle title="Regular" id="button-section-1" />
 
         <CodePreviewCopyWrapper
-          codeString={button1CodeString}
+          codeString={Accordion2CodeString}
           preview={<Accordion2 />}
         />
       </Box>
@@ -60,7 +67,7 @@ export const AccordionView = () => {
         <SectionTitle title="Regular" id="button-section-1" />
 
         <CodePreviewCopyWrapper
-          codeString={button1CodeString}
+          codeString={Accordion3CodeString}
           preview={<Accordion3 />}
         />
       </Box>
@@ -69,7 +76,7 @@ export const AccordionView = () => {
         <SectionTitle title="Regular" id="button-section-1" />
 
         <CodePreviewCopyWrapper
-          codeString={button1CodeString}
+          codeString={Accordion4CodeString}
           preview={<Accordion4 />}
         />
       </Box>
@@ -78,7 +85,7 @@ export const AccordionView = () => {
         <SectionTitle title="Regular" id="button-section-1" />
 
         <CodePreviewCopyWrapper
-          codeString={button1CodeString}
+          codeString={Accordion5CodeString}
           preview={<Accordion5 />}
         />
       </Box>
@@ -88,8 +95,28 @@ export const AccordionView = () => {
         <SectionTitle title="Regular" id="button-section-1" />
 
         <CodePreviewCopyWrapper
-          codeString={button1CodeString}
+          codeString={Accordion6CodeString}
           preview={<Accordion6 />}
+        />
+      </Box>
+
+      {/* Accordion - 7 */}
+      <Box sx={{ mb: 4 }}>
+        <SectionTitle title="Regular" id="button-section-1" />
+
+        <CodePreviewCopyWrapper
+          codeString={Accordion6CodeString}
+          preview={<Accordion7 />}
+        />
+      </Box>
+
+      {/* Accordion - 8 */}
+      <Box sx={{ mb: 4 }}>
+        <SectionTitle title="Regular" id="button-section-1" />
+
+        <CodePreviewCopyWrapper
+          codeString={Accordion6CodeString}
+          preview={<Accordion8 />}
         />
       </Box>
     </Box>

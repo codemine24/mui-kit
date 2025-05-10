@@ -25,6 +25,7 @@ const Accordion = styled(MuiAccordion)(() => ({
 
 const AccordionSummary = styled(MuiAccordionSummary)(({ theme }) => ({
   backgroundColor: theme.palette.common.white,
+  color: "rgba(0, 0, 0, 0.70)",
   borderBottom: "2px solid",
   borderColor: theme.palette.divider,
   "& .MuiTypography-root": {
@@ -37,10 +38,14 @@ const AccordionSummary = styled(MuiAccordionSummary)(({ theme }) => ({
   "& .MuiAccordionSummary-content.Mui-expanded": {
     margin: "0px",
   },
+  "& .MuiAccordionSummary-expandIconWrapper": {
+    color: "rgba(0, 0, 0, 0.70)",
+  },
 }));
 
 const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   backgroundColor: theme.palette.common.white,
+  color: "rgba(0, 0, 0, 0.70)",
   padding: "8px 16px 16px",
 }));
 

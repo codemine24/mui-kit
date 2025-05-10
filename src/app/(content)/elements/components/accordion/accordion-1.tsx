@@ -35,8 +35,9 @@ const AccordionSummary = styled(MuiAccordionSummary)(({ theme }) => ({
   },
 }));
 
-const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
-  backgroundColor: theme.palette.common.white,
+const AccordionDetails = styled(MuiAccordionDetails)(() => ({
+  backgroundColor: "#fff",
+  color: "rgba(0, 0, 0, 0.70)",
   borderBottomLeftRadius: "8px",
   borderBottomRightRadius: "8px",
 }));

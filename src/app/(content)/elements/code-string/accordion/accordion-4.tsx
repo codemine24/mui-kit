@@ -1,5 +1,4 @@
-"use client";
-
+export const Accordion4CodeString = `
 import * as React from "react";
 import {
   Accordion as MuiAccordion,
@@ -15,10 +14,10 @@ import AppsIcon from "@mui/icons-material/Apps";
 
 const Accordion = styled(MuiAccordion)(() => ({
   boxShadow: "none",
-  backgroundColor: "#fff",
   margin: 0,
   "&.Mui-expanded": {
     marginBottom: 10,
+    boxShadow: "rgba(149, 157, 165, 0.2) 0px 8px 24px",
   },
   "&:before": {
     display: "none",
@@ -42,13 +41,10 @@ const AccordionSummary = styled(MuiAccordionSummary)(({ theme }) => ({
   },
 }));
 
-const AccordionDetails = styled(MuiAccordionDetails)(() => ({
-  backgroundColor: "#fff",
+const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
+  backgroundColor: theme.palette.common.white,
   color: "rgba(0, 0, 0, 0.70)",
   padding: "8px 16px 16px",
-  borderLeft: "2px solid",
-  borderColor: "rgba(0, 0, 0, 0.20)",
-  marginLeft: "27px",
 }));
 
 export default function AccordionExample() {
@@ -68,13 +64,13 @@ export default function AccordionExample() {
           onChange={handleChange(panel.id)}
         >
           <AccordionSummary
-            aria-controls={`${panel.id}-content`}
-            id={`${panel.id}-header`}
+            aria-controls={\`\${panel.id}-content\`}
+            id={\`\${panel.id}-header\`}
           >
             {panel.icon}
-            <Typography component="span" sx={{ ml: 2 }}>{`Accordion ${
+            <Typography component="span" sx={{ ml: 2 }}>{\`\Accordion \${
               index + 1
-            }`}</Typography>
+            }\`}</Typography>
           </AccordionSummary>
           <AccordionDetails>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
@@ -91,3 +87,4 @@ const DATA = [
   { id: "panel2", icon: <ApiIcon /> },
   { id: "panel3", icon: <AccessAlarmIcon /> },
 ];
+`;
