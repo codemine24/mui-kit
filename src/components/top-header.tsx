@@ -30,12 +30,9 @@ export const TopHeader = () => {
           {" "}
           <Typography
             variant="body1"
+            fontSize={{ xs: 12, sm: 14, md: 15 }}
             sx={{
               fontWeight: 500,
-              fontSize: {
-                md: "0.8rem",
-                lg: ".9rem",
-              },
             }}
           >
             🚀 Learn In-Demand Skills Online with Ostad – Join 1 Million+
