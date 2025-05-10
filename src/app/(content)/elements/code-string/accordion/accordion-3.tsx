@@ -1,5 +1,4 @@
-"use client";
-
+export const Accordion3CodeString = `
 import * as React from "react";
 import {
   Accordion as MuiAccordion,
@@ -9,37 +8,44 @@ import {
 import Typography from "@mui/material/Typography";
 import { Box } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import AddIcon from "@mui/icons-material/Add";
-import RemoveIcon from "@mui/icons-material/Remove";
+import ArrowCircleDownIcon from "@mui/icons-material/ArrowCircleDown";
 
 const Accordion = styled(MuiAccordion)(() => ({
-  marginBottom: 8,
-  borderRadius: "8px",
+  boxShadow: "none",
+  margin: 0,
+  "&.Mui-expanded": {
+    marginBottom: 10,
+    boxShadow: "rgba(149, 157, 165, 0.2) 0px 8px 24px",
+  },
   "&:before": {
     display: "none",
   },
 }));
 
 const AccordionSummary = styled(MuiAccordionSummary)(({ theme }) => ({
+  backgroundColor: theme.palette.common.white,
+  color: "rgba(0, 0, 0, 0.70)",
+  borderBottom: "2px solid",
+  borderColor: theme.palette.divider,
+  "& .MuiTypography-root": {
+    fontWeight: 600,
+  },
   "&.Mui-expanded": {
-    backgroundColor: theme.palette.primary.main,
-    color: theme.palette.common.white,
-    margin: "0px 0px",
+    border: "none",
     minHeight: "44px",
-    "& .MuiAccordionSummary-expandIconWrapper": {
-      color: "white",
-    },
   },
   "& .MuiAccordionSummary-content.Mui-expanded": {
     margin: "0px",
   },
+  "& .MuiAccordionSummary-expandIconWrapper": {
+    color: "rgba(0, 0, 0, 0.70)",
+  },
 }));
 
-const AccordionDetails = styled(MuiAccordionDetails)(() => ({
-  backgroundColor: "#fff",
+const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
+  backgroundColor: theme.palette.common.white,
   color: "rgba(0, 0, 0, 0.70)",
-  borderBottomLeftRadius: "8px",
-  borderBottomRightRadius: "8px",
+  padding: "8px 16px 16px",
 }));
 
 export default function AccordionExample() {
@@ -59,11 +65,11 @@ export default function AccordionExample() {
           onChange={handleChange(panelId)}
         >
           <AccordionSummary
-            expandIcon={expanded === panelId ? <RemoveIcon /> : <AddIcon />}
-            aria-controls={`${panelId}-content`}
-            id={`${panelId}-header`}
+            expandIcon={<ArrowCircleDownIcon />}
+            aria-controls={\`\${panelId}-content\`}
+            id={\`\${panelId}-header\`}
           >
-            <Typography component="span">{`Accordion ${index + 1}`}</Typography>
+            <Typography component="span">{\`\Accordion \${index + 1}\`}</Typography>
           </AccordionSummary>
           <AccordionDetails>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
@@ -74,3 +80,4 @@ export default function AccordionExample() {
     </Box>
   );
 }
+`;

@@ -1,5 +1,4 @@
-"use client";
-
+export const Accordion1CodeString = `
 import * as React from "react";
 import {
   Accordion as MuiAccordion,
@@ -60,10 +59,10 @@ export default function AccordionExample() {
         >
           <AccordionSummary
             expandIcon={expanded === panelId ? <RemoveIcon /> : <AddIcon />}
-            aria-controls={`${panelId}-content`}
-            id={`${panelId}-header`}
+            aria-controls={\`\${panelId}-content\`}
+            id={\`\${panelId}-header\`}
           >
-            <Typography component="span">{`Accordion ${index + 1}`}</Typography>
+            <Typography component="span">{\`\Accordion \${index + 1}\`}</Typography>
           </AccordionSummary>
           <AccordionDetails>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
@@ -74,3 +73,4 @@ export default function AccordionExample() {
     </Box>
   );
 }
+`;

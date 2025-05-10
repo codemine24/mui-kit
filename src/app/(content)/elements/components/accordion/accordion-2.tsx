@@ -13,21 +13,36 @@ import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 
 const Accordion = styled(MuiAccordion)(() => ({
-  marginBottom: 8,
-  borderRadius: "8px",
+  boxShadow: "none",
+  margin: 0,
+  "&.Mui-expanded": {
+    margin: 0,
+  },
   "&:before": {
     display: "none",
   },
 }));
 
 const AccordionSummary = styled(MuiAccordionSummary)(({ theme }) => ({
+  backgroundColor: "#fff",
+  color: "rgba(0, 0, 0, 0.70)",
+  borderBottom: "2px solid",
+  borderColor: theme.palette.divider,
+  "& .MuiAccordionSummary-expandIconWrapper": {
+    color: "rgba(0, 0, 0, 0.70)",
+    border: "2px solid",
+    borderColor: theme.palette.divider,
+    borderRadius: "50%",
+  },
   "&.Mui-expanded": {
-    backgroundColor: theme.palette.primary.main,
-    color: theme.palette.common.white,
-    margin: "0px 0px",
+    color: theme.palette.primary.main,
+    borderColor: theme.palette.primary.main,
     minHeight: "44px",
     "& .MuiAccordionSummary-expandIconWrapper": {
-      color: "white",
+      color: theme.palette.primary.main,
+      border: "2px solid",
+      borderColor: theme.palette.primary.main,
+      borderRadius: "50%",
     },
   },
   "& .MuiAccordionSummary-content.Mui-expanded": {
@@ -35,11 +50,12 @@ const AccordionSummary = styled(MuiAccordionSummary)(({ theme }) => ({
   },
 }));
 
-const AccordionDetails = styled(MuiAccordionDetails)(() => ({
-  backgroundColor: "#fff",
+const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
+  backgroundColor: theme.palette.common.white,
   color: "rgba(0, 0, 0, 0.70)",
-  borderBottomLeftRadius: "8px",
-  borderBottomRightRadius: "8px",
+  borderBottom: "1px solid",
+  borderColor: theme.palette.divider,
+  padding: "16px",
 }));
 
 export default function AccordionExample() {
