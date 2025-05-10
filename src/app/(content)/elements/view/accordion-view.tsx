@@ -20,6 +20,8 @@ import { Accordion3CodeString } from "../code-string/accordion/accordion-3";
 import { Accordion4CodeString } from "../code-string/accordion/accordion-4";
 import { Accordion5CodeString } from "../code-string/accordion/accordion-5";
 import { Accordion6CodeString } from "../code-string/accordion/accordion-6";
+import { Accordion7CodeString } from "../code-string/accordion/accordion-7";
+import { Accordion8CodeString } from "../code-string/accordion/accordion-8";
 
 export const AccordionView = () => {
   const { setSections } = useOnThisPage();
@@ -105,7 +107,7 @@ export const AccordionView = () => {
         <SectionTitle title="Regular" id="button-section-1" />
 
         <CodePreviewCopyWrapper
-          codeString={Accordion6CodeString}
+          codeString={Accordion7CodeString}
           preview={<Accordion7 />}
         />
       </Box>
@@ -115,7 +117,7 @@ export const AccordionView = () => {
         <SectionTitle title="Regular" id="button-section-1" />
 
         <CodePreviewCopyWrapper
-          codeString={Accordion6CodeString}
+          codeString={Accordion8CodeString}
           preview={<Accordion8 />}
         />
       </Box>
