@@ -9,36 +9,39 @@ import {
 import Typography from "@mui/material/Typography";
 import { Box } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import AddIcon from "@mui/icons-material/Add";
-import RemoveIcon from "@mui/icons-material/Remove";
+import AccessAlarmIcon from "@mui/icons-material/AccessAlarm";
+import ApiIcon from "@mui/icons-material/Api";
+import AppsIcon from "@mui/icons-material/Apps";
+import { alpha } from "@mui/material/styles";
 
 const Accordion = styled(MuiAccordion)(() => ({
+  boxShadow: "none",
+  padding: "10px",
   marginBottom: 8,
-  borderRadius: "8px",
+  "&.Mui-expanded": {
+    marginBottom: 8,
+    marginTop: 8,
+  },
   "&:before": {
     display: "none",
   },
 }));
 
-const AccordionSummary = styled(MuiAccordionSummary)(({ theme }) => ({
+const AccordionSummary = styled(MuiAccordionSummary)(() => ({
+  padding: 0,
+  "& .MuiTypography-root": {
+    fontWeight: 600,
+  },
   "&.Mui-expanded": {
-    backgroundColor: theme.palette.primary.main,
-    color: theme.palette.common.white,
-    margin: "0px 0px",
     minHeight: "44px",
-    "& .MuiAccordionSummary-expandIconWrapper": {
-      color: "white",
-    },
   },
   "& .MuiAccordionSummary-content.Mui-expanded": {
     margin: "0px",
   },
 }));
 
-const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
-  backgroundColor: theme.palette.common.white,
-  borderBottomLeftRadius: "8px",
-  borderBottomRightRadius: "8px",
+const AccordionDetails = styled(MuiAccordionDetails)(() => ({
+  padding: "8px 8px 8px 32px",
 }));
 
 export default function AccordionExample() {
@@ -51,18 +54,24 @@ export default function AccordionExample() {
 
   return (
     <Box sx={{ maxWidth: 600, mx: "auto" }}>
-      {["panel1", "panel2", "panel3"].map((panelId, index) => (
+      {DATA.map((panel, index) => (
         <Accordion
-          key={panelId}
-          expanded={expanded === panelId}
-          onChange={handleChange(panelId)}
+          key={panel.id}
+          expanded={expanded === panel.id}
+          onChange={handleChange(panel.id)}
+          sx={{
+            backgroundColor: alpha(panel.color, 0.08),
+            borderLeft: `4px solid ${panel.color}`,
+          }}
         >
           <AccordionSummary
-            expandIcon={expanded === panelId ? <RemoveIcon /> : <AddIcon />}
-            aria-controls={`${panelId}-content`}
-            id={`${panelId}-header`}
+            aria-controls={`${panel.id}-content`}
+            id={`${panel.id}-header`}
           >
-            <Typography component="span">{`Accordion ${index + 1}`}</Typography>
+            {panel.icon}
+            <Typography component="span" sx={{ ml: 1 }}>{`Accordion ${
+              index + 1
+            }`}</Typography>
           </AccordionSummary>
           <AccordionDetails>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
@@ -73,3 +82,9 @@ export default function AccordionExample() {
     </Box>
   );
 }
+
+const DATA = [
+  { id: "panel1", color: "#00e600", icon: <AppsIcon /> },
+  { id: "panel2", color: "#6666ff", icon: <ApiIcon /> },
+  { id: "panel3", color: "#b82e8a", icon: <AccessAlarmIcon /> },
+];
