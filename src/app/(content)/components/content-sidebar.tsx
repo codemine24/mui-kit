@@ -1,8 +1,10 @@
 "use client";
 
 import { Logo } from "@/components/core/logo";
+import { Iconify } from "@/components/iconify";
 import { contentSidebarPathGroups } from "@/router/router";
 import { TContentSidebarMode } from "@/types/content.types";
+import { getRandomColor } from "@/utils/colors";
 import { ChevronRight as ChevronRightIcon } from "@mui/icons-material";
 import {
   Box,
@@ -12,8 +14,10 @@ import {
   ListItemButton,
   ListItemText,
   TextField,
-  Typography
+  Typography,
+  useTheme,
 } from "@mui/material";
+
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
@@ -25,7 +29,8 @@ type ContentSidebarProps = {
 export const ContentSidebar = ({
   variant = "sidebar",
 }: ContentSidebarProps) => {
-  const [open, setOpen] = useState<TContentSidebarMode | "">("DOCS");
+  const theme = useTheme();
+  const [open, setOpen] = useState<TContentSidebarMode | "">("ELEMENTS");
   const [searchValue, setSearchValue] = useState("");
   const [searchResults, setSearchResults] = useState<
     { key: string; label: string; path: string }[]
@@ -83,7 +88,6 @@ export const ContentSidebar = ({
         "&::-webkit-scrollbar": {
           display: "none",
         },
-        // backgroundColor: "background.paper",
       }}
     >
       {variant === "drawer" && (
@@ -94,15 +98,41 @@ export const ContentSidebar = ({
 
       {/* Search */}
       <TextField
-        placeholder="Search..."
-        id="outlined-size-small"
+        placeholder="Search components..."
         size="small"
-        sx={{ width: "100%" }}
-        onChange={handleSearch}
+        variant="outlined"
         value={searchValue}
+        onChange={handleSearch}
+        fullWidth
+        InputProps={{
+          startAdornment: (
+            <Iconify
+              icon="eva:search-outline"
+              width={20}
+              style={{ marginRight: "10px" }}
+            />
+          ),
+        }}
+        sx={{
+          mb: 2,
+          backgroundColor: theme.palette.background.paper,
+          "& .MuiOutlinedInput-root": {
+            borderRadius: theme.shape.borderRadius,
+            paddingLeft: 1,
+            fontSize: "0.875rem",
+            "&.Mui-focused fieldset": {
+              borderColor: "primary.main",
+              boxShadow: theme.shadows[1],
+            },
+          },
+          "& .MuiOutlinedInput-notchedOutline": {
+            borderColor: theme.palette.divider,
+          },
+          // border: "1px solid blue ",
+        }}
       />
-
-      <List sx={{ flexGrow: 1, mt: 2 }}>
+      <List sx={{ flexGrow: 1 }}>
+        {/* search results */}
         {searchValue ? (
           <Box>
             <Typography
@@ -127,7 +157,6 @@ export const ContentSidebar = ({
                           "&:hover .MuiTypography-root": {
                             color: "primary.main",
                           },
-                          // pl: 2,
                           "&:hover:before": {
                             content: '""',
                             position: "absolute",
@@ -171,136 +200,121 @@ export const ContentSidebar = ({
             )}
           </Box>
         ) : (
-          contentSidebarPathGroups.map(({ key, label, items, path }) => {
-            const hasChildren = items.length > 0;
+          contentSidebarPathGroups.map(
+            ({ key, label, items, path, type, icon }, index) => {
+              return (
+                <React.Fragment key={key}>
+                  {type === "button" && (
+                    <ListItem key={path || key} disablePadding>
+                      <Link href={path || ""} legacyBehavior passHref>
+                        <ListItemButton
+                          disableRipple
+                          sx={{
+                            px: 0,
+                            py: 1,
+                            gap: 1.5,
+                            mb: 1,
+                            alignItems: "center",
 
-            return (
-              <React.Fragment key={key}>
-                {hasChildren ? (
-                  <>
-                    <ListItemButton
-                      onClick={() => handleClick(key)}
-                      disableRipple
-                      sx={{
-                        borderRadius: 1,
-                        mb: 0.5,
-                        px: 0,
-                        py: 0,
-                        "&:hover": {
-                          bgcolor: "transparent",
-                        },
-                        "&:hover .MuiTypography-root": {
-                          color: "primary.main",
-                        },
-                      }}
-                    >
-                      <Typography
-                        variant="subtitle2"
-                        sx={{
-                          px: 0,
-                          py: 1,
-                          color: "text.secondary",
-                          textTransform: "uppercase",
-                          fontWeight: "medium",
-                        }}
-                      >
-                        {label}
-                      </Typography>
-                      <ChevronRightIcon
-                        sx={{
-                          transform:
-                            open === key ? "rotate(90deg)" : "rotate(0deg)",
-                          transition: "transform 200ms",
-                          color: "text.secondary",
-                        }}
-                      />
-                    </ListItemButton>
-                    <Collapse in={open === key} timeout="auto" unmountOnExit>
-                      <List
-                        sx={{
-                          position: "relative",
-                          "&:before": {
-                            content: '""',
-                            position: "absolute",
-                            left: "8.5px",
-                            top: 0,
-                            height: "100%",
-                            width: "1px",
-                            bgcolor: "divider",
-                          },
-                        }}
-                      >
-                        {items.map((item) => (
-                          <ListItem key={item.path} disablePadding>
-                            <Link href={item.path} legacyBehavior passHref>
-                              <ListItemButton
-                                disableRipple
-                                sx={{
-                                  borderRadius: 1,
-                                  position: "relative",
-                                  ml: 1,
-                                  "&:hover": {
-                                    bgcolor: "transparent",
-                                  },
-                                  "&:hover .MuiTypography-root": {
-                                    color: "primary.main",
-                                  },
-                                  "&:hover:before": {
-                                    content: '""',
-                                    position: "absolute",
-                                    left: 0,
-                                    top: "25%",
-                                    height: "50%",
-                                    width: "2px",
-                                    bgcolor: "primary.main",
-                                    borderRadius: "0 2px 2px 0",
-                                  },
-                                  "&:before": {
-                                    content: '""',
-                                    position: "absolute",
-                                    left: 0,
-                                    top: "25%",
-                                    height: "50%",
-                                    width: "2px",
-                                    bgcolor: isActive(item.path)
-                                      ? "primary.main"
-                                      : "transparent",
-                                    borderRadius: "0 2px 2px 0",
-                                  },
-                                }}
-                              >
-                                <ListItemText
-                                  primary={item.label}
-                                  primaryTypographyProps={{
-                                    variant: "body2",
-                                    color: "text.primary",
-                                    fontSize: { xs: 15, sm: 16 },
-                                  }}
-                                />
-                              </ListItemButton>
-                            </Link>
-                          </ListItem>
-                        ))}
-                      </List>
-                    </Collapse>
-                  </>
-                ) : (
-                  <ListItem key={path || key} disablePadding>
-                    <Link href={path || ""} legacyBehavior passHref>
+                            color: "text.primary",
+                            "&:hover": {
+                              bgcolor: "transparent",
+                              color: getRandomColor(index),
+                            },
+                            ".MuiTypography-root": {
+                              fontSize: { md: "0.9rem", lg: "1rem" },
+                            },
+                          }}
+                        >
+                          {/* Icon with background */}
+                          <Box
+                            sx={{
+                              width: 32,
+                              height: 32,
+                              borderRadius: 1,
+                              bgcolor: isActive(path || "")
+                                ? getRandomColor(index)
+                                : "none",
+                              display: "flex",
+                              alignItems: "center",
+                              justifyContent: "center",
+                              color: isActive(path || "")
+                                ? "white"
+                                : getRandomColor(index),
+                              border: ".5px solid",
+                              borderColor: theme.palette.divider,
+                            }}
+                          >
+                            <Iconify icon={icon} />
+                          </Box>
+
+                          <ListItemText
+                            primary={label}
+                            primaryTypographyProps={{
+                              variant: "body2",
+                              fontWeight: 500,
+                            }}
+                          />
+                        </ListItemButton>
+                      </Link>
+                    </ListItem>
+                  )}
+
+                  {type === "single" && (
+                    <ListItem key={path || key} disablePadding>
+                      <Link href={path || ""} legacyBehavior passHref>
+                        <ListItemButton
+                          disableRipple
+                          sx={{
+                            borderRadius: 1,
+                            position: "relative",
+                            pl: 2,
+                            px: 0,
+
+                            "&:hover": {
+                              bgcolor: "transparent",
+                            },
+                            "&:hover .MuiTypography-root": {
+                              color: "primary.main",
+                            },
+                            ".MuiTypography-root": {
+                              fontSize: { md: "0.9rem", lg: "1rem" },
+                            },
+                          }}
+                        >
+                          <ListItemText
+                            primary={label}
+                            primaryTypographyProps={{
+                              variant: "body2",
+                              color: isActive(path || "")
+                                ? "primary.main"
+                                : "text.primary",
+                              fontWeight: 500,
+                            }}
+                          />
+                        </ListItemButton>
+                      </Link>
+                    </ListItem>
+                  )}
+
+                  {type === "group" && (
+                    <>
                       <ListItemButton
+                        onClick={() => handleClick(key)}
                         disableRipple
                         sx={{
                           borderRadius: 1,
-                          position: "relative",
-                          pl: 2,
+                          mb: 0.5,
                           px: 0,
-                          color: "text.secondary",
-                          textTransform: "uppercase",
+                          py: 0,
                           "&:hover": {
                             bgcolor: "transparent",
                           },
                           "&:hover .MuiTypography-root": {
                             color: "primary.main",
+                          },
+                          ".MuiTypography-root": {
+                            fontSize: { md: "0.9rem", lg: "1rem" },
                           },
                         }}
                       >
@@ -308,23 +322,101 @@ export const ContentSidebar = ({
                           primary={label}
                           primaryTypographyProps={{
                             variant: "body2",
-                            color: isActive(path || "")
-                              ? "primary.main"
-                              : "text.secondary",
-                            fontWeight: 600,
+                            color: "text.primary",
+                            fontSize: { xs: 15, sm: 16 },
+                          }}
+                        />
+                        {/* {label} */}
+                        <ChevronRightIcon
+                          sx={{
+                            transform:
+                              open === key ? "rotate(90deg)" : "rotate(0deg)",
+                            transition: "transform 200ms",
+                            color: "text.secondary",
+                            fontSize: 16,
+                            ml: 1,
                           }}
                         />
                       </ListItemButton>
-                    </Link>
-                  </ListItem>
-                )}
-              </React.Fragment>
-            );
-          })
+                      <Collapse in={open === key} timeout="auto" unmountOnExit>
+                        <List
+                          sx={{
+                            position: "relative",
+                            "&:before": {
+                              content: '""',
+                              position: "absolute",
+                              left: "8.5px",
+                              top: 0,
+                              height: "100%",
+                              width: "1px",
+                              bgcolor: "divider",
+                            },
+                          }}
+                        >
+                          {items.map((item) => (
+                            <ListItem key={item.path} disablePadding>
+                              <Link href={item.path} legacyBehavior passHref>
+                                <ListItemButton
+                                  disableRipple
+                                  sx={{
+                                    borderRadius: 1,
+                                    position: "relative",
+                                    ml: 1,
+                                    "&:hover": {
+                                      bgcolor: "transparent",
+                                    },
+                                    "&:hover .MuiTypography-root": {
+                                      color: "primary.main",
+                                    },
+                                    "&:hover:before": {
+                                      content: '""',
+                                      position: "absolute",
+                                      left: 0,
+                                      top: "25%",
+                                      height: "50%",
+                                      width: "2px",
+                                      bgcolor: "primary.main",
+                                      borderRadius: "0 2px 2px 0",
+                                    },
+                                    "&:before": {
+                                      content: '""',
+                                      position: "absolute",
+                                      left: 0,
+                                      top: "25%",
+                                      height: "50%",
+                                      width: "2px",
+                                      bgcolor: isActive(item.path)
+                                        ? "primary.main"
+                                        : "transparent",
+                                      borderRadius: "0 2px 2px 0",
+                                    },
+                                    ".MuiTypography-root": {
+                                      fontSize: { md: "0.9rem", lg: "1rem" },
+                                    },
+                                  }}
+                                >
+                                  <ListItemText
+                                    primary={item.label}
+                                    primaryTypographyProps={{
+                                      variant: "body2",
+                                      color: "text.primary",
+                                      fontSize: { xs: 15, sm: 16 },
+                                    }}
+                                  />
+                                </ListItemButton>
+                              </Link>
+                            </ListItem>
+                          ))}
+                        </List>
+                      </Collapse>
+                    </>
+                  )}
+                </React.Fragment>
+              );
+            }
+          )
         )}
       </List>
-
-        
     </Box>
   );
 };

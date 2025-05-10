@@ -220,7 +220,7 @@ export const HeroSection = () => {
 
           <Stack direction={{ xs: "column", sm: "row" }} spacing={2}>
             <Link href={"/docs/intro"}>
-              <Button variant="contained" size="large">
+              <Button variant="contained" size="large" sx={{ borderRadius: theme.shape.borderRadius}}>
                 Get Started
               </Button>
             </Link>
