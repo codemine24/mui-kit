@@ -15,11 +15,18 @@ import { OutlinedAlertsCodeString } from "../code-string/alert/alert-2";
 import { SolidAlertsCodeString } from "../code-string/alert/alert-3";
 import { DescriptionAlertsCodeString } from "../code-string/alert/alert-4";
 
+const sections = [
+  { title: "Soft", id: "alert-1" },
+  { title: "Outlined", id: "alert-2" },
+  { title: "Solid", id: "alert-3" },
+  { title: "With Description", id: "alert-4" },
+];
+
 export const AlertView = () => {
   const { setSections } = useOnThisPage();
 
   React.useEffect(() => {
-    setSections([]);
+    setSections(sections);
   }, [setSections]);
 
   return (
@@ -39,7 +46,11 @@ export const AlertView = () => {
 
       {/* Alert - 1 */}
       <Box sx={{ mb: 4 }}>
-        <SectionTitle title="Soft" id="button-section-1" />
+        <SectionTitle
+          title="Soft"
+          description="Use Material UI soft alerts with extended design. No extra package required."
+          id="alert-1"
+        />
 
         <CodePreviewCopyWrapper
           codeString={SoftAlertsCodeString}
@@ -49,7 +60,11 @@ export const AlertView = () => {
 
       {/* Alert - 2 */}
       <Box sx={{ mb: 4 }}>
-        <SectionTitle title="Outlined" id="button-section-1" />
+        <SectionTitle
+          title="Outlined"
+          description="Use this alert if you are a fan of outlined style"
+          id="alert-2"
+        />
 
         <CodePreviewCopyWrapper
           codeString={OutlinedAlertsCodeString}
@@ -59,7 +74,11 @@ export const AlertView = () => {
 
       {/* Alert - 3 */}
       <Box sx={{ mb: 4 }}>
-        <SectionTitle title="Solid" id="button-section-1" />
+        <SectionTitle
+          title="Solid"
+          description="Alerts with solid background. Simple but compatible with most of the client requirements. "
+          id="alert-3"
+        />
 
         <CodePreviewCopyWrapper
           codeString={SolidAlertsCodeString}
@@ -69,7 +88,11 @@ export const AlertView = () => {
 
       {/* Alert - 4 */}
       <Box sx={{ mb: 4 }}>
-        <SectionTitle title="With Description" id="button-section-1" />
+        <SectionTitle
+          title="With Description"
+          description="Add some description with regular alert to help your visitor to understand the message"
+          id="alert-4"
+        />
 
         <CodePreviewCopyWrapper
           codeString={DescriptionAlertsCodeString}
