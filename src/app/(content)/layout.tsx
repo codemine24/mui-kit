@@ -12,7 +12,6 @@ export default function ContentLayout({
   children: React.ReactNode;
 }) {
   const { isOnThisPage } = useOnThisPage();
-  console.log(isOnThisPage, "isOnThisPage layout...");
   return (
     <Container maxWidth="xl" sx={{ position: "relative" }}>
       <Grid container spacing={0}>
@@ -21,7 +20,7 @@ export default function ContentLayout({
           sx={{
             display: { xs: "none", md: "block" },
             position: "sticky",
-            top: 0,
+            top: 60,
             height: "calc(100vh - 20px)",
             overflowY: "auto",
           }}
@@ -46,7 +45,8 @@ export default function ContentLayout({
           sx={{
             display: { xs: "none", md: "block" },
             position: "sticky",
-            top: 0,
+            top: 62,
+            height: "calc(100vh - 20px)",
             overflowY: "auto",
           }}
         >
