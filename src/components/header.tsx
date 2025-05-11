@@ -50,6 +50,8 @@ export const Header = () => {
       sx={{
         borderBottom: `.5px solid ${theme.palette.divider}`,
         backgroundColor: "background.default",
+        transition:
+          "background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease",
       }}
     >
       <Container maxWidth="xl">
