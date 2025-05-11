@@ -24,21 +24,71 @@ import Accordion7 from "../components/accordion/accordion-7";
 import Accordion8 from "../components/accordion/accordion-8";
 
 const sections = [
-  { title: "Solid Background Accordion", id: "accordion-1" },
-  { title: "Outlined Accordion", id: "accordion-2" },
-  { title: "Box Shadow Accordion", id: "accordion-3" },
-  { title: "Icon Left Aligned", id: "accordion-4" },
-  { title: "MUI Accordion with vertical line", id: "accordion-5" },
-  { title: "Multi colored Accordion", id: "accordion-6" },
-  { title: "Multiple openable Accordion", id: "accordion-7" },
-  { title: "Two Column Accordion", id: "accordion-8" },
+  {
+    id: "accordion-1",
+    title: "Solid Background Accordion",
+    description: "A regular but elegant accordion with solid background color",
+    codeString: Accordion1CodeString,
+    preview: <Accordion1 />,
+  },
+  {
+    id: "accordion-2",
+    title: "Outlined Accordion",
+    description: "Outlined accordion with custom mui icon",
+    codeString: Accordion2CodeString,
+    preview: <Accordion2 />,
+  },
+  {
+    id: "accordion-3",
+    title: "Box Shadow Accordion",
+    description:
+      "Use this beautiful accordion if you are looking for an accordion with box shadow.",
+    codeString: Accordion3CodeString,
+    preview: <Accordion3 />,
+  },
+  {
+    id: "accordion-4",
+    title: "Icon Left Aligned",
+    description: "Icon position is different from traditional accordions",
+    codeString: Accordion4CodeString,
+    preview: <Accordion4 />,
+  },
+  {
+    id: "accordion-5",
+    title: "MUI Accordion with vertical line",
+    description: "Each section has a vertical line to separate them",
+    codeString: Accordion5CodeString,
+    preview: <Accordion5 />,
+  },
+  {
+    id: "accordion-6",
+    title: "Multi colored Accordion",
+    description: "Each section has a different color",
+    codeString: Accordion6CodeString,
+    preview: <Accordion6 />,
+  },
+  {
+    id: "accordion-7",
+    title: "Multiple openable Accordion",
+    description:
+      "In this Material UI accordion variant you can open multiple accordion children at the same time.",
+    codeString: Accordion7CodeString,
+    preview: <Accordion7 />,
+  },
+  {
+    id: "accordion-8",
+    title: "Two Column Accordion",
+    description: "Two column combination",
+    codeString: Accordion8CodeString,
+    preview: <Accordion8 />,
+  },
 ];
 
 export const AccordionView = () => {
   const { setSections } = useOnThisPage();
 
   React.useEffect(() => {
-    setSections(sections);
+    setSections(sections.map((s) => ({ title: s.title, id: s.id })));
   }, [setSections]);
 
   return (
@@ -57,112 +107,20 @@ export const AccordionView = () => {
       <Divider sx={{ my: 4 }} />
 
       {/* Accordion - 1 */}
-      <Box sx={{ mb: 4 }}>
-        <SectionTitle
-          title="Solid Background Accordion"
-          description="A regular but elegant accordion with solid background color"
-          id="accordion-1"
-        />
+      {sections.map((section) => (
+        <Box key={section.id} sx={{ mb: 4 }}>
+          <SectionTitle
+            title={section.title}
+            description={section.description || ""}
+            id={section.id}
+          />
 
-        <CodePreviewCopyWrapper
-          codeString={Accordion1CodeString}
-          preview={<Accordion1 />}
-        />
-      </Box>
-
-      {/* Accordion - 2 */}
-      <Box sx={{ mb: 4 }}>
-        <SectionTitle
-          title="Outlined Accordion"
-          description="Outlined accordion with custom mui icon"
-          id="accordion-2"
-        />
-
-        <CodePreviewCopyWrapper
-          codeString={Accordion2CodeString}
-          preview={<Accordion2 />}
-        />
-      </Box>
-      {/* Accordion - 3 */}
-      <Box sx={{ mb: 4 }}>
-        <SectionTitle
-          title="Box Shadow Accordion"
-          description="Use this beautiful accordion if you are looking for an accordion with box shadow. "
-          id="accordion-3"
-        />
-
-        <CodePreviewCopyWrapper
-          codeString={Accordion3CodeString}
-          preview={<Accordion3 />}
-        />
-      </Box>
-      {/* Accordion - 4 */}
-      <Box sx={{ mb: 4 }}>
-        <SectionTitle
-          title="Icon Left Aligned"
-          description="Icon position is different from traditional accordions"
-          id="accordion-4"
-        />
-
-        <CodePreviewCopyWrapper
-          codeString={Accordion4CodeString}
-          preview={<Accordion4 />}
-        />
-      </Box>
-      {/* Accordion - 5 */}
-      <Box sx={{ mb: 4 }}>
-        <SectionTitle
-          title="MUI Accordion with vertical line"
-          description="Each section has a vertical line to separate them"
-          id="accordion-5"
-        />
-
-        <CodePreviewCopyWrapper
-          codeString={Accordion5CodeString}
-          preview={<Accordion5 />}
-        />
-      </Box>
-
-      {/* Accordion - 6 */}
-      <Box sx={{ mb: 4 }}>
-        <SectionTitle
-          title="Multi colored Accordion"
-          description="Each section has a different color"
-          id="accordion-6"
-        />
-
-        <CodePreviewCopyWrapper
-          codeString={Accordion6CodeString}
-          preview={<Accordion6 />}
-        />
-      </Box>
-      {/* Accordion - 7 */}
-      <Box sx={{ mb: 4 }}>
-        <SectionTitle
-          title="Multiple openable Accordion"
-          description="In this Material UI accordion variant you can open multiple accordion children at the same time. "
-          id="accordion-7"
-        />
-
-        <CodePreviewCopyWrapper
-          codeString={Accordion8CodeString}
-          preview={<Accordion8 />}
-        />
-      </Box>
-
-      {/* Accordion - 8 */}
-      <Box sx={{ mb: 4 }}>
-        <SectionTitle
-          title="Two Column Accordion"
-          description="Two column combination"
-          id="accordion-7"
-        />
-
-        <CodePreviewCopyWrapper
-          codeString={Accordion7CodeString}
-          preview={<Accordion7 />}
-        />
-      </Box>
+          <CodePreviewCopyWrapper
+            codeString={section.codeString}
+            preview={section.preview}
+          />
+        </Box>
+      ))}
     </Box>
   );
 };

@@ -10,23 +10,58 @@ import SoftAlerts from "../components/alert/alert-1";
 import OutlinedAlerts from "../components/alert/alert-2";
 import SolidAlerts from "../components/alert/alert-3";
 import DescriptionAlerts from "../components/alert/alert-4";
+import ActionAlerts from "../components/alert/alert-5";
 import { SoftAlertsCodeString } from "../code-string/alert/alert-1";
 import { OutlinedAlertsCodeString } from "../code-string/alert/alert-2";
 import { SolidAlertsCodeString } from "../code-string/alert/alert-3";
 import { DescriptionAlertsCodeString } from "../code-string/alert/alert-4";
 
 const sections = [
-  { title: "Soft", id: "alert-1" },
-  { title: "Outlined", id: "alert-2" },
-  { title: "Solid", id: "alert-3" },
-  { title: "With Description", id: "alert-4" },
+  {
+    id: "alert-1",
+    title: "Soft",
+    description:
+      "Use Material UI soft alerts with extended design. No extra package required.",
+    codeString: SoftAlertsCodeString,
+    preview: <SoftAlerts />,
+  },
+  {
+    id: "alert-2",
+    title: "Outlined",
+    description: "Use this alert if you are a fan of outlined style",
+    codeString: OutlinedAlertsCodeString,
+    preview: <OutlinedAlerts />,
+  },
+  {
+    id: "alert-3",
+    title: "Solid",
+    description:
+      "Alerts with solid background. Simple but compatible with most of the client requirements.",
+    codeString: SolidAlertsCodeString,
+    preview: <SolidAlerts />,
+  },
+  {
+    id: "alert-4",
+    title: "With Description",
+    description:
+      "Add some description with regular alert to help your visitor to understand the message",
+    codeString: DescriptionAlertsCodeString,
+    preview: <DescriptionAlerts />,
+  },
+  {
+    id: "alert-5",
+    title: "With Action",
+    description: "",
+    codeString: DescriptionAlertsCodeString,
+    preview: <ActionAlerts />,
+  },
 ];
 
 export const AlertView = () => {
   const { setSections } = useOnThisPage();
 
   React.useEffect(() => {
-    setSections(sections);
+    setSections(sections.map((s) => ({ title: s.title, id: s.id })));
   }, [setSections]);
 
   return (
@@ -44,61 +79,21 @@ export const AlertView = () => {
 
       <Divider sx={{ my: 4 }} />
 
-      {/* Alert - 1 */}
-      <Box sx={{ mb: 4 }}>
-        <SectionTitle
-          title="Soft"
-          description="Use Material UI soft alerts with extended design. No extra package required."
-          id="alert-1"
-        />
+      {/* Alert Section */}
+      {sections.map((section) => (
+        <Box key={section.id} sx={{ mb: 4 }}>
+          <SectionTitle
+            title={section.title}
+            description={section.description || ""}
+            id={section.id}
+          />
 
-        <CodePreviewCopyWrapper
-          codeString={SoftAlertsCodeString}
-          preview={<SoftAlerts />}
-        />
-      </Box>
-
-      {/* Alert - 2 */}
-      <Box sx={{ mb: 4 }}>
-        <SectionTitle
-          title="Outlined"
-          description="Use this alert if you are a fan of outlined style"
-          id="alert-2"
-        />
-
-        <CodePreviewCopyWrapper
-          codeString={OutlinedAlertsCodeString}
-          preview={<OutlinedAlerts />}
-        />
-      </Box>
-
-      {/* Alert - 3 */}
-      <Box sx={{ mb: 4 }}>
-        <SectionTitle
-          title="Solid"
-          description="Alerts with solid background. Simple but compatible with most of the client requirements. "
-          id="alert-3"
-        />
-
-        <CodePreviewCopyWrapper
-          codeString={SolidAlertsCodeString}
-          preview={<SolidAlerts />}
-        />
-      </Box>
-
-      {/* Alert - 4 */}
-      <Box sx={{ mb: 4 }}>
-        <SectionTitle
-          title="With Description"
-          description="Add some description with regular alert to help your visitor to understand the message"
-          id="alert-4"
-        />
-
-        <CodePreviewCopyWrapper
-          codeString={DescriptionAlertsCodeString}
-          preview={<DescriptionAlerts />}
-        />
-      </Box>
+          <CodePreviewCopyWrapper
+            codeString={section.codeString}
+            preview={section.preview}
+          />
+        </Box>
+      ))}
     </Box>
   );
 };
