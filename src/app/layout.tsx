@@ -1,7 +1,7 @@
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import AppProvider from "@/providers/app-provider";
-import { Box } from "@mui/material";
+import { Box, CssBaseline, GlobalStyles } from "@mui/material";
 import { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -20,7 +20,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "MUI Kit - Open Source MUI Components library",
-  description: "A complete set of open source components for Material UI ",
+  description: "A complete set of open source components for Material UI",
 };
 
 export default function RootLayout({
@@ -29,21 +29,33 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`} suppressHydrationWarning>
+    <html
+      lang="en"
+      className={`${geistSans.variable} ${geistMono.variable}`}
+      suppressHydrationWarning
+    >
       <body>
         <AppProvider>
+          <CssBaseline />
+
+          {/* Global transition styles */}
+          <GlobalStyles
+            styles={{
+              "html, body, #__next": {
+                transition: "background-color 0.3s ease, color 0.3s ease",
+              },
+              "*": {
+                transition:
+                  "background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease",
+              },
+            }}
+          />
+
           <OnThisPageProvider>
             <TopHeader />
             <Header />
 
-            <Box
-              sx={{
-                // width: "100%",
-                // px: 0,
-                // overflow: "auto",
-                // minHeight: "calc(100vh - 140px)",
-              }}
-            >
+            <Box>
               {children}
             </Box>
 

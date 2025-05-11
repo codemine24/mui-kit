@@ -50,10 +50,11 @@ export const Header = () => {
       sx={{
         borderBottom: `.5px solid ${theme.palette.divider}`,
         backgroundColor: "background.default",
+        transition:
+          "background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease",
       }}
     >
       <Container maxWidth="xl">
-        
         <Toolbar disableGutters>
           <Box sx={{ display: { xs: "none", md: "block" } }}>
             <Logo />
@@ -114,7 +115,7 @@ export const Header = () => {
                 style={{ color: theme.palette.text.secondary }}
               />
             </Typography>
-            <span onClick={toggleColorMode}>
+            <span onClick={toggleColorMode} style={{ cursor: "pointer" }}>
               <Iconify
                 icon={
                   mode === "light" ? "tdesign:mode-dark" : "iconoir:sun-light"
