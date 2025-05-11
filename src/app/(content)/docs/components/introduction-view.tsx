@@ -27,7 +27,7 @@ export const IntroView = () => {
 
   React.useEffect(() => {
     setSections(sections);
-  }, []);
+  }, [setSections]);
   return (
     <Box>
       <CustomBreadCrumbs
