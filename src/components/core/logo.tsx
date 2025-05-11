@@ -4,34 +4,37 @@ import Link from "next/link";
 
 export const Logo = () => {
   return (
-    <Box
-      sx={{
-        position: "relative",
-        display: "inline-flex",
-        alignItems: "center",
-      }}
-    >
-      <Image src="/images/logo.png" alt="logo" width={24} height={24} />
-      <Typography
-        variant="h6"
-        noWrap
+    <Box sx={{ position: "relative" }}>
+      <Box
         component={Link}
         href="/"
         sx={{
-          mr: 2,
-          flexGrow: 1,
-          fontWeight: 700,
+          display: "inline-flex",
+          alignItems: "center",
           color: "inherit",
           textDecoration: "none",
-          display: "flex",
-          alignItems: "center",
         }}
       >
-        <Box component="span" sx={{ color: "primary.main", mr: 1 }}>
-          MUI
-        </Box>{" "}
-        KIT
-      </Typography>
+        <Image src="/images/logo.png" alt="logo" width={24} height={24} />
+        <Typography
+          variant="h6"
+          noWrap
+          sx={{
+            mr: 2,
+            flexGrow: 1,
+            fontWeight: 700,
+            color: "text.primary",
+            textDecoration: "none",
+            display: "flex",
+            alignItems: "center",
+          }}
+        >
+          <Box component="span" sx={{ color: "primary.main", mr: 1 }}>
+            MUI
+          </Box>{" "}
+          KIT
+        </Typography>
+      </Box>
       <Chip
         label="Beta"
         size="small"
