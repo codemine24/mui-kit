@@ -1,4 +1,5 @@
 "use client";
+import GridViewIcon from "@mui/icons-material/GridView";
 import {
   Box,
   Button,
@@ -9,8 +10,9 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
-import PathSVG from "./PathSVG";
 import Link from "next/link";
+import PathSVG from "./PathSVG";
+import { PATHS } from "@/router/paths";
 
 export const HeroSection = () => {
   const theme = useTheme();
@@ -20,11 +22,11 @@ export const HeroSection = () => {
   const gradientFrom =
     theme.palette.mode === "dark"
       ? "rgba(30, 136, 229, 0.2)"
-      : "rgba(33, 150, 243, 0.2)"; 
+      : "rgba(33, 150, 243, 0.2)";
   const gradientTo =
     theme.palette.mode === "dark"
       ? "rgba(0, 229, 255, 0.2)"
-      : "rgba(0, 188, 212, 0.2)"; 
+      : "rgba(0, 188, 212, 0.2)";
   const lineColors = {
     blue: theme.palette.mode === "dark" ? "#42a5f5" : "#2196f3",
     indigo: theme.palette.mode === "dark" ? "#5c6bc0" : "#3f51b5",
@@ -183,6 +185,7 @@ export const HeroSection = () => {
             gutterBottom
             sx={{
               "& span": { color: "primary.main" },
+              fontSize: { xs: "2rem", sm: "2.5rem", md: "3rem" },
             }}
           >
             We&apos;ve covered, what <span>Material UI</span> is missing!
@@ -206,13 +209,34 @@ export const HeroSection = () => {
             applications.
           </Typography>
 
-          <Stack direction={{ xs: "column", sm: "row" }} spacing={2}>
-            <Link href={"/docs/intro"}>
-              <Button variant="contained" size="large" sx={{ borderRadius: theme.shape.borderRadius}}>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: { xs: "column", md: "row" },
+              justifyContent: "start",
+              gap: 2,
+            }}
+          >
+            <Link href={PATHS.DOCS.INSTALL} passHref>
+              <Button
+                variant="contained"
+                sx={{ borderRadius: theme.shape.borderRadius }}
+              >
                 Get Started
               </Button>
             </Link>
-          </Stack>
+
+            <Link href={PATHS.ELEMENTS.OVERVIEW} passHref>
+              <Button
+                variant="outlined"
+                color="primary"
+                sx={{ borderRadius: theme.shape.borderRadius }}
+                startIcon={<GridViewIcon />}
+              >
+                Explore Components
+              </Button>
+            </Link>
+          </Box>
         </Box>
 
         {/* Right image box */}
@@ -242,7 +266,7 @@ export const HeroSection = () => {
             }}
           >
             <Typography variant="h6" gutterBottom>
-              Templates
+              Components
             </Typography>
             <Box
               sx={{
@@ -288,7 +312,7 @@ export const HeroSection = () => {
             }}
           >
             <Typography variant="subtitle2" gutterBottom>
-              Components
+              Block 
             </Typography>
             <Stack direction="row" spacing={1} sx={{ mb: 1 }}>
               <Box
@@ -345,7 +369,7 @@ export const HeroSection = () => {
             }}
           >
             <Typography variant="subtitle2" gutterBottom>
-              Dashboard
+              Templates
             </Typography>
             <Box
               sx={{

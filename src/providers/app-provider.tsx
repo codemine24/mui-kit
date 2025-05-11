@@ -8,7 +8,7 @@ import React, { useMemo, useEffect, useState } from "react";
 type Mode = "light" | "dark";
 
 const ColorModeContext = React.createContext({
-  mode: "dark" as Mode,
+  mode: "light" as Mode,
   toggleColorMode: () => {},
 });
 

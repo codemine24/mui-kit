@@ -53,7 +53,6 @@ export const Header = () => {
       }}
     >
       <Container maxWidth="xl">
-        
         <Toolbar disableGutters>
           <Box sx={{ display: { xs: "none", md: "block" } }}>
             <Logo />
@@ -114,7 +113,7 @@ export const Header = () => {
                 style={{ color: theme.palette.text.secondary }}
               />
             </Typography>
-            <span onClick={toggleColorMode}>
+            <span onClick={toggleColorMode} style={{ cursor: "pointer" }}>
               <Iconify
                 icon={
                   mode === "light" ? "tdesign:mode-dark" : "iconoir:sun-light"
