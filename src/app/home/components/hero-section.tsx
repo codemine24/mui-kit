@@ -20,11 +20,11 @@ export const HeroSection = () => {
   const gradientFrom =
     theme.palette.mode === "dark"
       ? "rgba(30, 136, 229, 0.2)"
-      : "rgba(33, 150, 243, 0.2)"; // Blue shades
+      : "rgba(33, 150, 243, 0.2)"; 
   const gradientTo =
     theme.palette.mode === "dark"
       ? "rgba(0, 229, 255, 0.2)"
-      : "rgba(0, 188, 212, 0.2)"; // Cyan/Teal shades
+      : "rgba(0, 188, 212, 0.2)"; 
   const lineColors = {
     blue: theme.palette.mode === "dark" ? "#42a5f5" : "#2196f3",
     indigo: theme.palette.mode === "dark" ? "#5c6bc0" : "#3f51b5",
@@ -77,18 +77,6 @@ export const HeroSection = () => {
             filter: "blur(80px)",
           }}
         />
-        {/* <Box
-          sx={{
-            position: "absolute",
-            bottom: 0,
-            right: { xs: "10%", md: "25%" },
-            width: { xs: "12rem", md: "16rem" },
-            height: { xs: "12rem", md: "16rem" },
-            borderRadius: "50%",
-            background: `linear-gradient(135deg, ${gradientFrom}, ${gradientTo})`,
-            filter: "blur(80px)",
-          }}
-        /> */}
 
         {/* Animated Lines */}
         <Box sx={{ position: "absolute", inset: 0, opacity: 0.5 }}>
