@@ -1,4 +1,5 @@
 import { Box, Chip, Typography } from "@mui/material";
+import Image from "next/image";
 import Link from "next/link";
 
 export const Logo = () => {
@@ -10,6 +11,7 @@ export const Logo = () => {
         alignItems: "center",
       }}
     >
+      <Image src="/images/logo.png" alt="logo" width={24} height={24} />
       <Typography
         variant="h6"
         noWrap
@@ -36,7 +38,7 @@ export const Logo = () => {
         sx={{
           position: "absolute",
           top: -2,
-          right: -15  ,
+          right: -15,
           fontSize: "0.5rem",
           fontWeight: "bold",
           height: "16px",
