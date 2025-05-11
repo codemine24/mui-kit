@@ -4,7 +4,12 @@ import Link from "next/link";
 
 export const Logo = () => {
   return (
-    <Box sx={{ position: "relative" }}>
+    <Box
+      sx={{
+        position: "relative",
+        display: "inline-flex",
+      }}
+    >
       <Box
         component={Link}
         href="/"
