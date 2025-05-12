@@ -21,5 +21,6 @@ export default async function Page({
         return <Box>Buttons</Box>;
     }
   };
+
   return <Box>{elementView()}</Box>;
 }
