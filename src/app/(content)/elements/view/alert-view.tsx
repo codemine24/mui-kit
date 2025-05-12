@@ -15,6 +15,7 @@ import { SoftAlertsCodeString } from "../code-string/alert/alert-1";
 import { OutlinedAlertsCodeString } from "../code-string/alert/alert-2";
 import { SolidAlertsCodeString } from "../code-string/alert/alert-3";
 import { DescriptionAlertsCodeString } from "../code-string/alert/alert-4";
+import { ActionAlertsCodeString } from "../code-string/alert/alert-5";
 
 const sections = [
   {
@@ -50,9 +51,9 @@ const sections = [
   },
   {
     id: "alert-5",
-    title: "With Action",
+    title: "With Action & Chip",
     description: "",
-    codeString: DescriptionAlertsCodeString,
+    codeString: ActionAlertsCodeString,
     preview: <ActionAlerts />,
   },
 ];
