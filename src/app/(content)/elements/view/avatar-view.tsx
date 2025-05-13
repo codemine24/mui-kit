@@ -16,45 +16,51 @@ import { LetterVariantsCodeString } from "../code-string/avatar/letter-variants"
 import { StatusVariantsCodeString } from "../code-string/avatar/status-variants";
 import GroupVariants from "../components/avatar/group-variants";
 import { GroupVariantsCodeString } from "../code-string/avatar/group-variants";
+import SizeVariants from "../components/avatar/size-variants";
 
 const sections = [
   {
     id: "avatar-1",
-    title: "Shape",
-    description:
-      "Use Material UI avatar with extended design. No extra package required.",
+    title: "Different Shape",
+    description: "This variants contain avatars with different shapes.",
     codeString: ShapeVariantsCodeString,
     preview: <ShapeVariants />,
   },
   {
     id: "avatar-2",
-    title: "Icon",
+    title: "Different Size",
+    description: "Avatars with different sizes.",
+    codeString: ShapeVariantsCodeString,
+    preview: <SizeVariants />,
+  },
+  {
+    id: "avatar-3",
+    title: "Icon Avatars",
     description:
-      "Use Material UI avatar with extended design. No extra package required.",
+      "If your project requires avatars with no image, you can use icon instead. ",
     codeString: IconVariantsCodeString,
     preview: <IconVariants />,
   },
   {
-    id: "avatar-3",
-    title: "Letter",
-    description:
-      "Use Material UI avatar with extended design. No extra package required.",
+    id: "avatar-4",
+    title: "Letter Avatars",
+    description: "Letter avatars designed with material ui only. ",
     codeString: LetterVariantsCodeString,
     preview: <LetterVariants />,
   },
   {
-    id: "avatar-4",
-    title: "Status",
+    id: "avatar-5",
+    title: "Active Status",
     description:
-      "Use Material UI avatar with extended design. No extra package required.",
+      "If you need active status with the avatar, you can use this variant.",
     codeString: StatusVariantsCodeString,
     preview: <StatusVariants />,
   },
   {
-    id: "avatar-5",
-    title: "Group",
+    id: "avatar-6",
+    title: "Material UI avatar Group",
     description:
-      "Use Material UI avatar with extended design. No extra package required.",
+      "More than one avatar can be placed in a group with this variant.",
     codeString: GroupVariantsCodeString,
     preview: <GroupVariants />,
   },
