@@ -23,6 +23,8 @@ import {
   ButtonSoftCodeString,
   ButtonSoftWithBorderCodeString,
 } from "../code-string/button";
+import { ButtonAnimatedCodeString } from "../code-string/button/button-animated";
+import { ButtonAnimatedPreview } from "../components/button/button-animated";
 
 const sections = [
   {
@@ -74,6 +76,13 @@ const sections = [
     description: "Each section has a different color",
     codeString: ButtonSoftWithBorderCodeString,
     preview: <ButtonSoftWithBorderPreview />,
+  },
+  {
+    id: "button-animated",
+    title: "Button Animated",
+    description: "Each section has a different color",
+    codeString: ButtonAnimatedCodeString,
+    preview: <ButtonAnimatedPreview />,
   },
 ];
 
