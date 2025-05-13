@@ -21,6 +21,7 @@ import {
   ButtonDifferentShapeCodeString,
   ButtonGradientCodeString,
   ButtonSocialLoginCodeString,
+  ButtonLoaderCodeString,
 } from "../code-string/button";
 
 import {
@@ -36,6 +37,7 @@ import {
   ButtonDifferentShapePreview,
   ButtonGradientPreview,
   ButtonSocialLoginPreview,
+  ButtonLoaderPreview,
 } from "../components/button";
 
 const sections = [
@@ -123,6 +125,13 @@ const sections = [
     description: "Each section has a different color",
     codeString: ButtonSocialLoginCodeString,
     preview: <ButtonSocialLoginPreview />,
+  },
+  {
+    id: "button-loader",
+    title: "Button Loader",
+    description: "Each section has a different color",
+    codeString: ButtonLoaderCodeString,
+    preview: <ButtonLoaderPreview />,
   },
 ];
 

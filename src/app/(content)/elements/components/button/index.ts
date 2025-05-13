@@ -10,3 +10,4 @@ export * from "./button-icons";
 export * from "./button-different-shape";
 export * from "./button-gradient";
 export * from "./button-social-login";
+export * from "./button-loader";
