@@ -7,14 +7,14 @@ import { SectionTitle } from "@/components/core/section-title";
 import { Box, Divider } from "@mui/material";
 import { useOnThisPage } from "@/contexts/on-thispage-context";
 import ShapeVariants from "../components/avatar/shape-variants";
-import IconVariants from "../components/avatar/icon-variants";
-import LetterVariants from "../components/avatar/letter-variants";
+import IconVariants from "../components/avatar/avatar-icon-preview";
+import LetterVariants from "../components/avatar/avatar-letter-preview";
 import StatusVariants from "../components/avatar/status-variants";
 import { ShapeVariantsCodeString } from "../code-string/avatar/shape-variants";
 import { IconVariantsCodeString } from "../code-string/avatar/icon-variants";
 import { LetterVariantsCodeString } from "../code-string/avatar/letter-variants";
 import { StatusVariantsCodeString } from "../code-string/avatar/status-variants";
-import GroupVariants from "../components/avatar/group-variants";
+import GroupVariants from "../components/avatar/avatar-group-preview";
 import { GroupVariantsCodeString } from "../code-string/avatar/group-variants";
 import SizeVariants from "../components/avatar/size-variants";
 
