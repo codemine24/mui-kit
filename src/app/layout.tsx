@@ -19,7 +19,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "MUI Kit - Open Source MUI Components library",
+  title: {
+    default: "MUI Kit - Open Source MUI Components library",
+    template: "%s | MUI Kit",
+  },
   description: "A complete set of open source components for Material UI",
 };
 
