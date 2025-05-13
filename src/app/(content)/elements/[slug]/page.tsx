@@ -2,6 +2,7 @@ import { Box } from "@mui/material";
 import { AccordionView } from "../view/accordion-view";
 import { ButtonView } from "../view/button-view";
 import { AlertView } from "../view/alert-view";
+import { BreadcrumbsView } from "../view/breadcrumbs-view";
 
 export default async function Page({
   params,
@@ -17,6 +18,8 @@ export default async function Page({
         return <AlertView />;
       case "button":
         return <ButtonView />;
+      case "breadcrumb":
+        return <BreadcrumbsView />;
       default:
         return <Box>Buttons</Box>;
     }
