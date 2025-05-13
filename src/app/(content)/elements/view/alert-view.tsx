@@ -75,7 +75,7 @@ export const AlertView = () => {
       />
       <PageTitle
         title="Alert"
-        description="Material UI core accordion with extended design, and functionality. "
+        description="Material UI core alert with extended design, and functionality. "
       />
 
       <Divider sx={{ my: 4 }} />
