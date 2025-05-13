@@ -129,3 +129,11 @@ export const navItems = [
   { label: "Kit", path: PATHS.ELEMENTS.OVERVIEW },
   { label: "Contribute ♡", path: PATHS.CONTRIBUTE },
 ];
+
+export const sitemapRoutes = [
+  PATHS.DOCS.INTRO,
+  PATHS.DOCS.INSTALL,
+  PATHS.ELEMENTS.OVERVIEW,
+  PATHS.CONTRIBUTE,
+  ...elements.map((item) => item.path),
+];
