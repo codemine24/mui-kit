@@ -1,22 +1,5 @@
-import { Box, Button, Stack } from "@mui/material";
-
-const softColors = {
-  primary: "#e3f2fd",
-  secondary: "#ede7f6",
-  info: "#e0f7fa",
-  success: "#e8f5e9",
-  warning: "#fff3e0",
-  error: "#ffebee",
-};
-
-const textColors = {
-  primary: "#1976d2",
-  secondary: "#673ab7",
-  info: "#0288d1",
-  success: "#2e7d32",
-  warning: "#f57c00",
-  error: "#d32f2f",
-};
+import { Check } from "@mui/icons-material";
+import { Box, Button, Divider, Stack } from "@mui/material";
 
 export const ButtonSoftWithBorderPreview = () => {
   return (
@@ -29,7 +12,7 @@ export const ButtonSoftWithBorderPreview = () => {
             backgroundColor: "#e3f2fd",
             color: "#1976d2",
             textTransform: "capitalize",
-            border: `2px solid #1976d2`,
+            border: "2px solid #1976d2",
             fontWeight: 600,
             borderRadius: "10px",
             px: 2.5,
@@ -51,7 +34,7 @@ export const ButtonSoftWithBorderPreview = () => {
             backgroundColor: "#ede7f6",
             color: "#673ab7",
             textTransform: "capitalize",
-            border: `2px solid #673ab7`,
+            border: "2px solid #673ab7",
             fontWeight: 600,
             borderRadius: "10px",
             px: 2.5,
@@ -73,7 +56,7 @@ export const ButtonSoftWithBorderPreview = () => {
             backgroundColor: "#e0f7fa",
             color: "#0288d1",
             textTransform: "capitalize",
-            border: `2px solid #0288d1`,
+            border: "2px solid #0288d1",
             fontWeight: 600,
             borderRadius: "10px",
             px: 2.5,
@@ -95,7 +78,7 @@ export const ButtonSoftWithBorderPreview = () => {
             backgroundColor: "#e8f5e9",
             color: "#2e7d32",
             textTransform: "capitalize",
-            border: `2px solid #2e7d32`,
+            border: "2px solid #2e7d32",
             fontWeight: 600,
             borderRadius: "10px",
             px: 2.5,
@@ -117,7 +100,7 @@ export const ButtonSoftWithBorderPreview = () => {
             backgroundColor: "#fff3e0",
             color: "#f57c00",
             textTransform: "capitalize",
-            border: `2px solid #f57c00`,
+            border: "2px solid #f57c00",
             fontWeight: 600,
             borderRadius: "10px",
             px: 2.5,
@@ -139,7 +122,7 @@ export const ButtonSoftWithBorderPreview = () => {
             backgroundColor: "#ffebee",
             color: "#d32f2f",
             textTransform: "capitalize",
-            border: `2px solid #d32f2f`,
+            border: "2px solid #d32f2f",
             fontWeight: 600,
             borderRadius: "10px",
             px: 2.5,
@@ -152,6 +135,137 @@ export const ButtonSoftWithBorderPreview = () => {
           }}
         >
           Error
+        </Button>
+      </Stack>
+
+      <Divider sx={{ my: 2 }} />
+
+      {/* Contained */}
+      <Stack direction="row" spacing={2} flexWrap="wrap">
+        <Button
+          variant="text"
+          disableElevation
+          sx={{
+            backgroundColor: "#e3f2fd",
+            color: "#1976d2",
+            textTransform: "capitalize",
+            border: "2px solid #1976d2",
+            fontWeight: 600,
+            borderRadius: "10px",
+            py: 1,
+            minWidth: "auto",
+            "&:hover": {
+              backgroundColor: "#e3f2fd",
+              opacity: 0.9,
+            },
+          }}
+        >
+          <Check />
+        </Button>
+
+        <Button
+          variant="text"
+          disableElevation
+          sx={{
+            backgroundColor: "#ede7f6",
+            color: "#673ab7",
+            textTransform: "capitalize",
+            border: "2px solid #673ab7",
+            fontWeight: 600,
+            borderRadius: "10px",
+            py: 1,
+            minWidth: "auto",
+            "&:hover": {
+              backgroundColor: "#ede7f6",
+              opacity: 0.9,
+            },
+          }}
+        >
+          <Check />
+        </Button>
+
+        <Button
+          variant="text"
+          disableElevation
+          sx={{
+            backgroundColor: "#e0f7fa",
+            color: "#0288d1",
+            textTransform: "capitalize",
+            border: "2px solid #0288d1",
+            fontWeight: 600,
+            borderRadius: "10px",
+            py: 1,
+            minWidth: "auto",
+            "&:hover": {
+              backgroundColor: "#e0f7fa",
+              opacity: 0.9,
+            },
+          }}
+        >
+          <Check />
+        </Button>
+
+        <Button
+          variant="text"
+          disableElevation
+          sx={{
+            backgroundColor: "#e8f5e9",
+            color: "#2e7d32",
+            textTransform: "capitalize",
+            border: "2px solid #2e7d32",
+            fontWeight: 600,
+            borderRadius: "10px",
+            py: 1,
+            minWidth: "auto",
+            "&:hover": {
+              backgroundColor: "#e8f5e9",
+              opacity: 0.9,
+            },
+          }}
+        >
+          <Check />
+        </Button>
+
+        <Button
+          variant="text"
+          disableElevation
+          sx={{
+            backgroundColor: "#fff3e0",
+            color: "#f57c00",
+            textTransform: "capitalize",
+            border: "2px solid #f57c00",
+            fontWeight: 600,
+            borderRadius: "10px",
+            py: 1,
+            minWidth: "auto",
+            "&:hover": {
+              backgroundColor: "#fff3e0",
+              opacity: 0.9,
+            },
+          }}
+        >
+          <Check />
+        </Button>
+
+        <Button
+          variant="text"
+          disableElevation
+          sx={{
+            backgroundColor: "#ffebee",
+            color: "#d32f2f",
+            textTransform: "capitalize",
+            border: "2px solid #d32f2f",
+            fontWeight: 600,
+            borderRadius: "10px",
+            py: 1,
+            minWidth: "auto",
+            "&:hover": {
+              backgroundColor: "#ffebee",
+              opacity: 0.9,
+            },
+          }}
+        >
+          <Check />
         </Button>
       </Stack>
     </Box>

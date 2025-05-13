@@ -1,5 +1,4 @@
-export const ButtonAnimatedCodeString = `
-import { Box, Button, Stack } from "@mui/material";
+export const ButtonAnimatedCodeString = `import { Box, Button, Stack } from "@mui/material";
 
 export const ButtonAnimatedPreview = () => {
     return (
@@ -176,9 +175,7 @@ export const ButtonAnimatedPreview = () => {
                 >
                     Hover me
                 </Button>
-
             </Stack>
         </Box>
     );
-};
-`;
+};`

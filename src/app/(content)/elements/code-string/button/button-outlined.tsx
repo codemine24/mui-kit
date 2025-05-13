@@ -1,5 +1,4 @@
-export const ButtonOutlinedCodeString = `
-import { Stack, Button, Box } from "@mui/material";
+export const ButtonOutlinedCodeString = `import { Stack, Button, Box } from "@mui/material";
 
 export const ButtonOutlinedPreview = () => {
   return (
@@ -11,9 +10,6 @@ export const ButtonOutlinedPreview = () => {
         alignItems={"center"}
         rowGap={2}
       >
-        <Box>
-          <Button variant="outlined">Default</Button>
-        </Box>
         <Box>
           <Button variant="outlined" color="primary">
             Primary
@@ -64,5 +60,4 @@ export const ButtonOutlinedPreview = () => {
     </Box>
   );
 };
-
-`;
+`

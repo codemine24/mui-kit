@@ -11,9 +11,6 @@ export const ButtonOutlinedPreview = () => {
         rowGap={2}
       >
         <Box>
-          <Button variant="outlined">Default</Button>
-        </Box>
-        <Box>
           <Button variant="outlined" color="primary">
             Primary
           </Button>

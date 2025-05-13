@@ -12,9 +12,6 @@ export const ButtonContainedPreview = () => {
         rowGap={2}
       >
         <Box>
-          <Button variant="contained">Default</Button>
-        </Box>
-        <Box>
           <Button variant="contained" color="primary">
             Primary
           </Button>
@@ -52,7 +49,7 @@ export const ButtonContainedPreview = () => {
               backgroundColor: "#E60076",
               color: "#ffffff",
               "&:hover": {
-                backgroundColor: "#e6007774",
+                backgroundColor: "#9b0653",
               },
             }}
           >
@@ -63,5 +60,4 @@ export const ButtonContainedPreview = () => {
     </Box>
   );
 };
-
-`;
+`

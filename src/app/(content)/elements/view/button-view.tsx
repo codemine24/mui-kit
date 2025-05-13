@@ -7,13 +7,7 @@ import { PageTitle } from "@/components/core/page-title";
 import { SectionTitle } from "@/components/core/section-title";
 import { useOnThisPage } from "@/contexts/on-thispage-context";
 import { Box, Divider } from "@mui/material";
-import { ButtonContainedPreview } from "../components/button/button-contained";
-import { ButtonOutlinedPreview } from "../components/button/button-outlined";
-import { ButtonTextPreview } from "../components/button/button-text";
-import { ButtonSoftPreview } from "../components/button/button-soft";
-import { ButtonIconsPreview } from "../components/button/button-icons";
-import { ButtonSoftWithBorderPreview } from "../components/button/button-soft-with-border";
-import { ButtonSizesPreview } from "../components/button/button-sizes";
+
 import {
   ButtonContainedCodeString,
   ButtonOutlinedCodeString,
@@ -22,9 +16,23 @@ import {
   ButtonIconsCodeString,
   ButtonSoftCodeString,
   ButtonSoftWithBorderCodeString,
+  ButtonDisabledCodeString,
+  ButtonAnimatedCodeString,
+  ButtonDifferentShapeCodeString,
 } from "../code-string/button";
-import { ButtonAnimatedCodeString } from "../code-string/button/button-animated";
-import { ButtonAnimatedPreview } from "../components/button/button-animated";
+
+import {
+  ButtonAnimatedPreview,
+  ButtonContainedPreview,
+  ButtonOutlinedPreview,
+  ButtonSoftPreview,
+  ButtonSoftWithBorderPreview,
+  ButtonTextPreview,
+  ButtonIconsPreview,
+  ButtonSizesPreview,
+  ButtonDisabledPreview,
+  ButtonDifferentShapePreview,
+} from "../components/button";
 
 const sections = [
   {
@@ -57,6 +65,13 @@ const sections = [
     preview: <ButtonSizesPreview />,
   },
   {
+    id: "button-different-shape",
+    title: "Button Different Shape",
+    description: "Each section has a different color",
+    codeString: ButtonDifferentShapeCodeString,
+    preview: <ButtonDifferentShapePreview />,
+  },
+  {
     id: "button-icons",
     title: "Button Icons",
     description: "Icon position is different from traditional accordions",
@@ -83,6 +98,13 @@ const sections = [
     description: "Each section has a different color",
     codeString: ButtonAnimatedCodeString,
     preview: <ButtonAnimatedPreview />,
+  },
+  {
+    id: "button-disabled",
+    title: "Button Disabled",
+    description: "Each section has a different color",
+    codeString: ButtonDisabledCodeString,
+    preview: <ButtonDisabledPreview />,
   },
 ];
 

@@ -1,11 +1,11 @@
 export const ButtonIconsCodeString = `
-import { Send } from "@mui/icons-material";
+import { ChevronRight, CloudUpload, Refresh, Send } from "@mui/icons-material";
 import { Box, Button, Divider, IconButton, Stack } from "@mui/material";
 
 export const ButtonIconsPreview = () => {
   return (
     <Box>
-      <Stack direction="row" spacing={2} flexWrap="wrap" alignItems="center">
+      <Stack direction="row" spacing={2} rowGap={2} flexWrap="wrap" alignItems="center">
         <IconButton>
           <Send />
         </IconButton>
@@ -42,7 +42,35 @@ export const ButtonIconsPreview = () => {
       <Divider sx={{ my: 2 }} />
 
       {/* Bordered Icon */}
-      <Stack direction="row" spacing={2} flexWrap="wrap" alignItems="center">
+      <Stack direction="row" spacing={2} rowGap={2} flexWrap="wrap" alignItems="center">
+        <Box>
+          <IconButton
+            sx={{
+              backgroundColor: "primary.main",
+              border: "1px solid",
+              borderColor: "primary.main",
+              borderRadius: "8px",
+              padding: 1,
+            }}
+          >
+            <Send />
+          </IconButton>
+        </Box>
+
+        <Box>
+          <IconButton
+            sx={{
+              backgroundColor: "primary.main",
+              border: "1px solid",
+              borderColor: "primary.main",
+              borderRadius: "50%",
+              padding: 1,
+            }}
+          >
+            <Send />
+          </IconButton>
+        </Box>
+
         <Box>
           <IconButton
             color="primary"
@@ -98,26 +126,24 @@ export const ButtonIconsPreview = () => {
           </IconButton>
         </Box>
       </Stack>
+
       <Divider sx={{ my: 2 }} />
+
       {/* Contained Icon Button*/}
-      <Stack direction="row" spacing={2} flexWrap="wrap" alignItems="center">
+      <Stack direction="row" spacing={2} rowGap={2} flexWrap="wrap" alignItems="center">
         <Box>
           <Button variant="contained" color="primary" startIcon={<Send />}>
             Send
           </Button>
         </Box>
         <Box>
-          <Button variant="contained" color="primary" endIcon={<Send />}>
+          <Button variant="contained" color="secondary" endIcon={<Send />}>
             Send
           </Button>
         </Box>
         <Box>
-          <Button
-            variant="contained"
-            color="primary"
-            endIcon={<Send sx={{ color: "red" }} />}
-          >
-            Send
+          <Button variant="contained" color="error" endIcon={<CloudUpload />}>
+            Upload Assets
           </Button>
         </Box>
         <Box>
@@ -157,24 +183,16 @@ export const ButtonIconsPreview = () => {
 
       <Divider sx={{ my: 2 }} />
 
-      <Stack direction="row" spacing={2} flexWrap="wrap" alignItems="center">
+      {/* Outlined Icon Button*/}
+      <Stack direction="row" spacing={2} rowGap={2} flexWrap="wrap" alignItems="center">
         <Box>
           <Button variant="outlined" color="primary" startIcon={<Send />}>
             Send
           </Button>
         </Box>
         <Box>
-          <Button variant="outlined" color="primary" endIcon={<Send />}>
-            Send
-          </Button>
-        </Box>
-        <Box>
-          <Button
-            variant="outlined"
-            color="primary"
-            endIcon={<Send sx={{ color: "red" }} />}
-          >
-            Send
+          <Button variant="outlined" color="primary" endIcon={<Refresh />}>
+            Refresh
           </Button>
         </Box>
         <Box>
@@ -188,25 +206,16 @@ export const ButtonIconsPreview = () => {
           </Button>
         </Box>
       </Stack>
+
       <Divider sx={{ my: 2 }} />
+
       {/* text icon button */}
-      <Stack direction="row" spacing={2} flexWrap="wrap" alignItems="center">
+      <Stack direction="row" spacing={2} rowGap={2} flexWrap="wrap" alignItems="center">
         <Box>
-          <Button variant="text" color="primary" startIcon={<Send />}>
-            Send
-          </Button>
+          <Button variant="text" color="primary" endIcon={<ChevronRight fontSize="large" />}>Read More</Button>
         </Box>
         <Box>
-          <Button variant="text" color="primary" endIcon={<Send />}>
-            Send
-          </Button>
-        </Box>
-        <Box>
-          <Button
-            variant="text"
-            color="primary"
-            endIcon={<Send sx={{ color: "red" }} />}
-          >
+          <Button variant="text" color="secondary" endIcon={<Send />}>
             Send
           </Button>
         </Box>
@@ -219,5 +228,4 @@ export const ButtonIconsPreview = () => {
     </Box>
   );
 };
-
-`;
+`

@@ -175,7 +175,6 @@ export const ButtonAnimatedPreview = () => {
                 >
                     Hover me
                 </Button>
-
             </Stack>
         </Box>
     );

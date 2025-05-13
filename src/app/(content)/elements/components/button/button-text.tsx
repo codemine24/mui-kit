@@ -47,7 +47,7 @@ export const ButtonTextPreview = () => {
             sx={{
               color: "#E60076",
               "&:hover": {
-                backgroundColor: "#e6007715",
+                backgroundColor: "#e6007721",
               },
             }}
           >
