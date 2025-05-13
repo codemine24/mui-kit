@@ -58,9 +58,9 @@ const sections = [
   },
   {
     id: "avatar-6",
-    title: "Material UI avatar Group",
+    title: "Avatar Group",
     description:
-      "More than one avatar can be placed in a group with this variant.",
+      "If you need more than one one, you can go with Material ui avatar group.",
     codeString: GroupVariantsCodeString,
     preview: <GroupVariants />,
   },
