@@ -9,3 +9,4 @@ export * from "./button-sizes";
 export * from "./button-icons";
 export * from "./button-different-shape";
 export * from "./button-gradient";
+export * from "./button-social-login";
