@@ -14,6 +14,8 @@ import { ShapeVariantsCodeString } from "../code-string/avatar/shape-variants";
 import { IconVariantsCodeString } from "../code-string/avatar/icon-variants";
 import { LetterVariantsCodeString } from "../code-string/avatar/letter-variants";
 import { StatusVariantsCodeString } from "../code-string/avatar/status-variants";
+import GroupVariants from "../components/avatar/group-variants";
+import { GroupVariantsCodeString } from "../code-string/avatar/group-variants";
 
 const sections = [
   {
@@ -47,6 +49,14 @@ const sections = [
       "Use Material UI avatar with extended design. No extra package required.",
     codeString: StatusVariantsCodeString,
     preview: <StatusVariants />,
+  },
+  {
+    id: "avatar-5",
+    title: "Group",
+    description:
+      "Use Material UI avatar with extended design. No extra package required.",
+    codeString: GroupVariantsCodeString,
+    preview: <GroupVariants />,
   },
 ];
 
