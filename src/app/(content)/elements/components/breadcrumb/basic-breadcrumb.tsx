@@ -3,11 +3,6 @@ import Stack from "@mui/material/Stack";
 import { Breadcrumbs, Link, Typography } from "@mui/material";
 
 export default function BasicBreadcrumbs() {
-  const handleClick = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-    event.preventDefault();
-    console.info("You clicked a breadcrumb.");
-  };
-
   return (
     <Stack
       direction="row"
@@ -17,7 +12,7 @@ export default function BasicBreadcrumbs() {
       spacing={2}
     >
       {/* Success */}
-      <div role="presentation" onClick={handleClick}>
+      <div role="presentation">
         <Breadcrumbs aria-label="breadcrumb">
           <Link underline="hover" color="inherit" href="#">
             MUI Kit

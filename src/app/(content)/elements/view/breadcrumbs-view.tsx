@@ -9,6 +9,9 @@ import { useOnThisPage } from "@/contexts/on-thispage-context";
 import BasicBreadcrumbs from "../components/breadcrumb/basic-breadcrumb";
 import CustomSeparatorBreadcrumbs from "../components/breadcrumb/custom-separator-breadcrumb";
 import IconBreadcrumbs from "../components/breadcrumb/icon-breadcrumb";
+import CollapsedBreadcrumbs from "../components/breadcrumb/collapsed-breadcrumb";
+import ChipBreadcrumbs from "../components/breadcrumb/chip-breadcrumb";
+import BackgroundBreadcrumbs from "../components/breadcrumb/background-breadcrumb";
 
 const sections = [
   {
@@ -34,6 +37,30 @@ const sections = [
       "Use Material UI breadcrumbs with icon with extended design. No extra package required.",
     codeString: "",
     preview: <IconBreadcrumbs />,
+  },
+  {
+    id: "breadcrumbs-4",
+    title: "With Chip",
+    description:
+      "Use Material UI collapsed breadcrumbs with extended design. No extra package required.",
+    codeString: "",
+    preview: <ChipBreadcrumbs />,
+  },
+  {
+    id: "breadcrumbs-5",
+    title: "With Background",
+    description:
+      "Use Material UI collapsed breadcrumbs with extended design. No extra package required.",
+    codeString: "",
+    preview: <BackgroundBreadcrumbs />,
+  },
+  {
+    id: "breadcrumbs-6",
+    title: "Collapsed",
+    description:
+      "Use Material UI collapsed breadcrumbs with extended design. No extra package required.",
+    codeString: "",
+    preview: <CollapsedBreadcrumbs />,
   },
 ];
 
