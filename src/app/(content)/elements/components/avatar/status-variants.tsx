@@ -85,7 +85,7 @@ export default function StatusVariants() {
             height: 40,
             border: "2px solid #fff",
             position: "absolute",
-            top: 3.5,
+            top: 3,
             left: 3,
           }}
         />
@@ -130,7 +130,7 @@ export default function StatusVariants() {
         />
       </Box>
 
-      {/* Angle */}
+      {/* Oval */}
       <Box sx={{ position: "relative" }}>
         <Box
           sx={{
@@ -179,6 +179,7 @@ export default function StatusVariants() {
         />
       </Box>
 
+      {/* Notched */}
       <Box sx={{ position: "relative" }}>
         <Box
           sx={{

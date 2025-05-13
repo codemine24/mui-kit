@@ -1,3 +1,4 @@
+export const ShapeVariantsCodeString = `
 import * as React from "react";
 import Stack from "@mui/material/Stack";
 import { Avatar } from "@mui/material";
@@ -45,7 +46,7 @@ export default function ShapeVariants() {
         }}
       />
 
-      {/* Angle */}
+      {/* Oval */}
       <Avatar
         src={squareAvatarSrc}
         alt="John Doe"
@@ -55,6 +56,7 @@ export default function ShapeVariants() {
         }}
       />
 
+      {/* Notched */}
       <Avatar
         src={squareAvatarSrc}
         alt="John Doe"
@@ -68,3 +70,4 @@ export default function ShapeVariants() {
     </Stack>
   );
 }
+`;
