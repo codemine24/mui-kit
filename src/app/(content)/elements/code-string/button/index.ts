@@ -8,4 +8,4 @@ export * from "./button-sizes";
 export * from "./button-disabled";
 export * from "./button-animated";
 export * from "./button-different-shape";
-
+export * from "./button-gradient";

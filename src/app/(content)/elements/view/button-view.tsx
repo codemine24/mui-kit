@@ -19,6 +19,7 @@ import {
   ButtonDisabledCodeString,
   ButtonAnimatedCodeString,
   ButtonDifferentShapeCodeString,
+  ButtonGradientCodeString,
 } from "../code-string/button";
 
 import {
@@ -32,6 +33,7 @@ import {
   ButtonSizesPreview,
   ButtonDisabledPreview,
   ButtonDifferentShapePreview,
+  ButtonGradientPreview,
 } from "../components/button";
 
 const sections = [
@@ -105,6 +107,13 @@ const sections = [
     description: "Each section has a different color",
     codeString: ButtonDisabledCodeString,
     preview: <ButtonDisabledPreview />,
+  },
+  {
+    id: "button-gradient",
+    title: "Button Gradient",
+    description: "Each section has a different color",
+    codeString: ButtonGradientCodeString,
+    preview: <ButtonGradientPreview />,
   },
 ];
 

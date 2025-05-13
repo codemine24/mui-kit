@@ -15,7 +15,7 @@ export const ButtonDisabledPreview = () => {
                     sx={{
                         ":disabled": {
                             cursor: "not-allowed",
-                            pointerEvents: 'all !important',
+                            pointerEvents: "all !important",
                         },
                     }}
                 >
@@ -27,7 +27,7 @@ export const ButtonDisabledPreview = () => {
                     sx={{
                         ":disabled": {
                             cursor: "not-allowed",
-                            pointerEvents: 'all !important',
+                            pointerEvents: "all !important",
                             bgcolor: "#e6007721",
                         },
                     }}
@@ -36,5 +36,5 @@ export const ButtonDisabledPreview = () => {
                 </Button>
             </Stack>
         </Box>
-    )
-}
+    );
+};
