@@ -1,30 +1,45 @@
 import { Send } from "@mui/icons-material";
 import { Box, Button, Divider, IconButton, Stack } from "@mui/material";
 
-export const Button5Preview = () => {
+export const ButtonIconsPreview = () => {
   return (
     <Box>
-      {/* Icon Only */}
       <Stack direction="row" spacing={2} flexWrap="wrap" alignItems="center">
-        <Box>
-          <IconButton color="primary">
-            <Send />
-          </IconButton>
-        </Box>
+        <IconButton>
+          <Send />
+        </IconButton>
 
-        <Box>
-          <IconButton color="error">
-            <Send />
-          </IconButton>
-        </Box>
-        <Box>
-          <IconButton disabled>
-            <Send />
-          </IconButton>
-        </Box>
+        <IconButton color="primary">
+          <Send />
+        </IconButton>
+
+        <IconButton color="secondary">
+          <Send />
+        </IconButton>
+
+        <IconButton color="error">
+          <Send />
+        </IconButton>
+
+        <IconButton color="warning">
+          <Send />
+        </IconButton>
+
+        <IconButton color="info">
+          <Send />
+        </IconButton>
+
+        <IconButton color="success">
+          <Send />
+        </IconButton>
+
+        <IconButton disabled>
+          <Send />
+        </IconButton>
       </Stack>
 
       <Divider sx={{ my: 2 }} />
+
       {/* Bordered Icon */}
       <Stack direction="row" spacing={2} flexWrap="wrap" alignItems="center">
         <Box>
@@ -33,8 +48,8 @@ export const Button5Preview = () => {
             sx={{
               border: "1px solid",
               borderColor: "primary.main",
-              borderRadius: "50%", 
-              padding: 1, 
+              borderRadius: "8px",
+              padding: 1,
             }}
           >
             <Send />
@@ -43,12 +58,26 @@ export const Button5Preview = () => {
 
         <Box>
           <IconButton
-            color="error"
+            color="primary"
+            sx={{
+              border: "1px solid",
+              borderColor: "primary.main",
+              borderRadius: "50%",
+              padding: 1,
+            }}
+          >
+            <Send />
+          </IconButton>
+        </Box>
+
+        <Box>
+          <IconButton
+            color="primary"
             sx={{
               border: "1px dashed",
-              borderColor: "error.main",
-              borderRadius: "50%", 
-              padding: 1, 
+              borderColor: "primary.main",
+              borderRadius: "50%",
+              padding: 1,
             }}
           >
             <Send />
@@ -59,9 +88,9 @@ export const Button5Preview = () => {
             disabled
             sx={{
               border: "1px dashed",
-              borderColor: "gray", 
-              borderRadius: "50%", 
-              padding: 1, 
+              borderColor: "gray",
+              borderRadius: "50%",
+              padding: 1,
             }}
           >
             <Send />

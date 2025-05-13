@@ -1,26 +1,84 @@
 "use client";
+
+import React from "react";
 import { CodePreviewCopyWrapper } from "@/components/code-preview-copy-wrapper";
 import { CustomBreadCrumbs } from "@/components/core/breadcrumbs";
 import { PageTitle } from "@/components/core/page-title";
 import { SectionTitle } from "@/components/core/section-title";
 import { useOnThisPage } from "@/contexts/on-thispage-context";
 import { Box, Divider } from "@mui/material";
-import React from "react";
-import { button1CodeString } from "../code-string/button-code-string";
-import { Button1Preview } from "../components/button/button-1";
-import { Button2Preview } from "../components/button/button-2";
-import { Button3Preview } from "../components/button/button-3.";
-import { Button4Preview } from "../components/button/button-4";
-import { Button5Preview } from "../components/button/button-5";
+import { ButtonContainedPreview } from "../components/button/button-contained";
+import { ButtonOutlinedPreview } from "../components/button/button-outlined";
+import { ButtonTextPreview } from "../components/button/button-text";
+import { ButtonSoftPreview } from "../components/button/button-soft";
+import { ButtonIconsPreview } from "../components/button/button-icons";
+import { ButtonSoftWithBorderPreview } from "../components/button/button-soft-with-border";
+import { ButtonSizesPreview } from "../components/button/button-sizes";
+import {
+  ButtonContainedCodeString,
+  ButtonOutlinedCodeString,
+  ButtonTextCodeString,
+  ButtonSizesCodeString,
+  ButtonIconsCodeString,
+  ButtonSoftCodeString,
+  ButtonSoftWithBorderCodeString,
+} from "../code-string/button";
+
 const sections = [
-  { title: "#1 Contained", id: "button-section-1" },
-  { title: "#2 Outlined", id: "button-section-2" },
-  { title: "#3 Text", id: "button-section-3" },
-  { title: "#4 Soft", id: "button-section-4" },
-  { title: "#5 Icon Buttons", id: "button-section-5" },
+  {
+    id: "button-contained",
+    title: "Button Contained",
+    description: "A regular but elegant accordion with solid background color",
+    codeString: ButtonContainedCodeString,
+    preview: <ButtonContainedPreview />,
+  },
+  {
+    id: "button-outlined",
+    title: "Button Outlined",
+    description: "Outlined accordion with custom mui icon",
+    codeString: ButtonOutlinedCodeString,
+    preview: <ButtonOutlinedPreview />,
+  },
+  {
+    id: "button-text",
+    title: "Button Text",
+    description: "Outlined accordion with custom mui icon",
+    codeString: ButtonTextCodeString,
+    preview: <ButtonTextPreview />,
+  },
+  {
+    id: "button-sizes",
+    title: "Button Sizes",
+    description:
+      "Use this beautiful accordion if you are looking for an accordion with box shadow.",
+    codeString: ButtonSizesCodeString,
+    preview: <ButtonSizesPreview />,
+  },
+  {
+    id: "button-icons",
+    title: "Button Icons",
+    description: "Icon position is different from traditional accordions",
+    codeString: ButtonIconsCodeString,
+    preview: <ButtonIconsPreview />,
+  },
+  {
+    id: "button-soft",
+    title: "Button Soft",
+    description: "Each section has a vertical line to separate them",
+    codeString: ButtonSoftCodeString,
+    preview: <ButtonSoftPreview />,
+  },
+  {
+    id: "button-soft-with-border",
+    title: "Button Soft with Border",
+    description: "Each section has a different color",
+    codeString: ButtonSoftWithBorderCodeString,
+    preview: <ButtonSoftWithBorderPreview />,
+  },
 ];
+
 export const ButtonView = () => {
-  const {  setSections } = useOnThisPage();
+  const { setSections } = useOnThisPage();
 
   React.useEffect(() => {
     setSections(sections);
@@ -28,73 +86,34 @@ export const ButtonView = () => {
 
   return (
     <Box>
-      <Box>
-        <CustomBreadCrumbs
-          pathArr={[
-            { label: "Elements", path: "/elements" },
-            { label: "Button", path: "" },
-          ]}
-        />
-        <PageTitle
-          title="Button"
-          description="Material UI core button with extended design, and functionality."
-        />
-        <Divider sx={{ my: 4 }} />
+      <CustomBreadCrumbs
+        pathArr={[
+          { label: "Elements", path: "/elements" },
+          { label: "Button", path: "" },
+        ]}
+      />
+      <PageTitle
+        title="Button"
+        description="Material UI core button with extended design, and functionality. "
+      />
 
-        {/* contained buttons */}
-        <Box sx={{ mb: 4 }}>
-          <SectionTitle title="Contained" id="button-section-1" />
+      <Divider sx={{ my: 4 }} />
+
+      {/* Button - 1 */}
+      {sections.map((section) => (
+        <Box key={section.id} sx={{ mb: 4 }}>
+          <SectionTitle
+            title={section.title}
+            description={section.description || ""}
+            id={section.id}
+          />
 
           <CodePreviewCopyWrapper
-            codeString={button1CodeString}
-            preview={<Button1Preview />}
+            codeString={section.codeString}
+            preview={section.preview}
           />
         </Box>
-      </Box>
-      {/* outlined buttons */}
-      <Box>
-        <Box sx={{ mb: 4 }}>
-          <SectionTitle title="Outlined" id="button-section-2" />
-
-          <CodePreviewCopyWrapper
-            codeString={button1CodeString}
-            preview={<Button2Preview />}
-          />
-        </Box>
-      </Box>
-      {/* text buttons */}
-      <Box>
-        <Box sx={{ mb: 4 }}>
-          <SectionTitle title="Text" id="button-section-3" />
-
-          <CodePreviewCopyWrapper
-            codeString={button1CodeString}
-            preview={<Button3Preview />}
-          />
-        </Box>
-      </Box>
-      {/* soft buttons */}
-      <Box>
-        <Box sx={{ mb: 4 }}>
-          <SectionTitle title="Soft" id="button-section-3" />
-
-          <CodePreviewCopyWrapper
-            codeString={button1CodeString}
-            preview={<Button4Preview />}
-          />
-        </Box>
-      </Box>
-      {/* icon buttons */}
-      <Box>
-        <Box sx={{ mb: 4 }}>
-          <SectionTitle title="Icon Buttons" id="button-section-3" />
-
-          <CodePreviewCopyWrapper
-            codeString={button1CodeString}
-            preview={<Button5Preview />}
-          />
-        </Box>
-      </Box>
+      ))}
     </Box>
   );
 };

@@ -1,63 +1,16 @@
-import { Stack, Button, Box, Divider } from "@mui/material";
+export const ButtonDifferentShapeCodeString = `
+import { Stack, Button, Box } from "@mui/material";
 
-export const Button1Preview = () => {
+export const ButtonDifferentShapePreview = () => {
   return (
     <Box>
-      {/* Custom Size */}
-      <Stack direction="row" spacing={1} flexWrap="wrap" alignItems={"center"} rowGap={.5}>
-        <Box>
-          <Button
-            variant="contained"
-            color="primary"
-            sx={{ fontSize: "0.625rem", padding: "3px 8px", minWidth: "auto" }}
-          >
-            xs
-          </Button>
-        </Box>
-        <Box>
-          <Button variant="contained" color="primary" size="small">
-            small
-          </Button>
-        </Box>
-        <Box>
-          <Button variant="contained" color="primary" size="medium">
-            medium
-          </Button>
-        </Box>
-        <Box>
-          <Button variant="contained" color="primary" size="large">
-            large
-          </Button>
-        </Box>
-
-        <Box>
-          <Button
-            variant="contained"
-            color="primary"
-            sx={{ fontSize: "1rem", padding: "10px 20px" }}
-          >
-            xl
-          </Button>
-        </Box>
-        <Box>
-          <Button
-            color="primary"
-            variant="contained"
-            size="small"
-            sx={{
-              fontSize: "0.65rem",
-              padding: "2px 8px",
-              minWidth: "204px",
-              height: "94px",
-            }}
-          >
-            Custom Size
-          </Button>
-        </Box>
-      </Stack>
-      <Divider sx={{ my: 2 }} />
-      {/* Custom Shapes */}
-      <Stack direction="row" spacing={1} flexWrap="wrap" alignItems={"center"} rowGap={.5}>
+      <Stack
+        direction="row"
+        spacing={2}
+        rowGap={2}
+        flexWrap="wrap"
+        alignItems={"center"}
+      >
         <Box>
           <Button
             variant="contained"
@@ -190,3 +143,5 @@ export const Button1Preview = () => {
     </Box>
   );
 };
+
+`;
