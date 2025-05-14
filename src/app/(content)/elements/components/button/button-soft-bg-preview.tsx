@@ -1,6 +1,6 @@
 import { Box, Button, Stack } from "@mui/material";
 
-export const ButtonSoftPreview = () => {
+export const ButtonSoftBgPreview = () => {
   return (
     <Box p={2}>
       <Stack direction="row" spacing={2} flexWrap="wrap">

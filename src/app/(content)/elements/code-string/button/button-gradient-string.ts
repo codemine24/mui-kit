@@ -1,4 +1,4 @@
-export const ButtonGradientCodeString = `import { Box, Button, Stack } from "@mui/material";
+export const buttonGradientString = `import { Box, Button, Stack } from "@mui/material";
 
 export const ButtonGradientPreview = () => {
     return (

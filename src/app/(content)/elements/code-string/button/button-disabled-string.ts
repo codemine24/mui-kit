@@ -1,4 +1,4 @@
-export const ButtonDisabledCodeString = `
+export const buttonDisabledString = `
 import { Box, Button, Stack } from "@mui/material";
 
 export const ButtonDisabledPreview = () => {

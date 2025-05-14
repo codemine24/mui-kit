@@ -1,4 +1,4 @@
-export const ButtonLoaderCodeString = `import { Box, Stack, Button, Divider } from "@mui/material";
+export const buttonLoaderString = `import { Box, Stack, Button, Divider } from "@mui/material";
 import { Loader2 } from "lucide-react";
 import { keyframes } from '@mui/system';
 import { styled } from "@mui/material/styles";

@@ -1,4 +1,4 @@
-export const ButtonSocialIconCodeString = `import { Box, Stack, IconButton } from "@mui/material";
+export const buttonSocialIconString = `import { Box, Stack, IconButton } from "@mui/material";
 import {
     FaFacebookF,
     FaInstagram,

@@ -1,6 +1,6 @@
-import { Stack, Button, Box } from "@mui/material";
+export const buttonShapeString = `import { Stack, Button, Box } from "@mui/material";
 
-export const ButtonDifferentShapePreview = () => {
+export const ButtonShapePreview = () => {
   return (
     <Box>
       <Stack
@@ -142,3 +142,4 @@ export const ButtonDifferentShapePreview = () => {
     </Box>
   );
 };
+`

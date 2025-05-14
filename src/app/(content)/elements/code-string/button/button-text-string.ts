@@ -1,7 +1,6 @@
-export const ButtonContainedCodeString = `
-import { Stack, Button, Box } from "@mui/material";
+export const buttonTextString = `import { Stack, Button, Box } from "@mui/material";
 
-export const ButtonContainedPreview = () => {
+export const ButtonTextPreview = () => {
   return (
     <Box>
       <Stack
@@ -12,44 +11,43 @@ export const ButtonContainedPreview = () => {
         rowGap={2}
       >
         <Box>
-          <Button variant="contained" color="primary">
+          <Button variant="text" color="primary">
             Primary
           </Button>
         </Box>
         <Box>
-          <Button variant="contained" color="secondary">
+          <Button variant="text" color="secondary">
             Secondary
           </Button>
         </Box>
         <Box>
-          <Button variant="contained" color="error">
+          <Button variant="text" color="error">
             Error
           </Button>
         </Box>
         <Box>
-          <Button variant="contained" color="warning">
+          <Button variant="text" color="warning">
             Warning
           </Button>
         </Box>
         <Box>
-          <Button variant="contained" color="info">
+          <Button variant="text" color="info">
             Info
           </Button>
         </Box>
         <Box>
-          <Button variant="contained" color="success">
+          <Button variant="text" color="success">
             Success
           </Button>
         </Box>
 
         <Box>
           <Button
-            variant="contained"
+            variant="text"
             sx={{
-              backgroundColor: "#E60076",
-              color: "#ffffff",
+              color: "#E60076",
               "&:hover": {
-                backgroundColor: "#9b0653",
+                backgroundColor: "#e6007721",
               },
             }}
           >

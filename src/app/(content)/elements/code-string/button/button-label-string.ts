@@ -1,4 +1,4 @@
-export const ButtonLabelCodeString = `import { Box, Button, Stack, Typography } from "@mui/material";
+export const buttonLabelString = `import { Box, Button, Stack, Typography } from "@mui/material";
 
 export const ButtonLabel = () => {
     return (

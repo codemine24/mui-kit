@@ -1,55 +1,52 @@
 "use client";
 
-import React from "react";
 import { CodePreviewCopyWrapper } from "@/components/code-preview-copy-wrapper";
 import { CustomBreadCrumbs } from "@/components/core/breadcrumbs";
 import { PageTitle } from "@/components/core/page-title";
 import { SectionTitle } from "@/components/core/section-title";
 import { useOnThisPage } from "@/contexts/on-thispage-context";
 import { Box, Divider } from "@mui/material";
-
+import React from "react";
+import { button1CodeString } from "../../blocks/code-string/button-code-string";
 import {
-  ButtonContainedCodeString,
-  ButtonOutlinedCodeString,
-  ButtonTextCodeString,
-  ButtonSizesCodeString,
-  ButtonIconsCodeString,
-  ButtonSoftCodeString,
-  ButtonSoftWithBorderCodeString,
-  ButtonDisabledCodeString,
-  ButtonAnimatedCodeString,
-  ButtonDifferentShapeCodeString,
-  ButtonGradientCodeString,
-  ButtonSocialLoginCodeString,
-  ButtonLoaderCodeString,
-  ButtonLabelCodeString,
-  ButtonNeonCodeString,
+  buttonAnimatedString,
+  buttonContainedString,
+  buttonDisabledString,
   ButtonEcommerceCodeString,
-  ButtonPaymentCodeString,
-  ButtonFullWidthCodeString,
-  ButtonSocialIconCodeString,
+  buttonFullWidthString,
+  buttonGradientString,
+  buttonIconString,
+  buttonLabelString,
+  buttonLoaderString,
+  buttonNeonString,
+  buttonOutlinedString,
+  buttonPaymentString,
+  buttonShapeString,
+  buttonSizeString,
+  buttonSocialIconString,
+  buttonSocialLoginString,
+  buttonSoftBgString,
+  buttonSoftWithBorderString,
 } from "../code-string/button";
-
 import {
   ButtonAnimatedPreview,
   ButtonContainedPreview,
-  ButtonOutlinedPreview,
-  ButtonSoftPreview,
-  ButtonSoftWithBorderPreview,
-  ButtonTextPreview,
-  ButtonIconsPreview,
-  ButtonSizesPreview,
   ButtonDisabledPreview,
-  ButtonDifferentShapePreview,
-  ButtonGradientPreview,
-  ButtonSocialLoginPreview,
-  ButtonLoaderPreview,
-  ButtonLabelPreview,
-  ButtonNeonPreview,
   ButtonEcommercePreview,
-  ButtonPaymentPreview,
   ButtonFullWidthPreview,
+  ButtonGradientPreview,
+  ButtonIconPreview,
+  ButtonLabelPreview,
+  ButtonLoaderPreview,
+  ButtonNeonPreview,
+  ButtonOutlinedPreview,
+  ButtonPaymentPreview,
+  ButtonShapePreview,
+  ButtonSizePreview,
   ButtonSocialIconPreview,
+  ButtonSocialLoginPreview,
+  ButtonSoftBgPreview,
+  ButtonSoftWithBorderPreview,
 } from "../components/button";
 
 const sections = [
@@ -57,106 +54,106 @@ const sections = [
     id: "button-contained",
     title: "Contained",
     description: "A regular but elegant accordion with solid background color",
-    codeString: ButtonContainedCodeString,
+    codeString: buttonContainedString,
     preview: <ButtonContainedPreview />,
   },
   {
     id: "button-outlined",
     title: "Outlined",
     description: "Outlined accordion with custom mui icon",
-    codeString: ButtonOutlinedCodeString,
+    codeString: buttonOutlinedString,
     preview: <ButtonOutlinedPreview />,
   },
   {
     id: "button-text",
     title: "Text",
     description: "Outlined accordion with custom mui icon",
-    codeString: ButtonTextCodeString,
-    preview: <ButtonTextPreview />,
+    codeString: button1CodeString,
+    preview: <ButtonAnimatedPreview />,
   },
   {
     id: "button-sizes",
     title: "Sizes",
     description:
       "Use this beautiful accordion if you are looking for an accordion with box shadow.",
-    codeString: ButtonSizesCodeString,
-    preview: <ButtonSizesPreview />,
+    codeString: buttonSizeString,
+    preview: <ButtonSizePreview />,
   },
   {
     id: "button-different-shape",
     title: "Different Shape",
     description: "Each section has a different color",
-    codeString: ButtonDifferentShapeCodeString,
-    preview: <ButtonDifferentShapePreview />,
+    codeString: buttonShapeString,
+    preview: <ButtonShapePreview />,
   },
   {
     id: "button-icons",
     title: "Icons",
     description: "Icon position is different from traditional accordions",
-    codeString: ButtonIconsCodeString,
-    preview: <ButtonIconsPreview />,
+    codeString: buttonIconString,
+    preview: <ButtonIconPreview />,
   },
   {
     id: "button-soft",
     title: "Soft",
     description: "Each section has a vertical line to separate them",
-    codeString: ButtonSoftCodeString,
-    preview: <ButtonSoftPreview />,
+    codeString: buttonSoftBgString,
+    preview: <ButtonSoftBgPreview />,
   },
   {
     id: "button-soft-with-border",
     title: "Soft with Border",
     description: "Each section has a different color",
-    codeString: ButtonSoftWithBorderCodeString,
+    codeString: buttonSoftWithBorderString,
     preview: <ButtonSoftWithBorderPreview />,
   },
   {
     id: "button-animated",
     title: "Animated",
     description: "Each section has a different color",
-    codeString: ButtonAnimatedCodeString,
+    codeString: buttonAnimatedString,
     preview: <ButtonAnimatedPreview />,
   },
   {
     id: "button-disabled",
     title: "Disabled",
     description: "Each section has a different color",
-    codeString: ButtonDisabledCodeString,
+    codeString: buttonDisabledString,
     preview: <ButtonDisabledPreview />,
   },
   {
     id: "button-gradient",
     title: "Gradient",
     description: "Each section has a different color",
-    codeString: ButtonGradientCodeString,
+    codeString: buttonGradientString,
     preview: <ButtonGradientPreview />,
   },
   {
     id: "button-social-login",
     title: "Social Login",
     description: "Each section has a different color",
-    codeString: ButtonSocialLoginCodeString,
+    codeString: buttonSocialLoginString,
     preview: <ButtonSocialLoginPreview />,
   },
   {
     id: "button-loader",
     title: "Loader",
     description: "Each section has a different color",
-    codeString: ButtonLoaderCodeString,
+    codeString: buttonLoaderString,
     preview: <ButtonLoaderPreview />,
   },
   {
     id: "button-label",
     title: "Label",
     description: "Each section has a different color",
-    codeString: ButtonLabelCodeString,
+    codeString: buttonLabelString,
     preview: <ButtonLabelPreview />,
   },
   {
     id: "button-neon",
     title: "Neon",
     description: "Each section has a different color",
-    codeString: ButtonNeonCodeString,
+    codeString: buttonNeonString,
     preview: <ButtonNeonPreview />,
   },
   {
@@ -170,21 +167,21 @@ const sections = [
     id: "button-payment",
     title: "Payment",
     description: "Each section has a different color",
-    codeString: ButtonPaymentCodeString,
+    codeString: buttonPaymentString,
     preview: <ButtonPaymentPreview />,
   },
   {
     id: "button-full-width",
     title: "Full Width",
     description: "Each section has a different color",
-    codeString: ButtonFullWidthCodeString,
+    codeString: buttonFullWidthString,
     preview: <ButtonFullWidthPreview />,
   },
   {
     id: "button-social-icon",
     title: "Social Icon",
     description: "Each section has a different color",
-    codeString: ButtonSocialIconCodeString,
+    codeString: buttonSocialIconString,
     preview: <ButtonSocialIconPreview />,
   },
 ];
@@ -194,7 +191,7 @@ export const ButtonView = () => {
 
   React.useEffect(() => {
     setSections(sections);
-  }, []);
+  }, [setSections]);
 
   return (
     <Box>

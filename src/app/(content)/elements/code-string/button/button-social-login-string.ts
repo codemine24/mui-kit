@@ -1,4 +1,4 @@
-export const ButtonSocialLoginCodeString = `import { Box, Button, Stack } from "@mui/material";
+export const buttonSocialLoginString = `import { Box, Button, Stack } from "@mui/material";
 import { Apple, Facebook, GitHub, Google, X } from "@mui/icons-material";
 
 export const ButtonSocialLoginPreview = () => {

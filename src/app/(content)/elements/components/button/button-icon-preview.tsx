@@ -1,8 +1,7 @@
-export const ButtonIconsCodeString = `
 import { ChevronRight, CloudUpload, Refresh, Send } from "@mui/icons-material";
 import { Box, Button, Divider, IconButton, Stack } from "@mui/material";
 
-export const ButtonIconsPreview = () => {
+export const ButtonIconPreview = () => {
   return (
     <Box>
       <Stack direction="row" spacing={2} rowGap={2} flexWrap="wrap" alignItems="center">
@@ -228,4 +227,3 @@ export const ButtonIconsPreview = () => {
     </Box>
   );
 };
-`

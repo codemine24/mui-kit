@@ -1,4 +1,4 @@
-export const ButtonPaymentCodeString = `
+export const buttonPaymentString = `
 import { Box, Button, Stack } from "@mui/material";
 import { FaOpera, FaBitcoin, FaPaypal, FaCcMastercard, FaStripe, FaEthereum } from "react-icons/fa";
 import { RiVisaLine } from "react-icons/ri";

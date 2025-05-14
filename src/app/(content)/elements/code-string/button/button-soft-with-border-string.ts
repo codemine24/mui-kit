@@ -1,4 +1,4 @@
-export const ButtonSoftWithBorderCodeString = `import { Check } from "@mui/icons-material";
+export const buttonSoftWithBorderString = `import { Check } from "@mui/icons-material";
 import { Box, Button, Divider, Stack } from "@mui/material";
 
 export const ButtonSoftWithBorderPreview = () => {

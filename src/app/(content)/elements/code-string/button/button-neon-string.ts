@@ -1,4 +1,4 @@
-export const ButtonNeonCodeString = `import { ArrowForward, Download, LiveTv, Star } from "@mui/icons-material";
+export const buttonNeonString = `import { ArrowForward, Download, LiveTv, Star } from "@mui/icons-material";
 import { Box, Button, Divider, Stack, Typography } from "@mui/material";
 
 export const ButtonNeonPreview = () => {
