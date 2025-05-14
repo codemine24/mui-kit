@@ -1,4 +1,4 @@
-export const GroupVariantsCodeString = `
+export const avatarGroupString = `
 import * as React from "react";
 import Stack from "@mui/material/Stack";
 import { Avatar, AvatarGroup, Badge } from "@mui/material";

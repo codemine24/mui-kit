@@ -9,7 +9,7 @@ import NoAccountsIcon from "@mui/icons-material/NoAccounts";
 import PersonSearchIcon from "@mui/icons-material/PersonSearch";
 import ContactPageIcon from "@mui/icons-material/ContactPage";
 
-export default function IconVariants() {
+export default function AvatarIconPreview() {
   return (
     <Stack
       direction="row"

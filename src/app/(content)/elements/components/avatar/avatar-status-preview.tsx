@@ -1,4 +1,3 @@
-export const StatusVariantsCodeString = `
 import * as React from "react";
 import Stack from "@mui/material/Stack";
 import { Avatar, Badge, Box } from "@mui/material";
@@ -10,7 +9,7 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
   "& .MuiBadge-badge": {
     backgroundColor: "#44b700",
     color: "#44b700",
-    boxShadow: \`0 0 0 2px \${theme.palette.background.paper}\`,
+    boxShadow: `0 0 0 2px ${theme.palette.background.paper}`,
     "&::after": {
       position: "absolute",
       top: 0,
@@ -35,7 +34,7 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
   },
 }));
 
-export default function StatusVariants() {
+export default function AvatarStatusPreview() {
   const activeStatus = true;
 
   return (
@@ -237,4 +236,3 @@ export default function StatusVariants() {
     </Stack>
   );
 }
-`;

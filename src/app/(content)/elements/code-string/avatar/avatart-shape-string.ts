@@ -1,4 +1,4 @@
-export const ShapeVariantsCodeString = `
+export const avatarShapeString = `
 import * as React from "react";
 import Stack from "@mui/material/Stack";
 import { Avatar } from "@mui/material";

@@ -3,7 +3,7 @@ import Stack from "@mui/material/Stack";
 
 const squareAvatarSrc = "/images/avatar-2.png";
 
-export default function SizeVariants() {
+export default function AvatarSizePreview() {
   return (
     <Stack
       direction="row"

@@ -3,7 +3,7 @@ import Stack from "@mui/material/Stack";
 import { Avatar } from "@mui/material";
 import { pink } from "@mui/material/colors";
 
-export default function LetterVariants() {
+export default function AvatarLetterPreview() {
   return (
     <Stack
       direction="row"

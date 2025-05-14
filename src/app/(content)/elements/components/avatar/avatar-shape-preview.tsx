@@ -4,7 +4,7 @@ import { Avatar } from "@mui/material";
 
 const squareAvatarSrc = "/images/avatar-2.png";
 
-export default function ShapeVariants() {
+export default function AvatarShapePreview() {
   return (
     <Stack
       direction="row"

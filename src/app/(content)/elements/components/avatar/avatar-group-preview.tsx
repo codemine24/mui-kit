@@ -9,7 +9,7 @@ const SmallAvatar = styled(Avatar)(({ theme }) => ({
   border: `2px solid ${theme.palette.background.paper}`,
 }));
 
-export default function GroupVariants() {
+export default function AvatarGroupPreview() {
   return (
     <Stack
       direction="column"

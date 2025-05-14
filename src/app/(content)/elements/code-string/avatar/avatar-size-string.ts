@@ -1,4 +1,4 @@
-export const ShapeVariantsCodeString = `
+export const avatarSizeString = `
 import { Avatar } from "@mui/material";
 import Stack from "@mui/material/Stack";
 
