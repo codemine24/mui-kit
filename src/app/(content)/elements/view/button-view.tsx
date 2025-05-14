@@ -26,6 +26,8 @@ import {
   ButtonNeonCodeString,
   ButtonEcommerceCodeString,
   ButtonPaymentCodeString,
+  ButtonFullWidthCodeString,
+  ButtonSocialIconCodeString,
 } from "../code-string/button";
 
 import {
@@ -46,9 +48,9 @@ import {
   ButtonNeonPreview,
   ButtonEcommercePreview,
   ButtonPaymentPreview,
+  ButtonFullWidthPreview,
+  ButtonSocialIconPreview,
 } from "../components/button";
-import { ButtonFullWidthCodeString } from "../code-string/button/button-full-width";
-import { ButtonFullWidthPreview } from "../components/button/button.full-width";
 
 const sections = [
   {
@@ -177,6 +179,13 @@ const sections = [
     description: "Each section has a different color",
     codeString: ButtonFullWidthCodeString,
     preview: <ButtonFullWidthPreview />,
+  },
+  {
+    id: "button-social-icon",
+    title: "Social Icon",
+    description: "Each section has a different color",
+    codeString: ButtonSocialIconCodeString,
+    preview: <ButtonSocialIconPreview />,
   },
 ];
 

@@ -15,3 +15,6 @@ export * from "./button-label";
 export * from "./button-neon";
 export * from "./button-ecommerce";
 export * from "./button-payment";
+export * from "./button-full-width";
+export * from "./button-social-icon";
+
