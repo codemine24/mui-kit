@@ -5,7 +5,7 @@ import { CustomBreadCrumbs } from "@/components/core/breadcrumbs";
 import { PageTitle } from "@/components/core/page-title";
 import { SectionTitle } from "@/components/core/section-title";
 import { useOnThisPage } from "@/contexts/on-thispage-context";
-import { Box, Divider } from "@mui/material";
+import { Alert, Box, Divider } from "@mui/material";
 import React from "react";
 import { button1CodeString } from "../../blocks/code-string/button-code-string";
 import {
@@ -48,6 +48,7 @@ import {
   ButtonSoftBgPreview,
   ButtonSoftWithBorderPreview,
 } from "../components/button";
+import { Icon } from "@iconify/react/dist/iconify.js";
 
 const sections = [
   {
@@ -207,16 +208,28 @@ export const ButtonView = () => {
       />
 
       <Divider sx={{ my: 4 }} />
-
+      <Alert
+        severity="warning"
+        icon={<Icon icon="typcn:info-outline" width={24} height={24} />}
+        sx={{
+          // borderRadius: "50px",
+          // width: "fit-content",
+          padding: "0 1rem",
+          mb: 2,
+        }}
+      >
+        Some components may use an external package `Iconify` You may install it
+        or remove it from the code.
+      </Alert>
       {/* Button - 1 */}
       {sections.map((section) => (
         <Box key={section.id} sx={{ mb: 4 }}>
+          {" "}
           <SectionTitle
             title={section.title}
             description={section.description || ""}
             id={section.id}
           />
-
           <CodePreviewCopyWrapper
             codeString={section.codeString}
             preview={section.preview}
