@@ -1,7 +1,7 @@
 import { Box, Button, Divider, Stack } from "@mui/material";
-import RefreshIcon from '@mui/icons-material/Refresh';
 import { styled } from "@mui/material/styles";
 import { keyframes } from "@mui/system";
+import { Icon } from "@iconify/react";
 
 const spin = keyframes`
   0% {
@@ -13,10 +13,10 @@ const spin = keyframes`
 `;
 
 // Styled component for the Loader2 icon
-const SpinningIcon = styled(RefreshIcon)(() => ({
+const SpinningIcon = styled(Icon)({
   animation: `${spin} 1s linear infinite`,
   fontSize: "24px",
-}));
+});
 
 export const ButtonLoaderPreview = () => {
   return (
@@ -31,12 +31,12 @@ export const ButtonLoaderPreview = () => {
         <Button
           variant="contained"
           color="primary"
-          startIcon={<SpinningIcon />}
+          startIcon={<SpinningIcon icon="mingcute:loading-fill" />}
         >
           Loading...
         </Button>
 
-        <Button variant="outlined" color="primary" startIcon={<SpinningIcon />}>
+        <Button variant="outlined" color="primary" startIcon={<SpinningIcon icon="mingcute:loading-fill" />}>
           Loading...
         </Button>
 
@@ -48,7 +48,7 @@ export const ButtonLoaderPreview = () => {
               pointerEvents: "all !important",
             },
           }}
-          startIcon={<SpinningIcon />}
+          startIcon={<SpinningIcon icon="mingcute:loading-fill" />}
         >
           Loading...
         </Button>
@@ -72,7 +72,7 @@ export const ButtonLoaderPreview = () => {
               backgroundColor: "#9b0653",
             },
           }}
-          startIcon={<SpinningIcon />}
+          startIcon={<SpinningIcon icon="mingcute:loading-fill" />}
         >
           Loading...
         </Button>
@@ -84,7 +84,7 @@ export const ButtonLoaderPreview = () => {
             borderColor: "#E60076",
             color: "#E60076",
           }}
-          startIcon={<SpinningIcon />}
+          startIcon={<SpinningIcon icon="mingcute:loading-fill" />}
         >
           Loading...
         </Button>
@@ -94,7 +94,7 @@ export const ButtonLoaderPreview = () => {
             bgcolor: "transparent",
             color: "#E60076",
           }}
-          startIcon={<SpinningIcon />}
+          startIcon={<SpinningIcon icon="mingcute:loading-fill" />}
         >
           Loading...
         </Button>

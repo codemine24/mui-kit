@@ -131,41 +131,27 @@ export const ButtonIconPreview = () => {
       {/* Contained Icon Button*/}
       <Stack direction="row" spacing={2} rowGap={2} flexWrap="wrap" alignItems="center">
         <Box>
-          <Button variant="contained" color="primary" startIcon={<Send />}>
+          <Button variant="contained" color="primary" sx={{ borderRadius: "999px" }} startIcon={<Send />}>
             Send
           </Button>
         </Box>
         <Box>
-          <Button variant="contained" color="secondary" endIcon={<Send />}>
+          <Button variant="contained" color="secondary" sx={{ borderRadius: "999px" }} startIcon={<Send />}>
             Send
           </Button>
         </Box>
-        <Box>
-          <Button variant="contained" color="error" endIcon={<CloudUpload />}>
-            Upload Assets
-          </Button>
-        </Box>
+
         <Box>
           <Button
             variant="contained"
             color="primary"
-            disabled
-            endIcon={<Send />}
-          >
-            Send
-          </Button>
-        </Box>
-        <Box>
-          <Button
-            variant="contained"
-            color="primary"
-            endIcon={<Send />}
+            startIcon={<Send />}
             sx={{
               backgroundColor: "#ffebee",
               color: "#d32f2f",
               textTransform: "capitalize",
               fontWeight: 600,
-              // borderRadius: "10px",
+              borderRadius: "999px",
               px: 2.5,
               py: 1,
               minWidth: "auto",
@@ -178,6 +164,18 @@ export const ButtonIconPreview = () => {
             Send
           </Button>
         </Box>
+
+        <Box>
+          <Button
+            variant="contained"
+            color="primary"
+            disabled
+            startIcon={<Send />}
+            sx={{ borderRadius: "999px" }}
+          >
+            Send
+          </Button>
+        </Box>
       </Stack>
 
       <Divider sx={{ my: 2 }} />
@@ -185,12 +183,12 @@ export const ButtonIconPreview = () => {
       {/* Outlined Icon Button*/}
       <Stack direction="row" spacing={2} rowGap={2} flexWrap="wrap" alignItems="center">
         <Box>
-          <Button variant="outlined" color="primary" startIcon={<Send />}>
+          <Button variant="outlined" color="primary" startIcon={<Send />} sx={{ borderRadius: "999px" }}>
             Send
           </Button>
         </Box>
         <Box>
-          <Button variant="outlined" color="primary" endIcon={<Refresh />}>
+          <Button variant="outlined" color="primary" endIcon={<Refresh />} sx={{ borderRadius: "999px" }}>
             Refresh
           </Button>
         </Box>
@@ -200,6 +198,7 @@ export const ButtonIconPreview = () => {
             color="primary"
             disabled
             endIcon={<Send />}
+            sx={{ borderRadius: "999px" }}
           >
             Send
           </Button>

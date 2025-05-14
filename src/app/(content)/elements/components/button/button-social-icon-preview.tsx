@@ -1,10 +1,9 @@
-import CameraAltIcon from "@mui/icons-material/CameraAlt"; // For Instagram
 import FacebookIcon from "@mui/icons-material/Facebook";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import PushPinIcon from "@mui/icons-material/PushPin"; // For Pinterest
 import TwitterIcon from "@mui/icons-material/Twitter";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import { Box, IconButton, Stack } from "@mui/material";
+import { Icon } from "@iconify/react";
 
 export const ButtonSocialIconPreview = () => {
   return (
@@ -81,7 +80,7 @@ export const ButtonSocialIconPreview = () => {
             },
           }}
         >
-          <CameraAltIcon />
+          <Icon icon="mdi:instagram" />
         </IconButton>
 
         {/* Linkedin */}
@@ -115,7 +114,7 @@ export const ButtonSocialIconPreview = () => {
             },
           }}
         >
-          <PushPinIcon />
+          <Icon icon="mdi:pinterest" />
         </IconButton>
       </Stack>
     </Box>

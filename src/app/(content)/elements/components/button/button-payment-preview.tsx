@@ -5,6 +5,8 @@ import CurrencyExchangeIcon from "@mui/icons-material/CurrencyExchange";
 import MonetizationOnIcon from "@mui/icons-material/MonetizationOn";
 import PaymentIcon from "@mui/icons-material/Payment";
 import { Box, Button, Stack } from "@mui/material";
+import { Icon } from "@iconify/react";
+import { Apple } from "@mui/icons-material";
 
 export const ButtonPaymentPreview = () => {
     return (
@@ -20,11 +22,12 @@ export const ButtonPaymentPreview = () => {
                 <Button
                     variant="outlined"
                     sx={{
-                        backgroundColor: "transparent",
-                        borderColor: "text.secondary",
-                        color: "text.secondary",
+                        backgroundColor: "#fff",
+                        borderColor: "#ddd",
+                        color: "#000",
+                        textTransform: "none",
                     }}
-                    startIcon={<AccountBalanceWalletIcon />}
+                    startIcon={<Icon icon="devicon:opera" />}
                 >
                     Connect With Opera Wallet
                 </Button>
@@ -33,11 +36,12 @@ export const ButtonPaymentPreview = () => {
                 <Button
                     variant="outlined"
                     sx={{
-                        backgroundColor: "transparent",
-                        borderColor: "text.secondary",
-                        color: "text.secondary",
+                        backgroundColor: "#fff",
+                        borderColor: "#ddd",
+                        color: "#000",
+                        textTransform: "none",
                     }}
-                    startIcon={<CreditCardIcon />}
+                    startIcon={<Icon height={25} width={25} icon="logos:visa" />}
                 >
                     Pay With Visa
                 </Button>
@@ -46,11 +50,12 @@ export const ButtonPaymentPreview = () => {
                 <Button
                     variant="outlined"
                     sx={{
-                        backgroundColor: "transparent",
-                        borderColor: "text.secondary",
-                        color: "text.secondary",
+                        backgroundColor: "#fff",
+                        borderColor: "#ddd",
+                        color: "#000",
+                        textTransform: "none",
                     }}
-                    startIcon={<CreditCardIcon />}
+                    startIcon={<Icon icon="logos:mastercard" />}
                 >
                     Pay With MasterCard
                 </Button>
@@ -59,11 +64,12 @@ export const ButtonPaymentPreview = () => {
                 <Button
                     variant="outlined"
                     sx={{
-                        backgroundColor: "transparent",
-                        borderColor: "text.secondary",
-                        color: "text.secondary",
+                        backgroundColor: "#fff",
+                        borderColor: "#ddd",
+                        color: "#000",
+                        textTransform: "none",
                     }}
-                    startIcon={<PaymentIcon />}
+                    startIcon={<Icon height={25} width={25} icon="logos:stripe" />}
                 >
                     Pay With Stripe
                 </Button>
@@ -72,11 +78,12 @@ export const ButtonPaymentPreview = () => {
                 <Button
                     variant="outlined"
                     sx={{
-                        backgroundColor: "transparent",
-                        borderColor: "text.secondary",
-                        color: "text.secondary",
+                        backgroundColor: "#fff",
+                        borderColor: "#ddd",
+                        color: "#000",
+                        textTransform: "none",
                     }}
-                    startIcon={<CurrencyExchangeIcon />}
+                    startIcon={<Icon icon="logos:ethereum" />}
                 >
                     Pay With Ethereum
                 </Button>
@@ -84,10 +91,11 @@ export const ButtonPaymentPreview = () => {
                 {/* Pay With Bitcoin - CurrencyBitcoinIcon */}
                 <Button
                     variant="contained"
-                    startIcon={<CurrencyBitcoinIcon />}
+                    startIcon={<Icon icon="logos:bitcoin" />}
                     sx={{
                         backgroundColor: "#FF901A",
                         color: "#ffffff",
+                        textTransform: "none",
                         "&:hover": {
                             backgroundColor: "#d87103",
                         },
@@ -99,16 +107,32 @@ export const ButtonPaymentPreview = () => {
                 {/* Pay With Paypal - MonetizationOnIcon as substitute */}
                 <Button
                     variant="contained"
-                    startIcon={<MonetizationOnIcon />}
+                    startIcon={<Icon icon="logos:paypal" />}
                     sx={{
                         backgroundColor: "#F7BE38",
                         color: "#000000",
+                        textTransform: "none",
                         "&:hover": {
                             backgroundColor: "#FF901A",
                         },
                     }}
                 >
                     Checkout With Paypal
+                </Button>
+
+                <Button
+                    variant="contained"
+                    startIcon={<Apple />}
+                    sx={{
+                        backgroundColor: "#000000",
+                        color: "#ffffff",
+                        textTransform: "none",
+                        "&:hover": {
+                            backgroundColor: "#000000",
+                        },
+                    }}
+                >
+                    Checkout With Apple Pay
                 </Button>
             </Stack>
         </Box>
