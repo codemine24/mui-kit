@@ -12,3 +12,4 @@ export * from "./button-gradient";
 export * from "./button-social-login";
 export * from "./button-loader";
 export * from "./button-label";
+export * from "./button-neon";

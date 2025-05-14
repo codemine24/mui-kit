@@ -23,6 +23,7 @@ import {
   ButtonSocialLoginCodeString,
   ButtonLoaderCodeString,
   ButtonLabelCodeString,
+  ButtonNeonCodeString,
 } from "../code-string/button";
 
 import {
@@ -40,6 +41,7 @@ import {
   ButtonSocialLoginPreview,
   ButtonLoaderPreview,
   ButtonLabelPreview,
+  ButtonNeonPreview,
 } from "../components/button";
 
 const sections = [
@@ -141,6 +143,13 @@ const sections = [
     description: "Each section has a different color",
     codeString: ButtonLabelCodeString,
     preview: <ButtonLabelPreview />,
+  },
+  {
+    id: "button-neon",
+    title: "Button Neon",
+    description: "Each section has a different color",
+    codeString: ButtonNeonCodeString,
+    preview: <ButtonNeonPreview />,
   },
 ];
 
