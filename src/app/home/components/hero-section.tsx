@@ -217,25 +217,31 @@ export const HeroSection = () => {
               gap: 2,
             }}
           >
-            <Link href={PATHS.DOCS.INSTALL} passHref>
-              <Button
-                variant="contained"
-                sx={{ borderRadius: theme.shape.borderRadius }}
-              >
-                Get Started
-              </Button>
-            </Link>
+            <Button
+              LinkComponent={Link}
+              href={PATHS.DOCS.INSTALL}
+              variant="contained"
+              sx={{
+                borderRadius: theme.shape.borderRadius,
+                width: "fit-content",
+              }}
+            >
+              Get Started
+            </Button>
 
-            <Link href={PATHS.ELEMENTS.OVERVIEW} passHref>
-              <Button
-                variant="outlined"
-                color="primary"
-                sx={{ borderRadius: theme.shape.borderRadius }}
-                startIcon={<GridViewIcon />}
-              >
-                Explore Components
-              </Button>
-            </Link>
+            <Button
+              LinkComponent={Link}
+              href={PATHS.ELEMENTS.OVERVIEW}
+              variant="outlined"
+              color="primary"
+              sx={{
+                borderRadius: theme.shape.borderRadius,
+                width: "fit-content",
+              }}
+              startIcon={<GridViewIcon />}
+            >
+              Explore Components
+            </Button>
           </Box>
         </Box>
 
@@ -312,7 +318,7 @@ export const HeroSection = () => {
             }}
           >
             <Typography variant="subtitle2" gutterBottom>
-              Block 
+              Block
             </Typography>
             <Stack direction="row" spacing={1} sx={{ mb: 1 }}>
               <Box
