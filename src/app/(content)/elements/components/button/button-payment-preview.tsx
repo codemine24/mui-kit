@@ -1,12 +1,6 @@
-import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
-import CreditCardIcon from "@mui/icons-material/CreditCard";
-import CurrencyBitcoinIcon from "@mui/icons-material/CurrencyBitcoin";
-import CurrencyExchangeIcon from "@mui/icons-material/CurrencyExchange";
-import MonetizationOnIcon from "@mui/icons-material/MonetizationOn";
-import PaymentIcon from "@mui/icons-material/Payment";
-import { Box, Button, Stack } from "@mui/material";
 import { Icon } from "@iconify/react";
 import { Apple } from "@mui/icons-material";
+import { Box, Button, Stack } from "@mui/material";
 
 export const ButtonPaymentPreview = () => {
     return (
