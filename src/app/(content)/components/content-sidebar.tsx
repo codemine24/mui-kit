@@ -83,7 +83,7 @@ export const ContentSidebar = ({
         display: "flex",
         flexDirection: "column",
         p: variant === "drawer" ? 3 : 0,
-        pt: variant === "drawer" ? 3 : 3,
+        pt: variant === "drawer" ? 3 : 0,
         scrollbarWidth: "none",
         "&::-webkit-scrollbar": {
           display: "none",
@@ -97,41 +97,55 @@ export const ContentSidebar = ({
       )}
 
       {/* Search */}
-      <TextField
-        placeholder="Search components..."
-        size="small"
-        variant="outlined"
-        value={searchValue}
-        onChange={handleSearch}
-        fullWidth
-        InputProps={{
-          startAdornment: (
-            <Iconify
-              icon="eva:search-outline"
-              width={20}
-              style={{ marginRight: "10px" }}
-            />
-          ),
-        }}
-        sx={{
-          mb: 2,
-          backgroundColor: theme.palette.background.paper,
-          "& .MuiOutlinedInput-root": {
-            borderRadius: theme.shape.borderRadius,
-            paddingLeft: 1,
-            fontSize: "0.875rem",
-            "&.Mui-focused fieldset": {
-              borderColor: "primary.main",
-              boxShadow: theme.shadows[1],
+      <Box
+        sx={(theme) => ({
+          py: 2,
+          pl: 0.5,
+          position: "sticky",
+          top: 0,
+          zIndex: 10,
+          backgroundColor: theme.palette.background.default,
+        })}
+      >
+        <TextField
+          placeholder="Search components..."
+          size="small"
+          variant="outlined"
+          value={searchValue}
+          onChange={handleSearch}
+          fullWidth
+          InputProps={{
+            startAdornment: (
+              <Iconify
+                icon="eva:search-outline"
+                width={20}
+                style={{ marginRight: "10px" }}
+              />
+            ),
+          }}
+          sx={{
+            mb: 0,
+
+            backgroundColor: theme.palette.background.paper,
+            "& .MuiOutlinedInput-root": {
+              borderRadius: theme.shape.borderRadius,
+              paddingLeft: 1,
+              fontSize: "0.875rem",
+              "&.Mui-focused fieldset": {
+                borderColor: "primary.main",
+                boxShadow: theme.shadows[1],
+              },
             },
-          },
-          "& .MuiOutlinedInput-notchedOutline": {
-            borderColor: theme.palette.divider,
-          },
-          // border: "1px solid blue ",
-        }}
-      />
-      <List sx={{ flexGrow: 1 }}>
+            "& .MuiOutlinedInput-notchedOutline": {
+              borderColor: theme.palette.divider,
+            },
+            // border: "1px solid blue ",
+          }}
+        />
+      </Box>
+      <List
+        sx={{ flexGrow: 1, borderTop: `1px solid ${theme.palette.divider}` }}
+      >
         {/* search results */}
         {searchValue ? (
           <Box>
