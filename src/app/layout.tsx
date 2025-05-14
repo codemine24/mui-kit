@@ -1,21 +1,24 @@
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
+import { TopHeader } from "@/components/top-header";
+import { OnThisPageProvider } from "@/contexts/on-thispage-context";
 import AppProvider from "@/providers/app-provider";
 import { Box, CssBaseline, GlobalStyles } from "@mui/material";
 import { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { JetBrains_Mono, Roboto } from "next/font/google";
 import "./globals.css";
-import { TopHeader } from "@/components/top-header";
-import { OnThisPageProvider } from "@/contexts/on-thispage-context";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const roboto = Roboto({
   subsets: ["latin"],
+  variable: "--font-roboto",
+  weight: ["400", "500", "700"], // adjust weights as needed
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const jetBrainsMono = JetBrains_Mono({
   subsets: ["latin"],
+  variable: "--font-mono",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -34,7 +37,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable}`}
+      className={`${roboto.variable} ${jetBrainsMono.variable}`}
       suppressHydrationWarning
     >
       <body>
@@ -58,9 +61,7 @@ export default function RootLayout({
             <TopHeader />
             <Header />
 
-            <Box>
-              {children}
-            </Box>
+            <Box>{children}</Box>
 
             <Footer />
           </OnThisPageProvider>

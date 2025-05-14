@@ -1,6 +1,7 @@
 "use client";
 import GridViewIcon from "@mui/icons-material/GridView";
 import {
+  Alert,
   Box,
   Button,
   Chip,
@@ -13,6 +14,7 @@ import {
 import Link from "next/link";
 import PathSVG from "./PathSVG";
 import { PATHS } from "@/router/paths";
+import { Iconify } from "@/components/iconify";
 
 export const HeroSection = () => {
   const theme = useTheme();
@@ -179,7 +181,19 @@ export const HeroSection = () => {
           >
             <PathSVG />
           </Box>
-
+          <Alert
+            severity="info"
+            icon={<Iconify icon="line-md:check-all" width={24} height={24} />}
+            sx={{
+              borderRadius: "50px",
+              width: "fit-content",
+              padding: "0 1rem",
+              mb: 2,
+            }}
+          >
+            No Installation Required. Copy and paste components directly into
+            your project.
+          </Alert>
           <Typography
             variant="h1"
             gutterBottom
@@ -191,10 +205,18 @@ export const HeroSection = () => {
             We&apos;ve covered, what <span>Material UI</span> is missing!
           </Typography>
 
-          <Stack direction="row" spacing={1} sx={{ mb: 3 }}>
-            <Chip label="REACT" size="small" />
-            <Chip label="TYPESCRIPT" size="small" />
-            <Chip label="MATERIAL DESIGN" size="small" />
+          <Stack
+            direction="row"
+            sx={{ mb: 3 }}
+            flexWrap={"wrap"}
+            gap={1}
+          >
+            <Chip label="Ready to use components" size="small" />
+            <Chip label="No external dependencies" size="small" />
+            <Chip
+              label="Purely Material UI"
+              size="small"
+            />
           </Stack>
 
           <Typography
@@ -217,25 +239,31 @@ export const HeroSection = () => {
               gap: 2,
             }}
           >
-            <Link href={PATHS.DOCS.INSTALL} passHref>
-              <Button
-                variant="contained"
-                sx={{ borderRadius: theme.shape.borderRadius }}
-              >
-                Get Started
-              </Button>
-            </Link>
+            <Button
+              LinkComponent={Link}
+              href={PATHS.DOCS.INSTALL}
+              variant="contained"
+              sx={{
+                borderRadius: theme.shape.borderRadius,
+                width: "fit-content",
+              }}
+            >
+              Get Started
+            </Button>
 
-            <Link href={PATHS.ELEMENTS.OVERVIEW} passHref>
-              <Button
-                variant="outlined"
-                color="primary"
-                sx={{ borderRadius: theme.shape.borderRadius }}
-                startIcon={<GridViewIcon />}
-              >
-                Explore Components
-              </Button>
-            </Link>
+            <Button
+              LinkComponent={Link}
+              href={PATHS.ELEMENTS.OVERVIEW}
+              variant="outlined"
+              color="primary"
+              sx={{
+                borderRadius: theme.shape.borderRadius,
+                width: "fit-content",
+              }}
+              startIcon={<GridViewIcon />}
+            >
+              Explore Components
+            </Button>
           </Box>
         </Box>
 
@@ -312,7 +340,7 @@ export const HeroSection = () => {
             }}
           >
             <Typography variant="subtitle2" gutterBottom>
-              Block 
+              Block
             </Typography>
             <Stack direction="row" spacing={1} sx={{ mb: 1 }}>
               <Box

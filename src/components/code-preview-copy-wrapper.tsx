@@ -62,7 +62,7 @@ export const CodePreviewCopyWrapper: React.FC<CodePreviewWrapperProps> = ({
         }}
       >
         {tab === "preview" ? (
-          <Box>{preview}</Box>
+          <Box sx={{ height: "410px", overflow: "auto" }}>{preview}</Box>
         ) : (
           <Box
             sx={{

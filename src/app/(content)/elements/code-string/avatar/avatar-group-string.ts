@@ -1,3 +1,4 @@
+export const avatarGroupString = `
 import * as React from "react";
 import Stack from "@mui/material/Stack";
 import { Avatar, AvatarGroup, Badge } from "@mui/material";
@@ -6,7 +7,7 @@ import { styled } from "@mui/material/styles";
 const SmallAvatar = styled(Avatar)(({ theme }) => ({
   width: 22,
   height: 22,
-  border: `2px solid ${theme.palette.background.paper}`,
+  border: \`2px solid \${theme.palette.background.paper}\`,
 }));
 
 export default function GroupVariants() {
@@ -57,3 +58,4 @@ export default function GroupVariants() {
     </Stack>
   );
 }
+`;
