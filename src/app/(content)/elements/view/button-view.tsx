@@ -24,6 +24,7 @@ import {
   ButtonLoaderCodeString,
   ButtonLabelCodeString,
   ButtonNeonCodeString,
+  ButtonEcommerceCodeString,
 } from "../code-string/button";
 
 import {
@@ -42,6 +43,7 @@ import {
   ButtonLoaderPreview,
   ButtonLabelPreview,
   ButtonNeonPreview,
+  ButtonEcommercePreview,
 } from "../components/button";
 
 const sections = [
@@ -150,6 +152,13 @@ const sections = [
     description: "Each section has a different color",
     codeString: ButtonNeonCodeString,
     preview: <ButtonNeonPreview />,
+  },
+  {
+    id: "button-ecommerce",
+    title: "Button Ecommerce",
+    description: "Each section has a different color",
+    codeString: ButtonEcommerceCodeString,
+    preview: <ButtonEcommercePreview />,
   },
 ];
 
