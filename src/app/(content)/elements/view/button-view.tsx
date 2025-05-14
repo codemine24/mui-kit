@@ -47,6 +47,8 @@ import {
   ButtonEcommercePreview,
   ButtonPaymentPreview,
 } from "../components/button";
+import { ButtonFullWidthCodeString } from "../code-string/button/button-full-width";
+import { ButtonFullWidthPreview } from "../components/button/button.full-width";
 
 const sections = [
   {
@@ -168,6 +170,13 @@ const sections = [
     description: "Each section has a different color",
     codeString: ButtonPaymentCodeString,
     preview: <ButtonPaymentPreview />,
+  },
+  {
+    id: "button-full-width",
+    title: "Full Width",
+    description: "Each section has a different color",
+    codeString: ButtonFullWidthCodeString,
+    preview: <ButtonFullWidthPreview />,
   },
 ];
 
