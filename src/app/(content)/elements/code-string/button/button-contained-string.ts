@@ -1,5 +1,4 @@
-export const buttonContainedString = `
-import { Stack, Button, Box } from "@mui/material";
+export const buttonContainedString = `import { Stack, Button, Box } from "@mui/material";
 
 export const ButtonContainedPreview = () => {
   return (
@@ -59,5 +58,4 @@ export const ButtonContainedPreview = () => {
       </Stack>
     </Box>
   );
-};
-`
+};`

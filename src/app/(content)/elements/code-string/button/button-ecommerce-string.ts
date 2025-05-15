@@ -1,6 +1,4 @@
-export const ButtonEcommerceCodeString = `'use client'
-
-import React, { useState } from 'react';
+export const ButtonEcommerceCodeString = `import React, { useState } from 'react';
 import {
     Paper,
     IconButton,

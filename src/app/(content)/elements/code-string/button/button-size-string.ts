@@ -1,7 +1,6 @@
-export const buttonSizeString = `
-import { Stack, Button, Box, Divider } from "@mui/material";
+export const buttonSizeString = `import { Stack, Button, Box, Divider } from "@mui/material";
 
-export const ButtonSizesPreview = () => {
+export const ButtonSizePreview = () => {
   return (
     <Box>
       {/* Contained */}
@@ -123,6 +122,4 @@ export const ButtonSizesPreview = () => {
       </Stack>
     </Box>
   );
-};
-
-`;
+};`

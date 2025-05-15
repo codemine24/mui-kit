@@ -3,7 +3,7 @@ import { Box, Button, Divider, Stack, Typography } from "@mui/material";
 
 export const ButtonNeonPreview = () => {
     return (
-        <Box>
+        <Box sx={{ p: 3.5 }}>
             <Stack
                 direction="row"
                 spacing={2}
@@ -309,5 +309,4 @@ export const ButtonNeonPreview = () => {
             </Stack>
         </Box>
     );
-};
-`;
+};`;
