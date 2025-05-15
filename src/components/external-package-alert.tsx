@@ -28,7 +28,7 @@ export const ExternalPackageAlert = ({ packageName, packageUrl }: IProps) => {
       >
         {packageName}
       </Box>
-      . You may install it or replace it with a similar package.
+      . You can install it or replace it with a similar package.
     </Alert>
   );
 };
