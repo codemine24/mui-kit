@@ -3,3 +3,7 @@ export * from "./basic-card-1";
 export * from "./basic-card-2";
 export * from "./basic-card-3";
 export * from "./basic-card-4";
+export * from "./card-with-image-1";
+export * from './grid-card-preview-1';
+export * from './list-card-preview';
+export * from './pricing-card-preview';
