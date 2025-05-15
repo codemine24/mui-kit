@@ -22,6 +22,9 @@ const jetBrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_PRODUCTION_URL || "https://www.muikit.com"
+  ),
   title: {
     default: "MUI Kit - Open Source MUI Components library",
     template: "%s | MUI Kit",
