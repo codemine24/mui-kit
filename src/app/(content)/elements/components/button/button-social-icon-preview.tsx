@@ -1,4 +1,5 @@
 import FacebookIcon from "@mui/icons-material/Facebook";
+import XIcon from "@mui/icons-material/X";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import YouTubeIcon from "@mui/icons-material/YouTube";
@@ -59,11 +60,28 @@ export const ButtonSocialIconPreview = () => {
             backgroundColor: "#000",
             padding: 1,
             "&:hover": {
-              color: "#000",
+              backgroundColor: "#333",
             },
           }}
         >
           <TwitterIcon />
+        </IconButton>
+
+        {/* X */}
+        <IconButton
+          sx={{
+            border: "1px solid",
+            borderColor: "#000",
+            borderRadius: "50%",
+            color: "#fff",
+            backgroundColor: "#000",
+            padding: 1,
+            "&:hover": {
+              backgroundColor: "#333",
+            },
+          }}
+        >
+          <XIcon />
         </IconButton>
 
         {/* Instagram (Camera icon as substitute) */}
@@ -110,7 +128,7 @@ export const ButtonSocialIconPreview = () => {
             backgroundColor: "#de0b04",
             padding: 1,
             "&:hover": {
-              backgroundColor: "#de0b04",
+              backgroundColor: "#FF0033",
             },
           }}
         >

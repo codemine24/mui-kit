@@ -4,10 +4,10 @@ import { CodePreviewCopyWrapper } from "@/components/code-preview-copy-wrapper";
 import { CustomBreadCrumbs } from "@/components/core/breadcrumbs";
 import { PageTitle } from "@/components/core/page-title";
 import { SectionTitle } from "@/components/core/section-title";
+import { ExternalPackageAlert } from "@/components/external-package-alert";
 import { useOnThisPage } from "@/contexts/on-thispage-context";
-import { Alert, Box, Divider } from "@mui/material";
+import { Box, Divider } from "@mui/material";
 import React from "react";
-import { button1CodeString } from "../../blocks/code-string/button-code-string";
 import {
   buttonAnimatedString,
   buttonContainedString,
@@ -27,6 +27,7 @@ import {
   buttonSocialLoginString,
   buttonSoftBgString,
   buttonSoftWithBorderString,
+  buttonTextString,
 } from "../code-string/button";
 import {
   ButtonAnimatedPreview,
@@ -47,8 +48,8 @@ import {
   ButtonSocialLoginPreview,
   ButtonSoftBgPreview,
   ButtonSoftWithBorderPreview,
+  ButtonTextPreview,
 } from "../components/button";
-import { Icon } from "@iconify/react/dist/iconify.js";
 
 const sections = [
   {
@@ -69,8 +70,8 @@ const sections = [
     id: "button-text",
     title: "Text",
     description: "Outlined accordion with custom mui icon",
-    codeString: button1CodeString,
-    preview: <ButtonAnimatedPreview />,
+    codeString: buttonTextString,
+    preview: <ButtonTextPreview />,
   },
   {
     id: "button-sizes",
@@ -208,19 +209,12 @@ export const ButtonView = () => {
       />
 
       <Divider sx={{ my: 4 }} />
-      <Alert
-        severity="warning"
-        icon={<Icon icon="typcn:info-outline" width={24} height={24} />}
-        sx={{
-          // borderRadius: "50px",
-          // width: "fit-content",
-          padding: "0 1rem",
-          mb: 2,
-        }}
-      >
-        Some components may use an external package `Iconify` You may install it
-        or remove it from the code.
-      </Alert>
+
+      <ExternalPackageAlert
+        packageName="@iconify/react"
+        packageUrl="https://www.npmjs.com/package/@iconify/react"
+      />
+
       {/* Button - 1 */}
       {sections.map((section) => (
         <Box key={section.id} sx={{ mb: 4 }}>
