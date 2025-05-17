@@ -2,7 +2,7 @@ export const BasicCard2CodeString = `import { Card, CardContent, Divider, Typogr
 
 export const BasicCard2Preview = () => {
     return (
-        <Card sx={{ maxWidth: 345 }}>
+        <Card sx={{ maxWidth: 345, mx: "auto" }}>
             <CardContent>
                 <Typography variant="h4" mb={2}>Networthy Technology Acquisitions 2025</Typography>
                 <Typography variant="body1">

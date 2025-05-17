@@ -1,6 +1,6 @@
 export const CardWithImageString3 = `import { Card, CardContent, CardMedia, Typography } from "@mui/material";
 
-export default function CardWithImagePreview3() {
+export const CardWithImagePreview3 = () => {
     return (
         <Card sx={{ maxWidth: 380, mx: "auto" }}>
             <CardContent>

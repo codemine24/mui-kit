@@ -2,7 +2,7 @@ import { Alert, Button, Card, CardContent, Stack, Typography } from "@mui/materi
 import ArrowRightAlt from "@mui/icons-material/ArrowRightAlt";
 import LanguageIcon from "@mui/icons-material/Language";
 
-export default function ErrorCardPreview() {
+export const ErrorCardPreview = () => {
     return (
         <Card sx={{ maxWidth: 400, mx: "auto" }}>
             <CardContent>

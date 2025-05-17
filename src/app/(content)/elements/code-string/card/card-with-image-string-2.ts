@@ -2,9 +2,9 @@ export const CardWithImageString2 = `import { ArrowRightAlt } from "@mui/icons-m
 import { Button, Card, CardActions, CardContent, CardMedia, Chip, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 
-export default function CardWithImagePreview2() {
+export const CardWithImagePreview2 = () => {
     return (
-        <Card sx={{ maxWidth: 600, display: "flex", p: 2, gap: 2, alignItems: 'stretch', flexDirection: { xs: "column", md: "row" } }}>
+        <Card sx={{ maxWidth: 600, mx: "auto", display: "flex", p: 2, gap: 2, alignItems: 'stretch', flexDirection: { xs: "column", md: "row" } }}>
             <CardMedia
                 component="img"
                 image="https://mui.com/static/images/cards/paella.jpg"

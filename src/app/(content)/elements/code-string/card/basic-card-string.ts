@@ -2,7 +2,7 @@ export const BasicCardCodeString = `import { Card, CardContent, Typography } fro
 
 export const BasicCardPreview = () => {
     return (
-        <Card sx={{ maxWidth: 345 }}>
+        <Card sx={{ maxWidth: 345, mx: "auto" }}>
             <CardContent>
                 <Typography variant="h4" mb={2}>Networthy Technology Acquisitions 2025</Typography>
                 <Typography variant="body1">

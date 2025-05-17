@@ -3,7 +3,7 @@ import { Button, Card, CardContent, Stack, Typography } from "@mui/material";
 
 export const BasicCard3Preview = () => {
     return (
-        <Card sx={{ maxWidth: 345 }}>
+        <Card sx={{ maxWidth: 345, mx: "auto" }}>
             <CardContent>
                 <Stack spacing={2} alignItems="start">
                     <Typography variant="h4" mb={2}>Networthy Technology Acquisitions 2025</Typography>

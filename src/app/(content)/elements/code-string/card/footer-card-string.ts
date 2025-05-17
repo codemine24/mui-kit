@@ -3,7 +3,7 @@ import { Box, Card, Typography } from "@mui/material";
 import AppleIcon from '@mui/icons-material/Apple';
 import { Iconify } from "@/components/iconify";
 
-export default function FooterCardPreview() {
+export const FooterCardPreview = () => {
     return (
         <Card sx={{ maxWidth: 500, mx: "auto", p: 2, textAlign: "center" }}>
             <Typography variant="h5">Work Fast From Anywhwere</Typography>

@@ -1,4 +1,5 @@
 "use client";
+
 import { CodePreviewCopyWrapper } from "@/components/code-preview-copy-wrapper";
 import { CustomBreadCrumbs } from "@/components/core/breadcrumbs";
 import { PageTitle } from "@/components/core/page-title";
@@ -6,13 +7,45 @@ import { SectionTitle } from "@/components/core/section-title";
 import { useOnThisPage } from "@/contexts/on-thispage-context";
 import { Box, Divider } from "@mui/material";
 import React from "react";
-import { BasicCard1CodeString, BasicCard2CodeString, BasicCard3CodeString, BasicCard4CodeString, BasicCardCodeString, GridCard1CodeString, CardWithImage1CodeString, CardWithImageString2, ListCardCodeString, PricingCardCodeString, ProfileCardString, FooterCardString, PropertyCardString, CardWithImageString3, ErrorCardString } from "../code-string/card";
-import { BasicCard1Preview, BasicCard2Preview, BasicCard3Preview, BasicCard4Preview, BasicCardPreview, GridCardPreview1, CardWithImage1Preview, ListCardPreview, PricingCardPreview, PropertyPreviewCard } from "../components/card";
-import CardWithImage2Preview from "../components/card/card-with-image-preview-2";
-import ProfileCardPreview from "../components/card/profile-card-preview";
-import FooterCardPreview from "../components/card/footer-card-preview";
-import CardWithImagePreview3 from "../components/card/card-with-image-preview-3";
-import ErrorCardPreview from "../components/card/error-card-preview";
+import {
+  BasicCard1CodeString,
+  BasicCard2CodeString,
+  BasicCard3CodeString,
+  BasicCard4CodeString,
+  BasicCardCodeString,
+  GridCard1CodeString,
+  CardWithImage1CodeString,
+  CardWithImageString2,
+  ListCardCodeString,
+  PricingCardCodeString,
+  ProfileCardString,
+  FooterCardString,
+  PropertyCardString,
+  CardWithImageString3,
+  ErrorCardString,
+  CardWithImageString4
+}
+  from "../code-string/card";
+import {
+  BasicCard1Preview,
+  BasicCard2Preview,
+  BasicCard3Preview,
+  BasicCard4Preview,
+  BasicCardPreview,
+  GridCardPreview1,
+  CardWithImage1Preview,
+  CardWithImagePreview2,
+  CardWithImagePreview3,
+  CardWithImagePreview4,
+  ListCardPreview,
+  PricingCardPreview,
+  PropertyPreviewCard,
+  ErrorCardPreview,
+  FooterCardPreview,
+  ProfileCardPreview,
+}
+  from "../components/card";
+
 
 const sections = [
   {
@@ -62,7 +95,7 @@ const sections = [
     title: "Card With Image 2",
     description: "A regular but elegant card with solid background color",
     codeString: CardWithImageString2,
-    preview: <CardWithImage2Preview />,
+    preview: <CardWithImagePreview2 />,
   },
   {
     id: "grid-card-1",
@@ -119,6 +152,13 @@ const sections = [
     description: "A regular but elegant card with solid background color",
     codeString: ErrorCardString,
     preview: <ErrorCardPreview />,
+  },
+  {
+    id: "card-with-image-4",
+    title: "Card With Image 4",
+    description: "A regular but elegant card with solid background color",
+    codeString: CardWithImageString4,
+    preview: <CardWithImagePreview4 />,
   },
 ]
 

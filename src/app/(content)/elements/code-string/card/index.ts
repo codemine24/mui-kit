@@ -13,3 +13,5 @@ export * from "./footer-card-string";
 export * from "./property-card-string";
 export * from "./card-with-image-string-3";
 export * from "./error-card-string";
+export * from "./card-with-image-string-4";
+

@@ -5,7 +5,7 @@ import { ChevronRight } from "@mui/icons-material";
 
 export const BasicCard4Preview = () => {
     return (
-        <Card sx={{ maxWidth: 345 }}>
+        <Card sx={{ maxWidth: 345, mx: "auto" }}>
             <CardContent>
                 <Stack spacing={2} alignItems="start">
                     <IconButton><CardGiftcard fontSize="large" /></IconButton>
