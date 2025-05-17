@@ -6,11 +6,12 @@ import { SectionTitle } from "@/components/core/section-title";
 import { useOnThisPage } from "@/contexts/on-thispage-context";
 import { Box, Divider } from "@mui/material";
 import React from "react";
-import { BasicCard1CodeString, BasicCard2CodeString, BasicCard3CodeString, BasicCard4CodeString, BasicCardCodeString, GridCard1CodeString, CardWithImage1CodeString, CardWithImageString2, ListCardCodeString, PricingCardCodeString, ProfileCardString, FooterCardString, PropertyCardString } from "../code-string/card";
+import { BasicCard1CodeString, BasicCard2CodeString, BasicCard3CodeString, BasicCard4CodeString, BasicCardCodeString, GridCard1CodeString, CardWithImage1CodeString, CardWithImageString2, ListCardCodeString, PricingCardCodeString, ProfileCardString, FooterCardString, PropertyCardString, CardWithImageString3 } from "../code-string/card";
 import { BasicCard1Preview, BasicCard2Preview, BasicCard3Preview, BasicCard4Preview, BasicCardPreview, GridCardPreview1, CardWithImage1Preview, ListCardPreview, PricingCardPreview, PropertyPreviewCard } from "../components/card";
 import CardWithImage2Preview from "../components/card/card-with-image-preview-2";
 import ProfileCardPreview from "../components/card/profile-card-preview";
 import FooterCardPreview from "../components/card/footer-card-preview";
+import CardWithImagePreview3 from "../components/card/card-with-image-preview-3";
 
 const sections = [
   {
@@ -103,6 +104,13 @@ const sections = [
     description: "A regular but elegant card with solid background color",
     codeString: PropertyCardString,
     preview: <PropertyPreviewCard />,
+  },
+  {
+    id: "card-with-image-3",
+    title: "Card With Image 3",
+    description: "A regular but elegant card with solid background color",
+    codeString: CardWithImageString3,
+    preview: <CardWithImagePreview3 />,
   },
 ]
 
