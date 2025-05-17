@@ -8,6 +8,7 @@ export * from './card-with-image-preview-3';
 export * from './card-with-image-preview-2';
 export * from './card-with-image-preview-4';
 export * from './card-with-image-preview-5';
+export * from './card-with-image-preview-6';
 export * from './grid-card-preview-1';
 export * from './list-card-preview';
 export * from './pricing-card-preview';

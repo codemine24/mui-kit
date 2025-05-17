@@ -9,6 +9,7 @@ export * from "./card-with-image-string-2";
 export * from "./card-with-image-string-3";
 export * from "./card-with-image-string-4";
 export * from "./card-with-image-string-5";
+export * from "./card-with-image-string-6";
 export * from "./list-card-string";
 export * from "./pricing-card-string";
 export * from "./profile-card-string";
