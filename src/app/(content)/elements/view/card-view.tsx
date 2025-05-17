@@ -6,9 +6,9 @@ import { SectionTitle } from "@/components/core/section-title";
 import { useOnThisPage } from "@/contexts/on-thispage-context";
 import { Box, Divider } from "@mui/material";
 import React from "react";
-import { BasicCard1CodeString, BasicCard2CodeString, BasicCard3CodeString, BasicCard4CodeString, BasicCardCodeString, GridCard1CodeString, CardWithImage1CodeString, ListCardCodeString, PricingCardCodeString } from "../code-string/card";
+import { BasicCard1CodeString, BasicCard2CodeString, BasicCard3CodeString, BasicCard4CodeString, BasicCardCodeString, GridCard1CodeString, CardWithImage1CodeString, CardWithImageString2, ListCardCodeString, PricingCardCodeString } from "../code-string/card";
 import { BasicCard1Preview, BasicCard2Preview, BasicCard3Preview, BasicCard4Preview, BasicCardPreview, GridCardPreview1, CardWithImage1Preview, ListCardPreview, PricingCardPreview } from "../components/card";
-
+import CardWithImage2Preview from "../components/card/card-with-image-preview-2";
 
 const sections = [
   {
@@ -52,6 +52,13 @@ const sections = [
     description: "A regular but elegant card with solid background color",
     codeString: CardWithImage1CodeString,
     preview: <CardWithImage1Preview />,
+  },
+  {
+    id: "card-with-image-2",
+    title: "Card With Image 2",
+    description: "A regular but elegant card with solid background color",
+    codeString: CardWithImageString2,
+    preview: <CardWithImage2Preview />,
   },
   {
     id: "grid-card-1",
