@@ -10,5 +10,6 @@ export * from './grid-card-preview-1';
 export * from './list-card-preview';
 export * from './pricing-card-preview';
 export * from './profile-card-preview';
+export * from './error-card-preview';
 export * from './footer-card-preview';
 export * from './property-card-preview';
