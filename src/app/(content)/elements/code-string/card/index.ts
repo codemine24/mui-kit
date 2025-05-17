@@ -22,3 +22,4 @@ export * from "./e-commerce-card-string-1";
 export * from "./forest-card-string";
 export * from "./review-card-string";
 export * from "./review-card-string-2";
+export * from "./product-card-string";
