@@ -23,7 +23,9 @@ import {
   PropertyCardString,
   CardWithImageString3,
   ErrorCardString,
-  CardWithImageString4
+  CardWithImageString4,
+  ECommerceCardString1,
+  CardWithImageString5
 }
   from "../code-string/card";
 import {
@@ -43,6 +45,8 @@ import {
   ErrorCardPreview,
   FooterCardPreview,
   ProfileCardPreview,
+  ECommerceCardPreview1,
+  CardWithImagePreview5,
 }
   from "../components/card";
 
@@ -159,6 +163,20 @@ const sections = [
     description: "A regular but elegant card with solid background color",
     codeString: CardWithImageString4,
     preview: <CardWithImagePreview4 />,
+  },
+  {
+    id: "e-commerce-card-1",
+    title: "E-Commerce Card 1",
+    description: "A regular but elegant card with solid background color",
+    codeString: ECommerceCardString1,
+    preview: <ECommerceCardPreview1 />,
+  },
+  {
+    id: "card-with-image-5",
+    title: "Card With Image 5",
+    description: "A regular but elegant card with solid background color",
+    codeString: CardWithImageString5,
+    preview: <CardWithImagePreview5 />,
   },
 ]
 

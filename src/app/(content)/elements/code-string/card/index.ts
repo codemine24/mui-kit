@@ -6,12 +6,13 @@ export * from "./basic-card-string-4";
 export * from "./grid-card-string-1";
 export * from "./card-with-image-string-1";
 export * from "./card-with-image-string-2";
+export * from "./card-with-image-string-3";
+export * from "./card-with-image-string-4";
+export * from "./card-with-image-string-5";
 export * from "./list-card-string";
 export * from "./pricing-card-string";
 export * from "./profile-card-string";
 export * from "./footer-card-string";
 export * from "./property-card-string";
-export * from "./card-with-image-string-3";
 export * from "./error-card-string";
-export * from "./card-with-image-string-4";
-
+export * from "./e-commerce-card-string-1";
