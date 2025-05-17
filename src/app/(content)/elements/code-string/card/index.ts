@@ -8,3 +8,4 @@ export * from "./card-with-image-string-1";
 export * from "./card-with-image-string-2";
 export * from "./list-card-string";
 export * from "./pricing-card-string";
+export * from "./profile-card-string";
