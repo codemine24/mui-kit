@@ -2,7 +2,7 @@ export const ReviewCardString3 = `import { Card, CardContent, Typography, Box, A
 
 export const ReviewCardPreview3 = () => {
     return (
-        <Card sx={{ maxWidth: 400, mx: "auto" }} variant="outlined">
+        <Card sx={{ maxWidth: 400 }} variant="outlined">
             <CardContent>
                 <Box display="flex" alignItems="center" mb={1}>
                     <Avatar src="/user.jpg" />

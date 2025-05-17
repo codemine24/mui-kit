@@ -2,8 +2,8 @@ export const ProductCardString2 = `import { Card, CardContent, CardMedia, Typogr
 
 export const ProductCardPreview2 = () => {
     return (
-        <Card sx={{ maxWidth: 350, mx: "auto" }}>
-            <CardMedia component="img" height="200" image="https://mui.com/static/images/cards/paella.jpg" alt="Paella" />
+        <Card sx={{ maxWidth: 350 }}>
+            <CardMedia component="img" height="200" image="https://images.unsplash.com/photo-1629367494173-c78a56567877" alt="Paella" />
             <CardContent>
                 <Box display="flex" alignItems="center" justifyContent="space-between">
                     <Typography fontWeight="bold">Apple AirPods</Typography>

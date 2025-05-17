@@ -25,3 +25,4 @@ export * from './review-card-preview-2';
 export * from './review-card-preview-3';
 export * from './product-card-preview';
 export * from './product-card-preview-2';
+export * from './card-with-image-preview-7';

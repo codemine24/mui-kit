@@ -4,7 +4,7 @@ import { Box } from "@mui/system";
 
 export const CardWithImagePreview2 = () => {
     return (
-        <Card sx={{ maxWidth: 600, mx: "auto", display: "flex", p: 2, gap: 2, alignItems: 'stretch', flexDirection: { xs: "column", md: "row" } }}>
+        <Card sx={{ maxWidth: 600, display: "flex", p: 2, gap: 2, alignItems: 'stretch', flexDirection: { xs: "column", md: "row" } }}>
             <CardMedia
                 component="img"
                 image="https://mui.com/static/images/cards/paella.jpg"

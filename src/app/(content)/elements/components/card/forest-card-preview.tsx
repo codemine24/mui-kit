@@ -12,7 +12,7 @@ export const ForestCardPreview = () => {
             position: 'relative',
             zIndex: 30,
             width: '100%',
-            height: '500px',
+            height: { xs: 350, md: 450 },
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center'
@@ -51,34 +51,33 @@ export const ForestCardPreview = () => {
                 justifyContent: 'center'
             }}>
                 <Box sx={{
-                    boxShadow: 6,
+                    boxShadow: { xs: 'none', md: 6 },
                     borderRadius: 2,
-                    width: '85%',
-                    height: 384,
+                    width: { xs: '100%', md: '85%' },
+                    height: { xs: 'auto', md: "85%" },
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
-                    backgroundImage: 'url(https://wallpapercave.com/wp/wp6689710.jpg)'
+                    backgroundImage: {
+                        xs: 'none',
+                        md: 'url(https://wallpapercave.com/wp/wp6689710.jpg)',
+                    },
                 }}>
-                    <Grid2 container spacing={0.125} sx={{ overflow: 'hidden' }}>
+                    <Grid2 container spacing={0.125} sx={{ overflow: 'hidden', height: '100%' }}>
                         {/* Left Column */}
-                        <Grid2 size={{ xs: 12, md: 6 }}>
+                        <Grid2 size={{ xs: 12, md: 6 }} >
                             <Box sx={{
                                 position: 'relative',
-                                my: 6,
-                                px: 8,
                                 height: '100%',
+                                p: 2
                             }}>
                                 <Box sx={{
-                                    borderLeft: '4px solid',
-                                    borderColor: 'grey.400',
-                                    py: 10,
-                                    px: 5,
-                                    mx: 0.5,
-                                    position: 'absolute',
-                                    left: 2
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    height: '100%'
                                 }}>
                                     <Typography
-                                        variant="h3"
+                                        variant="h4"
                                         sx={{
                                             fontStyle: 'italic',
                                             color: 'white',
@@ -90,24 +89,33 @@ export const ForestCardPreview = () => {
                                         The Mysteries Of The Forest
                                     </Typography>
                                 </Box>
-                                <Typography
-                                    sx={{
-                                        color: 'grey.400',
-                                        fontWeight: 600,
-                                        fontSize: '1.25rem',
-                                        mb: 4
-                                    }}
-                                >
-                                    07
-                                </Typography>
+                                <Box sx={{
+                                    position: 'absolute',
+                                    borderLeft: '4px solid',
+                                    borderColor: 'grey.400',
+                                    left: 10,
+                                    top: 20,
+                                    py: 4,
+                                    px: 1,
+                                    height: '60%',
+                                    display: {
+                                        xs: 'none',
+                                        md: 'block',
+                                    }
+                                }} />
                                 <Box sx={{
                                     position: 'absolute',
                                     borderTop: '4px solid',
                                     borderColor: 'grey.400',
-                                    bottom: 60,
+                                    left: 20,
+                                    bottom: 0,
                                     py: 1,
                                     px: 4,
-                                    width: '60%'
+                                    width: '60%',
+                                    display: {
+                                        xs: 'none',
+                                        md: 'block',
+                                    }
                                 }} />
                             </Box>
                         </Grid2>
@@ -116,12 +124,15 @@ export const ForestCardPreview = () => {
                         <Grid2 size={{ xs: 12, md: 6 }}>
                             <Box sx={{
                                 position: 'relative',
-                                height: { xs: 'auto', md: 384 },
+                                height: '100%',
                                 width: '100%',
-                                bgcolor: 'rgba(230, 0, 118, .3)',
+                                bgcolor: {
+                                    xs: 'transparent',
+                                    md: 'rgba(230, 0, 118, .3)',
+                                },
                                 borderRadius: '0 8px 8px 0'
                             }}>
-                                <Box sx={{ p: 8 }}>
+                                <Box sx={{ p: { xs: 2, md: 4 }, height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                                     <Typography
                                         variant="body1"
                                         sx={{
@@ -137,12 +148,8 @@ export const ForestCardPreview = () => {
                                         Combining impressive biodiversity with natural beauty,
                                         the woods of the world can be both captivating and perplexing.
                                     </Typography>
-                                    <Box sx={{
-                                        position: 'absolute',
-                                        bottom: 0,
-                                        right: 0,
-                                        p: 2
-                                    }}>
+
+                                    <Box>
                                         <Button
                                             variant="contained"
                                             endIcon={<ArrowCircleRight />}
@@ -153,7 +160,7 @@ export const ForestCardPreview = () => {
                                                 fontWeight: 'bold',
                                                 fontSize: '0.875rem',
                                                 py: 1,
-                                                px: 2
+                                                px: 2,
                                             }}
                                         >
                                             LEARN MORE

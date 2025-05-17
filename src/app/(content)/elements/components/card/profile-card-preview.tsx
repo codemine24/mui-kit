@@ -15,11 +15,11 @@ export const ProfileCardPreview = () => {
     const id = open ? 'simple-popper' : undefined;
 
     return (
-        <Card sx={{ maxWidth: 400, mx: "auto", p: 3, position: "relative" }}>
+        <Card sx={{ maxWidth: 400, p: 3, position: "relative" }}>
             <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 2 }}>
                 <CardMedia
                     component="img"
-                    image="https://mui.com/static/images/cards/paella.jpg"
+                    image="https://images.unsplash.com/photo-1633332755192-727a05c4013d"
                     alt="Paella dish"
                     sx={{ width: 100, height: 100, borderRadius: "999px", mt: 3 }}
                 />

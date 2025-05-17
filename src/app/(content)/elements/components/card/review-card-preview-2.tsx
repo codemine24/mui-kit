@@ -18,7 +18,7 @@ import TvIcon from '@mui/icons-material/Tv';
 
 export const ReviewCardPreview2 = () => {
     return (
-        <Card sx={{ maxWidth: 360, mx: 'auto', borderRadius: 3, boxShadow: 3, p: 1 }}>
+        <Card sx={{ maxWidth: 360, borderRadius: 3, boxShadow: 3, p: 1 }}>
             <CardMedia
                 component="img"
                 height="200"

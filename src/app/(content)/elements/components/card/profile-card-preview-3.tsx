@@ -3,7 +3,7 @@ import { Box, Card, CardContent, CardMedia, Stack, Typography } from "@mui/mater
 
 export const ProfileCardPreview3 = () => {
     return (
-        <Card sx={{ maxWidth: 345, mx: "auto", p: 3 }}>
+        <Card sx={{ maxWidth: 345, p: 3 }}>
             <CardMedia
                 component="img"
                 image="https://images.unsplash.com/photo-1517841905240-472988babdf9"

@@ -53,7 +53,7 @@ export const ListCardPreview = () => {
     ];
 
     return (
-        <Card variant="outlined" sx={{ maxWidth: 400, mx: 'auto', borderRadius: 2 }}>
+        <Card sx={{ width: 400, borderRadius: 2 }}>
             <CardContent sx={{ px: 3, pt: 2, pb: 0 }}>
                 <Box display="flex" justifyContent="space-between" alignItems="center" mb={2}>
                     <Typography variant="h5" component="h2" fontWeight="bold">

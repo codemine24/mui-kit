@@ -4,7 +4,7 @@ import { ArrowRightAlt } from "@mui/icons-material";
 
 export const ECommerceCardPreview1 = () => {
     return (
-        <Card sx={{ maxWidth: 300, mx: "auto", position: "relative" }}>
+        <Card sx={{ maxWidth: 300, position: "relative" }}>
             <CardMedia
                 component="img"
                 height="194"

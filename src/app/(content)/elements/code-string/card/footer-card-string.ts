@@ -5,11 +5,11 @@ import { Iconify } from "@/components/iconify";
 
 export const FooterCardPreview = () => {
     return (
-        <Card sx={{ maxWidth: 500, mx: "auto", p: 2, textAlign: "center" }}>
+        <Card sx={{ maxWidth: 500, p: 2, textAlign: "center" }}>
             <Typography variant="h5">Work Fast From Anywhwere</Typography>
             <Typography variant="body2" sx={{ color: "text.secondary", mt: 2 }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</Typography>
             <Box sx={{ display: "flex", flexDirection: { xs: "column", sm: "row" }, gap: 2, justifyContent: "center", mt: 2 }}>
-                <Box sx={{ display: "flex", alignItems: "center", gap: 1, p: 1, bgcolor: "background.paper" }}>
+                <Box sx={{ display: "flex", alignItems: "center", gap: 1, p: 1, bgcolor: "#1C1C1C", color: "#fff" }}>
                     <AppleIcon />
                     <Box sx={{ textAlign: "left" }}>
                         <Typography sx={{ fontSize: "11px" }}>Download on the</Typography>
@@ -17,7 +17,7 @@ export const FooterCardPreview = () => {
                     </Box>
                 </Box>
 
-                <Box sx={{ display: "flex", alignItems: "center", gap: 1, p: 1, bgcolor: "background.paper" }}>
+                <Box sx={{ display: "flex", alignItems: "center", gap: 1, p: 1, bgcolor: "#1C1C1C", color: "#fff" }}>
                     <Iconify icon="mage:playstore" />
                     <Box sx={{ textAlign: "left" }}>
                         <Typography sx={{ fontSize: "11px" }}>Download on the</Typography>

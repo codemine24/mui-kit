@@ -4,7 +4,7 @@ import { DirectionsCar, Bathtub, Nightlight } from "@mui/icons-material";
 
 export const PropertyPreviewCard = () => {
     return (
-        <Card sx={{ maxWidth: 400, mx: "auto", borderRadius: 3, boxShadow: 3, p: 2 }}>
+        <Card sx={{ maxWidth: 400, borderRadius: 3, boxShadow: 3, p: 2 }}>
             <CardMedia
                 component="img"
                 image="https://mui.com/static/images/cards/paella.jpg"

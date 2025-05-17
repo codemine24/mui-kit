@@ -24,3 +24,4 @@ export * from "./review-card-string";
 export * from "./review-card-string-2";
 export * from "./product-card-string";
 export * from "./product-card-string-2";
+export * from "./card-with-image-string-7";

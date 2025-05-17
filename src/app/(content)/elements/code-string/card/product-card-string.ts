@@ -3,8 +3,8 @@ import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 
 export const ProductCardPreview = () => {
     return (
-        <Card sx={{ maxWidth: 350, mx: "auto" }}>
-            <CardMedia component="img" height="200" image="https://mui.com/static/images/cards/paella.jpg" alt="Paella" />
+        <Card sx={{ maxWidth: 350 }}>
+            <CardMedia component="img" height="200" image="https://images.unsplash.com/photo-1558126319-c9feecbf57ee" alt="Paella" />
             <CardContent>
                 <Typography fontWeight="bold">
                     Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport

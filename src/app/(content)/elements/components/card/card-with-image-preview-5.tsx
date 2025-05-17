@@ -2,7 +2,7 @@ import { Card, Stack, CardMedia, Chip, Typography, Box } from "@mui/material";
 
 export const CardWithImagePreview5 = () => {
     return (
-        <Card sx={{ maxWidth: 345, margin: "auto", borderRadius: 4, overflow: 'visible', boxShadow: 0, bgcolor: '#fff', pb: 2 }}>
+        <Card sx={{ maxWidth: 345, borderRadius: 4, overflow: 'visible', boxShadow: 0, bgcolor: '#fff', pb: 2 }}>
             <CardMedia
                 component="img"
                 image="https://mui.com/static/images/cards/paella.jpg"

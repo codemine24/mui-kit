@@ -4,7 +4,7 @@ import LanguageIcon from "@mui/icons-material/Language";
 
 export const ErrorCardPreview = () => {
     return (
-        <Card sx={{ maxWidth: 400, mx: "auto" }}>
+        <Card sx={{ maxWidth: 400 }}>
             <CardContent>
                 <Alert variant="filled" severity="error">
                     This is an error Alert.

@@ -6,7 +6,7 @@ import EmailIcon from "@mui/icons-material/Email";
 
 export const ProfileCardPreview2 = () => {
     return (
-        <Card sx={{ maxWidth: 345, margin: "auto", borderRadius: 4, boxShadow: 3, overflow: 'hidden' }}>
+        <Card sx={{ maxWidth: 345, borderRadius: 4, boxShadow: 3, overflow: 'hidden' }}>
             <CardMedia
                 component="img"
                 height="180"

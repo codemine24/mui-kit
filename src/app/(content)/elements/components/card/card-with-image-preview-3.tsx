@@ -2,7 +2,7 @@ import { Card, CardContent, CardMedia, Typography } from "@mui/material";
 
 export const CardWithImagePreview3 = () => {
     return (
-        <Card sx={{ maxWidth: 380, mx: "auto" }}>
+        <Card sx={{ maxWidth: 380 }}>
             <CardContent>
                 <Typography variant="h5">Special New Arrivals</Typography>
                 <Typography variant="body2" color="text.secondary" sx={{ mt: 2 }}>

@@ -26,10 +26,8 @@ export const PricingCardPreview = () => {
 
     return (
         <Card
-            variant="outlined"
             sx={{
-                maxWidth: 350,
-                mx: 'auto',
+                width: 370,
                 borderRadius: 2,
                 boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.05)'
             }}
