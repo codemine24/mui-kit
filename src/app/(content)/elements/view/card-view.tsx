@@ -31,7 +31,8 @@ import {
   CardWithImageString6,
   ReviewCardString,
   ReviewCardString2,
-  ProductCardString
+  ProductCardString,
+  ProductCardString2
 }
   from "../code-string/card";
 import {
@@ -60,6 +61,7 @@ import {
   ReviewCardPreview2,
   ReviewCardPreview3,
   ProductCardPreview,
+  ProductCardPreview2,
 }
   from "../components/card";
 import { ReviewCardString3 } from "../code-string/card/review-card-string-3";
@@ -240,6 +242,13 @@ const sections = [
     description: "A regular but elegant card with solid background color",
     codeString: ProductCardString,
     preview: <ProductCardPreview />,
+  },
+  {
+    id: "product-card-2",
+    title: "Product Card 2",
+    description: "A regular but elegant card with solid background color",
+    codeString: ProductCardString2,
+    preview: <ProductCardPreview2 />,
   },
   // {
   //   id: "forest-card-1",
