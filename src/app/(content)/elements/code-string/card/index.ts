@@ -10,3 +10,4 @@ export * from "./list-card-string";
 export * from "./pricing-card-string";
 export * from "./profile-card-string";
 export * from "./footer-card-string";
+export * from "./property-card-string";
