@@ -1,0 +1,1 @@
+export const dialogConfirmation1String = ``

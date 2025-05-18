@@ -31,7 +31,7 @@ export const DialogPlacementPreview = () => {
     const onClose = () => setOpen(false);
 
     return (
-        <>
+        <Box>
             <Box sx={{ mb: 2 }}>
                 <Select value={placement} onChange={handlePlacementChange}>
                     {Object.keys(placements).map((pos) => (
@@ -73,6 +73,6 @@ export const DialogPlacementPreview = () => {
                     <Button onClick={onClose}>Agree</Button>
                 </DialogActions>
             </Dialog>
-        </>
+        </Box>
     );
 };

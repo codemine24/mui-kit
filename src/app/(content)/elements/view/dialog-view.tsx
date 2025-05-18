@@ -8,8 +8,22 @@ import { PageTitle } from "@/components/core/page-title";
 import { SectionTitle } from "@/components/core/section-title";
 import { CodePreviewCopyWrapper } from "@/components/code-preview-copy-wrapper";
 
-import { DialogPlacementPreview, DialogSizesPreview, DialogStaticPreview } from "../components/dialog";
-import { dialogPlacementString, dialogSizesString, dialogStaticString } from "../code-string/dialog";
+import {
+    DialogCustomBackdropPreview,
+    DialogPlacementPreview,
+    DialogSizesPreview,
+    DialogStaticPreview,
+    DialogConfirmation1Preview,
+    DialogConfirmation2Preview,
+} from "../components/dialog";
+import {
+    dialogCustomBackdropString,
+    dialogPlacementString,
+    dialogSizesString,
+    dialogStaticString,
+    dialogConfirmation1String,
+    dialogConfirmation2String,
+} from "../code-string/dialog";
 
 const sections = [
     {
@@ -32,6 +46,27 @@ const sections = [
         description: "Native material ui dialog with solid background",
         codeString: dialogStaticString,
         preview: <DialogStaticPreview />,
+    },
+    {
+        id: "dialog-custom-backdrop",
+        title: "Custom Backdrop",
+        description: "Native material ui dialog with solid background",
+        codeString: dialogCustomBackdropString,
+        preview: <DialogCustomBackdropPreview />,
+    },
+    {
+        id: "dialog-confirmation",
+        title: "Confirmation",
+        description: "Native material ui dialog with solid background",
+        codeString: dialogConfirmation1String,
+        preview: <DialogConfirmation1Preview />,
+    },
+    {
+        id: "dialog-confirmation-2",
+        title: "Confirmation 2",
+        description: "Native material ui dialog with solid background",
+        codeString: dialogConfirmation2String,
+        preview: <DialogConfirmation2Preview />,
     },
 ]
 
