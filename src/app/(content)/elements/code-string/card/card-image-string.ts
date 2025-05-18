@@ -1,7 +1,7 @@
 export const cardImageString = `import { Button, Card, CardActions, CardContent, CardMedia, Typography } from "@mui/material";
 import { ArrowRightAlt } from "@mui/icons-material";
 
-export const CardImage1Preview = () => {
+export const CardImage = () => {
     return (
         <Card sx={{ maxWidth: 345 }}>
             <CardMedia

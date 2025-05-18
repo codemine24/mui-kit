@@ -1,6 +1,6 @@
 export const cardProduct2String = `import { Card, CardContent, CardMedia, Typography, Button, Box } from "@mui/material";
 
-export const ProductCardPreview2 = () => {
+export const ProductCard2 = () => {
     return (
         <Card sx={{ maxWidth: 350 }}>
             <CardMedia component="img" height="200" image="https://images.unsplash.com/photo-1629367494173-c78a56567877" alt="Paella" />

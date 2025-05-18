@@ -1,7 +1,7 @@
 export const cardBasic3String = `import { ArrowRightAlt } from "@mui/icons-material";
 import { Button, Card, CardContent, Stack, Typography } from "@mui/material";
 
-export const CardBasic3Preview = () => {
+export const CardBasic3 = () => {
     return (
         <Card sx={{ maxWidth: 345 }}>
             <CardContent>

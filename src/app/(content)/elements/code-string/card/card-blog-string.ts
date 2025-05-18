@@ -10,7 +10,7 @@ import {
     Stack,
 } from '@mui/material';
 
-export const CardBlogPreview = () => {
+export const CardBlog = () => {
     return (
         <Card sx={{ maxWidth: 360, borderRadius: 3, boxShadow: 3, p: 1 }}>
             <CardMedia

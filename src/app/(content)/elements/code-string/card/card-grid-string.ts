@@ -1,6 +1,6 @@
 export const cardGridString = `import { Box, Grid, Paper, Typography, Avatar, Stack, Container } from '@mui/material';
 
-export const CardGridPreview = () => {
+export const CardGrid = () => {
     const testimonials = [
         {
             title: "Very easy this was to integrate",

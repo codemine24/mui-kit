@@ -3,7 +3,7 @@ import { CardGiftcard } from "@mui/icons-material";
 import { Button } from "@mui/material";
 import { ChevronRight } from "@mui/icons-material";
 
-export const CardBasic2Preview = () => {
+export const CardBasic2 = () => {
     return (
         <Card sx={{ maxWidth: 345 }}>
             <CardContent>

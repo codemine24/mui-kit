@@ -13,7 +13,7 @@ import {
     Button
 } from '@mui/material';
 
-export const ListCardPreview = () => {
+export const ListCard = () => {
     const customers = [
         {
             id: 1,
