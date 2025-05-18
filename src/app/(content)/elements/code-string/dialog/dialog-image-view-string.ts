@@ -14,7 +14,7 @@ import {
 } from '@mui/material';
 import { Download, FavoriteBorder, Share } from '@mui/icons-material';
 
-export const DialogImageViewPreview = () => {
+export const DialogImageView = () => {
     const [open, setOpen] = React.useState(false);
     const onClose = () => setOpen(false);
     return (

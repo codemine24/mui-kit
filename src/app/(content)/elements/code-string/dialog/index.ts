@@ -10,3 +10,4 @@ export * from "./dialog-full-screen-string";
 export * from "./dialog-animation-string";
 export * from "./dialog-header-footer-string";
 export * from "./dialog-image-view-string";
+export * from "./dialog-siginin-string";

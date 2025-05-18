@@ -14,7 +14,7 @@ import {
 } from '@mui/material';
 import { Close } from '@mui/icons-material';
 
-export const DialogHeaderFooterPreview = () => {
+export const DialogHeaderFooter = () => {
     const [open, setOpen] = useState(false);
 
     const handleClose = () => {

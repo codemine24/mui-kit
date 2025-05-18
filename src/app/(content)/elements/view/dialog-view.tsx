@@ -21,6 +21,7 @@ import {
     DialogAnimationPreview,
     DialogHeaderFooterPreview,
     DialogImageViewPreview,
+    DialogSignInPreview,
 } from "../components/dialog";
 import {
     dialogCustomBackdropString,
@@ -35,6 +36,7 @@ import {
     dialogAnimationString,
     dialogHeaderFooterString,
     dialogImageViewPreviewString,
+    dialogSignInString,
 } from "../code-string/dialog";
 
 const sections = [
@@ -121,6 +123,13 @@ const sections = [
         description: "Native material ui dialog with solid background",
         codeString: dialogImageViewPreviewString,
         preview: <DialogImageViewPreview />,
+    },
+    {
+        id: "dialog-signin",
+        title: "Sign In",
+        description: "Native material ui dialog with solid background",
+        codeString: dialogSignInString,
+        preview: <DialogSignInPreview />,
     },
 ]
 

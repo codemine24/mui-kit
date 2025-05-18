@@ -72,7 +72,7 @@ const TransitionZoom = React.forwardRef<
     return <Zoom timeout={300} ref={ref} {...props} />;
 });
 
-export const DialogAnimationPreview = () => {
+export const DialogAnimation = () => {
     const [openDialog, setOpenDialog] = React.useState<
         'slide-up' | 'slide-down' | 'slide-left' | 'slide-right' | 'grow' | 'fade' | 'zoom' | null
     >(null);
