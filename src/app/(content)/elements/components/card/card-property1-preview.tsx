@@ -6,7 +6,7 @@ export const CardProperty1Preview = () => {
         <Card sx={{ maxWidth: 400, borderRadius: 3, boxShadow: 3, p: 2 }}>
             <CardMedia
                 component="img"
-                image="https://mui.com/static/images/cards/paella.jpg"
+                image="https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
                 alt="Paella dish"
                 sx={{ height: 300, borderRadius: 2 }}
             />
