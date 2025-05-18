@@ -1,7 +1,7 @@
 import { Bathtub, DirectionsCar, Nightlight } from "@mui/icons-material";
 import { Box, Card, CardContent, CardMedia, Typography } from "@mui/material";
 
-export const CardProperty1Preview = () => {
+export const CardPropertyPreview = () => {
     return (
         <Card sx={{ maxWidth: 400, borderRadius: 3, boxShadow: 3, p: 2 }}>
             <CardMedia

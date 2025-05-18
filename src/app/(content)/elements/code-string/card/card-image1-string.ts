@@ -1,4 +1,4 @@
-export const cardImage1String = `import { Button, Card, CardActions, CardContent, CardMedia, Typography } from "@mui/material";
+export const cardImageString = `import { Button, Card, CardActions, CardContent, CardMedia, Typography } from "@mui/material";
 import { ArrowRightAlt } from "@mui/icons-material";
 
 export const CardImage1Preview = () => {

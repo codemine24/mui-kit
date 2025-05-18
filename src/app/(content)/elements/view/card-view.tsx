@@ -8,11 +8,11 @@ import { useOnThisPage } from "@/contexts/on-thispage-context";
 import { Box, Divider } from "@mui/material";
 import React from "react";
 import {
-  cardBasic1String,
   cardBasic2String,
   cardBasic3String,
   cardBasic4String,
   cardBasic5String,
+  cardBasicString,
   cardBlogString,
   cardBottomImageString,
   cardDownloadString,
@@ -20,11 +20,11 @@ import {
   cardErrorString,
   cardGridString,
   cardHorizontalString,
-  cardImage1String,
   cardImage2String,
   cardImageBg2String,
   cardImageBg3String,
   cardImageBgString,
+  cardImageString,
   cardListString,
   cardPricingString,
   cardProduct2String,
@@ -32,17 +32,17 @@ import {
   cardProfile2String,
   cardProfile3String,
   cardProfileString,
-  cardProperty1String,
   cardProperty2String,
+  cardPropertyString,
   cardReviewString
 } from "../code-string/card";
 import { cardTestimonialString } from "../code-string/card/card-testimonial-string";
 import {
-  CardBasic1Preview,
   CardBasic2Preview,
   CardBasic3Preview,
   CardBasic4Preview,
   CardBasic5Preview,
+  CardBasicPreview,
   CardBlogPreview,
   CardBottomImagePreview,
   CardDownloadPreview,
@@ -50,11 +50,11 @@ import {
   CardErrorPreview,
   CardGridPreview,
   CardHorizontalPreview,
-  CardImage1Preview,
   CardImage2Preview,
   CardImageBg2Preview,
   CardImageBg3Preview,
   CardImageBgPreview,
+  CardImagePreview,
   CardListPreview,
   CardPricingPreview,
   CardProduct2Preview,
@@ -62,8 +62,8 @@ import {
   CardProfile2Preview,
   CardProfile3Preview,
   CardProfilePreview,
-  CardProperty1Preview,
   CardProperty2Preview,
+  CardPropertyPreview,
   CardReviewPreview,
   CardTestimonialPreview
 } from "../components/card";
@@ -73,8 +73,8 @@ const sections = [
     id: "basic-card-1",
     title: "Simple Card",
     description: "Very simple card without any distraction",
-    codeString: cardBasic1String,
-    preview: <CardBasic1Preview />,
+    codeString: cardBasicString,
+    preview: <CardBasicPreview />,
   },
   {
     id: "basic-card-2",
@@ -110,8 +110,8 @@ const sections = [
     title: "Vertical Image Card",
     description:
       "Simple vertical card with image. Mostly used for product card",
-    codeString: cardImage1String,
-    preview: <CardImage1Preview />,
+    codeString: cardImageString,
+    preview: <CardImagePreview />,
   },
   {
     id: "horizontal-card",
@@ -188,8 +188,8 @@ const sections = [
     title: "Simple property card",
     description:
       "Add this simple property card to display basic property info. ",
-    codeString: cardProperty1String,
-    preview: <CardProperty1Preview />,
+    codeString: cardPropertyString,
+    preview: <CardPropertyPreview />,
   },
   {
     id: "property-card-2",

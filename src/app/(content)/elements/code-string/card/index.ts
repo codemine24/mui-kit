@@ -1,4 +1,4 @@
-export * from "./card-basic1-string";
+export * from "./card-basic-string";
 export * from "./card-basic5-string";
 export * from "./card-basic4-string";
 export * from "./card-basic3-string";
