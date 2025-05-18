@@ -9,7 +9,6 @@ import { Box, Divider } from "@mui/material";
 import React from "react";
 import {
   CardErrorString,
-  CardWithImageString6,
   CardWithImageString7,
   FooterCardString,
   ForestCardString,
@@ -24,6 +23,7 @@ import {
   cardBasic5String,
   cardBottomImageString,
   cardECommerceString,
+  cardHorizontalString,
   cardImage1String,
   cardImage2String,
   cardImageBgString,
@@ -46,6 +46,7 @@ import {
   CardBottomImagePreview,
   CardECommercePreview,
   CardErrorPreview,
+  CardHorizontalPreview,
   CardImage1Preview,
   CardImage2Preview,
   CardImageBgPreview,
@@ -57,7 +58,6 @@ import {
   CardProperty1Preview,
   CardProperty2Preview,
   CardReviewPreview,
-  CardWithImagePreview6,
   CardWithImagePreview7,
   FooterCardPreview,
   ForestCardPreview,
@@ -104,13 +104,22 @@ const sections = [
     codeString: cardBasic5String,
     preview: <CardBasic5Preview />,
   },
+
   {
-    id: "card-image-1",
+    id: "vertical-card-1",
     title: "Vertical Image Card",
     description:
       "Simple vertical card with image. Mostly used for product card",
     codeString: cardImage1String,
     preview: <CardImage1Preview />,
+  },
+  {
+    id: "horizontal-card",
+    title: "Horizontal Image Card",
+    description:
+      "Horizontal image with left image and right text designed with material ui only. ",
+    codeString: cardHorizontalString,
+    preview: <CardHorizontalPreview />,
   },
   {
     id: "card-image-2",
@@ -161,7 +170,8 @@ const sections = [
   {
     id: "profile-card-3",
     title: "Rounded Profile Card",
-    description: "Profile card with rounded image perfect for simple design layout. ",
+    description:
+      "Profile card with rounded image perfect for simple design layout. ",
     codeString: cardProfile3String,
     preview: <CardProfile3Preview />,
   },
@@ -228,14 +238,7 @@ const sections = [
     codeString: cardReviewString,
     preview: <CardReviewPreview />,
   },
-  
-  {
-    id: "card-with-image-6",
-    title: "Card With Image 6",
-    description: "A regular but elegant card with solid background color",
-    codeString: CardWithImageString6,
-    preview: <CardWithImagePreview6 />,
-  },
+
   {
     id: "review-card-1",
     title: "Review Card 1",

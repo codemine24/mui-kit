@@ -1,7 +1,7 @@
-export const CardWithImageString6 = `import { Card, CardContent, CardMedia, Typography } from "@mui/material";
+export const cardHorizontalString = `import { Card, CardContent, CardMedia, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 
-export const CardWithImagePreview6 = () => {
+export const CardHorizontal = () => {
     return (
         <Card sx={{ maxWidth: 500, display: "flex", p: 2, gap: 2, alignItems: 'stretch', flexDirection: { xs: "column", md: "row" } }}>
             <CardMedia

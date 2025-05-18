@@ -8,7 +8,7 @@ export * from './card-bottom-image-preview';
 export * from './card-image2-preview';
 export * from './card-image-bg-preview';
 export * from './card-review-preview';
-export * from './card-with-image-preview-6';
+export * from './card-horizontal-preview';
 export * from './card-profile-preview';
 export * from './card-profile2-preview';
 export * from './card-profile3-3';
