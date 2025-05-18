@@ -8,8 +8,6 @@ import { useOnThisPage } from "@/contexts/on-thispage-context";
 import { Box, Divider } from "@mui/material";
 import React from "react";
 import {
-  CardWithImage1CodeString,
-  CardWithImageString2,
   CardWithImageString3,
   CardWithImageString4,
   CardWithImageString5,
@@ -20,7 +18,6 @@ import {
   FooterCardString,
   ForestCardString,
   GridCard1CodeString,
-  ListCardCodeString,
   PricingCardCodeString,
   ProductCardString,
   ProductCardString2,
@@ -34,7 +31,10 @@ import {
   cardBasic2String,
   cardBasic3String,
   cardBasic4String,
-  cardBasic5String
+  cardBasic5String,
+  cardImage1String,
+  cardImage2String,
+  cardListString,
 } from "../code-string/card";
 import { ReviewCardString3 } from "../code-string/card/review-card-string-3";
 import {
@@ -43,8 +43,9 @@ import {
   CardBasic3Preview,
   CardBasic4Preview,
   CardBasic5Preview,
-  CardWithImage1Preview,
-  CardWithImagePreview2,
+  CardImage1Preview,
+  CardImage2Preview,
+  CardListPreview,
   CardWithImagePreview3,
   CardWithImagePreview4,
   CardWithImagePreview5,
@@ -55,7 +56,6 @@ import {
   FooterCardPreview,
   ForestCardPreview,
   GridCardPreview1,
-  ListCardPreview,
   PricingCardPreview,
   ProductCardPreview,
   ProductCardPreview2,
@@ -65,9 +65,8 @@ import {
   PropertyPreviewCard,
   ReviewCardPreview,
   ReviewCardPreview2,
-  ReviewCardPreview3
+  ReviewCardPreview3,
 } from "../components/card";
-
 
 const sections = [
   {
@@ -106,23 +105,25 @@ const sections = [
     preview: <CardBasic5Preview />,
   },
   {
-    id: "card-with-image-1",
-    title: "Card With Image 1",
-    description: "A regular but elegant card with solid background color",
-    codeString: CardWithImage1CodeString,
-    preview: <CardWithImage1Preview />,
+    id: "card-image-1",
+    title: "Vertical Image Card",
+    description:
+      "Simple vertical card with image. Mostly used for product card",
+    codeString: cardImage1String,
+    preview: <CardImage1Preview />,
   },
   {
-    id: "card-with-image-2",
-    title: "Card With Image 2",
-    description: "A regular but elegant card with solid background color",
-    codeString: CardWithImageString2,
-    preview: <CardWithImagePreview2 />,
+    id: "card-image-2",
+    title: "Horizontal Image Card",
+    description: "Simple horizontal card with image and perfect for blog card",
+    codeString: cardImage2String,
+    preview: <CardImage2Preview />,
   },
   {
     id: "grid-card-1",
-    title: "Grid Card 1",
-    description: "A regular but elegant card with solid background color",
+    title: "Multi-grid Card",
+    description:
+      "Card with multiple grid layout perfect to display your service or product overview.",
     codeString: GridCard1CodeString,
     preview: <GridCardPreview1 />,
   },
@@ -130,8 +131,8 @@ const sections = [
     id: "list-card-1",
     title: "List Card 1",
     description: "A regular but elegant card with solid background color",
-    codeString: ListCardCodeString,
-    preview: <ListCardPreview />,
+    codeString: cardListString,
+    preview: <CardListPreview />,
   },
   {
     id: "pricing-card-1",
@@ -265,9 +266,8 @@ const sections = [
     description: "A regular but elegant card with solid background color",
     codeString: ForestCardString,
     preview: <ForestCardPreview />,
-  }
-]
-
+  },
+];
 
 export const CardView = () => {
   const { setSections } = useOnThisPage();

@@ -1,4 +1,4 @@
-export const ListCardCodeString = `import React from 'react';
+export const cardListString = `import React from 'react';
 import {
     Card,
     CardContent,

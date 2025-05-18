@@ -1,8 +1,8 @@
-export const CardWithImageString2 = `import { ArrowRightAlt } from "@mui/icons-material";
+export const cardImage2String = `import { ArrowRightAlt } from "@mui/icons-material";
 import { Button, Card, CardActions, CardContent, CardMedia, Chip, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 
-export const CardWithImagePreview2 = () => {
+export const CardImage2Preview = () => {
     return (
         <Card sx={{ maxWidth: 600, display: "flex", p: 2, gap: 2, alignItems: 'stretch', flexDirection: { xs: "column", md: "row" } }}>
             <CardMedia

@@ -1,7 +1,7 @@
 import { Button, Card, CardActions, CardContent, CardMedia, Typography } from "@mui/material";
 import { ArrowRightAlt } from "@mui/icons-material";
 
-export const CardWithImage1Preview = () => {
+export const CardImage1Preview = () => {
     return (
         <Card sx={{ maxWidth: 345 }}>
             <CardMedia
