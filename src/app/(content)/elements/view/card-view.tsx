@@ -34,7 +34,8 @@ import {
   cardImage1String,
   cardImage2String,
   cardListString,
-  cardPricingString
+  cardPricingString,
+  cardProfileString,
 } from "../code-string/card";
 import { ReviewCardString3 } from "../code-string/card/review-card-string-3";
 import {
@@ -47,6 +48,7 @@ import {
   CardImage2Preview,
   CardListPreview,
   CardPricingPreview,
+  CardProfilePreview,
   CardWithImagePreview3,
   CardWithImagePreview4,
   CardWithImagePreview5,
@@ -65,7 +67,7 @@ import {
   PropertyPreviewCard,
   ReviewCardPreview,
   ReviewCardPreview2,
-  ReviewCardPreview3
+  ReviewCardPreview3,
 } from "../components/card";
 
 const sections = [
@@ -137,16 +139,18 @@ const sections = [
   {
     id: "pricing-card-1",
     title: "Pricing Card",
-    description: "Simple pricing card to display your product or service price designed with material ui only. ",
+    description:
+      "Simple pricing card to display your product or service price designed with material ui only. ",
     codeString: cardPricingString,
     preview: <CardPricingPreview />,
   },
   {
     id: "profile-card-1",
-    title: "Profile Card 1",
-    description: "A regular but elegant card with solid background color",
-    codeString: ProfileCardString,
-    preview: <ProfileCardPreview />,
+    title: "Profile card with menu popover",
+    description:
+      "Use this profile menu popover card to display user profile info. ",
+    codeString: cardProfileString,
+    preview: <CardProfilePreview />,
   },
   {
     id: "footer-card-1",

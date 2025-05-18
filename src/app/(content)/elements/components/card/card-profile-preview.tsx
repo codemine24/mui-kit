@@ -4,7 +4,7 @@ import { Box, Button, Card, CardContent, CardMedia, IconButton, List, ListItemBu
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import { useState } from "react";
 
-export const ProfileCardPreview = () => {
+export const CardProfilePreview = () => {
     const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
 
     const handleClick = (event: React.MouseEvent<HTMLElement>) => {

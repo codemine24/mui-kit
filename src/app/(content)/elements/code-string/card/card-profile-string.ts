@@ -1,10 +1,10 @@
-export const ProfileCardString = `'use client'
+export const cardProfileString = `'use client'
 
 import { Box, Button, Card, CardContent, CardMedia, IconButton, List, ListItemButton, ListItemText, Popper, Typography } from "@mui/material";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import { useState } from "react";
 
-export const ProfileCardPreview = () => {
+export const ProfileCard = () => {
     const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
 
     const handleClick = (event: React.MouseEvent<HTMLElement>) => {

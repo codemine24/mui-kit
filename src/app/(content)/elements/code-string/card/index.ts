@@ -12,7 +12,7 @@ export * from "./card-with-image-string-5";
 export * from "./card-with-image-string-6";
 export * from "./card-list-string";
 export * from "./pricing-card-string";
-export * from "./profile-card-string";
+export * from "./card-profile-string";
 export * from "./profile-card-string-2";
 export * from "./profile-card-string-3";
 export * from "./footer-card-string";

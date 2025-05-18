@@ -9,7 +9,7 @@ export * from './card-image2-preview';
 export * from './card-with-image-preview-4';
 export * from './card-with-image-preview-5';
 export * from './card-with-image-preview-6';
-export * from './profile-card-preview';
+export * from './card-profile-preview';
 export * from './profile-card-preview-2';
 export * from './profile-card-preview-3';
 export * from './grid-card-preview-1';
