@@ -8,7 +8,6 @@ import { useOnThisPage } from "@/contexts/on-thispage-context";
 import { Box, Divider } from "@mui/material";
 import React from "react";
 import {
-  CardWithImageString3,
   CardWithImageString4,
   CardWithImageString5,
   CardWithImageString6,
@@ -28,6 +27,7 @@ import {
   cardBasic3String,
   cardBasic4String,
   cardBasic5String,
+  cardBottomImageString,
   cardImage1String,
   cardImage2String,
   cardListString,
@@ -43,6 +43,7 @@ import {
   CardBasic3Preview,
   CardBasic4Preview,
   CardBasic5Preview,
+  CardBottomImagePreview,
   CardImage1Preview,
   CardImage2Preview,
   CardListPreview,
@@ -50,7 +51,6 @@ import {
   CardProfilePreview,
   CardProperty1Preview,
   CardProperty2Preview,
-  CardWithImagePreview3,
   CardWithImagePreview4,
   CardWithImagePreview5,
   CardWithImagePreview6,
@@ -176,10 +176,11 @@ const sections = [
   },
   {
     id: "card-with-image-3",
-    title: "Card With Image 3",
-    description: "A regular but elegant card with solid background color",
-    codeString: CardWithImageString3,
-    preview: <CardWithImagePreview3 />,
+    title: "Bottom Image Card",
+    description:
+      "Another simple card variant with bottom image. It's a little bit different but still useful for blog or product card.",
+    codeString: cardBottomImageString,
+    preview: <CardBottomImagePreview />,
   },
   {
     id: "error-card-1",

@@ -1,6 +1,6 @@
 import { Card, CardContent, CardMedia, Typography } from "@mui/material";
 
-export const CardWithImagePreview3 = () => {
+export const CardBottomImagePreview = () => {
     return (
         <Card sx={{ maxWidth: 380 }}>
             <CardContent>

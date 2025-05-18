@@ -4,7 +4,7 @@ export * from "./card-basic4-preview";
 export * from "./card-basic3-preview";
 export * from "./card-basic2-preview";
 export * from "./card-image1-preview";
-export * from './card-with-image-preview-3';
+export * from './card-bottom-image-preview';
 export * from './card-image2-preview';
 export * from './card-with-image-preview-4';
 export * from './card-with-image-preview-5';
