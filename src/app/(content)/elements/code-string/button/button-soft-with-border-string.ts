@@ -270,5 +270,4 @@ export const ButtonSoftWithBorderPreview = () => {
       </Stack>
     </Box>
   );
-};
-`
+};`

@@ -1,5 +1,4 @@
-export const buttonDisabledString = `
-import { Box, Button, Stack } from "@mui/material";
+export const buttonDisabledString = `import { Box, Button, Stack } from "@mui/material";
 
 export const ButtonDisabledPreview = () => {
     return (
@@ -16,7 +15,7 @@ export const ButtonDisabledPreview = () => {
                     sx={{
                         ":disabled": {
                             cursor: "not-allowed",
-                            pointerEvents: 'all !important',
+                            pointerEvents: "all !important",
                         },
                     }}
                 >
@@ -28,7 +27,7 @@ export const ButtonDisabledPreview = () => {
                     sx={{
                         ":disabled": {
                             cursor: "not-allowed",
-                            pointerEvents: 'all !important',
+                            pointerEvents: "all !important",
                             bgcolor: "#e6007721",
                         },
                     }}
@@ -37,6 +36,5 @@ export const ButtonDisabledPreview = () => {
                 </Button>
             </Stack>
         </Box>
-    )
-}
-`
+    );
+};`

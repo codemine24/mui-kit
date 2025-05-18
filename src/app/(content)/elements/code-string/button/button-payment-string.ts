@@ -1,7 +1,6 @@
-export const buttonPaymentString = `
+export const buttonPaymentString = `import { Icon } from "@iconify/react";
+import { Apple } from "@mui/icons-material";
 import { Box, Button, Stack } from "@mui/material";
-import { FaOpera, FaBitcoin, FaPaypal, FaCcMastercard, FaStripe, FaEthereum } from "react-icons/fa";
-import { RiVisaLine } from "react-icons/ri";
 
 export const ButtonPaymentPreview = () => {
     return (
@@ -13,74 +12,84 @@ export const ButtonPaymentPreview = () => {
                 flexWrap="wrap"
                 alignItems="center"
             >
-                {/* Connect With Opera Wallet */}
-                <Button variant="outlined" sx={{
-                    backgroundColor: "transparent",
-                    borderColor: "text.secondary",
-                    color: "text.secondary",
-                }} startIcon={<FaOpera />}>
-                    Connect With Opera Wallet
-                </Button>
-
-                {/* Pay With Visa */}
+                {/* Connect With Opera Wallet - Replaced with Wallet icon */}
                 <Button
                     variant="outlined"
                     sx={{
-                        backgroundColor: "transparent",
-                        borderColor: "text.secondary",
-                        color: "text.secondary",
+                        backgroundColor: "#fff",
+                        borderColor: "#ddd",
+                        color: "#000",
+                        textTransform: "none",
                     }}
-                    startIcon={<RiVisaLine />}
+                    startIcon={<Icon icon="devicon:opera" />}
+                >
+                    Connect With Opera Wallet
+                </Button>
+
+                {/* Pay With Visa - Replaced with generic CreditCard icon */}
+                <Button
+                    variant="outlined"
+                    sx={{
+                        backgroundColor: "#fff",
+                        borderColor: "#ddd",
+                        color: "#000",
+                        textTransform: "none",
+                    }}
+                    startIcon={<Icon height={25} width={25} icon="logos:visa" />}
                 >
                     Pay With Visa
                 </Button>
 
-                {/* Pay With MasterCard */}
+                {/* Pay With MasterCard - Same CreditCard icon */}
                 <Button
                     variant="outlined"
                     sx={{
-                        backgroundColor: "transparent",
-                        borderColor: "text.secondary",
-                        color: "text.secondary",
+                        backgroundColor: "#fff",
+                        borderColor: "#ddd",
+                        color: "#000",
+                        textTransform: "none",
                     }}
-                    startIcon={<FaCcMastercard />}
+                    startIcon={<Icon icon="logos:mastercard" />}
                 >
                     Pay With MasterCard
                 </Button>
 
-                {/* Pay With Stripe */}
+                {/* Pay With Stripe - PaymentIcon as substitute */}
                 <Button
                     variant="outlined"
                     sx={{
-                        backgroundColor: "transparent",
-                        borderColor: "text.secondary",
-                        color: "text.secondary",
+                        backgroundColor: "#fff",
+                        borderColor: "#ddd",
+                        color: "#000",
+                        textTransform: "none",
                     }}
-                    startIcon={<FaStripe />}
+                    startIcon={<Icon height={25} width={25} icon="logos:stripe" />}
                 >
                     Pay With Stripe
                 </Button>
 
-                {/* Pay With Ethereum */}
+                {/* Pay With Ethereum - CurrencyExchangeIcon as substitute */}
                 <Button
                     variant="outlined"
                     sx={{
-                        backgroundColor: "transparent",
-                        borderColor: "text.secondary",
-                        color: "text.secondary",
+                        backgroundColor: "#fff",
+                        borderColor: "#ddd",
+                        color: "#000",
+                        textTransform: "none",
                     }}
-                    startIcon={<FaEthereum />}
+                    startIcon={<Icon icon="logos:ethereum" />}
                 >
                     Pay With Ethereum
                 </Button>
 
-                {/* Pay With Bitcoin */}
+                {/* Pay With Bitcoin - CurrencyBitcoinIcon */}
                 <Button
                     variant="contained"
-                    startIcon={<FaBitcoin />}
+                    startIcon={<Icon icon="logos:bitcoin" />}
                     sx={{
                         backgroundColor: "#FF901A",
                         color: "#ffffff",
+                        textTransform: "none",
                         "&:hover": {
                             backgroundColor: "#d87103",
                         },
@@ -89,13 +98,14 @@ export const ButtonPaymentPreview = () => {
                     Pay With Bitcoin
                 </Button>
 
-                {/* Pay With Paypal */}
+                {/* Pay With Paypal - MonetizationOnIcon as substitute */}
                 <Button
                     variant="contained"
-                    startIcon={<FaPaypal />}
+                    startIcon={<Icon icon="logos:paypal" />}
                     sx={{
                         backgroundColor: "#F7BE38",
                         color: "#000000",
+                        textTransform: "none",
                         "&:hover": {
                             backgroundColor: "#FF901A",
                         },
@@ -103,9 +113,22 @@ export const ButtonPaymentPreview = () => {
                 >
                     Checkout With Paypal
                 </Button>
+
+                <Button
+                    variant="contained"
+                    startIcon={<Apple />}
+                    sx={{
+                        backgroundColor: "#000000",
+                        color: "#ffffff",
+                        textTransform: "none",
+                        "&:hover": {
+                            backgroundColor: "#000000",
+                        },
+                    }}
+                >
+                    Checkout With Apple Pay
+                </Button>
             </Stack>
         </Box>
     );
-};
-
-`;
+};`

@@ -26,7 +26,7 @@ import Accordion8 from "../components/accordion/accordion-8";
 const sections = [
   {
     id: "accordion-1",
-    title: "Solid Background Accordion",
+    title: "Solid Background Accordion ",
     description: "A regular but elegant accordion with solid background color",
     codeString: Accordion1CodeString,
     preview: <Accordion1 />,

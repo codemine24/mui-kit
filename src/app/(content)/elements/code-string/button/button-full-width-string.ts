@@ -1,5 +1,4 @@
-export const buttonFullWidthString = `
-import { Box, Button, Stack } from "@mui/material";
+export const buttonFullWidthString = `import { Box, Button, Stack } from "@mui/material";
 
 export const ButtonFullWidthPreview = () => {
     return (
@@ -31,5 +30,4 @@ export const ButtonFullWidthPreview = () => {
             </Stack>
         </Box>
     );
-};
-`;
+};`;

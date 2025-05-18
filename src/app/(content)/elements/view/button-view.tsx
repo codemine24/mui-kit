@@ -4,10 +4,10 @@ import { CodePreviewCopyWrapper } from "@/components/code-preview-copy-wrapper";
 import { CustomBreadCrumbs } from "@/components/core/breadcrumbs";
 import { PageTitle } from "@/components/core/page-title";
 import { SectionTitle } from "@/components/core/section-title";
+import { ExternalPackageAlert } from "@/components/external-package-alert";
 import { useOnThisPage } from "@/contexts/on-thispage-context";
-import { Alert, Box, Divider } from "@mui/material";
+import { Box, Divider } from "@mui/material";
 import React from "react";
-import { button1CodeString } from "../../blocks/code-string/button-code-string";
 import {
   buttonAnimatedString,
   buttonContainedString,
@@ -27,6 +27,7 @@ import {
   buttonSocialLoginString,
   buttonSoftBgString,
   buttonSoftWithBorderString,
+  buttonTextString,
 } from "../code-string/button";
 import {
   ButtonAnimatedPreview,
@@ -47,141 +48,144 @@ import {
   ButtonSocialLoginPreview,
   ButtonSoftBgPreview,
   ButtonSoftWithBorderPreview,
+  ButtonTextPreview,
 } from "../components/button";
-import { Icon } from "@iconify/react/dist/iconify.js";
 
 const sections = [
   {
     id: "button-contained",
     title: "Contained",
-    description: "A regular but elegant accordion with solid background color",
+    description: "Native material ui button with solid background",
     codeString: buttonContainedString,
     preview: <ButtonContainedPreview />,
   },
   {
     id: "button-outlined",
     title: "Outlined",
-    description: "Outlined accordion with custom mui icon",
+    description: "MUI outlined button perfect for modern design",
     codeString: buttonOutlinedString,
     preview: <ButtonOutlinedPreview />,
   },
   {
     id: "button-text",
     title: "Text",
-    description: "Outlined accordion with custom mui icon",
-    codeString: button1CodeString,
-    preview: <ButtonAnimatedPreview />,
+    description: "Text button purely build with material ui only",
+    codeString: buttonTextString,
+    preview: <ButtonTextPreview />,
   },
   {
     id: "button-sizes",
     title: "Sizes",
-    description:
-      "Use this beautiful accordion if you are looking for an accordion with box shadow.",
+    description: "Each section has a different color and different size. ",
     codeString: buttonSizeString,
     preview: <ButtonSizePreview />,
   },
   {
     id: "button-different-shape",
     title: "Different Shape",
-    description: "Each section has a different color",
+    description:
+      "If you need button with different shape, these material ui buttons are for you",
     codeString: buttonShapeString,
     preview: <ButtonShapePreview />,
   },
   {
     id: "button-icons",
     title: "Icons",
-    description: "Icon position is different from traditional accordions",
+    description:
+      "A huge collection of material ui icon buttons. Choose your favorite",
     codeString: buttonIconString,
     preview: <ButtonIconPreview />,
   },
   {
     id: "button-soft",
     title: "Soft",
-    description: "Each section has a vertical line to separate them",
+    description: "Soft background button perfect for modern design",
     codeString: buttonSoftBgString,
     preview: <ButtonSoftBgPreview />,
   },
   {
     id: "button-soft-with-border",
     title: "Soft with Border",
-    description: "Each section has a different color",
+    description: "Soft background with border. Make it more stylish",
     codeString: buttonSoftWithBorderString,
     preview: <ButtonSoftWithBorderPreview />,
   },
   {
     id: "button-animated",
     title: "Animated",
-    description: "Each section has a different color",
+    description: "Animated button to make your website more interactive",
     codeString: buttonAnimatedString,
     preview: <ButtonAnimatedPreview />,
   },
   {
     id: "button-disabled",
     title: "Disabled",
-    description: "Each section has a different color",
+    description: "Disabled buttons with custom background color. ",
     codeString: buttonDisabledString,
     preview: <ButtonDisabledPreview />,
   },
   {
     id: "button-gradient",
     title: "Gradient",
-    description: "Each section has a different color",
+    description:
+      "you can choose gradient buttons from single color gradient or duotone gradient",
     codeString: buttonGradientString,
     preview: <ButtonGradientPreview />,
   },
   {
     id: "button-social-login",
     title: "Social Login",
-    description: "Each section has a different color",
+    description:
+      "Ready to use social login buttons that adjust any kind of use case.",
     codeString: buttonSocialLoginString,
     preview: <ButtonSocialLoginPreview />,
   },
   {
     id: "button-loader",
     title: "Loader",
-    description: "Each section has a different color",
+    description: "Built-in loader button",
     codeString: buttonLoaderString,
     preview: <ButtonLoaderPreview />,
   },
   {
     id: "button-label",
     title: "Label",
-    description: "Each section has a different color",
+    description: "Button with custom label",
     codeString: buttonLabelString,
     preview: <ButtonLabelPreview />,
   },
   {
     id: "button-neon",
     title: "Neon",
-    description: "Each section has a different color",
+    description: "Neon button will make your website glow",
     codeString: buttonNeonString,
     preview: <ButtonNeonPreview />,
   },
   {
     id: "button-ecommerce",
     title: "Ecommerce",
-    description: "Each section has a different color",
+    description: "Ecommerce buttons that fits any kind of use case.",
     codeString: ButtonEcommerceCodeString,
     preview: <ButtonEcommercePreview />,
   },
   {
     id: "button-payment",
     title: "Payment",
-    description: "Each section has a different color",
+    description: "Payment buttons build with material ui only. ",
     codeString: buttonPaymentString,
     preview: <ButtonPaymentPreview />,
   },
   {
     id: "button-full-width",
     title: "Full Width",
-    description: "Each section has a different color",
+    description: "Full with button with different variants",
     codeString: buttonFullWidthString,
     preview: <ButtonFullWidthPreview />,
   },
   {
     id: "button-social-icon",
     title: "Social Icon",
-    description: "Each section has a different color",
+    description: "Social follow buttons ",
     codeString: buttonSocialIconString,
     preview: <ButtonSocialIconPreview />,
   },
@@ -208,19 +212,12 @@ export const ButtonView = () => {
       />
 
       <Divider sx={{ my: 4 }} />
-      <Alert
-        severity="warning"
-        icon={<Icon icon="typcn:info-outline" width={24} height={24} />}
-        sx={{
-          // borderRadius: "50px",
-          // width: "fit-content",
-          padding: "0 1rem",
-          mb: 2,
-        }}
-      >
-        Some components may use an external package `Iconify` You may install it
-        or remove it from the code.
-      </Alert>
+
+      <ExternalPackageAlert
+        packageName="@iconify/react"
+        packageUrl="https://www.npmjs.com/package/@iconify/react"
+      />
+
       {/* Button - 1 */}
       {sections.map((section) => (
         <Box key={section.id} sx={{ mb: 4 }}>

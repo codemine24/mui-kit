@@ -59,5 +59,4 @@ export const ButtonOutlinedPreview = () => {
       </Stack>
     </Box>
   );
-};
-`
+};`

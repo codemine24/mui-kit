@@ -1,6 +1,6 @@
 export const buttonLabelString = `import { Box, Button, Stack, Typography } from "@mui/material";
 
-export const ButtonLabel = () => {
+export const ButtonLabelPreview = () => {
     return (
         <Box>
             <Stack
