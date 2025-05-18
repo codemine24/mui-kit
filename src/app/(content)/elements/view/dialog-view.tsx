@@ -23,6 +23,7 @@ import {
     DialogImageViewPreview,
     DialogSignInPreview,
     DialogCTAPreview,
+    DialogWelcomePreview,
 } from "../components/dialog";
 import {
     dialogCustomBackdropString,
@@ -39,6 +40,7 @@ import {
     dialogImageViewPreviewString,
     dialogSignInString,
     dialogCTAString,
+    dialogWelcomeString,
 } from "../code-string/dialog";
 
 const sections = [
@@ -139,6 +141,13 @@ const sections = [
         description: "Native material ui dialog with solid background",
         codeString: dialogCTAString,
         preview: <DialogCTAPreview />,
+    },
+    {
+        id: "dialog-welcome",
+        title: "Welcome",
+        description: "Native material ui dialog with solid background",
+        codeString: dialogWelcomeString,
+        preview: <DialogWelcomePreview />,
     },
 ]
 
