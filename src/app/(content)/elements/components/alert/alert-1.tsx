@@ -1,11 +1,10 @@
-import * as React from "react";
-import Alert from "@mui/material/Alert";
-import Stack from "@mui/material/Stack";
+import { keyframes } from "@emotion/react";
 import DoneAllIcon from "@mui/icons-material/DoneAll";
+import EmergencyShareIcon from "@mui/icons-material/EmergencyShare";
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import { alpha, Box } from "@mui/material";
-import EmergencyShareIcon from "@mui/icons-material/EmergencyShare";
-import { keyframes } from "@emotion/react";
+import Alert from "@mui/material/Alert";
+import Stack from "@mui/material/Stack";
 
 export default function SoftAlerts() {
   return (
@@ -94,6 +93,19 @@ export default function SoftAlerts() {
         }}
       >
         This is a custom color Alert.
+      </Alert>
+      {/* Alert with external link */}
+      <Alert severity="warning">
+        This is an external link 
+        <Box
+          component={"a"}
+          href="https://www.codeminetechnologies.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          sx={{ textDecoration: "underline", color: "inherit", ml: 1 }}
+        >
+          Click here
+        </Box>
       </Alert>
     </Stack>
   );
