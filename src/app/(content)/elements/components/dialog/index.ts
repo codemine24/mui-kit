@@ -7,3 +7,4 @@ export * from "./dialog-confirmation-2-preview";
 export * from "./dialog-multi-step-preview";
 export * from "./dialog-scrollable-preview";
 export * from "./dialog-full-screen-preview";
+export * from "./dialog-animation-preview";

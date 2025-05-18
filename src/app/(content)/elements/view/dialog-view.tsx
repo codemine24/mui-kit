@@ -18,6 +18,7 @@ import {
     DialogMultiStepPreview,
     DialogScrollablePreview,
     DialogFullScreenPreview,
+    DialogAnimationPreview,
 } from "../components/dialog";
 import {
     dialogCustomBackdropString,
@@ -29,6 +30,7 @@ import {
     dialogMultiStepString,
     dialogScrollableString,
     dialogFullScreenString,
+    dialogAnimationString,
 } from "../code-string/dialog";
 
 const sections = [
@@ -94,6 +96,13 @@ const sections = [
         description: "Native material ui dialog with solid background",
         codeString: dialogFullScreenString,
         preview: <DialogFullScreenPreview />,
+    },
+    {
+        id: "dialog-animation",
+        title: "Animation",
+        description: "Native material ui dialog with solid background",
+        codeString: dialogAnimationString,
+        preview: <DialogAnimationPreview />,
     },
 ]
 
