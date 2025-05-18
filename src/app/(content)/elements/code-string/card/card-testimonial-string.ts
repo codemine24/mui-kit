@@ -1,6 +1,6 @@
-export const ReviewCardString3 = `import { Card, CardContent, Typography, Box, Avatar, Rating } from "@mui/material";
+export const cardTestimonialString = `import { Card, CardContent, Typography, Box, Avatar, Rating } from "@mui/material";
 
-export const ReviewCardPreview3 = () => {
+export const CardTestimonial = () => {
     return (
         <Card sx={{ maxWidth: 400 }} variant="outlined">
             <CardContent>

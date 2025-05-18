@@ -8,13 +8,6 @@ import { useOnThisPage } from "@/contexts/on-thispage-context";
 import { Box, Divider } from "@mui/material";
 import React from "react";
 import {
-  CardErrorString,
-  CardWithImageString7,
-  FooterCardString,
-  ForestCardString,
-  GridCard1CodeString,
-  ProductCardString,
-  ProductCardString2,
   cardBasic1String,
   cardBasic2String,
   cardBasic3String,
@@ -23,6 +16,7 @@ import {
   cardBlogString,
   cardBottomImageString,
   cardECommerceString,
+  CardErrorString,
   cardHorizontalString,
   cardImage1String,
   cardImage2String,
@@ -34,9 +28,15 @@ import {
   cardProfileString,
   cardProperty1String,
   cardProperty2String,
-  cardReviewString
+  cardReviewString,
+  CardWithImageString7,
+  FooterCardString,
+  ForestCardString,
+  GridCard1CodeString,
+  ProductCardString,
+  ProductCardString2
 } from "../code-string/card";
-import { ReviewCardString3 } from "../code-string/card/review-card-string-3";
+import { cardTestimonialString } from "../code-string/card/card-testimonial-string";
 import {
   CardBasic1Preview,
   CardBasic2Preview,
@@ -59,13 +59,13 @@ import {
   CardProperty1Preview,
   CardProperty2Preview,
   CardReviewPreview,
+  CardTestimonialPreview,
   CardWithImagePreview7,
   FooterCardPreview,
   ForestCardPreview,
   GridCardPreview1,
   ProductCardPreview,
-  ProductCardPreview2,
-  ReviewCardPreview3
+  ProductCardPreview2
 } from "../components/card";
 
 const sections = [
@@ -247,11 +247,11 @@ const sections = [
     preview: <CardBlogPreview />,
   },
   {
-    id: "review-card-3",
-    title: "Review Card 3",
-    description: "A regular but elegant card with solid background color",
-    codeString: ReviewCardString3,
-    preview: <ReviewCardPreview3 />,
+    id: "card-testimonial",
+    title: "Testimonial card",
+    description: "Testimonial card to display customer review and feedback. Fully customizable and designed with material ui.",
+    codeString: cardTestimonialString,
+    preview: <CardTestimonialPreview />,
   },
   {
     id: "product-card-1",

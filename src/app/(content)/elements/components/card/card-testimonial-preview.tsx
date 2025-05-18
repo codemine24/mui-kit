@@ -1,6 +1,6 @@
 import { Card, CardContent, Typography, Box, Avatar, Rating } from "@mui/material";
 
-export const ReviewCardPreview3 = () => {
+export const CardTestimonialPreview = () => {
     return (
         <Card sx={{ maxWidth: 400 }} variant="outlined">
             <CardContent>
@@ -15,7 +15,7 @@ export const ReviewCardPreview3 = () => {
                     </Box>
                 </Box>
                 <Typography>
-                    "I found solution to all my design needs from Creative Tim. I use them as a freelancer in my hobby projects for fun! And its really affordable, very humble guys !!!"
+                    &quot;I found solution to all my design needs from Creative Tim. I use them as a freelancer in my hobby projects for fun! And its really affordable, very humble guys !!!&quot;
                 </Typography>
             </CardContent>
         </Card>

@@ -22,7 +22,7 @@ export * from './card-ecommerce-preview';
 export * from './forest-card-preview';
 export * from './card-blog-preview';
 export * from './card-property2-preview';
-export * from './review-card-preview-3';
+export * from './card-testimonial-preview';
 export * from './product-card-preview';
 export * from './product-card-preview-2';
 export * from './card-with-image-preview-7';
