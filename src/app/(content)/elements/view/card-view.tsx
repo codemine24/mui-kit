@@ -8,12 +8,12 @@ import { useOnThisPage } from "@/contexts/on-thispage-context";
 import { Box, Divider } from "@mui/material";
 import React from "react";
 import {
+  CardErrorString,
   CardWithImageString4,
   CardWithImageString5,
   CardWithImageString6,
   CardWithImageString7,
   ECommerceCardString1,
-  ErrorCardString,
   FooterCardString,
   ForestCardString,
   GridCard1CodeString,
@@ -44,6 +44,7 @@ import {
   CardBasic4Preview,
   CardBasic5Preview,
   CardBottomImagePreview,
+  CardErrorPreview,
   CardImage1Preview,
   CardImage2Preview,
   CardListPreview,
@@ -56,7 +57,6 @@ import {
   CardWithImagePreview6,
   CardWithImagePreview7,
   ECommerceCardPreview1,
-  ErrorCardPreview,
   FooterCardPreview,
   ForestCardPreview,
   GridCardPreview1,
@@ -185,9 +185,9 @@ const sections = [
   {
     id: "error-card-1",
     title: "Error Card 1",
-    description: "A regular but elegant card with solid background color",
-    codeString: ErrorCardString,
-    preview: <ErrorCardPreview />,
+    description: "A simple material ui card with error alert on top.",
+    codeString: CardErrorString,
+    preview: <CardErrorPreview />,
   },
   {
     id: "card-with-image-4",

@@ -1,8 +1,8 @@
-export const ErrorCardString = `import { Alert, Button, Card, CardContent, Stack, Typography } from "@mui/material";
+export const CardErrorString = `import { Alert, Button, Card, CardContent, Stack, Typography } from "@mui/material";
 import ArrowRightAlt from "@mui/icons-material/ArrowRightAlt";
 import LanguageIcon from "@mui/icons-material/Language";
 
-export const ErrorCardPreview = () => {
+export const CardError = () => {
     return (
         <Card sx={{ maxWidth: 400 }}>
             <CardContent>
