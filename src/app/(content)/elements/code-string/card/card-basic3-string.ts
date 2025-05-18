@@ -1,7 +1,7 @@
-import { ArrowRightAlt } from "@mui/icons-material";
+export const cardBasic3String = `import { ArrowRightAlt } from "@mui/icons-material";
 import { Button, Card, CardContent, Stack, Typography } from "@mui/material";
 
-export const BasicCard3Preview = () => {
+export const CardBasic3Preview = () => {
     return (
         <Card sx={{ maxWidth: 345 }}>
             <CardContent>
@@ -18,4 +18,4 @@ export const BasicCard3Preview = () => {
             </CardContent>
         </Card>
     );
-};
+};`;

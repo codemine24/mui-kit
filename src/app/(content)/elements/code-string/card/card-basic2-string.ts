@@ -1,9 +1,9 @@
-export const BasicCard4CodeString = `import { Card, CardContent, IconButton, Stack, Typography } from "@mui/material";
+export const cardBasic2String = `import { Card, CardContent, IconButton, Stack, Typography } from "@mui/material";
 import { CardGiftcard } from "@mui/icons-material";
 import { Button } from "@mui/material";
 import { ChevronRight } from "@mui/icons-material";
 
-export const BasicCard4Preview = () => {
+export const CardBasic2Preview = () => {
     return (
         <Card sx={{ maxWidth: 345 }}>
             <CardContent>

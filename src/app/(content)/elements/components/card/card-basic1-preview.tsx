@@ -1,6 +1,6 @@
-export const BasicCardCodeString = `import { Card, CardContent, Typography } from "@mui/material";
+import { Card, CardContent, Typography } from "@mui/material";
 
-export const BasicCardPreview = () => {
+export const CardBasic1Preview = () => {
     return (
         <Card sx={{ maxWidth: 345 }}>
             <CardContent>
@@ -11,4 +11,4 @@ export const BasicCardPreview = () => {
             </CardContent>
         </Card>
     );
-};`;
+};
