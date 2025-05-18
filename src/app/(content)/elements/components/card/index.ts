@@ -21,7 +21,7 @@ export * from './card-property1-preview';
 export * from './e-commerce-card-preview-1';
 export * from './forest-card-preview';
 export * from './review-card-preview';
-export * from './review-card-preview-2';
+export * from './card-property2-preview';
 export * from './review-card-preview-3';
 export * from './product-card-preview';
 export * from './product-card-preview-2';

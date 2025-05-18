@@ -1,4 +1,4 @@
-import React from 'react';
+export const cardProperty2String = `import React from 'react';
 import {
     Box,
     Card,
@@ -16,7 +16,7 @@ import WifiIcon from '@mui/icons-material/Wifi';
 import HomeIcon from '@mui/icons-material/Home';
 import TvIcon from '@mui/icons-material/Tv';
 
-export const ReviewCardPreview2 = () => {
+export const CardProperty2 = () => {
     return (
         <Card sx={{ maxWidth: 360, borderRadius: 3, boxShadow: 3, p: 1 }}>
             <CardMedia
@@ -72,4 +72,4 @@ export const ReviewCardPreview2 = () => {
             </CardContent>
         </Card>
     );
-}
+}`

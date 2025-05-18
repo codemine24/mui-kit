@@ -21,7 +21,7 @@ export * from "./error-card-string";
 export * from "./e-commerce-card-string-1";
 export * from "./forest-card-string";
 export * from "./review-card-string";
-export * from "./review-card-string-2";
+export * from "./card-property2-string";
 export * from "./product-card-string";
 export * from "./product-card-string-2";
 export * from "./card-with-image-string-7";

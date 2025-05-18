@@ -23,7 +23,6 @@ import {
   ProfileCardString2,
   ProfileCardString3,
   ReviewCardString,
-  ReviewCardString2,
   cardBasic1String,
   cardBasic2String,
   cardBasic3String,
@@ -34,7 +33,8 @@ import {
   cardListString,
   cardPricingString,
   cardProfileString,
-  cardProperty1String
+  cardProperty1String,
+  cardProperty2String
 } from "../code-string/card";
 import { ReviewCardString3 } from "../code-string/card/review-card-string-3";
 import {
@@ -49,6 +49,7 @@ import {
   CardPricingPreview,
   CardProfilePreview,
   CardProperty1Preview,
+  CardProperty2Preview,
   CardWithImagePreview3,
   CardWithImagePreview4,
   CardWithImagePreview5,
@@ -64,7 +65,6 @@ import {
   ProfileCardPreview2,
   ProfileCardPreview3,
   ReviewCardPreview,
-  ReviewCardPreview2,
   ReviewCardPreview3
 } from "../components/card";
 
@@ -151,7 +151,7 @@ const sections = [
     preview: <CardProfilePreview />,
   },
   {
-    id: "footer-card-1",
+    id: "download-card",
     title: "Download Card",
     description:
       "Use this simple download card to preview your app download links. ",
@@ -161,9 +161,18 @@ const sections = [
   {
     id: "property-card-1",
     title: "Simple property card",
-    description: "Add this simple property card to display basic property info. ",
+    description:
+      "Add this simple property card to display basic property info. ",
     codeString: cardProperty1String,
     preview: <CardProperty1Preview />,
+  },
+  {
+    id: "property-card-2",
+    title: "Property card with review",
+    description:
+      "Display property information more detailed with this property card designed with material ui. ",
+    codeString: cardProperty2String,
+    preview: <CardProperty2Preview />,
   },
   {
     id: "card-with-image-3",
@@ -227,13 +236,6 @@ const sections = [
     description: "A regular but elegant card with solid background color",
     codeString: ReviewCardString,
     preview: <ReviewCardPreview />,
-  },
-  {
-    id: "review-card-2",
-    title: "Review Card 2",
-    description: "A regular but elegant card with solid background color",
-    codeString: ReviewCardString2,
-    preview: <ReviewCardPreview2 />,
   },
   {
     id: "review-card-3",
