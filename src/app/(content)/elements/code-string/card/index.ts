@@ -7,7 +7,7 @@ export * from "./grid-card-string-1";
 export * from "./card-image1-string";
 export * from "./card-image2-string";
 export * from "./card-bottom-image-string";
-export * from "./card-with-image-string-4";
+export * from "./card-image-bg-string";
 export * from "./card-with-image-string-5";
 export * from "./card-with-image-string-6";
 export * from "./card-list-string";

@@ -6,7 +6,7 @@ export * from "./card-basic2-preview";
 export * from "./card-image1-preview";
 export * from './card-bottom-image-preview';
 export * from './card-image2-preview';
-export * from './card-with-image-preview-4';
+export * from './card-image-bg-preview';
 export * from './card-with-image-preview-5';
 export * from './card-with-image-preview-6';
 export * from './card-profile-preview';
