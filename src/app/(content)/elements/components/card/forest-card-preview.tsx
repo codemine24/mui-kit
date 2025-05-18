@@ -3,7 +3,7 @@ import {
     Button,
     Typography
 } from '@mui/material';
-import Grid2 from '@mui/material/Grid';
+import Grid from '@mui/material/Grid';
 import { ArrowCircleRight } from '@mui/icons-material';
 
 export const ForestCardPreview = () => {
@@ -62,9 +62,9 @@ export const ForestCardPreview = () => {
                         md: 'url(https://wallpapercave.com/wp/wp6689710.jpg)',
                     },
                 }}>
-                    <Grid2 container spacing={0.125} sx={{ overflow: 'hidden', height: '100%' }}>
+                    <Grid container spacing={0.125} sx={{ overflow: 'hidden', height: '100%' }}>
                         {/* Left Column */}
-                        <Grid2 size={{ xs: 12, md: 6 }} >
+                        <Grid size={{ xs: 12, md: 6 }} >
                             <Box sx={{
                                 position: 'relative',
                                 height: '100%',
@@ -73,7 +73,7 @@ export const ForestCardPreview = () => {
                                 <Box sx={{
                                     display: 'flex',
                                     alignItems: 'center',
-                                    justifyContent: 'center',
+                                    justifyContent: { sm: 'flex-start', md: 'center' },
                                     height: '100%'
                                 }}>
                                     <Typography
@@ -81,7 +81,7 @@ export const ForestCardPreview = () => {
                                         sx={{
                                             fontStyle: 'italic',
                                             color: 'white',
-                                            textAlign: 'center',
+                                            textAlign: "center",
                                             fontWeight: 600,
                                             textTransform: 'uppercase'
                                         }}
@@ -118,10 +118,10 @@ export const ForestCardPreview = () => {
                                     }
                                 }} />
                             </Box>
-                        </Grid2>
+                        </Grid>
 
                         {/* Right Column */}
-                        <Grid2 size={{ xs: 12, md: 6 }}>
+                        <Grid size={{ xs: 12, md: 6 }}>
                             <Box sx={{
                                 position: 'relative',
                                 height: '100%',
@@ -168,8 +168,8 @@ export const ForestCardPreview = () => {
                                     </Box>
                                 </Box>
                             </Box>
-                        </Grid2>
-                    </Grid2>
+                        </Grid>
+                    </Grid>
                 </Box>
             </Box>
         </Box>
