@@ -23,6 +23,7 @@ import {
   cardImageBgString,
   cardListString,
   cardPricingString,
+  cardProductString,
   cardProfile2String,
   cardProfile3String,
   cardProfileString,
@@ -33,7 +34,6 @@ import {
   FooterCardString,
   ForestCardString,
   GridCard1CodeString,
-  ProductCardString,
   ProductCardString2
 } from "../code-string/card";
 import { cardTestimonialString } from "../code-string/card/card-testimonial-string";
@@ -53,6 +53,7 @@ import {
   CardImageBgPreview,
   CardListPreview,
   CardPricingPreview,
+  CardProductPreview,
   CardProfile2Preview,
   CardProfile3Preview,
   CardProfilePreview,
@@ -64,7 +65,6 @@ import {
   FooterCardPreview,
   ForestCardPreview,
   GridCardPreview1,
-  ProductCardPreview,
   ProductCardPreview2
 } from "../components/card";
 
@@ -231,6 +231,14 @@ const sections = [
     preview: <CardECommercePreview />,
   },
   {
+    id: "product-card",
+    title: "Product preview card",
+    description:
+      "Simple but powerful product preview card. Perfect for e-commerce/ digital product website.",
+    codeString: cardProductString,
+    preview: <CardProductPreview />,
+  },
+  {
     id: "review-card",
     title: "Review card",
     description:
@@ -249,17 +257,12 @@ const sections = [
   {
     id: "card-testimonial",
     title: "Testimonial card",
-    description: "Testimonial card to display customer review and feedback. Fully customizable and designed with material ui.",
+    description:
+      "Testimonial card to display customer review and feedback. Fully customizable and designed with material ui.",
     codeString: cardTestimonialString,
     preview: <CardTestimonialPreview />,
   },
-  {
-    id: "product-card-1",
-    title: "Product Card 1",
-    description: "A regular but elegant card with solid background color",
-    codeString: ProductCardString,
-    preview: <ProductCardPreview />,
-  },
+
   {
     id: "product-card-2",
     title: "Product Card 2",

@@ -1,7 +1,7 @@
-import { Card, CardContent, CardMedia, Typography, Box, Rating, Chip, Button } from "@mui/material";
+export const cardProductString = `import { Card, CardContent, CardMedia, Typography, Box, Rating, Chip, Button } from "@mui/material";
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 
-export const ProductCardPreview = () => {
+export const CardProduct = () => {
     return (
         <Card sx={{ maxWidth: 350 }}>
             <CardMedia component="img" height="200" image="https://images.unsplash.com/photo-1558126319-c9feecbf57ee" alt="Paella" />
@@ -19,4 +19,4 @@ export const ProductCardPreview = () => {
         </Card>
 
     )
-}
+}`

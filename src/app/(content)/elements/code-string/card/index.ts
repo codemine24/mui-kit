@@ -22,6 +22,6 @@ export * from "./card-ecommerce-string";
 export * from "./forest-card-string";
 export * from "./card-blog-string";
 export * from "./card-property2-string";
-export * from "./product-card-string";
+export * from "./card-product-string";
 export * from "./product-card-string-2";
 export * from "./card-with-image-string-7";
