@@ -1,6 +1,6 @@
-export const CardWithImageString7 = `import { Card, CardMedia, Box, Typography, Avatar } from "@mui/material";
+export const cardImageBg2String = `import { Card, CardMedia, Box, Typography, Avatar } from "@mui/material";
 
-export const CardWithImagePreview7 = () => {
+export const CardImageBg2 = () => {
     return (
         <Card sx={{ position: 'relative', width: { xs: "100%", md: 500 }, height: { xs: 350, sm: 450, md: 500 }, overflow: 'hidden' }}>
             <CardMedia

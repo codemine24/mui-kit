@@ -20,6 +20,8 @@ import {
   cardHorizontalString,
   cardImage1String,
   cardImage2String,
+  cardImageBg2String,
+  cardImageBg3String,
   cardImageBgString,
   cardListString,
   cardPricingString,
@@ -31,9 +33,7 @@ import {
   cardProperty1String,
   cardProperty2String,
   cardReviewString,
-  CardWithImageString7,
   FooterCardString,
-  ForestCardString,
   GridCard1CodeString
 } from "../code-string/card";
 import { cardTestimonialString } from "../code-string/card/card-testimonial-string";
@@ -50,6 +50,8 @@ import {
   CardHorizontalPreview,
   CardImage1Preview,
   CardImage2Preview,
+  CardImageBg2Preview,
+  CardImageBg3Preview,
   CardImageBgPreview,
   CardListPreview,
   CardPricingPreview,
@@ -62,9 +64,7 @@ import {
   CardProperty2Preview,
   CardReviewPreview,
   CardTestimonialPreview,
-  CardWithImagePreview7,
   FooterCardPreview,
-  ForestCardPreview,
   GridCardPreview1
 } from "../components/card";
 
@@ -215,14 +215,6 @@ const sections = [
     preview: <CardErrorPreview />,
   },
   {
-    id: "card-with-image-4",
-    title: "Image in background card",
-    description:
-      "This background image card is perfect for blog or product preview. ",
-    codeString: cardImageBgString,
-    preview: <CardImageBgPreview />,
-  },
-  {
     id: "e-commerce-card-1",
     title: "E-Commerce card",
     description:
@@ -271,18 +263,26 @@ const sections = [
     preview: <CardTestimonialPreview />,
   },
   {
-    id: "card-with-image-7",
-    title: "Card With Image 7",
-    description: "A regular but elegant card with solid background color",
-    codeString: CardWithImageString7,
-    preview: <CardWithImagePreview7 />,
+    id: "card-image-bg",
+    title: "Image in background card",
+    description:
+      "This background image card is perfect for blog or product preview. ",
+    codeString: cardImageBgString,
+    preview: <CardImageBgPreview />,
   },
   {
-    id: "forest-card-1",
-    title: "Forest Card 1",
-    description: "A regular but elegant card with solid background color",
-    codeString: ForestCardString,
-    preview: <ForestCardPreview />,
+    id: "card-image-bg-2",
+    title: "Blog image card",
+    description: "Unique blog card with image in background",
+    codeString: cardImageBg2String,
+    preview: <CardImageBg2Preview />,
+  },
+  {
+    id: "card-image-bg-3",
+    title: "Forest card",
+    description: "Multipurpose card with image in background.",
+    codeString: cardImageBg3String,
+    preview: <CardImageBg3Preview />,
   },
 ];
 

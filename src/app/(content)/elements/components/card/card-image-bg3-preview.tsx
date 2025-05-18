@@ -6,7 +6,7 @@ import {
 import Grid from '@mui/material/Grid';
 import { ArrowCircleRight } from '@mui/icons-material';
 
-export const ForestCardPreview = () => {
+export const CardImageBg3Preview = () => {
     return (
         <Box sx={{
             position: 'relative',

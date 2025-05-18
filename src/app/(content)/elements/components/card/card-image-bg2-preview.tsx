@@ -1,6 +1,6 @@
 import { Card, CardMedia, Box, Typography, Avatar } from "@mui/material";
 
-export const CardWithImagePreview7 = () => {
+export const CardImageBg2Preview = () => {
     return (
         <Card sx={{ position: 'relative', width: { xs: "100%", md: 500 }, height: { xs: 350, sm: 450, md: 500 }, overflow: 'hidden' }}>
             <CardMedia

@@ -19,7 +19,7 @@ export * from "./footer-card-string";
 export * from "./card-proeprty1-string";
 export * from "./error-card-string";
 export * from "./card-ecommerce-string";
-export * from "./forest-card-string";
+export * from "./card-image-bg3-preview";
 export * from "./card-blog-string";
 export * from "./card-property2-string";
 export * from "./card-product-string";

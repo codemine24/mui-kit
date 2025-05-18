@@ -1,4 +1,4 @@
-export const ForestCardString = `import {
+export const cardImageBg3String = `import {
     Box,
     Button,
     Typography
@@ -6,7 +6,7 @@ export const ForestCardString = `import {
 import Grid from '@mui/material/Grid';
 import { ArrowCircleRight } from '@mui/icons-material';
 
-export const ForestCardPreview = () => {
+export const CardImageBg3 = () => {
     return (
         <Box sx={{
             position: 'relative',
