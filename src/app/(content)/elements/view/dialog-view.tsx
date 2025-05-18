@@ -19,6 +19,7 @@ import {
     DialogScrollablePreview,
     DialogFullScreenPreview,
     DialogAnimationPreview,
+    DialogHeaderFooterPreview,
 } from "../components/dialog";
 import {
     dialogCustomBackdropString,
@@ -31,6 +32,7 @@ import {
     dialogScrollableString,
     dialogFullScreenString,
     dialogAnimationString,
+    dialogHeaderFooterString,
 } from "../code-string/dialog";
 
 const sections = [
@@ -103,6 +105,13 @@ const sections = [
         description: "Native material ui dialog with solid background",
         codeString: dialogAnimationString,
         preview: <DialogAnimationPreview />,
+    },
+    {
+        id: "dialog-header-footer",
+        title: "Header Footer",
+        description: "Native material ui dialog with solid background",
+        codeString: dialogHeaderFooterString,
+        preview: <DialogHeaderFooterPreview />,
     },
 ]
 

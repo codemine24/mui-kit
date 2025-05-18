@@ -8,3 +8,4 @@ export * from "./dialog-multi-step-string";
 export * from "./dialog-scrollable-string";
 export * from "./dialog-full-screen-string";
 export * from "./dialog-animation-string";
+export * from "./dialog-header-footer-string";
