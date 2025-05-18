@@ -100,7 +100,7 @@ export const ContentSidebar = ({
       <Box
         sx={(theme) => ({
           py: 2,
-          pl: 0.5,
+          px: 0.5,
           position: "sticky",
           top: 0,
           zIndex: 10,
@@ -337,6 +337,7 @@ export const ContentSidebar = ({
                           primaryTypographyProps={{
                             variant: "body2",
                             color: "text.primary",
+                            fontWeight: 500,
                             fontSize: { xs: 15, sm: 16 },
                           }}
                         />
@@ -414,6 +415,9 @@ export const ContentSidebar = ({
                                     primaryTypographyProps={{
                                       variant: "body2",
                                       color: "text.primary",
+                                      fontWeight: isActive(item.path)
+                                        ? 600
+                                        : 300,
                                       fontSize: { xs: 15, sm: 16 },
                                     }}
                                   />
