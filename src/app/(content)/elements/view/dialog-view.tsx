@@ -20,6 +20,7 @@ import {
     DialogFullScreenPreview,
     DialogAnimationPreview,
     DialogHeaderFooterPreview,
+    DialogImageViewPreview,
 } from "../components/dialog";
 import {
     dialogCustomBackdropString,
@@ -33,6 +34,7 @@ import {
     dialogFullScreenString,
     dialogAnimationString,
     dialogHeaderFooterString,
+    dialogImageViewPreviewString,
 } from "../code-string/dialog";
 
 const sections = [
@@ -112,6 +114,13 @@ const sections = [
         description: "Native material ui dialog with solid background",
         codeString: dialogHeaderFooterString,
         preview: <DialogHeaderFooterPreview />,
+    },
+    {
+        id: "dialog-image-view",
+        title: "Image View",
+        description: "Native material ui dialog with solid background",
+        codeString: dialogImageViewPreviewString,
+        preview: <DialogImageViewPreview />,
     },
 ]
 
