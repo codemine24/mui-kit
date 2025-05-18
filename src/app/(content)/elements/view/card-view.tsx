@@ -12,7 +12,6 @@ import {
   CardWithImageString5,
   CardWithImageString6,
   CardWithImageString7,
-  ECommerceCardString1,
   FooterCardString,
   ForestCardString,
   GridCard1CodeString,
@@ -27,6 +26,7 @@ import {
   cardBasic4String,
   cardBasic5String,
   cardBottomImageString,
+  cardECommerceString,
   cardImage1String,
   cardImage2String,
   cardImageBgString,
@@ -34,7 +34,7 @@ import {
   cardPricingString,
   cardProfileString,
   cardProperty1String,
-  cardProperty2String
+  cardProperty2String,
 } from "../code-string/card";
 import { ReviewCardString3 } from "../code-string/card/review-card-string-3";
 import {
@@ -44,6 +44,7 @@ import {
   CardBasic4Preview,
   CardBasic5Preview,
   CardBottomImagePreview,
+  CardECommercePreview,
   CardErrorPreview,
   CardImage1Preview,
   CardImage2Preview,
@@ -56,7 +57,6 @@ import {
   CardWithImagePreview5,
   CardWithImagePreview6,
   CardWithImagePreview7,
-  ECommerceCardPreview1,
   FooterCardPreview,
   ForestCardPreview,
   GridCardPreview1,
@@ -65,7 +65,7 @@ import {
   ProfileCardPreview2,
   ProfileCardPreview3,
   ReviewCardPreview,
-  ReviewCardPreview3
+  ReviewCardPreview3,
 } from "../components/card";
 
 const sections = [
@@ -199,10 +199,11 @@ const sections = [
   },
   {
     id: "e-commerce-card-1",
-    title: "E-Commerce Card",
-    description: "A regular but elegant card with solid background color",
-    codeString: ECommerceCardString1,
-    preview: <ECommerceCardPreview1 />,
+    title: "E-Commerce card",
+    description:
+      "Another simple product card with pricing chip. Perfect for e-commerce website uses. ",
+    codeString: cardECommerceString,
+    preview: <CardECommercePreview />,
   },
   {
     id: "card-with-image-5",

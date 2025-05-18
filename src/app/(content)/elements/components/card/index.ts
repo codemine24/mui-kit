@@ -18,7 +18,7 @@ export * from './card-pricing-preiview';
 export * from './card-error-preview';
 export * from './footer-card-preview';
 export * from './card-property1-preview';
-export * from './e-commerce-card-preview-1';
+export * from './card-ecommerce-preview';
 export * from './forest-card-preview';
 export * from './review-card-preview';
 export * from './card-property2-preview';
