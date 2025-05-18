@@ -1,9 +1,9 @@
-export const FooterCardString = `
+export const cardDownloadString = `
 import { Box, Card, Typography } from "@mui/material";
 import AppleIcon from '@mui/icons-material/Apple';
 import { Iconify } from "@/components/iconify";
 
-export const FooterCardPreview = () => {
+export const CardDownload = () => {
     return (
         <Card sx={{ maxWidth: 500, p: 2, textAlign: "center" }}>
             <Typography variant="h5">Work Fast From Anywhwere</Typography>

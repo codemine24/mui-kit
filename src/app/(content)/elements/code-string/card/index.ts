@@ -15,7 +15,7 @@ export * from "./pricing-card-string";
 export * from "./card-profile-string";
 export * from "./card-profile2-string";
 export * from "./card-profile3-string";
-export * from "./footer-card-string";
+export * from "./card-download-string";
 export * from "./card-proeprty1-string";
 export * from "./error-card-string";
 export * from "./card-ecommerce-string";

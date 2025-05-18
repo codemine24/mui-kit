@@ -16,7 +16,7 @@ export * from './grid-card-preview-1';
 export * from './card-list-preview';
 export * from './card-pricing-preiview';
 export * from './card-error-preview';
-export * from './footer-card-preview';
+export * from './card-download-preivew';
 export * from './card-property1-preview';
 export * from './card-ecommerce-preview';
 export * from './card-image-bg3-preview';

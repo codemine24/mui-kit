@@ -15,6 +15,7 @@ import {
   cardBasic5String,
   cardBlogString,
   cardBottomImageString,
+  cardDownloadString,
   cardECommerceString,
   CardErrorString,
   cardHorizontalString,
@@ -33,7 +34,6 @@ import {
   cardProperty1String,
   cardProperty2String,
   cardReviewString,
-  FooterCardString,
   GridCard1CodeString
 } from "../code-string/card";
 import { cardTestimonialString } from "../code-string/card/card-testimonial-string";
@@ -45,6 +45,7 @@ import {
   CardBasic5Preview,
   CardBlogPreview,
   CardBottomImagePreview,
+  CardDownloadPreview,
   CardECommercePreview,
   CardErrorPreview,
   CardHorizontalPreview,
@@ -64,7 +65,6 @@ import {
   CardProperty2Preview,
   CardReviewPreview,
   CardTestimonialPreview,
-  FooterCardPreview,
   GridCardPreview1
 } from "../components/card";
 
@@ -180,8 +180,8 @@ const sections = [
     title: "Download Card",
     description:
       "Use this simple download card to preview your app download links. ",
-    codeString: FooterCardString,
-    preview: <FooterCardPreview />,
+    codeString: cardDownloadString,
+    preview: <CardDownloadPreview />,
   },
   {
     id: "property-card-1",
