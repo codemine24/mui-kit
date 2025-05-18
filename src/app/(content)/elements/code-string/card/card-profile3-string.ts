@@ -1,4 +1,4 @@
-import { Facebook, Twitter, Instagram } from "@mui/icons-material";
+export const cardProfile3String = `import { Facebook, Twitter, Instagram } from "@mui/icons-material";
 import { Box, Card, CardContent, CardMedia, Stack, Typography } from "@mui/material";
 
 export const ProfileCardPreview3 = () => {
@@ -32,4 +32,4 @@ export const ProfileCardPreview3 = () => {
             </CardContent>
         </Card>
     )
-}
+}`

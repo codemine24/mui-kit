@@ -1,10 +1,10 @@
-export const ProfileCardString2 = `import { Card, CardMedia, Box, CardContent, Typography, Stack } from "@mui/material";
+import { Card, CardMedia, Box, CardContent, Typography, Stack } from "@mui/material";
 import HeadphonesIcon from "@mui/icons-material/Headphones";
 import BusinessIcon from "@mui/icons-material/Business";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import EmailIcon from "@mui/icons-material/Email";
 
-export const ProfileCardPreview2 = () => {
+export const CardProfile2Preview = () => {
     return (
         <Card sx={{ maxWidth: 345, borderRadius: 4, boxShadow: 3, overflow: 'hidden' }}>
             <CardMedia
@@ -41,4 +41,4 @@ export const ProfileCardPreview2 = () => {
             </CardContent>
         </Card>
     )
-}`
+}

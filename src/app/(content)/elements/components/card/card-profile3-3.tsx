@@ -1,7 +1,7 @@
-export const ProfileCardString3 = `import { Facebook, Twitter, Instagram } from "@mui/icons-material";
+import { Facebook, Twitter, Instagram } from "@mui/icons-material";
 import { Box, Card, CardContent, CardMedia, Stack, Typography } from "@mui/material";
 
-export const ProfileCardPreview3 = () => {
+export const CardProfile3Preview = () => {
     return (
         <Card sx={{ maxWidth: 345, p: 3 }}>
             <CardMedia
@@ -32,4 +32,4 @@ export const ProfileCardPreview3 = () => {
             </CardContent>
         </Card>
     )
-}`
+}

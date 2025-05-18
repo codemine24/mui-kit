@@ -16,8 +16,6 @@ import {
   GridCard1CodeString,
   ProductCardString,
   ProductCardString2,
-  ProfileCardString2,
-  ProfileCardString3,
   ReviewCardString,
   cardBasic1String,
   cardBasic2String,
@@ -31,10 +29,12 @@ import {
   cardImageBgString,
   cardListString,
   cardPricingString,
+  cardProfile2String,
+  cardProfile3String,
   cardProfileString,
   cardProperty1String,
   cardProperty2String,
-  cardReviewString,
+  cardReviewString
 } from "../code-string/card";
 import { ReviewCardString3 } from "../code-string/card/review-card-string-3";
 import {
@@ -51,6 +51,8 @@ import {
   CardImageBgPreview,
   CardListPreview,
   CardPricingPreview,
+  CardProfile2Preview,
+  CardProfile3Preview,
   CardProfilePreview,
   CardProperty1Preview,
   CardProperty2Preview,
@@ -62,10 +64,8 @@ import {
   GridCardPreview1,
   ProductCardPreview,
   ProductCardPreview2,
-  ProfileCardPreview2,
-  ProfileCardPreview3,
   ReviewCardPreview,
-  ReviewCardPreview3,
+  ReviewCardPreview3
 } from "../components/card";
 
 const sections = [
@@ -150,6 +150,21 @@ const sections = [
     codeString: cardProfileString,
     preview: <CardProfilePreview />,
   },
+
+  {
+    id: "profile-card-2",
+    title: "Square profile card",
+    description: "Another profile card variant with square shape image. ",
+    codeString: cardProfile2String,
+    preview: <CardProfile2Preview />,
+  },
+  {
+    id: "profile-card-3",
+    title: "Rounded Profile Card",
+    description: "Profile card with rounded image perfect for simple design layout. ",
+    codeString: cardProfile3String,
+    preview: <CardProfile3Preview />,
+  },
   {
     id: "download-card",
     title: "Download Card",
@@ -213,20 +228,7 @@ const sections = [
     codeString: cardReviewString,
     preview: <CardReviewPreview />,
   },
-  {
-    id: "profile-card-2",
-    title: "Profile Card 2",
-    description: "A regular but elegant card with solid background color",
-    codeString: ProfileCardString2,
-    preview: <ProfileCardPreview2 />,
-  },
-  {
-    id: "profile-card-3",
-    title: "Profile Card 3",
-    description: "A regular but elegant card with solid background color",
-    codeString: ProfileCardString3,
-    preview: <ProfileCardPreview3 />,
-  },
+  
   {
     id: "card-with-image-6",
     title: "Card With Image 6",
