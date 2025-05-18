@@ -91,7 +91,7 @@ export const ContentSidebar = ({
       }}
     >
       {variant === "drawer" && (
-        <Box sx={{ mb: 2 }}>
+        <Box sx={{ mb: 0 }}>
           <Logo />
         </Box>
       )}
@@ -99,12 +99,17 @@ export const ContentSidebar = ({
       {/* Search */}
       <Box
         sx={(theme) => ({
-          py: 2,
-          px: 0.5,
+          py: variant === "drawer" ? 0 : 2,
+          pt: 2,
+          mb: variant === "drawer" ? 2 : 0,
+          px: variant === "drawer" ? 0 : 0.5,
           position: "sticky",
-          top: 0,
+          top: variant === "drawer" ? -26 : 0,
           zIndex: 10,
-          backgroundColor: theme.palette.background.default,
+          backgroundColor:
+            variant === "drawer"
+              ? theme.palette.background.paper
+              : theme.palette.background.default,
         })}
       >
         <TextField
@@ -416,7 +421,7 @@ export const ContentSidebar = ({
                                       variant: "body2",
                                       color: "text.primary",
                                       fontWeight: isActive(item.path)
-                                        ? 600
+                                        ? 500
                                         : 300,
                                       fontSize: { xs: 15, sm: 16 },
                                     }}

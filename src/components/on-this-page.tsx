@@ -9,17 +9,56 @@ import {
   Typography,
   useTheme,
 } from "@mui/material";
+import { useEffect, useState } from "react";
 
 export const OnThisPage = () => {
   const { sections } = useOnThisPage();
+  const [activeSection, setActiveSection] = useState<string | null>(
+    sections.length > 0 ? sections[0].id : null
+  );
+  const theme = useTheme();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (sections.length === 0) return;
+
+      let maxVisibleRatio = -1;
+      let newActiveSection = activeSection || sections[0].id;
+
+      for (const section of sections) {
+        const element = document.getElementById(section.id);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          const visibleHeight = Math.max(
+            0,
+            Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, 0)
+          );
+          const sectionHeight = rect.bottom - rect.top;
+          const visibleRatio =
+            sectionHeight > 0 ? visibleHeight / sectionHeight : 0;
+
+          if (visibleRatio > maxVisibleRatio) {
+            maxVisibleRatio = visibleRatio;
+            newActiveSection = section.id;
+          }
+        }
+      }
+      if (newActiveSection !== activeSection) {
+        setActiveSection(newActiveSection);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [sections, activeSection]);
+
   const handleScrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
-  const theme = useTheme();
-
   return (
     <Box
       sx={{
@@ -31,40 +70,62 @@ export const OnThisPage = () => {
       <Typography variant="body2" textTransform={"uppercase"} fontWeight={600}>
         On this page
       </Typography>
-      <List dense>
-        {sections.map((section) => (
-          <ListItem
-            key={section.id}
-            disablePadding
-            sx={{
-              "&:hover": {
-                color: theme.palette.primary.main,
-              },
-            }}
-          >
-            <ListItemText
-              primary={
-                <Link
-                  component="button"
-                  onClick={() => handleScrollToSection(section.id)}
-                  sx={{
-                    color: "text.primary",
-                    pl: 2,
-                    textAlign: "left",
-                    fontSize: { md: pxToRem(14), lg: pxToRem(15) },
-                    textDecoration: "none",
-                    fontWeight: 500,
-                    "&:hover": {
-                      color: "primary.main",
-                    },
-                  }}
-                >
-                  {section.title}
-                </Link>
-              }
-            />
-          </ListItem>
-        ))}
+      <List
+        dense
+        sx={{
+          mt: 2,
+          position: "relative",
+          "&:before": {
+            content: '""',
+            position: "absolute",
+            left: "1.5px",
+            top: 0,
+            height: "100%",
+            width: "1px",
+            bgcolor: "divider",
+          },
+        }}
+      >
+        {sections.map((section) => {
+          const isActive = activeSection === section.id;
+          return (
+            <ListItem
+              key={section.id}
+              disablePadding
+              sx={{
+                borderLeft: `2px solid transparent`,
+                ...(isActive && {
+                  borderLeft: `2px solid ${theme.palette.primary.main}`,
+                }),
+                "&:hover": {
+                  color: theme.palette.primary.main,
+                },
+              }}
+            >
+              <ListItemText
+                primary={
+                  <Link
+                    component="button"
+                    onClick={() => handleScrollToSection(section.id)}
+                    sx={{
+                      color: "text.primary",
+                      pl: 2,
+                      textAlign: "left",
+                      fontSize: { xs: 15, sm: 16 },
+                      textDecoration: "none",
+                      fontWeight: isActive ? 500 : 300,
+                      "&:hover": {
+                        color: "primary.main",
+                      },
+                    }}
+                  >
+                    {section.title}
+                  </Link>
+                }
+              />
+            </ListItem>
+          );
+        })}
       </List>
 
       <Box
