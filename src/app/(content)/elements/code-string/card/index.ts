@@ -16,7 +16,7 @@ export * from "./card-profile-string";
 export * from "./profile-card-string-2";
 export * from "./profile-card-string-3";
 export * from "./footer-card-string";
-export * from "./property-card-string";
+export * from "./card-proeprty1-string";
 export * from "./error-card-string";
 export * from "./e-commerce-card-string-1";
 export * from "./forest-card-string";

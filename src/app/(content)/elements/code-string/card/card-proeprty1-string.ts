@@ -1,8 +1,8 @@
-export const PropertyCardString = `import Image from "next/image";
+export const cardProperty1String = `import Image from "next/image";
 import { Card, CardContent, Typography, Box, CardMedia } from "@mui/material";
 import { DirectionsCar, Bathtub, Nightlight } from "@mui/icons-material";
 
-export const PropertyPreviewCard = () => {
+export const CardProperty1 = () => {
     return (
         <Card sx={{ maxWidth: 400, borderRadius: 3, boxShadow: 3, p: 2 }}>
             <CardMedia

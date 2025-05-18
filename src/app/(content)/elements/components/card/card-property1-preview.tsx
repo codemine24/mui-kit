@@ -1,8 +1,7 @@
-import Image from "next/image";
-import { Card, CardContent, Typography, Box, CardMedia } from "@mui/material";
-import { DirectionsCar, Bathtub, Nightlight } from "@mui/icons-material";
+import { Bathtub, DirectionsCar, Nightlight } from "@mui/icons-material";
+import { Box, Card, CardContent, CardMedia, Typography } from "@mui/material";
 
-export const PropertyPreviewCard = () => {
+export const CardProperty1Preview = () => {
     return (
         <Card sx={{ maxWidth: 400, borderRadius: 3, boxShadow: 3, p: 2 }}>
             <CardMedia

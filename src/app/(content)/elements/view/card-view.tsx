@@ -20,10 +20,8 @@ import {
   GridCard1CodeString,
   ProductCardString,
   ProductCardString2,
-  ProfileCardString,
   ProfileCardString2,
   ProfileCardString3,
-  PropertyCardString,
   ReviewCardString,
   ReviewCardString2,
   cardBasic1String,
@@ -36,6 +34,7 @@ import {
   cardListString,
   cardPricingString,
   cardProfileString,
+  cardProperty1String
 } from "../code-string/card";
 import { ReviewCardString3 } from "../code-string/card/review-card-string-3";
 import {
@@ -49,6 +48,7 @@ import {
   CardListPreview,
   CardPricingPreview,
   CardProfilePreview,
+  CardProperty1Preview,
   CardWithImagePreview3,
   CardWithImagePreview4,
   CardWithImagePreview5,
@@ -61,13 +61,11 @@ import {
   GridCardPreview1,
   ProductCardPreview,
   ProductCardPreview2,
-  ProfileCardPreview,
   ProfileCardPreview2,
   ProfileCardPreview3,
-  PropertyPreviewCard,
   ReviewCardPreview,
   ReviewCardPreview2,
-  ReviewCardPreview3,
+  ReviewCardPreview3
 } from "../components/card";
 
 const sections = [
@@ -154,17 +152,18 @@ const sections = [
   },
   {
     id: "footer-card-1",
-    title: "Footer Card 1",
-    description: "A regular but elegant card with solid background color",
+    title: "Download Card",
+    description:
+      "Use this simple download card to preview your app download links. ",
     codeString: FooterCardString,
     preview: <FooterCardPreview />,
   },
   {
     id: "property-card-1",
-    title: "Property Card 1",
-    description: "A regular but elegant card with solid background color",
-    codeString: PropertyCardString,
-    preview: <PropertyPreviewCard />,
+    title: "Simple property card",
+    description: "Add this simple property card to display basic property info. ",
+    codeString: cardProperty1String,
+    preview: <CardProperty1Preview />,
   },
   {
     id: "card-with-image-3",
