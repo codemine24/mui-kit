@@ -12,7 +12,7 @@ export * from './card-horizontal-preview';
 export * from './card-profile-preview';
 export * from './card-profile2-preview';
 export * from './card-profile3-3';
-export * from './grid-card-preview-1';
+export * from './card-grid-preview';
 export * from './card-list-preview';
 export * from './card-pricing-preiview';
 export * from './card-error-preview';

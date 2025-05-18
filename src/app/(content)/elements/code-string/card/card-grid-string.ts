@@ -1,6 +1,6 @@
-import { Box, Grid, Paper, Typography, Avatar, Stack, Container } from '@mui/material';
+export const cardGridString = `import { Box, Grid, Paper, Typography, Avatar, Stack, Container } from '@mui/material';
 
-export const GridCardPreview1 = () => {
+export const CardGridPreview = () => {
     const testimonials = [
         {
             title: "Very easy this was to integrate",
@@ -61,7 +61,7 @@ export const GridCardPreview1 = () => {
                         </Typography>
                         <Box mt="auto">
                             <Stack direction="row" spacing={2} alignItems="center">
-                                <Avatar src={testimonial.avatar} alt={`${testimonial.author} avatar`} sx={{ width: 32, height: 32 }} />
+                                <Avatar src={testimonial.avatar} alt={\`\${testimonial.author} avatar\`} sx={{ width: 32, height: 32 }} />
                                 <Box>
                                     <Typography variant="body2" fontWeight={500}>
                                         {testimonial.author}
@@ -78,3 +78,4 @@ export const GridCardPreview1 = () => {
         </Grid>
     );
 };
+`

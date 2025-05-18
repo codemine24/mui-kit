@@ -1,4 +1,4 @@
-export const CardErrorString = `import { Alert, Button, Card, CardContent, Stack, Typography } from "@mui/material";
+export const cardErrorString = `import { Alert, Button, Card, CardContent, Stack, Typography } from "@mui/material";
 import ArrowRightAlt from "@mui/icons-material/ArrowRightAlt";
 import LanguageIcon from "@mui/icons-material/Language";
 

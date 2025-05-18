@@ -17,7 +17,8 @@ import {
   cardBottomImageString,
   cardDownloadString,
   cardECommerceString,
-  CardErrorString,
+  cardErrorString,
+  cardGridString,
   cardHorizontalString,
   cardImage1String,
   cardImage2String,
@@ -33,8 +34,7 @@ import {
   cardProfileString,
   cardProperty1String,
   cardProperty2String,
-  cardReviewString,
-  GridCard1CodeString
+  cardReviewString
 } from "../code-string/card";
 import { cardTestimonialString } from "../code-string/card/card-testimonial-string";
 import {
@@ -48,6 +48,7 @@ import {
   CardDownloadPreview,
   CardECommercePreview,
   CardErrorPreview,
+  CardGridPreview,
   CardHorizontalPreview,
   CardImage1Preview,
   CardImage2Preview,
@@ -64,8 +65,7 @@ import {
   CardProperty1Preview,
   CardProperty2Preview,
   CardReviewPreview,
-  CardTestimonialPreview,
-  GridCardPreview1
+  CardTestimonialPreview
 } from "../components/card";
 
 const sections = [
@@ -129,12 +129,12 @@ const sections = [
     preview: <CardImage2Preview />,
   },
   {
-    id: "grid-card-1",
+    id: "grid-card",
     title: "Multi-grid Card",
     description:
       "Card with multiple grid layout perfect to display your service or product overview.",
-    codeString: GridCard1CodeString,
-    preview: <GridCardPreview1 />,
+    codeString: cardGridString,
+    preview: <CardGridPreview />,
   },
   {
     id: "list-card-1",
@@ -211,7 +211,7 @@ const sections = [
     id: "error-card-1",
     title: "Error Card",
     description: "A simple material ui card with error alert on top.",
-    codeString: CardErrorString,
+    codeString: cardErrorString,
     preview: <CardErrorPreview />,
   },
   {
