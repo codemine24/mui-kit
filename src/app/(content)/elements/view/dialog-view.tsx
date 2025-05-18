@@ -17,6 +17,7 @@ import {
     DialogConfirmation2Preview,
     DialogMultiStepPreview,
     DialogScrollablePreview,
+    DialogFullScreenPreview,
 } from "../components/dialog";
 import {
     dialogCustomBackdropString,
@@ -27,6 +28,7 @@ import {
     dialogConfirmation2String,
     dialogMultiStepString,
     dialogScrollableString,
+    dialogFullScreenString,
 } from "../code-string/dialog";
 
 const sections = [
@@ -85,6 +87,13 @@ const sections = [
         description: "Native material ui dialog with solid background",
         codeString: dialogScrollableString,
         preview: <DialogScrollablePreview />,
+    },
+    {
+        id: "dialog-full-screen",
+        title: "Full Screen",
+        description: "Native material ui dialog with solid background",
+        codeString: dialogFullScreenString,
+        preview: <DialogFullScreenPreview />,
     },
 ]
 
