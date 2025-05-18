@@ -19,7 +19,7 @@ import { TransitionProps } from '@mui/material/transitions';
 // Slide Up
 const TransitionSlideUp = React.forwardRef<
     HTMLElement,
-    TransitionProps & { children: React.ReactElement<any, any> }
+    TransitionProps & { children: React.ReactElement }
 >(function Transition(props, ref) {
     return <Slide direction="up" timeout={300} ref={ref} {...props} />;
 });
@@ -27,7 +27,7 @@ const TransitionSlideUp = React.forwardRef<
 // Slide Down
 const TransitionSlideDown = React.forwardRef<
     HTMLElement,
-    TransitionProps & { children: React.ReactElement<any, any> }
+    TransitionProps & { children: React.ReactElement }
 >(function Transition(props, ref) {
     return <Slide direction="down" timeout={300} ref={ref} {...props} />;
 });
@@ -35,7 +35,7 @@ const TransitionSlideDown = React.forwardRef<
 // Slide Left
 const TransitionSlideLeft = React.forwardRef<
     HTMLElement,
-    TransitionProps & { children: React.ReactElement<any, any> }
+    TransitionProps & { children: React.ReactElement }
 >(function Transition(props, ref) {
     return <Slide direction="left" timeout={300} ref={ref} {...props} />;
 });
@@ -43,7 +43,7 @@ const TransitionSlideLeft = React.forwardRef<
 // Slide Right
 const TransitionSlideRight = React.forwardRef<
     HTMLElement,
-    TransitionProps & { children: React.ReactElement<any, any> }
+    TransitionProps & { children: React.ReactElement }
 >(function Transition(props, ref) {
     return <Slide direction="right" timeout={300} ref={ref} {...props} />;
 });
@@ -51,7 +51,7 @@ const TransitionSlideRight = React.forwardRef<
 // Grow
 const TransitionGrow = React.forwardRef<
     HTMLElement,
-    TransitionProps & { children: React.ReactElement<any, any> }
+    TransitionProps & { children: React.ReactElement }
 >(function Transition(props, ref) {
     return <Grow timeout={300} ref={ref} {...props} />;
 });
@@ -59,7 +59,7 @@ const TransitionGrow = React.forwardRef<
 // Fade
 const TransitionFade = React.forwardRef<
     HTMLElement,
-    TransitionProps & { children: React.ReactElement<any, any> }
+    TransitionProps & { children: React.ReactElement }
 >(function Transition(props, ref) {
     return <Fade timeout={300} ref={ref} {...props} />;
 });
@@ -67,7 +67,7 @@ const TransitionFade = React.forwardRef<
 // Zoom
 const TransitionZoom = React.forwardRef<
     HTMLElement,
-    TransitionProps & { children: React.ReactElement<any, any> }
+    TransitionProps & { children: React.ReactElement }
 >(function Transition(props, ref) {
     return <Zoom timeout={300} ref={ref} {...props} />;
 });

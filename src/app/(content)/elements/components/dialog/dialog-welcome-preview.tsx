@@ -75,7 +75,7 @@ export const DialogWelcomePreview = () => {
                         </Typography>
 
                         <Typography variant="body2" color="text.secondary" sx={{ mb: 3 }}>
-                            Let's get started. You and your team can now use Zapier for Teams for free for 14 days. Explore our guide or jump right into your dashboard.
+                            Let&apos;s get started. You and your team can now use Zapier for Teams for free for 14 days. Explore our guide or jump right into your dashboard.
                         </Typography>
 
                         <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2 }}>

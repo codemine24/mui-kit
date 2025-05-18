@@ -1,8 +1,7 @@
 'use client';
 
-import { Dialog, IconButton, Stack, Typography, Box, Button, } from "@mui/material";
+import { Dialog, Stack, Typography, Box, Button, } from "@mui/material";
 import { useState } from "react";
-import CloseIcon from '@mui/icons-material/Close';
 
 export const DialogCTAPreview = () => {
     const [open, setOpen] = useState(false);
@@ -133,7 +132,7 @@ export const DialogCTAPreview = () => {
                                     ✓
                                 </Box>
                                 <Typography variant="body2">
-                                    Canva's professional web marketing
+                                    Canva&apos;s professional web marketing
                                 </Typography>
                             </Box>
                         </Stack>

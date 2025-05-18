@@ -48,11 +48,11 @@ export const DialogHeaderFooterPreview = () => {
                     </IconButton>
 
                     <Typography variant="h6" fontWeight="bold">
-                        Get access to Datadog's Trust Center
+                        Get access to Datadog&apos;s Trust Center
                     </Typography>
 
                     <Typography variant="body2" color="text.secondary" mb={3}>
-                        Everything you need to complete your review of Datadog
+                        Everything you need to complete your review of Datadog&apos;s Trust Center
                     </Typography>
 
                     <Box component="form" noValidate>
@@ -99,7 +99,7 @@ export const DialogHeaderFooterPreview = () => {
                             }
                             label={
                                 <Typography variant="body2">
-                                    I have read and agree to Datadeet's <Link href="#" underline="hover">Terms of Service</Link> and <Link href="#" underline="hover">Privacy Policy</Link>
+                                    I have read and agree to Datadeet&apos;s <Link href="#" underline="hover">Terms of Service</Link> and <Link href="#" underline="hover">Privacy Policy</Link>
                                 </Typography>
                             }
                             sx={{ mb: 1 }}
