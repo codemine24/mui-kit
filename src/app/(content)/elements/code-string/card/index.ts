@@ -20,7 +20,7 @@ export * from "./card-proeprty1-string";
 export * from "./error-card-string";
 export * from "./card-ecommerce-string";
 export * from "./forest-card-string";
-export * from "./review-card-string";
+export * from "./card-blog-string";
 export * from "./card-property2-string";
 export * from "./product-card-string";
 export * from "./product-card-string-2";

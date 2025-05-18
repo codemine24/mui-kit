@@ -20,7 +20,7 @@ export * from './footer-card-preview';
 export * from './card-property1-preview';
 export * from './card-ecommerce-preview';
 export * from './forest-card-preview';
-export * from './review-card-preview';
+export * from './card-blog-preview';
 export * from './card-property2-preview';
 export * from './review-card-preview-3';
 export * from './product-card-preview';

@@ -1,16 +1,15 @@
-import React from 'react';
 import {
+    Avatar,
     Box,
     Card,
     CardContent,
     CardMedia,
     Chip,
-    Typography,
-    Avatar,
     Stack,
+    Typography,
 } from '@mui/material';
 
-export const ReviewCardPreview = () => {
+export const CardBlogPreview = () => {
     return (
         <Card sx={{ maxWidth: 360, borderRadius: 3, boxShadow: 3, p: 1 }}>
             <CardMedia
@@ -34,7 +33,7 @@ export const ReviewCardPreview = () => {
                 </Typography>
 
                 <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
-                    The place is close to Barceloneta Beach and bus stop just 2 min by walk and near to "Naviglio" where you can enjoy the main night life in Barcelona.
+                    The place is close to Barceloneta Beach and bus stop just 2 min by walk and near to &quot;Naviglio&quot; where you can enjoy the main night life in Barcelona.
                 </Typography>
 
                 <Stack direction="row" alignItems="center" spacing={1}>

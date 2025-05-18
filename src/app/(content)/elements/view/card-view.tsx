@@ -15,12 +15,12 @@ import {
   GridCard1CodeString,
   ProductCardString,
   ProductCardString2,
-  ReviewCardString,
   cardBasic1String,
   cardBasic2String,
   cardBasic3String,
   cardBasic4String,
   cardBasic5String,
+  cardBlogString,
   cardBottomImageString,
   cardECommerceString,
   cardHorizontalString,
@@ -43,6 +43,7 @@ import {
   CardBasic3Preview,
   CardBasic4Preview,
   CardBasic5Preview,
+  CardBlogPreview,
   CardBottomImagePreview,
   CardECommercePreview,
   CardErrorPreview,
@@ -64,7 +65,6 @@ import {
   GridCardPreview1,
   ProductCardPreview,
   ProductCardPreview2,
-  ReviewCardPreview,
   ReviewCardPreview3
 } from "../components/card";
 
@@ -240,11 +240,11 @@ const sections = [
   },
 
   {
-    id: "review-card-1",
-    title: "Review Card 1",
-    description: "A regular but elegant card with solid background color",
-    codeString: ReviewCardString,
-    preview: <ReviewCardPreview />,
+    id: "blog-card",
+    title: "Blog card",
+    description: "Another blog archive card with simple image and basic info",
+    codeString: cardBlogString,
+    preview: <CardBlogPreview />,
   },
   {
     id: "review-card-3",

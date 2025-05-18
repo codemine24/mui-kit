@@ -1,4 +1,4 @@
-export const ReviewCardString = `import React from 'react';
+export const cardBlogString = `import React from 'react';
 import {
     Box,
     Card,
@@ -10,7 +10,7 @@ import {
     Stack,
 } from '@mui/material';
 
-export const ReviewCardPreview = () => {
+export const CardBlogPreview = () => {
     return (
         <Card sx={{ maxWidth: 360, borderRadius: 3, boxShadow: 3, p: 1 }}>
             <CardMedia
