@@ -1,4 +1,4 @@
-import { ChevronRight, CloudUpload, Refresh, Send } from "@mui/icons-material";
+import { ChevronRight, Refresh, Send } from "@mui/icons-material";
 import { Box, Button, Divider, IconButton, Stack } from "@mui/material";
 
 export const ButtonIconPreview = () => {
