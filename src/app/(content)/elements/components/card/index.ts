@@ -14,7 +14,7 @@ export * from './profile-card-preview-2';
 export * from './profile-card-preview-3';
 export * from './grid-card-preview-1';
 export * from './card-list-preview';
-export * from './pricing-card-preview';
+export * from './card-pricing-preiview';
 export * from './error-card-preview';
 export * from './footer-card-preview';
 export * from './property-card-preview';

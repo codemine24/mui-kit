@@ -13,7 +13,7 @@ import {
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked';
 
-export const PricingCardPreview = () => {
+export const CardPricingPreview = () => {
     const features = [
         { name: '2 team members', available: true },
         { name: '20GB Cloud storage', available: true },
