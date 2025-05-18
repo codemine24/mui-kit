@@ -5,3 +5,4 @@ export * from "./dialog-custom-backdrop-preview";
 export * from "./dialog-confirmation-1-preview";
 export * from "./dialog-confirmation-2-preview";
 export * from "./dialog-multi-step-preview";
+export * from "./dialog-scrollable-preview";

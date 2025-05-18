@@ -16,6 +16,7 @@ import {
     DialogConfirmation1Preview,
     DialogConfirmation2Preview,
     DialogMultiStepPreview,
+    DialogScrollablePreview,
 } from "../components/dialog";
 import {
     dialogCustomBackdropString,
@@ -25,6 +26,7 @@ import {
     dialogConfirmation1String,
     dialogConfirmation2String,
     dialogMultiStepString,
+    dialogScrollableString,
 } from "../code-string/dialog";
 
 const sections = [
@@ -76,6 +78,13 @@ const sections = [
         description: "Native material ui dialog with solid background",
         codeString: dialogMultiStepString,
         preview: <DialogMultiStepPreview />,
+    },
+    {
+        id: "dialog-scrollable",
+        title: "Scrollable",
+        description: "Native material ui dialog with solid background",
+        codeString: dialogScrollableString,
+        preview: <DialogScrollablePreview />,
     },
 ]
 
