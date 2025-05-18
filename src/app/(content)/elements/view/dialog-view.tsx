@@ -22,6 +22,7 @@ import {
     DialogHeaderFooterPreview,
     DialogImageViewPreview,
     DialogSignInPreview,
+    DialogCTAPreview,
 } from "../components/dialog";
 import {
     dialogCustomBackdropString,
@@ -37,6 +38,7 @@ import {
     dialogHeaderFooterString,
     dialogImageViewPreviewString,
     dialogSignInString,
+    dialogCTAString,
 } from "../code-string/dialog";
 
 const sections = [
@@ -130,6 +132,13 @@ const sections = [
         description: "Native material ui dialog with solid background",
         codeString: dialogSignInString,
         preview: <DialogSignInPreview />,
+    },
+    {
+        id: "dialog-cta",
+        title: "CTA",
+        description: "Native material ui dialog with solid background",
+        codeString: dialogCTAString,
+        preview: <DialogCTAPreview />,
     },
 ]
 

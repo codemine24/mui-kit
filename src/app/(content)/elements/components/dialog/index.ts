@@ -11,3 +11,4 @@ export * from "./dialog-animation-preview";
 export * from "./dialog-header-footer-preview";
 export * from "./dialog-image-view-preview";
 export * from "./dialog-signin-preview";
+export * from "./dialog-cta-preview";
