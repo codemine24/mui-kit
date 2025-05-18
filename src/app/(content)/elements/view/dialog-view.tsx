@@ -8,8 +8,8 @@ import { PageTitle } from "@/components/core/page-title";
 import { SectionTitle } from "@/components/core/section-title";
 import { CodePreviewCopyWrapper } from "@/components/code-preview-copy-wrapper";
 
-import { DialogSizesPreview, DialogStaticPreview } from "../components/dialog";
-import { dialogSizesString, dialogStaticString } from "../code-string/dialog";
+import { DialogPlacementPreview, DialogSizesPreview, DialogStaticPreview } from "../components/dialog";
+import { dialogPlacementString, dialogSizesString, dialogStaticString } from "../code-string/dialog";
 
 const sections = [
     {
@@ -18,6 +18,13 @@ const sections = [
         description: "Native material ui dialog with solid background",
         codeString: dialogSizesString,
         preview: <DialogSizesPreview />,
+    },
+    {
+        id: "dialog-placement",
+        title: "Placement",
+        description: "Native material ui dialog with solid background",
+        codeString: dialogPlacementString,
+        preview: <DialogPlacementPreview />,
     },
     {
         id: "dialog-static",
