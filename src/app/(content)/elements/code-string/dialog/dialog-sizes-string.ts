@@ -3,7 +3,7 @@ import { Button, Dialog, DialogActions, DialogContent, DialogContentText, Dialog
 
 type DialogSizes = "xs" | "sm" | "md" | "lg" | "xl";
 
-export const DialogSizesPreview = () => {
+export const DialogSizes = () => {
     const [open, setOpen] = React.useState(false);
     const [sizes, setSizes] = React.useState<DialogSizes | undefined>(undefined);
 
@@ -58,5 +58,4 @@ export const DialogSizesPreview = () => {
             </Dialog>
         </React.Fragment>
     );
-};
-`;
+};`;

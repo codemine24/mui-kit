@@ -1,7 +1,7 @@
 export const dialogStaticString = `import React from "react";
 import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogProps, DialogTitle } from "@mui/material";
 
-export const DialogStaticPreview = () => {
+export const DialogStatic = () => {
     const [open, setOpen] = React.useState(false);
 
     const handleClose: DialogProps['onClose'] = (event, reason) => {

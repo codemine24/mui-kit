@@ -15,6 +15,7 @@ import {
     DialogStaticPreview,
     DialogConfirmation1Preview,
     DialogConfirmation2Preview,
+    DialogMultiStepPreview,
 } from "../components/dialog";
 import {
     dialogCustomBackdropString,
@@ -23,6 +24,7 @@ import {
     dialogStaticString,
     dialogConfirmation1String,
     dialogConfirmation2String,
+    dialogMultiStepString,
 } from "../code-string/dialog";
 
 const sections = [
@@ -67,6 +69,13 @@ const sections = [
         description: "Native material ui dialog with solid background",
         codeString: dialogConfirmation2String,
         preview: <DialogConfirmation2Preview />,
+    },
+    {
+        id: "dialog-multi-step",
+        title: "Multi Step",
+        description: "Native material ui dialog with solid background",
+        codeString: dialogMultiStepString,
+        preview: <DialogMultiStepPreview />,
     },
 ]
 
