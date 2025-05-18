@@ -1,14 +1,15 @@
 "use client";
 
 import React from "react";
-import { dialogSizesString } from "../code-string/dialog";
-import { DialogSizesPreview } from "../components/dialog/dialog-sizes-preview";
 import { useOnThisPage } from "@/contexts/on-thispage-context";
 import { Box, Divider } from "@mui/material";
 import { CustomBreadCrumbs } from "@/components/core/breadcrumbs";
 import { PageTitle } from "@/components/core/page-title";
 import { SectionTitle } from "@/components/core/section-title";
 import { CodePreviewCopyWrapper } from "@/components/code-preview-copy-wrapper";
+
+import { DialogSizesPreview, DialogStaticPreview } from "../components/dialog";
+import { dialogSizesString, dialogStaticString } from "../code-string/dialog";
 
 const sections = [
     {
@@ -17,6 +18,13 @@ const sections = [
         description: "Native material ui dialog with solid background",
         codeString: dialogSizesString,
         preview: <DialogSizesPreview />,
+    },
+    {
+        id: "dialog-static",
+        title: "Static",
+        description: "Native material ui dialog with solid background",
+        codeString: dialogStaticString,
+        preview: <DialogStaticPreview />,
     },
 ]
 

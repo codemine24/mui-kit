@@ -19,16 +19,16 @@ export const DialogSizesPreview = () => {
     return (
         <React.Fragment>
             <Stack direction="row" spacing={2}>
-                <Button variant="outlined" onClick={() => handleClickOpen("xs")}>
+                <Button variant="contained" onClick={() => handleClickOpen("xs")}>
                     Small Modal
                 </Button>
-                <Button variant="outlined" onClick={() => handleClickOpen(undefined)}>
+                <Button variant="contained" onClick={() => handleClickOpen(undefined)}>
                     Default Modal
                 </Button>
-                <Button variant="outlined" onClick={() => handleClickOpen("md")}>
+                <Button variant="contained" onClick={() => handleClickOpen("md")}>
                     Medium Modal
                 </Button>
-                <Button variant="outlined" onClick={() => handleClickOpen("lg")}>
+                <Button variant="contained" onClick={() => handleClickOpen("lg")}>
                     Large Modal
                 </Button>
             </Stack>
@@ -36,9 +36,9 @@ export const DialogSizesPreview = () => {
                 maxWidth={sizes}
                 open={open}
                 onClose={handleClose}
-                aria-labelledby="responsive-dialog-title"
+                aria-labelledby="dialog-size-title"
             >
-                <DialogTitle id="responsive-dialog-title">
+                <DialogTitle id="dialog-size-title">
                     {"Use Google's location service?"}
                 </DialogTitle>
                 <DialogContent>
