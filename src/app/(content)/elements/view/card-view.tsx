@@ -9,7 +9,6 @@ import { Box, Divider } from "@mui/material";
 import React from "react";
 import {
   CardErrorString,
-  CardWithImageString5,
   CardWithImageString6,
   CardWithImageString7,
   FooterCardString,
@@ -35,6 +34,7 @@ import {
   cardProfileString,
   cardProperty1String,
   cardProperty2String,
+  cardReviewString,
 } from "../code-string/card";
 import { ReviewCardString3 } from "../code-string/card/review-card-string-3";
 import {
@@ -54,7 +54,7 @@ import {
   CardProfilePreview,
   CardProperty1Preview,
   CardProperty2Preview,
-  CardWithImagePreview5,
+  CardReviewPreview,
   CardWithImagePreview6,
   CardWithImagePreview7,
   FooterCardPreview,
@@ -206,11 +206,12 @@ const sections = [
     preview: <CardECommercePreview />,
   },
   {
-    id: "card-with-image-5",
-    title: "Card With Image 5",
-    description: "A regular but elegant card with solid background color",
-    codeString: CardWithImageString5,
-    preview: <CardWithImagePreview5 />,
+    id: "review-card",
+    title: "Review card",
+    description:
+      "Another review card with simple image and exiting bottom div.",
+    codeString: cardReviewString,
+    preview: <CardReviewPreview />,
   },
   {
     id: "profile-card-2",

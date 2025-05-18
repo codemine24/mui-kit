@@ -1,6 +1,6 @@
 import { Card, Stack, CardMedia, Chip, Typography, Box } from "@mui/material";
 
-export const CardWithImagePreview5 = () => {
+export const CardReviewPreview = () => {
     return (
         <Card sx={{ maxWidth: 345, borderRadius: 4, overflow: 'visible', boxShadow: 0, bgcolor: '#fff', pb: 2 }}>
             <CardMedia
