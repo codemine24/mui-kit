@@ -23,6 +23,7 @@ import {
   cardImageBgString,
   cardListString,
   cardPricingString,
+  cardProduct2String,
   cardProductString,
   cardProfile2String,
   cardProfile3String,
@@ -33,8 +34,7 @@ import {
   CardWithImageString7,
   FooterCardString,
   ForestCardString,
-  GridCard1CodeString,
-  ProductCardString2
+  GridCard1CodeString
 } from "../code-string/card";
 import { cardTestimonialString } from "../code-string/card/card-testimonial-string";
 import {
@@ -53,6 +53,7 @@ import {
   CardImageBgPreview,
   CardListPreview,
   CardPricingPreview,
+  CardProduct2Preview,
   CardProductPreview,
   CardProfile2Preview,
   CardProfile3Preview,
@@ -64,8 +65,7 @@ import {
   CardWithImagePreview7,
   FooterCardPreview,
   ForestCardPreview,
-  GridCardPreview1,
-  ProductCardPreview2
+  GridCardPreview1
 } from "../components/card";
 
 const sections = [
@@ -239,6 +239,14 @@ const sections = [
     preview: <CardProductPreview />,
   },
   {
+    id: "product-card-2",
+    title: "Product preview card v2",
+    description:
+      "Another version of product preview card with add to cart button.",
+    codeString: cardProduct2String,
+    preview: <CardProduct2Preview />,
+  },
+  {
     id: "review-card",
     title: "Review card",
     description:
@@ -261,14 +269,6 @@ const sections = [
       "Testimonial card to display customer review and feedback. Fully customizable and designed with material ui.",
     codeString: cardTestimonialString,
     preview: <CardTestimonialPreview />,
-  },
-
-  {
-    id: "product-card-2",
-    title: "Product Card 2",
-    description: "A regular but elegant card with solid background color",
-    codeString: ProductCardString2,
-    preview: <ProductCardPreview2 />,
   },
   {
     id: "card-with-image-7",

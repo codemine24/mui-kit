@@ -1,4 +1,4 @@
-export const ProductCardString2 = `import { Card, CardContent, CardMedia, Typography, Button, Box } from "@mui/material";
+export const cardProduct2String = `import { Card, CardContent, CardMedia, Typography, Button, Box } from "@mui/material";
 
 export const ProductCardPreview2 = () => {
     return (

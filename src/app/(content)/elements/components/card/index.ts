@@ -24,5 +24,5 @@ export * from './card-blog-preview';
 export * from './card-property2-preview';
 export * from './card-testimonial-preview';
 export * from './card-product-preview';
-export * from './product-card-preview-2';
+export * from './card-product2-preview';
 export * from './card-with-image-preview-7';
