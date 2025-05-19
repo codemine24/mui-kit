@@ -29,13 +29,13 @@ export const DrawerShoppingCart = () => {
                         <Typography variant="h6">Your Cart</Typography>
                         <IconButton onClick={onClose}><CloseIcon /></IconButton>
                     </Box>
-                    <Divider sx={{ borderColor: 'inherit' }} />
+                    <Divider sx={{ borderColor: 'divider' }} />
 
                     {/* Cart Items */}
                     <Box sx={{ flex: 1, overflowY: 'auto', p: 2, pt: 0 }}>
                         <List>
                             {cartItems.map((item, index) => (
-                                <>
+                                 <Box key={item.id}>
                                     <ListItem key={item.id} secondaryAction={<IconButton><DeleteIcon color="error" /></IconButton>}>
                                         <ListItemAvatar>
                                             <Avatar src={item.image} variant="rounded" />
@@ -45,12 +45,12 @@ export const DrawerShoppingCart = () => {
                                             secondary={item.price}
                                         />
                                     </ListItem>
-                                    {index < cartItems.length - 1 && <Divider sx={{ borderColor: 'inherit' }} component="li" />}
-                                </>
+                                    {index < cartItems.length - 1 && <Divider sx={{ borderColor: 'divider' }} component="li" />}
+                                </Box>
                             ))}
                         </List>
                     </Box>
-                    <Divider sx={{ borderColor: 'inherit' }} />
+                    <Divider sx={{ borderColor: 'divider' }} />
 
                     {/* Footer */}
                     <Box sx={{ p: 2 }}>
