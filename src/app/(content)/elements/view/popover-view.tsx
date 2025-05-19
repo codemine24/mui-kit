@@ -7,8 +7,8 @@ import { SectionTitle } from "@/components/core/section-title";
 import { Box, Divider } from "@mui/material";
 import { useOnThisPage } from "@/contexts/on-thispage-context";
 
-import { BasicPopoverPreview, PopoverHoverPreview } from "../components/popover";
-import { popoverBasicString, popoverHoverString } from "../code-string/popover";
+import { BasicPopoverPreview, PopoverHoverPreview, PopoverMultiLayerPreview } from "../components/popover";
+import { popoverBasicString, popoverHoverString, popoverMultiLayerString } from "../code-string/popover";
 
 
 const sections = [
@@ -25,6 +25,13 @@ const sections = [
         description: "Hover popover with extended design",
         codeString: popoverHoverString,
         preview: <PopoverHoverPreview />,
+    },
+    {
+        id: "popover-3",
+        title: "Multi Layer",
+        description: "Multi layer popover with extended design",
+        codeString: popoverMultiLayerString,
+        preview: <PopoverMultiLayerPreview />,
     },
 ];
 

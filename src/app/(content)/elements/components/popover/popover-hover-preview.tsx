@@ -1,47 +1,84 @@
-'use client';
-
-import React, { useState, useRef } from 'react';
-import Popover from '@mui/material/Popover';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
+import React, { useState, useRef, useEffect } from 'react';
+import {
+    Button,
+    Popover,
+    Typography,
+    Box,
+} from '@mui/material';
 
 export const PopoverHoverPreview = () => {
-    const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null);
     const [open, setOpen] = useState(false);
-    const hoverRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+    const buttonRef = useRef<HTMLButtonElement | null>(null);
 
-    const handleMouseEnter = (event: React.MouseEvent<HTMLElement>) => {
-        if (hoverRef.current) clearTimeout(hoverRef.current);
-        setAnchorEl(event.currentTarget);
-        setOpen(true);
+    const [isHoveringButton, setIsHoveringButton] = useState(false);
+    const [isHoveringPopover, setIsHoveringPopover] = useState(false);
+
+    useEffect(() => {
+        setOpen(isHoveringButton || isHoveringPopover);
+    }, [isHoveringButton, isHoveringPopover]);
+    const handleButtonMouseEnter = () => {
+        setIsHoveringButton(true);
     };
 
-    const handleMouseLeave = () => {
-        hoverRef.current = setTimeout(() => {
-            setOpen(false);
-            setAnchorEl(null);
-        }, 200); // buffer to allow hover between button and popover
+    const handleButtonMouseLeave = () => {
+        setIsHoveringButton(false);
+    };
+
+    const handlePopoverMouseEnter = () => {
+        setIsHoveringPopover(true);
+    };
+
+    const handlePopoverMouseLeave = () => {
+        setIsHoveringPopover(false);
     };
 
     return (
-        <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+        <Box sx={{ display: 'inline-block' }}>
             <Button
-                aria-describedby="hover-popover"
+                ref={buttonRef}
                 variant="contained"
+                color="primary"
+                onMouseEnter={handleButtonMouseEnter}
+                onMouseLeave={handleButtonMouseLeave}
             >
-                Hover me
+                Hover Me
             </Button>
+
             <Popover
-                id="hover-popover"
                 open={open}
-                anchorEl={anchorEl}
+                anchorEl={buttonRef.current}
+                anchorOrigin={{
+                    vertical: 'bottom',
+                    horizontal: 'center',
+                }}
+                transformOrigin={{
+                    vertical: 'top',
+                    horizontal: 'center',
+                }}
+                onClose={() => setOpen(false)}
                 disableRestoreFocus
-                anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
+                sx={{
+                    pointerEvents: 'none',
+                }}
             >
-                <Typography sx={{ p: 2 }}>
-                    The content of the Popover.
-                </Typography>
+                <Box
+                    onMouseEnter={handlePopoverMouseEnter}
+                    onMouseLeave={handlePopoverMouseLeave}
+                    sx={{
+                        padding: 2,
+                        pointerEvents: 'auto',
+                        maxWidth: 350,
+                    }}
+                >
+                    <Typography variant="h6">
+                        Hover Popover
+                    </Typography>
+                    <Typography variant="body2" sx={{ mt: 2 }}>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae molestiae at iste hic pariatur, tempora quibusdam ex sit libero assumenda.
+                    </Typography>
+                </Box>
             </Popover>
-        </div>
+        </Box>
     );
 };
+;
