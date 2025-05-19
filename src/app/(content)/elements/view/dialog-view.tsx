@@ -140,22 +140,24 @@ const sections = [
   },
   {
     id: "dialog-signin",
-    title: "Sign In",
-    description: "Native material ui dialog with solid background",
+    title: "Sign-in dialog",
+    description: "Use this ready to cook sign-in dialog.",
     codeString: dialogSignInString,
     preview: <DialogSignInPreview />,
   },
   {
     id: "dialog-cta",
-    title: "CTA",
-    description: "Native material ui dialog with solid background",
+    title: "Subscribe dialog",
+    description:
+      "Grab your customer attention with this amazing subscribe dialog. ",
     codeString: dialogCTAString,
     preview: <DialogCTAPreview />,
   },
   {
     id: "dialog-welcome",
-    title: "Welcome",
-    description: "Native material ui dialog with solid background",
+    title: "Welcome dialog",
+    description:
+      "A decent dialog to welcome your user. Perfect for web application onboarding. ",
     codeString: dialogWelcomeString,
     preview: <DialogWelcomePreview />,
   },
