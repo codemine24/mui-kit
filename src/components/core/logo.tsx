@@ -41,7 +41,7 @@ export const Logo = () => {
         </Typography>
       </Box>
       <Chip
-        label="Beta"
+        label="v1.0"
         size="small"
         sx={{
           position: "absolute",
