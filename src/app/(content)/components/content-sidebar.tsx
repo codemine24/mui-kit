@@ -5,6 +5,7 @@ import { Iconify } from "@/components/iconify";
 import { contentSidebarPathGroups } from "@/router/router";
 import { TContentSidebarMode } from "@/types/content.types";
 import { getRandomColor } from "@/utils/colors";
+import { pxToRem } from "@/utils/pxToRem";
 import { ChevronRight as ChevronRightIcon } from "@mui/icons-material";
 import {
   Box,
@@ -135,7 +136,7 @@ export const ContentSidebar = ({
             "& .MuiOutlinedInput-root": {
               borderRadius: theme.shape.borderRadius,
               paddingLeft: 1,
-              fontSize: "0.875rem",
+              fontSize: { md: pxToRem(14), lg: pxToRem(15) },
               "&.Mui-focused fieldset": {
                 borderColor: "primary.main",
                 boxShadow: theme.shadows[1],
@@ -144,19 +145,17 @@ export const ContentSidebar = ({
             "& .MuiOutlinedInput-notchedOutline": {
               borderColor: theme.palette.divider,
             },
-            // border: "1px solid blue ",
           }}
         />
       </Box>
       <List
-        sx={{ flexGrow: 1, borderTop: `1px solid ${theme.palette.divider}` }}
       >
         {/* search results */}
         {searchValue ? (
           <Box>
             <Typography
               variant="subtitle2"
-              sx={{ mb: 2, color: "text.secondary" }}
+              sx={{ mb: 1, color: "text.secondary" }}
             >
               Results
             </Typography>
@@ -230,7 +229,7 @@ export const ContentSidebar = ({
                           disableRipple
                           sx={{
                             px: 0,
-                            py: 1,
+                            pt: 0,
                             gap: 1.5,
                             mb: 1,
                             alignItems: "center",
@@ -241,7 +240,7 @@ export const ContentSidebar = ({
                               color: getRandomColor(index),
                             },
                             ".MuiTypography-root": {
-                              fontSize: { md: "0.9rem", lg: "1rem" },
+                              fontSize: { md: pxToRem(14), lg: pxToRem(15) },
                             },
                           }}
                         >
@@ -271,7 +270,7 @@ export const ContentSidebar = ({
                             primary={label}
                             primaryTypographyProps={{
                               variant: "body2",
-                              fontWeight: 500,
+                              fontWeight: isActive(path || "") ? 500 : 400,
                             }}
                           />
                         </ListItemButton>
@@ -297,7 +296,7 @@ export const ContentSidebar = ({
                               color: "primary.main",
                             },
                             ".MuiTypography-root": {
-                              fontSize: { md: "0.9rem", lg: "1rem" },
+                              fontSize: { md: pxToRem(14), lg: pxToRem(15) },
                             },
                           }}
                         >
@@ -308,7 +307,7 @@ export const ContentSidebar = ({
                               color: isActive(path || "")
                                 ? "primary.main"
                                 : "text.primary",
-                              fontWeight: 500,
+                              fontWeight: isActive(path || "") ? 500 : 400,
                             }}
                           />
                         </ListItemButton>
@@ -333,7 +332,7 @@ export const ContentSidebar = ({
                             color: "primary.main",
                           },
                           ".MuiTypography-root": {
-                            fontSize: { md: "0.9rem", lg: "1rem" },
+                            fontSize: { md: pxToRem(14), lg: pxToRem(15) },
                           },
                         }}
                       >
@@ -342,11 +341,11 @@ export const ContentSidebar = ({
                           primaryTypographyProps={{
                             variant: "body2",
                             color: "text.primary",
-                            fontWeight: 500,
-                            fontSize: { xs: 15, sm: 16 },
+                            fontWeight: open === key ? 500 : 400,
+                            fontSize: { md: pxToRem(14), lg: pxToRem(15) },
                           }}
                         />
-                        {/* {label} */}
+
                         <ChevronRightIcon
                           sx={{
                             transform:
@@ -411,7 +410,10 @@ export const ContentSidebar = ({
                                       borderRadius: "0 2px 2px 0",
                                     },
                                     ".MuiTypography-root": {
-                                      fontSize: { md: "0.9rem", lg: "1rem" },
+                                      fontSize: {
+                                        md: pxToRem(14),
+                                        lg: pxToRem(15),
+                                      },
                                     },
                                   }}
                                 >
@@ -423,7 +425,10 @@ export const ContentSidebar = ({
                                       fontWeight: isActive(item.path)
                                         ? 500
                                         : 300,
-                                      fontSize: { xs: 15, sm: 16 },
+                                      fontSize: {
+                                        md: pxToRem(14),
+                                        lg: pxToRem(15),
+                                      },
                                     }}
                                   />
                                 </ListItemButton>
