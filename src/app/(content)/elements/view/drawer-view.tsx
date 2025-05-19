@@ -13,7 +13,8 @@ import {
     drawerShoppingCartString,
     drawerFiltersPanelString,
     drawerNotificationsString,
-    drawerCustomWidthString
+    drawerCustomWidthString,
+    drawerFullWidthString
 } from "../code-string/drawer";
 
 import {
@@ -22,7 +23,8 @@ import {
     DrawerShoppingCartPreview,
     DrawerFiltersPanelPreview,
     DrawerNotificationsPreview,
-    DrawerCustomWidthPreview
+    DrawerCustomWidthPreview,
+    DrawerFullWidthPreview
 } from "../components/drawer";
 
 const sections = [
@@ -42,27 +44,34 @@ const sections = [
     },
     {
         id: "drawer-3",
+        title: "Full Width",
+        description: "Full width drawer with custom mui icon",
+        codeString: drawerFullWidthString,
+        preview: <DrawerFullWidthPreview />,
+    },
+    {
+        id: "drawer-4",
         title: "Backdrop",
         description: "Backdrop drawer with custom mui icon",
         codeString: drawerBackdropString,
         preview: <DrawerBackdropPreview />,
     },
     {
-        id: "drawer-4",
+        id: "drawer-5",
         title: "Shopping Cart",
         description: "Shopping cart drawer with custom mui icon",
         codeString: drawerShoppingCartString,
         preview: <DrawerShoppingCartPreview />,
     },
     {
-        id: "drawer-5",
+        id: "drawer-6",
         title: "Filters Panel",
         description: "Filters panel drawer with custom mui icon",
         codeString: drawerFiltersPanelString,
         preview: <DrawerFiltersPanelPreview />,
     },
     {
-        id: "drawer-6",
+        id: "drawer-7",
         title: "Notifications",
         description: "Notifications drawer with custom mui icon",
         codeString: drawerNotificationsString,
