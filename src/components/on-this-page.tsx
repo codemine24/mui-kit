@@ -56,7 +56,14 @@ export const OnThisPage = () => {
   const handleScrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      const rect = element.getBoundingClientRect();
+      const elementTop = rect.top + window.scrollY;
+      const offset = window.innerHeight * 0.25;
+
+      window.scrollTo({
+        top: elementTop - offset,
+        behavior: "smooth",
+      });
     }
   };
   return (
@@ -84,21 +91,7 @@ export const OnThisPage = () => {
           },
         }}
       >
-        <List
-          dense
-          sx={{
-            position: "relative",
-            "&:before": {
-              content: '""',
-              position: "absolute",
-              left: "1.5px",
-              top: 0,
-              height: "100%",
-              width: "1px",
-              bgcolor: "divider",
-            },
-          }}
-        >
+        <List dense>
           {sections.map((section) => {
             const isActive = activeSection === section.id;
             return (
@@ -106,10 +99,6 @@ export const OnThisPage = () => {
                 key={section.id}
                 disablePadding
                 sx={{
-                  borderLeft: `2px solid transparent`,
-                  ...(isActive && {
-                    borderLeft: `2px solid ${theme.palette.primary.main}`,
-                  }),
                   "&:hover": {
                     color: theme.palette.primary.main,
                   },
@@ -121,14 +110,14 @@ export const OnThisPage = () => {
                       component="button"
                       onClick={() => handleScrollToSection(section.id)}
                       sx={{
-                        color: "text.primary",
+                        color: isActive ? "text.primary" : "text.secondary",
                         pl: 2,
                         textAlign: "left",
-                        fontSize: { xs: 15, sm: 16 },
+                        fontSize: { xs: 13, sm: 14 },
                         textDecoration: "none",
                         fontWeight: isActive ? 500 : 300,
                         "&:hover": {
-                          color: "primary.main",
+                          color: "text.primary",
                         },
                       }}
                     >
