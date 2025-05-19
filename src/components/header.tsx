@@ -20,6 +20,7 @@ import { Logo } from "./core/logo";
 import { Iconify } from "./iconify";
 import Link from "next/link";
 import { navItems } from "@/router/router";
+import { pxToRem } from "@/utils/pxToRem";
 
 // Navigation items
 
@@ -96,7 +97,13 @@ export const Header = () => {
               <Button
                 key={page?.path}
                 onClick={handleNavigate(page?.path)}
-                sx={{ mx: 0.5, color: "text.primary" }}
+                sx={{
+                  // mx: 0.5,
+                  color: "text.primary",
+                  fontSize: { md: pxToRem(14), lg: pxToRem(15) },
+                  fontWeight: 400,
+                  textTransform: "capitalize",
+                }}
               >
                 {page?.label}
               </Button>

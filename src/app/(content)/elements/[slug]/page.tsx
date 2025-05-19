@@ -6,6 +6,7 @@ import { AlertView } from "../view/alert-view";
 import { AvatarView } from "../view/avatar-view";
 import { ButtonView } from "../view/button-view";
 import { DialogView } from "../view/dialog-view";
+import { CardView } from "../view/card-view";
 
 export async function generateStaticParams() {
   return elementsArr.map((element) => ({
@@ -22,6 +23,7 @@ const componentMap: Record<string, JSX.Element> = {
   button: <ButtonView />,
   avatar: <AvatarView />,
   dialog: <DialogView />,
+  card: <CardView />,
 };
 
 export default async function Page({

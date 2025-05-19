@@ -127,7 +127,7 @@ export const contentSidebarPathGroups: ContentSidebarPathGroup[] = [
 export const navItems = [
   { label: "Docs", path: PATHS.DOCS.INSTALL },
   { label: "Kit", path: PATHS.ELEMENTS.OVERVIEW },
-  { label: "Contribute ♡", path: PATHS.CONTRIBUTE },
+  { label: "Why?", path: PATHS.CONTRIBUTE },
 ];
 
 export const sitemapRoutes = [
