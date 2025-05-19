@@ -34,10 +34,14 @@ export const DialogScrollable = () => {
 
     return (
         <React.Fragment>
-            <Stack direction="row" spacing={2}>
-                <Button variant="contained" onClick={handleClickOpen('paper')}>scroll=paper</Button>
-                <Button variant="contained" onClick={handleClickOpen('body')}>scroll=body</Button>
-            </Stack>
+             <Stack direction="row" spacing={2}>
+        <Button variant="contained" onClick={handleClickOpen("paper")}>
+          Paper: only content scroll
+        </Button>
+        <Button variant="contained" onClick={handleClickOpen("body")}>
+          Body: entire body scroll
+        </Button>
+      </Stack>
             <Dialog
                 open={open}
                 onClose={handleClose}

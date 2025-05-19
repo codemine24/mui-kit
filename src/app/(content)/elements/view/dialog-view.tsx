@@ -100,8 +100,9 @@ const sections = [
   },
   {
     id: "dialog-scrollable",
-    title: "Scrollable",
-    description: "Native material ui dialog with solid background",
+    title: "Scrollable dialog",
+    description:
+      "We have 2 scrollable dialog. `Paper` will have header footer sticky and body will be scrollable. But `body` variant will be entirely scrollable. ",
     codeString: dialogScrollableString,
     preview: <DialogScrollablePreview />,
   },
