@@ -76,14 +76,18 @@ export const OnThisPage = () => {
         flexDirection: "column",
       }}
     >
-      <Typography variant="body2" textTransform={"uppercase"} fontWeight={600}>
+      <Typography
+        variant="body2"
+        textTransform={"uppercase"}
+        fontWeight={500}
+        fontSize={{ xs: 13, sm: 14 }}
+      >
         On this page
       </Typography>
       <Box
         sx={{
-          flexGrow: 1,
+          // flexGrow: 1,
           overflowY: "auto",
-          mt: 2,
           scrollbarWidth: "none",
           msOverflowStyle: "none",
           "&::-webkit-scrollbar": {
@@ -132,7 +136,7 @@ export const OnThisPage = () => {
       </Box>
       <Box
         sx={{
-          mt: "auto",
+          // mt: "auto",
           p: 2,
           bgcolor: "background.paper",
           border: `.5px solid`,
