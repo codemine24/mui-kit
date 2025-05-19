@@ -4,7 +4,7 @@ import * as React from 'react';
 import { Box, List, Divider, ListItem, ListItemButton, ListItemIcon, ListItemText, Button, Drawer } from '@mui/material';
 import { Inbox, Mail } from '@mui/icons-material';
 
-export const DrawerBackdropPreview = () => {
+export const DrawerBackdrop = () => {
     const drawerRef = React.useRef<HTMLDivElement | null>(null);
     const [customColorOpen, setCustomColorOpen] = React.useState(false);
     const [customBlurOpen, setCustomBlurOpen] = React.useState(false);

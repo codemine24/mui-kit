@@ -7,31 +7,67 @@ import { SectionTitle } from "@/components/core/section-title";
 import { useOnThisPage } from "@/contexts/on-thispage-context";
 import { Box, Divider } from "@mui/material";
 import React from "react";
-import { drawerBasicString, drawerBackdropString } from "../code-string/drawer";
-import { DrawerBasicPreview, DrawerBackdropPreview } from "../components/drawer";
+import {
+    drawerBasicString,
+    drawerBackdropString,
+    drawerShoppingCartString,
+    drawerFiltersPanelString,
+    drawerNotificationsString,
+    drawerCustomWidthString
+} from "../code-string/drawer";
+
+import {
+    DrawerBasicPreview,
+    DrawerBackdropPreview,
+    DrawerShoppingCartPreview,
+    DrawerFiltersPanelPreview,
+    DrawerNotificationsPreview,
+    DrawerCustomWidthPreview
+} from "../components/drawer";
 
 const sections = [
     {
         id: "drawer-1",
-        title: "Basic Drawer",
+        title: "Basic",
         description: "Basic drawer with custom mui icon",
         codeString: drawerBasicString,
         preview: <DrawerBasicPreview />,
     },
     {
         id: "drawer-2",
-        title: "Backdrop Drawer",
+        title: "Custom Width",
+        description: "Custom width drawer with custom mui icon",
+        codeString: drawerCustomWidthString,
+        preview: <DrawerCustomWidthPreview />,
+    },
+    {
+        id: "drawer-3",
+        title: "Backdrop",
         description: "Backdrop drawer with custom mui icon",
         codeString: drawerBackdropString,
         preview: <DrawerBackdropPreview />,
     },
-    // {
-    //     id: "drawer-2",
-    //     title: "Full Width Drawer",
-    //     description: "Full width drawer with custom mui icon",
-    //     codeString: drawerFullWidthString,
-    //     preview: <DrawerFullWidthPreview />,
-    // },
+    {
+        id: "drawer-4",
+        title: "Shopping Cart",
+        description: "Shopping cart drawer with custom mui icon",
+        codeString: drawerShoppingCartString,
+        preview: <DrawerShoppingCartPreview />,
+    },
+    {
+        id: "drawer-5",
+        title: "Filters Panel",
+        description: "Filters panel drawer with custom mui icon",
+        codeString: drawerFiltersPanelString,
+        preview: <DrawerFiltersPanelPreview />,
+    },
+    {
+        id: "drawer-6",
+        title: "Notifications",
+        description: "Notifications drawer with custom mui icon",
+        codeString: drawerNotificationsString,
+        preview: <DrawerNotificationsPreview />,
+    },
 ];
 
 export const DrawerView = () => {
