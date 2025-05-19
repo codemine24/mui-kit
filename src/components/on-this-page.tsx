@@ -62,72 +62,85 @@ export const OnThisPage = () => {
   return (
     <Box
       sx={{
-        display: { xs: "none", md: "block" },
+        display: { xs: "none", md: "flex" },
         py: 2,
         width: { md: pxToRem(140), lg: pxToRem(210) },
+        height: "90%",
+        flexDirection: "column",
       }}
     >
       <Typography variant="body2" textTransform={"uppercase"} fontWeight={600}>
         On this page
       </Typography>
-      <List
-        dense
+      <Box
         sx={{
+          flexGrow: 1,
+          overflowY: "auto",
           mt: 2,
-          position: "relative",
-          "&:before": {
-            content: '""',
-            position: "absolute",
-            left: "1.5px",
-            top: 0,
-            height: "100%",
-            width: "1px",
-            bgcolor: "divider",
+          scrollbarWidth: "none",
+          msOverflowStyle: "none",
+          "&::-webkit-scrollbar": {
+            display: "none",
           },
         }}
       >
-        {sections.map((section) => {
-          const isActive = activeSection === section.id;
-          return (
-            <ListItem
-              key={section.id}
-              disablePadding
-              sx={{
-                borderLeft: `2px solid transparent`,
-                ...(isActive && {
-                  borderLeft: `2px solid ${theme.palette.primary.main}`,
-                }),
-                "&:hover": {
-                  color: theme.palette.primary.main,
-                },
-              }}
-            >
-              <ListItemText
-                primary={
-                  <Link
-                    component="button"
-                    onClick={() => handleScrollToSection(section.id)}
-                    sx={{
-                      color: "text.primary",
-                      pl: 2,
-                      textAlign: "left",
-                      fontSize: { xs: 15, sm: 16 },
-                      textDecoration: "none",
-                      fontWeight: isActive ? 500 : 300,
-                      "&:hover": {
-                        color: "primary.main",
-                      },
-                    }}
-                  >
-                    {section.title}
-                  </Link>
-                }
-              />
-            </ListItem>
-          );
-        })}
-      </List>
-
+        <List
+          dense
+          sx={{
+            position: "relative",
+            "&:before": {
+              content: '""',
+              position: "absolute",
+              left: "1.5px",
+              top: 0,
+              height: "100%",
+              width: "1px",
+              bgcolor: "divider",
+            },
+          }}
+        >
+          {sections.map((section) => {
+            const isActive = activeSection === section.id;
+            return (
+              <ListItem
+                key={section.id}
+                disablePadding
+                sx={{
+                  borderLeft: `2px solid transparent`,
+                  ...(isActive && {
+                    borderLeft: `2px solid ${theme.palette.primary.main}`,
+                  }),
+                  "&:hover": {
+                    color: theme.palette.primary.main,
+                  },
+                }}
+              >
+                <ListItemText
+                  primary={
+                    <Link
+                      component="button"
+                      onClick={() => handleScrollToSection(section.id)}
+                      sx={{
+                        color: "text.primary",
+                        pl: 2,
+                        textAlign: "left",
+                        fontSize: { xs: 15, sm: 16 },
+                        textDecoration: "none",
+                        fontWeight: isActive ? 500 : 300,
+                        "&:hover": {
+                          color: "primary.main",
+                        },
+                      }}
+                    >
+                      {section.title}
+                    </Link>
+                  }
+                />
+              </ListItem>
+            );
+          })}
+        </List>
+      </Box>
       <Box
         sx={{
           mt: "auto",
