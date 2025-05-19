@@ -61,21 +61,22 @@ const sections = [
   {
     id: "drawer-5",
     title: "Shopping Cart",
-    description: "Shopping cart drawer with custom mui icon",
+    description:
+      "A simple drawer with shopping cart ui. Most common use case of a drawer.",
     codeString: drawerShoppingCartString,
     preview: <DrawerShoppingCartPreview />,
   },
   {
     id: "drawer-6",
-    title: "Filters Panel",
-    description: "Filters panel drawer with custom mui icon",
+    title: "E-commerce Filters Panel",
+    description: "A responsive e-commerce product filter. You can use it on your product archive page.",
     codeString: drawerFiltersPanelString,
     preview: <DrawerFiltersPanelPreview />,
   },
   {
     id: "drawer-7",
     title: "Notifications",
-    description: "Notifications drawer with custom mui icon",
+    description: "Notifications drawer with custom mui icon. Use this if you need a notifications drawer.",
     codeString: drawerNotificationsString,
     preview: <DrawerNotificationsPreview />,
   },
