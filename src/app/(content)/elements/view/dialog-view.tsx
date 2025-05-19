@@ -109,28 +109,32 @@ const sections = [
   {
     id: "dialog-full-screen",
     title: "Full Screen",
-    description: "Native material ui dialog with solid background",
+    description:
+      "This dialog will cover your entire screen. Body content will not be visible.",
     codeString: dialogFullScreenString,
     preview: <DialogFullScreenPreview />,
   },
   {
     id: "dialog-animation",
     title: "Animation",
-    description: "Native material ui dialog with solid background",
+    description:
+      "You can make your dialog more interesting by using one of these animated dialogs. We have different animation like slide, grow, zoom and fade. ",
     codeString: dialogAnimationString,
     preview: <DialogAnimationPreview />,
   },
   {
     id: "dialog-header-footer",
-    title: "Header Footer",
-    description: "Native material ui dialog with solid background",
+    title: "Dialog with header footer",
+    description:
+      "This dialog variant has header and footer. If you need a dialog with header and footer, use this.",
     codeString: dialogHeaderFooterString,
     preview: <DialogHeaderFooterPreview />,
   },
   {
     id: "dialog-image-view",
-    title: "Image View",
-    description: "Native material ui dialog with solid background",
+    title: "Image preview dialog",
+    description:
+      "You can use this dialog to preview media like image, video etc. By default we are using it as a image previewer. ",
     codeString: dialogImageViewPreviewString,
     preview: <DialogImageViewPreview />,
   },
