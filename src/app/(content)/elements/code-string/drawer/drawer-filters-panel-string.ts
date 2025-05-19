@@ -1,6 +1,4 @@
-export const drawerFiltersPanelString = `'use client';
-
-import React from 'react';
+export const drawerFiltersPanelString = `import React from 'react';
 import {
     Drawer, Box, Typography, Divider, Button, FormControl, InputLabel, Select, MenuItem,
     Slider, Checkbox, FormControlLabel

@@ -1,7 +1,4 @@
-export const drawerShoppingCartString = `'use client';
-
-
-import React from 'react';
+export const drawerShoppingCartString = `import React from 'react';
 import {
     Drawer, Box, Typography, IconButton, Divider, Button, List, ListItem, ListItemAvatar,
     Avatar, ListItemText

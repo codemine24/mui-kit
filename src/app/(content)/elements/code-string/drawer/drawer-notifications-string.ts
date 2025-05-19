@@ -1,6 +1,4 @@
-export const drawerNotificationsString = `'use client';
-
-import React from 'react';
+export const drawerNotificationsString = `import React from 'react';
 import {
     Drawer, Box, Typography, IconButton, Divider, List, ListItem, ListItemText, Button
 } from '@mui/material';
@@ -11,7 +9,7 @@ const notifications = [
     { id: 2, title: 'New Message', message: 'Support: How can we help you?', time: '1d ago' },
 ];
 
-export const DrawerNotifications = () => {
+export const DrawerNotificationsPreview = () => {
     const [open, setOpen] = React.useState(false);
 
     const onClose = () => {
@@ -27,13 +25,13 @@ export const DrawerNotifications = () => {
                         <Typography variant="h6">Notifications</Typography>
                         <IconButton onClick={onClose}><CloseIcon /></IconButton>
                     </Box>
-                    <Divider sx={{ borderColor: 'inherit' }} />
+                    <Divider sx={{ borderColor: 'divider' }} />
 
                     {/* Content */}
                     <Box sx={{ flex: 1, overflowY: 'auto', p: 2, pt: 0 }}>
                         <List>
                             {notifications.map((n, index) => (
-                                <>
+                                <Box key={n.id}>
                                     <ListItem key={n.id} alignItems="flex-start">
                                         <ListItemText
                                             primary={n.title}
@@ -47,8 +45,8 @@ export const DrawerNotifications = () => {
                                             }
                                         />
                                     </ListItem>
-                                    {index < notifications.length - 1 && <Divider sx={{ borderColor: 'inherit' }} component="li" />}
-                                </>
+                                    {index < notifications.length - 1 && <Divider sx={{ borderColor: 'divider' }} component="li" />}
+                                </Box>
                             ))}
                         </List>
                     </Box>
@@ -62,5 +60,4 @@ export const DrawerNotifications = () => {
             </Drawer>
         </React.Fragment>
     );
-}
-`;
+}`;

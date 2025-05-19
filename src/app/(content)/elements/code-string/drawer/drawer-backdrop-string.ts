@@ -1,6 +1,4 @@
-export const drawerBackdropString = `'use client';
-
-import * as React from 'react';
+export const drawerBackdropString = `import * as React from 'react';
 import { Box, List, Divider, ListItem, ListItemButton, ListItemIcon, ListItemText, Button, Drawer } from '@mui/material';
 import { Inbox, Mail } from '@mui/icons-material';
 

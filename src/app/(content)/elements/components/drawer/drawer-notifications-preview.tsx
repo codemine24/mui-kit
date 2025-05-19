@@ -27,13 +27,13 @@ export const DrawerNotificationsPreview = () => {
                         <Typography variant="h6">Notifications</Typography>
                         <IconButton onClick={onClose}><CloseIcon /></IconButton>
                     </Box>
-                    <Divider sx={{ borderColor: 'inherit' }} />
+                    <Divider sx={{ borderColor: 'divider' }} />
 
                     {/* Content */}
                     <Box sx={{ flex: 1, overflowY: 'auto', p: 2, pt: 0 }}>
                         <List>
                             {notifications.map((n, index) => (
-                                <>
+                                <Box key={n.id}>
                                     <ListItem key={n.id} alignItems="flex-start">
                                         <ListItemText
                                             primary={n.title}
@@ -47,8 +47,8 @@ export const DrawerNotificationsPreview = () => {
                                             }
                                         />
                                     </ListItem>
-                                    {index < notifications.length - 1 && <Divider sx={{ borderColor: 'inherit' }} component="li" />}
-                                </>
+                                    {index < notifications.length - 1 && <Divider sx={{ borderColor: 'divider' }} component="li" />}
+                                </Box>
                             ))}
                         </List>
                     </Box>
