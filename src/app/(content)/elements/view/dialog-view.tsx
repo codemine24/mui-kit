@@ -71,28 +71,30 @@ const sections = [
   {
     id: "dialog-custom-backdrop",
     title: "Custom Backdrop",
-    description: "Native material ui dialog with solid background",
+    description:
+      "We have 3 different variant for backdrop. `none`, `blur` and `custom color`. ",
     codeString: dialogCustomBackdropString,
     preview: <DialogCustomBackdropPreview />,
   },
   {
     id: "dialog-confirmation",
-    title: "Confirmation",
-    description: "Native material ui dialog with solid background",
+    title: "Confirmation dialog",
+    description: "Confirmation dialog for deleting an item. ",
     codeString: dialogConfirmation1String,
     preview: <DialogConfirmation1Preview />,
   },
   {
     id: "dialog-confirmation-2",
-    title: "Confirmation 2",
-    description: "Native material ui dialog with solid background",
+    title: "Confirmation dialog v2",
+    description: "Another modern and elegant confirmation dialog. ",
     codeString: dialogConfirmation2String,
     preview: <DialogConfirmation2Preview />,
   },
   {
     id: "dialog-multi-step",
-    title: "Multi Step",
-    description: "Native material ui dialog with solid background",
+    title: "Multi Step Dialog",
+    description:
+      "If your need a dialog with multiple steps functionality, you can use this one. We used dummy form fields, but you can replace it with your actual content. ",
     codeString: dialogMultiStepString,
     preview: <DialogMultiStepPreview />,
   },
