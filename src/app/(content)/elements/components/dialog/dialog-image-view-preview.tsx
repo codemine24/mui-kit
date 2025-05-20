@@ -44,9 +44,18 @@ export const DialogImageViewPreview = () => {
                                 variant="contained"
                                 size="small"
                                 startIcon={<Download />}
-                                sx={{ borderRadius: 4, textTransform: 'none' }}
+                                sx={{
+                                    borderRadius: 1,
+                                    textTransform: 'none',
+                                    minWidth: 0,
+                                    '& .MuiButton-startIcon': {
+                                        mr: { xs: 0, sm: 1 },
+                                    },
+                                }}
                             >
-                                Free Download
+                                <Typography variant="body2" fontWeight="medium" sx={{ display: { xs: 'none', sm: 'inline' } }}>
+                                    Free Download
+                                </Typography>
                             </Button>
                         </Box>
                     </Box>
@@ -61,7 +70,7 @@ export const DialogImageViewPreview = () => {
 
                     {/* Stats and Share */}
                     <Box sx={{ px: 2, py: 1.5, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                        <Grid container spacing={4} sx={{ maxWidth: '60%' }}>
+                        <Grid container spacing={{ xs: 2, sm: 4 }} sx={{ maxWidth: '60%' }}>
                             <Grid>
                                 <Typography variant="caption" color="text.secondary">
                                     Views
