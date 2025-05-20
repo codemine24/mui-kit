@@ -4,7 +4,7 @@ import { Box, Button, Divider, Stack } from "@mui/material";
 export const ButtonSoftWithBorderPreview = () => {
   return (
     <Box p={2}>
-      <Stack direction="row" spacing={2} flexWrap="wrap">
+      <Stack direction="row" spacing={2} rowGap={2} flexWrap="wrap">
         <Button
           variant="text"
           disableElevation
@@ -141,7 +141,7 @@ export const ButtonSoftWithBorderPreview = () => {
       <Divider sx={{ my: 2 }} />
 
       {/* Contained */}
-      <Stack direction="row" spacing={2} flexWrap="wrap">
+      <Stack direction="row" spacing={2} rowGap={2} flexWrap="wrap">
         <Button
           variant="text"
           disableElevation
