@@ -16,7 +16,7 @@ export const DialogCustomBackdropPreview = () => {
 
     return (
         <Box>
-            <Stack direction="row" spacing={2}>
+            <Stack direction="row" flexWrap="wrap" rowGap={2} spacing={2}>
                 <Button variant="contained" onClick={() => setCustomColorOpen(true)}>Custom Color</Button>
                 <Button variant="contained" onClick={() => setCustomBlurOpen(true)}>Custom Blur</Button>
                 <Button variant="contained" onClick={() => setNoBackdropOpen(true)}>No Backdrop</Button>
