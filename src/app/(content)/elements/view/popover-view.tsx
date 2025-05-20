@@ -7,8 +7,28 @@ import { SectionTitle } from "@/components/core/section-title";
 import { Box, Divider } from "@mui/material";
 import { useOnThisPage } from "@/contexts/on-thispage-context";
 
-import { BasicPopoverPreview, PopoverHoverPreview, PopoverMultiLayerPreview, PopoverExpandPreview, PopoverMenuPreview, PopoverPositionPreview, PopoverPosition2Preview, PopoverPosition3Preview } from "../components/popover";
-import { popoverBasicString, popoverHoverString, popoverMultiLayerString, popoverExpandString, popoverMenuString, popoverPositionString, popoverPosition2String, popoverPosition3String } from "../code-string/popover";
+import {
+    BasicPopoverPreview,
+    PopoverHoverPreview,
+    PopoverMultiLayerPreview,
+    PopoverExpandPreview,
+    PopoverMenuPreview,
+    PopoverPositionPreview,
+    PopoverPosition2Preview,
+    PopoverPosition3Preview,
+    PopoverInfoPreview
+} from "../components/popover";
+import {
+    popoverBasicString,
+    popoverHoverString,
+    popoverMultiLayerString,
+    popoverExpandString,
+    popoverMenuString,
+    popoverPositionString,
+    popoverPosition2String,
+    popoverPosition3String,
+    popoverInfoString
+} from "../code-string/popover";
 
 
 const sections = [
@@ -41,28 +61,35 @@ const sections = [
         preview: <PopoverPosition2Preview />,
     },
     {
-        id: "popover-4",
+        id: "popover-5",
         title: "Position 3",
         description: "Position popover with extended design",
         codeString: popoverPosition3String,
         preview: <PopoverPosition3Preview />,
     },
     {
-        id: "popover-5",
+        id: "popover-6",
+        title: "Info",
+        description: "Info popover with extended design",
+        codeString: popoverInfoString,
+        preview: <PopoverInfoPreview />,
+    },
+    {
+        id: "popover-7",
         title: "Menu",
         description: "Menu popover with extended design",
         codeString: popoverMenuString,
         preview: <PopoverMenuPreview />,
     },
     {
-        id: "popover-6",
+        id: "popover-8",
         title: "Multi Layer",
         description: "Multi layer popover with extended design",
         codeString: popoverMultiLayerString,
         preview: <PopoverMultiLayerPreview />,
     },
     {
-        id: "popover-7",
+        id: "popover-9",
         title: "Expand Menu",
         description: "Expand popover with extended design",
         codeString: popoverExpandString,
