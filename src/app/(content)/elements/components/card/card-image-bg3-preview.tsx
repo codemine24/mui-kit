@@ -154,9 +154,6 @@ export const CardImageBg3Preview = () => {
                                             variant="contained"
                                             endIcon={<ArrowCircleRight />}
                                             sx={{
-                                                opacity: 0.75,
-                                                bgcolor: 'grey.100',
-                                                color: 'text.primary',
                                                 fontWeight: 'bold',
                                                 fontSize: '0.875rem',
                                                 py: 1,
