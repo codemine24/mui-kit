@@ -24,7 +24,6 @@ interface MenuItemType {
 interface SubMenuProps {
     item: MenuItemType;
     parentEl: HTMLElement | null;
-    onClose: () => void;
 }
 
 // Styled components
@@ -39,21 +38,7 @@ const MenuItemWithArrow = styled(MenuItem)(({ theme }) => ({
 }));
 
 // SubMenu component
-const SubMenu: React.FC<SubMenuProps> = ({ item, parentEl, onClose }) => {
-    const [hoveredItem, setHoveredItem] = useState<MenuItemType | null>(null);
-    const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null);
-
-    const handleMouseEnter = (event: MouseEvent<HTMLElement>, menuItem: MenuItemType) => {
-        if (menuItem.subItems && menuItem.subItems.length > 0) {
-            setHoveredItem(menuItem);
-            setAnchorEl(event.currentTarget);
-        }
-    };
-
-    const handleMouseLeave = () => {
-        setHoveredItem(null);
-        setAnchorEl(null);
-    };
+const SubMenu: React.FC<SubMenuProps> = ({ item, parentEl }) => {
 
     if (!item.subItems) return null;
 
@@ -68,23 +53,15 @@ const SubMenu: React.FC<SubMenuProps> = ({ item, parentEl, onClose }) => {
             {({ TransitionProps }) => (
                 <Grow {...TransitionProps} style={{ transformOrigin: 'left top' }}>
                     <Paper elevation={3}>
-                        <MenuList onMouseLeave={handleMouseLeave}>
+                        <MenuList>
                             {item.subItems?.map((subItem, index) => (
                                 <MenuItemWithArrow
                                     key={index}
-                                    onMouseEnter={(e) => handleMouseEnter(e, subItem)}
                                 >
                                     {subItem.label}
                                 </MenuItemWithArrow>
                             ))}
                         </MenuList>
-                        {hoveredItem && hoveredItem.subItems && (
-                            <SubMenu
-                                item={hoveredItem}
-                                parentEl={anchorEl}
-                                onClose={onClose}
-                            />
-                        )}
                     </Paper>
                 </Grow>
             )}
@@ -103,43 +80,23 @@ export const PopoverMultiLayerPreview = () => {
         {
             label: 'Electronics',
             subItems: [
-                {
-                    label: 'Computers',
-                    subItems: [
-                        { label: 'Laptops' },
-                        { label: 'Desktops' },
-                        { label: 'Tablets' }
-                    ]
-                },
-                {
-                    label: 'Phones',
-                    subItems: [
-                        { label: 'Apple' },
-                        { label: 'Samsung' },
-                        { label: 'Google' }
-                    ]
-                }
+                { label: 'Computers' },
+                { label: 'Phones' },
             ]
         },
         {
             label: 'Clothing',
             subItems: [
-                {
-                    label: 'Men',
-                    subItems: [
-                        { label: 'Shirts' },
-                        { label: 'Pants' },
-                        { label: 'Shoes' }
-                    ]
-                },
-                {
-                    label: 'Women',
-                    subItems: [
-                        { label: 'Dresses' },
-                        { label: 'Tops' },
-                        { label: 'Accessories' }
-                    ]
-                }
+                { label: 'Men' },
+                { label: 'Women' },
+            ]
+        },
+        {
+            label: 'Women',
+            subItems: [
+                { label: 'Dresses' },
+                { label: 'Tops' },
+                { label: 'Accessories' }
             ]
         },
         { label: 'Books' },
@@ -212,7 +169,6 @@ export const PopoverMultiLayerPreview = () => {
                 <SubMenu
                     item={hoveredItem}
                     parentEl={hoverAnchorEl}
-                    onClose={handleClose}
                 />
             )}
         </>
