@@ -5,6 +5,10 @@ import { AccordionView } from "../view/accordion-view";
 import { AlertView } from "../view/alert-view";
 import { AvatarView } from "../view/avatar-view";
 import { ButtonView } from "../view/button-view";
+import { DrawerView } from "../view/drawer-view";
+import { DialogView } from "../view/dialog-view";
+import { CardView } from "../view/card-view";
+import { PopoverView } from "../view/popover-view";
 
 export async function generateStaticParams() {
   return elementsArr.map((element) => ({
@@ -20,6 +24,10 @@ const componentMap: Record<string, JSX.Element> = {
   alert: <AlertView />,
   button: <ButtonView />,
   avatar: <AvatarView />,
+  drawer: <DrawerView />,
+  dialog: <DialogView />,
+  card: <CardView />,
+  popover: <PopoverView />,
 };
 
 export default async function Page({
