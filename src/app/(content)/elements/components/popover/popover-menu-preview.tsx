@@ -66,7 +66,7 @@ export const PopoverMenuPreview = () => {
                                             {item.icon}
                                             {item.label}
                                         </Box>
-                                        <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                                        <Box sx={{ width: 40, display: 'flex', alignItems: 'center', gap: 1 }}>
                                             <KeyboardCommandKey fontSize="small" />
                                             {item.label.charAt(0).toUpperCase()}
                                         </Box>
