@@ -1,8 +1,17 @@
 "use client";
-import { Box, Container, Link, Typography, useTheme } from "@mui/material";
+import { Box, Container, Fab, Link, Typography, useTheme } from "@mui/material";
+import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 
 export const Footer = () => {
-  const theme  = useTheme();
+  const theme = useTheme();
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <Box
       component="footer"
@@ -14,7 +23,14 @@ export const Footer = () => {
         borderTop: `.5px solid ${theme.palette.divider}`,
       }}
     >
-      <Container maxWidth="xl">
+      <Container
+        maxWidth="xl"
+        sx={{
+          justifyContent: "space-between",
+          display: "flex",
+          alignItems: "center",
+        }}
+      >
         <Typography
           variant="body2"
           sx={{
@@ -39,6 +55,29 @@ export const Footer = () => {
             Codemine
           </Link>
         </Typography>
+
+        <Fab
+          color="primary"
+          size="small"
+          onClick={scrollToTop}
+          aria-label="scroll to top"
+          sx={{
+            transition:
+              "transform 0.3s ease-in-out, background-color 0.3s ease-in-out",
+            "&:hover": {
+              transform: "scale(1.1)",
+              bgcolor: "grey.100",
+            },
+            bgcolor: "background.paper",
+            color: "primary.main",
+            boxShadow: 1,
+            "& svg": {
+              animation: "bounce 1s infinite",
+            },
+          }}
+        >
+          <ArrowUpwardIcon />
+        </Fab>
       </Container>
     </Box>
   );
