@@ -1,6 +1,4 @@
-export const dialogHeaderFooterString = `'use client';
-
-import React, { useState } from 'react';
+export const dialogHeaderFooterString = `import React, { useState } from 'react';
 import {
     Dialog,
     TextField,

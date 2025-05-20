@@ -1,6 +1,4 @@
-export const dialogCustomBackdropString = `'use client'
-
-import React from "react";
+export const dialogCustomBackdropString = `import React from "react";
 import { Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Button, Box, Stack } from "@mui/material";
 
 export const DialogCustomBackdrop = () => {
@@ -16,7 +14,7 @@ export const DialogCustomBackdrop = () => {
 
     return (
         <Box>
-            <Stack direction="row" spacing={2}>
+            <Stack direction="row" flexWrap="wrap" rowGap={2} spacing={2}>
                 <Button variant="contained" onClick={() => setCustomColorOpen(true)}>Custom Color</Button>
                 <Button variant="contained" onClick={() => setCustomBlurOpen(true)}>Custom Blur</Button>
                 <Button variant="contained" onClick={() => setNoBackdropOpen(true)}>No Backdrop</Button>

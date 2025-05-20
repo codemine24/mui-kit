@@ -1,6 +1,4 @@
-export const dialogImageViewPreviewString = `'use client';
-
-import React from 'react';
+export const dialogImageViewPreviewString = `import React from 'react';
 import {
     Avatar,
     Box,
@@ -44,9 +42,18 @@ export const DialogImageView = () => {
                                 variant="contained"
                                 size="small"
                                 startIcon={<Download />}
-                                sx={{ borderRadius: 4, textTransform: 'none' }}
+                                sx={{
+                                    borderRadius: 1,
+                                    textTransform: 'none',
+                                    minWidth: 0,
+                                    '& .MuiButton-startIcon': {
+                                        mr: { xs: 0, sm: 1 },
+                                    },
+                                }}
                             >
-                                Free Download
+                                <Typography variant="body2" fontWeight="medium" sx={{ display: { xs: 'none', sm: 'inline' } }}>
+                                    Free Download
+                                </Typography>
                             </Button>
                         </Box>
                     </Box>
@@ -54,14 +61,14 @@ export const DialogImageView = () => {
                     {/* Image */}
                     <CardMedia
                         component="img"
-                        height={420}
                         image="https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2717&q=80"
                         alt="Mountain landscape"
+                        sx={{ height: { xs: 300, sm: 420 } }}
                     />
 
                     {/* Stats and Share */}
                     <Box sx={{ px: 2, py: 1.5, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                        <Grid container spacing={4} sx={{ maxWidth: '60%' }}>
+                        <Grid container spacing={{ xs: 2, sm: 4 }} sx={{ maxWidth: '60%' }}>
                             <Grid>
                                 <Typography variant="caption" color="text.secondary">
                                     Views
@@ -99,5 +106,4 @@ export const DialogImageView = () => {
         </React.Fragment>
     );
 }
-
 `
