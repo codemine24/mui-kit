@@ -1,6 +1,4 @@
-export const dialogCTAString = `'use client';
-
-import { Dialog, IconButton, Stack, Typography, Box, Button, } from "@mui/material";
+export const dialogCTAString = `import { Dialog, IconButton, Stack, Typography, Box, Button, } from "@mui/material";
 import { useState } from "react";
 import CloseIcon from '@mui/icons-material/Close';
 

@@ -1,6 +1,4 @@
-export const dialogScrollableString = `'use client';
-
-import * as React from 'react';
+export const dialogScrollableString = `import * as React from 'react';
 import Button from '@mui/material/Button';
 import Dialog, { DialogProps } from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
@@ -34,7 +32,7 @@ export const DialogScrollable = () => {
 
     return (
         <React.Fragment>
-             <Stack direction="row" spacing={2}>
+             <Stack direction="row" flexWrap="wrap" rowGap={2} spacing={2}>
         <Button variant="contained" onClick={handleClickOpen("paper")}>
           Paper: only content scroll
         </Button>

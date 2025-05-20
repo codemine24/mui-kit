@@ -1,6 +1,4 @@
-export const dialogAnimationString = `'use client';
-
-import * as React from 'react';
+export const dialogAnimationString = `import * as React from 'react';
 import {
     Button,
     Dialog,
