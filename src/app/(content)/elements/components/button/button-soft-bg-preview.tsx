@@ -3,7 +3,7 @@ import { Box, Button, Stack } from "@mui/material";
 export const ButtonSoftBgPreview = () => {
   return (
     <Box p={2}>
-      <Stack direction="row" spacing={2} flexWrap="wrap">
+      <Stack direction="row" spacing={2} flexWrap="wrap" rowGap={2}>
         <Button
           variant="text"
           disableElevation
