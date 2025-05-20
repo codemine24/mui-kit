@@ -1,12 +1,10 @@
-"use client";
+'use client';
 
-import { useState, useRef } from "react";
+import { useState } from "react";
 import {
     Button,
     ClickAwayListener,
-    Grow,
-    Paper,
-    Popper,
+    Popover,
     MenuList,
     MenuItem,
     ListItemText,
@@ -29,7 +27,6 @@ import {
     Logout as LogoutIcon
 } from "@mui/icons-material";
 
-// Define our menu item types
 type SubMenuItem = {
     id: string;
     label: string;
@@ -37,7 +34,7 @@ type SubMenuItem = {
     onClick?: () => void;
 };
 
-type MenuItem = {
+type MenuItemType = {
     id: string;
     label: string;
     icon?: React.ReactNode;
@@ -45,14 +42,8 @@ type MenuItem = {
     onClick?: () => void;
 };
 
-// Menu items data
-const menuItems: MenuItem[] = [
-    {
-        id: "home",
-        label: "Home",
-        icon: <HomeIcon />,
-        onClick: () => { }
-    },
+const menuItems: MenuItemType[] = [
+    { id: "home", label: "Home", icon: <HomeIcon />, onClick: () => { } },
     {
         id: "profile",
         label: "Profile",
@@ -62,12 +53,7 @@ const menuItems: MenuItem[] = [
             { id: "profile-edit", label: "Edit Profile", onClick: () => { } }
         ]
     },
-    {
-        id: "messages",
-        label: "Messages",
-        icon: <EmailIcon />,
-        onClick: () => { }
-    },
+    { id: "messages", label: "Messages", icon: <EmailIcon />, onClick: () => { } },
     {
         id: "settings",
         label: "Settings",
@@ -88,162 +74,142 @@ const menuItems: MenuItem[] = [
             { id: "help-about", label: "About", icon: <InfoIcon />, onClick: () => { } }
         ]
     },
-    {
-        id: "logout",
-        label: "Logout",
-        icon: <LogoutIcon />,
-        onClick: () => { }
-    }
+    { id: "logout", label: "Logout", icon: <LogoutIcon />, onClick: () => { } }
 ];
 
-
-// Main component
 export const PopoverExpandPreview = () => {
-    const [open, setOpen] = useState(false);
+    const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
     const [expandedMenuId, setExpandedMenuId] = useState<string | null>(null);
-    const anchorRef = useRef<HTMLButtonElement>(null);
 
-    // Handle button click to toggle menu
-    const handleToggle = () => {
-        setOpen((prevOpen) => !prevOpen);
+    const open = Boolean(anchorEl);
+
+    const handleToggle = (event: React.MouseEvent<HTMLButtonElement>) => {
+        setAnchorEl(anchorEl ? null : event.currentTarget);
     };
 
-    // Handle menu close on click away
     const handleClose = (event: Event | React.SyntheticEvent) => {
-        if (
-            anchorRef.current &&
-            anchorRef.current.contains(event.target as HTMLElement)
-        ) {
-            return;
-        }
-        setOpen(false);
+        if (anchorEl && (event.target as HTMLElement).contains(anchorEl)) return;
+        setAnchorEl(null);
+        setExpandedMenuId(null);
     };
 
-    // Handle menu item click
     const handleMenuItemClick = (
-        item: MenuItem | SubMenuItem,
+        item: MenuItemType | SubMenuItem,
         event: React.MouseEvent
     ) => {
         if ('subMenuItems' in item && item.subMenuItems) {
-            // For items with submenus, expand/collapse them
             event.stopPropagation();
             setExpandedMenuId(expandedMenuId === item.id ? null : item.id);
         } else if (item.onClick) {
-            // For regular items, call their onClick handler
             item.onClick();
-            setOpen(false);
+            setAnchorEl(null);
         }
     };
 
     return (
         <Box>
-            <Button
-                ref={anchorRef}
-                variant="contained"
-                color="primary"
-                onClick={handleToggle}
-                aria-controls={open ? "menu-list-grow" : undefined}
-                aria-haspopup="true"
-            >
+            <Button variant="contained" color="primary" onClick={handleToggle}>
                 Menu
             </Button>
 
-            <Popper
+            <Popover
                 open={open}
-                anchorEl={anchorRef.current}
-                role={undefined}
-                transition
-                disablePortal
-                placement="bottom-start"
-                sx={{ zIndex: 1300, width: 280 }}
-                modifiers={[
-                    {
-                        name: 'flip',
-                        enabled: false,
-                    },
-                    {
-                        name: 'preventOverflow',
-                        enabled: true,
-                        options: {
-                            altAxis: true,
-                            boundary: 'viewport',
-                        },
-                    },
-                ]}
+                anchorEl={anchorEl}
+                onClose={handleClose}
+                anchorOrigin={{
+                    vertical: 'bottom',
+                    horizontal: 'left',
+                }}
+                transformOrigin={{
+                    vertical: 'top',
+                    horizontal: 'left',
+                }}
+                disableAutoFocus
+                disableEnforceFocus
+                PaperProps={{
+                    sx: {
+                        width: 280,
+                        height: 320,
+                        overflow: 'hidden',
+                        display: 'flex',
+                        flexDirection: 'column',
+                    }
+                }}
             >
-                {({ TransitionProps }) => (
-                    <Grow {...TransitionProps} style={{ transformOrigin: 'top left' }}>
-                        <Paper elevation={3} sx={{ width: 280, maxHeight: 400, overflow: 'auto' }}>
-                            <ClickAwayListener onClickAway={handleClose}>
-                                <MenuList autoFocusItem={open}>
-                                    {menuItems.map((item) => (
-                                        <Box>
-                                            <MenuItem
-                                                key={item.id}
-                                                onClick={(e) => handleMenuItemClick(item, e)}
-                                                sx={{
-                                                    paddingY: 1.5,
-                                                    "&:hover": {
-                                                        backgroundColor: "action.hover"
-                                                    }
-                                                }}
-                                            >
-                                                {item.icon && (
-                                                    <ListItemIcon sx={{ minWidth: 36 }}>
-                                                        {item.icon}
-                                                    </ListItemIcon>
-                                                )}
-                                                <ListItemText primary={item.label} />
-                                                {item.subMenuItems && (
-                                                    expandedMenuId === item.id ?
-                                                        <ExpandLessIcon fontSize="small" /> :
-                                                        <ExpandMoreIcon fontSize="small" />
-                                                )}
-                                            </MenuItem>
+                <ClickAwayListener onClickAway={handleClose}>
+                    <Box sx={{
+                        flex: 1,
+                        overflowY: 'auto',
+                        scrollbarWidth: 'thin',
+                        scrollbarColor: '#c1c1c1 transparent',
+                    }}>
+                        <MenuList autoFocusItem={open}>
+                            {menuItems.map((item) => (
+                                <Box key={item.id}>
+                                    <MenuItem
+                                        onClick={(e) => handleMenuItemClick(item, e)}
+                                        sx={{
+                                            paddingY: 1.5,
+                                            "&:hover": {
+                                                backgroundColor: "action.hover"
+                                            }
+                                        }}
+                                    >
+                                        {item.icon && (
+                                            <ListItemIcon sx={{ minWidth: 36 }}>
+                                                {item.icon}
+                                            </ListItemIcon>
+                                        )}
+                                        <ListItemText primary={item.label} />
+                                        {item.subMenuItems && (
+                                            expandedMenuId === item.id
+                                                ? <ExpandLessIcon fontSize="small" />
+                                                : <ExpandMoreIcon fontSize="small" />
+                                        )}
+                                    </MenuItem>
 
-                                            {/* Submenu items with collapse animation */}
-                                            {item.subMenuItems && (
-                                                <Collapse
-                                                    in={expandedMenuId === item.id}
-                                                    timeout="auto"
-                                                    unmountOnExit
-                                                >
-                                                    <Box sx={{ pl: 2, pr: 1, pb: 1, bgcolor: "action.hover" }}>
-                                                        {item.subMenuItems.map((subItem) => (
-                                                            <MenuItem
-                                                                key={subItem.id}
-                                                                onClick={(e) => handleMenuItemClick(subItem, e)}
-                                                                sx={{
-                                                                    paddingY: 1,
-                                                                    borderRadius: 1,
-                                                                    "&:hover": {
-                                                                        backgroundColor: "background.paper"
-                                                                    }
-                                                                }}
-                                                            >
-                                                                {subItem.icon && (
-                                                                    <ListItemIcon sx={{ minWidth: 36 }}>
-                                                                        {subItem.icon}
-                                                                    </ListItemIcon>
-                                                                )}
-                                                                <ListItemText
-                                                                    primary={
-                                                                        <Typography variant="body2">{subItem.label}</Typography>
-                                                                    }
-                                                                />
-                                                            </MenuItem>
-                                                        ))}
-                                                    </Box>
-                                                </Collapse>
-                                            )}
-                                        </Box>
-                                    ))}
-                                </MenuList>
-                            </ClickAwayListener>
-                        </Paper>
-                    </Grow>
-                )}
-            </Popper>
+                                    {item.subMenuItems && (
+                                        <Collapse
+                                            in={expandedMenuId === item.id}
+                                            timeout="auto"
+                                            unmountOnExit
+                                        >
+                                            <Box sx={{ pl: 2, pr: 1, pb: 1, bgcolor: "action.hover" }}>
+                                                {item.subMenuItems.map((subItem) => (
+                                                    <MenuItem
+                                                        key={subItem.id}
+                                                        onClick={(e) => handleMenuItemClick(subItem, e)}
+                                                        sx={{
+                                                            paddingY: 1,
+                                                            borderRadius: 1,
+                                                            "&:hover": {
+                                                                backgroundColor: "background.paper"
+                                                            }
+                                                        }}
+                                                    >
+                                                        {subItem.icon && (
+                                                            <ListItemIcon sx={{ minWidth: 36 }}>
+                                                                {subItem.icon}
+                                                            </ListItemIcon>
+                                                        )}
+                                                        <ListItemText
+                                                            primary={
+                                                                <Typography variant="body2">
+                                                                    {subItem.label}
+                                                                </Typography>
+                                                            }
+                                                        />
+                                                    </MenuItem>
+                                                ))}
+                                            </Box>
+                                        </Collapse>
+                                    )}
+                                </Box>
+                            ))}
+                        </MenuList>
+                    </Box>
+                </ClickAwayListener>
+            </Popover>
         </Box>
     );
 };
