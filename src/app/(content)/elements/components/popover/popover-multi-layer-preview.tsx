@@ -1,18 +1,16 @@
-import React, { useState, useRef, MouseEvent } from 'react';
+import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 import {
     Button,
-    Popover,
-    Paper,
-    MenuList,
-    MenuItem,
-    Popper,
-    Grow,
     ClickAwayListener,
-    Typography,
-    Box
+    Grow,
+    MenuItem,
+    MenuList,
+    Paper,
+    Popover,
+    Popper
 } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import ArrowRightIcon from '@mui/icons-material/ArrowRight';
+import React, { MouseEvent, useState } from 'react';
 
 // Define menu structure type
 interface MenuItemType {
