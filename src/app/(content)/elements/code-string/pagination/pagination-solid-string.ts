@@ -31,7 +31,7 @@ export const PaginationSolidPreview = () => {
             backgroundColor: "primary.main",
             borderRadius: 0,
             "&:hover": {
-              backgroundColor: "secondary.main",
+              backgroundColor: "#E60076",
             },
           },
           "& .Mui-selected": {
@@ -57,11 +57,11 @@ export const PaginationSolidPreview = () => {
             backgroundColor: "primary.main",
             borderRadius: "50%",
             "&:hover": {
-              backgroundColor: "secondary.main",
+              backgroundColor: "#E60076",
             },
           },
           "& .Mui-selected": {
-            backgroundColor: "secondary.main",
+            backgroundColor: "#E60076",
           },
         }}
       />
@@ -83,11 +83,11 @@ export const PaginationSolidPreview = () => {
             backgroundColor: "primary.main",
             borderRadius: 0,
             "&:hover": {
-              backgroundColor: "secondary.main",
+              backgroundColor: "#E60076",
             },
           },
           "& .Mui-selected": {
-            backgroundColor: "secondary.main",
+            backgroundColor: "#E60076",
           },
         }}
         renderItem={(item) => (
@@ -121,11 +121,11 @@ export const PaginationSolidPreview = () => {
             backgroundColor: "primary.main",
             borderRadius: 0,
             "&:hover": {
-              backgroundColor: "secondary.main",
+              backgroundColor: "#E60076",
             },
           },
           "& .Mui-selected": {
-            backgroundColor: "secondary.main",
+            backgroundColor: "#E60076",
             border: "none !important",
             color: "#ffffff",
           },
@@ -171,11 +171,11 @@ export const PaginationSolidPreview = () => {
             backgroundColor: "primary.main",
             borderRadius: 0,
             "&:hover": {
-              backgroundColor: "secondary.main",
+              backgroundColor: "#E60076",
             },
           },
           "& .Mui-selected": {
-            backgroundColor: "secondary.main",
+            backgroundColor: "#E60076",
           },
         }}
       />
@@ -199,11 +199,11 @@ export const PaginationSolidPreview = () => {
             backgroundColor: "primary.main",
             borderRadius: 0,
             "&:hover": {
-              backgroundColor: "secondary.main",
+              backgroundColor: "#E60076",
             },
           },
           "& .Mui-selected": {
-            backgroundColor: "secondary.main",
+            backgroundColor: "#E60076",
             color: "#ffffff",
           },
         }}

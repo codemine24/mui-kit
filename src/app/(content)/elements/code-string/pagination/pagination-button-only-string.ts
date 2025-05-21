@@ -1,7 +1,4 @@
-export const paginationButtonOnlyString = `
-"use client";
-
-import React from "react";
+export const paginationButtonOnlyString = `import React from "react";
 import Pagination from "@mui/material/Pagination";
 import PaginationItem from "@mui/material/PaginationItem";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
