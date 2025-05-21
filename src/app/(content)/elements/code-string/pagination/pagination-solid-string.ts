@@ -1,7 +1,8 @@
-export const paginationSolidString = `import { East, KeyboardBackspace } from '@mui/icons-material';
+export const paginationSolidString = `
+import { East, KeyboardBackspace } from '@mui/icons-material';
 import { Box, Divider, Pagination, PaginationItem, Typography } from '@mui/material';
 
-export const PaginationSolidPreview = () => {
+export const PaginationSolid = () => {
     return (
         <Box sx={{ py: 2 }}>
             {/* Default */}
