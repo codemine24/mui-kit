@@ -4,8 +4,11 @@ import { useState } from 'react';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
+const MAX_PAGE = 50;
+const DEFAULT_PAGE = 6;
+
 export const PaginationGoToPage = () => {
-    const [page, setPage] = useState(14);
+    const [page, setPage] = useState(DEFAULT_PAGE);
 
     const NoArrowTextField = styled(TextField)({
         // For Chrome, Safari, Edge, Opera
@@ -28,7 +31,7 @@ export const PaginationGoToPage = () => {
         <Box sx={{ py: 2 }}>
             <Box display="flex" alignItems="center" flexWrap="wrap" gap={2}>
                 <Pagination
-                    count={50}
+                    count={MAX_PAGE}
                     page={page}
                     onChange={(_, value) => setPage(value)}
                     sx={{
@@ -106,7 +109,7 @@ export const PaginationGoToPage = () => {
 
             <Box display="flex" alignItems="center" flexWrap="wrap" gap={2}>
                 <Pagination
-                    count={50}
+                    count={MAX_PAGE}
                     page={page}
                     onChange={(_, value) => setPage(value)}
                     sx={{

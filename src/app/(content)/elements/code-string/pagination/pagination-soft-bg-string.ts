@@ -1,14 +1,21 @@
 export const paginationSoftBgString = `import { Box, Divider, Typography } from "@mui/material";
 import { Pagination } from "@mui/material";
+import React from "react";
+
+const MAX_PAGE = 50;
+const DEFAULT_PAGE = 12;
 
 export const PaginationSoftBg = () => {
+    const [page, setPage] = React.useState(DEFAULT_PAGE);
+
     return (
         <Box>
             {/* Soft Background */}
             <Typography variant="body2" sx={{ mb: 2 }}>Soft Background</Typography>
             <Pagination
-                count={50}
-                defaultPage={12}
+                count={MAX_PAGE}
+                page={page}
+                onChange={(_, value) => setPage(value)}
                 variant="outlined"
                 sx={{
                     '& .MuiPaginationItem-root': {
@@ -33,8 +40,9 @@ export const PaginationSoftBg = () => {
             {/* Soft Background No Gap */}
             <Typography variant="body2" sx={{ mb: 2 }}>Soft Background With No Gap</Typography>
             <Pagination
-                count={50}
-                defaultPage={12}
+                count={MAX_PAGE}
+                page={page}
+                onChange={(_, value) => setPage(value)}
                 sx={{
                     '& .MuiPagination-ul': {
                         gap: 0,
@@ -61,8 +69,9 @@ export const PaginationSoftBg = () => {
             {/* Soft Active Background */}
             <Typography variant="body2" sx={{ mb: 2 }}>Soft Active Background</Typography>
             <Pagination
-                count={50}
-                defaultPage={12}
+                count={MAX_PAGE}
+                page={page}
+                onChange={(_, value) => setPage(value)}
                 variant="outlined"
                 sx={{
                     '& .MuiPaginationItem-root': {

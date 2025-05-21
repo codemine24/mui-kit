@@ -1,15 +1,21 @@
-export const paginationSolidString = `
-import { East, KeyboardBackspace } from '@mui/icons-material';
+export const paginationSolidString = `import { East, KeyboardBackspace } from '@mui/icons-material';
 import { Box, Divider, Pagination, PaginationItem, Typography } from '@mui/material';
+import React from 'react';
+
+const MAX_PAGE = 50;
+const DEFAULT_PAGE = 6;
 
 export const PaginationSolid = () => {
+    const [page, setPage] = React.useState(DEFAULT_PAGE);
+
     return (
         <Box sx={{ py: 2 }}>
             {/* Default */}
             <Typography variant="body2" sx={{ mb: 2 }}>Default</Typography>
             <Pagination
-                count={50}
-                defaultPage={6}
+                count={MAX_PAGE}
+                page={page}
+                onChange={(_, value) => setPage(value)}
                 sx={{
                     '& .MuiPaginationItem-root': {
                         height: "32px",
@@ -30,8 +36,9 @@ export const PaginationSolid = () => {
             {/* Rounded */}
             <Typography variant="body2" sx={{ mb: 2 }}>Rounded</Typography>
             <Pagination
-                count={50}
-                defaultPage={14}
+                count={MAX_PAGE}
+                page={page}
+                onChange={(_, value) => setPage(value)}
                 sx={{
                     '& .MuiPaginationItem-root': {
                         height: "32px",
@@ -52,8 +59,9 @@ export const PaginationSolid = () => {
             {/* Custom Icon */}
             <Typography variant="body2" sx={{ mb: 2 }}>Custom Icon</Typography>
             <Pagination
-                count={50}
-                defaultPage={4}
+                count={MAX_PAGE}
+                page={page}
+                onChange={(_, value) => setPage(value)}
                 sx={{
                     '& .MuiPaginationItem-root': {
                         height: "32px",
@@ -86,8 +94,9 @@ export const PaginationSolid = () => {
             {/* Custom Text */}
             <Typography variant="body2" sx={{ mb: 2 }}>Custom Text</Typography>
             <Pagination
-                count={50}
-                defaultPage={19}
+                count={MAX_PAGE}
+                page={page}
+                onChange={(_, value) => setPage(value)}
                 sx={{
                     '& .MuiPaginationItem-root': {
                         height: "32px",
@@ -123,8 +132,9 @@ export const PaginationSolid = () => {
             {/* Hide Buttons */}
             <Typography variant="body2" sx={{ mb: 2 }}>Hide Previous and Next Buttons</Typography>
             <Pagination
-                count={50}
-                defaultPage={2}
+                count={MAX_PAGE}
+                page={page}
+                onChange={(_, value) => setPage(value)}
                 hidePrevButton
                 hideNextButton
                 sx={{
@@ -148,8 +158,9 @@ export const PaginationSolid = () => {
             {/* Show First and Last Button */}
             <Typography variant="body2" sx={{ mb: 2 }}>Show First and Last Button</Typography>
             <Pagination
-                count={50}
-                defaultPage={12}
+                count={MAX_PAGE}
+                page={page}
+                onChange={(_, value) => setPage(value)}
                 showFirstButton
                 showLastButton
                 sx={{
