@@ -202,6 +202,30 @@ export const PaginationOutlinedPreview = () => {
                     },
                 }}
             />
+
+            <Divider sx={{ my: 4 }} />
+
+            {/* Soft Background */}
+            <Typography variant="body2" sx={{ mb: 2 }}>Soft Background</Typography>
+            <Pagination
+                count={50}
+                defaultPage={12}
+                variant="outlined"
+                sx={{
+                    '& .MuiPaginationItem-root': {
+                        height: "32px",
+                        borderRadius: 0,
+                        '&:hover': {
+                            backgroundColor: 'divider'
+                        },
+                    },
+                    '& .Mui-selected': {
+                        backgroundColor: 'rgba(230, 0, 118, 0.1)',
+                        borderColor: '#E60076',
+                        color: '#E60076',
+                    },
+                }}
+            />
         </Box>
     );
 }

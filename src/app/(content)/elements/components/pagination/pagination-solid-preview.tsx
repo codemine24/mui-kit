@@ -141,31 +141,6 @@ export const PaginationSolidPreview = () => {
                     },
                 }}
             />
-
-            <Divider sx={{ my: 4 }} />
-
-            {/* Show First and Last Button */}
-            <Typography variant="body2" sx={{ mb: 2 }}>Show First and Last Button</Typography>
-            <Pagination
-                count={50}
-                defaultPage={12}
-                showFirstButton
-                showLastButton
-                sx={{
-                    '& .MuiPaginationItem-root': {
-                        height: "32px",
-                        backgroundColor: "primary.main",
-                        borderRadius: 0,
-                        '&:hover': {
-                            backgroundColor: 'divider'
-                        },
-                    },
-                    '& .Mui-selected': {
-                        backgroundColor: 'warning.main',
-                        color: '#ffffff',
-                    },
-                }}
-            />
         </Box>
     );
 }
