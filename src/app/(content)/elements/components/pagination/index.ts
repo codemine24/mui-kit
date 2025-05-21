@@ -1,1 +1,2 @@
-export * from './pagination-solid-preview';
+export * from './pagination-outlined-preview';
+export * from './pagination-solid-preview'

@@ -6,16 +6,22 @@ import { SectionTitle } from "@/components/core/section-title";
 import { useOnThisPage } from "@/contexts/on-thispage-context";
 import { Box, Divider } from "@mui/material";
 import React from "react";
-import { paginationSolidString } from "../code-string/pagination";
-import { PaginationSolidPreview } from "../components/pagination";
-
+import { paginationOutlinedString, paginationSolidString } from "../code-string/pagination";
+import { PaginationOutlinedPreview, PaginationSolidPreview } from "../components/pagination";
 const sections = [
     {
-        id: "pagination-1",
-        title: "Solid Pagination",
+        id: "pagination-solid",
+        title: "Solid",
         description: "Material UI core pagination with extended design, and functionality.",
         codeString: paginationSolidString,
         preview: <PaginationSolidPreview />,
+    },
+    {
+        id: "pagination-outlined",
+        title: "Outlined",
+        description: "Material UI core pagination with extended design, and functionality.",
+        codeString: paginationOutlinedString,
+        preview: <PaginationOutlinedPreview />,
     }
 ];
 
