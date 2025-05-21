@@ -4,7 +4,7 @@ import { Breadcrumbs, Link, Typography } from "@mui/material";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 import TrendingFlatIcon from "@mui/icons-material/TrendingFlat";
 
-export default function CustomSeparatorBreadcrumbs() {
+export const BreadcrumbCustomSeparatorPreview = () => {
   const breadcrumbs = [
     <Link underline="hover" key="1" color="inherit" href="#">
       MUI Kit

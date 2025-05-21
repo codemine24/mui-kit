@@ -1,11 +1,11 @@
-import * as React from "react";
+export const breadcrumbIconString = `import * as React from "react";
 import Stack from "@mui/material/Stack";
 import { Breadcrumbs, Link, Typography } from "@mui/material";
 import HomeIcon from "@mui/icons-material/Home";
 import HubIcon from "@mui/icons-material/Hub";
 import ApiIcon from "@mui/icons-material/Api";
 
-export default function IconBreadcrumbs() {
+export const BreadcrumbIcon = () => {
   return (
     <Stack
       direction="column"
@@ -43,3 +43,4 @@ export default function IconBreadcrumbs() {
     </Stack>
   );
 }
+`

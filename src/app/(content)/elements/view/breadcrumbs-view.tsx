@@ -6,12 +6,24 @@ import { PageTitle } from "@/components/core/page-title";
 import { SectionTitle } from "@/components/core/section-title";
 import { Box, Divider } from "@mui/material";
 import { useOnThisPage } from "@/contexts/on-thispage-context";
-import BasicBreadcrumbs from "../components/breadcrumb/basic-breadcrumb";
-import CustomSeparatorBreadcrumbs from "../components/breadcrumb/custom-separator-breadcrumb";
-import IconBreadcrumbs from "../components/breadcrumb/icon-breadcrumb";
-import CollapsedBreadcrumbs from "../components/breadcrumb/collapsed-breadcrumb";
-import ChipBreadcrumbs from "../components/breadcrumb/chip-breadcrumb";
-import BackgroundBreadcrumbs from "../components/breadcrumb/background-breadcrumb";
+import {
+  BreadcrumbBasicPreview,
+  BreadcrumbCustomSeparatorPreview,
+  BreadcrumbCollapsedPreview,
+  BreadcrumbChipPreview,
+  BreadcrumbBackgroundPreview,
+  BreadcrumbIconPreview,
+  BreadcrumbShapePreview,
+} from "../components/breadcrumb";
+import {
+  breadcrumbCollapsedString,
+  breadcrumbChipString,
+  breadcrumbCustomSeparatorString,
+  breadcrumbIconString,
+  breadcrumbShapeString,
+  breadcrumbBackgroundString,
+  breadcrumbBasicString,
+} from "../code-string/breadcrumb";
 
 const sections = [
   {
@@ -19,48 +31,56 @@ const sections = [
     title: "Basic",
     description:
       "Use Material UI basic breadcrumbs with extended design. No extra package required.",
-    codeString: "",
-    preview: <BasicBreadcrumbs />,
+    codeString: breadcrumbBasicString,
+    preview: <BreadcrumbBasicPreview />,
   },
   {
     id: "breadcrumbs-2",
     title: "Custom Separator",
     description:
       "Use Material UI custom separator breadcrumbs with extended design. No extra package required.",
-    codeString: "",
-    preview: <CustomSeparatorBreadcrumbs />,
+    codeString: breadcrumbCustomSeparatorString,
+    preview: <BreadcrumbCustomSeparatorPreview />,
   },
   {
     id: "breadcrumbs-3",
     title: "With Icon",
     description:
       "Use Material UI breadcrumbs with icon with extended design. No extra package required.",
-    codeString: "",
-    preview: <IconBreadcrumbs />,
+    codeString: breadcrumbIconString,
+    preview: <BreadcrumbIconPreview />,
   },
   {
     id: "breadcrumbs-4",
     title: "With Chip",
     description:
       "Use Material UI collapsed breadcrumbs with extended design. No extra package required.",
-    codeString: "",
-    preview: <ChipBreadcrumbs />,
+    codeString: breadcrumbChipString,
+    preview: <BreadcrumbChipPreview />,
   },
   {
     id: "breadcrumbs-5",
     title: "With Background",
     description:
       "Use Material UI collapsed breadcrumbs with extended design. No extra package required.",
-    codeString: "",
-    preview: <BackgroundBreadcrumbs />,
+    codeString: breadcrumbBackgroundString,
+    preview: <BreadcrumbBackgroundPreview />,
   },
   {
     id: "breadcrumbs-6",
     title: "Collapsed",
     description:
       "Use Material UI collapsed breadcrumbs with extended design. No extra package required.",
-    codeString: "",
-    preview: <CollapsedBreadcrumbs />,
+    codeString: breadcrumbCollapsedString,
+    preview: <BreadcrumbCollapsedPreview />,
+  },
+  {
+    id: "breadcrumbs-7",
+    title: "With Shape",
+    description:
+      "Use Material UI shape breadcrumbs with extended design. No extra package required.",
+    codeString: breadcrumbShapeString,
+    preview: <BreadcrumbShapePreview />,
   },
 ];
 

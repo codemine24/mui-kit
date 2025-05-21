@@ -5,7 +5,7 @@ import HomeIcon from "@mui/icons-material/Home";
 import HubIcon from "@mui/icons-material/Hub";
 import ApiIcon from "@mui/icons-material/Api";
 
-export default function CollapsedBreadcrumbs() {
+export const BreadcrumbCollapsedPreview = () => {
   return (
     <Stack
       direction="column"

@@ -1,4 +1,4 @@
-import * as React from "react";
+export const breadcrumbChipString = `import * as React from "react";
 import Stack from "@mui/material/Stack";
 import { Breadcrumbs, Chip } from "@mui/material";
 import HomeIcon from "@mui/icons-material/Home";
@@ -31,7 +31,7 @@ const StyledBreadcrumb = styled(Chip)(({ theme }) => {
   };
 }) as typeof Chip;
 
-export default function ChipBreadcrumbs() {
+export const BreadcrumbChip = () => {
   return (
     <Stack
       direction="column"
@@ -53,3 +53,5 @@ export default function ChipBreadcrumbs() {
     </Stack>
   );
 }
+`;
+
