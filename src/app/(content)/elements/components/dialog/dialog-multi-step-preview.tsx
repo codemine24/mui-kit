@@ -125,8 +125,8 @@ export const DialogMultiStepPreview = () => {
             case 3:
                 return (
                     <Box>
-                        <Typography variant="h6" gutterBottom>Terms & Conditions</Typography>
-                        <Typography variant="body2" gutterBottom>
+                        <Typography variant="h6">Terms & Conditions</Typography>
+                        <Typography variant="body2" sx={{ my: 2 }}>
                             Please read and agree to the terms and conditions to proceed.
                         </Typography>
                         <label>
@@ -151,7 +151,14 @@ export const DialogMultiStepPreview = () => {
             <Dialog open={open} onClose={handleClose} fullWidth maxWidth="md">
                 <DialogTitle sx={{ fontWeight: 'bold' }}>Application Form Preview</DialogTitle>
                 <DialogContent>
-                    <Stepper activeStep={activeStep} alternativeLabel sx={{ mb: 4 }}>
+                    <Stepper activeStep={activeStep} alternativeLabel sx={{
+                        mb: 4,
+                        overflowX: 'auto',
+                        scrollbarWidth: 'none',
+                        '&::-webkit-scrollbar': {
+                            display: 'none',
+                        },
+                    }}>
                         {steps.map((label) => (
                             <Step key={label}>
                                 <StepLabel>{label}</StepLabel>

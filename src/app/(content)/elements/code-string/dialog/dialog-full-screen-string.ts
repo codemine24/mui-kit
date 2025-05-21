@@ -1,6 +1,4 @@
-export const dialogFullScreenString = `'use client';
-
-import * as React from 'react';
+export const dialogFullScreenString = `import * as React from 'react';
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import ListItemText from '@mui/material/ListItemText';

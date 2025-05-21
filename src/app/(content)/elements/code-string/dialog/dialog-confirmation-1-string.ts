@@ -1,6 +1,4 @@
-export const dialogConfirmation1String = `'use client'
-
-import React from "react";
+export const dialogConfirmation1String = `import React from "react";
 import { Box, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Button, Typography } from "@mui/material";
 import { Close } from "@mui/icons-material";
 

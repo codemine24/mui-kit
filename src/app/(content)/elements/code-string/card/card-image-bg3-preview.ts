@@ -6,7 +6,7 @@ export const cardImageBg3String = `import {
 import Grid from '@mui/material/Grid';
 import { ArrowCircleRight } from '@mui/icons-material';
 
-export const CardImageBg3 = () => {
+export const CardImageBg3Preview = () => {
     return (
         <Box sx={{
             position: 'relative',
@@ -154,9 +154,6 @@ export const CardImageBg3 = () => {
                                             variant="contained"
                                             endIcon={<ArrowCircleRight />}
                                             sx={{
-                                                opacity: 0.75,
-                                                bgcolor: 'grey.100',
-                                                color: 'text.primary',
                                                 fontWeight: 'bold',
                                                 fontSize: '0.875rem',
                                                 py: 1,
@@ -174,4 +171,4 @@ export const CardImageBg3 = () => {
             </Box>
         </Box>
     );
-};`;
+};`

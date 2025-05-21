@@ -18,7 +18,7 @@ export const DialogSizesPreview = () => {
 
     return (
         <React.Fragment>
-            <Stack direction="row" spacing={2}>
+            <Stack direction="row" flexWrap="wrap" rowGap={2} spacing={2}>
                 <Button variant="contained" onClick={() => handleClickOpen("xs")}>
                     Small Modal
                 </Button>

@@ -1,4 +1,4 @@
-import { Avatar, Box, Grid, Paper, Stack, Typography } from '@mui/material';
+import { Avatar, Box, Grid, Paper, Stack, Typography, useMediaQuery, useTheme } from '@mui/material';
 
 export const CardGridPreview = () => {
     const testimonials = [
@@ -32,49 +32,58 @@ export const CardGridPreview = () => {
         }
     ];
 
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+    const columns = isMobile ? 1 : 2;
+
     return (
-        <Grid container spacing={0} sx={{ width: { xs: "100%", md: "90%" } }}>
-            {testimonials.map((testimonial, index) => (
-                <Grid size={{ xs: 12, sm: 6 }} key={index}>
-                    <Paper
-                        elevation={0}
-                        sx={{
-                            border: '1px solid',
-                            borderColor: 'grey.200',
-                            p: 4,
-                            height: '100%',
-                            borderTopWidth: '1px',
-                            borderBottomWidth: '0.5px',
-                            borderRadius: 0,
-                            borderLeftWidth: index % 2 === 0 ? '1px' : '0.5px',
-                            borderRightWidth: index % 2 === 0 ? '0.5px' : '1px',
-                            borderStyle: 'solid',
-                            display: 'flex',
-                            flexDirection: 'column',
-                        }}
-                    >
-                        <Typography variant="h6" textAlign="center" fontWeight={600} gutterBottom>
-                            {testimonial.title}
-                        </Typography>
-                        <Typography variant="body2" color="text.secondary" sx={{ mb: 4, textAlign: 'center' }}>
-                            {testimonial.quote}
-                        </Typography>
-                        <Box mt="auto">
-                            <Stack direction="row" spacing={2} alignItems="center">
-                                <Avatar src={testimonial.avatar} alt={`${testimonial.author} avatar`} sx={{ width: 32, height: 32 }} />
-                                <Box>
-                                    <Typography variant="body2" fontWeight={500}>
-                                        {testimonial.author}
-                                    </Typography>
-                                    <Typography variant="caption" color="text.secondary">
-                                        {testimonial.role}
-                                    </Typography>
-                                </Box>
-                            </Stack>
-                        </Box>
-                    </Paper>
-                </Grid>
-            ))}
+        <Grid container sx={{ width: { xs: "100%", md: "90%" } }}>
+            {testimonials.map((testimonial, index) => {
+                const isLastCol = (index + 1) % columns === 0;
+                const isLastRow = index >= testimonials.length - columns;
+
+                return (
+                    <Grid size={{ xs: 12, sm: 6 }} key={index}>
+                        <Paper
+                            elevation={0}
+                            sx={{
+                                borderColor: 'divider',
+                                borderStyle: 'solid',
+                                borderWidth: '0px',
+                                borderTopWidth: '1px',
+                                borderLeftWidth: '1px',
+                                ...(isLastCol && { borderRightWidth: '1px' }),
+                                ...(isLastRow && { borderBottomWidth: '1px' }),
+                                p: 4,
+                                borderRadius: 0,
+                                height: '100%',
+                                display: 'flex',
+                                flexDirection: 'column',
+                            }}
+                        >
+                            <Typography variant="h6" textAlign="center" fontWeight={600} gutterBottom>
+                                {testimonial.title}
+                            </Typography>
+                            <Typography variant="body2" color="text.secondary" sx={{ mb: 4, textAlign: 'center' }}>
+                                {testimonial.quote}
+                            </Typography>
+                            <Box mt="auto">
+                                <Stack direction="row" spacing={2} alignItems="center">
+                                    <Avatar src={testimonial.avatar} alt={`${testimonial.author} avatar`} sx={{ width: 32, height: 32 }} />
+                                    <Box>
+                                        <Typography variant="body2" fontWeight={500}>
+                                            {testimonial.author}
+                                        </Typography>
+                                        <Typography variant="caption" color="text.secondary">
+                                            {testimonial.role}
+                                        </Typography>
+                                    </Box>
+                                </Stack>
+                            </Box>
+                        </Paper>
+                    </Grid>
+                );
+            })}
         </Grid>
     );
 };
