@@ -28,57 +28,53 @@ import {
 const sections = [
   {
     id: "breadcrumbs-1",
-    title: "Basic",
+    title: "Regular",
     description:
-      "Use Material UI basic breadcrumbs with extended design. No extra package required.",
+      "Use this simple breadcrumbs that will adjust with most of the website layout. No extra package required.",
     codeString: breadcrumbBasicString,
     preview: <BreadcrumbBasicPreview />,
   },
   {
     id: "breadcrumbs-2",
-    title: "Custom Separator",
-    description:
-      "Use Material UI custom separator breadcrumbs with extended design. No extra package required.",
+    title: "Custom separator",
+    description: "Use these variants if you need custom separator.",
     codeString: breadcrumbCustomSeparatorString,
     preview: <BreadcrumbCustomSeparatorPreview />,
   },
   {
     id: "breadcrumbs-3",
-    title: "With Icon",
-    description:
-      "Use Material UI breadcrumbs with icon with extended design. No extra package required.",
+    title: "With icon",
+    description: "You can use custom icons along with the labels. ",
     codeString: breadcrumbIconString,
     preview: <BreadcrumbIconPreview />,
   },
   {
     id: "breadcrumbs-4",
     title: "With Chip",
-    description:
-      "Use Material UI collapsed breadcrumbs with extended design. No extra package required.",
+    description: "Chip breadcrumbs perfect for you, if you like chip style. ",
     codeString: breadcrumbChipString,
     preview: <BreadcrumbChipPreview />,
   },
   {
     id: "breadcrumbs-5",
-    title: "With Background",
+    title: "With background",
     description:
-      "Use Material UI collapsed breadcrumbs with extended design. No extra package required.",
+      "A huge collection of breadcrumbs with different background color. Choose your desire one from this collection.",
     codeString: breadcrumbBackgroundString,
     preview: <BreadcrumbBackgroundPreview />,
   },
   {
     id: "breadcrumbs-6",
     title: "Collapsed",
-    description:
-      "Use Material UI collapsed breadcrumbs with extended design. No extra package required.",
+    description: "If breadcrumbs are too long, you can collapse them.",
     codeString: breadcrumbCollapsedString,
     preview: <BreadcrumbCollapsedPreview />,
   },
   {
     id: "breadcrumbs-7",
-    title: "With Shape",
+    title: "Custom shape",
     description:
-      "Use Material UI shape breadcrumbs with extended design. No extra package required.",
+      "You can customize the shape using clip-path css property. Here is an example.",
     codeString: breadcrumbShapeString,
     preview: <BreadcrumbShapePreview />,
   },
