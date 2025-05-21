@@ -24,14 +24,14 @@ export const BreadcrumbBasicPreview = () => {
 
       <Divider sx={{ my: 4 }} />
 
-      <Breadcrumbs separator="›" color="secondary" aria-label="breadcrumb">
-        <Link underline="hover" color="inherit" href="#">
+      <Breadcrumbs separator="›" color="primary" aria-label="breadcrumb">
+        <Link underline="hover" href="#">
           MUI Kit
         </Link>
-        <Link underline="hover" color="inherit" href="#">
+        <Link underline="hover" href="#">
           Core
         </Link>
-        <Typography sx={{ color: "text.primary" }}>Breadcrumbs</Typography>
+        <Typography sx={{ fontWeight: "medium" }}>Breadcrumbs</Typography>
       </Breadcrumbs>
     </Stack >
   );

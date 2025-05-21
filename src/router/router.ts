@@ -20,12 +20,7 @@ export const elements = [
     label: "Floating Action Button",
     path: PATHS.ELEMENTS.FLOATING_ACTION_BUTTON,
   },
-  // { label: "Image List", path: PATHS.ELEMENTS.IMAGE_LIST },
-  // { label: "List", path: PATHS.ELEMENTS.LIST },
-  // { label: "Menu", path: PATHS.ELEMENTS.MENU },
-  // { label: "Modal", path: PATHS.ELEMENTS.MODAL },
   { label: "Pagination", path: PATHS.ELEMENTS.PAGINATION },
-  // { label: "Paper", path: PATHS.ELEMENTS.PAPER },
   { label: "Popover", path: PATHS.ELEMENTS.POPOVER },
   { label: "Progress", path: PATHS.ELEMENTS.PROGRESS },
   { label: "Radio Group", path: PATHS.ELEMENTS.RADIO_GROUP },
@@ -44,6 +39,13 @@ export const elements = [
   { label: "Tooltip", path: PATHS.ELEMENTS.TOOLTIP },
   { label: "Transfer List", path: PATHS.ELEMENTS.TRANSFER_LIST },
   { label: "Typography", path: PATHS.ELEMENTS.TYPOGRAPHY },
+];
+
+const blockElements = [
+  { label: "Overview", path: PATHS.BLOCKS.OVERVIEW },
+  { label: "Gallery", path: PATHS.BLOCKS.GALLERY },
+  { label: "Jumbotron", path: PATHS.BLOCKS.JUMBOTRON },
+  { label: "Mega Menu", path: PATHS.BLOCKS.MEGA_MENU },
 ];
 
 interface IBaseSidebarGroup {
@@ -97,9 +99,9 @@ export const contentSidebarPathGroups: ContentSidebarPathGroup[] = [
   {
     key: "BLOCKS",
     label: "Blocks",
-    path: PATHS.BLOCKS.ROOT,
-    type: "single",
-    items: [],
+    items: blockElements,
+    path: PATHS.BLOCKS.OVERVIEW,
+    type: "group",
   },
   {
     key: "TEMPLATES",
@@ -127,5 +129,14 @@ export const contentSidebarPathGroups: ContentSidebarPathGroup[] = [
 export const navItems = [
   { label: "Docs", path: PATHS.DOCS.INSTALL },
   { label: "Kit", path: PATHS.ELEMENTS.OVERVIEW },
-  { label: "Contribute ♡", path: PATHS.CONTRIBUTE },
+  { label: "Why?", path: PATHS.CONTRIBUTE },
+];
+
+// sitemap routes. do not change
+export const sitemapRoutes = [
+  PATHS.DOCS.INTRO,
+  PATHS.DOCS.INSTALL,
+  PATHS.ELEMENTS.OVERVIEW,
+  PATHS.CONTRIBUTE,
+  ...elements.map((item) => item.path),
 ];

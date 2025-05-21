@@ -51,7 +51,10 @@ export const PATHS = {
     INSTALL: "/docs/installation",
   },
   BLOCKS: {
-    ROOT: "/blocks",
+    OVERVIEW: "/blocks",
+    GALLERY: "/blocks/gallery",
+    JUMBOTRON: "/blocks/jumbotron",
+    MEGA_MENU: "/blocks/mega-menu",
     ABOUT: "/blocks/about",
     CALL_TO_ACTION: "/blocks/call-to-action",
     CONTACT: "/blocks/contact",

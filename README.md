@@ -12,7 +12,7 @@ Getting Started
 Prerequisites
 
 Node.js (v18 or later)
-npm, yarn, pnpm, or bun
+npm, yarn, or bun
 
 Installation
 
