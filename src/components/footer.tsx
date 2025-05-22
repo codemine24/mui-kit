@@ -1,6 +1,7 @@
 "use client";
 import { Box, Container, Fab, Link, Typography, useTheme } from "@mui/material";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
+import { Iconify } from "./iconify";
 
 export const Footer = () => {
   const theme = useTheme();
@@ -72,11 +73,11 @@ export const Footer = () => {
             color: "primary.main",
             boxShadow: 1,
             "& svg": {
-              animation: "bounce 1s infinite",
+              animation: "bounce 1.5s infinite",
             },
           }}
         >
-          <ArrowUpwardIcon />
+          <Iconify icon="iconamoon:arrow-up-2-duotone" />
         </Fab>
       </Container>
     </Box>
