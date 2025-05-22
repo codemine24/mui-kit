@@ -253,7 +253,7 @@ export const HeroSection = () => {
 
             <Button
               LinkComponent={Link}
-              href={PATHS.ELEMENTS.OVERVIEW}
+              href={PATHS.COMPONENTS.OVERVIEW}
               variant="outlined"
               color="primary"
               sx={{

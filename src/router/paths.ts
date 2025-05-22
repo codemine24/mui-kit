@@ -1,5 +1,5 @@
 export const PATHS = {
-  ELEMENTS: {
+  COMPONENTS: {
     OVERVIEW: "/elements",
     ACCORDION: "/elements/accordion",
     ALERT: "/elements/alert",
@@ -55,6 +55,7 @@ export const PATHS = {
     GALLERY: "/blocks/gallery",
     JUMBOTRON: "/blocks/jumbotron",
     MEGA_MENU: "/blocks/mega-menu",
+    COMING_SOON: "/blocks/coming-soon",
     ABOUT: "/blocks/about",
     CALL_TO_ACTION: "/blocks/call-to-action",
     CONTACT: "/blocks/contact",
