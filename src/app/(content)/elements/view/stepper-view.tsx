@@ -40,8 +40,6 @@ export const StepperView = () => {
                 description="Material UI core stepper with extended design, and functionality. "
             />
 
-            <Divider sx={{ my: 4 }} />
-
             {/* Stepper Section */}
             {
                 sections.map((section) => (
