@@ -1,6 +1,5 @@
 "use client";
 import { Box, Container, Fab, Link, Typography, useTheme } from "@mui/material";
-import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import { Iconify } from "./iconify";
 
 export const Footer = () => {
