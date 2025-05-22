@@ -2,6 +2,7 @@
 
 import { Logo } from "@/components/core/logo";
 import { Iconify } from "@/components/iconify";
+import { PATHS } from "@/router/paths";
 import { contentSidebarPathGroups } from "@/router/router";
 import { TContentSidebarMode } from "@/types/content.types";
 import { getRandomColor } from "@/utils/colors";
@@ -30,13 +31,16 @@ type ContentSidebarProps = {
 export const ContentSidebar = ({
   variant = "sidebar",
 }: ContentSidebarProps) => {
+  const pathname = usePathname();
   const theme = useTheme();
-  const [open, setOpen] = useState<TContentSidebarMode | "">("ELEMENTS");
+  const [open, setOpen] = useState<TContentSidebarMode | "">(
+    pathname === PATHS.BLOCKS.OVERVIEW ? "BLOCKS" : "COMPONENTS"
+  );
+  // const pathname = usePathname();
   const [searchValue, setSearchValue] = useState("");
   const [searchResults, setSearchResults] = useState<
     { key: string; label: string; path: string }[]
   >([]);
-  const pathname = usePathname();
 
   useEffect(() => {
     setSearchValue("");
@@ -48,6 +52,7 @@ export const ContentSidebar = ({
   };
 
   const isActive = (path: string) => pathname === path;
+  console.log(pathname, "isActive....");
 
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
@@ -148,8 +153,7 @@ export const ContentSidebar = ({
           }}
         />
       </Box>
-      <List
-      >
+      <List>
         {/* search results */}
         {searchValue ? (
           <Box>
