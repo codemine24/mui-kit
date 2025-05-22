@@ -91,5 +91,5 @@ export const PATHS = {
   FORM: {
     ROOT: "/form",
   },
-  CONTRIBUTE: "/contribute",
+  ABOUT: "/about",
 };

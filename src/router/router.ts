@@ -117,7 +117,7 @@ export const navItems = [
   // { label: "Docs", path: PATHS.DOCS.INSTALL },
   { label: "Components", path: PATHS.COMPONENTS.OVERVIEW },
   { label: "Blocks", path: PATHS.BLOCKS.OVERVIEW },
-  { label: "Why?", path: PATHS.CONTRIBUTE },
+  { label: "Why?", path: PATHS.ABOUT },
 ];
 
 // sitemap routes. do not change
@@ -125,6 +125,6 @@ export const sitemapRoutes = [
   PATHS.DOCS.INTRO,
   PATHS.DOCS.INSTALL,
   PATHS.COMPONENTS.OVERVIEW,
-  PATHS.CONTRIBUTE,
+  PATHS.ABOUT,
   ...elements.map((item) => item.path),
 ];
