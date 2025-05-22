@@ -202,7 +202,7 @@ export const ButtonView = () => {
     <Box>
       <CustomBreadCrumbs
         pathArr={[
-          { label: "Elements", path: "/elements" },
+          { label: "Components", path: "/elements" },
           { label: "Button", path: "" },
         ]}
       />

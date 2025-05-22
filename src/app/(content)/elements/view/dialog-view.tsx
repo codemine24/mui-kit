@@ -174,7 +174,7 @@ export const DialogView = () => {
     <Box>
       <CustomBreadCrumbs
         pathArr={[
-          { label: "Elements", path: "/elements" },
+          { label: "Components", path: "/elements" },
           { label: "Dialog", path: "" },
         ]}
       />

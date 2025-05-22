@@ -92,7 +92,7 @@ export const contentSidebarPathGroups: ContentSidebarPathGroup[] = [
   },
   {
     key: "ELEMENTS",
-    label: "Elements",
+    label: "Components",
     items: elements,
     path: PATHS.COMPONENTS.OVERVIEW,
     type: "group",
@@ -114,7 +114,7 @@ export const contentSidebarPathGroups: ContentSidebarPathGroup[] = [
 ];
 
 export const navItems = [
-  { label: "Docs", path: PATHS.DOCS.INSTALL },
+  // { label: "Docs", path: PATHS.DOCS.INSTALL },
   { label: "Components", path: PATHS.COMPONENTS.OVERVIEW },
   { label: "Blocks", path: PATHS.BLOCKS.OVERVIEW },
   { label: "Why?", path: PATHS.CONTRIBUTE },
