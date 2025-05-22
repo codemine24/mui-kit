@@ -24,10 +24,10 @@ export const CodePreviewCopyWrapper: React.FC<CodePreviewWrapperProps> = ({
       await navigator.clipboard.writeText(codeString);
       setCopySuccess("Copied!");
       setIcon("eva:checkmark-fill");
-      setTimeout(() => {
-        setCopySuccess("");
-        setIcon("solar:copy-line-duotone");
-      }, 2000);
+      // setTimeout(() => {
+      //   setCopySuccess("");
+      //   setIcon("solar:copy-line-duotone");
+      // }, 2000);
     } catch (err) {
       console.error("Copy failed:", err);
       setCopySuccess("Failed to copy!");
@@ -62,7 +62,9 @@ export const CodePreviewCopyWrapper: React.FC<CodePreviewWrapperProps> = ({
         }}
       >
         {tab === "preview" ? (
-          <Box sx={{ overflow: "auto", display: "flex", justifyContent: "center" }}>
+          <Box
+            sx={{ overflow: "auto", display: "flex", justifyContent: "center" }}
+          >
             {preview}
           </Box>
         ) : (
