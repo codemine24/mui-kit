@@ -46,6 +46,7 @@ const blockElements = [
   { label: "Gallery", path: PATHS.BLOCKS.GALLERY },
   { label: "Jumbotron", path: PATHS.BLOCKS.JUMBOTRON },
   { label: "Mega Menu", path: PATHS.BLOCKS.MEGA_MENU },
+  { label: "Coming Soon", path: PATHS.BLOCKS.COMING_SOON },
 ];
 
 interface IBaseSidebarGroup {
@@ -90,7 +91,7 @@ export const contentSidebarPathGroups: ContentSidebarPathGroup[] = [
     items: [],
   },
   {
-    key: "ELEMENTS",
+    key: "COMPONENTS",
     label: "Elements",
     items: elements,
     path: PATHS.ELEMENTS.OVERVIEW,
@@ -104,20 +105,6 @@ export const contentSidebarPathGroups: ContentSidebarPathGroup[] = [
     type: "group",
   },
   {
-    key: "TEMPLATES",
-    label: "Templates",
-    path: PATHS.TEMPLATES.ROOT,
-    type: "single",
-    items: [],
-  },
-  {
-    key: "DASHBOARD",
-    label: "Dashboard",
-    path: PATHS.DASHBOARD.ROOT,
-    type: "single",
-    items: [],
-  },
-  {
     key: "FORM",
     label: "Form",
     path: PATHS.FORM.ROOT,
@@ -127,9 +114,10 @@ export const contentSidebarPathGroups: ContentSidebarPathGroup[] = [
 ];
 
 export const navItems = [
-  { label: "Docs", path: PATHS.DOCS.INSTALL },
-  { label: "Kit", path: PATHS.ELEMENTS.OVERVIEW },
-  { label: "Why?", path: PATHS.CONTRIBUTE },
+  // { label: "Docs", path: PATHS.DOCS.INSTALL },
+  { label: "Elements", path: PATHS.ELEMENTS.OVERVIEW },
+  { label: "Blocks", path: PATHS.BLOCKS.OVERVIEW },
+  { label: "Why?", path: PATHS.ABOUT },
 ];
 
 // sitemap routes. do not change
@@ -137,6 +125,6 @@ export const sitemapRoutes = [
   PATHS.DOCS.INTRO,
   PATHS.DOCS.INSTALL,
   PATHS.ELEMENTS.OVERVIEW,
-  PATHS.CONTRIBUTE,
+  PATHS.ABOUT,
   ...elements.map((item) => item.path),
 ];

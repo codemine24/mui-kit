@@ -55,6 +55,7 @@ export const PATHS = {
     GALLERY: "/blocks/gallery",
     JUMBOTRON: "/blocks/jumbotron",
     MEGA_MENU: "/blocks/mega-menu",
+    COMING_SOON: "/blocks/coming-soon",
     ABOUT: "/blocks/about",
     CALL_TO_ACTION: "/blocks/call-to-action",
     CONTACT: "/blocks/contact",
@@ -90,5 +91,5 @@ export const PATHS = {
   FORM: {
     ROOT: "/form",
   },
-  CONTRIBUTE: "/contribute",
+  ABOUT: "/about",
 };

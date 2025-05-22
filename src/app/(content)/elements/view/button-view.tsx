@@ -214,8 +214,12 @@ export const ButtonView = () => {
       <Divider sx={{ my: 4 }} />
 
       <ExternalPackageAlert
-        packageName="@iconify/react"
-        packageUrl="https://www.npmjs.com/package/@iconify/react"
+        packages={[
+          {
+            name: "@iconify/react",
+            url: "https://www.npmjs.com/package/@iconify/react",
+          },
+        ]}
       />
 
       {/* Button - 1 */}

@@ -1,6 +1,7 @@
 "use client";
 import { CustomBreadCrumbs } from "@/components/core/breadcrumbs";
 import { PageTitle } from "@/components/core/page-title";
+import { useOnThisPage } from "@/contexts/on-thispage-context";
 import { Box, Divider, Stack, TextField, useTheme } from "@mui/material";
 import Link from "next/link";
 import React from "react";
@@ -10,6 +11,11 @@ export const ElementView = () => {
   const theme = useTheme();
   const [searchText, setSearchText] = React.useState<string>("");
   const [filteredData, setFilteredData] = React.useState(elementsArr);
+  const { setSections } = useOnThisPage();
+
+  React.useEffect(() => {
+    setSections([]);
+  }, [setSections]);
 
   React.useEffect(() => {
     if (searchText) {

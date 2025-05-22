@@ -5,11 +5,17 @@ import { Box, Divider, Stack, TextField, useTheme } from "@mui/material";
 import Link from "next/link";
 import React from "react";
 import { blockArr } from "./constants/data";
+import { useOnThisPage } from "@/contexts/on-thispage-context";
 
 export const BlockView = () => {
   const theme = useTheme();
   const [searchText, setSearchText] = React.useState<string>("");
   const [filteredData, setFilteredData] = React.useState(blockArr);
+  const { setSections } = useOnThisPage();
+
+  React.useEffect(() => {
+    setSections([]);
+  }, [setSections]);
 
   React.useEffect(() => {
     if (searchText) {

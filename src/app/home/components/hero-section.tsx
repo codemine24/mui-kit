@@ -262,7 +262,7 @@ export const HeroSection = () => {
               }}
               startIcon={<GridViewIcon />}
             >
-              Explore Components
+              Explore Elements
             </Button>
           </Box>
         </Box>

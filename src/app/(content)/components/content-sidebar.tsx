@@ -4,6 +4,7 @@ import { Logo } from "@/components/core/logo";
 import { Iconify } from "@/components/iconify";
 import { contentSidebarPathGroups } from "@/router/router";
 import { TContentSidebarMode } from "@/types/content.types";
+import { getActiveToggle } from "@/utils/activeToggle";
 import { getRandomColor } from "@/utils/colors";
 import { pxToRem } from "@/utils/pxToRem";
 import { ChevronRight as ChevronRightIcon } from "@mui/icons-material";
@@ -30,17 +31,18 @@ type ContentSidebarProps = {
 export const ContentSidebar = ({
   variant = "sidebar",
 }: ContentSidebarProps) => {
+  const pathname = usePathname();
   const theme = useTheme();
-  const [open, setOpen] = useState<TContentSidebarMode | "">("ELEMENTS");
+  const [open, setOpen] = useState<TContentSidebarMode | "">("");
   const [searchValue, setSearchValue] = useState("");
   const [searchResults, setSearchResults] = useState<
     { key: string; label: string; path: string }[]
   >([]);
-  const pathname = usePathname();
 
   useEffect(() => {
     setSearchValue("");
     setSearchResults([]);
+    setOpen(getActiveToggle(pathname) || "COMPONENTS");
   }, [pathname]);
 
   const handleClick = (mode: TContentSidebarMode) => {
@@ -148,8 +150,7 @@ export const ContentSidebar = ({
           }}
         />
       </Box>
-      <List
-      >
+      <List>
         {/* search results */}
         {searchValue ? (
           <Box>
