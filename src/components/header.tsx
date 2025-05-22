@@ -114,7 +114,7 @@ export const Header = () => {
           <Stack gap={2} direction={"row"}>
             <Typography
               component={Link}
-              href={"https://github.com/fazlyalahi01/mui-kit"}
+              href={"https://github.com/codemine24/mui-kit"}
               target="_blank"
             >
               <Iconify
