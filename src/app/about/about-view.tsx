@@ -21,13 +21,16 @@ export const AboutView = () => {
       <Typography variant="body1" sx={{ mb: 2 }}>
         1. Material UI itself a component library and each component is fully
         customizable but the problem is mui itself doesn&apos;t provide you so
-        many option to choose from. So we have created MUI Kit to provide you as
-        many variants as possible to choose from.
+        many option to choose from. So we have created MUI Kit to <Box component={"span"} sx={{ fontWeight: 600 }}>provide you as
+        many variants as possible to choose from.</Box>
       </Typography>
       <Typography variant="body1" sx={{ mb: 2 }}>
         2. Material ui is missing some key components that are very common in
-        real world projects like Slider/ Mega menu. We will create the missing
-        blocks for your to make your development journey as smooth as possible.
+        real world projects like Slider/ Mega menu. We will{" "}
+        <Box component={"span"} sx={{ fontWeight: 600 }}>
+          create the missing blocks{" "}
+        </Box>
+        for your to make your development journey as smooth as possible.
       </Typography>
 
       <Typography
