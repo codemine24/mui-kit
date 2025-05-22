@@ -95,7 +95,7 @@ export const AccordionView = () => {
     <Box>
       <CustomBreadCrumbs
         pathArr={[
-          { label: "Components", path: "/elements" },
+          { label: "Elements", path: "/elements" },
           { label: "Accordion", path: "" },
         ]}
       />

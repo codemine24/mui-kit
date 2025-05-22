@@ -69,7 +69,7 @@ export const AlertView = () => {
     <Box>
       <CustomBreadCrumbs
         pathArr={[
-          { label: "Components", path: "/elements" },
+          { label: "Elements", path: "/elements" },
           { label: "Alert", path: "" },
         ]}
       />

@@ -297,7 +297,7 @@ export const CardView = () => {
     <Box>
       <CustomBreadCrumbs
         pathArr={[
-          { label: "Components", path: "/elements" },
+          { label: "Elements", path: "/elements" },
           { label: "Card", path: "" },
         ]}
       />

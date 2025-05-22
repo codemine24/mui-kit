@@ -30,7 +30,7 @@ export const ElementView = () => {
 
   return (
     <Box>
-      <CustomBreadCrumbs pathArr={[{ label: "Components", path: "" }]} />
+      <CustomBreadCrumbs pathArr={[{ label: "Elements", path: "" }]} />
       <Stack
         direction={{ xs: "column", md: "row" }}
         justifyContent={"space-between"}
@@ -38,7 +38,7 @@ export const ElementView = () => {
         spacing={{ xs: 2, md: 0 }}
       >
         <PageTitle
-          title="Components"
+          title="Elements"
           description="Material UI core components with extended design, and functionality. "
         />
         <TextField

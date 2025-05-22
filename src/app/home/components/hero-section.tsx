@@ -253,7 +253,7 @@ export const HeroSection = () => {
 
             <Button
               LinkComponent={Link}
-              href={PATHS.COMPONENTS.OVERVIEW}
+              href={PATHS.ELEMENTS.OVERVIEW}
               variant="outlined"
               color="primary"
               sx={{
@@ -262,7 +262,7 @@ export const HeroSection = () => {
               }}
               startIcon={<GridViewIcon />}
             >
-              Explore Components
+              Explore Elements
             </Button>
           </Box>
         </Box>

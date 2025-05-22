@@ -78,7 +78,7 @@ export const AvatarView = () => {
     <Box>
       <CustomBreadCrumbs
         pathArr={[
-          { label: "Components", path: "/elements" },
+          { label: "Elements", path: "/elements" },
           { label: "Avatar", path: "" },
         ]}
       />

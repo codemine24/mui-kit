@@ -111,7 +111,7 @@ export const PopoverView = () => {
     <Box>
       <CustomBreadCrumbs
         pathArr={[
-          { label: "Components", path: "/elements" },
+          { label: "Elements", path: "/elements" },
           { label: "Popover", path: "" },
         ]}
       />

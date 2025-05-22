@@ -1,5 +1,5 @@
 export const PATHS = {
-  COMPONENTS: {
+  ELEMENTS: {
     OVERVIEW: "/elements",
     ACCORDION: "/elements/accordion",
     ALERT: "/elements/alert",
