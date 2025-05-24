@@ -1,8 +1,11 @@
 "use client";
 import { ContentSidebar } from "@/app/(content)/components/content-sidebar";
 import { useColorMode } from "@/providers/app-provider";
+import { navItems } from "@/router/router";
+import { pxToRem } from "@/utils/pxToRem";
 import { Icon } from "@iconify/react";
 import {
+  alpha,
   AppBar,
   Box,
   Button,
@@ -14,13 +17,11 @@ import {
   Typography,
   useTheme,
 } from "@mui/material";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { Logo } from "./core/logo";
 import { Iconify } from "./iconify";
-import Link from "next/link";
-import { navItems } from "@/router/router";
-import { pxToRem } from "@/utils/pxToRem";
 
 // Navigation items
 
@@ -45,12 +46,11 @@ export const Header = () => {
   return (
     <AppBar
       position="sticky"
-      // top={30}
       color="default"
       elevation={0}
       sx={{
-        borderBottom: `.5px solid ${theme.palette.divider}`,
-        backgroundColor: "background.default",
+        backdropFilter: "blur(12px)",
+        backgroundColor: alpha(theme.palette.background.default, 0.7),
         transition:
           "background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease",
       }}
