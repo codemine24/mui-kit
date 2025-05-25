@@ -1,21 +1,37 @@
 "use client";
+import { Iconify } from "@/components/iconify";
+import InfiniteScroll from "@/components/infinity-scroll";
+import { PATHS } from "@/router/paths";
 import GridViewIcon from "@mui/icons-material/GridView";
 import {
   Alert,
   Box,
   Button,
   Chip,
-  Paper,
   Stack,
   Typography,
   useMediaQuery,
-  useTheme,
+  useTheme
 } from "@mui/material";
 import Link from "next/link";
 import PathSVG from "./PathSVG";
-import { PATHS } from "@/router/paths";
-import { Iconify } from "@/components/iconify";
 
+const items = [
+  { content: "Text Item 1" },
+  { content: <p>Paragraph Item 2</p> },
+  { content: "Text Item 3" },
+  { content: <p>Paragraph Item 4</p> },
+  { content: "Text Item 5" },
+  { content: <p>Paragraph Item 6</p> },
+  { content: "Text Item 7" },
+  { content: <p>Paragraph Item 8</p> },
+  { content: "Text Item 9" },
+  { content: <p>Paragraph Item 10</p> },
+  { content: "Text Item 11" },
+  { content: <p>Paragraph Item 12</p> },
+  { content: "Text Item 13" },
+  { content: <p>Paragraph Item 14</p> },
+];
 export const HeroSection = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
@@ -205,18 +221,10 @@ export const HeroSection = () => {
             We&apos;ve covered, what <span>Material UI</span> is missing!
           </Typography>
 
-          <Stack
-            direction="row"
-            sx={{ mb: 3 }}
-            flexWrap={"wrap"}
-            gap={1}
-          >
+          <Stack direction="row" sx={{ mb: 3 }} flexWrap={"wrap"} gap={1}>
             <Chip label="Ready to use components" size="small" />
             <Chip label="No external dependencies" size="small" />
-            <Chip
-              label="Purely Material UI"
-              size="small"
-            />
+            <Chip label="Purely Material UI" size="small" />
           </Stack>
 
           <Typography
@@ -277,149 +285,17 @@ export const HeroSection = () => {
             display: { xs: "none", md: "flex" },
           }}
         >
-          {/* Floating UI components */}
-          <Paper
-            elevation={4}
-            sx={{
-              position: "absolute",
-              top: "5%",
-              left: "10%",
-              width: "60%",
-              height: "40%",
-              borderRadius: 2,
-              p: 2,
-              zIndex: 3,
-              transform: "rotate(-5deg)",
-              bgcolor: "background.paper",
-            }}
-          >
-            <Typography variant="h6" gutterBottom>
-              Components
-            </Typography>
-            <Box
-              sx={{
-                height: 10,
-                width: "80%",
-                bgcolor: "primary.light",
-                borderRadius: 1,
-                mb: 1,
-              }}
+          <div style={{ height: "500px", position: "relative" }}>
+            <InfiniteScroll
+              items={items}
+              isTilted={true}
+              tiltDirection="left"
+              autoplay={true}
+              autoplaySpeed={0.5}
+              autoplayDirection="up"
+              pauseOnHover={true}
             />
-            <Box
-              sx={{
-                height: 10,
-                width: "60%",
-                bgcolor: "secondary.light",
-                borderRadius: 1,
-                mb: 1,
-              }}
-            />
-            <Box
-              sx={{
-                height: 10,
-                width: "70%",
-                bgcolor: "grey.300",
-                borderRadius: 1,
-              }}
-            />
-          </Paper>
-
-          <Paper
-            elevation={4}
-            sx={{
-              position: "absolute",
-              top: "30%",
-              right: "5%",
-              width: "50%",
-              height: "35%",
-              borderRadius: 2,
-              p: 2,
-              zIndex: 3,
-              transform: "rotate(3deg)",
-              bgcolor: "background.paper",
-            }}
-          >
-            <Typography variant="subtitle2" gutterBottom>
-              Block
-            </Typography>
-            <Stack direction="row" spacing={1} sx={{ mb: 1 }}>
-              <Box
-                sx={{
-                  height: 30,
-                  width: 30,
-                  bgcolor: "primary.main",
-                  borderRadius: "50%",
-                }}
-              />
-              <Box
-                sx={{
-                  height: 10,
-                  width: "60%",
-                  bgcolor: "grey.300",
-                  borderRadius: 1,
-                  alignSelf: "center",
-                }}
-              />
-            </Stack>
-            <Box
-              sx={{
-                height: 10,
-                width: "80%",
-                bgcolor: "grey.300",
-                borderRadius: 1,
-                mb: 1,
-              }}
-            />
-            <Box
-              sx={{
-                height: 10,
-                width: "70%",
-                bgcolor: "grey.300",
-                borderRadius: 1,
-              }}
-            />
-          </Paper>
-
-          <Paper
-            elevation={4}
-            sx={{
-              position: "absolute",
-              bottom: "10%",
-              left: "15%",
-              width: "55%",
-              height: "30%",
-              borderRadius: 2,
-              p: 2,
-              zIndex: 4,
-              transform: "rotate(2deg)",
-              bgcolor: theme.palette.primary.main,
-              color: "white",
-            }}
-          >
-            <Typography variant="subtitle2" gutterBottom>
-              Templates
-            </Typography>
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: "space-between",
-                height: "60%",
-              }}
-            >
-              {[1, 2, 3, 4, 5].map((item) => (
-                <Box
-                  key={item}
-                  sx={{
-                    width: "15%",
-                    bgcolor: "rgba(255,255,255,0.3)",
-                    borderRadius: "2px",
-                    alignSelf: "flex-end",
-                    height: `${30 + item * 10}%`,
-                  }}
-                />
-              ))}
-            </Box>
-          </Paper>
+          </div>
         </Box>
       </Stack>
 

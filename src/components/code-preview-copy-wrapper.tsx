@@ -29,7 +29,7 @@ export const CodePreviewCopyWrapper: React.FC<CodePreviewWrapperProps> = ({
         setIcon("solar:copy-line-duotone");
       }, 2000);
     } catch (err) {
-      console.error("Copy failedd:", err);
+      console.error("Copy failed:", err);
       setCopySuccess("Failed to copy!");
     }
   };
