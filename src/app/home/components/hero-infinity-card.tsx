@@ -47,13 +47,14 @@ export const HeroInfinityCard = ({
             borderRadius: "12px",
             padding: "1px",
             background:
-              "radial-gradient(500px circle at var(--cursor-x) var(--cursor-y), rgba(34, 211, 238, 0.5) 0%, transparent 70%)",
+              "radial-gradient(500px circle at var(--cursor-x, -9999px) var(--cursor-y, -9999px), rgba(34, 211, 238, 0.8) 10%, transparent 90%)",
             WebkitMask:
               "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
             WebkitMaskComposite: "xor",
             maskComposite: "exclude",
             pointerEvents: "none",
             zIndex: 1,
+            transition: "opacity 0.3s ease",
           },
           "&:hover": {
             transform: "translateY(-4px)",
