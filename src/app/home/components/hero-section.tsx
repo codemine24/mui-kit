@@ -16,23 +16,42 @@ import {
 } from "@mui/material";
 import Link from "next/link";
 import PathSVG from "./PathSVG";
+import { HeroInfinityCard } from "./hero-infinity-card";
 
 const items = [
-  { content: "Header" },
-  { content: "Footer" },
-  { content: "Testimonial" },
-  { content: "About Section" },
-  { content: "Hero Section" },
-  { content: "Contact Section" },
-  { content: "Carousel" },
-  { content: "Dialog" },
-  { content: "Mega menu" },
-  { content: "Lightbox" },
-  { content: "Drag & Drop" },
-  { content: "Chart" },
-  { content: "Gallery" },
-  { content: "Timeline" },
+  { content: <HeroInfinityCard title="Header" url={PATHS.BLOCKS.HEADER} /> },
+  { content: <HeroInfinityCard title="Header" url={PATHS.BLOCKS.CALL_TO_ACTION} /> },
+  { content: <HeroInfinityCard title="Footer" url={PATHS.BLOCKS.HEADER} /> },
+  {
+    content: <HeroInfinityCard title="Testimonial" url={PATHS.BLOCKS.HEADER} />,
+  },
+  {
+    content: (
+      <HeroInfinityCard title="About Section" url={PATHS.BLOCKS.HEADER} />
+    ),
+  },
+  {
+    content: (
+      <HeroInfinityCard title="Hero Section" url={PATHS.BLOCKS.HEADER} />
+    ),
+  },
+  {
+    content: (
+      <HeroInfinityCard title="Contact Section" url={PATHS.BLOCKS.HEADER} />
+    ),
+  },
+  { content: <HeroInfinityCard title="Carousel" url={PATHS.BLOCKS.HEADER} /> },
+  { content: <HeroInfinityCard title="Dialog" url={PATHS.BLOCKS.HEADER} /> },
+  { content: <HeroInfinityCard title="Mega menu" url={PATHS.BLOCKS.HEADER} /> },
+  { content: <HeroInfinityCard title="Lightbox" url={PATHS.BLOCKS.HEADER} /> },
+  {
+    content: <HeroInfinityCard title="Drag & Drop" url={PATHS.BLOCKS.HEADER} />,
+  },
+  { content: <HeroInfinityCard title="Chart" url={PATHS.BLOCKS.HEADER} /> },
+  { content: <HeroInfinityCard title="Gallery" url={PATHS.BLOCKS.HEADER} /> },
+  { content: <HeroInfinityCard title="Timeline" url={PATHS.BLOCKS.HEADER} /> },
 ];
+
 export const HeroSection = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
