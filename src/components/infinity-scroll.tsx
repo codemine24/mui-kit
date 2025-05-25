@@ -57,7 +57,7 @@ export default function InfiniteScroll({
     const itemStyle = getComputedStyle(firstItem);
     const itemHeight = firstItem.offsetHeight;
     const itemMarginTop = parseFloat(itemStyle.marginTop) || 0;
-    const totalItemHeight = itemHeight + itemMarginTop;
+    const totalItemHeight = itemHeight  + itemMarginTop;
     const totalHeight =
       itemHeight * items.length + itemMarginTop * (items.length - 1);
 

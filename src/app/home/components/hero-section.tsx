@@ -1,36 +1,37 @@
 "use client";
+import { BodyText } from "@/components/core/body-text";
 import { Iconify } from "@/components/iconify";
 import InfiniteScroll from "@/components/infinity-scroll";
 import { PATHS } from "@/router/paths";
+import { pxToRem } from "@/utils/pxToRem";
 import GridViewIcon from "@mui/icons-material/GridView";
 import {
   Alert,
   Box,
   Button,
-  Chip,
   Stack,
   Typography,
   useMediaQuery,
-  useTheme
+  useTheme,
 } from "@mui/material";
 import Link from "next/link";
 import PathSVG from "./PathSVG";
 
 const items = [
-  { content: "Text Item 1" },
-  { content: <p>Paragraph Item 2</p> },
-  { content: "Text Item 3" },
-  { content: <p>Paragraph Item 4</p> },
-  { content: "Text Item 5" },
-  { content: <p>Paragraph Item 6</p> },
-  { content: "Text Item 7" },
-  { content: <p>Paragraph Item 8</p> },
-  { content: "Text Item 9" },
-  { content: <p>Paragraph Item 10</p> },
-  { content: "Text Item 11" },
-  { content: <p>Paragraph Item 12</p> },
-  { content: "Text Item 13" },
-  { content: <p>Paragraph Item 14</p> },
+  { content: "Header" },
+  { content: "Footer" },
+  { content: "Testimonial" },
+  { content: "About Section" },
+  { content: "Hero Section" },
+  { content: "Contact Section" },
+  { content: "Carousel" },
+  { content: "Dialog" },
+  { content: "Mega menu" },
+  { content: "Lightbox" },
+  { content: "Drag & Drop" },
+  { content: "Chart" },
+  { content: "Gallery" },
+  { content: "Timeline" },
 ];
 export const HeroSection = () => {
   const theme = useTheme();
@@ -56,9 +57,7 @@ export const HeroSection = () => {
       sx={{
         position: "relative",
         overflow: "hidden",
-        py: 8,
-        // px: 2,
-        mb: 6,
+        py: { xs: 6, md: 8 },
         width: "100%",
         maxWidth: "100%",
       }}
@@ -205,39 +204,31 @@ export const HeroSection = () => {
               width: "fit-content",
               padding: "0 1rem",
               mb: 2,
+              fontSize: { xs: pxToRem(12), md: pxToRem(14) },
             }}
           >
             No Installation Required. Copy and paste components directly into
             your project.
           </Alert>
+
           <Typography
-            variant="h1"
             gutterBottom
             sx={{
+              fontSize: { xs: pxToRem(34), md: pxToRem(40), lg: pxToRem(50) },
+              fontWeight: 800,
+              lineHeight: { xs: 1.1, md: 1.3 },
               "& span": { color: "primary.main" },
-              fontSize: { xs: "2rem", sm: "2.5rem", md: "3rem" },
             }}
           >
             We&apos;ve covered, what <span>Material UI</span> is missing!
           </Typography>
 
-          <Stack direction="row" sx={{ mb: 3 }} flexWrap={"wrap"} gap={1}>
-            <Chip label="Ready to use components" size="small" />
-            <Chip label="No external dependencies" size="small" />
-            <Chip label="Purely Material UI" size="small" />
-          </Stack>
-
-          <Typography
-            variant="body1"
-            color="text.secondary"
-            paragraph
-            sx={{ mb: 4, fontSize: "1.1rem" }}
-          >
-            MUI KIT is a comprehensive library of components that features
-            implementation of Google&apos;s Material Design system, providing
-            ready-to-use UI elements for creating beautiful and responsive React
-            applications.
-          </Typography>
+          <BodyText
+            text="MUI KIT is a open-source library that offers customized versions of
+            material ui core components. Also we have added some extra
+            components using mui that are missing in material ui but very common
+            in real world projects."
+          />
 
           <Box
             sx={{
@@ -280,22 +271,20 @@ export const HeroSection = () => {
           sx={{
             position: "relative",
             width: "100%",
-            maxWidth: 600,
+            maxWidth: { xs: 300, lg: 600 },
             height: isMobile ? 400 : 500,
             display: { xs: "none", md: "flex" },
           }}
         >
-          <div style={{ height: "500px", position: "relative" }}>
-            <InfiniteScroll
-              items={items}
-              isTilted={true}
-              tiltDirection="left"
-              autoplay={true}
-              autoplaySpeed={0.5}
-              autoplayDirection="up"
-              pauseOnHover={true}
-            />
-          </div>
+          <InfiniteScroll
+            items={items}
+            isTilted={true}
+            tiltDirection="left"
+            autoplay={true}
+            autoplaySpeed={1.1}
+            autoplayDirection="up"
+            pauseOnHover={true}
+          />
         </Box>
       </Stack>
 
