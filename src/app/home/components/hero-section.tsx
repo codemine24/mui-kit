@@ -1,11 +1,14 @@
 "use client";
+import { BodyText } from "@/components/core/body-text";
+import { Iconify } from "@/components/iconify";
+import InfiniteScroll from "@/components/infinity-scroll";
+import { PATHS } from "@/router/paths";
+import { pxToRem } from "@/utils/pxToRem";
 import GridViewIcon from "@mui/icons-material/GridView";
 import {
   Alert,
   Box,
   Button,
-  Chip,
-  Paper,
   Stack,
   Typography,
   useMediaQuery,
@@ -13,9 +16,23 @@ import {
 } from "@mui/material";
 import Link from "next/link";
 import PathSVG from "./PathSVG";
-import { PATHS } from "@/router/paths";
-import { Iconify } from "@/components/iconify";
 
+const items = [
+  { content: "Header" },
+  { content: "Footer" },
+  { content: "Testimonial" },
+  { content: "About Section" },
+  { content: "Hero Section" },
+  { content: "Contact Section" },
+  { content: "Carousel" },
+  { content: "Dialog" },
+  { content: "Mega menu" },
+  { content: "Lightbox" },
+  { content: "Drag & Drop" },
+  { content: "Chart" },
+  { content: "Gallery" },
+  { content: "Timeline" },
+];
 export const HeroSection = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
@@ -40,9 +57,7 @@ export const HeroSection = () => {
       sx={{
         position: "relative",
         overflow: "hidden",
-        py: 8,
-        // px: 2,
-        mb: 6,
+        py: { xs: 6, md: 8 },
         width: "100%",
         maxWidth: "100%",
       }}
@@ -166,7 +181,7 @@ export const HeroSection = () => {
           zIndex: 1,
           maxWidth: "xl",
           mx: "auto",
-          px: 4,
+          px: { xs: 2, md: 3 },
         }}
       >
         {/* Left text box */}
@@ -189,47 +204,31 @@ export const HeroSection = () => {
               width: "fit-content",
               padding: "0 1rem",
               mb: 2,
+              fontSize: { xs: pxToRem(12), md: pxToRem(14) },
             }}
           >
             No Installation Required. Copy and paste components directly into
             your project.
           </Alert>
+
           <Typography
-            variant="h1"
             gutterBottom
             sx={{
+              fontSize: { xs: pxToRem(34), md: pxToRem(40), lg: pxToRem(50) },
+              fontWeight: 800,
+              lineHeight: { xs: 1.1, md: 1.3 },
               "& span": { color: "primary.main" },
-              fontSize: { xs: "2rem", sm: "2.5rem", md: "3rem" },
             }}
           >
             We&apos;ve covered, what <span>Material UI</span> is missing!
           </Typography>
 
-          <Stack
-            direction="row"
-            sx={{ mb: 3 }}
-            flexWrap={"wrap"}
-            gap={1}
-          >
-            <Chip label="Ready to use components" size="small" />
-            <Chip label="No external dependencies" size="small" />
-            <Chip
-              label="Purely Material UI"
-              size="small"
-            />
-          </Stack>
-
-          <Typography
-            variant="body1"
-            color="text.secondary"
-            paragraph
-            sx={{ mb: 4, fontSize: "1.1rem" }}
-          >
-            MUI KIT is a comprehensive library of components that features
-            implementation of Google&apos;s Material Design system, providing
-            ready-to-use UI elements for creating beautiful and responsive React
-            applications.
-          </Typography>
+          <BodyText
+            text="MUI KIT is a open-source library that offers customized versions of
+            material ui core components. Also we have added some extra
+            components using mui that are missing in material ui but very common
+            in real world projects."
+          />
 
           <Box
             sx={{
@@ -272,154 +271,20 @@ export const HeroSection = () => {
           sx={{
             position: "relative",
             width: "100%",
-            maxWidth: 600,
+            maxWidth: { xs: 300, lg: 600 },
             height: isMobile ? 400 : 500,
             display: { xs: "none", md: "flex" },
           }}
         >
-          {/* Floating UI components */}
-          <Paper
-            elevation={4}
-            sx={{
-              position: "absolute",
-              top: "5%",
-              left: "10%",
-              width: "60%",
-              height: "40%",
-              borderRadius: 2,
-              p: 2,
-              zIndex: 3,
-              transform: "rotate(-5deg)",
-              bgcolor: "background.paper",
-            }}
-          >
-            <Typography variant="h6" gutterBottom>
-              Components
-            </Typography>
-            <Box
-              sx={{
-                height: 10,
-                width: "80%",
-                bgcolor: "primary.light",
-                borderRadius: 1,
-                mb: 1,
-              }}
-            />
-            <Box
-              sx={{
-                height: 10,
-                width: "60%",
-                bgcolor: "secondary.light",
-                borderRadius: 1,
-                mb: 1,
-              }}
-            />
-            <Box
-              sx={{
-                height: 10,
-                width: "70%",
-                bgcolor: "grey.300",
-                borderRadius: 1,
-              }}
-            />
-          </Paper>
-
-          <Paper
-            elevation={4}
-            sx={{
-              position: "absolute",
-              top: "30%",
-              right: "5%",
-              width: "50%",
-              height: "35%",
-              borderRadius: 2,
-              p: 2,
-              zIndex: 3,
-              transform: "rotate(3deg)",
-              bgcolor: "background.paper",
-            }}
-          >
-            <Typography variant="subtitle2" gutterBottom>
-              Block
-            </Typography>
-            <Stack direction="row" spacing={1} sx={{ mb: 1 }}>
-              <Box
-                sx={{
-                  height: 30,
-                  width: 30,
-                  bgcolor: "primary.main",
-                  borderRadius: "50%",
-                }}
-              />
-              <Box
-                sx={{
-                  height: 10,
-                  width: "60%",
-                  bgcolor: "grey.300",
-                  borderRadius: 1,
-                  alignSelf: "center",
-                }}
-              />
-            </Stack>
-            <Box
-              sx={{
-                height: 10,
-                width: "80%",
-                bgcolor: "grey.300",
-                borderRadius: 1,
-                mb: 1,
-              }}
-            />
-            <Box
-              sx={{
-                height: 10,
-                width: "70%",
-                bgcolor: "grey.300",
-                borderRadius: 1,
-              }}
-            />
-          </Paper>
-
-          <Paper
-            elevation={4}
-            sx={{
-              position: "absolute",
-              bottom: "10%",
-              left: "15%",
-              width: "55%",
-              height: "30%",
-              borderRadius: 2,
-              p: 2,
-              zIndex: 4,
-              transform: "rotate(2deg)",
-              bgcolor: theme.palette.primary.main,
-              color: "white",
-            }}
-          >
-            <Typography variant="subtitle2" gutterBottom>
-              Templates
-            </Typography>
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: "space-between",
-                height: "60%",
-              }}
-            >
-              {[1, 2, 3, 4, 5].map((item) => (
-                <Box
-                  key={item}
-                  sx={{
-                    width: "15%",
-                    bgcolor: "rgba(255,255,255,0.3)",
-                    borderRadius: "2px",
-                    alignSelf: "flex-end",
-                    height: `${30 + item * 10}%`,
-                  }}
-                />
-              ))}
-            </Box>
-          </Paper>
+          <InfiniteScroll
+            items={items}
+            isTilted={true}
+            tiltDirection="left"
+            autoplay={true}
+            autoplaySpeed={1.1}
+            autoplayDirection="up"
+            pauseOnHover={true}
+          />
         </Box>
       </Stack>
 
