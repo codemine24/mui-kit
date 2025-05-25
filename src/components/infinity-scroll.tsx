@@ -28,7 +28,7 @@ export default function InfiniteScroll({
   maxHeight = "100%",
   negativeMargin = "-0.5em",
   items = [],
-  itemMinHeight = 150,
+  itemMinHeight = 70,
   isTilted = false,
   tiltDirection = "left",
   autoplay = false,

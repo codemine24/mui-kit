@@ -181,7 +181,7 @@ export const HeroSection = () => {
           zIndex: 1,
           maxWidth: "xl",
           mx: "auto",
-          px: 4,
+          px: { xs: 2, md: 3 },
         }}
       >
         {/* Left text box */}
