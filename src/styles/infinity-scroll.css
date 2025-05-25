@@ -46,7 +46,7 @@
   font-size: 1.25rem;
   font-weight: 600;
   text-align: center;
-  border: 2px solid var(--divider-color);
+  /* border: 2px solid var(--divider-color); */
   user-select: none;
   box-sizing: border-box;
   position: relative;
