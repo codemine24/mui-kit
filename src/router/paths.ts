@@ -81,6 +81,7 @@ export const PATHS = {
     TEAM: "/blocks/team",
     TESTIMONIAL_GRID: "/blocks/testimonial-grid",
     TESTIMONIAL_SLIDER: "/blocks/testimonial-slider",
+    SLIDER: "/blocks/slider",
   },
   TEMPLATES: {
     ROOT: "/templates",
@@ -92,4 +93,10 @@ export const PATHS = {
     ROOT: "/form",
   },
   ABOUT: "/about",
+
+  FOOTER: {
+    REPORT_BUG: "/report-bug",
+    CHANGELOG: "/changelog",
+    CONTACT: "/contact",
+  },
 };

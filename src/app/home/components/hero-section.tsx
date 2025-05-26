@@ -20,7 +20,11 @@ import { HeroInfinityCard } from "./hero-infinity-card";
 
 const items = [
   { content: <HeroInfinityCard title="Header" url={PATHS.BLOCKS.HEADER} /> },
-  { content: <HeroInfinityCard title="Header" url={PATHS.BLOCKS.CALL_TO_ACTION} /> },
+  {
+    content: (
+      <HeroInfinityCard title="Header" url={PATHS.BLOCKS.CALL_TO_ACTION} />
+    ),
+  },
   { content: <HeroInfinityCard title="Footer" url={PATHS.BLOCKS.HEADER} /> },
   {
     content: <HeroInfinityCard title="Testimonial" url={PATHS.BLOCKS.HEADER} />,
@@ -65,18 +69,13 @@ export const HeroSection = () => {
     theme.palette.mode === "dark"
       ? "rgba(0, 229, 255, 0.2)"
       : "rgba(0, 188, 212, 0.2)";
-  const lineColors = {
-    blue: theme.palette.mode === "dark" ? "#42a5f5" : "#2196f3",
-    indigo: theme.palette.mode === "dark" ? "#5c6bc0" : "#3f51b5",
-    cyan: theme.palette.mode === "dark" ? "#26c6da" : "#00bcd4",
-  };
 
   return (
     <Box
       sx={{
         position: "relative",
         overflow: "hidden",
-        py: { xs: 6, md: 8 },
+        py: { xs: 8, md: 0 },
         width: "100%",
         maxWidth: "100%",
       }}
@@ -115,78 +114,6 @@ export const HeroSection = () => {
             filter: "blur(80px)",
           }}
         />
-
-        {/* Animated Lines */}
-        <Box sx={{ position: "absolute", inset: 0, opacity: 0.5 }}>
-          {/* Horizontal Lines */}
-          <Box
-            sx={{
-              position: "absolute",
-              top: "25%",
-              left: 0,
-              width: "100%",
-              height: "1px",
-              background: `linear-gradient(to right, transparent, ${lineColors.blue}, transparent)`,
-              animation: "pulse 3s infinite",
-            }}
-          />
-          <Box
-            sx={{
-              position: "absolute",
-              top: "50%",
-              left: 0,
-              width: "100%",
-              height: "1px",
-              background: `linear-gradient(to right, transparent, ${lineColors.indigo}, transparent)`,
-              animation: "pulse 3s infinite 1s",
-            }}
-          />
-          <Box
-            sx={{
-              position: "absolute",
-              top: "75%",
-              left: 0,
-              width: "100%",
-              height: "1px",
-              background: `linear-gradient(to right, transparent, ${lineColors.cyan}, transparent)`,
-              animation: "pulse 3s infinite 2s",
-            }}
-          />
-          {/* Vertical Lines */}
-          <Box
-            sx={{
-              position: "absolute",
-              left: "25%",
-              top: 0,
-              height: "100%",
-              width: "1px",
-              background: `linear-gradient(to bottom, transparent, ${lineColors.blue}, transparent)`,
-              animation: "pulse 3s infinite 0.5s",
-            }}
-          />
-          <Box
-            sx={{
-              position: "absolute",
-              left: "50%",
-              top: 0,
-              height: "100%",
-              width: "1px",
-              background: `linear-gradient(to bottom, transparent, ${lineColors.indigo}, transparent)`,
-              animation: "pulse 3s infinite 1.5s",
-            }}
-          />
-          <Box
-            sx={{
-              position: "absolute",
-              left: "75%",
-              top: 0,
-              height: "100%",
-              width: "1px",
-              background: `linear-gradient(to bottom, transparent, ${lineColors.cyan}, transparent)`,
-              animation: "pulse 3s infinite 2.5s",
-            }}
-          />
-        </Box>
       </Box>
 
       {/* Main Content */}
@@ -255,6 +182,7 @@ export const HeroSection = () => {
               flexDirection: { xs: "column", md: "row" },
               justifyContent: "start",
               gap: 2,
+              mt: 4,
             }}
           >
             <Button
@@ -295,6 +223,19 @@ export const HeroSection = () => {
             display: { xs: "none", md: "flex" },
           }}
         >
+          <Box
+            sx={{
+              height: "180px",
+              width: "700px",
+              position: "absolute",
+              top: 0,
+              left: 0,
+              zIndex: 2,
+              background:
+                "linear-gradient(to bottom right, #fafbff, transparent)",
+            }}
+          />
+
           <InfiniteScroll
             items={items}
             isTilted={true}

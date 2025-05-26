@@ -1,7 +1,7 @@
 import { pxToRem } from "@/utils/pxToRem";
 import { SxProps, Theme, Typography } from "@mui/material";
 
-export const Heading1 = ({
+export const Heading2 = ({
   text,
   sx,
 }: {
@@ -12,7 +12,7 @@ export const Heading1 = ({
     <Typography
       gutterBottom
       sx={{
-        fontSize: { xs: pxToRem(32), md: pxToRem(38), lg: pxToRem(48) },
+        fontSize: { xs: pxToRem(24), md: pxToRem(30), lg: pxToRem(36) },
         fontWeight: 600,
         marginBottom: 0, 
         "& span": { color: "primary.main" },

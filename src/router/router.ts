@@ -128,3 +128,9 @@ export const sitemapRoutes = [
   PATHS.ABOUT,
   ...elements.map((item) => item.path),
 ];
+
+export const footerItems = [
+  { label: "Report bug", path: PATHS.DOCS.INTRO },
+  { label: "Changelog", path: PATHS.ELEMENTS.OVERVIEW },
+  { label: "Contact", path: PATHS.BLOCKS.OVERVIEW },
+];
