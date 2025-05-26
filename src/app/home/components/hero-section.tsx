@@ -76,7 +76,7 @@ export const HeroSection = () => {
       sx={{
         position: "relative",
         overflow: "hidden",
-        py: { xs: 6, md: 8 },
+        py: { xs: 8, md: 0 },
         width: "100%",
         maxWidth: "100%",
       }}

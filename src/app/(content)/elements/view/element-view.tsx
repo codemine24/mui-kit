@@ -6,6 +6,7 @@ import { Box, Divider, Stack, TextField, useTheme } from "@mui/material";
 import Link from "next/link";
 import React from "react";
 import { elementsArr } from "../constants/elements";
+import { pxToRem } from "@/utils/pxToRem";
 
 export const ElementView = () => {
   const theme = useTheme();
@@ -45,7 +46,23 @@ export const ElementView = () => {
           placeholder="Search..."
           id="outlined-size-small"
           size="small"
-          sx={{ width: { xs: "100%", md: "25%" } }}
+          sx={{
+            mb: 0,
+            width: { xs: "100%", md: "25%" },
+            backgroundColor: theme.palette.background.paper,
+            "& .MuiOutlinedInput-root": {
+              borderRadius: theme.shape.borderRadius,
+              paddingLeft: 1,
+              fontSize: { md: pxToRem(14), lg: pxToRem(15) },
+              "&.Mui-focused fieldset": {
+                borderColor: "primary.main",
+                boxShadow: theme.shadows[1],
+              },
+            },
+            "& .MuiOutlinedInput-notchedOutline": {
+              borderColor: theme.palette.divider,
+            },
+          }}
           onChange={(e) => setSearchText(e.target.value)}
         />
       </Stack>
