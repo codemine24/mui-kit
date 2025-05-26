@@ -35,7 +35,7 @@ export const ContributorsOverview = () => {
       }}
     >
       <Container maxWidth={"xl"}>
-        <Box>
+        <Box mb={4}>
           <Heading2
             text="Community contributors"
             sx={{ textAlign: "center" }}
@@ -44,7 +44,7 @@ export const ContributorsOverview = () => {
             text="Join a community of open-source contributors by tuning in with the Flowbite React community and become one of the highlighted members"
             sx={{
               textAlign: "center",
-              px: { xs: "10%", md: "25%" },
+              px: { xs: "0%", md: "25%" },
             }}
           />
         </Box>

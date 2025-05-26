@@ -255,6 +255,7 @@ export const HeroSection = () => {
               flexDirection: { xs: "column", md: "row" },
               justifyContent: "start",
               gap: 2,
+              mt: 4
             }}
           >
             <Button
