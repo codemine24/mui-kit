@@ -3,7 +3,9 @@ import { BodyText } from "@/components/core/body-text";
 import { Heading1 } from "@/components/core/heading-1";
 import { Iconify } from "@/components/iconify";
 import { PATHS } from "@/router/paths";
-import { Box, Button, Container, Grid, Link } from "@mui/material";
+import { pxToRem } from "@/utils/pxToRem";
+import { Box, Button, Container, Grid, useTheme } from "@mui/material";
+import Link from "next/link";
 // import Link from "next/link";
 
 const items = [
@@ -70,6 +72,7 @@ const items = [
 ];
 
 export const ComponentOverviewV2 = () => {
+  const theme = useTheme();
   return (
     <Box
       sx={{
@@ -90,7 +93,14 @@ export const ComponentOverviewV2 = () => {
                 text="Fully functional components for you to start immediately"
                 sx={{ mb: { xs: 0, md: 2 } }}
               />
-              <Link href={PATHS.ELEMENTS.OVERVIEW} sx={{ color: "primary.main" }}>
+              <Link
+                href={PATHS.ELEMENTS.OVERVIEW}
+                style={{
+                  color: theme.palette.primary.main,
+                  textDecoration: "none",
+                  fontSize: pxToRem(16),
+                }}
+              >
                 View all
               </Link>
             </Box>

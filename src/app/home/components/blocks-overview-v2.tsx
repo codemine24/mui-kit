@@ -3,7 +3,10 @@ import { BodyText } from "@/components/core/body-text";
 import { Heading1 } from "@/components/core/heading-1";
 import { Iconify } from "@/components/iconify";
 import { PATHS } from "@/router/paths";
-import { Box, Button, Container, Grid, Link } from "@mui/material";
+import { pxToRem } from "@/utils/pxToRem";
+import { Box, Button, Container, Grid } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
+import Link from "next/link";
 // import Link from "next/link";
 
 const items = [
@@ -71,6 +74,7 @@ const items = [
 ];
 
 export const BlockOverviewV2 = () => {
+  const theme = useTheme();
   return (
     <Box
       sx={{
@@ -91,7 +95,10 @@ export const BlockOverviewV2 = () => {
                 text="Fully functional ui blocks ready to use in your project"
                 sx={{ mb: { xs: 0, md: 2 } }}
               />
-              <Link href={PATHS.BLOCKS.OVERVIEW}  sx={{ color: "primary.main" }}>
+              <Link
+                href={PATHS.BLOCKS.OVERVIEW}
+                style={{ color: theme.palette.primary.main, textDecoration: "none", fontSize: pxToRem(16) }}
+              >
                 View all
               </Link>
             </Box>
