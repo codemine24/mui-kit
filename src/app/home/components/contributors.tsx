@@ -5,7 +5,7 @@ import { Avatar, Box, Container, Stack } from "@mui/material";
 
 const contributors = [
   {
-    name: "Asadur Rahman Yead",
+    name: "Yead",
     avatar: "https://avatars.githubusercontent.com/u/174150044?v=4",
     url: "https://github.com/Yead191",
   },
@@ -15,9 +15,14 @@ const contributors = [
     url: "https://github.com/fazlyalahi01",
   },
   {
-    name: "Dhruv",
-    avatar: "https://flowbite.com/docs/images/people/profile-picture-1.jpg",
-    url: "https://github.com/dhruv-rajput",
+    name: "Rakib",
+    avatar: "https://avatars.githubusercontent.com/u/107996751?v=4",
+    url: "https://github.com/RakibMojumder",
+  },
+  {
+    name: "Rapu",
+    avatar: "https://avatars.githubusercontent.com/u/108398425?v=4",
+    url: "https://github.com/riyazulhaque64",
   },
 ];
 
@@ -43,14 +48,25 @@ export const ContributorsOverview = () => {
             }}
           />
         </Box>
-        <Stack direction={"row"} spacing={2} justifyContent={"center"} mt={2}>
+        <Stack
+          direction={"row"}
+          spacing={2}
+          justifyContent={"center"}
+          mt={2}
+          flexWrap={"wrap"}
+        >
           {contributors?.map((contributor, index) => (
             <Avatar
               key={index}
               title={contributor?.name}
               src={contributor?.avatar}
               alt={contributor?.name}
-              sx={{ width: 64, height: 64, cursor: "pointer" }}
+              sx={{
+                width: { xs: 48, md: 64 },
+                height: { xs: 48, md: 64 },
+                cursor: "pointer",
+                boxShadow: 1,
+              }}
               onClick={() => window.open(contributor?.url, "_blank")}
             />
           ))}

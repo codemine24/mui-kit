@@ -12,7 +12,7 @@ export const Heading2 = ({
     <Typography
       gutterBottom
       sx={{
-        fontSize: { xs: pxToRem(28), md: pxToRem(32), lg: pxToRem(38) },
+        fontSize: { xs: pxToRem(24), md: pxToRem(30), lg: pxToRem(36) },
         fontWeight: 600,
         marginBottom: 0, 
         "& span": { color: "primary.main" },
