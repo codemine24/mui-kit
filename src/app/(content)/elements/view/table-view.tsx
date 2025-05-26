@@ -8,6 +8,8 @@ import { Box, Divider } from "@mui/material";
 import { useOnThisPage } from "@/contexts/on-thispage-context";
 import BasicTable from "../components/table/table-basic-preview";
 import DataTable from "../components/table/table-data-preview";
+import DenseTable from "../components/table/table-dense-preview";
+import SortingTable from "../components/table/table-sorting-preview";
 
 const sections = [
   {
@@ -25,6 +27,22 @@ const sections = [
       "Use Material UI data table with extended design. No extra package required.",
     codeString: "",
     preview: <DataTable />,
+  },
+  {
+    id: "table-3",
+    title: "Dense",
+    description:
+      "Use Material UI dense table with extended design. No extra package required.",
+    codeString: "",
+    preview: <DenseTable />,
+  },
+  {
+    id: "table-4",
+    title: "Sorting",
+    description:
+      "Use Material UI sorting table with extended design. No extra package required.",
+    codeString: "",
+    preview: <SortingTable />,
   },
 ];
 
