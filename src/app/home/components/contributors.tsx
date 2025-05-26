@@ -1,7 +1,7 @@
 "use client";
 import { BodyText } from "@/components/core/body-text";
 import { Heading2 } from "@/components/core/heading-2";
-import { Avatar, Box, Container, Stack } from "@mui/material";
+import { Avatar, Box, Container, Link, Stack } from "@mui/material";
 
 const contributors = [
   {
@@ -41,7 +41,26 @@ export const ContributorsOverview = () => {
             sx={{ textAlign: "center" }}
           />
           <BodyText
-            text="Join a community of open-source contributors by tuning in with the Flowbite React community and become one of the highlighted members"
+            text={
+              <>
+                Here are the hand-picked contributors who had huge contribution
+                in MUI Kit. If you are an open-source enthusiast and want to
+                contribute, you can find us on{" "}
+                <Link
+                  href="https://github.com/your-org/your-repo"
+                  target="_blank"
+                  rel="noopener"
+                  sx={{
+                    textDecoration: "none",
+                    color: "primary.main",
+                    "&:hover": { textDecoration: "underline" },
+                  }}
+                >
+                  GitHub
+                </Link>
+                .
+              </>
+            }
             sx={{
               textAlign: "center",
               px: { xs: "0%", md: "25%" },

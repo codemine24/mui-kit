@@ -6,6 +6,7 @@ import { PATHS } from "@/router/paths";
 import { pxToRem } from "@/utils/pxToRem";
 import { Box, Button, Container, Grid, useTheme } from "@mui/material";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 // import Link from "next/link";
 
 const items = [
@@ -73,6 +74,7 @@ const items = [
 
 export const ComponentOverviewV2 = () => {
   const theme = useTheme();
+  const router = useRouter();
   return (
     <Box
       sx={{
@@ -118,6 +120,7 @@ export const ComponentOverviewV2 = () => {
                   mb: { xs: 1, md: 2 },
                   border: "1px solid var(--divider-color)",
                 }}
+                onClick={() => router.push(item.url)}
               >
                 {item.label}
               </Button>

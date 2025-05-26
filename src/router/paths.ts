@@ -93,4 +93,10 @@ export const PATHS = {
     ROOT: "/form",
   },
   ABOUT: "/about",
+
+  FOOTER: {
+    REPORT_BUG: "/report-bug",
+    CHANGELOG: "/changelog",
+    CONTACT: "/contact",
+  },
 };

@@ -5,7 +5,7 @@ export const BodyText = ({
   text,
   sx,
 }: {
-  text: string;
+  text: string | React.ReactNode;
   sx?: SxProps<Theme>;
 }) => {
   return (
