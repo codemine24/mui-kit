@@ -3,13 +3,14 @@ import { BodyText } from "@/components/core/body-text";
 import { Heading2 } from "@/components/core/heading-2";
 import { Add, Remove } from "@mui/icons-material";
 import {
-  Accordion,
-  AccordionDetails,
-  AccordionSummary,
+  Accordion as MuiAccordion,
+  AccordionSummary as MuiAccordionSummary,
+  AccordionDetails ,
   Box,
   Container,
   Stack,
   Typography,
+  styled,
 } from "@mui/material";
 import React from "react";
 
@@ -34,7 +35,7 @@ const leftQuestions = [
   },
 ];
 
-const rightQuesitons = [
+const rightQuestions = [
   {
     id: "panel4",
     title: "How do I contribute to this library?",
@@ -55,6 +56,32 @@ const rightQuesitons = [
   },
 ];
 
+const Accordion = styled(MuiAccordion)(() => ({
+  boxShadow: "1px 1px 2px .9px rgba(0, 0, 0, 0.1)",
+  padding: "10px",
+  marginBottom: 10,
+  "&.Mui-expanded": {
+    marginBottom: 10,
+    marginTop: 10,
+  },
+  "&:before": {
+    display: "none",
+  },
+}));
+
+const AccordionSummary = styled(MuiAccordionSummary)(() => ({
+  padding: 0,
+  "& .MuiTypography-root": {
+    fontWeight: 500,
+  },
+  "&.Mui-expanded": {
+    minHeight: "44px",
+  },
+  "& .MuiAccordionSummary-content.Mui-expanded": {
+    margin: "0px",
+  },
+}));
+
 export const FrequentlyAskedQuestion = () => {
   const [expanded, setExpanded] = React.useState<string | false>("");
 
@@ -66,7 +93,7 @@ export const FrequentlyAskedQuestion = () => {
     <Box
       sx={{
         bgcolor: "background.paper",
-        py: { xs: 8, md: 12 },
+        py: { xs: 6, md: 12 },
       }}
     >
       <Container maxWidth={"xl"}>
@@ -104,7 +131,7 @@ export const FrequentlyAskedQuestion = () => {
             ))}
           </Box>
           <Box>
-            {rightQuesitons.map((panel) => (
+            {rightQuestions.map((panel) => (
               <Accordion
                 key={panel.id}
                 expanded={expanded === panel.id}

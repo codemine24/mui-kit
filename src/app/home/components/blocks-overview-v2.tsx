@@ -79,7 +79,7 @@ export const BlockOverviewV2 = () => {
     <Box
       sx={{
         bgcolor: "background.paper",
-        py: { xs: 8, md: 12 },
+        py: { xs: 6, md: 12 },
       }}
     >
       <Container maxWidth={"xl"}>

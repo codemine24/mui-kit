@@ -77,7 +77,8 @@ export const ComponentOverviewV2 = () => {
     <Box
       sx={{
         bgcolor: "background.default",
-        py: { xs: 4, md: 12 },
+        pt: { xs: 0, md: 12 },
+        pb: { xs: 6, md: 12 },
       }}
     >
       <Container maxWidth={"xl"}>

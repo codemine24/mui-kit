@@ -31,7 +31,7 @@ export const ContributorsOverview = () => {
     <Box
       sx={{
         bgcolor: "background.default",
-        py: { xs: 8, md: 12 },
+        py: { xs: 6, md: 12 },
       }}
     >
       <Container maxWidth={"xl"}>
