@@ -223,19 +223,6 @@ export const HeroSection = () => {
             display: { xs: "none", md: "flex" },
           }}
         >
-          <Box
-            sx={{
-              height: "180px",
-              width: "700px",
-              position: "absolute",
-              top: 0,
-              left: 0,
-              zIndex: 2,
-              background:
-                "linear-gradient(to bottom right, #fafbff, transparent)",
-            }}
-          />
-
           <InfiniteScroll
             items={items}
             isTilted={true}
