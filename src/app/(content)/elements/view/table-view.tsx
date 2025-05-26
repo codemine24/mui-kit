@@ -10,6 +10,7 @@ import BasicTable from "../components/table/table-basic-preview";
 import DataTable from "../components/table/table-data-preview";
 import DenseTable from "../components/table/table-dense-preview";
 import SortingTable from "../components/table/table-sorting-preview";
+import StickyHeaderTable from "../components/table/table-sticky-header-preview";
 
 const sections = [
   {
@@ -43,6 +44,14 @@ const sections = [
       "Use Material UI sorting table with extended design. No extra package required.",
     codeString: "",
     preview: <SortingTable />,
+  },
+  {
+    id: "table-5",
+    title: "Sticky Header",
+    description:
+      "Use Material UI sticky header table with extended design. No extra package required.",
+    codeString: "",
+    preview: <StickyHeaderTable />,
   },
 ];
 
