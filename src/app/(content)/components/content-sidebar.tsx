@@ -26,10 +26,12 @@ import React, { useEffect, useState } from "react";
 
 type ContentSidebarProps = {
   variant?: "sidebar" | "drawer";
+  onClose?: () => void;
 };
 
 export const ContentSidebar = ({
   variant = "sidebar",
+  onClose,
 }: ContentSidebarProps) => {
   const pathname = usePathname();
   const theme = useTheme();
@@ -38,12 +40,6 @@ export const ContentSidebar = ({
   const [searchResults, setSearchResults] = useState<
     { key: string; label: string; path: string }[]
   >([]);
-
-  useEffect(() => {
-    setSearchValue("");
-    setSearchResults([]);
-    setOpen(getActiveToggle(pathname) || "COMPONENTS");
-  }, [pathname]);
 
   const handleClick = (mode: TContentSidebarMode) => {
     setOpen((prev) => (prev === mode ? "" : mode));
@@ -74,6 +70,18 @@ export const ContentSidebar = ({
       setSearchResults([]);
     }
   };
+
+  const delayedSidebarClose = () => {
+    if (onClose) {
+      setTimeout(onClose, 300);
+    }
+  };
+
+  useEffect(() => {
+    setSearchValue("");
+    setSearchResults([]);
+    setOpen(getActiveToggle(pathname) || "COMPONENTS");
+  }, [pathname]);
 
   return (
     <Box
@@ -224,7 +232,11 @@ export const ContentSidebar = ({
               return (
                 <React.Fragment key={key}>
                   {type === "button" && (
-                    <ListItem key={path || key} disablePadding>
+                    <ListItem
+                      key={path || key}
+                      disablePadding
+                      onClick={delayedSidebarClose}
+                    >
                       <Link href={path || ""} legacyBehavior passHref>
                         <ListItemButton
                           disableRipple
@@ -280,7 +292,11 @@ export const ContentSidebar = ({
                   )}
 
                   {type === "single" && (
-                    <ListItem key={path || key} disablePadding>
+                    <ListItem
+                      key={path || key}
+                      disablePadding
+                      onClick={delayedSidebarClose}
+                    >
                       <Link href={path || ""} legacyBehavior passHref>
                         <ListItemButton
                           disableRipple
@@ -374,7 +390,11 @@ export const ContentSidebar = ({
                           }}
                         >
                           {items.map((item) => (
-                            <ListItem key={item.path} disablePadding>
+                            <ListItem
+                              key={item.path}
+                              disablePadding
+                              onClick={delayedSidebarClose}
+                            >
                               <Link href={item.path} legacyBehavior passHref>
                                 <ListItemButton
                                   disableRipple

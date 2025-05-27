@@ -25,7 +25,7 @@ export default function ContentLayout({
             overflowY: "auto",
           }}
         >
-          <ContentSidebar />
+          <ContentSidebar variant="sidebar" />
         </Grid>
 
         <Grid
