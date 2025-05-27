@@ -1,7 +1,12 @@
 import { Box, Button, Typography } from "@mui/material";
+import Image from "next/image";
 import Link from "next/link";
+import { Iconify } from "./iconify";
 
-export const ComingSoon = () => {
+interface IProps {
+  returnUrl?: string;
+}
+export const ComingSoon = ({ returnUrl = "/" }: IProps) => {
   return (
     <Box
       sx={{
@@ -12,44 +17,38 @@ export const ComingSoon = () => {
         justifyContent: "center",
         bgcolor: "background.default",
         p: 3,
+        gap: 2,
       }}
     >
+      <Image
+        src="/images/coming-soon.png"
+        alt="coming soon"
+        width={200}
+        height={200}
+      />
       <Typography
-        variant="h1"
-        sx={{
-          fontSize: { xs: "3rem", md: "5rem" },
-          fontWeight: "bold",
-          color: "text.primary",
-          mb: 2,
-        }}
-      >
-        Coming Soon
-      </Typography>
-      <Typography
-        variant="h5"
         sx={{
           color: "text.secondary",
-          mb: 4,
+          mb: 2,
           textAlign: "center",
           maxWidth: "600px",
+          fontSize: "1.2rem",
         }}
       >
         We&apos;re working hard to bring you this page. Stay tuned for something
         awesome!
       </Typography>
-      <Link href="/" passHref>
+      <Link href={returnUrl} passHref>
         <Button
-          variant="text"
+          variant="outlined"
           color="primary"
-          size="small"
+          startIcon={<Iconify icon="eva:arrow-ios-back-fill" />}
           sx={{
             textTransform: "none",
             borderRadius: "8px",
-            px: 4,
-            py: 1.5,
           }}
         >
-          Back to Home
+          Return
         </Button>
       </Link>
     </Box>

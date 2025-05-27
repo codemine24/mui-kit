@@ -6,7 +6,7 @@ import AppProvider from "@/providers/app-provider";
 import { Box, CssBaseline, GlobalStyles } from "@mui/material";
 import { Metadata } from "next";
 import { JetBrains_Mono, Roboto } from "next/font/google";
-import "./globals.css";
+import "../styles/globals.css";
 
 const roboto = Roboto({
   subsets: ["latin"],

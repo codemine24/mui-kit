@@ -104,7 +104,6 @@ export const ComponentOverview = () => {
                       label={tag.label}
                       size="small"
                       clickable
-                      // component="a"
                       sx={{ m: 0.5 }}
                     />
                   </Link>

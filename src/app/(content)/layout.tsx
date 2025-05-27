@@ -21,11 +21,11 @@ export default function ContentLayout({
             display: { xs: "none", md: "block" },
             position: "sticky",
             top: 60,
-            height: "calc(100vh - 20px)",
+            height: "calc(100vh - 80px)",
             overflowY: "auto",
           }}
         >
-          <ContentSidebar />
+          <ContentSidebar variant="sidebar" />
         </Grid>
 
         <Grid
@@ -36,6 +36,7 @@ export default function ContentLayout({
             pt: { xs: 2, md: 3 },
             overflowY: "auto",
             scrollbarWidth: "none",
+            minHeight: "calc(100vh - 175px)",
           }}
         >
           {children}

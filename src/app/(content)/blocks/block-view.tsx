@@ -4,21 +4,28 @@ import { PageTitle } from "@/components/core/page-title";
 import { Box, Divider, Stack, TextField, useTheme } from "@mui/material";
 import Link from "next/link";
 import React from "react";
-import { blockArr } from "./constants/data";
+import { useOnThisPage } from "@/contexts/on-thispage-context";
+import { pxToRem } from "@/utils/pxToRem";
+import { blocksArr } from "@/router/router";
 
 export const BlockView = () => {
   const theme = useTheme();
   const [searchText, setSearchText] = React.useState<string>("");
-  const [filteredData, setFilteredData] = React.useState(blockArr);
+  const [filteredData, setFilteredData] = React.useState(blocksArr);
+  const { setSections } = useOnThisPage();
+
+  React.useEffect(() => {
+    setSections([]);
+  }, [setSections]);
 
   React.useEffect(() => {
     if (searchText) {
-      const filtered = blockArr.filter((item) =>
+      const filtered = blocksArr.filter((item) =>
         item.label.toLowerCase().includes(searchText.toLowerCase())
       );
       setFilteredData(filtered);
     } else {
-      setFilteredData(blockArr);
+      setFilteredData(blocksArr);
     }
   }, [searchText]);
 
@@ -39,7 +46,23 @@ export const BlockView = () => {
           placeholder="Search..."
           id="outlined-size-small"
           size="small"
-          sx={{ width: { xs: "100%", md: "25%" } }}
+          sx={{
+            mb: 0,
+            width: { xs: "100%", md: "25%" },
+            backgroundColor: theme.palette.background.paper,
+            "& .MuiOutlinedInput-root": {
+              borderRadius: theme.shape.borderRadius,
+              paddingLeft: 1,
+              fontSize: { md: pxToRem(14), lg: pxToRem(15) },
+              "&.Mui-focused fieldset": {
+                borderColor: "primary.main",
+                boxShadow: theme.shadows[1],
+              },
+            },
+            "& .MuiOutlinedInput-notchedOutline": {
+              borderColor: theme.palette.divider,
+            },
+          }}
           onChange={(e) => setSearchText(e.target.value)}
         />
       </Stack>

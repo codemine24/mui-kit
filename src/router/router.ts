@@ -1,53 +1,6 @@
 import { TContentSidebarMode } from "@/types/content.types";
 import { PATHS } from "./paths";
 
-export const elements = [
-  { label: "Overview", path: PATHS.ELEMENTS.OVERVIEW },
-  { label: "Accordion", path: PATHS.ELEMENTS.ACCORDION },
-  { label: "Alert", path: PATHS.ELEMENTS.ALERT },
-  { label: "Autocomplete", path: PATHS.ELEMENTS.AUTOCOMPLETE },
-  { label: "Avatar", path: PATHS.ELEMENTS.AVATAR },
-  { label: "Breadcrumb", path: PATHS.ELEMENTS.BREADCRUMB },
-  { label: "Button", path: PATHS.ELEMENTS.BUTTON },
-  { label: "Button Group", path: PATHS.ELEMENTS.BUTTON_GROUP },
-  { label: "Bottom Navigation", path: PATHS.ELEMENTS.BUTTON_NAVIGATION },
-  { label: "Card", path: PATHS.ELEMENTS.CARD },
-  { label: "Checkbox", path: PATHS.ELEMENTS.CHECKBOX },
-  { label: "Chip", path: PATHS.ELEMENTS.CHIP },
-  { label: "Dialog", path: PATHS.ELEMENTS.DIALOG },
-  { label: "Drawer", path: PATHS.ELEMENTS.DRAWER },
-  {
-    label: "Floating Action Button",
-    path: PATHS.ELEMENTS.FLOATING_ACTION_BUTTON,
-  },
-  { label: "Pagination", path: PATHS.ELEMENTS.PAGINATION },
-  { label: "Popover", path: PATHS.ELEMENTS.POPOVER },
-  { label: "Progress", path: PATHS.ELEMENTS.PROGRESS },
-  { label: "Radio Group", path: PATHS.ELEMENTS.RADIO_GROUP },
-  { label: "Rating", path: PATHS.ELEMENTS.RATING },
-  { label: "Select", path: PATHS.ELEMENTS.SELECT },
-  { label: "Skeleton", path: PATHS.ELEMENTS.SKELETON },
-  { label: "Slider", path: PATHS.ELEMENTS.SLIDER },
-  { label: "Speed Dial", path: PATHS.ELEMENTS.SPEED_DIAL },
-  { label: "Stepper", path: PATHS.ELEMENTS.STEPPER },
-  { label: "Switch", path: PATHS.ELEMENTS.SWITCH },
-  { label: "Table", path: PATHS.ELEMENTS.TABLE },
-  { label: "Tabs", path: PATHS.ELEMENTS.TABS },
-  { label: "Text Field", path: PATHS.ELEMENTS.TEXT_FIELD },
-  { label: "Textarea", path: PATHS.ELEMENTS.TEXTAREA },
-  { label: "Toggle Button", path: PATHS.ELEMENTS.TOGGLE_BUTTON },
-  { label: "Tooltip", path: PATHS.ELEMENTS.TOOLTIP },
-  { label: "Transfer List", path: PATHS.ELEMENTS.TRANSFER_LIST },
-  { label: "Typography", path: PATHS.ELEMENTS.TYPOGRAPHY },
-];
-
-const blockElements = [
-  { label: "Overview", path: PATHS.BLOCKS.OVERVIEW },
-  { label: "Gallery", path: PATHS.BLOCKS.GALLERY },
-  { label: "Jumbotron", path: PATHS.BLOCKS.JUMBOTRON },
-  { label: "Mega Menu", path: PATHS.BLOCKS.MEGA_MENU },
-];
-
 interface IBaseSidebarGroup {
   key: TContentSidebarMode;
   label: string;
@@ -72,6 +25,39 @@ interface ISingle extends IBaseSidebarGroup {
 
 type ContentSidebarPathGroup = IButton | IGroup | ISingle;
 
+// do not change this. add new item on paths.ts > elements
+export const elementsArr = Object.entries(PATHS.ELEMENTS)
+  .map(([key, path]) => ({
+    label: key
+      .toLowerCase()
+      .split("_")
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(" "),
+    path,
+  }))
+  .sort((a, b) => {
+    if (a.label === "Overview") return -1;
+    if (b.label === "Overview") return 1;
+    return a.label.localeCompare(b.label);
+  });
+
+// do not change this. add new item on paths.ts > blocks
+export const blocksArr = Object.entries(PATHS.BLOCKS)
+  .map(([key, path]) => ({
+    label: key
+      .toLowerCase()
+      .split("_")
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(" "),
+    path,
+  }))
+  .sort((a, b) => {
+    if (a.label === "Overview") return -1;
+    if (b.label === "Overview") return 1;
+    return a.label.localeCompare(b.label);
+  });
+
+// content sidebar
 export const contentSidebarPathGroups: ContentSidebarPathGroup[] = [
   {
     key: "INTRODUCTION",
@@ -92,30 +78,16 @@ export const contentSidebarPathGroups: ContentSidebarPathGroup[] = [
   {
     key: "ELEMENTS",
     label: "Elements",
-    items: elements,
+    items: elementsArr,
     path: PATHS.ELEMENTS.OVERVIEW,
     type: "group",
   },
   {
     key: "BLOCKS",
     label: "Blocks",
-    items: blockElements,
+    items: blocksArr,
     path: PATHS.BLOCKS.OVERVIEW,
     type: "group",
-  },
-  {
-    key: "TEMPLATES",
-    label: "Templates",
-    path: PATHS.TEMPLATES.ROOT,
-    type: "single",
-    items: [],
-  },
-  {
-    key: "DASHBOARD",
-    label: "Dashboard",
-    path: PATHS.DASHBOARD.ROOT,
-    type: "single",
-    items: [],
   },
   {
     key: "FORM",
@@ -126,10 +98,137 @@ export const contentSidebarPathGroups: ContentSidebarPathGroup[] = [
   },
 ];
 
+// header navigation
 export const navItems = [
-  { label: "Docs", path: PATHS.DOCS.INSTALL },
-  { label: "Kit", path: PATHS.ELEMENTS.OVERVIEW },
-  { label: "Why?", path: PATHS.CONTRIBUTE },
+  { label: "Elements", path: PATHS.ELEMENTS.OVERVIEW },
+  { label: "Blocks", path: PATHS.BLOCKS.OVERVIEW },
+  { label: "Why?", path: PATHS.ABOUT },
+];
+
+// footer
+export const footerItems = [
+  { label: "Report bug", path: PATHS.FOOTER.REPORT_BUG },
+  { label: "Changelog", path: PATHS.FOOTER.CHANGE_LOG },
+  { label: "Contact", path: PATHS.FOOTER.CONTACT },
+];
+
+// featured components
+export const featuredComponents = [
+  {
+    label: "Accordion",
+    url: PATHS.ELEMENTS.ACCORDION,
+    icon: "tabler:layout-list",
+  },
+  {
+    label: "Alert",
+    url: PATHS.ELEMENTS.ALERT,
+    icon: "tabler:alert-triangle",
+  },
+  {
+    label: "Avatar",
+    url: PATHS.ELEMENTS.AVATAR,
+    icon: "tabler:user-circle",
+  },
+  {
+    label: "Badge",
+    url: PATHS.ELEMENTS.BADGE,
+    icon: "tabler:badge",
+  },
+  {
+    label: "Button",
+    url: PATHS.ELEMENTS.BUTTON,
+    icon: "tabler:square-rounded-arrow-right",
+  },
+  {
+    label: "Button Group",
+    url: PATHS.ELEMENTS.BUTTON_GROUP,
+    icon: "tabler:layout-grid",
+  },
+  {
+    label: "Card",
+    url: PATHS.ELEMENTS.CARD,
+    icon: "tabler:id",
+  },
+  {
+    label: "Dialog",
+    url: PATHS.ELEMENTS.DIALOG,
+    icon: "tabler:message-2",
+  },
+  {
+    label: "Slider",
+    url: PATHS.ELEMENTS.SLIDER,
+    icon: "tabler:slideshow",
+  },
+  {
+    label: "Stepper",
+    url: PATHS.ELEMENTS.STEPPER,
+    icon: "tabler:list-numbers",
+  },
+  {
+    label: "Tab",
+    url: PATHS.ELEMENTS.TABS,
+    icon: "tabler:layout-navbar-expand",
+  },
+];
+
+// featured blocks
+export const featuredBlocks = [
+  {
+    label: "Mega Menu",
+    url: PATHS.BLOCKS.MEGA_MENU,
+    icon: "tabler:layout-navbar",
+  },
+  {
+    label: "About",
+    url: PATHS.BLOCKS.ABOUT,
+    icon: "mdi:account-question-outline",
+  },
+  {
+    label: "Call To Action",
+    url: PATHS.BLOCKS.CALL_TO_ACTION,
+    icon: "tabler:click",
+  },
+  {
+    label: "Coming Soon",
+    url: PATHS.BLOCKS.COMING_SOON,
+    icon: "tabler:clock-hour-10",
+  },
+  { label: "Contact", url: PATHS.BLOCKS.CONTACT, icon: "tabler:phone-call" },
+  { label: "Copyright", url: PATHS.BLOCKS.COPYRIGHT, icon: "mdi:copyright" },
+  { label: "FAQ", url: PATHS.BLOCKS.FAQ, icon: "tabler:question-mark" },
+  {
+    label: "Feature",
+    url: PATHS.BLOCKS.FEATURE_BENEFIT,
+    icon: "tabler:star",
+  },
+  {
+    label: "Feature Product",
+    url: PATHS.BLOCKS.FEATURE_PRODUCT,
+    icon: "tabler:package",
+  },
+  {
+    label: "Focus Boxes",
+    url: PATHS.BLOCKS.FOCUS_BOXES,
+    icon: "tabler:focus-2",
+  },
+  {
+    label: "Footer",
+    url: PATHS.BLOCKS.FOOTER,
+    icon: "tabler:layout-navbar-collapse",
+  },
+  { label: "Gallery", url: PATHS.BLOCKS.GALLERY, icon: "tabler:photo" },
+  { label: "Logo Grid", url: PATHS.BLOCKS.LOGO_GRID, icon: "tabler:grid-dots" },
+  { label: "Hero", url: PATHS.BLOCKS.HERO, icon: "tabler:layout-dashboard" },
+  {
+    label: "Pricing Menu",
+    url: PATHS.BLOCKS.PRICING_MENU,
+    icon: "tabler:currency-dollar",
+  },
+  {
+    label: "Testimonial",
+    url: PATHS.BLOCKS.TESTIMONIAL_SLIDER,
+    icon: "tabler:message-chatbot",
+  },
 ];
 
 // sitemap routes. do not change
@@ -137,6 +236,6 @@ export const sitemapRoutes = [
   PATHS.DOCS.INTRO,
   PATHS.DOCS.INSTALL,
   PATHS.ELEMENTS.OVERVIEW,
-  PATHS.CONTRIBUTE,
-  ...elements.map((item) => item.path),
+  PATHS.ABOUT,
+  ...elementsArr.map((item) => item.path),
 ];

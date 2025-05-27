@@ -4,6 +4,7 @@ import { Logo } from "@/components/core/logo";
 import { Iconify } from "@/components/iconify";
 import { contentSidebarPathGroups } from "@/router/router";
 import { TContentSidebarMode } from "@/types/content.types";
+import { getActiveToggle } from "@/utils/activeToggle";
 import { getRandomColor } from "@/utils/colors";
 import { pxToRem } from "@/utils/pxToRem";
 import { ChevronRight as ChevronRightIcon } from "@mui/icons-material";
@@ -25,23 +26,20 @@ import React, { useEffect, useState } from "react";
 
 type ContentSidebarProps = {
   variant?: "sidebar" | "drawer";
+  onClose?: () => void;
 };
 
 export const ContentSidebar = ({
   variant = "sidebar",
+  onClose,
 }: ContentSidebarProps) => {
+  const pathname = usePathname();
   const theme = useTheme();
   const [open, setOpen] = useState<TContentSidebarMode | "">("ELEMENTS");
   const [searchValue, setSearchValue] = useState("");
   const [searchResults, setSearchResults] = useState<
     { key: string; label: string; path: string }[]
   >([]);
-  const pathname = usePathname();
-
-  useEffect(() => {
-    setSearchValue("");
-    setSearchResults([]);
-  }, [pathname]);
 
   const handleClick = (mode: TContentSidebarMode) => {
     setOpen((prev) => (prev === mode ? "" : mode));
@@ -72,6 +70,18 @@ export const ContentSidebar = ({
       setSearchResults([]);
     }
   };
+
+  const delayedSidebarClose = () => {
+    if (onClose) {
+      setTimeout(onClose, 300);
+    }
+  };
+
+  useEffect(() => {
+    setSearchValue("");
+    setSearchResults([]);
+    setOpen(getActiveToggle(pathname) || "");
+  }, [pathname]);
 
   return (
     <Box
@@ -148,8 +158,7 @@ export const ContentSidebar = ({
           }}
         />
       </Box>
-      <List
-      >
+      <List>
         {/* search results */}
         {searchValue ? (
           <Box>
@@ -223,7 +232,11 @@ export const ContentSidebar = ({
               return (
                 <React.Fragment key={key}>
                   {type === "button" && (
-                    <ListItem key={path || key} disablePadding>
+                    <ListItem
+                      key={path || key}
+                      disablePadding
+                      onClick={delayedSidebarClose}
+                    >
                       <Link href={path || ""} legacyBehavior passHref>
                         <ListItemButton
                           disableRipple
@@ -279,7 +292,11 @@ export const ContentSidebar = ({
                   )}
 
                   {type === "single" && (
-                    <ListItem key={path || key} disablePadding>
+                    <ListItem
+                      key={path || key}
+                      disablePadding
+                      onClick={delayedSidebarClose}
+                    >
                       <Link href={path || ""} legacyBehavior passHref>
                         <ListItemButton
                           disableRipple
@@ -336,6 +353,16 @@ export const ContentSidebar = ({
                           },
                         }}
                       >
+                        <ChevronRightIcon
+                          sx={{
+                            transform:
+                              open === key ? "rotate(90deg)" : "rotate(0deg)",
+                            transition: "transform 200ms",
+                            color: "primary.main",
+                            fontSize: 16,
+                            mr: 1,
+                          }}
+                        />
                         <ListItemText
                           primary={label}
                           primaryTypographyProps={{
@@ -343,17 +370,6 @@ export const ContentSidebar = ({
                             color: "text.primary",
                             fontWeight: open === key ? 500 : 400,
                             fontSize: { md: pxToRem(14), lg: pxToRem(15) },
-                          }}
-                        />
-
-                        <ChevronRightIcon
-                          sx={{
-                            transform:
-                              open === key ? "rotate(90deg)" : "rotate(0deg)",
-                            transition: "transform 200ms",
-                            color: "text.secondary",
-                            fontSize: 16,
-                            ml: 1,
                           }}
                         />
                       </ListItemButton>
@@ -373,7 +389,11 @@ export const ContentSidebar = ({
                           }}
                         >
                           {items.map((item) => (
-                            <ListItem key={item.path} disablePadding>
+                            <ListItem
+                              key={item.path}
+                              disablePadding
+                              onClick={delayedSidebarClose}
+                            >
                               <Link href={item.path} legacyBehavior passHref>
                                 <ListItemButton
                                   disableRipple
@@ -424,7 +444,8 @@ export const ContentSidebar = ({
                                       color: "text.primary",
                                       fontWeight: isActive(item.path)
                                         ? 500
-                                        : 300,
+                                        : 400,
+
                                       fontSize: {
                                         md: pxToRem(14),
                                         lg: pxToRem(15),
