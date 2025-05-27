@@ -36,8 +36,8 @@ export const PaginationSolidPreview = () => {
                             backgroundColor: "#E60076",
                         },
                     },
-                    "& .Mui-selected": {
-                        color: "black",
+                    "& .MuiPaginationItem-root.Mui-selected": {
+                        backgroundColor: "#E60076",
                     },
                 }}
             />
@@ -62,7 +62,7 @@ export const PaginationSolidPreview = () => {
                             backgroundColor: "#E60076",
                         },
                     },
-                    "& .Mui-selected": {
+                    "& .MuiPaginationItem-root.Mui-selected": {
                         backgroundColor: "#E60076",
                     },
                 }}
@@ -82,17 +82,15 @@ export const PaginationSolidPreview = () => {
                     "& .MuiPaginationItem-root": {
                         color: "white",
                         height: "32px",
+                        margin: 0,
                         backgroundColor: "primary.main",
                         borderRadius: 0,
                         "&:hover": {
                             backgroundColor: "#E60076",
                         },
                     },
-                    "& .Mui-selected": {
+                    "& .MuiPaginationItem-root.Mui-selected": {
                         backgroundColor: "#E60076",
-                    },
-                    "& .css-b7dbzf-MuiPaginationItem-root": {
-                        margin: 0,
                     },
                 }}
                 renderItem={(item) => (
@@ -123,19 +121,17 @@ export const PaginationSolidPreview = () => {
                     "& .MuiPaginationItem-root": {
                         color: "white",
                         height: "32px",
+                        margin: 0,
                         backgroundColor: "primary.main",
                         borderRadius: 0,
                         "&:hover": {
                             backgroundColor: "#E60076",
                         },
                     },
-                    "& .Mui-selected": {
+                    "& .MuiPaginationItem-root.Mui-selected": {
                         backgroundColor: "#E60076",
                         border: "none !important",
                         color: "#ffffff",
-                    },
-                    "& .css-b7dbzf-MuiPaginationItem-root": {
-                        margin: 0,
                     },
                 }}
                 renderItem={(item) => (
@@ -182,7 +178,7 @@ export const PaginationSolidPreview = () => {
                             backgroundColor: "#E60076",
                         },
                     },
-                    "& .Mui-selected": {
+                    "& .MuiPaginationItem-root.Mui-selected": {
                         backgroundColor: "#E60076",
                     },
                 }}
@@ -210,7 +206,7 @@ export const PaginationSolidPreview = () => {
                             backgroundColor: "#E60076",
                         },
                     },
-                    "& .Mui-selected": {
+                    "& .MuiPaginationItem-root.Mui-selected": {
                         backgroundColor: "#E60076",
                         color: "#ffffff",
                     },
