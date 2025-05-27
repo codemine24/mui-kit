@@ -48,7 +48,12 @@ export const BlockOverviewV2 = () => {
           <Grid size={{ xs: 12, md: 8 }}>
             {featuredBlocks.map((item) => (
               <Button
-                startIcon={<Iconify icon={item.icon} />}
+                startIcon={
+                  <Iconify
+                    icon={item.icon}
+                    style={{ color: theme.palette.text.secondary }}
+                  />
+                }
                 key={item.label}
                 variant="outlined"
                 color="inherit"
@@ -56,7 +61,14 @@ export const BlockOverviewV2 = () => {
                   mr: { xs: 0.5, md: 1 },
                   mb: { xs: 1, md: 2 },
                   border: "1px solid var(--divider-color)",
-                   borderRadius: (theme) => theme.shape.borderRadius,
+                  borderRadius: (theme) => theme.shape.borderRadius,
+                  textTransform: "capitalize",
+                  fontWeight: 500,
+                  color: "text.secondary",
+                  fontSize: { xs: pxToRem(15), md: pxToRem(16) },
+                  "&:hover": {
+                    color: "text.primary",
+                  },
                 }}
                 onClick={() => router.push(item.url)}
               >
