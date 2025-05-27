@@ -4,14 +4,14 @@ import { PageTitle } from "@/components/core/page-title";
 import { Box, Divider, Stack, TextField, useTheme } from "@mui/material";
 import Link from "next/link";
 import React from "react";
-import { blockArr } from "./constants/data";
 import { useOnThisPage } from "@/contexts/on-thispage-context";
 import { pxToRem } from "@/utils/pxToRem";
+import { blocksArr } from "@/router/router";
 
 export const BlockView = () => {
   const theme = useTheme();
   const [searchText, setSearchText] = React.useState<string>("");
-  const [filteredData, setFilteredData] = React.useState(blockArr);
+  const [filteredData, setFilteredData] = React.useState(blocksArr);
   const { setSections } = useOnThisPage();
 
   React.useEffect(() => {
@@ -20,12 +20,12 @@ export const BlockView = () => {
 
   React.useEffect(() => {
     if (searchText) {
-      const filtered = blockArr.filter((item) =>
+      const filtered = blocksArr.filter((item) =>
         item.label.toLowerCase().includes(searchText.toLowerCase())
       );
       setFilteredData(filtered);
     } else {
-      setFilteredData(blockArr);
+      setFilteredData(blocksArr);
     }
   }, [searchText]);
 

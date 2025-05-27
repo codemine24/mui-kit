@@ -2,11 +2,11 @@
 import { CustomBreadCrumbs } from "@/components/core/breadcrumbs";
 import { PageTitle } from "@/components/core/page-title";
 import { useOnThisPage } from "@/contexts/on-thispage-context";
+import { elementsArr } from "@/router/router";
+import { pxToRem } from "@/utils/pxToRem";
 import { Box, Divider, Stack, TextField, useTheme } from "@mui/material";
 import Link from "next/link";
 import React from "react";
-import { elementsArr } from "../constants/elements";
-import { pxToRem } from "@/utils/pxToRem";
 
 export const ElementView = () => {
   const theme = useTheme();

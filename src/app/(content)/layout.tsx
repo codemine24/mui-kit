@@ -25,7 +25,7 @@ export default function ContentLayout({
             overflowY: "auto",
           }}
         >
-          <ContentSidebar />
+          <ContentSidebar variant="sidebar" />
         </Grid>
 
         <Grid
@@ -36,6 +36,7 @@ export default function ContentLayout({
             pt: { xs: 2, md: 3 },
             overflowY: "auto",
             scrollbarWidth: "none",
+            minHeight: "calc(100vh - 175px)",
           }}
         >
           {children}
