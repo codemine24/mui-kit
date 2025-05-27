@@ -1,6 +1,4 @@
-'use client';
-
-import {
+export const stepperLinerString = `import {
     Stepper,
     Step,
     StepLabel,
@@ -14,16 +12,15 @@ import { useState } from 'react';
 
 interface StepItem {
     label: string;
-    description: string;
 }
 
 const steps: StepItem[] = [
-    { label: 'Step', description: 'This is a description text.' },
-    { label: 'Step', description: 'This is a description text.' },
-    { label: 'Step', description: 'This is a description text.' },
+    { label: 'Step' },
+    { label: 'Step' },
+    { label: 'Step' },
 ];
 
-export const StepperResponsivePreview = () => {
+export const StepperLiner = () => {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
     const [activeStep, setActiveStep] = useState<number>(0);
@@ -41,28 +38,22 @@ export const StepperResponsivePreview = () => {
             <Stepper
                 activeStep={activeStep}
                 orientation={isMobile ? 'vertical' : 'horizontal'}
-                alternativeLabel={!isMobile}
+                alternativeLabel={false}
             >
                 {steps.map((step, index) => (
                     <Step key={index}>
                         <StepLabel>
-                            <Box
+                            <Typography
+                                fontWeight={600}
                                 sx={{
-                                    display: 'flex',
-                                    flexDirection: 'column',
-                                    alignItems: isMobile ? 'flex-start' : 'center',
-                                    textAlign: isMobile ? 'left' : 'center',
+                                    ml: 1,
+                                    mt: isMobile ? 0.5 : 0,
+                                    fontSize: '0.875rem',
+                                    color: '#334155',
                                 }}
                             >
-                                <Typography fontWeight={600}>{step.label}</Typography>
-                                <Typography
-                                    variant="body2"
-                                    color="text.secondary"
-                                    sx={{ mt: 0.5, maxWidth: 200 }}
-                                >
-                                    {step.description}
-                                </Typography>
-                            </Box>
+                                {step.label}
+                            </Typography>
                         </StepLabel>
                     </Step>
                 ))}
@@ -92,3 +83,4 @@ export const StepperResponsivePreview = () => {
         </Box>
     );
 }
+`
