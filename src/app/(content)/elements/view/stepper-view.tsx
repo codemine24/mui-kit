@@ -6,8 +6,9 @@ import { PageTitle } from "@/components/core/page-title";
 import { SectionTitle } from "@/components/core/section-title";
 import { Box, Divider } from "@mui/material";
 import { useOnThisPage } from "@/contexts/on-thispage-context";
-import { StepperStaticPreview } from "../components/stepper";
-import { stepperStaticString } from "../code-string/stepper";
+
+import { StepperStaticPreview, StepperResponsivePreview } from "../components/stepper";
+import { stepperStaticString, stepperResponsiveString } from "../code-string/stepper";
 
 const sections = [
     {
@@ -17,6 +18,14 @@ const sections = [
             "Use this simple stepper that will adjust with most of the website layout. No extra package required.",
         codeString: stepperStaticString,
         preview: <StepperStaticPreview />,
+    },
+    {
+        id: "stepper-2",
+        title: "Responsive Stepper",
+        description:
+            "Use this simple stepper that will adjust with most of the website layout. No extra package required.",
+        codeString: stepperResponsiveString,
+        preview: <StepperResponsivePreview />,
     },
 ];
 
