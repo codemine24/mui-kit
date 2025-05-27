@@ -94,12 +94,16 @@ export const BlockOverviewV2 = () => {
                 sx={{ fontWeight: 600, fontSize: 20 }}
               />
               <BodyText
-                text="Fully functional ui blocks ready to use in your project"
+                text="Have you ever wondered why material ui doesn't have ready made blocks like Header, Footer, Slider etc? Well, we have. Simply copy and paste into your project."
                 sx={{ mb: { xs: 0, md: 2 } }}
               />
               <Link
                 href={PATHS.BLOCKS.OVERVIEW}
-                style={{ color: theme.palette.primary.main, textDecoration: "none", fontSize: pxToRem(16) }}
+                style={{
+                  color: theme.palette.primary.main,
+                  textDecoration: "none",
+                  fontSize: pxToRem(16),
+                }}
               >
                 View all
               </Link>

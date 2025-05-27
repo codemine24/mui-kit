@@ -93,7 +93,7 @@ export const ComponentOverviewV2 = () => {
                 sx={{ fontWeight: 600, fontSize: 20 }}
               />
               <BodyText
-                text="Fully functional components for you to start immediately"
+                text="Fully functional components designed with Material ui. Simply copy and paste into your project."
                 sx={{ mb: { xs: 0, md: 2 } }}
               />
               <Link

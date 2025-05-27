@@ -37,7 +37,7 @@ export const ContributorsOverview = () => {
       <Container maxWidth={"xl"}>
         <Box mb={4}>
           <Heading2
-            text="Community contributors"
+            text="Community Contributors"
             sx={{ textAlign: "center" }}
           />
           <BodyText
@@ -58,7 +58,6 @@ export const ContributorsOverview = () => {
                 >
                   GitHub
                 </Link>
-                .
               </>
             }
             sx={{

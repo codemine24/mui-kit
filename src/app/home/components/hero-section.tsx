@@ -153,7 +153,7 @@ export const HeroSection = () => {
               fontSize: { xs: pxToRem(12), md: pxToRem(14) },
             }}
           >
-            No Installation Required. Copy and paste components directly into
+            No Installation Required. Copy and paste directly into
             your project.
           </Alert>
 
@@ -172,7 +172,7 @@ export const HeroSection = () => {
           <BodyText
             text="MUI KIT is a open-source library that offers customized versions of
             material ui core components. Also we have added some extra
-            components using mui that are missing in material ui but very common
+            components that material ui is missing, but very common
             in real world projects."
           />
 
