@@ -76,6 +76,9 @@ export const PaginationSolidPreview = () => {
                     '& .Mui-selected': {
                         backgroundColor: 'warning.main',
                     },
+                    '& .css-b7dbzf-MuiPaginationItem-root': {
+                        margin: 0,
+                    }
                 }}
                 renderItem={(item) => (
                     <PaginationItem
@@ -113,6 +116,9 @@ export const PaginationSolidPreview = () => {
                         border: 'none !important',
                         color: '#ffffff',
                     },
+                    '& .css-b7dbzf-MuiPaginationItem-root': {
+                        margin: 0,
+                    }
                 }}
 
                 renderItem={(item) => (
