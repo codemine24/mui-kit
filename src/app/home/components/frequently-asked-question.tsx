@@ -3,11 +3,12 @@ import { BodyText } from "@/components/core/body-text";
 import { Heading2 } from "@/components/core/heading-2";
 import { Add, Remove } from "@mui/icons-material";
 import {
-  Accordion as MuiAccordion,
-  AccordionSummary as MuiAccordionSummary,
-  AccordionDetails ,
+  AccordionDetails,
   Box,
   Container,
+  Link,
+  Accordion as MuiAccordion,
+  AccordionSummary as MuiAccordionSummary,
   Stack,
   Typography,
   styled,
@@ -99,11 +100,30 @@ export const FrequentlyAskedQuestion = () => {
       <Container maxWidth={"xl"}>
         <Box mb={4}>
           <Heading2
-            text="Frequently asked questions"
+            text="Frequently Asked Questions"
             sx={{ textAlign: "center" }}
           />
           <BodyText
-            text="Here are some frequently asked questions about MUI KIT. If you have any other questions, please don't hesitate to contact us at codemine24@gmail.com."
+            text={
+              <>
+                Frequently asked questions about MUI KIT. If you
+                have more questions, don&apos;t hesitate to contact
+                us at
+                <Link
+                  href="mailto:codemine24@gmail.com"
+                  target="_blank"
+                  rel="noopener"
+                  sx={{
+                    textDecoration: "none",
+                    color: "primary.main",
+                    mx: 0.5,
+                    "&:hover": { textDecoration: "underline" },
+                  }}
+                >
+                  codemine24@gmail.com
+                </Link>
+              </>
+            }
             sx={{
               textAlign: "center",
               px: { xs: "0%", md: "25%" },
