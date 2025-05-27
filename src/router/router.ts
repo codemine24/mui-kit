@@ -130,7 +130,7 @@ export const sitemapRoutes = [
 ];
 
 export const footerItems = [
-  { label: "Report bug", path: PATHS.DOCS.INTRO },
-  { label: "Changelog", path: PATHS.ELEMENTS.OVERVIEW },
-  { label: "Contact", path: PATHS.BLOCKS.OVERVIEW },
+  { label: "Report bug", path: PATHS.FOOTER.REPORT_BUG },
+  { label: "Changelog", path: PATHS.FOOTER.CHANGE_LOG },
+  { label: "Contact", path: PATHS.FOOTER.CONTACT },
 ];

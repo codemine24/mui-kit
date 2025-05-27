@@ -96,7 +96,7 @@ export const PATHS = {
 
   FOOTER: {
     REPORT_BUG: "/report-bug",
-    CHANGELOG: "/changelog",
+    CHANGE_LOG: "/change-log",
     CONTACT: "/contact",
   },
 };
