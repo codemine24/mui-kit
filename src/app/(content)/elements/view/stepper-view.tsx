@@ -7,14 +7,15 @@ import { SectionTitle } from "@/components/core/section-title";
 import { Box, Divider } from "@mui/material";
 import { useOnThisPage } from "@/contexts/on-thispage-context";
 import { StepperStaticPreview } from "../components/stepper";
+import { stepperStaticString } from "../code-string/stepper";
 
 const sections = [
     {
         id: "stepper-1",
-        title: "Regular",
+        title: "Static Stepper",
         description:
             "Use this simple stepper that will adjust with most of the website layout. No extra package required.",
-        codeString: '',
+        codeString: stepperStaticString,
         preview: <StepperStaticPreview />,
     },
 ];

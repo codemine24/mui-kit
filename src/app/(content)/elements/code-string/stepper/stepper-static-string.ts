@@ -1,5 +1,4 @@
-"use client";
-import { Box, Stepper, Step, StepLabel, Button } from '@mui/material';
+export const stepperStaticString = `import { Box, Stepper, Step, StepLabel, Button } from '@mui/material';
 import { useState } from 'react';
 
 const steps = [
@@ -8,7 +7,7 @@ const steps = [
     'Step 3',
 ];
 
-export const StepperStaticPreview = () => {
+export const StepperStatic = () => {
     const [activeStep, setActiveStep] = useState(0);
     const [completed] = useState(new Set<number>());
 
@@ -44,3 +43,4 @@ export const StepperStaticPreview = () => {
         </Box>
     );
 }
+`
