@@ -68,13 +68,13 @@ const Accordion = styled(MuiAccordion)(({ theme }) => ({
   },
 
   "&:first-of-type": {
-    borderTopLeftRadius: 5,
-    borderTopRightRadius: 5,
+    borderTopLeftRadius: 8,
+    borderTopRightRadius: 8,
   },
 
   "&:last-of-type": {
-    borderBottomLeftRadius: 5,
-    borderBottomRightRadius: 5,
+    borderBottomLeftRadius: 8,
+    borderBottomRightRadius: 8,
   },
 
   "& + .MuiAccordion-root": {
