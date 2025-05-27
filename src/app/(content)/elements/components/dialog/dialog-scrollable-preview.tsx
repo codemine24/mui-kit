@@ -34,7 +34,7 @@ export const DialogScrollablePreview = () => {
 
   return (
     <React.Fragment>
-      <Stack direction="row" spacing={2}>
+      <Stack direction="row" flexWrap="wrap" rowGap={2} spacing={2}>
         <Button variant="contained" onClick={handleClickOpen("paper")}>
           Paper: only content scroll
         </Button>

@@ -1,8 +1,14 @@
 "use client";
 
-import { East, KeyboardBackspace } from '@mui/icons-material';
-import { Box, Divider, Pagination, PaginationItem, Typography } from '@mui/material';
-import React from 'react';
+import { East, KeyboardBackspace } from "@mui/icons-material";
+import {
+    Box,
+    Divider,
+    Pagination,
+    PaginationItem,
+    Typography,
+} from "@mui/material";
+import React from "react";
 
 const MAX_PAGE = 50;
 const DEFAULT_PAGE = 6;
@@ -13,22 +19,25 @@ export const PaginationSolidPreview = () => {
     return (
         <Box sx={{ py: 2 }}>
             {/* Default */}
-            <Typography variant="body2" sx={{ mb: 2 }}>Default</Typography>
+            <Typography variant="body2" sx={{ mb: 2 }}>
+                Default
+            </Typography>
             <Pagination
                 count={MAX_PAGE}
                 page={page}
                 onChange={(_, value) => setPage(value)}
                 sx={{
-                    '& .MuiPaginationItem-root': {
+                    "& .MuiPaginationItem-root": {
+                        color: "white",
                         height: "32px",
                         backgroundColor: "primary.main",
                         borderRadius: 0,
-                        '&:hover': {
-                            backgroundColor: 'divider'
+                        "&:hover": {
+                            backgroundColor: "#E60076",
                         },
                     },
-                    '& .Mui-selected': {
-                        backgroundColor: 'warning.main',
+                    "& .Mui-selected": {
+                        color: "black",
                     },
                 }}
             />
@@ -36,22 +45,25 @@ export const PaginationSolidPreview = () => {
             <Divider sx={{ my: 4 }} />
 
             {/* Rounded */}
-            <Typography variant="body2" sx={{ mb: 2 }}>Rounded</Typography>
+            <Typography variant="body2" sx={{ mb: 2 }}>
+                Rounded
+            </Typography>
             <Pagination
                 count={MAX_PAGE}
                 page={page}
                 onChange={(_, value) => setPage(value)}
                 sx={{
-                    '& .MuiPaginationItem-root': {
+                    "& .MuiPaginationItem-root": {
+                        color: "white",
                         height: "32px",
                         backgroundColor: "primary.main",
                         borderRadius: "50%",
-                        '&:hover': {
-                            backgroundColor: 'divider'
+                        "&:hover": {
+                            backgroundColor: "#E60076",
                         },
                     },
-                    '& .Mui-selected': {
-                        backgroundColor: 'warning.main',
+                    "& .Mui-selected": {
+                        backgroundColor: "#E60076",
                     },
                 }}
             />
@@ -59,26 +71,29 @@ export const PaginationSolidPreview = () => {
             <Divider sx={{ my: 4 }} />
 
             {/* Custom Icon */}
-            <Typography variant="body2" sx={{ mb: 2 }}>Custom Icon</Typography>
+            <Typography variant="body2" sx={{ mb: 2 }}>
+                Custom Icon
+            </Typography>
             <Pagination
                 count={MAX_PAGE}
                 page={page}
                 onChange={(_, value) => setPage(value)}
                 sx={{
-                    '& .MuiPaginationItem-root': {
+                    "& .MuiPaginationItem-root": {
+                        color: "white",
                         height: "32px",
                         backgroundColor: "primary.main",
                         borderRadius: 0,
-                        '&:hover': {
-                            backgroundColor: 'divider'
+                        "&:hover": {
+                            backgroundColor: "#E60076",
                         },
                     },
-                    '& .Mui-selected': {
-                        backgroundColor: 'warning.main',
+                    "& .Mui-selected": {
+                        backgroundColor: "#E60076",
                     },
-                    '& .css-b7dbzf-MuiPaginationItem-root': {
+                    "& .css-b7dbzf-MuiPaginationItem-root": {
                         margin: 0,
-                    }
+                    },
                 }}
                 renderItem={(item) => (
                     <PaginationItem
@@ -97,36 +112,46 @@ export const PaginationSolidPreview = () => {
             <Divider sx={{ my: 4 }} />
 
             {/* Custom Text */}
-            <Typography variant="body2" sx={{ mb: 2 }}>Custom Text</Typography>
+            <Typography variant="body2" sx={{ mb: 2 }}>
+                Custom Text
+            </Typography>
             <Pagination
                 count={MAX_PAGE}
                 page={page}
                 onChange={(_, value) => setPage(value)}
                 sx={{
-                    '& .MuiPaginationItem-root': {
+                    "& .MuiPaginationItem-root": {
+                        color: "white",
                         height: "32px",
                         backgroundColor: "primary.main",
                         borderRadius: 0,
-                        '&:hover': {
-                            backgroundColor: 'divider'
+                        "&:hover": {
+                            backgroundColor: "#E60076",
                         },
                     },
-                    '& .Mui-selected': {
-                        backgroundColor: 'warning.main',
-                        border: 'none !important',
-                        color: '#ffffff',
+                    "& .Mui-selected": {
+                        backgroundColor: "#E60076",
+                        border: "none !important",
+                        color: "#ffffff",
                     },
-                    '& .css-b7dbzf-MuiPaginationItem-root': {
+                    "& .css-b7dbzf-MuiPaginationItem-root": {
                         margin: 0,
-                    }
+                    },
                 }}
-
                 renderItem={(item) => (
                     <PaginationItem
                         {...item}
                         slots={{
-                            previous: () => <span>Prev</span>,
-                            next: () => <span>Next</span>,
+                            previous: () => (
+                                <Box component={"span"} sx={{ p: 1 }}>
+                                    Prev
+                                </Box>
+                            ),
+                            next: () => (
+                                <Box component={"span"} sx={{ p: 1 }}>
+                                    Next
+                                </Box>
+                            ),
                         }}
                         sx={{
                             margin: 0,
@@ -138,7 +163,9 @@ export const PaginationSolidPreview = () => {
             <Divider sx={{ my: 4 }} />
 
             {/* Hide Buttons */}
-            <Typography variant="body2" sx={{ mb: 2 }}>Hide Previous and Next Buttons</Typography>
+            <Typography variant="body2" sx={{ mb: 2 }}>
+                Hide Previous and Next Buttons
+            </Typography>
             <Pagination
                 count={MAX_PAGE}
                 page={page}
@@ -146,17 +173,17 @@ export const PaginationSolidPreview = () => {
                 hidePrevButton
                 hideNextButton
                 sx={{
-                    '& .MuiPaginationItem-root': {
+                    "& .MuiPaginationItem-root": {
+                        color: "white",
                         height: "32px",
                         backgroundColor: "primary.main",
                         borderRadius: 0,
-                        '&:hover': {
-                            backgroundColor: 'divider'
+                        "&:hover": {
+                            backgroundColor: "#E60076",
                         },
                     },
-                    '& .Mui-selected': {
-                        backgroundColor: 'warning.main',
-                        color: '#ffffff',
+                    "& .Mui-selected": {
+                        backgroundColor: "#E60076",
                     },
                 }}
             />
@@ -164,7 +191,9 @@ export const PaginationSolidPreview = () => {
             <Divider sx={{ my: 4 }} />
 
             {/* Show First and Last Button */}
-            <Typography variant="body2" sx={{ mb: 2 }}>Show First and Last Button</Typography>
+            <Typography variant="body2" sx={{ mb: 2 }}>
+                Show First and Last Button
+            </Typography>
             <Pagination
                 count={MAX_PAGE}
                 page={page}
@@ -172,20 +201,21 @@ export const PaginationSolidPreview = () => {
                 showFirstButton
                 showLastButton
                 sx={{
-                    '& .MuiPaginationItem-root': {
+                    "& .MuiPaginationItem-root": {
+                        color: "white",
                         height: "32px",
                         backgroundColor: "primary.main",
                         borderRadius: 0,
-                        '&:hover': {
-                            backgroundColor: 'divider'
+                        "&:hover": {
+                            backgroundColor: "#E60076",
                         },
                     },
-                    '& .Mui-selected': {
-                        backgroundColor: 'warning.main',
-                        color: '#ffffff',
+                    "& .Mui-selected": {
+                        backgroundColor: "#E60076",
+                        color: "#ffffff",
                     },
                 }}
             />
         </Box>
     );
-}
+};

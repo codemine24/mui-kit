@@ -5,7 +5,7 @@ import React from "react";
 const MAX_PAGE = 50;
 const DEFAULT_PAGE = 6;
 
-export const PaginationOutlined = () => {
+export const PaginationOutlinedPreview = () => {
     const [page, setPage] = React.useState(DEFAULT_PAGE);
 
     return (
