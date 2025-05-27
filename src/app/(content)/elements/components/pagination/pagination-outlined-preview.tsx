@@ -97,6 +97,7 @@ export const PaginationOutlinedPreview = () => {
                 sx={{
                     '& .MuiPaginationItem-root': {
                         height: "32px",
+                        margin: 0,
                         borderColor: "divider",
                         borderRadius: 0,
                         '&:hover': {
@@ -116,9 +117,6 @@ export const PaginationOutlinedPreview = () => {
                             previous: () => <KeyboardBackspace />,
                             next: () => <East />,
                         }}
-                        sx={{
-                            margin: 0,
-                        }}
                     />
                 )}
             />
@@ -135,6 +133,7 @@ export const PaginationOutlinedPreview = () => {
                 sx={{
                     '& .MuiPaginationItem-root': {
                         height: "32px",
+                        margin: 0,
                         borderColor: "divider",
                         borderRadius: 0,
                         '&:hover': {
@@ -154,9 +153,6 @@ export const PaginationOutlinedPreview = () => {
                         slots={{
                             previous: () => <span>Prev</span>,
                             next: () => <span>Next</span>,
-                        }}
-                        sx={{
-                            margin: 0,
                         }}
                     />
                 )}

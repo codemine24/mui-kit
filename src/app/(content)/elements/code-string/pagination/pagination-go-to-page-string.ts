@@ -1,6 +1,4 @@
-export const paginationGoToPageString = `"use client";
-
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+export const paginationGoToPageString = `import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import {
   Box,
@@ -15,16 +13,16 @@ import { useState } from "react";
 const MAX_PAGE = 50;
 const DEFAULT_PAGE = 6;
 
-export const PaginationGoToPagePreview = () => {
+export const PaginationGoToPage = () => {
   const [page, setPage] = useState(DEFAULT_PAGE);
 
   const NoArrowTextField = styled(TextField)({
     // For Chrome, Safari, Edge, Opera
     "& input[type=number]::-webkit-outer-spin-button, & input[type=number]::-webkit-inner-spin-button":
-      {
-        WebkitAppearance: "none",
-        margin: 0,
-      },
+    {
+      WebkitAppearance: "none",
+      margin: 0,
+    },
     // For Firefox
     "& input[type=number]": {
       MozAppearance: "textfield",
@@ -44,53 +42,71 @@ export const PaginationGoToPagePreview = () => {
           page={page}
           onChange={(_, value) => setPage(value)}
           sx={{
-            "& .MuiPagination-ul": {
-              gap: 0,
+            "& .MuiPaginationItem-root": {
+              color: "white",
+              height: "32px",
+              margin: 0,
+              backgroundColor: "rgba(230, 0, 118, 0.2)",
+              borderRadius: 0,
+              "&:hover": {
+                backgroundColor: "#E60076",
+              },
+            },
+            "& .MuiPaginationItem-root.Mui-selected": {
+              backgroundColor: "#E60076",
+              color: "#ffffff",
             },
           }}
           renderItem={(item) => {
-            const isPrevOrNext =
-              item.type === "previous" || item.type === "next";
+            const isPrev = item.type === 'previous';
+            const isNext = item.type === 'next';
 
             return (
               <PaginationItem
                 {...item}
                 slots={{
                   previous: () => (
-                    <span
-                      style={{ display: "flex", alignItems: "center", gap: 4 }}
+                    <Box
+                      component={"span"}
+                      sx={{
+                        p: 1,
+                        display: "flex",
+                        alignItems: "center",
+                        gap: 1,
+                      }}
                     >
                       <ArrowBackIcon fontSize="small" />
                       Prev
-                    </span>
+                    </Box>
                   ),
                   next: () => (
-                    <span
-                      style={{ display: "flex", alignItems: "center", gap: 4 }}
+                    <Box
+                      component={"span"}
+                      sx={{
+                        p: 1,
+                        display: "flex",
+                        alignItems: "center",
+                        gap: 1,
+                      }}
                     >
                       Next
                       <ArrowForwardIcon fontSize="small" />
-                    </span>
+                    </Box>
                   ),
                 }}
                 sx={{
-                    color: "#fff",
-                  height: "32px",
-                  margin: 0,
-                  borderRadius: 0,
-                  bgcolor: isPrevOrNext ? "#E60076" : "rgba(230, 0, 119, 0.39)",
-                  "&:hover": {
-                    backgroundColor: "#E60076",
-                    
-                  },
-                  "&.Mui-selected": {
-                    backgroundColor: "#E60076",
-                  },
+                  ...(isPrev || isNext
+                    ? {
+                      backgroundColor: "#E60076 !important",
+                    }
+                    : {}),
                 }}
               />
             );
           }}
         />
+
+
 
         <Divider
           orientation="vertical"
@@ -177,4 +193,5 @@ export const PaginationGoToPagePreview = () => {
       </Box>
     </Box>
   );
-};`
+};
+`
