@@ -35,7 +35,11 @@ export const elementsArr = Object.entries(PATHS.ELEMENTS)
       .join(" "),
     path,
   }))
-  .sort((a, b) => a.label.localeCompare(b.label));
+  .sort((a, b) => {
+    if (a.label === "Overview") return -1;
+    if (b.label === "Overview") return 1;
+    return a.label.localeCompare(b.label);
+  });
 
 // do not change this. add new item on paths.ts > blocks
 export const blocksArr = Object.entries(PATHS.BLOCKS)
@@ -47,7 +51,11 @@ export const blocksArr = Object.entries(PATHS.BLOCKS)
       .join(" "),
     path,
   }))
-  .sort((a, b) => a.label.localeCompare(b.label));
+  .sort((a, b) => {
+    if (a.label === "Overview") return -1;
+    if (b.label === "Overview") return 1;
+    return a.label.localeCompare(b.label);
+  });
 
 // content sidebar
 export const contentSidebarPathGroups: ContentSidebarPathGroup[] = [

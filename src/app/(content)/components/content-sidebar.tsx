@@ -2,7 +2,6 @@
 
 import { Logo } from "@/components/core/logo";
 import { Iconify } from "@/components/iconify";
-import { PATHS } from "@/router/paths";
 import { contentSidebarPathGroups } from "@/router/router";
 import { TContentSidebarMode } from "@/types/content.types";
 import { getActiveToggle } from "@/utils/activeToggle";
@@ -81,12 +80,7 @@ export const ContentSidebar = ({
   useEffect(() => {
     setSearchValue("");
     setSearchResults([]);
-    if (
-      pathname === PATHS.ELEMENTS.OVERVIEW ||
-      pathname === PATHS.BLOCKS.OVERVIEW
-    ) {
-      setOpen(getActiveToggle(pathname) || "");
-    }
+    setOpen(getActiveToggle(pathname) || "");
   }, [pathname]);
 
   return (

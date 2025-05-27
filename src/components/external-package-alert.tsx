@@ -1,6 +1,6 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { Alert } from "@mui/material";
-import { Box } from "@mui/system";
+import { Box } from "@mui/material";
 
 interface IProps {
   packages: {
