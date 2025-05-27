@@ -4,7 +4,7 @@ import React from "react";
 const MAX_PAGE = 50;
 const DEFAULT_PAGE = 12;
 
-export const PaginationSoftBgPreview = () => {
+export const PaginationSoftBg = () => {
   const [page, setPage] = React.useState(DEFAULT_PAGE);
 
   return (
@@ -100,4 +100,5 @@ export const PaginationSoftBgPreview = () => {
       />
     </Box>
   );
-};`;
+};
+`;

@@ -12,7 +12,7 @@ const totalCount = 100;
 const rowsPerPage = 10;
 const totalPages = Math.ceil(totalCount / rowsPerPage);
 
-export const PaginationButtonOnlyPreview = () => {
+export const PaginationButtonOnly = () => {
   const [page, setPage] = React.useState(1);
 
   // Calculate range: e.g., "1–10", "11–20"
@@ -146,4 +146,5 @@ export const PaginationButtonOnlyPreview = () => {
       </Box>
     </Box>
   );
-};`;
+};
+`;
