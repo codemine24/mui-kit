@@ -21,7 +21,7 @@ export default function ContentLayout({
             display: { xs: "none", md: "block" },
             position: "sticky",
             top: 60,
-            height: "calc(100vh - 20px)",
+            height: "calc(100vh - 80px)",
             overflowY: "auto",
           }}
         >

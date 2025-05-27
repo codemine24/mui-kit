@@ -35,7 +35,7 @@ export const ContentSidebar = ({
 }: ContentSidebarProps) => {
   const pathname = usePathname();
   const theme = useTheme();
-  const [open, setOpen] = useState<TContentSidebarMode | "">("");
+  const [open, setOpen] = useState<TContentSidebarMode | "">("ELEMENTS");
   const [searchValue, setSearchValue] = useState("");
   const [searchResults, setSearchResults] = useState<
     { key: string; label: string; path: string }[]
@@ -80,7 +80,7 @@ export const ContentSidebar = ({
   useEffect(() => {
     setSearchValue("");
     setSearchResults([]);
-    setOpen(getActiveToggle(pathname) || "COMPONENTS");
+    setOpen(getActiveToggle(pathname) || "");
   }, [pathname]);
 
   return (
@@ -353,6 +353,16 @@ export const ContentSidebar = ({
                           },
                         }}
                       >
+                        <ChevronRightIcon
+                          sx={{
+                            transform:
+                              open === key ? "rotate(90deg)" : "rotate(0deg)",
+                            transition: "transform 200ms",
+                            color: "primary.main",
+                            fontSize: 16,
+                            mr: 1,
+                          }}
+                        />
                         <ListItemText
                           primary={label}
                           primaryTypographyProps={{
@@ -360,17 +370,6 @@ export const ContentSidebar = ({
                             color: "text.primary",
                             fontWeight: open === key ? 500 : 400,
                             fontSize: { md: pxToRem(14), lg: pxToRem(15) },
-                          }}
-                        />
-
-                        <ChevronRightIcon
-                          sx={{
-                            transform:
-                              open === key ? "rotate(90deg)" : "rotate(0deg)",
-                            transition: "transform 200ms",
-                            color: "text.secondary",
-                            fontSize: 16,
-                            ml: 1,
                           }}
                         />
                       </ListItemButton>
@@ -445,7 +444,8 @@ export const ContentSidebar = ({
                                       color: "text.primary",
                                       fontWeight: isActive(item.path)
                                         ? 500
-                                        : 300,
+                                        : 400,
+
                                       fontSize: {
                                         md: pxToRem(14),
                                         lg: pxToRem(15),

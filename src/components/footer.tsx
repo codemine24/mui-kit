@@ -1,7 +1,7 @@
 "use client";
 import { footerItems } from "@/router/router";
 import { Box, Container, Grid, Typography, useTheme } from "@mui/material";
-import { Stack } from "@mui/system";
+import { Stack } from "@mui/material";
 import Link from "next/link";
 
 export const Footer = () => {

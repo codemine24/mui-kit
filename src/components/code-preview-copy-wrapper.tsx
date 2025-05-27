@@ -62,7 +62,7 @@ export const CodePreviewCopyWrapper: React.FC<CodePreviewWrapperProps> = ({
         }}
       >
         {tab === "preview" ? (
-          <Box sx={{ overflow: "auto", display: "flex", justifyContent: "center" }}>
+          <Box sx={{ overflow: "auto", display: "flex", justifyContent: "center", py: 2 }}>
             {preview}
           </Box>
         ) : (
@@ -90,10 +90,6 @@ export const CodePreviewCopyWrapper: React.FC<CodePreviewWrapperProps> = ({
                 color: "text.primary",
                 border: `1px solid ${theme.palette.divider}`,
                 boxShadow: "none",
-                // ":hover": {
-                //   bgcolor: "primary.main",
-                //   color: "background.default",
-                // },
               }}
             >
               <Iconify icon={icon} />
