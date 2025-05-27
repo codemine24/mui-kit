@@ -35,7 +35,7 @@ export const HeroInfinityCard = ({
           flexDirection: "column",
           position: "relative",
           border: (theme) => `.5px solid ${theme.palette.divider}`,
-          borderRadius: "12px",
+          borderRadius: (theme) => theme.shape.borderRadius,
           background: `linear-gradient(180deg, ${
             isDarkMode ? theme.palette.grey[900] : theme.palette.grey[200]
           }99 0%, transparent 100%)`,
