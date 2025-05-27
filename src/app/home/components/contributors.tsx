@@ -10,9 +10,9 @@ const contributors = [
     url: "https://github.com/Yead191",
   },
   {
-    name: "Fazly",
-    avatar: "https://avatars.githubusercontent.com/u/151907553?v=4",
-    url: "https://github.com/fazlyalahi01",
+    name: "Rapu",
+    avatar: "https://avatars.githubusercontent.com/u/108398425?v=4",
+    url: "https://github.com/riyazulhaque64",
   },
   {
     name: "Rakib",
@@ -20,9 +20,9 @@ const contributors = [
     url: "https://github.com/RakibMojumder",
   },
   {
-    name: "Rapu",
-    avatar: "https://avatars.githubusercontent.com/u/108398425?v=4",
-    url: "https://github.com/riyazulhaque64",
+    name: "Fazly",
+    avatar: "https://avatars.githubusercontent.com/u/151907553?v=4",
+    url: "https://github.com/fazlyalahi01",
   },
 ];
 
