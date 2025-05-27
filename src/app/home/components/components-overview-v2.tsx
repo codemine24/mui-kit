@@ -3,74 +3,12 @@ import { BodyText } from "@/components/core/body-text";
 import { Heading1 } from "@/components/core/heading-1";
 import { Iconify } from "@/components/iconify";
 import { PATHS } from "@/router/paths";
+import { featuredComponents } from "@/router/router";
 import { pxToRem } from "@/utils/pxToRem";
 import { Box, Button, Container, Grid, useTheme } from "@mui/material";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-// import Link from "next/link";
 
-const items = [
-  {
-    label: "Accordion",
-    url: PATHS.ELEMENTS.ACCORDION,
-    icon: "tabler:layout-list",
-  },
-  {
-    label: "Alert",
-    url: PATHS.ELEMENTS.ALERT,
-    icon: "tabler:alert-triangle",
-  },
-  {
-    label: "Avatar",
-    url: PATHS.ELEMENTS.AVATAR,
-    icon: "tabler:user-circle",
-  },
-  {
-    label: "Badge",
-    url: PATHS.ELEMENTS.BADGE,
-    icon: "tabler:badge",
-  },
-  {
-    label: "Button",
-    url: PATHS.ELEMENTS.BUTTON,
-    icon: "tabler:square-rounded-arrow-right",
-  },
-  {
-    label: "Button Group",
-    url: PATHS.ELEMENTS.BUTTON_GROUP,
-    icon: "tabler:layout-grid",
-  },
-  {
-    label: "Card",
-    url: PATHS.ELEMENTS.CARD,
-    icon: "tabler:id",
-  },
-  {
-    label: "Dialog",
-    url: PATHS.ELEMENTS.DIALOG,
-    icon: "tabler:message-2",
-  },
-  {
-    label: "Slider",
-    url: PATHS.ELEMENTS.SLIDER,
-    icon: "tabler:slideshow",
-  },
-  {
-    label: "Stepper",
-    url: PATHS.ELEMENTS.STEPPER,
-    icon: "tabler:list-numbers",
-  },
-  {
-    label: "Tab",
-    url: PATHS.ELEMENTS.TABS,
-    icon: "tabler:layout-navbar-expand",
-  },
-  {
-    label: "Textarea",
-    url: PATHS.ELEMENTS.TEXTAREA,
-    icon: "tabler:typography",
-  },
-];
 
 export const ComponentOverviewV2 = () => {
   const theme = useTheme();
@@ -109,7 +47,7 @@ export const ComponentOverviewV2 = () => {
             </Box>
           </Grid>
           <Grid size={{ xs: 12, md: 8 }}>
-            {items.map((item) => (
+            {featuredComponents.map((item) => (
               <Button
                 startIcon={<Iconify icon={item.icon} />}
                 key={item.label}
