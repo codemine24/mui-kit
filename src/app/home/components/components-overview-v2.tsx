@@ -119,6 +119,7 @@ export const ComponentOverviewV2 = () => {
                   mr: { xs: 0.5, md: 1 },
                   mb: { xs: 1, md: 2 },
                   border: "1px solid var(--divider-color)",
+                  borderRadius: (theme) => theme.shape.borderRadius,
                 }}
                 onClick={() => router.push(item.url)}
               >

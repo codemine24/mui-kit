@@ -8,7 +8,7 @@ import {
   Container,
   Link,
   Accordion as MuiAccordion,
-  AccordionSummary as MuiAccordionSummary,
+  AccordionSummary,
   Stack,
   Typography,
   styled,
@@ -57,29 +57,33 @@ const rightQuestions = [
   },
 ];
 
-const Accordion = styled(MuiAccordion)(() => ({
-  boxShadow: "1px 1px 2px .9px rgba(0, 0, 0, 0.1)",
-  padding: "10px",
-  marginBottom: 10,
-  "&.Mui-expanded": {
-    marginBottom: 10,
-    marginTop: 10,
-  },
+const Accordion = styled(MuiAccordion)(({ theme }) => ({
+  boxShadow: "1px 1px 2px 0.9px rgba(0, 0, 0, 0.07)",
+  overflow: "hidden",
+  borderRadius: 5,
+  minHeight: "55px",
+
   "&:before": {
     display: "none",
   },
-}));
 
-const AccordionSummary = styled(MuiAccordionSummary)(() => ({
-  padding: 0,
-  "& .MuiTypography-root": {
-    fontWeight: 500,
+  "&:first-of-type": {
+    borderTopLeftRadius: 5,
+    borderTopRightRadius: 5,
   },
+
+  "&:last-of-type": {
+    borderBottomLeftRadius: 5,
+    borderBottomRightRadius: 5,
+  },
+
+  "& + .MuiAccordion-root": {
+    marginTop: theme.spacing(1),
+  },
+
   "&.Mui-expanded": {
-    minHeight: "44px",
-  },
-  "& .MuiAccordionSummary-content.Mui-expanded": {
-    margin: "0px",
+    marginBottom: 10,
+    marginTop: 10,
   },
 }));
 
@@ -106,9 +110,8 @@ export const FrequentlyAskedQuestion = () => {
           <BodyText
             text={
               <>
-                Frequently asked questions about MUI KIT. If you
-                have more questions, don&apos;t hesitate to contact
-                us at
+                Frequently asked questions about MUI KIT. If you have more
+                questions, don&apos;t hesitate to contact us at
                 <Link
                   href="mailto:codemine24@gmail.com"
                   target="_blank"
