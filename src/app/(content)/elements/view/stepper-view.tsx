@@ -7,8 +7,8 @@ import { SectionTitle } from "@/components/core/section-title";
 import { Box, Divider } from "@mui/material";
 import { useOnThisPage } from "@/contexts/on-thispage-context";
 
-import { StepperStaticPreview, StepperResponsivePreview, StepperLinerPreview } from "../components/stepper";
-import { stepperStaticString, stepperResponsiveString, stepperLinerString } from "../code-string/stepper";
+import { StepperStaticPreview, StepperResponsivePreview, StepperLinerPreview, StepperDotPreview } from "../components/stepper";
+import { stepperStaticString, stepperResponsiveString, stepperLinerString, stepperDotString } from "../code-string/stepper";
 
 const sections = [
     {
@@ -34,6 +34,14 @@ const sections = [
             "Use this simple stepper that will adjust with most of the website layout. No extra package required.",
         codeString: stepperLinerString,
         preview: <StepperLinerPreview />,
+    },
+    {
+        id: "stepper-4",
+        title: "Dot Stepper",
+        description:
+            "Use this simple stepper that will adjust with most of the website layout. No extra package required.",
+        codeString: stepperDotString,
+        preview: <StepperDotPreview />,
     },
 ];
 
