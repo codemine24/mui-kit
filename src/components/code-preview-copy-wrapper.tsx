@@ -1,8 +1,17 @@
 "use client";
 import { Iconify } from "@/components/iconify"; // Ensure this works in your setup
 import { getCustomSyntaxStyle } from "@/utils/getCustomSyntaxStyle";
-import { Box, Button, Tab, Tabs, useTheme } from "@mui/material";
-import { useState } from "react";
+import {
+  Box,
+  Button,
+  Tab,
+  Tabs,
+  ToggleButton,
+  ToggleButtonGroup,
+  useTheme,
+} from "@mui/material";
+import { Stack } from "@mui/system";
+import React, { useState } from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 
 interface CodePreviewWrapperProps {
@@ -14,10 +23,11 @@ export const CodePreviewCopyWrapper: React.FC<CodePreviewWrapperProps> = ({
   codeString,
   preview,
 }) => {
+  const theme = useTheme();
   const [tab, setTab] = useState<"preview" | "code">("preview");
   const [copySuccess, setCopySuccess] = useState<string>("");
   const [icon, setIcon] = useState<string>("eva:copy-fill");
-  const theme = useTheme();
+  const [alignment, setAlignment] = React.useState<string | null>("left");
 
   const handleCopy = async () => {
     try {
@@ -34,6 +44,13 @@ export const CodePreviewCopyWrapper: React.FC<CodePreviewWrapperProps> = ({
     }
   };
 
+  const handleAlignment = (
+    event: React.MouseEvent<HTMLElement>,
+    newAlignment: string | null
+  ) => {
+    setAlignment(newAlignment);
+  };
+
   return (
     <Box
       sx={{
@@ -44,15 +61,32 @@ export const CodePreviewCopyWrapper: React.FC<CodePreviewWrapperProps> = ({
         bgcolor: "background.paper",
       }}
     >
-      <Tabs
-        value={tab}
-        onChange={(_, newValue) => setTab(newValue)}
-        aria-label="preview and code tabs"
-        sx={{ mb: 2 }}
-      >
-        <Tab value="preview" label="Preview" />
-        <Tab value="code" label="Code" />
-      </Tabs>
+      <Stack direction="row" alignItems="center" justifyContent="space-between">
+        <Tabs
+          value={tab}
+          onChange={(_, newValue) => setTab(newValue)}
+          aria-label="preview and code tabs"
+          sx={{ mb: 2 }}
+        >
+          <Tab value="preview" label="Preview" />
+          <Tab value="code" label="Code" />
+        </Tabs>
+
+        <ToggleButtonGroup
+          value={alignment}
+          exclusive
+          onChange={handleAlignment}
+          aria-label="different screen sizes"
+          size="small"
+        >
+          <ToggleButton value="left" aria-label="left aligned">
+            <Iconify icon="material-symbols-light:mobile-outline" />
+          </ToggleButton>
+          <ToggleButton value="center" aria-label="centered">
+            <Iconify icon="famicons:laptop-outline" />
+          </ToggleButton>
+        </ToggleButtonGroup>
+      </Stack>
 
       <Box
         sx={{
@@ -62,7 +96,14 @@ export const CodePreviewCopyWrapper: React.FC<CodePreviewWrapperProps> = ({
         }}
       >
         {tab === "preview" ? (
-          <Box sx={{ overflow: "auto", display: "flex", justifyContent: "center", py: 2 }}>
+          <Box
+            sx={{
+              overflow: "auto",
+              display: "flex",
+              justifyContent: "center",
+              py: 2,
+            }}
+          >
             {preview}
           </Box>
         ) : (
