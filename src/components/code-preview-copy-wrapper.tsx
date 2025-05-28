@@ -79,6 +79,7 @@ export const CodePreviewCopyWrapper: React.FC<CodePreviewWrapperProps> = ({
           onChange={handleView}
           aria-label="different screen sizes"
           size="small"
+          sx={{ display: { xs: "none", md: "flex" } }}
         >
           <ToggleButton
             value="desktop"
@@ -114,8 +115,10 @@ export const CodePreviewCopyWrapper: React.FC<CodePreviewWrapperProps> = ({
         {tab === "preview" ? (
           <Box
             sx={{
-              width:
-                view === "tab" ? "70%" : view === "mobile" ? "50%" : "100%",
+              width: {
+                xs: "100%",
+                sm: view === "tab" ? "70%" : view === "mobile" ? "50%" : "100%",
+              },
               borderColor: "divider",
               p: 2,
               bgcolor: "background.default",
