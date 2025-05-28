@@ -115,9 +115,15 @@ export const CodePreviewCopyWrapper: React.FC<CodePreviewWrapperProps> = ({
         {tab === "preview" ? (
           <Box
             sx={{
-              width: {
-                xs: "100%",
-                sm: view === "tab" ? "70%" : view === "mobile" ? "50%" : "100%",
+              width: "100%",
+              maxWidth: {
+                xs: "100%", // for mobile, full width
+                sm:
+                  view === "tab"
+                    ? "768px" // typical tablet width
+                    : view === "mobile"
+                    ? "375px" // typical mobile width
+                    : "100%", // for desktop, full container width
               },
               borderColor: "divider",
               p: 2,
