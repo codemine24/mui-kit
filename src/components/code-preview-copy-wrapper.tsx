@@ -24,10 +24,11 @@ export const CodePreviewCopyWrapper: React.FC<CodePreviewWrapperProps> = ({
   preview,
 }) => {
   const theme = useTheme();
+  const isDarkMode = theme.palette.mode === "dark";
   const [tab, setTab] = useState<"preview" | "code">("preview");
   const [copySuccess, setCopySuccess] = useState<string>("");
   const [icon, setIcon] = useState<string>("eva:copy-fill");
-  const [alignment, setAlignment] = React.useState<string | null>("left");
+  const [view, setView] = React.useState<string | null>("desktop");
 
   const handleCopy = async () => {
     try {
@@ -44,11 +45,11 @@ export const CodePreviewCopyWrapper: React.FC<CodePreviewWrapperProps> = ({
     }
   };
 
-  const handleAlignment = (
+  const handleView = (
     event: React.MouseEvent<HTMLElement>,
     newAlignment: string | null
   ) => {
-    setAlignment(newAlignment);
+    setView(newAlignment);
   };
 
   return (
@@ -73,35 +74,53 @@ export const CodePreviewCopyWrapper: React.FC<CodePreviewWrapperProps> = ({
         </Tabs>
 
         <ToggleButtonGroup
-          value={alignment}
+          value={view}
           exclusive
-          onChange={handleAlignment}
+          onChange={handleView}
           aria-label="different screen sizes"
           size="small"
         >
-          <ToggleButton value="left" aria-label="left aligned">
-            <Iconify icon="material-symbols-light:mobile-outline" />
+          <ToggleButton
+            value="desktop"
+            aria-label="left aligned"
+            title="Desktop view"
+          >
+            <Iconify icon="mynaui:desktop" />
           </ToggleButton>
-          <ToggleButton value="center" aria-label="centered">
-            <Iconify icon="famicons:laptop-outline" />
+          <ToggleButton value="tab" aria-label="centered" title="Tablet view">
+            <Iconify icon="teenyicons:tablet-outline" />
+          </ToggleButton>
+          <ToggleButton
+            value="mobile"
+            aria-label="centered"
+            title="Mobile view"
+          >
+            <Iconify icon="mynaui:mobile" />
           </ToggleButton>
         </ToggleButtonGroup>
       </Stack>
 
       <Box
         sx={{
-          bgcolor: "background.default",
-          p: 2,
-          borderRadius: theme.shape.borderRadius,
+          overflow: "auto",
+          display: "flex",
+          justifyContent: "center",
+          backgroundImage: isDarkMode
+            ? "linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px)"
+            : "linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px)",
+          backgroundSize: "20px 20px",
         }}
       >
         {tab === "preview" ? (
           <Box
             sx={{
-              overflow: "auto",
+              width:
+                view === "tab" ? "70%" : view === "mobile" ? "50%" : "100%",
+              borderColor: "divider",
+              p: 2,
+              bgcolor: "background.default",
               display: "flex",
               justifyContent: "center",
-              py: 2,
             }}
           >
             {preview}
