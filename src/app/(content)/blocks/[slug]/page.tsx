@@ -25,5 +25,7 @@ export default async function Page({
   const component = componentMap[slug];
   if (!component) return <ComingSoon returnUrl="/blocks" />;
 
+   
+
   return component;
 }

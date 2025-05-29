@@ -6,7 +6,7 @@ import { SectionTitle } from "@/components/core/section-title";
 import { useOnThisPage } from "@/contexts/on-thispage-context";
 import { Box, Divider } from "@mui/material";
 import React from "react";
-import { SoftAlertsCodeString } from "../../elements/code-string/alert/alert-1";
+import { aboutBasicString } from "../code-string/about/about-basic-string";
 import { AboutBasicPreview } from "../components/about/about-basic-preview";
 
 const sections = [
@@ -15,18 +15,16 @@ const sections = [
     title: "Basic About ",
     description:
       "Basic about section with title, description. Use this section to introduce your product or service.",
-    codeString: SoftAlertsCodeString,
+    codeString: aboutBasicString,
     preview: <AboutBasicPreview />,
   },
 ];
 
 export const AboutBlockView = () => {
   const { setSections } = useOnThisPage();
-
   React.useEffect(() => {
-    setSections(sections.map((s) => ({ title: s.title, id: s.id })));
+    setSections([]);
   }, [setSections]);
-
   return (
     <Box>
       <CustomBreadCrumbs

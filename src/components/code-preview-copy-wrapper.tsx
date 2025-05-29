@@ -1,8 +1,17 @@
 "use client";
 import { Iconify } from "@/components/iconify"; // Ensure this works in your setup
 import { getCustomSyntaxStyle } from "@/utils/getCustomSyntaxStyle";
-import { Box, Button, Tab, Tabs, useTheme } from "@mui/material";
-import { useState } from "react";
+import {
+  Box,
+  Button,
+  Tab,
+  Tabs,
+  ToggleButton,
+  ToggleButtonGroup,
+  useTheme,
+} from "@mui/material";
+import { Stack } from "@mui/system";
+import React, { useState } from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 
 interface CodePreviewWrapperProps {
@@ -14,10 +23,12 @@ export const CodePreviewCopyWrapper: React.FC<CodePreviewWrapperProps> = ({
   codeString,
   preview,
 }) => {
+  const theme = useTheme();
+  const isDarkMode = theme.palette.mode === "dark";
   const [tab, setTab] = useState<"preview" | "code">("preview");
   const [copySuccess, setCopySuccess] = useState<string>("");
   const [icon, setIcon] = useState<string>("eva:copy-fill");
-  const theme = useTheme();
+  const [view, setView] = React.useState<string | null>("desktop");
 
   const handleCopy = async () => {
     try {
@@ -34,6 +45,13 @@ export const CodePreviewCopyWrapper: React.FC<CodePreviewWrapperProps> = ({
     }
   };
 
+  const handleView = (
+    event: React.MouseEvent<HTMLElement>,
+    newAlignment: string | null
+  ) => {
+    setView(newAlignment);
+  };
+
   return (
     <Box
       sx={{
@@ -44,25 +62,76 @@ export const CodePreviewCopyWrapper: React.FC<CodePreviewWrapperProps> = ({
         bgcolor: "background.paper",
       }}
     >
-      <Tabs
-        value={tab}
-        onChange={(_, newValue) => setTab(newValue)}
-        aria-label="preview and code tabs"
-        sx={{ mb: 2 }}
-      >
-        <Tab value="preview" label="Preview" />
-        <Tab value="code" label="Code" />
-      </Tabs>
+      <Stack direction="row" alignItems="center" justifyContent="space-between">
+        <Tabs
+          value={tab}
+          onChange={(_, newValue) => setTab(newValue)}
+          aria-label="preview and code tabs"
+          sx={{ mb: 2 }}
+        >
+          <Tab value="preview" label="Preview" />
+          <Tab value="code" label="Code" />
+        </Tabs>
+
+        <ToggleButtonGroup
+          value={view}
+          exclusive
+          onChange={handleView}
+          aria-label="different screen sizes"
+          size="small"
+          sx={{ display: { xs: "none", md: "flex" } }}
+        >
+          <ToggleButton
+            value="desktop"
+            aria-label="left aligned"
+            title="Desktop view"
+          >
+            <Iconify icon="mynaui:desktop" />
+          </ToggleButton>
+          <ToggleButton value="tab" aria-label="centered" title="Tablet view">
+            <Iconify icon="teenyicons:tablet-outline" />
+          </ToggleButton>
+          <ToggleButton
+            value="mobile"
+            aria-label="centered"
+            title="Mobile view"
+          >
+            <Iconify icon="mynaui:mobile" />
+          </ToggleButton>
+        </ToggleButtonGroup>
+      </Stack>
 
       <Box
         sx={{
-          bgcolor: "background.default",
-          p: 2,
-          borderRadius: theme.shape.borderRadius,
+          overflow: "auto",
+          display: "flex",
+          justifyContent: "center",
+          backgroundImage: isDarkMode
+            ? "linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px)"
+            : "linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px)",
+          backgroundSize: "20px 20px",
         }}
       >
         {tab === "preview" ? (
-          <Box sx={{ overflow: "auto", display: "flex", justifyContent: "center", py: 2 }}>
+          <Box
+            sx={{
+              width: "100%",
+              maxWidth: {
+                xs: "100%", // for mobile, full width
+                sm:
+                  view === "tab"
+                    ? "768px" // typical tablet width
+                    : view === "mobile"
+                    ? "375px" // typical mobile width
+                    : "100%", // for desktop, full container width
+              },
+              borderColor: "divider",
+              p: 2,
+              bgcolor: "background.default",
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
             {preview}
           </Box>
         ) : (

@@ -1,4 +1,4 @@
-import { Box, Divider, Typography } from "@mui/material";
+export const aboutBasicString = `import { Box, Divider, Typography } from "@mui/material";
 
 export const AboutBasicPreview = () => {
   return (
@@ -44,7 +44,7 @@ export const AboutBasicPreview = () => {
 
       <Typography
         sx={{
-          borderLeft: (theme) => `2px solid ${theme.palette.divider}`,
+          borderLeft: (theme) => \`2px solid \${theme.palette.divider}\` ,
           pl: 2,
         }}
       >
@@ -56,4 +56,4 @@ export const AboutBasicPreview = () => {
       </Typography>
     </Box>
   );
-};
+};`
