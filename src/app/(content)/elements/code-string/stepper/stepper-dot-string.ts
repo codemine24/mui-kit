@@ -35,11 +35,7 @@ const DotStepIconRoot = styled('div')<{ ownerState: { active?: boolean; complete
     width: 20,
     height: 20,
     borderRadius: '50%',
-    backgroundColor: ownerState.active
-        ? '#0F172A'
-        : ownerState.completed
-        ? '#4ADE80'
-        : '#E2E8F0',
+    backgroundColor: ownerState.active ? '#4ADE80' : ownerState.completed ? '#E60076' : '#E2E8F0',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
