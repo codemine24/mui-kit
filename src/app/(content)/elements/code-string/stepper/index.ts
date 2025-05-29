@@ -8,3 +8,4 @@ export * from './stepper-clcikable-string';
 export * from './stepper-skipped-string';
 export * from './stepper-arrow-string';
 export * from './stepper-custom-icon-string';
+export * from './stepper-timeline-string';
