@@ -9,9 +9,11 @@ import React from "react";
 import { aboutBasicString } from "../code-string/about/about-basic-string";
 import { aboutImageBgString } from "../code-string/about/about-image-bg-string";
 import { aboutImageString } from "../code-string/about/about-image-string";
+import { aboutReversedSectionString } from "../code-string/about/about-reversed-section-string";
 import { AboutBasicPreview } from "../components/about/about-basic-preview";
 import { AboutImageBgPreview } from "../components/about/about-image-bg-preview";
 import { AboutImagePreview } from "../components/about/about-image-preview";
+import { AboutReversedSectionsPreview } from "../components/about/about-reversed-sections-preview";
 
 const sections = [
   {
@@ -37,6 +39,14 @@ const sections = [
       "This about section is slightly different from the previous one. It uses image background color which made this one more attractive.",
     codeString: aboutImageBgString,
     preview: <AboutImageBgPreview />,
+  },
+  {
+    id: "about-4",
+    title: "Reversed sections with image",
+    description:
+      "One of the most common about section. use it if you need two similar sections. ",
+    codeString: aboutReversedSectionString,
+    preview: <AboutReversedSectionsPreview />,
   },
 ];
 
