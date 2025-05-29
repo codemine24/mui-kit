@@ -15,6 +15,7 @@ import {
     StepperWithoutLabelPreview,
     StepperDynamicPreview,
     StepperClickablePreview,
+    StepperSkippedPreview,
 } from "../components/stepper";
 
 import {
@@ -25,6 +26,7 @@ import {
     stepperWithoutLabelString,
     stepperDynamicString,
     stepperClickableString,
+    stepperSkippedString,
 } from "../code-string/stepper";
 
 const sections = [
@@ -83,6 +85,14 @@ const sections = [
             "Use this simple stepper that will adjust with most of the website layout. No extra package required.",
         codeString: stepperClickableString,
         preview: <StepperClickablePreview />,
+    },
+    {
+        id: "stepper-8",
+        title: "Skipped",
+        description:
+            "Use this simple stepper that will adjust with most of the website layout. No extra package required.",
+        codeString: stepperSkippedString,
+        preview: <StepperSkippedPreview />,
     },
 ];
 
