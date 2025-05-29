@@ -117,13 +117,13 @@ export const CodePreviewCopyWrapper: React.FC<CodePreviewWrapperProps> = ({
             sx={{
               width: "100%",
               maxWidth: {
-                xs: "100%", // for mobile, full width
+                xs: "100%", 
                 sm:
                   view === "tab"
-                    ? "768px" // typical tablet width
+                    ? "768px" 
                     : view === "mobile"
-                    ? "375px" // typical mobile width
-                    : "100%", // for desktop, full container width
+                    ? "375px" 
+                    : "100%", 
               },
               borderColor: "divider",
               p: 2,
@@ -141,6 +141,8 @@ export const CodePreviewCopyWrapper: React.FC<CodePreviewWrapperProps> = ({
               height: "410px",
               overflow: "auto",
               scrollbarWidth: "none",
+              bgcolor: "background.default",
+              p: 2
             }}
           >
             <Button
