@@ -6,3 +6,4 @@ export * from "./stepper-without-label-preview";
 export * from "./stepper-dynamic-preview";
 export * from "./stepper-clickable-preview";
 export * from "./stepper-skipped-preview";
+export * from "./stepper-arrow-preview";
