@@ -13,13 +13,16 @@ import {
     StepperLinerPreview,
     StepperDotPreview,
     StepperWithoutLabelPreview,
+    StepperDynamicPreview,
 } from "../components/stepper";
+
 import {
     stepperStaticString,
     stepperResponsiveString,
     stepperLinerString,
     stepperDotString,
     stepperWithoutLabelString,
+    stepperDynamicString,
 } from "../code-string/stepper";
 
 const sections = [
@@ -62,6 +65,14 @@ const sections = [
             "Use this simple stepper that will adjust with most of the website layout. No extra package required.",
         codeString: stepperWithoutLabelString,
         preview: <StepperWithoutLabelPreview />,
+    },
+    {
+        id: "stepper-6",
+        title: "Dynamic",
+        description:
+            "Use this simple stepper that will adjust with most of the website layout. No extra package required.",
+        codeString: stepperDynamicString,
+        preview: <StepperDynamicPreview />,
     },
 ];
 

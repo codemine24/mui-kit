@@ -19,10 +19,10 @@ import { useState } from 'react';
 const steps = [1, 2, 3];
 
 const DotConnector = styled(StepConnector)(({ theme }) => ({
-    [\`\\\&.\${stepConnectorClasses.alternativeLabel}\`]: {
+    [\`\&.\${stepConnectorClasses.alternativeLabel}\`]: {
         top: 10,
     },
-    [\`\\\& .\${stepConnectorClasses.line}\`]: {
+    [\`\& .\${stepConnectorClasses.line}\`]: {
         borderColor: '#E2E8F0',
         borderTopWidth: 2,
         borderRadius: 1,
