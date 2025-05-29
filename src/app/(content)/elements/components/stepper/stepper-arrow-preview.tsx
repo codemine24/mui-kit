@@ -7,6 +7,8 @@ import {
     Box,
     Button,
     styled,
+    useTheme,
+    useMediaQuery,
 } from '@mui/material';
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
 import { useState } from 'react';
@@ -77,6 +79,8 @@ function CustomStepIcon(props: CustomStepIconProps) {
 }
 
 export const StepperArrowPreview = () => {
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
     const [activeStep, setActiveStep] = useState<number>(0);
 
     const handleNext = (): void => {
@@ -93,6 +97,7 @@ export const StepperArrowPreview = () => {
                 activeStep={activeStep}
                 alternativeLabel={false}
                 connector={<ArrowConnector />}
+                orientation={isMobile ? 'vertical' : 'horizontal'}
             >
                 {steps.map((step, index) => (
                     <Step key={index}>
