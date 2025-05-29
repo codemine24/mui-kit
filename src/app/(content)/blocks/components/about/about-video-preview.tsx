@@ -43,7 +43,7 @@ export const AboutVideoPreview = () => {
                 fontSize: 64,
                 color: "#fff",
                 transition: "0.3s",
-                "&:hover": { color: "#e60077" },
+                "&:hover": { color: "#5B9279" },
               }}
             />
           </Box>
