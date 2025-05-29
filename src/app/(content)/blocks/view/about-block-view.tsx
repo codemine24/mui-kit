@@ -8,6 +8,7 @@ import { Box, Divider } from "@mui/material";
 import React from "react";
 import { aboutBasicString } from "../code-string/about/about-basic-string";
 import { AboutBasicPreview } from "../components/about/about-basic-preview";
+import { AboutImagePreview } from "../components/about/about-image-preview";
 
 const sections = [
   {
@@ -17,6 +18,14 @@ const sections = [
       "Basic about section with title, description. Use this section to introduce your product or service.",
     codeString: aboutBasicString,
     preview: <AboutBasicPreview />,
+  },
+  {
+    id: "about-2",
+    title: "With image",
+    description:
+      "About section with image. Most of the website uses this type of about section.",
+    codeString: aboutBasicString,
+    preview: <AboutImagePreview />,
   },
 ];
 
