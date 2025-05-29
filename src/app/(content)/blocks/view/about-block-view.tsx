@@ -10,10 +10,12 @@ import { aboutBasicString } from "../code-string/about/about-basic-string";
 import { aboutImageBgString } from "../code-string/about/about-image-bg-string";
 import { aboutImageString } from "../code-string/about/about-image-string";
 import { aboutReversedSectionString } from "../code-string/about/about-reversed-section-string";
+import { aboutVideoString } from "../code-string/about/about-video-string";
 import { AboutBasicPreview } from "../components/about/about-basic-preview";
 import { AboutImageBgPreview } from "../components/about/about-image-bg-preview";
 import { AboutImagePreview } from "../components/about/about-image-preview";
 import { AboutReversedSectionsPreview } from "../components/about/about-reversed-sections-preview";
+import { AboutVideoPreview } from "../components/about/about-video-preview";
 
 const sections = [
   {
@@ -47,6 +49,14 @@ const sections = [
       "One of the most common about section. use it if you need two similar sections. ",
     codeString: aboutReversedSectionString,
     preview: <AboutReversedSectionsPreview />,
+  },
+  {
+    id: "about-5",
+    title: "About with video",
+    description:
+      "Video section with title, description and video. Use this section to introduce your product or service.",
+    codeString: aboutVideoString,
+    preview: <AboutVideoPreview />,
   },
 ];
 
