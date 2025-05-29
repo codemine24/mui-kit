@@ -13,7 +13,6 @@ import {
 import { Stack } from "@mui/system";
 import React, { useState } from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { IframePreview } from "./iframe-preview";
 
 interface CodePreviewWrapperProps {
   codeString: string;
@@ -29,7 +28,7 @@ export const CodePreviewCopyWrapper: React.FC<CodePreviewWrapperProps> = ({
   const [tab, setTab] = useState<"preview" | "code">("preview");
   const [copySuccess, setCopySuccess] = useState<string>("");
   const [icon, setIcon] = useState<string>("eva:copy-fill");
-  const [view, setView] = React.useState<string | undefined>("desktop");
+  const [view, setView] = React.useState<string | null>("desktop");
 
   const handleCopy = async () => {
     try {
@@ -48,7 +47,7 @@ export const CodePreviewCopyWrapper: React.FC<CodePreviewWrapperProps> = ({
 
   const handleView = (
     event: React.MouseEvent<HTMLElement>,
-    newAlignment: string | undefined
+    newAlignment: string | null
   ) => {
     setView(newAlignment);
   };
@@ -104,33 +103,43 @@ export const CodePreviewCopyWrapper: React.FC<CodePreviewWrapperProps> = ({
 
       <Box
         sx={{
-          height: "410px",
           overflow: "auto",
-          bgcolor: "background.default",
           display: "flex",
-          alignItems: "center",
           justifyContent: "center",
+          backgroundImage: isDarkMode
+            ? "linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px)"
+            : "linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px)",
+          backgroundSize: "20px 20px",
         }}
       >
         {tab === "preview" ? (
-          <IframePreview
-            width={
-              view === "mobile"
-                ? "375px"
-                : view === "tab"
-                  ? "768px"
-                  : "1440px"
-            }
+          <Box
+            sx={{
+              width: "100%",
+              maxWidth: {
+                xs: "100%", // for mobile, full width
+                sm:
+                  view === "tab"
+                    ? "768px" // typical tablet width
+                    : view === "mobile"
+                    ? "375px" // typical mobile width
+                    : "100%", // for desktop, full container width
+              },
+              borderColor: "divider",
+              p: 2,
+              bgcolor: "background.default",
+              display: "flex",
+              justifyContent: "center",
+            }}
           >
             {preview}
-          </IframePreview>
+          </Box>
         ) : (
           <Box
             sx={{
               position: "relative",
               height: "410px",
               overflow: "auto",
-              p: 2,
               scrollbarWidth: "none",
             }}
           >
