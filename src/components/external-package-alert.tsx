@@ -1,12 +1,14 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { Alert } from "@mui/material";
-import { Box } from "@mui/system";
+import { Box } from "@mui/material";
 
 interface IProps {
-  packageName: string;
-  packageUrl: string;
+  packages: {
+    name: string;
+    url: string;
+  }[];
 }
-export const ExternalPackageAlert = ({ packageName, packageUrl }: IProps) => {
+export const ExternalPackageAlert = ({ packages }: IProps) => {
   return (
     <Alert
       severity="warning"
@@ -18,17 +20,19 @@ export const ExternalPackageAlert = ({ packageName, packageUrl }: IProps) => {
         py: 2,
       }}
     >
-      Some components may use an external package{" "}
-      <Box
-        component={"a"}
-        href={packageUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        sx={{ textDecoration: "underline", color: "inherit" }}
-      >
-        {packageName}
-      </Box>
-      . You can install it or replace it with a similar package.
+      Following external package(s) in used:
+      {packages.map((item, index) => (
+        <Box
+          key={index}
+          component={"a"}
+          href={item.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          sx={{ textDecoration: "underline", color: "inherit", ml: 1 }}
+        >
+          {item.name}
+        </Box>
+      ))}
     </Alert>
   );
 };

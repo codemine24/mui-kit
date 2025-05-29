@@ -1,6 +1,20 @@
-import { Box } from "@mui/material";
-import { AccordionView } from "../components/accordion-view";
-import { ButtonView } from "../components/button-view";
+import { ComingSoon } from "@/components/coming-soon";
+import { blocksArr } from "@/router/router";
+import { JSX } from "react";
+import { AboutBlockView } from "../view/about-block-view";
+
+export async function generateStaticParams() {
+  return blocksArr.map((element) => ({
+    slug: element.path?.split("/").pop(),
+  }));
+}
+
+// ***********************************************
+//            Add new Components here
+// ***********************************************
+const componentMap: Record<string, JSX.Element> = {
+  about: <AboutBlockView />,
+};
 
 export default async function Page({
   params,
@@ -8,15 +22,10 @@ export default async function Page({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const elementView = () => {
-    switch (slug) {
-      case "accordion":
-        return <AccordionView />;
-      case "button":
-        return <ButtonView />;
-      default:
-        return <Box>Buttons</Box>;
-    }
-  };
-  return <Box>{elementView()}</Box>;
+  const component = componentMap[slug];
+  if (!component) return <ComingSoon returnUrl="/blocks" />;
+
+   
+
+  return component;
 }

@@ -5,7 +5,7 @@ export const lightPalette: PaletteOptions = {
   primary: { main: "#007074" },
   secondary: { main: "#333" },
   background: {
-    default: "#ffffff",
+    default: "#fafbff",
     paper: "#F5F9FD",
   },
   text: {
@@ -24,7 +24,7 @@ export const darkPalette: PaletteOptions = {
     paper: "#1C1C1C",
   },
   text: {
-    primary: "#fff",
+    primary: "#fafbff",
     secondary: "#bbb",
   },
   divider: "#383939",

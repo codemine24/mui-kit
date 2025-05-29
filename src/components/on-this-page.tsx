@@ -79,7 +79,7 @@ export const OnThisPage = () => {
       <Typography
         variant="body2"
         textTransform={"uppercase"}
-        fontWeight={500}
+        fontWeight={600}
         fontSize={{ xs: 13, sm: 14 }}
       >
         On this page
@@ -119,7 +119,7 @@ export const OnThisPage = () => {
                         textAlign: "left",
                         fontSize: { xs: 13, sm: 14 },
                         textDecoration: "none",
-                        fontWeight: isActive ? 500 : 300,
+                        fontWeight: isActive ? 500 : 400,
                         "&:hover": {
                           color: "text.primary",
                         },
@@ -136,7 +136,6 @@ export const OnThisPage = () => {
       </Box>
       <Box
         sx={{
-          // mt: "auto",
           p: 2,
           bgcolor: "background.paper",
           border: `.5px solid`,

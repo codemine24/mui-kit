@@ -1,20 +1,18 @@
-import { Box, Container } from "@mui/material";
+import { Box } from "@mui/material";
+import { BlockOverviewV2 } from "./components/blocks-overview-v2";
+import { ComponentOverviewV2 } from "./components/components-overview-v2";
+import { ContributorsOverview } from "./components/contributors";
 import { HeroSection } from "./components/hero-section";
-import { ComponentOverview } from "./components/components-overview";
-import FeaturesSection from "./components/Features/Features";
-import { Testimonials } from "./components/Testimonials";
-// import { MuiBlocksTemplates } from "./components/MuiBlocksTemplates";
+import { FrequentlyAskedQuestion } from "./components/frequently-asked-question";
 
 export const RootView = () => {
   return (
     <Box>
       <HeroSection />
-      <Container maxWidth={"xl"}>
-        <ComponentOverview />
-        {/* <MuiBlocksTemplates /> */}
-        <FeaturesSection />
-        <Testimonials />
-      </Container>
+      <ComponentOverviewV2 />
+      <BlockOverviewV2 />
+      <ContributorsOverview />
+      <FrequentlyAskedQuestion />
     </Box>
   );
 };
