@@ -7,7 +7,10 @@ import { useOnThisPage } from "@/contexts/on-thispage-context";
 import { Box, Divider } from "@mui/material";
 import React from "react";
 import { aboutBasicString } from "../code-string/about/about-basic-string";
+import { aboutImageBgString } from "../code-string/about/about-image-bg-string";
+import { aboutImageString } from "../code-string/about/about-image-string";
 import { AboutBasicPreview } from "../components/about/about-basic-preview";
+import { AboutImageBgPreview } from "../components/about/about-image-bg-preview";
 import { AboutImagePreview } from "../components/about/about-image-preview";
 
 const sections = [
@@ -24,8 +27,16 @@ const sections = [
     title: "With image",
     description:
       "About section with image. Most of the website uses this type of about section.",
-    codeString: aboutBasicString,
+    codeString: aboutImageString,
     preview: <AboutImagePreview />,
+  },
+  {
+    id: "about-3",
+    title: "Image with background color",
+    description:
+      "This about section is slightly different from the previous one. It uses image background color which made this one more attractive.",
+    codeString: aboutImageBgString,
+    preview: <AboutImageBgPreview />,
   },
 ];
 

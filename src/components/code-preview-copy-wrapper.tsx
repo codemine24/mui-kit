@@ -103,7 +103,7 @@ export const CodePreviewCopyWrapper: React.FC<CodePreviewWrapperProps> = ({
 
       <Box
         sx={{
-          overflow: "auto",
+          overflow: "hidden",
           display: "flex",
           justifyContent: "center",
           backgroundImage: isDarkMode

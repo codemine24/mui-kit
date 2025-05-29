@@ -1,4 +1,4 @@
-export const aboutBasicString = `import { Box, Divider, Grid, Typography } from "@mui/material";
+export const aboutImageString = `import { Box, Divider, Grid, Typography } from "@mui/material";
 
 export const AboutImagePreview = () => {
   return (
