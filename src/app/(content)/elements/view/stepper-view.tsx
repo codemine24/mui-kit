@@ -17,6 +17,7 @@ import {
     StepperClickablePreview,
     StepperSkippedPreview,
     StepperArrowPreview,
+    StepperCustomIconPreview,
 } from "../components/stepper";
 
 import {
@@ -29,6 +30,7 @@ import {
     stepperClickableString,
     stepperSkippedString,
     stepperArrowString,
+    stepperCustomIconString,
 } from "../code-string/stepper";
 
 const sections = [
@@ -103,6 +105,14 @@ const sections = [
             "Use this simple stepper that will adjust with most of the website layout. No extra package required.",
         codeString: stepperArrowString,
         preview: <StepperArrowPreview />,
+    },
+    {
+        id: "stepper-10",
+        title: "Custom Icon",
+        description:
+            "Use this simple stepper that will adjust with most of the website layout. No extra package required.",
+        codeString: stepperCustomIconString,
+        preview: <StepperCustomIconPreview />,
     },
 ];
 
