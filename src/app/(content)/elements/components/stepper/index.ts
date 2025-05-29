@@ -4,3 +4,4 @@ export * from "./stepper-liner-preview";
 export * from "./stepper-dot-preview";
 export * from "./stepper-without-label-preview";
 export * from "./stepper-dynamic-preview";
+export * from "./stepper-clickable-preview";

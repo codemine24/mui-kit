@@ -5,18 +5,14 @@ import {
     Step,
     StepLabel,
     Typography,
-    useMediaQuery,
     Box,
     Button,
 } from '@mui/material';
-import { useTheme } from '@mui/material/styles';
 import { useState } from 'react';
 
 const steps: string[] = ['1', '2', '3'];
 
 export const StepperWithoutLabelPreview = () => {
-    const theme = useTheme();
-    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
     const [activeStep, setActiveStep] = useState<number>(0);
 
     const handleNext = (): void => {
@@ -31,7 +27,7 @@ export const StepperWithoutLabelPreview = () => {
         <Box width="100%">
             <Stepper
                 activeStep={activeStep}
-                orientation={isMobile ? 'vertical' : 'horizontal'}
+                orientation="horizontal"
                 alternativeLabel={false}
             >
                 {steps.map((step, index) => (
@@ -40,7 +36,7 @@ export const StepperWithoutLabelPreview = () => {
                             <Typography
                                 fontWeight={600}
                                 sx={{
-                                    mt: isMobile ? 0.5 : 0,
+                                    mt: 0,
                                     fontSize: '0.875rem',
                                     color: '#334155',
                                 }}
