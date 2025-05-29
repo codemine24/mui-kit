@@ -7,13 +7,25 @@ import { SectionTitle } from "@/components/core/section-title";
 import { Box, Divider } from "@mui/material";
 import { useOnThisPage } from "@/contexts/on-thispage-context";
 
-import { StepperStaticPreview, StepperResponsivePreview, StepperLinerPreview, StepperDotPreview } from "../components/stepper";
-import { stepperStaticString, stepperResponsiveString, stepperLinerString, stepperDotString } from "../code-string/stepper";
+import {
+    StepperStaticPreview,
+    StepperResponsivePreview,
+    StepperLinerPreview,
+    StepperDotPreview,
+    StepperWithoutLabelPreview,
+} from "../components/stepper";
+import {
+    stepperStaticString,
+    stepperResponsiveString,
+    stepperLinerString,
+    stepperDotString,
+    stepperWithoutLabelString,
+} from "../code-string/stepper";
 
 const sections = [
     {
         id: "stepper-1",
-        title: "Static Stepper",
+        title: "Static",
         description:
             "Use this simple stepper that will adjust with most of the website layout. No extra package required.",
         codeString: stepperStaticString,
@@ -21,7 +33,7 @@ const sections = [
     },
     {
         id: "stepper-2",
-        title: "Responsive Stepper",
+        title: "Responsive",
         description:
             "Use this simple stepper that will adjust with most of the website layout. No extra package required.",
         codeString: stepperResponsiveString,
@@ -29,7 +41,7 @@ const sections = [
     },
     {
         id: "stepper-3",
-        title: "Liner Stepper",
+        title: "Liner",
         description:
             "Use this simple stepper that will adjust with most of the website layout. No extra package required.",
         codeString: stepperLinerString,
@@ -37,11 +49,19 @@ const sections = [
     },
     {
         id: "stepper-4",
-        title: "Dot Stepper",
+        title: "Dot",
         description:
             "Use this simple stepper that will adjust with most of the website layout. No extra package required.",
         codeString: stepperDotString,
         preview: <StepperDotPreview />,
+    },
+    {
+        id: "stepper-5",
+        title: "Without Label",
+        description:
+            "Use this simple stepper that will adjust with most of the website layout. No extra package required.",
+        codeString: stepperWithoutLabelString,
+        preview: <StepperWithoutLabelPreview />,
     },
 ];
 
