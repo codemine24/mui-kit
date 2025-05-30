@@ -7,8 +7,10 @@ import { useOnThisPage } from "@/contexts/on-thispage-context";
 import { PATHS } from "@/router/paths";
 import { Box, Divider } from "@mui/material";
 import React from "react";
+import { ctaImageBgString } from "../code-string/cta/cta-image-bg-string";
 import { ctaSingleColString } from "../code-string/cta/cta-single-col-string";
 import { ctaTwoColsString } from "../code-string/cta/cta-two-cols-string";
+import { CTAImageBgPreview } from "../components/cta/cta-image-bg-preview";
 import { CTASingleColPreview } from "../components/cta/cta-single-col-preview";
 import { CTATwoColsPreview } from "../components/cta/cta-two-cols-preview";
 
@@ -29,7 +31,14 @@ const sections = [
     codeString: ctaSingleColString,
     preview: <CTASingleColPreview />,
   },
-  
+  {
+    id: "cta-3",
+    title: "Image in background",
+    description:
+      "Use this attractive Image background Call to action if you need visible image in background.",
+    codeString: ctaImageBgString,
+    preview: <CTAImageBgPreview />,
+  },
 ];
 
 export const CTAView = () => {
@@ -42,12 +51,12 @@ export const CTAView = () => {
       <CustomBreadCrumbs
         pathArr={[
           { label: "Blocks", path: PATHS.BLOCKS.OVERVIEW },
-          { label: "About", path: "" },
+          { label: "CTA", path: "" },
         ]}
       />
       <PageTitle
-        title="About"
-        description="About us section designed with purely material ui and nothing else. "
+        title="Call To Action"
+        description="Grab your customer attention with a Call To Action section. All the section built with Material UI and nothing else. "
       />
 
       <Divider sx={{ my: 4 }} />
