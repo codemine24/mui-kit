@@ -13,6 +13,7 @@ export const lightPalette: PaletteOptions = {
     secondary: "#555",
   },
   divider: "#ebebeb",
+
 };
 
 export const darkPalette: PaletteOptions = {
