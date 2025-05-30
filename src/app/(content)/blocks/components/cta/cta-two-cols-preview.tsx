@@ -39,7 +39,7 @@ export const CTATwoColsPreview = () => {
           <Typography
             sx={{
               color: "common.black",
-              fontFamily: "lora",
+              fontFamily: "serif",
               fontWeight: 500,
               fontSize: { xs: 38, md: 44, lg: 52 },
               pr: { xs: 0, md: "5%", lg: "30%" },

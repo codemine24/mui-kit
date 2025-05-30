@@ -7,7 +7,9 @@ import { useOnThisPage } from "@/contexts/on-thispage-context";
 import { PATHS } from "@/router/paths";
 import { Box, Divider } from "@mui/material";
 import React from "react";
+import { ctaSingleColString } from "../code-string/cta/cta-single-col-string";
 import { ctaTwoColsString } from "../code-string/cta/cta-two-cols-string";
+import { CTASingleColPreview } from "../components/cta/cta-single-col-preview";
 import { CTATwoColsPreview } from "../components/cta/cta-two-cols-preview";
 
 const sections = [
@@ -18,6 +20,14 @@ const sections = [
       "One of the most commonly used Call To Action sections. Simple but effective to grab your visitor's attention.",
     codeString: ctaTwoColsString,
     preview: <CTATwoColsPreview />,
+  },
+  {
+    id: "cta-2",
+    title: "Single Column",
+    description:
+      "One column Call to action section. Simple title, description and an attractive action button. ",
+    codeString: ctaSingleColString,
+    preview: <CTASingleColPreview />,
   },
   
 ];
