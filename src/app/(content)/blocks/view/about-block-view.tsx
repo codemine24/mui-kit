@@ -16,6 +16,7 @@ import { AboutImageBgPreview } from "../components/about/about-image-bg-preview"
 import { AboutImagePreview } from "../components/about/about-image-preview";
 import { AboutReversedSectionsPreview } from "../components/about/about-reversed-sections-preview";
 import { AboutVideoPreview } from "../components/about/about-video-preview";
+import { PATHS } from "@/router/paths";
 
 const sections = [
   {
@@ -69,8 +70,8 @@ export const AboutBlockView = () => {
     <Box>
       <CustomBreadCrumbs
         pathArr={[
-          { label: "Elements", path: "/elements" },
-          { label: "Alert", path: "" },
+          { label: "Blocks", path: PATHS.BLOCKS.OVERVIEW },
+          { label: "About", path: "" },
         ]}
       />
       <PageTitle

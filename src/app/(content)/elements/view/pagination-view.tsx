@@ -8,6 +8,7 @@ import { Box, Divider } from "@mui/material";
 import React from "react";
 import { paginationButtonOnlyString, paginationGoToPageString, paginationOutlinedString, paginationSolidString, paginationSoftBgString } from "../code-string/pagination";
 import { PaginationButtonOnlyPreview, PaginationGoToPagePreview, PaginationOutlinedPreview, PaginationSolidPreview, PaginationSoftBgPreview } from "../components/pagination";
+import { PATHS } from "@/router/paths";
 const sections = [
     {
         id: "pagination-solid",
@@ -57,7 +58,7 @@ export const PaginationView = () => {
         <Box>
             <CustomBreadCrumbs
                 pathArr={[
-                    { label: "Elements", path: "/elements" },
+                    { label: "Elements", path: PATHS.ELEMENTS.OVERVIEW },
                     { label: "Pagination", path: "" },
                 ]}
             />

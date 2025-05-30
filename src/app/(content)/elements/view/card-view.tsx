@@ -67,6 +67,7 @@ import {
   CardReviewPreview,
   CardTestimonialPreview
 } from "../components/card";
+import { PATHS } from "@/router/paths";
 
 const sections = [
   {
@@ -297,7 +298,7 @@ export const CardView = () => {
     <Box>
       <CustomBreadCrumbs
         pathArr={[
-          { label: "Elements", path: "/elements" },
+          { label: "Elements", path: PATHS.ELEMENTS.OVERVIEW },
           { label: "Card", path: "" },
         ]}
       />
