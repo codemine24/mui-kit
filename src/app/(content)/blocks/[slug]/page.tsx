@@ -3,6 +3,7 @@ import { PATHS } from "@/router/paths";
 import { blocksArr } from "@/router/router";
 import { JSX } from "react";
 import { AboutBlockView } from "../view/about-block-view";
+import { CSView } from "../view/cs-view";
 import { CTAView } from "../view/cta-block-view";
 
 export async function generateStaticParams() {
@@ -17,6 +18,7 @@ export async function generateStaticParams() {
 const componentMap: Record<string, JSX.Element> = {
   about: <AboutBlockView />,
   "call-to-action": <CTAView />,
+  "coming-soon": <CSView />,
 };
 
 export default async function Page({
