@@ -13,12 +13,12 @@ import { csTwoColsString } from "../code-string/coming-soon/cs-two-cols-string";
 import { ctaImageBgString } from "../code-string/cta/cta-image-bg-string";
 import { CSClassicPreview } from "../components/coming-soon/cs-classic-preview";
 import { CSTwoColsPreview } from "../components/coming-soon/cs-two-cols-preview";
-import { CTAImageBgPreview } from "../components/cta/cta-image-bg-preview";
+import { CSWithCounterPreview } from "../components/coming-soon/cs-with-counter-preview";
 
 const sections = [
   {
     id: "cs-1",
-    title: "Classic Coming Soon",
+    title: "Classic coming soon",
     description:
       "Simple coming soon section. You can use height: calc(100vh - 100px) if you want this section to cover full page.",
     codeString: csClassicString,
@@ -26,7 +26,7 @@ const sections = [
   },
   {
     id: "cs-2",
-    title: "Two Columns",
+    title: "Two columns",
     description:
       "This coming soon has two columns design with an email collecting input. If you want to collect your user email, you can use this section.",
     codeString: csTwoColsString,
@@ -34,11 +34,11 @@ const sections = [
   },
   {
     id: "cs-3",
-    title: "Image in background",
+    title: "With counter",
     description:
-      "Use this attractive Image background Call to action if you need visible image in background.",
+      "This coming soon section has a built in countdown timer. If you want to show a counter, you can use this section.",
     codeString: ctaImageBgString,
-    preview: <CTAImageBgPreview />,
+    preview: <CSWithCounterPreview />,
   },
 ];
 
