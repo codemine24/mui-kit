@@ -1,6 +1,47 @@
 import { Box, Grid, Typography } from "@mui/material";
+import { useEffect, useMemo, useState } from "react";
+
+const calculateTimeLeft = (targetDate: Date) => {
+  const difference = +targetDate - +new Date();
+  let timeLeft = {
+    Days: "00",
+    Hours: "00",
+    Minutes: "00",
+    Seconds: "00",
+  };
+
+  if (difference > 0) {
+    timeLeft = {
+      Days: String(Math.floor(difference / (1000 * 60 * 60 * 24))).padStart(
+        2,
+        "0"
+      ),
+      Hours: String(Math.floor((difference / (1000 * 60 * 60)) % 24)).padStart(
+        2,
+        "0"
+      ),
+      Minutes: String(Math.floor((difference / 1000 / 60) % 60)).padStart(
+        2,
+        "0"
+      ),
+      Seconds: String(Math.floor((difference / 1000) % 60)).padStart(2, "0"),
+    };
+  }
+
+  return timeLeft;
+};
 
 export const CSWithCounterPreview = () => {
+  const targetDate = useMemo(() => new Date("2026-01-01"), []);
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft(targetDate));
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft(calculateTimeLeft(targetDate));
+    }, 1000);
+    return () => clearInterval(timer);
+  }, [targetDate]);
+
   return (
     <Box
       sx={{
@@ -13,7 +54,7 @@ export const CSWithCounterPreview = () => {
         alignItems: "center",
         justifyContent: "center",
         px: 2,
-        py: 4
+        py: 4,
       }}
     >
       <Typography
@@ -45,13 +86,8 @@ export const CSWithCounterPreview = () => {
           alignItems="center"
           sx={{ textAlign: "center" }}
         >
-          {[
-            { label: "Days", value: "2" },
-            { label: "Hours", value: "06" },
-            { label: "Minutes", value: "15" },
-            { label: "Seconds", value: "48" },
-          ].map((item) => (
-            <Grid size={3} key={item.label}>
+          {Object.entries(timeLeft).map(([label, value]) => (
+            <Grid size={3} key={label}>
               <Typography
                 sx={{
                   color: "#5e78f5",
@@ -59,20 +95,19 @@ export const CSWithCounterPreview = () => {
                   fontSize: { xs: 32, md: 48 },
                 }}
               >
-                {item.value}
+                {value}
               </Typography>
               <Typography
                 variant="caption"
                 sx={{ textTransform: "uppercase", color: "#a3accb" }}
               >
-                {item.label}
+                {label}
               </Typography>
             </Grid>
           ))}
         </Grid>
       </Box>
 
-      {/* Description Text */}
       <Typography
         variant="body2"
         sx={{
