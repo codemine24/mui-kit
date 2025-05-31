@@ -39,7 +39,7 @@ const sections = [
       "This coming soon section has a built in countdown timer. If you want to show a counter, you can use this section.",
     codeString: ctaImageBgString,
     preview: <CSWithCounterPreview />,
-  },
+  }
 ];
 
 export const CSView = () => {
