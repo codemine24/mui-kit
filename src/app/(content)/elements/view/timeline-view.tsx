@@ -7,8 +7,16 @@ import { useOnThisPage } from "@/contexts/on-thispage-context";
 import { Box, Divider } from "@mui/material";
 import React from "react";
 
-import { timelineSimpleString, timelineWithDateString } from "../code-string/timeline";
-import { TimelineSimplePreview, TimelineWithDatePreview } from "../components/timeline";
+import {
+    timelineSimpleString,
+    timelineWithDateString,
+    timelineOneSidedString,
+} from "../code-string/timeline";
+import {
+    TimelineSimplePreview,
+    TimelineWithDatePreview,
+    TimelineOneSidedPreview,
+} from "../components/timeline";
 import { PATHS } from "@/router/paths";
 
 const sections = [
@@ -25,6 +33,13 @@ const sections = [
         description: "Material UI core timeline with extended design, and functionality.",
         codeString: timelineWithDateString,
         preview: <TimelineWithDatePreview />,
+    },
+    {
+        id: "timeline-one-sided",
+        title: "One Sided",
+        description: "Material UI core timeline with extended design, and functionality.",
+        codeString: timelineOneSidedString,
+        preview: <TimelineOneSidedPreview />,
     },
 ];
 

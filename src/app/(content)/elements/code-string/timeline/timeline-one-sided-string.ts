@@ -1,4 +1,4 @@
-import * as React from 'react';
+export const timelineOneSidedString = `import * as React from 'react';
 import {
     Timeline,
     TimelineItem,
@@ -36,20 +36,12 @@ const timelineData = [
     },
 ];
 
-export function TimelineWithDatePreview() {
+export function TimelineOneSided() {
     return (
-        <Timeline position="right">
+        <Timeline position="right" sx={{ pl: 0 }}>
             {timelineData.map((item, index) => (
                 <TimelineItem key={index}>
-                    <TimelineOppositeContent
-                        sx={{ m: 0, flex: 0.20 }}
-                        align="right"
-                        variant="body2"
-                        color="text.secondary"
-                    >
-                        {item.date}
-                    </TimelineOppositeContent>
-
+                    <TimelineOppositeContent sx={{ flex: 0 }} />
                     <TimelineSeparator>
                         {/* Custom rounded shape */}
                         <Box
@@ -64,6 +56,9 @@ export function TimelineWithDatePreview() {
                     </TimelineSeparator>
 
                     <TimelineContent sx={{ pb: 4, pt: 0, px: 2 }}>
+                        <Typography variant="body2" color="text.secondary">
+                            {item.date}
+                        </Typography>
                         <Typography variant="subtitle1" fontWeight="bold">
                             {item.title}
                         </Typography>
@@ -76,3 +71,4 @@ export function TimelineWithDatePreview() {
         </Timeline>
     );
 }
+`
