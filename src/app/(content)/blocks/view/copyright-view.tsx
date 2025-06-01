@@ -7,8 +7,10 @@ import { useOnThisPage } from "@/contexts/on-thispage-context";
 import { PATHS } from "@/router/paths";
 import { Box, Divider } from "@mui/material";
 import React from "react";
+import { copyrightSingleColString } from "../code-string/copyright/copyright-single-col-string";
 import { copyrightThreeColString } from "../code-string/copyright/copyright-three-col-string";
 import { copyrightTwoColString } from "../code-string/copyright/copyright-two-col-string";
+import { CopyrightSingleColPreview } from "../components/copyright/copyright-single-col-preview";
 import { CopyrightThreeColPreview } from "../components/copyright/copyright-three-col-preview";
 import { CopyrightTwoColPreview } from "../components/copyright/copyright-two-col-preview";
 
@@ -17,8 +19,8 @@ const sections = [
     id: "copyright-1",
     title: "Single columns",
     description: "Single column copyright section with copyright text only.",
-    codeString: copyrightThreeColString,
-    preview: <CopyrightThreeColPreview />,
+    codeString: copyrightSingleColString,
+    preview: <CopyrightSingleColPreview />,
   },
   {
     id: "copyright-2",
