@@ -10,6 +10,7 @@ import { PaginationView } from "../view/pagination-view";
 import { DialogView } from "../view/dialog-view";
 import { DrawerView } from "../view/drawer-view";
 import { PopoverView } from "../view/popover-view";
+import { TimelineView } from "../view/timeline-view";
 import { elementsArr } from "@/router/router";
 
 export async function generateStaticParams() {
@@ -32,6 +33,7 @@ const componentMap: Record<string, JSX.Element> = {
   card: <CardView />,
   pagination: <PaginationView />,
   popover: <PopoverView />,
+  timeline: <TimelineView />,
 };
 
 export default async function Page({
