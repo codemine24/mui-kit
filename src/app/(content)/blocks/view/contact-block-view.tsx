@@ -8,6 +8,7 @@ import { PATHS } from "@/router/paths";
 import { Box, Divider } from "@mui/material";
 import React from "react";
 import { contactClassicString } from "../code-string/contact/contact-classic-string";
+import { contactWithFormString } from "../code-string/contact/contact-with-form-preview";
 import { ContactClassicPreview } from "../components/contact/contact-classic-preview";
 import { ContactWithFormPreview } from "../components/contact/contact-with-form-preview";
 
@@ -25,7 +26,7 @@ const sections = [
     title: "With form",
     description:
       "The contact section with a modern form and basic information. ",
-    codeString: contactClassicString,
+    codeString: contactWithFormString,
     preview: <ContactWithFormPreview />,
   },
 ];

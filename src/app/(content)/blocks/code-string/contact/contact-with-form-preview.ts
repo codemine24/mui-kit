@@ -1,4 +1,4 @@
-import { Facebook, Instagram, LinkedIn, X } from "@mui/icons-material";
+export const contactWithFormString = `import { Facebook, Instagram, LinkedIn, X } from "@mui/icons-material";
 import {
   Box,
   Button,
@@ -216,4 +216,4 @@ export const ContactWithFormPreview = () => {
       </Grid>
     </Box>
   );
-};
+};`;
