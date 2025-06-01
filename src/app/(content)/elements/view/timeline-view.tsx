@@ -13,6 +13,7 @@ import {
     timelineOneSidedString,
     timelineCustomIconString,
     timelineAvaterString,
+    timelineHorizontalString,
 } from "../code-string/timeline";
 import {
     TimelineSimplePreview,
@@ -20,6 +21,7 @@ import {
     TimelineOneSidedPreview,
     TimelineCustomIconPreview,
     TimelineAvaterPreview,
+    TimelineHorizontalPreview,
 } from "../components/timeline";
 import { PATHS } from "@/router/paths";
 
@@ -58,6 +60,13 @@ const sections = [
         description: "Material UI core timeline with extended design, and functionality.",
         codeString: timelineAvaterString,
         preview: <TimelineAvaterPreview />,
+    },
+    {
+        id: "timeline-horizontal",
+        title: "Horizontal",
+        description: "Material UI core timeline with extended design, and functionality.",
+        codeString: timelineHorizontalString,
+        preview: <TimelineHorizontalPreview />,
     },
 ];
 
