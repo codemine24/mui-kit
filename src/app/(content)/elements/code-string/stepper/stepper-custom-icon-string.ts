@@ -28,6 +28,7 @@ const StepIconContainer = styled(Box, {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+    marginTop: -8
 }));
 
 // Component that returns the icon with conditional background
