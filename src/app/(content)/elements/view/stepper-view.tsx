@@ -21,6 +21,7 @@ import {
     StepperTimelinePreview,
     StepperConnectorColorPreview,
     StepperCustomConnectorSizePreview,
+    StepperWithDescriptionPreview,
 } from "../components/stepper";
 
 import {
@@ -37,6 +38,7 @@ import {
     stepperTimelineString,
     stepperCustomConnectorSizeString,
     stepperConnectorColorString,
+    stepperWithDescriptionString,
 } from "../code-string/stepper";
 
 const sections = [
@@ -82,6 +84,14 @@ const sections = [
     },
     {
         id: "stepper-6",
+        title: "With Description",
+        description:
+            "Use this simple stepper that will adjust with most of the website layout. No extra package required.",
+        codeString: stepperWithDescriptionString,
+        preview: <StepperWithDescriptionPreview />,
+    },
+    {
+        id: "stepper-7",
         title: "Dynamic",
         description:
             "Use this simple stepper that will adjust with most of the website layout. No extra package required.",
@@ -89,7 +99,7 @@ const sections = [
         preview: <StepperDynamicPreview />,
     },
     {
-        id: "stepper-7",
+        id: "stepper-8",
         title: "Clickable",
         description:
             "Use this simple stepper that will adjust with most of the website layout. No extra package required.",
@@ -97,7 +107,7 @@ const sections = [
         preview: <StepperClickablePreview />,
     },
     {
-        id: "stepper-8",
+        id: "stepper-9",
         title: "Skipped",
         description:
             "Use this simple stepper that will adjust with most of the website layout. No extra package required.",
@@ -105,7 +115,7 @@ const sections = [
         preview: <StepperSkippedPreview />,
     },
     {
-        id: "stepper-9",
+        id: "stepper-10",
         title: "Arrow",
         description:
             "Use this simple stepper that will adjust with most of the website layout. No extra package required.",
@@ -113,7 +123,7 @@ const sections = [
         preview: <StepperArrowPreview />,
     },
     {
-        id: "stepper-10",
+        id: "stepper-11",
         title: "Custom Icon",
         description:
             "Use this simple stepper that will adjust with most of the website layout. No extra package required.",
@@ -121,7 +131,7 @@ const sections = [
         preview: <StepperCustomIconPreview />,
     },
     {
-        id: "stepper-11",
+        id: "stepper-12",
         title: "Timeline",
         description:
             "Use this simple stepper that will adjust with most of the website layout. No extra package required.",
@@ -129,7 +139,7 @@ const sections = [
         preview: <StepperTimelinePreview />,
     },
     {
-        id: "stepper-12",
+        id: "stepper-13",
         title: "Custom Connector Size",
         description:
             "Use this simple stepper that will adjust with most of the website layout. No extra package required.",
@@ -137,7 +147,7 @@ const sections = [
         preview: <StepperCustomConnectorSizePreview />,
     },
     {
-        id: "stepper-13",
+        id: "stepper-14",
         title: "Connector Color",
         description:
             "Use this simple stepper that will adjust with most of the website layout. No extra package required.",

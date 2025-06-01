@@ -11,3 +11,4 @@ export * from "./stepper-custom-icon-preview";
 export * from "./stepper-timeline-preview";
 export * from "./stepper-custom-connector-size-preview";
 export * from "./stepper-connector-color-preview";
+export * from "./stepper-with-description-preview";
