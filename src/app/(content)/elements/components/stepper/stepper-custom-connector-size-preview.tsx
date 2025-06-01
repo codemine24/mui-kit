@@ -72,7 +72,6 @@ export const StepperCustomConnectorSizePreview = () => {
             <Box
                 sx={{
                     display: 'flex',
-                    flexDirection: isMobile ? 'column' : 'row',
                     justifyContent: 'center',
                     alignItems: 'center',
                     gap: 2,
