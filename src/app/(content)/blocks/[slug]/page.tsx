@@ -3,6 +3,7 @@ import { PATHS } from "@/router/paths";
 import { blocksArr } from "@/router/router";
 import { JSX } from "react";
 import { AboutBlockView } from "../view/about-block-view";
+import { ContactBlockView } from "../view/contact-block-view";
 import { CSView } from "../view/cs-view";
 import { CTAView } from "../view/cta-block-view";
 
@@ -19,6 +20,7 @@ const componentMap: Record<string, JSX.Element> = {
   about: <AboutBlockView />,
   "call-to-action": <CTAView />,
   "coming-soon": <CSView />,
+  contact: <ContactBlockView />,
 };
 
 export default async function Page({
