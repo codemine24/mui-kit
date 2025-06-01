@@ -1,4 +1,4 @@
-export const copyrightThreeColString = `import { Facebook, Google, LinkedIn, X } from "@mui/icons-material";
+export const copyrightTwoColString = `import { Facebook, Google, LinkedIn, X } from "@mui/icons-material";
 import { Grid, IconButton, Link, Stack, Typography } from "@mui/material";
 
 export const CopyrightThreeColPreview = () => {

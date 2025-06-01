@@ -7,19 +7,16 @@ import { useOnThisPage } from "@/contexts/on-thispage-context";
 import { PATHS } from "@/router/paths";
 import { Box, Divider } from "@mui/material";
 import React from "react";
-import { csTwoColsString } from "../code-string/coming-soon/cs-two-cols-string";
 import { copyrightThreeColString } from "../code-string/copyright/copyright-three-col-string";
-import { ctaImageBgString } from "../code-string/cta/cta-image-bg-string";
-import { CSTwoColsPreview } from "../components/coming-soon/cs-two-cols-preview";
-import { CSWithCounterPreview } from "../components/coming-soon/cs-with-counter-preview";
+import { copyrightTwoColString } from "../code-string/copyright/copyright-two-col-string";
 import { CopyrightThreeColPreview } from "../components/copyright/copyright-three-col-preview";
+import { CopyrightTwoColPreview } from "../components/copyright/copyright-two-col-preview";
 
 const sections = [
   {
     id: "copyright-1",
-    title: "Three columns",
-    description:
-      "Three columns copyright section with copyright text, social media links and navigation. ",
+    title: "Single columns",
+    description: "Single column copyright section with copyright text only.",
     codeString: copyrightThreeColString,
     preview: <CopyrightThreeColPreview />,
   },
@@ -27,17 +24,17 @@ const sections = [
     id: "copyright-2",
     title: "Two columns",
     description:
-      "This coming soon has two columns design with an email collecting input. If you want to collect your user email, you can use this section.",
-    codeString: csTwoColsString,
-    preview: <CSTwoColsPreview />,
+      "Two columns copyright section with copyright text and scroll to top button.",
+    codeString: copyrightTwoColString,
+    preview: <CopyrightTwoColPreview />,
   },
   {
     id: "copyright-3",
-    title: "With counter",
+    title: "Three columns",
     description:
-      "This coming soon section has a built in countdown timer. If you want to show a counter, you can use this section.",
-    codeString: ctaImageBgString,
-    preview: <CSWithCounterPreview />,
+      "Three columns copyright section with copyright text, social media links and navigation. ",
+    codeString: copyrightThreeColString,
+    preview: <CopyrightThreeColPreview />,
   },
 ];
 

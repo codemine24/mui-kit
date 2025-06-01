@@ -45,7 +45,7 @@ export const CopyrightThreeColPreview = () => {
             padding: 1,
           }}
         >
-          <Facebook />
+          <Facebook sx={{ fontSize: 20 }} />
         </IconButton>
         <IconButton
           sx={{
@@ -53,7 +53,7 @@ export const CopyrightThreeColPreview = () => {
             padding: 1,
           }}
         >
-          <X />
+          <X sx={{ fontSize: 20 }} />
         </IconButton>
         <IconButton
           sx={{
@@ -61,7 +61,7 @@ export const CopyrightThreeColPreview = () => {
             padding: 1,
           }}
         >
-          <LinkedIn />
+          <LinkedIn sx={{ fontSize: 20 }} />
         </IconButton>
         <IconButton
           sx={{
@@ -69,7 +69,7 @@ export const CopyrightThreeColPreview = () => {
             padding: 1,
           }}
         >
-          <Google />
+          <Google sx={{ fontSize: 20 }} />
         </IconButton>
       </Grid>
       <Grid
