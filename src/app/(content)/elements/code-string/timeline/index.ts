@@ -5,3 +5,4 @@ export * from "./timeline-custom-icon-string";
 export * from "./timeline-avater-string";
 export * from "./timeline-horizontal-string";
 export * from "./timeline-action-button-string";
+export * from "./timeline-projects-string";

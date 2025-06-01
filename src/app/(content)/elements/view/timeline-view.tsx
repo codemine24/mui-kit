@@ -15,6 +15,7 @@ import {
     timelineAvaterString,
     timelineHorizontalString,
     timelineActionButtonString,
+    timelineProjectsString,
 } from "../code-string/timeline";
 import {
     TimelineSimplePreview,
@@ -24,6 +25,7 @@ import {
     TimelineAvaterPreview,
     TimelineHorizontalPreview,
     TimelineActionButtonPreview,
+    TimelineProjectsPreview,
 } from "../components/timeline";
 import { PATHS } from "@/router/paths";
 
@@ -76,6 +78,13 @@ const sections = [
         description: "Material UI core timeline with extended design, and functionality.",
         codeString: timelineActionButtonString,
         preview: <TimelineActionButtonPreview />,
+    },
+    {
+        id: "timeline-projects",
+        title: "Projects",
+        description: "Material UI core timeline with extended design, and functionality.",
+        codeString: timelineProjectsString,
+        preview: <TimelineProjectsPreview />,
     },
 ];
 
