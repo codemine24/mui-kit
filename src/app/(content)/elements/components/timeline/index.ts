@@ -6,3 +6,4 @@ export * from "./timeline-avater-preview";
 export * from "./timeline-horizontal-preview";
 export * from "./timeline-action-button-preview";
 export * from "./timeline-projects-preview";
+export * from "./timeline-change-log-preview";

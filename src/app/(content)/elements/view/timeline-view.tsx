@@ -16,6 +16,7 @@ import {
     timelineHorizontalString,
     timelineActionButtonString,
     timelineProjectsString,
+    timelineChangeLogString,
 } from "../code-string/timeline";
 import {
     TimelineSimplePreview,
@@ -26,6 +27,7 @@ import {
     TimelineHorizontalPreview,
     TimelineActionButtonPreview,
     TimelineProjectsPreview,
+    TimelineChangeLogPreview,
 } from "../components/timeline";
 import { PATHS } from "@/router/paths";
 
@@ -85,6 +87,13 @@ const sections = [
         description: "Material UI core timeline with extended design, and functionality.",
         codeString: timelineProjectsString,
         preview: <TimelineProjectsPreview />,
+    },
+    {
+        id: "timeline-change-log",
+        title: "Change Log",
+        description: "Material UI core timeline with extended design, and functionality.",
+        codeString: timelineChangeLogString,
+        preview: <TimelineChangeLogPreview />,
     },
 ];
 
