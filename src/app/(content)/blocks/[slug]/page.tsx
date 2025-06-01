@@ -4,6 +4,7 @@ import { blocksArr } from "@/router/router";
 import { JSX } from "react";
 import { AboutBlockView } from "../view/about-block-view";
 import { ContactBlockView } from "../view/contact-block-view";
+import { CopyrightView } from "../view/copyright-view";
 import { CSView } from "../view/cs-view";
 import { CTAView } from "../view/cta-block-view";
 
@@ -21,6 +22,7 @@ const componentMap: Record<string, JSX.Element> = {
   "call-to-action": <CTAView />,
   "coming-soon": <CSView />,
   contact: <ContactBlockView />,
+  copyright: <CopyrightView />,
 };
 
 export default async function Page({
