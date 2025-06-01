@@ -1,6 +1,4 @@
-'use client';
-
-import {
+export const stepperCustomConnectorSizeString = `import {
     Box,
     Stepper,
     Step,
@@ -16,22 +14,21 @@ import { useState } from 'react';
 
 const steps = ['Step 1', 'Step 2', 'Step 3'];
 
-// Custom connector that supports both orientations
 const CustomConnector = styled(StepConnector)(({ theme }) => ({
-    [`&.${stepConnectorClasses.alternativeLabel}`]: {
+    [\`\&.\${ stepConnectorClasses.alternativeLabel }\`]: {
         top: 12,
     },
-    [`&.${stepConnectorClasses.vertical}`]: {
+    [\`\&.\${ stepConnectorClasses.vertical }\`]: {
         marginLeft: 12,
     },
-    [`& .${stepConnectorClasses.line}`]: {
+    [\`\& .\${ stepConnectorClasses.line }\`]: {
         borderLeftWidth: 4,
         borderTopWidth: 4,
         borderColor: theme.palette.mode === 'dark' ? '#555' : '#ccc',
     },
 }));
 
-export const StepperCustomConnectorPreview = () => {
+export const StepperCustomConnector = () => {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
@@ -89,3 +86,4 @@ export const StepperCustomConnectorPreview = () => {
         </Box>
     );
 };
+`
