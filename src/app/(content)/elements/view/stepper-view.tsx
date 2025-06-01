@@ -22,6 +22,7 @@ import {
     StepperConnectorColorPreview,
     StepperCustomConnectorSizePreview,
     StepperWithDescriptionPreview,
+    StepperCustomElementPreview
 } from "../components/stepper";
 
 import {
@@ -39,6 +40,7 @@ import {
     stepperCustomConnectorSizeString,
     stepperConnectorColorString,
     stepperWithDescriptionString,
+    stepperCustomElementString,
 } from "../code-string/stepper";
 
 const sections = [
@@ -153,6 +155,14 @@ const sections = [
             "Use this simple stepper that will adjust with most of the website layout. No extra package required.",
         codeString: stepperConnectorColorString,
         preview: <StepperConnectorColorPreview />,
+    },
+    {
+        id: "stepper-15",
+        title: "Custom Element",
+        description:
+            "Use this simple stepper that will adjust with most of the website layout. No extra package required.",
+        codeString: stepperCustomElementString,
+        preview: <StepperCustomElementPreview />,
     },
 ];
 

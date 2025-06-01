@@ -11,4 +11,5 @@ export * from './stepper-custom-icon-string';
 export * from './stepper-timeline-string';
 export * from './stepper-custom-connector-size-string';
 export * from './stepper-connector-color-string';
-export * from './stepper-with-description-string';
+export * from './stepper-with-description-string'
+export * from './stepper-custom-element-string'
