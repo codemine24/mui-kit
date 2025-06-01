@@ -9,3 +9,4 @@ export * from "./stepper-skipped-preview";
 export * from "./stepper-arrow-preview";
 export * from "./stepper-custom-icon-preview";
 export * from "./stepper-timeline-preview";
+export * from "./stepper-custom-connector-preview";

@@ -19,6 +19,7 @@ import {
     StepperArrowPreview,
     StepperCustomIconPreview,
     StepperTimelinePreview,
+    StepperCustomConnectorPreview,
 } from "../components/stepper";
 
 import {
@@ -33,6 +34,7 @@ import {
     stepperArrowString,
     stepperCustomIconString,
     stepperTimelineString,
+    stepperCustomConnectorString,
 } from "../code-string/stepper";
 
 const sections = [
@@ -123,6 +125,14 @@ const sections = [
             "Use this simple stepper that will adjust with most of the website layout. No extra package required.",
         codeString: stepperTimelineString,
         preview: <StepperTimelinePreview />,
+    },
+    {
+        id: "stepper-12",
+        title: "Custom Connector Size",
+        description:
+            "Use this simple stepper that will adjust with most of the website layout. No extra package required.",
+        codeString: stepperCustomConnectorString,
+        preview: <StepperCustomConnectorPreview />,
     },
 ];
 
