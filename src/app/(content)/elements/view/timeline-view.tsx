@@ -12,12 +12,14 @@ import {
     timelineWithDateString,
     timelineOneSidedString,
     timelineCustomIconString,
+    timelineAvaterString,
 } from "../code-string/timeline";
 import {
     TimelineSimplePreview,
     TimelineWithDatePreview,
     TimelineOneSidedPreview,
     TimelineCustomIconPreview,
+    TimelineAvaterPreview,
 } from "../components/timeline";
 import { PATHS } from "@/router/paths";
 
@@ -49,6 +51,13 @@ const sections = [
         description: "Material UI core timeline with extended design, and functionality.",
         codeString: timelineCustomIconString,
         preview: <TimelineCustomIconPreview />,
+    },
+    {
+        id: "timeline-avater",
+        title: "Avater",
+        description: "Material UI core timeline with extended design, and functionality.",
+        codeString: timelineAvaterString,
+        preview: <TimelineAvaterPreview />,
     },
 ];
 
