@@ -1,4 +1,5 @@
 "use client";
+
 import { CodePreviewCopyWrapper } from "@/components/code-preview-copy-wrapper";
 import { CustomBreadCrumbs } from "@/components/core/breadcrumbs";
 import { PageTitle } from "@/components/core/page-title";
@@ -17,6 +18,7 @@ import {
     timelineActionButtonString,
     timelineProjectsString,
     timelineChangeLogString,
+    timelineCompanyMilestoneString,
 } from "../code-string/timeline";
 import {
     TimelineSimplePreview,
@@ -28,6 +30,7 @@ import {
     TimelineActionButtonPreview,
     TimelineProjectsPreview,
     TimelineChangeLogPreview,
+    TimelineCompanyMilestonePreview,
 } from "../components/timeline";
 import { PATHS } from "@/router/paths";
 
@@ -94,6 +97,13 @@ const sections = [
         description: "Material UI core timeline with extended design, and functionality.",
         codeString: timelineChangeLogString,
         preview: <TimelineChangeLogPreview />,
+    },
+    {
+        id: "timeline-company-milestone",
+        title: "Company Milestone",
+        description: "Material UI core timeline with extended design, and functionality.",
+        codeString: timelineCompanyMilestoneString,
+        preview: <TimelineCompanyMilestonePreview />,
     },
 ];
 
