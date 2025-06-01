@@ -4,3 +4,4 @@ export * from "./timeline-one-sided-string";
 export * from "./timeline-custom-icon-string";
 export * from "./timeline-avater-string";
 export * from "./timeline-horizontal-string";
+export * from "./timeline-action-button-string";

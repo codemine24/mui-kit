@@ -131,7 +131,7 @@ export function TimelineHorizontal() {
                                     }}
                                 />
                                 {/* Text */}
-                                <Box mt={3} ml={0}>
+                                <Box mt={5} ml={0}>
                                     <Typography variant="caption" color="text.secondary">
                                         {step.date}
                                     </Typography>
