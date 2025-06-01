@@ -71,7 +71,7 @@ export const StepperCustomElementPreview = () => {
     return (
         <Box width="100%">
             <Stepper activeStep={activeStep} alternativeLabel>
-                {steps.map((step, index) => (
+                {steps.map((step) => (
                     <Step key={step.label}>
                         <StepLabel StepIconComponent={CustomStepIcon(steps)}>
                             {step.label}
