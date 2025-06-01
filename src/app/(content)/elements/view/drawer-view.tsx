@@ -26,6 +26,7 @@ import {
   DrawerCustomWidthPreview,
   DrawerFullWidthPreview,
 } from "../components/drawer";
+import { PATHS } from "@/router/paths";
 
 const sections = [
   {
@@ -93,7 +94,7 @@ export const DrawerView = () => {
     <Box>
       <CustomBreadCrumbs
         pathArr={[
-          { label: "Elements", path: "/elements" },
+          { label: "Elements", path: PATHS.ELEMENTS.OVERVIEW },
           { label: "Drawer", path: "" },
         ]}
       />

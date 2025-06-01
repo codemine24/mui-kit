@@ -4,9 +4,8 @@ export const AboutImageBgPreview = () => {
   return (
     <Box>
       <Grid container>
-        <Grid size={{ xs: 12, md: 6 }}>
+        <Grid size={{ xs: 12, lg: 6 }}>
           <Box sx={{ position: "relative", height: "400px" }}>
-            {/* Yellow Background */}
             <Box
               sx={{
                 position: "absolute",
@@ -17,7 +16,6 @@ export const AboutImageBgPreview = () => {
                 background: "linear-gradient(136deg,#d55296 0%,#e60077 100%)",
               }}
             />
-            {/* Image */}
             <Box
               component="img"
               src="https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -26,14 +24,14 @@ export const AboutImageBgPreview = () => {
                 height: "100%",
                 objectFit: "cover",
                 position: "relative",
-                mt: 3,
-                ml: 3,
+                mt: { xs: 1, lg: 3 },
+                ml: { xs: 1, lg: 3 },
               }}
             />
           </Box>
         </Grid>
 
-        <Grid size={{ xs: 12, md: 6 }} sx={{ px: { xs: 0, md: 8 } , py: { xs: 6, md: 2 }}}>
+        <Grid size={{ xs: 12, lg: 6 }} sx={{ px: { xs: 0, lg: 8 } , pt: { xs: 4, lg: 2 }, pb: { xs: 2, lg: 2 }}}>
           <Typography
             sx={{
               textTransform: "uppercase",
@@ -50,7 +48,7 @@ export const AboutImageBgPreview = () => {
             sx={{
               textTransform: "uppercase",
               color: "text.primary",
-              fontSize: { xs: 24, md: 32 },
+              fontSize: { xs: 24, lg: 32 },
               fontWeight: 600,
             }}
           >
@@ -87,7 +85,7 @@ export const AboutImageBgPreview = () => {
             sx={{
               textTransform: "uppercase",
               fontWeight: 600,
-              fontSize: { xs: 12, md: 14 },
+              fontSize: { xs: 12, lg: 14 },
               color: "#e60077",
               borderColor: "#e60077",
             }}

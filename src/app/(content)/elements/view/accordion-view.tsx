@@ -22,6 +22,7 @@ import Accordion5 from "../components/accordion/accordion-5";
 import Accordion6 from "../components/accordion/accordion-6";
 import Accordion7 from "../components/accordion/accordion-7";
 import Accordion8 from "../components/accordion/accordion-8";
+import { PATHS } from "@/router/paths";
 
 const sections = [
   {
@@ -95,7 +96,7 @@ export const AccordionView = () => {
     <Box>
       <CustomBreadCrumbs
         pathArr={[
-          { label: "Elements", path: "/elements" },
+          { label: "Elements", path: PATHS.ELEMENTS.OVERVIEW },
           { label: "Accordion", path: "" },
         ]}
       />

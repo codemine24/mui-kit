@@ -42,6 +42,7 @@ import {
   dialogCTAString,
   dialogWelcomeString,
 } from "../code-string/dialog";
+import { PATHS } from "@/router/paths";
 
 const sections = [
   {
@@ -174,7 +175,7 @@ export const DialogView = () => {
     <Box>
       <CustomBreadCrumbs
         pathArr={[
-          { label: "Elements", path: "/elements" },
+          { label: "Elements", path: PATHS.ELEMENTS.OVERVIEW },
           { label: "Dialog", path: "" },
         ]}
       />

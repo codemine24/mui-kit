@@ -4,7 +4,7 @@ export const AboutImagePreview = () => {
   return (
     <Box>
       <Grid container>
-        <Grid size={{ xs: 12, md: 6 }} sx={{ p: { xs: 2, md: 4 } }}>
+        <Grid size={{ xs: 12, md: 6 }} sx={{ px: { xs: 0, md: 2 }, py: { xs: 2, md: 2 } }}>
           <Typography sx={{ textTransform: "uppercase", color: "#DA9100" }}>
             Subtitle
           </Typography>

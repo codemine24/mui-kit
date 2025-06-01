@@ -142,7 +142,8 @@ export const CodePreviewCopyWrapper: React.FC<CodePreviewWrapperProps> = ({
               overflow: "auto",
               scrollbarWidth: "none",
               bgcolor: "background.default",
-              p: 2
+              p: 2 , 
+              width: "100%",
             }}
           >
             <Button
@@ -151,8 +152,8 @@ export const CodePreviewCopyWrapper: React.FC<CodePreviewWrapperProps> = ({
               onClick={handleCopy}
               sx={{
                 position: "absolute",
-                top: 0,
-                right: 0,
+                top: 10,
+                right: 10,
                 zIndex: 10,
                 display: "flex",
                 gap: 1,
