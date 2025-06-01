@@ -9,6 +9,7 @@ import { Box, Divider } from "@mui/material";
 import React from "react";
 import { contactClassicString } from "../code-string/contact/contact-classic-string";
 import { ContactClassicPreview } from "../components/contact/contact-classic-preview";
+import { ContactWithFormPreview } from "../components/contact/contact-with-form-preview";
 
 const sections = [
   {
@@ -18,6 +19,14 @@ const sections = [
       "Simple classic contact section. If you want to use contact section without form you can use this section.",
     codeString: contactClassicString,
     preview: <ContactClassicPreview />,
+  },
+  {
+    id: "contact-2",
+    title: "With form",
+    description:
+      "The contact section with a modern form and basic information. ",
+    codeString: contactClassicString,
+    preview: <ContactWithFormPreview />,
   },
 ];
 
