@@ -11,11 +11,13 @@ import {
     timelineSimpleString,
     timelineWithDateString,
     timelineOneSidedString,
+    timelineCustomIconString,
 } from "../code-string/timeline";
 import {
     TimelineSimplePreview,
     TimelineWithDatePreview,
     TimelineOneSidedPreview,
+    TimelineCustomIconPreview,
 } from "../components/timeline";
 import { PATHS } from "@/router/paths";
 
@@ -40,6 +42,13 @@ const sections = [
         description: "Material UI core timeline with extended design, and functionality.",
         codeString: timelineOneSidedString,
         preview: <TimelineOneSidedPreview />,
+    },
+    {
+        id: "timeline-custom-icon",
+        title: "Custom Icon",
+        description: "Material UI core timeline with extended design, and functionality.",
+        codeString: timelineCustomIconString,
+        preview: <TimelineCustomIconPreview />,
     },
 ];
 
