@@ -9,8 +9,10 @@ import { Box, Divider } from "@mui/material";
 import React from "react";
 import { contactClassicString } from "../code-string/contact/contact-classic-string";
 import { contactWithFormString } from "../code-string/contact/contact-with-form-preview";
+import { contactWithMapString } from "../code-string/contact/contact-with-map-preview";
 import { ContactClassicPreview } from "../components/contact/contact-classic-preview";
 import { ContactWithFormPreview } from "../components/contact/contact-with-form-preview";
+import { ContactWithMapPreview } from "../components/contact/contact-with-map-preview";
 
 const sections = [
   {
@@ -28,6 +30,14 @@ const sections = [
       "The contact section with a modern form and basic information. ",
     codeString: contactWithFormString,
     preview: <ContactWithFormPreview />,
+  },
+  {
+    id: "contact-3",
+    title: "With map",
+    description:
+      "The contact section with a modern map and contact information. ",
+    codeString: contactWithMapString,
+    preview: <ContactWithMapPreview />,
   },
 ];
 
