@@ -9,3 +9,4 @@ export * from "./timeline-projects-string";
 export * from "./timeline-change-log-string";
 export * from "./timeline-company-milestone-string";
 export * from "./timeline-tourist-spot-string";
+export * from "./timeline-social-string";

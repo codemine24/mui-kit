@@ -20,6 +20,7 @@ import {
     timelineChangeLogString,
     timelineCompanyMilestoneString,
     timelineTouristSpotString,
+    timelineSocialString,
 } from "../code-string/timeline";
 import {
     TimelineSimplePreview,
@@ -33,6 +34,7 @@ import {
     TimelineChangeLogPreview,
     TimelineCompanyMilestonePreview,
     TimelineTouristSpotPreview,
+    TimelineSocialPreview,
 } from "../components/timeline";
 import { PATHS } from "@/router/paths";
 
@@ -113,6 +115,13 @@ const sections = [
         description: "Material UI core timeline with extended design, and functionality.",
         codeString: timelineTouristSpotString,
         preview: <TimelineTouristSpotPreview />,
+    },
+    {
+        id: "timeline-social",
+        title: "Social",
+        description: "Material UI core timeline with extended design, and functionality.",
+        codeString: timelineSocialString,
+        preview: <TimelineSocialPreview />,
     },
 ];
 

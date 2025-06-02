@@ -9,3 +9,4 @@ export * from "./timeline-projects-preview";
 export * from "./timeline-change-log-preview";
 export * from "./timeline-company-milestone-preview";
 export * from "./timeline-tourist-spot-preview";
+export * from "./timeline-social-preview";
