@@ -13,6 +13,7 @@ import SortingTable from "../components/table/table-sorting-preview";
 import StickyHeaderTable from "../components/table/table-sticky-header-preview";
 import { CollapsibleTablePreview } from "../components/table/table-collapsible-preview";
 import { UserTablePreview } from "../components/table/table-user-preview";
+import { ProductTablePreview } from "../components/table/table-product-preview";
 
 const sections = [
   {
@@ -70,6 +71,14 @@ const sections = [
       "Use Material UI user table with extended design. No extra package required.",
     codeString: "",
     preview: <UserTablePreview />,
+  },
+  {
+    id: "table-8",
+    title: "Product",
+    description:
+      "Use Material UI product table with extended design. No extra package required.",
+    codeString: "",
+    preview: <ProductTablePreview />,
   },
 ];
 
