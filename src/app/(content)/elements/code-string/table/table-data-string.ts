@@ -1,4 +1,4 @@
-import * as React from "react";
+export const dataTableString = `import * as React from "react";
 import { DataGrid, GridColDef } from "@mui/x-data-grid";
 import Paper from "@mui/material/Paper";
 
@@ -18,7 +18,7 @@ const columns: GridColDef[] = [
     description: "This column has a value getter and is not sortable.",
     sortable: false,
     width: 160,
-    valueGetter: (value, row) => `${row.firstName || ""} ${row.lastName || ""}`,
+    valueGetter: (value, row) => \`\${ row.firstName || ""} \${ row.lastName || "" } \`,
   },
 ];
 
@@ -36,7 +36,7 @@ const rows = [
 
 const paginationModel = { page: 0, pageSize: 5 };
 
-export function DataTablePreview() {
+export function DataTable() {
   return (
     <Paper sx={{ height: 400, width: "100%" }}>
       <DataGrid
@@ -50,3 +50,4 @@ export function DataTablePreview() {
     </Paper>
   );
 }
+`

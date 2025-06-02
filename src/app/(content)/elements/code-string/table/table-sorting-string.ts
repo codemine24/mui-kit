@@ -1,4 +1,4 @@
-import * as React from 'react';
+export const sortingTableString = `import * as React from 'react';
 import { alpha } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Table from '@mui/material/Table';
@@ -237,7 +237,7 @@ function EnhancedTableToolbar(props: EnhancedTableToolbarProps) {
         </Toolbar>
     );
 }
-export function SortingTablePreview() {
+export function SortingTable() {
     const [order, setOrder] = React.useState<Order>('asc');
     const [orderBy, setOrderBy] = React.useState<keyof Data>('calories');
     const [selected, setSelected] = React.useState<readonly number[]>([]);
@@ -328,7 +328,7 @@ export function SortingTablePreview() {
                         <TableBody>
                             {visibleRows.map((row, index) => {
                                 const isItemSelected = selected.includes(row.id);
-                                const labelId = `enhanced-table-checkbox-${index}`;
+                                const labelId = \`enhanced-table-checkbox-\${index}\`;
 
                                 return (
                                     <TableRow
@@ -394,3 +394,4 @@ export function SortingTablePreview() {
         </Box>
     );
 }
+`

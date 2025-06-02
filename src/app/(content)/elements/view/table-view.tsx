@@ -6,23 +6,46 @@ import { PageTitle } from "@/components/core/page-title";
 import { SectionTitle } from "@/components/core/section-title";
 import { Box, Divider } from "@mui/material";
 import { useOnThisPage } from "@/contexts/on-thispage-context";
-import BasicTable from "../components/table/table-basic-preview";
-import DataTable from "../components/table/table-data-preview";
-import DenseTable from "../components/table/table-dense-preview";
-import SortingTable from "../components/table/table-sorting-preview";
-import StickyHeaderTable from "../components/table/table-sticky-header-preview";
-import { CollapsibleTablePreview } from "../components/table/table-collapsible-preview";
-import { UserTablePreview } from "../components/table/table-user-preview";
-import { ProductTablePreview } from "../components/table/table-product-preview";
-import { ShoppingCartTablePreview } from "../components/table/table-shopping-cart-preview";
-import { ComparisonTablePreview } from "../components/table/table-comparison-preview";
-import { StripedColumnTablePreview } from "../components/table/table-stripped-column-preview";
-import { StripedRowTablePreview } from "../components/table/table-stripped-row-table";
-import { HoverTablePreview } from "../components/table/table-hover-preview";
-import { HeadlessTablePreview } from "../components/table/table-headless-preview";
-import { CustomPaginationTablePreview } from "../components/table/table-custom-pagination-preview";
-import { HighlightedFieldTablePreview } from "../components/table/table-highlight-preview";
-import { TransactionTablePreview } from "../components/table/table-transaction-preview";
+
+import {
+  BasicTablePreview,
+  DataTablePreview,
+  DenseTablePreview,
+  StickyHeadTablePreview,
+  UserTablePreview,
+  ProductTablePreview,
+  ShoppingCartTablePreview,
+  ComparisonTablePreview,
+  StripedColumnTablePreview,
+  StripedRowTablePreview,
+  HoverTablePreview,
+  HeadlessTablePreview,
+  CustomPaginationTablePreview,
+  HighlightedFieldTablePreview,
+  TransactionTablePreview,
+  SortingTablePreview,
+  CollapsibleTablePreview
+} from '../components/table'
+
+import {
+  basicTableString,
+  dataTableString,
+  denseTableString,
+  stickyHeaderTableString,
+  userTableString,
+  productTableString,
+  shoppingCartTableString,
+  comparisonTableString,
+  strippedColumnTableString,
+  strippedRowTableString,
+  hoverTableString,
+  headlessTableString,
+  customPaginationTableString,
+  highlightTableString,
+  transactionTableString,
+  sortingTableString,
+  collapsibleTableString
+} from '../code-string/table'
 
 const sections = [
   {
@@ -30,47 +53,47 @@ const sections = [
     title: "Basic",
     description:
       "Use Material UI basic table with extended design. No extra package required.",
-    codeString: "",
-    preview: <BasicTable />,
+    codeString: basicTableString,
+    preview: <BasicTablePreview />,
   },
   {
     id: "table-2",
     title: "Data Table",
     description:
       "Use Material UI data table with extended design. No extra package required.",
-    codeString: "",
-    preview: <DataTable />,
+    codeString: dataTableString,
+    preview: <DataTablePreview />,
   },
   {
     id: "table-3",
     title: "Dense",
     description:
       "Use Material UI dense table with extended design. No extra package required.",
-    codeString: "",
-    preview: <DenseTable />,
+    codeString: denseTableString,
+    preview: <DenseTablePreview />,
   },
   {
     id: "table-4",
     title: "Sorting",
     description:
       "Use Material UI sorting table with extended design. No extra package required.",
-    codeString: "",
-    preview: <SortingTable />,
+    codeString: sortingTableString,
+    preview: <SortingTablePreview />,
   },
   {
     id: "table-5",
     title: "Sticky Header",
     description:
       "Use Material UI sticky header table with extended design. No extra package required.",
-    codeString: "",
-    preview: <StickyHeaderTable />,
+    codeString: stickyHeaderTableString,
+    preview: <StickyHeadTablePreview />,
   },
   {
     id: "table-6",
     title: "Collapsible",
     description:
       "Use Material UI collapsible table with extended design. No extra package required.",
-    codeString: "",
+    codeString: collapsibleTableString,
     preview: <CollapsibleTablePreview />,
   },
   {
@@ -78,7 +101,7 @@ const sections = [
     title: "User",
     description:
       "Use Material UI user table with extended design. No extra package required.",
-    codeString: "",
+    codeString: userTableString,
     preview: <UserTablePreview />,
   },
   {
@@ -86,7 +109,7 @@ const sections = [
     title: "Product",
     description:
       "Use Material UI product table with extended design. No extra package required.",
-    codeString: "",
+    codeString: productTableString,
     preview: <ProductTablePreview />,
   },
   {
@@ -94,7 +117,7 @@ const sections = [
     title: "Shopping Cart",
     description:
       "Use Material UI shopping cart table with extended design. No extra package required.",
-    codeString: "",
+    codeString: shoppingCartTableString,
     preview: <ShoppingCartTablePreview />,
   },
   {
@@ -102,7 +125,7 @@ const sections = [
     title: "Comparison",
     description:
       "Use Material UI comparison table with extended design. No extra package required.",
-    codeString: "",
+    codeString: comparisonTableString,
     preview: <ComparisonTablePreview />,
   },
   {
@@ -110,7 +133,7 @@ const sections = [
     title: "Stripped",
     description:
       "Use Material UI stripped table with extended design. No extra package required.",
-    codeString: "",
+    codeString: strippedColumnTableString,
     preview: <StripedColumnTablePreview />,
   },
   {
@@ -118,7 +141,7 @@ const sections = [
     title: "Stripped Row",
     description:
       "Use Material UI stripped row table with extended design. No extra package required.",
-    codeString: "",
+    codeString: strippedRowTableString,
     preview: <StripedRowTablePreview />,
   },
   {
@@ -126,7 +149,7 @@ const sections = [
     title: "Hover",
     description:
       "Use Material UI hover table with extended design. No extra package required.",
-    codeString: "",
+    codeString: hoverTableString,
     preview: <HoverTablePreview />,
   },
   {
@@ -134,7 +157,7 @@ const sections = [
     title: "Headless",
     description:
       "Use Material UI headless table with extended design. No extra package required.",
-    codeString: "",
+    codeString: headlessTableString,
     preview: <HeadlessTablePreview />,
   },
   {
@@ -142,7 +165,7 @@ const sections = [
     title: "Custom Pagination",
     description:
       "Use Material UI custom pagination table with extended design. No extra package required.",
-    codeString: "",
+    codeString: customPaginationTableString,
     preview: <CustomPaginationTablePreview />,
   },
   {
@@ -150,7 +173,7 @@ const sections = [
     title: "Highlighted Field",
     description:
       "Use Material UI highlighted field table with extended design. No extra package required.",
-    codeString: "",
+    codeString: highlightTableString,
     preview: <HighlightedFieldTablePreview />,
   },
   {
@@ -158,7 +181,7 @@ const sections = [
     title: "Transaction",
     description:
       "Use Material UI transaction table with extended design. No extra package required.",
-    codeString: "",
+    codeString: transactionTableString,
     preview: <TransactionTablePreview />,
   },
 ];

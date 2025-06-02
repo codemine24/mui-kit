@@ -1,4 +1,4 @@
-import * as React from 'react';
+export const denseTableString = `import * as React from 'react';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -25,7 +25,7 @@ const rows = [
     createData('Gingerbread', 356, 16.0, 49, 3.9),
 ];
 
-export function DenseTablePreview() {
+export function DenseTable() {
     return (
         <TableContainer component={Paper}>
             <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
@@ -58,3 +58,4 @@ export function DenseTablePreview() {
         </TableContainer>
     );
 }
+`

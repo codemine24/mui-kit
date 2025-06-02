@@ -1,4 +1,4 @@
-import {
+export const basicTableString = `import {
   Paper,
   Table,
   TableBody,
@@ -33,7 +33,7 @@ const data = [
   },
 ];
 
-export function BasicTablePreview() {
+export function BasicTable() {
   return (
     <Stack sx={{ width: "100%" }} spacing={2}>
       {/* Basic */}
@@ -69,3 +69,4 @@ export function BasicTablePreview() {
     </Stack>
   );
 }
+`
