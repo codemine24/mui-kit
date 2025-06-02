@@ -16,6 +16,7 @@ import { UserTablePreview } from "../components/table/table-user-preview";
 import { ProductTablePreview } from "../components/table/table-product-preview";
 import { ShoppingCartTablePreview } from "../components/table/table-shopping-cart-preview";
 import { ComparisonTablePreview } from "../components/table/table-comparison-preview";
+import { StripedColumnTablePreview } from "../components/table/table-stripped-preview";
 
 const sections = [
   {
@@ -97,6 +98,14 @@ const sections = [
       "Use Material UI comparison table with extended design. No extra package required.",
     codeString: "",
     preview: <ComparisonTablePreview />,
+  },
+  {
+    id: "table-11",
+    title: "Stripped",
+    description:
+      "Use Material UI stripped table with extended design. No extra package required.",
+    codeString: "",
+    preview: <StripedColumnTablePreview />,
   },
 ];
 
