@@ -76,7 +76,6 @@ export const FaqTwoColPreview = () => {
           position: "relative",
           display: "flex",
           flexDirection: "column",
-          // alignItems: "center",
           gap: 2,
         }}
       >

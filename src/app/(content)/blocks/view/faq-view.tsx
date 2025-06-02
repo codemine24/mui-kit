@@ -7,16 +7,16 @@ import { useOnThisPage } from "@/contexts/on-thispage-context";
 import { PATHS } from "@/router/paths";
 import { Box, Divider } from "@mui/material";
 import React from "react";
-import { contactWithFormString } from "../code-string/contact/contact-with-form-preview";
-import { contactWithMapString } from "../code-string/contact/contact-with-map-preview";
 import { faqSingleColString } from "../code-string/faq/faq-single-col-string";
-import { ContactWithMapPreview } from "../components/contact/contact-with-map-preview";
+import { faqTwoColString } from "../code-string/faq/faq-two-col-string";
+import { faqWithImgString } from "../code-string/faq/faq-with-img-string";
 import { FaqSingleColPreview } from "../components/faq/faq-single-col-preview";
 import { FaqTwoColPreview } from "../components/faq/faq-two-col-preview";
+import { FaqWithImgPreview } from "../components/faq/faq-with-img-preview";
 
 const sections = [
   {
-    id: "contact-1",
+    id: "faq-1",
     title: "Single column",
     description:
       "Single column FAQ section that will fit most of the websites.",
@@ -24,20 +24,19 @@ const sections = [
     preview: <FaqSingleColPreview />,
   },
   {
-    id: "contact-2",
+    id: "faq-2",
     title: "Single column",
     description:
       "Two column with description and FAQ that will fit most of the websites.",
-    codeString: contactWithFormString,
+    codeString: faqTwoColString,
     preview: <FaqTwoColPreview />,
   },
   {
-    id: "contact-3",
-    title: "With map",
-    description:
-      "The contact section with a modern map and contact information. ",
-    codeString: contactWithMapString,
-    preview: <ContactWithMapPreview />,
+    id: "faq-3",
+    title: "With image",
+    description: "FAQ section with a modern image and questions. ",
+    codeString: faqWithImgString,
+    preview: <FaqWithImgPreview />,
   },
 ];
 
@@ -51,12 +50,12 @@ export const FaqView = () => {
       <CustomBreadCrumbs
         pathArr={[
           { label: "Blocks", path: PATHS.BLOCKS.OVERVIEW },
-          { label: "Contact", path: "" },
+          { label: "FAQ", path: "" },
         ]}
       />
       <PageTitle
-        title="Contact Section"
-        description="Contact us is one of the most commonly used section in website. This section is designed with purely material ui and nothing else. "
+        title="Frequently Asked Questions"
+        description="Frequently asked question section with most commonly used layouts. New section will be added soon. "
       />
 
       <Divider sx={{ my: 4 }} />

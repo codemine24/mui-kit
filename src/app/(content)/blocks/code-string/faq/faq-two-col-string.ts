@@ -1,4 +1,4 @@
-export const faqSingleColString = `import { Add, Remove } from "@mui/icons-material";
+export const faqTwoColString = `import { Add, Remove } from "@mui/icons-material";
 import {
   Accordion,
   AccordionDetails,
@@ -76,7 +76,6 @@ export const FaqTwoColPreview = () => {
           position: "relative",
           display: "flex",
           flexDirection: "column",
-          // alignItems: "center",
           gap: 2,
         }}
       >
