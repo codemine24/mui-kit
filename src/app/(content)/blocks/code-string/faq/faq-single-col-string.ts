@@ -48,7 +48,7 @@ export const FaqSingleColPreview = () => {
     <Box
       sx={{
         position: "relative",
-        backgroundImage: \`url("https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")\`,
+        backgroundImage: \`url("https://images.unsplash.com/photo-1497215728101-856f4ea42174")\`,
         py: { xs: 8, md: 12 },
         px: { xs: 2, md: 4 },
         backgroundSize: "cover",
@@ -131,9 +131,23 @@ export const FaqSingleColPreview = () => {
               key={item.id}
               expanded={expanded === item.id}
               onChange={handleChange(item.id)}
+              sx={{
+                background: "#333333",
+                borderTop: ".5px solid #333333",
+                color: "common.white",
+                "&:before": {
+                  display: "none",
+                },
+              }}
             >
               <AccordionSummary
-                expandIcon={expanded === item.id ? <Remove /> : <Add />}
+                expandIcon={
+                  expanded === item.id ? (
+                    <Remove style={{ color: "white" }} />
+                  ) : (
+                    <Add style={{ color: "white" }} />
+                  )
+                }
                 aria-controls={item.id}
                 id={item.id}
               >

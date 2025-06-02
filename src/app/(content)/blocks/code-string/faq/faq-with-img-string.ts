@@ -59,7 +59,7 @@ export const FaqWithImgPreview = () => {
           position: "relative",
           pr: 2,
           height: { xs: "300px", md: "400px", lg: "500px" },
-          background: \`url("https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")\`,
+          background: \`url("https://images.unsplash.com/photo-1497215728101-856f4ea42174")\`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
@@ -133,10 +133,21 @@ export const FaqWithImgPreview = () => {
             key={item.id}
             expanded={expanded === item.id}
             onChange={handleChange(item.id)}
-            sx={{ background: "#333333", py: 1.5, mb: 1 }}
+            sx={{
+              background: "#333333",
+              color: "common.white",
+              py: 1.5,
+              mb: 1,
+            }}
           >
             <AccordionSummary
-              expandIcon={expanded === item.id ? <Remove /> : <Add />}
+              expandIcon={
+                expanded === item.id ? (
+                  <Remove style={{ color: "white" }} />
+                ) : (
+                  <Add style={{ color: "white" }} />
+                )
+              }
               aria-controls={item.id}
               id={item.id}
             >
