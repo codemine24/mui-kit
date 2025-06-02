@@ -21,6 +21,7 @@ import { StripedRowTablePreview } from "../components/table/table-stripped-row-t
 import { HoverTablePreview } from "../components/table/table-hover-preview";
 import { HeadlessTablePreview } from "../components/table/table-headless-preview";
 import { CustomPaginationTablePreview } from "../components/table/table-custom-pagination-preview";
+import { HighlightedFieldTablePreview } from "../components/table/table-highlight-preview";
 
 const sections = [
   {
@@ -142,6 +143,14 @@ const sections = [
       "Use Material UI custom pagination table with extended design. No extra package required.",
     codeString: "",
     preview: <CustomPaginationTablePreview />,
+  },
+  {
+    id: "table-16",
+    title: "Highlighted Field",
+    description:
+      "Use Material UI highlighted field table with extended design. No extra package required.",
+    codeString: "",
+    preview: <HighlightedFieldTablePreview />,
   },
 ];
 
