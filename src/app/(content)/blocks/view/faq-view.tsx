@@ -10,26 +10,26 @@ import React from "react";
 import { contactWithFormString } from "../code-string/contact/contact-with-form-preview";
 import { contactWithMapString } from "../code-string/contact/contact-with-map-preview";
 import { faqSingleColString } from "../code-string/faq/faq-single-col-string";
-import { ContactWithFormPreview } from "../components/contact/contact-with-form-preview";
 import { ContactWithMapPreview } from "../components/contact/contact-with-map-preview";
 import { FaqSingleColPreview } from "../components/faq/faq-single-col-preview";
+import { FaqTwoColPreview } from "../components/faq/faq-two-col-preview";
 
 const sections = [
   {
     id: "contact-1",
     title: "Single column",
     description:
-      "Single column FAQ section that will fit most of the websites. ",
+      "Single column FAQ section that will fit most of the websites.",
     codeString: faqSingleColString,
     preview: <FaqSingleColPreview />,
   },
   {
     id: "contact-2",
-    title: "With form",
+    title: "Single column",
     description:
-      "The contact section with a modern form and basic information. ",
+      "Two column with description and FAQ that will fit most of the websites.",
     codeString: contactWithFormString,
-    preview: <ContactWithFormPreview />,
+    preview: <FaqTwoColPreview />,
   },
   {
     id: "contact-3",
