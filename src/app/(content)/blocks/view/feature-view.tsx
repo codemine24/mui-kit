@@ -7,12 +7,12 @@ import { useOnThisPage } from "@/contexts/on-thispage-context";
 import { PATHS } from "@/router/paths";
 import { Box, Divider } from "@mui/material";
 import React from "react";
-import { faqWithImgString } from "../code-string/faq/faq-with-img-string";
 import { featureHorizontalCardCodeString } from "../code-string/feature/feature-horizontal-card-string";
 import { featureWithCardCodeString } from "../code-string/feature/feature-with-card-string";
-import { FaqWithImgPreview } from "../components/faq/faq-with-img-preview";
+import { featureWithImageString } from "../code-string/feature/feature-with-image-string";
 import { FeatureHorizontalCardPreview } from "../components/feature/feature-horizontal-card-preview";
 import { FeatureWithCardPreview } from "../components/feature/feature-with-card-preview";
+import { FeatureWithImagePreview } from "../components/feature/feature-with-image-preview";
 
 const sections = [
   {
@@ -33,9 +33,9 @@ const sections = [
   {
     id: "feature-3",
     title: "With image",
-    description: "FAQ section with a modern image and questions. ",
-    codeString: faqWithImgString,
-    preview: <FaqWithImgPreview />,
+    description: "Two column feature section with image and feature list.",
+    codeString: featureWithImageString,
+    preview: <FeatureWithImagePreview />,
   },
 ];
 
