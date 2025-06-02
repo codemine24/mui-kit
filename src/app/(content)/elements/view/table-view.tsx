@@ -14,6 +14,7 @@ import StickyHeaderTable from "../components/table/table-sticky-header-preview";
 import { CollapsibleTablePreview } from "../components/table/table-collapsible-preview";
 import { UserTablePreview } from "../components/table/table-user-preview";
 import { ProductTablePreview } from "../components/table/table-product-preview";
+import { ShoppingCartTablePreview } from "../components/table/table-shopping-cart-preview";
 
 const sections = [
   {
@@ -79,6 +80,14 @@ const sections = [
       "Use Material UI product table with extended design. No extra package required.",
     codeString: "",
     preview: <ProductTablePreview />,
+  },
+  {
+    id: "table-9",
+    title: "Shopping Cart",
+    description:
+      "Use Material UI shopping cart table with extended design. No extra package required.",
+    codeString: "",
+    preview: <ShoppingCartTablePreview />,
   },
 ];
 
