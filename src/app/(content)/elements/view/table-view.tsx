@@ -15,6 +15,7 @@ import { CollapsibleTablePreview } from "../components/table/table-collapsible-p
 import { UserTablePreview } from "../components/table/table-user-preview";
 import { ProductTablePreview } from "../components/table/table-product-preview";
 import { ShoppingCartTablePreview } from "../components/table/table-shopping-cart-preview";
+import { ComparisonTablePreview } from "../components/table/table-comparison-preview";
 
 const sections = [
   {
@@ -88,6 +89,14 @@ const sections = [
       "Use Material UI shopping cart table with extended design. No extra package required.",
     codeString: "",
     preview: <ShoppingCartTablePreview />,
+  },
+  {
+    id: "table-10",
+    title: "Comparison",
+    description:
+      "Use Material UI comparison table with extended design. No extra package required.",
+    codeString: "",
+    preview: <ComparisonTablePreview />,
   },
 ];
 
