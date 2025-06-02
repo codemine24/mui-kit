@@ -12,6 +12,7 @@ import DenseTable from "../components/table/table-dense-preview";
 import SortingTable from "../components/table/table-sorting-preview";
 import StickyHeaderTable from "../components/table/table-sticky-header-preview";
 import { CollapsibleTablePreview } from "../components/table/table-collapsible-preview";
+import { UserTablePreview } from "../components/table/table-user-preview";
 
 const sections = [
   {
@@ -61,6 +62,14 @@ const sections = [
       "Use Material UI collapsible table with extended design. No extra package required.",
     codeString: "",
     preview: <CollapsibleTablePreview />,
+  },
+  {
+    id: "table-7",
+    title: "User",
+    description:
+      "Use Material UI user table with extended design. No extra package required.",
+    codeString: "",
+    preview: <UserTablePreview />,
   },
 ];
 
