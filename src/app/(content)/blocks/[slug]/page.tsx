@@ -7,6 +7,7 @@ import { ContactBlockView } from "../view/contact-block-view";
 import { CopyrightView } from "../view/copyright-view";
 import { CSView } from "../view/cs-view";
 import { CTAView } from "../view/cta-block-view";
+import { FaqView } from "../view/faq-view";
 
 export async function generateStaticParams() {
   return blocksArr.map((element) => ({
@@ -23,6 +24,7 @@ const componentMap: Record<string, JSX.Element> = {
   "coming-soon": <CSView />,
   contact: <ContactBlockView />,
   copyright: <CopyrightView />,
+  faq: <FaqView />,
 };
 
 export default async function Page({

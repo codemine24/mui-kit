@@ -138,7 +138,7 @@ export const CodePreviewCopyWrapper: React.FC<CodePreviewWrapperProps> = ({
           <Box
             sx={{
               position: "relative",
-              height: "410px",
+              height: "500px",
               overflow: "auto",
               scrollbarWidth: "none",
               bgcolor: "background.default",
