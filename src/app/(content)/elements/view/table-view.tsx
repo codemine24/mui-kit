@@ -20,6 +20,7 @@ import { StripedColumnTablePreview } from "../components/table/table-stripped-co
 import { StripedRowTablePreview } from "../components/table/table-stripped-row-table";
 import { HoverTablePreview } from "../components/table/table-hover-preview";
 import { HeadlessTablePreview } from "../components/table/table-headless-preview";
+import { CustomPaginationTablePreview } from "../components/table/table-custom-pagination-preview";
 
 const sections = [
   {
@@ -133,6 +134,14 @@ const sections = [
       "Use Material UI headless table with extended design. No extra package required.",
     codeString: "",
     preview: <HeadlessTablePreview />,
+  },
+  {
+    id: "table-15",
+    title: "Custom Pagination",
+    description:
+      "Use Material UI custom pagination table with extended design. No extra package required.",
+    codeString: "",
+    preview: <CustomPaginationTablePreview />,
   },
 ];
 
