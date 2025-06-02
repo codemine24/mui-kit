@@ -49,7 +49,7 @@ export const FaqTwoColPreview = () => {
     <Box
       sx={{
         position: "relative",
-        backgroundImage: \`url("https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")\`,
+        backgroundImage: \`url("https://images.unsplash.com/photo-1497215728101-856f4ea42174")\`,
         py: { xs: 6, md: 12 },
         px: { xs: 2, md: 4 },
         backgroundSize: "cover",
@@ -81,7 +81,7 @@ export const FaqTwoColPreview = () => {
       >
         <Typography
           sx={{
-            color: "common.black",
+            color: "#333",
             textTransform: "uppercase",
             fontWeight: 500,
           }}
@@ -90,7 +90,7 @@ export const FaqTwoColPreview = () => {
         </Typography>
         <Typography
           sx={{
-            color: "common.black",
+            color: "#333",
             fontFamily: "serif",
             fontWeight: 500,
             fontSize: { xs: 32, md: 44, lg: 52 },
@@ -101,7 +101,7 @@ export const FaqTwoColPreview = () => {
         </Typography>
         <Typography
           sx={{
-            color: "#777777",
+            color: "#333333",
             fontWeight: 400,
             fontSize: { xs: 16, md: 16 },
             pr: { xs: 0, md: "35%" },
@@ -124,19 +124,19 @@ export const FaqTwoColPreview = () => {
 
         <Grid container>
           <Grid size={{ xs: 12, md: 6 }} sx={{ pr: 2 }}>
-            <Typography gutterBottom sx={{ color: "#777" }}>
+            <Typography gutterBottom sx={{ color: "#333333" }}>
               simply dummy text of the printing and typesetting industry. Lorem
               Ipsum has been the industry standard dummy text ever since the
               1500s, when an unknown printer took a galley of type and scrambled
               it to make a type specimen book.
             </Typography>
-            <Typography gutterBottom sx={{ color: "#777" }}>
+            <Typography gutterBottom sx={{ color: "#333333" }}>
               simply dummy text of the printing and typesetting industry. Lorem
               Ipsum has been the industry standard dummy text ever since the
               1500s, when an unknown printer took a galley of type and scrambled
               it to make a type specimen book.
             </Typography>
-            <Typography gutterBottom sx={{ color: "#777" }}>
+            <Typography gutterBottom sx={{ color: "#333333" }}>
               simply dummy text of the printing and typesetting industry. Lorem
               Ipsum has been the industry standard dummy text ever since the
               1500s, when an unknown printer took a galley of type and scrambled
@@ -149,10 +149,22 @@ export const FaqTwoColPreview = () => {
                 key={item.id}
                 expanded={expanded === item.id}
                 onChange={handleChange(item.id)}
-                sx={{ background: "#999999" }}
+                sx={{
+                  background: "#dddddd",
+                  color: "#333",
+                  "&:before": {
+                    display: "none",
+                  },
+                }}
               >
                 <AccordionSummary
-                  expandIcon={expanded === item.id ? <Remove /> : <Add />}
+                  expandIcon={
+                    expanded === item.id ? (
+                      <Remove style={{ color: "#333" }} />
+                    ) : (
+                      <Add style={{ color: "#333" }} />
+                    )
+                  }
                   aria-controls={item.id}
                   id={item.id}
                 >
