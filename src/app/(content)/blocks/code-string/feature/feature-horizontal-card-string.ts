@@ -1,7 +1,8 @@
-import {
+export const featureHorizontalCardCodeString = `import {
   Box,
   Button,
   Card,
+  CardActions,
   CardContent,
   CardMedia,
   Chip,
@@ -13,7 +14,7 @@ import {
 const cardData = [
   {
     id: 1,
-    img: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f",
+    img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
     title: "lorem ipsum dolor",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
@@ -38,18 +39,9 @@ const cardData = [
     url: "/",
     isFeatured: false,
   },
-  {
-    id: 4,
-    img: "https://images.unsplash.com/photo-1510154221590-ff63e90a136f",
-    title: "lorem ipsum dolor",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
-    url: "/",
-    isFeatured: false,
-  },
 ];
 
-export const FeatureWithCardPreview = () => {
+export const FeatureHorizontalCardPreview = () => {
   return (
     <Box
       sx={{
@@ -107,10 +99,10 @@ export const FeatureWithCardPreview = () => {
         maiores error aliquid ipsum!
       </Typography>
 
-      <Grid container spacing={3} sx={{ width: "100%", maxWidth: "1140px" }}>
+      <Grid container spacing={1} sx={{ width: "100%", maxWidth: "1140px" }}>
         {cardData.map((card) => (
           <Grid
-            size={{ xs: 12, sm: 6, md: 4, lg: 3 }}
+            size={{ xs: 12, sm: 6, md: 6, lg: 4 }}
             key={card.id}
             position={"relative"}
           >
@@ -119,49 +111,67 @@ export const FeatureWithCardPreview = () => {
                 label="☆ Featured"
                 color="primary"
                 size="small"
-                sx={{ position: "absolute", top: 6, right: 6, borderRadius: 0 }}
+                sx={{ position: "absolute", top: 6, left: 6, borderRadius: 0 }}
               />
             )}
             <Card
               sx={{
-                height: "100%",
+                maxWidth: 600,
+                height: { xs: "auto", md: 150 },
+                display: "flex",
+                gap: 2,
+                alignItems: "stretch",
+                flexDirection: { xs: "column", md: "row" },
                 border: card.isFeatured ? "2px solid" : "1px solid",
                 borderColor: card.isFeatured ? "primary.main" : "divider",
                 boxShadow: card.isFeatured ? 4 : 1,
-                transition: "0.3s",
-                "&:hover": {
-                  boxShadow: 6,
-                },
               }}
             >
               <CardMedia
                 component="img"
-                height="200"
                 image={card.img}
-                alt={card.title}
+                alt="Paella dish"
+                width={100}
+                sx={{
+                  width: { xs: "100%", md: 200 },
+                  height: { xs: 200, lg: "auto" },
+                  objectFit: "cover",
+                }}
               />
-              <CardContent>
-                <Typography
-                  gutterBottom
-                  variant="h6"
-                  component="div"
-                  fontWeight={600}
-                >
-                  {card.title}
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  {card.description}
-                </Typography>
-              </CardContent>
-              <Box sx={{ px: 2, pb: 2 }}>
-                <Button
-                  variant="outlined"
-                  color="primary"
-                  href={card.url}
-                  fullWidth
-                >
-                  Learn More
-                </Button>
+
+              <Box sx={{ py: 2, px: { xs: 2, md: 0 } }}>
+                <CardContent sx={{ p: 0 }}>
+                  <Typography
+                    gutterBottom
+                    variant="h6"
+                    component="div"
+                    fontWeight={600}
+                  >
+                    {card.title}
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    {card.description}
+                  </Typography>
+                </CardContent>
+                <CardActions sx={{ p: 0, mt: 1 }}>
+                  <Button
+                    variant="text"
+                    color="primary"
+                    href={card.url}
+                    sx={{
+                      background: "none",
+                      textDecoration: "none",
+                      textTransform: "none",
+                      color: "primary.main",
+                      fontWeight: 500,
+                      fontSize: { xs: 13, md: 15 },
+                      m: 0,
+                      p: 0,
+                    }}
+                  >
+                    Learn More
+                  </Button>
+                </CardActions>
               </Box>
             </Card>
           </Grid>
@@ -169,4 +179,4 @@ export const FeatureWithCardPreview = () => {
       </Grid>
     </Box>
   );
-};
+};`;

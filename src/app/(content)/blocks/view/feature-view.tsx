@@ -7,17 +7,17 @@ import { useOnThisPage } from "@/contexts/on-thispage-context";
 import { PATHS } from "@/router/paths";
 import { Box, Divider } from "@mui/material";
 import React from "react";
-import { faqTwoColString } from "../code-string/faq/faq-two-col-string";
 import { faqWithImgString } from "../code-string/faq/faq-with-img-string";
+import { featureHorizontalCardCodeString } from "../code-string/feature/feature-horizontal-card-string";
 import { featureWithCardCodeString } from "../code-string/feature/feature-with-card-string";
-import { FaqTwoColPreview } from "../components/faq/faq-two-col-preview";
 import { FaqWithImgPreview } from "../components/faq/faq-with-img-preview";
+import { FeatureHorizontalCardPreview } from "../components/feature/feature-horizontal-card-preview";
 import { FeatureWithCardPreview } from "../components/feature/feature-with-card-preview";
 
 const sections = [
   {
     id: "feature-1",
-    title: "Vertical card",
+    title: "Vertical cards",
     description:
       "Featured service section with vertical cards. Fully responsive and designed with material ui only. ",
     codeString: featureWithCardCodeString,
@@ -25,11 +25,10 @@ const sections = [
   },
   {
     id: "feature-2",
-    title: "Single column",
-    description:
-      "Two column with description and FAQ that will fit most of the websites.",
-    codeString: faqTwoColString,
-    preview: <FaqTwoColPreview />,
+    title: "Horizontal cards",
+    description: "If you like horizontal cards, you can use this variant. ",
+    codeString: featureHorizontalCardCodeString,
+    preview: <FeatureHorizontalCardPreview />,
   },
   {
     id: "feature-3",

@@ -15,7 +15,7 @@ const cardData = [
     id: 1,
     img: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f",
     title: "lorem ipsum dolor",
-    descriptio:
+    description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
     url: "/",
     isFeatured: false,
@@ -24,7 +24,7 @@ const cardData = [
     id: 2,
     img: "https://images.unsplash.com/photo-1511485977113-f34c92461ad9",
     title: "lorem ipsum dolor",
-    descriptio:
+    description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
     url: "/",
     isFeatured: true,
@@ -33,7 +33,7 @@ const cardData = [
     id: 3,
     img: "https://plus.unsplash.com/premium_photo-1673276864867-d0e27d34e5f7",
     title: "lorem ipsum dolor",
-    descriptio:
+    description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
     url: "/",
     isFeatured: false,
@@ -42,7 +42,7 @@ const cardData = [
     id: 4,
     img: "https://images.unsplash.com/photo-1510154221590-ff63e90a136f",
     title: "lorem ipsum dolor",
-    descriptio:
+    description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
     url: "/",
     isFeatured: false,
@@ -150,7 +150,7 @@ export const FeatureWithCardPreview = () => {
                   {card.title}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  {card.descriptio}
+                  {card.description}
                 </Typography>
               </CardContent>
               <Box sx={{ px: 2, pb: 2 }}>
