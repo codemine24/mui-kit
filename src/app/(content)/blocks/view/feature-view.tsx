@@ -30,10 +30,18 @@ const sections = [
     codeString: featureHorizontalCardCodeString,
     preview: <FeatureHorizontalCardPreview />,
   },
+
   {
     id: "feature-3",
-    title: "With image",
-    description: "Two column feature section with image and feature list.",
+    title: "Three columns",
+    description: "Three column feature section with image and feature list.",
+    codeString: featureWithImageString,
+    preview: <FeatureWithImagePreview />,
+  },
+  {
+    id: "feature-4",
+    title: "Custom icon",
+    description: "Feature cards with custom material ui icon.",
     codeString: featureWithImageString,
     preview: <FeatureWithImagePreview />,
   },

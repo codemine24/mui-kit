@@ -1,31 +1,44 @@
-export const featureWithImageString = `import { KeyboardArrowRight } from "@mui/icons-material";
-import {
-  Box,
-  Divider,
-  Grid,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
-  Typography,
-} from "@mui/material";
+export const featureWithImageString = `import { Box, Grid, Typography } from "@mui/material";
 
-const listArr = [
+const listArrOne = [
   {
     id: 1,
     list: "Your Feature List 1",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus quo esse quod nulla, nihil quae provident.",
   },
   {
     id: 2,
     list: "Your Feature List 2",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus quo esse quod nulla, nihil quae provident.",
   },
   {
     id: 3,
     list: "Your Feature List 3",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus quo esse quod nulla, nihil quae provident.",
   },
+];
+
+const listArrTwo = [
   {
     id: 4,
     list: "Your Feature List 4",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus quo esse quod nulla, nihil quae provident.",
+  },
+  {
+    id: 5,
+    list: "Your Feature List 5",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus quo esse quod nulla, nihil quae provident.",
+  },
+  {
+    id: 6,
+    list: "Your Feature List 6",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus quo esse quod nulla, nihil quae provident.",
   },
 ];
 
@@ -34,78 +47,73 @@ export const FeatureWithImagePreview = () => {
     <Box>
       <Grid container sx={{ bgcolor: "background.paper", px: 2 }}>
         <Grid
-          size={{ xs: 12, md: 6 }}
-          sx={{ px: { xs: 0, md: 2 }, py: { xs: 2, md: 2 } }}
+          size={{ xs: 12, md: 4 }}
+          sx={{ px: { xs: 0, md: 4 }, py: { xs: 2, md: 2 } }}
         >
-          <Typography sx={{ color: "#DA9100", fontFamily: "cursive" }}>
-            Sub Heading
-          </Typography>
-          <Typography
-            sx={{
-              textTransform: "uppercase",
-              color: "text.primary",
-              fontSize: { xs: 24, md: 32 },
-              fontWeight: 600,
-            }}
-          >
-            Feature & Benefits
-          </Typography>
-          <Divider
-            sx={{
-              my: 2,
-              width: "10%",
-              backgroundColor: "#DA9100",
-              height: 4,
-            }}
-          />
-
-          <Typography
-            sx={{
-              py: 2,
-              fontSize: { xs: 16, md: 18 },
-              color: "text.secondary",
-              fontWeight: 200,
-            }}
-          >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus quo
-            esse quod nulla, nihil quae provident commodi dolores dolore earum
-            quaerat sapiente laborum in nisi excepturi ipsam totam non nemo
-            voluptatum, architecto, consequatur .
-          </Typography>
-
-          <List
-            sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}
-          >
-            {listArr.map((item) => (
-              <ListItem
-                key={item.id}
+          {listArrOne.map((item) => (
+            <Box key={item.id} sx={{ py: 1 }}>
+              <Typography
                 sx={{
-                  ":not(:last-child)": {
-                    borderBottom: (theme) =>
-                      \`1px solid \${theme.palette.divider}\`,
-                  },
+                  fontSize: { xs: 15, md: 16 },
+                  color: "text.primary",
+                  fontWeight: 500,
                 }}
               >
-                <ListItemIcon>
-                  <KeyboardArrowRight />
-                </ListItemIcon>
-                <ListItemText id="switch-list-label-wifi" primary={item.list} />
-              </ListItem>
-            ))}
-          </List>
+                {item.list}
+              </Typography>
+              <Typography
+                sx={{
+                  py: 1,
+                  fontSize: { xs: 14, md: 16 },
+                  color: "text.secondary",
+                  fontWeight: 200,
+                }}
+              >
+                {item.description}
+              </Typography>
+            </Box>
+          ))}
         </Grid>
-        <Grid size={{ xs: 12, md: 6 }}>
+        <Grid size={{ xs: 12, md: 4 }}>
           <Box
             component={"img"}
-            src="https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            src="https://images.unsplash.com/photo-1678787017689-2bf6b91eab5d"
             sx={{
               width: "100%",
-              height: "100%",
+              maxHeight: "450px",
               objectFit: "cover",
               borderRadius: 2,
               boxShadow: 4,
             }}
           />
+        </Grid>
+        <Grid
+          size={{ xs: 12, md: 4 }}
+          sx={{ px: { xs: 0, md: 4 }, py: { xs: 2, md: 2 } }}
+        >
+          {listArrTwo.map((item) => (
+            <Box key={item.id} sx={{ py: 1 }}>
+              <Typography
+                sx={{
+                  fontSize: { xs: 15, md: 16 },
+                  color: "text.primary",
+                  fontWeight: 500,
+                }}
+              >
+                {item.list}
+              </Typography>
+              <Typography
+                sx={{
+                  py: 1,
+                  fontSize: { xs: 14, md: 16 },
+                  color: "text.secondary",
+                  fontWeight: 200,
+                }}
+              >
+                {item.description}
+              </Typography>
+            </Box>
+          ))}
         </Grid>
       </Grid>
     </Box>
