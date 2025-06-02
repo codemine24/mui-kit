@@ -22,6 +22,7 @@ import { HoverTablePreview } from "../components/table/table-hover-preview";
 import { HeadlessTablePreview } from "../components/table/table-headless-preview";
 import { CustomPaginationTablePreview } from "../components/table/table-custom-pagination-preview";
 import { HighlightedFieldTablePreview } from "../components/table/table-highlight-preview";
+import { TransactionTablePreview } from "../components/table/table-transaction-preview";
 
 const sections = [
   {
@@ -151,6 +152,14 @@ const sections = [
       "Use Material UI highlighted field table with extended design. No extra package required.",
     codeString: "",
     preview: <HighlightedFieldTablePreview />,
+  },
+  {
+    id: "table-17",
+    title: "Transaction",
+    description:
+      "Use Material UI transaction table with extended design. No extra package required.",
+    codeString: "",
+    preview: <TransactionTablePreview />,
   },
 ];
 
