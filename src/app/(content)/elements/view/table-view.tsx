@@ -19,6 +19,7 @@ import { ComparisonTablePreview } from "../components/table/table-comparison-pre
 import { StripedColumnTablePreview } from "../components/table/table-stripped-column-preview";
 import { StripedRowTablePreview } from "../components/table/table-stripped-row-table";
 import { HoverTablePreview } from "../components/table/table-hover-preview";
+import { HeadlessTablePreview } from "../components/table/table-headless-preview";
 
 const sections = [
   {
@@ -124,6 +125,14 @@ const sections = [
       "Use Material UI hover table with extended design. No extra package required.",
     codeString: "",
     preview: <HoverTablePreview />,
+  },
+  {
+    id: "table-14",
+    title: "Headless",
+    description:
+      "Use Material UI headless table with extended design. No extra package required.",
+    codeString: "",
+    preview: <HeadlessTablePreview />,
   },
 ];
 
