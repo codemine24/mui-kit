@@ -3,13 +3,16 @@ import { CodePreviewCopyWrapper } from "@/components/code-preview-copy-wrapper";
 import { CustomBreadCrumbs } from "@/components/core/breadcrumbs";
 import { PageTitle } from "@/components/core/page-title";
 import { SectionTitle } from "@/components/core/section-title";
+import { ExternalPackageAlert } from "@/components/external-package-alert";
 import { useOnThisPage } from "@/contexts/on-thispage-context";
 import { PATHS } from "@/router/paths";
 import { Box, Divider } from "@mui/material";
 import React from "react";
+import { featureCustomIconString } from "../code-string/feature/feature-custom-icon-string";
 import { featureHorizontalCardCodeString } from "../code-string/feature/feature-horizontal-card-string";
-import { featureWithCardCodeString } from "../code-string/feature/feature-with-card-string";
+import { featureWithCardString } from "../code-string/feature/feature-with-card-string";
 import { featureWithImageString } from "../code-string/feature/feature-with-image-string";
+import { FeatureCustomIconPreview } from "../components/feature/feature-custom-icon-preview";
 import { FeatureHorizontalCardPreview } from "../components/feature/feature-horizontal-card-preview";
 import { FeatureWithCardPreview } from "../components/feature/feature-with-card-preview";
 import { FeatureWithImagePreview } from "../components/feature/feature-with-image-preview";
@@ -20,7 +23,7 @@ const sections = [
     title: "Vertical cards",
     description:
       "Featured service section with vertical cards. Fully responsive and designed with material ui only. ",
-    codeString: featureWithCardCodeString,
+    codeString: featureWithCardString,
     preview: <FeatureWithCardPreview />,
   },
   {
@@ -42,8 +45,8 @@ const sections = [
     id: "feature-4",
     title: "Custom icon",
     description: "Feature cards with custom material ui icon.",
-    codeString: featureWithImageString,
-    preview: <FeatureWithImagePreview />,
+    codeString: featureCustomIconString,
+    preview: <FeatureCustomIconPreview />,
   },
 ];
 
@@ -66,6 +69,14 @@ export const FeatureView = () => {
       />
 
       <Divider sx={{ my: 4 }} />
+      <ExternalPackageAlert
+        packages={[
+          {
+            name: "@iconify/react",
+            url: "https://www.npmjs.com/package/@iconify/react",
+          },
+        ]}
+      />
       {sections.map((section) => (
         <Box key={section.id} sx={{ mb: 4 }}>
           <SectionTitle

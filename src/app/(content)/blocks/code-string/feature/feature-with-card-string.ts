@@ -1,4 +1,4 @@
-export const featureWithCardCodeString = `import {
+export const featureWithCardString = `import {
   Box,
   Button,
   Card,
