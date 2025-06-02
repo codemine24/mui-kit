@@ -18,6 +18,7 @@ import { ShoppingCartTablePreview } from "../components/table/table-shopping-car
 import { ComparisonTablePreview } from "../components/table/table-comparison-preview";
 import { StripedColumnTablePreview } from "../components/table/table-stripped-column-preview";
 import { StripedRowTablePreview } from "../components/table/table-stripped-row-table";
+import { HoverTablePreview } from "../components/table/table-hover-preview";
 
 const sections = [
   {
@@ -115,6 +116,14 @@ const sections = [
       "Use Material UI stripped row table with extended design. No extra package required.",
     codeString: "",
     preview: <StripedRowTablePreview />,
+  },
+  {
+    id: "table-13",
+    title: "Hover",
+    description:
+      "Use Material UI hover table with extended design. No extra package required.",
+    codeString: "",
+    preview: <HoverTablePreview />,
   },
 ];
 
