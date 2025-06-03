@@ -4,8 +4,6 @@ import { useRef, useEffect, useCallback } from 'react';
 
 import type { CarouselOptions } from '../types/type';
 
-// ----------------------------------------------------------------------
-
 export function useParallax(mainApi?: EmblaCarouselType, parallax?: CarouselOptions['parallax']) {
     const tweenFactor = useRef(0);
 
@@ -17,9 +15,11 @@ export function useParallax(mainApi?: EmblaCarouselType, parallax?: CarouselOpti
         tweenNodes.current = _mainApi
             .slideNodes()
             .map(
-                (slideNode) => slideNode.querySelector(`.test`) as HTMLElement // will fix it later
+                (slideNode) => slideNode.querySelector(`.minima_carousel__slide__content__parallax`) as HTMLElement
             );
     }, []);
+
+    console.log(tweenNodes.current);
 
     const setTweenFactor = useCallback(
         (_mainApi: EmblaCarouselType) => {

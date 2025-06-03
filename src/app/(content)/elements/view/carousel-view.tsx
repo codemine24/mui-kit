@@ -13,6 +13,7 @@ import { CarouselProgressPreview } from "../components/carousel/preview/carousel
 import { CarouselOpacityPreview } from "../components/carousel/preview/carousel-opacity-preview";
 import { CarouselScalePreview } from "../components/carousel/preview/carousel-scale-preview";
 import { CarouselFade } from "../components/carousel/preview/carousel-fade-preview";
+import { CarouselParallax } from "../components/carousel/preview/carousel-parallax-preview";
 
 const sections = [
     {
@@ -49,6 +50,13 @@ const sections = [
         description: "Carousel fade description",
         codeString: "",
         preview: <CarouselFade />,
+    },
+    {
+        id: "carousel-6",
+        title: "Parallax",
+        description: "Carousel parallax description",
+        codeString: "",
+        preview: <CarouselParallax />,
     }
 ];
 
