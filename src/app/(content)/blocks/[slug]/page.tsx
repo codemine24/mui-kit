@@ -3,8 +3,12 @@ import { PATHS } from "@/router/paths";
 import { blocksArr } from "@/router/router";
 import { JSX } from "react";
 import { AboutBlockView } from "../view/about-block-view";
+import { ContactBlockView } from "../view/contact-block-view";
+import { CopyrightView } from "../view/copyright-view";
 import { CSView } from "../view/cs-view";
 import { CTAView } from "../view/cta-block-view";
+import { FaqView } from "../view/faq-view";
+import { FeatureView } from "../view/feature-view";
 
 export async function generateStaticParams() {
   return blocksArr.map((element) => ({
@@ -19,6 +23,10 @@ const componentMap: Record<string, JSX.Element> = {
   about: <AboutBlockView />,
   "call-to-action": <CTAView />,
   "coming-soon": <CSView />,
+  contact: <ContactBlockView />,
+  copyright: <CopyrightView />,
+  faq: <FaqView />,
+  "feature-benefit": <FeatureView />,
 };
 
 export default async function Page({
