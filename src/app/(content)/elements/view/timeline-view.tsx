@@ -11,33 +11,35 @@ import React from "react";
 import { ExternalPackageAlert } from "@/components/external-package-alert";
 import { PATHS } from "@/router/paths";
 import {
-  timelineActionButtonString,
-  timelineAvatarString,
-  timelineChangeLogString,
-  timelineClassicString,
-  timelineCompanyMilestoneString,
-  timelineCustomIconString,
-  timelineHorizontalString,
-  timelineOneSidedString,
-  timelineProjectsString,
-  timelineSocialString,
-  timelineTouristSpotString,
-  timelineWithDateString,
+    timelineActionButtonString,
+    timelineAvatarString,
+    timelineChangeLogString,
+    timelineClassicString,
+    timelineCompanyMilestoneString,
+    timelineCustomIconString,
+    timelineHorizontalString,
+    timelineOneSidedString,
+    timelineProjectsString,
+    timelineSocialString,
+    timelineTouristSpotString,
+    timelineWithDateString,
 } from "../code-string/timeline";
+import { timelineHorizontalCenterString } from "../code-string/timeline/timeline-horizontal-center-string";
 import {
-  TimelineActionButtonPreview,
-  TimelineAvatarPreview,
-  TimelineChangeLogPreview,
-  TimelineClassicPreview,
-  TimelineCompanyMilestonePreview,
-  TimelineCustomIconPreview,
-  TimelineHorizontalPreview,
-  TimelineOneSidedPreview,
-  TimelineProjectsPreview,
-  TimelineSocialPreview,
-  TimelineTouristSpotPreview,
-  TimelineWithDatePreview,
+    TimelineActionButtonPreview,
+    TimelineAvatarPreview,
+    TimelineChangeLogPreview,
+    TimelineClassicPreview,
+    TimelineCompanyMilestonePreview,
+    TimelineCustomIconPreview,
+    TimelineHorizontalPreview,
+    TimelineOneSidedPreview,
+    TimelineProjectsPreview,
+    TimelineSocialPreview,
+    TimelineTouristSpotPreview,
+    TimelineWithDatePreview,
 } from "../components/timeline";
+import { TimelineHorizontalCenterPreview } from "../components/timeline/timeline-horizontal-center-preview";
 
 const sections = [
   {
@@ -87,6 +89,13 @@ const sections = [
   },
   {
     id: "timeline-7",
+    title: "Horizontal centred timeline",
+    description: "Horizontal content in center timeline.",
+    codeString: timelineHorizontalCenterString,
+    preview: <TimelineHorizontalCenterPreview />,
+  },
+  {
+    id: "timeline-8",
     title: "Action button",
     description:
       "Timeline with actionable buttons. Add custom url in action button. ",
@@ -94,7 +103,7 @@ const sections = [
     preview: <TimelineActionButtonPreview />,
   },
   {
-    id: "timeline-8",
+    id: "timeline-9",
     title: "Projects",
     description:
       "Material UI core timeline with extended design, and functionality.",
@@ -102,7 +111,7 @@ const sections = [
     preview: <TimelineProjectsPreview />,
   },
   {
-    id: "timeline-9",
+    id: "timeline-10",
     title: "Change Log",
     description:
       "Material UI core timeline with extended design, and functionality.",
@@ -110,7 +119,7 @@ const sections = [
     preview: <TimelineChangeLogPreview />,
   },
   {
-    id: "timeline-10",
+    id: "timeline-11",
     title: "Company Milestone",
     description:
       "Material UI core timeline with extended design, and functionality.",
@@ -118,7 +127,7 @@ const sections = [
     preview: <TimelineCompanyMilestonePreview />,
   },
   {
-    id: "timeline-11",
+    id: "timeline-12",
     title: "Tourist Spot",
     description:
       "Material UI core timeline with extended design, and functionality.",
@@ -126,7 +135,7 @@ const sections = [
     preview: <TimelineTouristSpotPreview />,
   },
   {
-    id: "timeline-12",
+    id: "timeline-13",
     title: "Social",
     description:
       "Material UI core timeline with extended design, and functionality.",
