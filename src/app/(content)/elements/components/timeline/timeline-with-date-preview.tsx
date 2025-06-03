@@ -49,7 +49,7 @@ export function TimelineWithDatePreview() {
       {timelineData.map((item, index) => (
         <TimelineItem key={index}>
           <TimelineOppositeContent
-            sx={{ m: 0, flex: 0.2 }}
+            sx={{ mt: -0.5, flex: 0.2 }}
             align="right"
             variant="body2"
             color="text.secondary"
@@ -70,7 +70,11 @@ export function TimelineWithDatePreview() {
           </TimelineSeparator>
 
           <TimelineContent sx={{ pb: 4, pt: 0, px: 2 }}>
-            <Typography variant="subtitle1" fontWeight="bold">
+            <Typography
+              variant="subtitle1"
+              fontWeight="bold"
+              sx={{ mt: -0.5 }}
+            >
               {item.title}
             </Typography>
             <Typography

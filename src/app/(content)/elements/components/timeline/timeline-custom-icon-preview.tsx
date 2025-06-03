@@ -12,7 +12,7 @@ import { Box, Typography } from "@mui/material";
 const timelineData = [
   {
     date: "Mar 15, 2024",
-    icon: "solar:user-linear",
+    icon: "ep:warning-filled",
     title: "Project Kickoff",
     description:
       "Initial team meeting and project scope definition.\nEstablished key milestones and resource allocation.",
@@ -20,7 +20,7 @@ const timelineData = [
   },
   {
     date: "Mar 22, 2024",
-    icon: "ri:user-smile-line",
+    icon: "carbon:play-filled",
     title: "Design Phase",
     description:
       "Completed wireframes and user interface mockups.\nStakeholder review and feedback incorporated.",
@@ -28,7 +28,7 @@ const timelineData = [
   },
   {
     date: "Apr 5, 2024",
-    icon: "solar:code-linear",
+    icon: "teenyicons:shield-tick-solid",
     title: "Development Sprint",
     description:
       "Backend API implementation and frontend component development in progress.",
@@ -36,7 +36,7 @@ const timelineData = [
   },
   {
     date: "Apr 19, 2024",
-    icon: "pajamas:abuse",
+    icon: "basil:envelope-solid",
     title: "Testing & Deployment",
     description:
       "Quality assurance testing, performance optimization, and production deployment preparation.",
@@ -61,6 +61,7 @@ export function TimelineCustomIconPreview() {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
+                p: 0.6,
               }}
             >
               <Icon icon={item.icon} width="24" height="24" />
