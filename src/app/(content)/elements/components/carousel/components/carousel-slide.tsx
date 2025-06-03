@@ -7,13 +7,12 @@ import { getSlideSize } from '../utils';
 
 export function CarouselSlide({ sx, options, children, className, ...other }: CarouselSlideProps) {
     const slideSize = getSlideSize(options?.slidesToShow);
-
     return (
         <CarouselSlideRoot
             axis={options?.axis ?? 'x'}
             slideSpacing={options?.slideSpacing}
             className="carousel-slide-root"
-            sx={[{ flex: slideSize }, ...(Array.isArray(sx) ? sx : [sx])]}
+            sx={[{ flex: slideSize, minWidth: '0px' }, ...(Array.isArray(sx) ? sx : [sx])]}
             {...other}
         >
             {options?.parallax ? (

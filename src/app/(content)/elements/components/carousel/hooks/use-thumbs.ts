@@ -1,18 +1,14 @@
 import type { EmblaCarouselType } from 'embla-carousel';
-
 import useEmblaCarousel from 'embla-carousel-react';
 import { useState, useEffect, useCallback } from 'react';
-
 import type { CarouselOptions, UseCarouselThumbsReturn } from '../types/type';
-
-// ----------------------------------------------------------------------
 
 export function useThumbs(
     mainApi?: EmblaCarouselType,
     options?: Partial<CarouselOptions>
 ): UseCarouselThumbsReturn {
     const [thumbsRef, thumbsApi] = useEmblaCarousel({
-        containScroll: 'trimSnaps',
+        containScroll: 'keepSnaps',
         dragFree: true,
         ...options,
     });
@@ -22,7 +18,7 @@ export function useThumbs(
     const onClickThumb = useCallback(
         (index: number) => {
             if (!mainApi || !thumbsApi) return;
-            mainApi.scrollTo(index, true);
+            mainApi.scrollTo(index);
         },
         [mainApi, thumbsApi]
     );

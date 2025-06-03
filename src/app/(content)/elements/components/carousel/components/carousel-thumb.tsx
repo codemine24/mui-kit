@@ -28,8 +28,6 @@ export function CarouselThumb({
 const ThumbRoot = styled(ButtonBase, {
     shouldForwardProp: (prop: string) => !['selected', 'sx'].includes(prop),
 })<Pick<CarouselThumbProps, 'selected'>>(({ theme }) => ({
-    width: 64,
-    height: 64,
     opacity: 0.48,
     flexShrink: 0,
     cursor: 'pointer',

@@ -26,7 +26,7 @@ export function CarouselThumbs({
                         options={{ ...options, slideSpacing }}
                         sx={{
                             ...slotProps?.slide,
-                            flexShrink: 1,
+                            flex: '0 0 auto'
                         }}
                     >
                         {child}
@@ -40,7 +40,11 @@ export function CarouselThumbs({
         <ThumbsRoot
             axis={axis}
             enableMask={!slotProps?.disableMask}
-            sx={sx}
+            sx={{
+                ...sx,
+                maxWidth: '100%',
+                overflow: 'hidden',
+            }}
             className="carousel-thumbs-root"
             {...other}
         >
@@ -49,7 +53,6 @@ export function CarouselThumbs({
                 slideSpacing={slideSpacing}
                 sx={{
                     ...slotProps?.container,
-                    gap: 3,
                 }}
                 className="carousel-thumbs-container"
             >
