@@ -128,9 +128,9 @@ const sections = [
   },
   {
     id: "timeline-12",
-    title: "Tourist Spot",
+    title: "Tourist spot",
     description:
-      "Material UI core timeline with extended design, and functionality.",
+      "Another ready to use material ui timeline. You can customize and use it for multiple purposes.",
     codeString: timelineTouristSpotString,
     preview: <TimelineTouristSpotPreview />,
   },
@@ -138,7 +138,7 @@ const sections = [
     id: "timeline-13",
     title: "Social",
     description:
-      "Material UI core timeline with extended design, and functionality.",
+      "Ready to use mui timeline. You can customize and use it for multiple purposes.",
     codeString: timelineSocialString,
     preview: <TimelineSocialPreview />,
   },
