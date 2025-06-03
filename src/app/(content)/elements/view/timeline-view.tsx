@@ -161,7 +161,7 @@ export const TimelineView = () => {
       />
       <PageTitle
         title="Timeline"
-        description="Material UI core timeline with extended design, and functionality."
+        description="Material UI timeline with extended design and functionality. Choose from huge variety of ready to use timelines."
       />
 
       <Divider sx={{ my: 4 }} />
