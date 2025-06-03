@@ -112,7 +112,7 @@ const sections = [
   },
   {
     id: "timeline-10",
-    title: "Change Log",
+    title: "Change log",
     description:
       "Change log time to display your application changes over the time. ",
     codeString: timelineChangeLogString,

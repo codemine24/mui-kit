@@ -13,7 +13,7 @@ import { Button, Card, CardContent, Chip, Typography } from "@mui/material";
 
 const changelogData = [
   {
-    version: "Your Application UI v2.0.0",
+    version: "MUI Kit UI v2.0.0",
     date: "January 13th, 2022",
     description:
       "Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.",
@@ -22,14 +22,14 @@ const changelogData = [
     status: "complete",
   },
   {
-    version: "Your Figma v1.3.0",
+    version: "MUI Kit v1.3.0",
     date: "December 7th, 2021",
     description:
       "All of the pages and components are first designed in Figma and we keep a parity between the two versions even as we update the project.",
     status: "incomplete",
   },
   {
-    version: "Your Library v1.2.2",
+    version: "MUI Kit v1.2.2",
     date: "December 2nd, 2021",
     description:
       "Get started with dozens of web components and interactive elements built on top of Tailwind CSS.",
