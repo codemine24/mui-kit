@@ -120,9 +120,9 @@ const sections = [
   },
   {
     id: "timeline-11",
-    title: "Company Milestone",
+    title: " Milestone",
     description:
-      "Material UI core timeline with extended design, and functionality.",
+      "Milestone timeline perfect for showing the accomplishment over the time.",
     codeString: timelineCompanyMilestoneString,
     preview: <TimelineCompanyMilestonePreview />,
   },
