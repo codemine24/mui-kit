@@ -79,9 +79,9 @@ const sections = [
   },
   {
     id: "timeline-6",
-    title: "Horizontal",
+    title: "Horizontal timeline",
     description:
-      "Material UI core timeline with extended design, and functionality.",
+      "Horizontal timeline if you want to show timeline in horizontal layout. Completely designed with material ui and nothing else.",
     codeString: timelineHorizontalString,
     preview: <TimelineHorizontalPreview />,
   },
