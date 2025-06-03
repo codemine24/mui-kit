@@ -12,6 +12,7 @@ import { CarouselAlignPreview } from "../components/carousel/preview/carousel-al
 import { CarouselProgressPreview } from "../components/carousel/preview/carousel-progress-preview";
 import { CarouselOpacityPreview } from "../components/carousel/preview/carousel-opacity-preview";
 import { CarouselScalePreview } from "../components/carousel/preview/carousel-scale-preview";
+import { CarouselFade } from "../components/carousel/preview/carousel-fade-preview";
 
 const sections = [
     {
@@ -41,6 +42,13 @@ const sections = [
         description: "Carousel scale description",
         codeString: "",
         preview: <CarouselScalePreview />,
+    },
+    {
+        id: "carousel-5",
+        title: "Fade",
+        description: "Carousel fade description",
+        codeString: "",
+        preview: <CarouselFade />,
     }
 ];
 
