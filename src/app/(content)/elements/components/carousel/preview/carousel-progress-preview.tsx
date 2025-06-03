@@ -33,7 +33,7 @@ const data = [
 
 export function CarouselProgressPreview() {
     const options: CarouselOptions = {
-        containScroll: false,
+        dragFree: true,
         slidesToShow: '100%',
         slideSpacing: '20px',
     }

@@ -1,19 +1,12 @@
 import Box from '@mui/material/Box';
-
-import {
-    Carousel,
-    IndexLabel,
-    CarouselDotButtons,
-    CarouselArrowBasicButtons,
-} from '../components';
 import useEmblaCarousel from 'embla-carousel-react';
 import type { CarouselOptions } from '../types/type';
-import { useCarouselArrows, useCarouselDots } from '../hooks';
+import { useCarouselDots } from '../hooks';
+import { Carousel, CarouselDotButtons, IndexLabel } from '../components';
 
 {/* 
   ⚠️ Warning: You must import components, hooks, and types from the file where you defined them.
 */}
-
 
 const data = [
     {
@@ -38,14 +31,13 @@ const data = [
     },
 ]
 
-export function CarouselOpacityPreview() {
+export function CarouselScalePreview() {
     const options: CarouselOptions = {
         loop: true,
         slidesToShow: '70%',
         slideSpacing: '20px',
     }
     const [emblaRef, emblaApi] = useEmblaCarousel(options);
-    const { disablePrev, disableNext, onClickPrev, onClickNext } = useCarouselArrows(emblaApi);
     const dots = useCarouselDots(emblaApi);
 
     return (
@@ -60,29 +52,17 @@ export function CarouselOpacityPreview() {
                     />
                 ))}
             </Carousel>
-            <Box
-                sx={{
-                    mt: 3,
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'space-between',
-                }}
-            >
-                <CarouselArrowBasicButtons
-                    disablePrev={disablePrev}
-                    disableNext={disableNext}
-                    onClickPrev={onClickPrev}
-                    onClickNext={onClickNext}
-                />
-                <CarouselDotButtons
-                    scrollSnaps={dots.scrollSnaps}
-                    selectedIndex={dots.selectedIndex}
-                    onClickDot={dots.onClickDot}
-                />
-            </Box>
+
+            <CarouselDotButtons
+                scrollSnaps={dots.scrollSnaps}
+                selectedIndex={dots.selectedIndex}
+                onClickDot={dots.onClickDot}
+                sx={{ width: 1, justifyContent: 'center', mt: 3 }}
+            />
         </Box>
     );
 }
+
 
 type CarouselItemProps = {
     index: number;
@@ -95,16 +75,16 @@ function CarouselItem({ item, index, selected }: CarouselItemProps) {
         <Box
             sx={[
                 (theme) => ({
-                    opacity: 0.24,
                     borderRadius: 2,
                     overflow: 'hidden',
                     position: 'relative',
+                    transform: 'scale(0.88)',
                     height: { xs: 200, sm: 250, md: 350 },
-                    transition: theme.transitions.create(['opacity'], {
+                    transition: theme.transitions.create(['transform'], {
                         easing: theme.transitions.easing.easeIn,
                         duration: theme.transitions.duration.complex,
                     }),
-                    ...(selected && { opacity: 1 }),
+                    ...(selected && { transform: 'scale(1)' }),
                 }),
             ]}
         >

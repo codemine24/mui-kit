@@ -11,6 +11,7 @@ import { PATHS } from "@/router/paths";
 import { CarouselAlignPreview } from "../components/carousel/preview/carousel-align-preview";
 import { CarouselProgressPreview } from "../components/carousel/preview/carousel-progress-preview";
 import { CarouselOpacityPreview } from "../components/carousel/preview/carousel-opacity-preview";
+import { CarouselScalePreview } from "../components/carousel/preview/carousel-scale-preview";
 
 const sections = [
     {
@@ -33,6 +34,13 @@ const sections = [
         description: "Carousel opacity description",
         codeString: "",
         preview: <CarouselOpacityPreview />,
+    },
+    {
+        id: "carousel-4",
+        title: "Scale",
+        description: "Carousel scale description",
+        codeString: "",
+        preview: <CarouselScalePreview />,
     }
 ];
 
