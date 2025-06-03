@@ -49,16 +49,16 @@ const sections = [
   },
   {
     id: "timeline-2",
-    title: "With Date",
+    title: "With date",
     description: "Timeline with date along with title and description.",
     codeString: timelineWithDateString,
     preview: <TimelineWithDatePreview />,
   },
   {
     id: "timeline-3",
-    title: "One Sided",
+    title: "Date in one side",
     description:
-      "Material UI core timeline with extended design, and functionality.",
+      "Timeline with date but in one side along with title and description.",
     codeString: timelineOneSidedString,
     preview: <TimelineOneSidedPreview />,
   },
