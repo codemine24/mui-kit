@@ -8,10 +8,11 @@ import { useOnThisPage } from "@/contexts/on-thispage-context";
 import { Box, Divider } from "@mui/material";
 import React from "react";
 
+import { ExternalPackageAlert } from "@/components/external-package-alert";
 import { PATHS } from "@/router/paths";
 import {
   timelineActionButtonString,
-  timelineAvaterString,
+  timelineAvatarString,
   timelineChangeLogString,
   timelineClassicString,
   timelineCompanyMilestoneString,
@@ -25,7 +26,7 @@ import {
 } from "../code-string/timeline";
 import {
   TimelineActionButtonPreview,
-  TimelineAvaterPreview,
+  TimelineAvatarPreview,
   TimelineChangeLogPreview,
   TimelineClassicPreview,
   TimelineCompanyMilestonePreview,
@@ -37,7 +38,6 @@ import {
   TimelineTouristSpotPreview,
   TimelineWithDatePreview,
 } from "../components/timeline";
-import { ExternalPackageAlert } from "@/components/external-package-alert";
 
 const sections = [
   {
@@ -73,10 +73,9 @@ const sections = [
   {
     id: "timeline-5",
     title: "Avatar",
-    description:
-      "Material UI core timeline with extended design, and functionality.",
-    codeString: timelineAvaterString,
-    preview: <TimelineAvaterPreview />,
+    description: "Instead of icon you can add avatar in timeline.",
+    codeString: timelineAvatarString,
+    preview: <TimelineAvatarPreview />,
   },
   {
     id: "timeline-6",
