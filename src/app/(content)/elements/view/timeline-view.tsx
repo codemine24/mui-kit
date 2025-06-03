@@ -87,9 +87,9 @@ const sections = [
   },
   {
     id: "timeline-7",
-    title: "Action Button",
+    title: "Action button",
     description:
-      "Material UI core timeline with extended design, and functionality.",
+      "Timeline with actionable buttons. Add custom url in action button. ",
     codeString: timelineActionButtonString,
     preview: <TimelineActionButtonPreview />,
   },
