@@ -69,55 +69,52 @@ const sections = [
     id: "table-3",
     title: "Dense",
     description:
-      "Use Material UI dense table with extended design. No extra package required.",
+      "Mui table with dense padding (narrow rows). If you like compact table, use this.",
     codeString: denseTableString,
     preview: <DenseTablePreview />,
   },
   {
     id: "table-4",
-    title: "Sorting",
+    title: "Sorting & selecting",
     description:
-      "Use Material UI sorting table with extended design. No extra package required.",
+      "Mui default table. If you need custom selection and sorting button, use this. ",
     codeString: sortingTableString,
     preview: <SortingTablePreview />,
   },
   {
     id: "table-5",
-    title: "Sticky Header",
-    description:
-      "Use Material UI sticky header table with extended design. No extra package required.",
+    title: "Sticky header",
+    description: "Material ui default sticky header table component.",
     codeString: stickyHeaderTableString,
     preview: <StickyHeadTablePreview />,
   },
   {
     id: "table-6",
     title: "Collapsible",
-    description:
-      "Use Material UI collapsible table with extended design. No extra package required.",
+    description: "Material ui table with collapsible rows.",
     codeString: collapsibleTableString,
     preview: <CollapsibleTablePreview />,
   },
   {
     id: "table-7",
-    title: "User",
+    title: "User table",
     description:
-      "Use Material UI user table with extended design. No extra package required.",
+      "User table, one of the most common table used in any application.",
     codeString: userTableString,
     preview: <UserTablePreview />,
   },
   {
     id: "table-8",
     title: "Product",
-    description:
-      "Use Material UI product table with extended design. No extra package required.",
+    description: "Product table for e-commerce website.",
     codeString: productTableString,
     preview: <ProductTablePreview />,
   },
   {
     id: "table-9",
-    title: "Shopping Cart",
+    title: "Shopping cart",
     description:
-      "Use Material UI shopping cart table with extended design. No extra package required.",
+      "Shopping cart table for e-commerce website with custom design.",
     codeString: shoppingCartTableString,
     preview: <ShoppingCartTablePreview />,
   },
@@ -125,63 +122,59 @@ const sections = [
     id: "table-10",
     title: "Comparison",
     description:
-      "Use Material UI comparison table with extended design. No extra package required.",
+      "Use this feature comparison table built with material ui only. ",
     codeString: comparisonTableString,
     preview: <ComparisonTablePreview />,
   },
   {
     id: "table-11",
-    title: "Stripped",
+    title: "Stripped column",
     description:
-      "Use Material UI stripped table with extended design. No extra package required.",
+      "Stripped column table. You can change the color based on your requirement.",
     codeString: strippedColumnTableString,
     preview: <StripedColumnTablePreview />,
   },
   {
     id: "table-12",
-    title: "Stripped Row",
-    description:
-      "Use Material UI stripped row table with extended design. No extra package required.",
+    title: "Stripped row",
+    description: "Stripped row table. ",
     codeString: strippedRowTableString,
     preview: <StripedRowTablePreview />,
   },
   {
     id: "table-13",
     title: "Hover",
-    description:
-      "Use Material UI hover table with extended design. No extra package required.",
+    description: "Mui table with hover effect. ",
     codeString: hoverTableString,
     preview: <HoverTablePreview />,
   },
   {
     id: "table-14",
     title: "Headless",
-    description:
-      "Use Material UI headless table with extended design. No extra package required.",
+    description: "Material ui table without any header or footer.",
     codeString: headlessTableString,
     preview: <HeadlessTablePreview />,
   },
   {
     id: "table-15",
-    title: "Custom Pagination",
+    title: "Custom pagination",
     description:
-      "Use Material UI custom pagination table with extended design. No extra package required.",
+      "Skip default table pagination and use your custom pagination. The pagination is fully customizable.",
     codeString: customPaginationTableString,
     preview: <CustomPaginationTablePreview />,
   },
   {
     id: "table-16",
-    title: "Highlighted Field",
-    description:
-      "Use Material UI highlighted field table with extended design. No extra package required.",
+    title: "Highlighted field",
+    description: "Highlight important fields in a table. ",
     codeString: highlightTableString,
     preview: <HighlightedFieldTablePreview />,
   },
   {
     id: "table-17",
-    title: "Transaction",
+    title: "Transaction table",
     description:
-      "Use Material UI transaction table with extended design. No extra package required.",
+      "Transaction table sample using material ui. You can customize it based on your requirement.  ",
     codeString: transactionTableString,
     preview: <TransactionTablePreview />,
   },
@@ -204,7 +197,7 @@ export const TableView = () => {
       />
       <PageTitle
         title="Table"
-        description="Material ui table with extended design and variants. Simply copy and paste the code."
+        description="Table is one of the most useful components that mui has. We've added more variants for you to use."
       />
 
       <Divider sx={{ my: 4 }} />
