@@ -1,16 +1,11 @@
 "use client";
-import { Box, Container, Fab, Link, Typography, useTheme } from "@mui/material";
-import { Iconify } from "./iconify";
+import { footerItems } from "@/router/router";
+import { Box, Container, Grid, Typography, useTheme } from "@mui/material";
+import { Stack } from "@mui/material";
+import Link from "next/link";
 
 export const Footer = () => {
   const theme = useTheme();
-
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
 
   return (
     <Box
@@ -19,65 +14,77 @@ export const Footer = () => {
         py: 2,
         backgroundColor: "background.default",
         color: "text.secondary",
-        // mt: "auto",
         borderTop: `.5px solid ${theme.palette.divider}`,
       }}
     >
-      <Container
-        maxWidth="xl"
-        sx={{
-          justifyContent: "space-between",
-          display: "flex",
-          alignItems: "center",
-        }}
-      >
-        <Typography
-          variant="body2"
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "flex-start",
-          }}
-        >
-          Built with ♥ by{" "}
-          <Link
-            href="https://www.linkedin.com/company/codemine24/"
-            target="_blank"
-            sx={{
-              color: "primary.main",
-              textDecoration: "none",
-              mx: 0.5,
-              "&:hover": {
-                textDecoration: "underline",
-              },
-            }}
-          >
-            Codemine
-          </Link>
-        </Typography>
+      <Container maxWidth="xl">
+        <Grid container>
+          <Grid size={{ xs: 12, md: 6 }}>
+            <Typography
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: { xs: "center", md: "flex-start" },
+                fontSize: 14,
+              }}
+            >
+              Built with ♥ by{" "}
+              <Link
+                href="https://www.linkedin.com/company/codemine24/"
+                target="_blank"
+                style={{
+                  color: "primary.main",
+                  textDecoration: "none",
+                }}
+              >
+                <Typography
+                  component={"span"}
+                  color="primary.main"
+                  sx={{
+                    "&:hover": { textDecoration: "underline" },
+                    ml: 1,
+                    fontSize: 14,
+                  }}
+                >
+                  Codemine
+                </Typography>
+              </Link>
+            </Typography>
+          </Grid>
 
-        <Fab
-          color="primary"
-          size="small"
-          onClick={scrollToTop}
-          aria-label="scroll to top"
-          sx={{
-            transition:
-              "transform 0.3s ease-in-out, background-color 0.3s ease-in-out",
-            "&:hover": {
-              transform: "scale(1.1)",
-              bgcolor: "grey.100",
-            },
-            bgcolor: "background.paper",
-            color: "primary.main",
-            boxShadow: 1,
-            "& svg": {
-              animation: "bounce 1.5s infinite",
-            },
-          }}
-        >
-          <Iconify icon="iconamoon:arrow-up-2-duotone" />
-        </Fab>
+          <Grid size={{ xs: 12, md: 6 }}>
+            <Stack
+              direction="row"
+              spacing={2}
+              justifyContent={{ xs: "center", md: "flex-end" }}
+              width={"100%"}
+            >
+              {footerItems?.map((item, index) => {
+                return (
+                  <Link
+                    color="inherit"
+                    href={item.path}
+                    key={index}
+                    style={{
+                      fontSize: 14,
+                      textDecoration: "none",
+                      color: "text.secondary",
+                    }}
+                  >
+                    <Typography
+                      variant="body2"
+                      color="text.secondary"
+                      key={index}
+                      sx={{ "&:hover": { textDecoration: "underline" } }}
+                    >
+                      {item.label}
+                    </Typography>
+                  </Link>
+                );
+              })}
+            </Stack>
+          </Grid>
+        </Grid>
       </Container>
     </Box>
   );

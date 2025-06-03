@@ -9,6 +9,14 @@ const nextConfig: NextConfig = {
     });
     return config;
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'mui.com',
+      },
+    ],
+  },
 };
 
 export default nextConfig;

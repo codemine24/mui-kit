@@ -50,6 +50,7 @@ import {
   ButtonSoftWithBorderPreview,
   ButtonTextPreview,
 } from "../components/button";
+import { PATHS } from "@/router/paths";
 
 const sections = [
   {
@@ -202,7 +203,7 @@ export const ButtonView = () => {
     <Box>
       <CustomBreadCrumbs
         pathArr={[
-          { label: "Elements", path: "/elements" },
+          { label: "Elements", path: PATHS.ELEMENTS.OVERVIEW },
           { label: "Button", path: "" },
         ]}
       />

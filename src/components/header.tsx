@@ -98,7 +98,6 @@ export const Header = () => {
                 key={page?.path}
                 onClick={handleNavigate(page?.path)}
                 sx={{
-                  // mx: 0.5,
                   color: "text.primary",
                   fontSize: { md: pxToRem(14), lg: pxToRem(15) },
                   fontWeight: 400,
@@ -157,7 +156,7 @@ export const Header = () => {
           },
         }}
       >
-        <ContentSidebar variant="drawer" />
+        <ContentSidebar variant="drawer"  onClose={handleCloseNavMenu}/>
       </Drawer>
     </AppBar>
   );

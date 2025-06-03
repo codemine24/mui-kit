@@ -29,6 +29,7 @@ import {
   popoverPosition3String,
   popoverInfoString,
 } from "../code-string/popover";
+import { PATHS } from "@/router/paths";
 
 const sections = [
   {
@@ -111,7 +112,7 @@ export const PopoverView = () => {
     <Box>
       <CustomBreadCrumbs
         pathArr={[
-          { label: "Elements", path: "/elements" },
+          { label: "Elements", path: PATHS.ELEMENTS.OVERVIEW },
           { label: "Popover", path: "" },
         ]}
       />

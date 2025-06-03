@@ -1,6 +1,6 @@
 import { ComingSoon } from "@/components/coming-soon";
+import { elementsArr } from "@/router/router";
 import { JSX } from "react";
-import { elementsArr } from "../constants/elements";
 import { AccordionView } from "../view/accordion-view";
 import { AlertView } from "../view/alert-view";
 import { AvatarView } from "../view/avatar-view";
@@ -9,8 +9,11 @@ import { ButtonView } from "../view/button-view";
 import { CardView } from "../view/card-view";
 import { DialogView } from "../view/dialog-view";
 import { DrawerView } from "../view/drawer-view";
+import { PaginationView } from "../view/pagination-view";
 import { PopoverView } from "../view/popover-view";
+import { StepperView } from "../view/stepper-view";
 import { TableView } from "../view/table-view";
+import { TimelineView } from "../view/timeline-view";
 
 export async function generateStaticParams() {
   return elementsArr.map((element) => ({
@@ -30,8 +33,11 @@ const componentMap: Record<string, JSX.Element> = {
   drawer: <DrawerView />,
   dialog: <DialogView />,
   card: <CardView />,
+  pagination: <PaginationView />,
   popover: <PopoverView />,
   table: <TableView />,
+  timeline: <TimelineView />,
+  stepper: <StepperView />,
 };
 
 export default async function Page({

@@ -18,6 +18,7 @@ import AvatarLetterPreview from "../components/avatar/avatar-letter-preview";
 import AvatarShapePreview from "../components/avatar/avatar-shape-preview";
 import AvatarSizePreview from "../components/avatar/avatar-size-preview";
 import AvatarStatusPreview from "../components/avatar/avatar-status-preview";
+import { PATHS } from "@/router/paths";
 
 const sections = [
   {
@@ -78,7 +79,7 @@ export const AvatarView = () => {
     <Box>
       <CustomBreadCrumbs
         pathArr={[
-          { label: "Elements", path: "/elements" },
+          { label: "Elements", path: PATHS.ELEMENTS.OVERVIEW },
           { label: "Avatar", path: "" },
         ]}
       />

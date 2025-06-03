@@ -6,13 +6,14 @@ export const lightPalette: PaletteOptions = {
   secondary: { main: "#333" },
   background: {
     default: "#fafbff",
-    paper: "#F5F9FD",
+    paper: "#F2F3F4",
   },
   text: {
     primary: "#111",
     secondary: "#555",
   },
   divider: "#ebebeb",
+
 };
 
 export const darkPalette: PaletteOptions = {

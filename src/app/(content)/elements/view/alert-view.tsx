@@ -16,6 +16,7 @@ import { OutlinedAlertsCodeString } from "../code-string/alert/alert-2";
 import { SolidAlertsCodeString } from "../code-string/alert/alert-3";
 import { DescriptionAlertsCodeString } from "../code-string/alert/alert-4";
 import { ActionAlertsCodeString } from "../code-string/alert/alert-5";
+import { PATHS } from "@/router/paths";
 
 const sections = [
   {
@@ -69,7 +70,7 @@ export const AlertView = () => {
     <Box>
       <CustomBreadCrumbs
         pathArr={[
-          { label: "Elements", path: "/elements" },
+          { label: "Elements", path: PATHS.ELEMENTS.OVERVIEW },
           { label: "Alert", path: "" },
         ]}
       />
