@@ -130,11 +130,6 @@ export const featuredComponents = [
     icon: "tabler:user-circle",
   },
   {
-    label: "Badge",
-    url: PATHS.ELEMENTS.BADGE,
-    icon: "tabler:badge",
-  },
-  {
     label: "Button",
     url: PATHS.ELEMENTS.BUTTON,
     icon: "tabler:square-rounded-arrow-right",
@@ -173,11 +168,6 @@ export const featuredComponents = [
 
 // featured blocks
 export const featuredBlocks = [
-  {
-    label: "Mega Menu",
-    url: PATHS.BLOCKS.MEGA_MENU,
-    icon: "tabler:layout-navbar",
-  },
   {
     label: "About",
     url: PATHS.BLOCKS.ABOUT,
