@@ -59,9 +59,9 @@ const sections = [
   },
   {
     id: "table-2",
-    title: "Data Table",
+    title: "Data table",
     description:
-      "Use Material UI data table with extended design. No extra package required.",
+      "Default material ui table with sorting, selection, filter and pagination functionality.",
     codeString: dataTableString,
     preview: <DataTablePreview />,
   },
