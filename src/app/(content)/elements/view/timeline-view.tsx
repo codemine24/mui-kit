@@ -10,48 +10,47 @@ import React from "react";
 
 import { PATHS } from "@/router/paths";
 import {
-    timelineActionButtonString,
-    timelineAvaterString,
-    timelineChangeLogString,
-    timelineClassicString,
-    timelineCompanyMilestoneString,
-    timelineCustomIconString,
-    timelineHorizontalString,
-    timelineOneSidedString,
-    timelineProjectsString,
-    timelineSocialString,
-    timelineTouristSpotString,
-    timelineWithDateString
+  timelineActionButtonString,
+  timelineAvaterString,
+  timelineChangeLogString,
+  timelineClassicString,
+  timelineCompanyMilestoneString,
+  timelineCustomIconString,
+  timelineHorizontalString,
+  timelineOneSidedString,
+  timelineProjectsString,
+  timelineSocialString,
+  timelineTouristSpotString,
+  timelineWithDateString,
 } from "../code-string/timeline";
 import {
-    TimelineActionButtonPreview,
-    TimelineAvaterPreview,
-    TimelineChangeLogPreview,
-    TimelineClassicPreview,
-    TimelineCompanyMilestonePreview,
-    TimelineCustomIconPreview,
-    TimelineHorizontalPreview,
-    TimelineOneSidedPreview,
-    TimelineProjectsPreview,
-    TimelineSocialPreview,
-    TimelineTouristSpotPreview,
-    TimelineWithDatePreview
+  TimelineActionButtonPreview,
+  TimelineAvaterPreview,
+  TimelineChangeLogPreview,
+  TimelineClassicPreview,
+  TimelineCompanyMilestonePreview,
+  TimelineCustomIconPreview,
+  TimelineHorizontalPreview,
+  TimelineOneSidedPreview,
+  TimelineProjectsPreview,
+  TimelineSocialPreview,
+  TimelineTouristSpotPreview,
+  TimelineWithDatePreview,
 } from "../components/timeline";
 
 const sections = [
   {
     id: "timeline-1",
-    title: "Simple",
+    title: "Classic",
     description:
-      "Material UI core timeline with extended design, and functionality.",
+      "More simple timeline with slick design and basic functionality.",
     codeString: timelineClassicString,
     preview: <TimelineClassicPreview />,
   },
   {
     id: "timeline-2",
     title: "With Date",
-    description:
-      "Material UI core timeline with extended design, and functionality.",
+    description: "Timeline with date along with title and description.",
     codeString: timelineWithDateString,
     preview: <TimelineWithDatePreview />,
   },
