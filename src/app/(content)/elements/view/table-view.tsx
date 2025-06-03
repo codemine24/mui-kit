@@ -1,58 +1,59 @@
 "use client";
-import React from "react";
 import { CodePreviewCopyWrapper } from "@/components/code-preview-copy-wrapper";
 import { CustomBreadCrumbs } from "@/components/core/breadcrumbs";
 import { PageTitle } from "@/components/core/page-title";
 import { SectionTitle } from "@/components/core/section-title";
-import { Box, Divider } from "@mui/material";
 import { useOnThisPage } from "@/contexts/on-thispage-context";
+import { Box, Divider } from "@mui/material";
+import React from "react";
 
 import {
   BasicTablePreview,
+  CollapsibleTablePreview,
+  ComparisonTablePreview,
+  CustomPaginationTablePreview,
   DataTablePreview,
   DenseTablePreview,
-  StickyHeadTablePreview,
-  UserTablePreview,
+  HeadlessTablePreview,
+  HighlightedFieldTablePreview,
+  HoverTablePreview,
   ProductTablePreview,
   ShoppingCartTablePreview,
-  ComparisonTablePreview,
+  SortingTablePreview,
+  StickyHeadTablePreview,
   StripedColumnTablePreview,
   StripedRowTablePreview,
-  HoverTablePreview,
-  HeadlessTablePreview,
-  CustomPaginationTablePreview,
-  HighlightedFieldTablePreview,
   TransactionTablePreview,
-  SortingTablePreview,
-  CollapsibleTablePreview
-} from '../components/table'
+  UserTablePreview,
+} from "../components/table";
 
+import { PATHS } from "@/router/paths";
 import {
   basicTableString,
+  collapsibleTableString,
+  comparisonTableString,
+  customPaginationTableString,
   dataTableString,
   denseTableString,
-  stickyHeaderTableString,
-  userTableString,
+  headlessTableString,
+  highlightTableString,
+  hoverTableString,
   productTableString,
   shoppingCartTableString,
-  comparisonTableString,
+  sortingTableString,
+  stickyHeaderTableString,
   strippedColumnTableString,
   strippedRowTableString,
-  hoverTableString,
-  headlessTableString,
-  customPaginationTableString,
-  highlightTableString,
   transactionTableString,
-  sortingTableString,
-  collapsibleTableString
-} from '../code-string/table'
+  userTableString,
+} from "../code-string/table";
 
 const sections = [
   {
     id: "table-1",
     title: "Basic",
     description:
-      "Use Material UI basic table with extended design. No extra package required.",
+      "Very basic material ui table. If you need very simple table without any extra functionality, use this.",
     codeString: basicTableString,
     preview: <BasicTablePreview />,
   },
@@ -197,18 +198,18 @@ export const TableView = () => {
     <Box>
       <CustomBreadCrumbs
         pathArr={[
-          { label: "Elements", path: "/elements" },
+          { label: "Elements", path: PATHS.ELEMENTS.OVERVIEW },
           { label: "Table", path: "" },
         ]}
       />
       <PageTitle
         title="Table"
-        description="Material UI core table with extended design, and functionality. "
+        description="Material ui table with extended design and variants. Simply copy and paste the code."
       />
 
       <Divider sx={{ my: 4 }} />
 
-      {/* Alert Section */}
+      {/* Table Section */}
       {sections.map((section) => (
         <Box key={section.id} sx={{ mb: 4 }}>
           <SectionTitle
