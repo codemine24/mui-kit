@@ -41,6 +41,7 @@ export function Carousel({
                 slideSpacing={slideSpacing}
                 sx={[
                     (theme) => ({
+                        pl: "0 !important",
                         ...(pluginNames?.includes('autoHeight') && {
                             alignItems: 'flex-start',
                             transition: theme.transitions.create(['height'], {
@@ -59,6 +60,8 @@ export function Carousel({
         </CarouselRoot>
     );
 }
+
+// ----------------------------------------------------------------------
 
 const CarouselRoot = styled('div', {
     shouldForwardProp: (prop: string) => !['axis', 'sx'].includes(prop),

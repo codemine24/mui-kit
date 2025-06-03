@@ -14,6 +14,7 @@ import { CarouselOpacityPreview } from "../components/carousel/preview/carousel-
 import { CarouselScalePreview } from "../components/carousel/preview/carousel-scale-preview";
 import { CarouselFade } from "../components/carousel/preview/carousel-fade-preview";
 import { CarouselParallax } from "../components/carousel/preview/carousel-parallax-preview";
+import { CarouselAutoplayPreview } from "../components/carousel/preview/carousel-auto-play-preview";
 
 const sections = [
     {
@@ -57,6 +58,13 @@ const sections = [
         description: "Carousel parallax description",
         codeString: "",
         preview: <CarouselParallax />,
+    },
+    {
+        id: "carousel-7",
+        title: "Auto Play",
+        description: "Carousel auto play description",
+        codeString: "",
+        preview: <CarouselAutoplayPreview />,
     }
 ];
 
