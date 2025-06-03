@@ -12,6 +12,8 @@ import { DrawerView } from "../view/drawer-view";
 import { PaginationView } from "../view/pagination-view";
 import { PopoverView } from "../view/popover-view";
 import { StepperView } from "../view/stepper-view";
+import { TableView } from "../view/table-view";
+import { TimelineView } from "../view/timeline-view";
 import { CarouselView } from "../view/carousel-view";
 
 export async function generateStaticParams() {
@@ -34,6 +36,8 @@ const componentMap: Record<string, JSX.Element> = {
   card: <CardView />,
   pagination: <PaginationView />,
   popover: <PopoverView />,
+  table: <TableView />,
+  timeline: <TimelineView />,
   stepper: <StepperView />,
   carousel: <CarouselView />,
 };

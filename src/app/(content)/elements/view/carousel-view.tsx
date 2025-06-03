@@ -16,6 +16,7 @@ import { CarouselFade } from "../components/carousel/preview/carousel-fade-previ
 import { CarouselParallax } from "../components/carousel/preview/carousel-parallax-preview";
 import { CarouselAutoplayPreview } from "../components/carousel/preview/carousel-auto-play-preview";
 import { CarouselAutoScrollPreview } from "../components/carousel/preview/carousel-auto-scroll-preview";
+import { CarouselThumbsXPreview } from "../components/carousel/preview/carousel-thumbs-x-preview";
 
 const sections = [
     {
@@ -73,6 +74,13 @@ const sections = [
         description: "Carousel auto scroll description",
         codeString: "",
         preview: <CarouselAutoScrollPreview />,
+    },
+    {
+        id: "carousel-9",
+        title: "Thumbs X",
+        description: "Carousel thumbs x description",
+        codeString: "",
+        preview: <CarouselThumbsXPreview />,
     }
 ];
 

@@ -45,6 +45,7 @@ export function ArrowButton({
                 border: "1px solid #E60076",
                 borderColor: "#E60076",
                 borderRadius: "8px",
+                ...sx,
                 padding: 1,
                 '&:hover': {
                     color: "#fff",

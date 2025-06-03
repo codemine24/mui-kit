@@ -6,3 +6,5 @@ export * from './carousel-slide';
 export * from './carousel';
 export * from './play-button';
 export * from './index-label';
+export * from './carousel-thumb';
+export * from './carousel-thumbs';

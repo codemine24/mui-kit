@@ -6,9 +6,23 @@ import { SectionTitle } from "@/components/core/section-title";
 import { useOnThisPage } from "@/contexts/on-thispage-context";
 import { Box, Divider } from "@mui/material";
 import React from "react";
-import { paginationButtonOnlyString, paginationGoToPageString, paginationOutlinedString, paginationSolidString, paginationSoftBgString } from "../code-string/pagination";
-import { PaginationButtonOnlyPreview, PaginationGoToPagePreview, PaginationOutlinedPreview, PaginationSolidPreview, PaginationSoftBgPreview } from "../components/pagination";
+import {
+    paginationButtonOnlyString,
+    paginationGoToPageString,
+    paginationOutlinedString,
+    paginationSolidString,
+    paginationSoftBgString
+} from "../code-string/pagination";
+import {
+    PaginationButtonOnlyPreview,
+    PaginationGoToPagePreview,
+    PaginationOutlinedPreview,
+    PaginationSolidPreview,
+    PaginationSoftBgPreview
+} from "../components/pagination";
+
 import { PATHS } from "@/router/paths";
+
 const sections = [
     {
         id: "pagination-solid",

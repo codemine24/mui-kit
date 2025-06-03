@@ -12,7 +12,7 @@ export function useThumbs(
     options?: Partial<CarouselOptions>
 ): UseCarouselThumbsReturn {
     const [thumbsRef, thumbsApi] = useEmblaCarousel({
-        containScroll: 'keepSnaps',
+        containScroll: 'trimSnaps',
         dragFree: true,
         ...options,
     });
@@ -22,7 +22,7 @@ export function useThumbs(
     const onClickThumb = useCallback(
         (index: number) => {
             if (!mainApi || !thumbsApi) return;
-            mainApi.scrollTo(index);
+            mainApi.scrollTo(index, true);
         },
         [mainApi, thumbsApi]
     );
