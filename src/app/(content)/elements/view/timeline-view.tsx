@@ -114,7 +114,7 @@ const sections = [
     id: "timeline-10",
     title: "Change Log",
     description:
-      "Material UI core timeline with extended design, and functionality.",
+      "Change log time to display your application changes over the time. ",
     codeString: timelineChangeLogString,
     preview: <TimelineChangeLogPreview />,
   },
