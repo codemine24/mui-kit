@@ -2,7 +2,12 @@ import Box from '@mui/material/Box';
 import useEmblaCarousel from 'embla-carousel-react';
 import type { CarouselOptions } from '../types/type';
 import { useCarouselArrows, useCarouselDots } from '../hooks';
-import { Carousel, CarouselArrowBasicButtons, CarouselDotButtons } from '../components';
+import { Carousel, CarouselArrowBasicButtons, CarouselDotButtons, IndexLabel } from '../components';
+
+{/* 
+  ⚠️ Warning: You must import components, hooks, and types from the file where you defined them.
+*/}
+
 
 const data = [
     {
@@ -84,33 +89,6 @@ function CarouselItem({ item, index }: { item: typeof data[number]; index: numbe
                     objectFit: "cover",
                 }}
             />
-        </Box>
-    );
-}
-
-
-const IndexLabel = ({ index }: { index: number }) => {
-    return (
-        <Box
-            sx={[
-                () => ({
-                    top: 16,
-                    left: 16,
-                    width: 24,
-                    zIndex: 9,
-                    height: 24,
-                    display: 'flex',
-                    color: 'grey.800',
-                    borderRadius: '50%',
-                    position: 'absolute',
-                    alignItems: 'center',
-                    bgcolor: 'common.white',
-                    typography: 'subtitle2',
-                    justifyContent: 'center',
-                }),
-            ]}
-        >
-            {index}
         </Box>
     );
 }

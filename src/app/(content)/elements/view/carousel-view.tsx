@@ -10,6 +10,7 @@ import { useOnThisPage } from "@/contexts/on-thispage-context";
 import { PATHS } from "@/router/paths";
 import { CarouselAlignPreview } from "../components/carousel/preview/carousel-align-preview";
 import { CarouselProgressPreview } from "../components/carousel/preview/carousel-progress-preview";
+import { CarouselOpacityPreview } from "../components/carousel/preview/carousel-opacity-preview";
 
 const sections = [
     {
@@ -25,6 +26,13 @@ const sections = [
         description: "Carousel progress description",
         codeString: "",
         preview: <CarouselProgressPreview />,
+    },
+    {
+        id: "carousel-3",
+        title: "Opacity",
+        description: "Carousel opacity description",
+        codeString: "",
+        preview: <CarouselOpacityPreview />,
     }
 ];
 

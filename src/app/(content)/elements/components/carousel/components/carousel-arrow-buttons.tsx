@@ -5,7 +5,7 @@ import { ArrowButton } from './arrow-button';
 import type { CarouselArrowButtonsProps } from '../types/type';
 
 const BasicButtonsRoot = styled('div')(({ theme }) => ({
-    gap: '4px',
+    gap: "10px",
     zIndex: 9,
     alignItems: 'center',
     display: 'inline-flex',
@@ -127,19 +127,6 @@ const NumberButtonsRoot = styled('div')(({ theme }) => ({
     padding: theme.spacing(0.5),
     color: theme.palette.common.white,
     borderRadius: theme.shape.borderRadius * 1.25,
-    // backgroundColor: varAlpha(theme.vars.palette.grey['900Channel'], 0.48),
-    // [`& .${carouselClasses.arrows.label}`]: {
-    //     ...theme.typography.subtitle2,
-    //     margin: theme.spacing(0, 0.5),
-    // },
-    // [`& .${carouselClasses.arrows.prev}`]: {
-    //     borderRadius: 'inherit',
-    //     padding: theme.spacing(0.75),
-    // },
-    // [`& .${carouselClasses.arrows.next}`]: {
-    //     borderRadius: 'inherit',
-    //     padding: theme.spacing(0.75),
-    // },
 }));
 
 export function CarouselArrowNumberButtons({
