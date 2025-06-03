@@ -37,6 +37,7 @@ import {
   TimelineTouristSpotPreview,
   TimelineWithDatePreview,
 } from "../components/timeline";
+import { ExternalPackageAlert } from "@/components/external-package-alert";
 
 const sections = [
   {
@@ -64,9 +65,8 @@ const sections = [
   },
   {
     id: "timeline-4",
-    title: "Custom Icon",
-    description:
-      "Material UI core timeline with extended design, and functionality.",
+    title: "Custom icon",
+    description: "You can add custom icon in timeline. ",
     codeString: timelineCustomIconString,
     preview: <TimelineCustomIconPreview />,
   },
@@ -157,7 +157,14 @@ export const TimelineView = () => {
       />
 
       <Divider sx={{ my: 4 }} />
-
+      <ExternalPackageAlert
+        packages={[
+          {
+            name: "@iconify/react",
+            url: "https://www.npmjs.com/package/@iconify/react",
+          },
+        ]}
+      />
       {/* Timeline Sections */}
       {sections.map((section) => (
         <Box key={section.id} sx={{ mb: 4 }}>
