@@ -68,7 +68,7 @@ export function CarouselThumbsXPreview() {
             <Box sx={{ mb: 2.5, position: 'relative' }}>
                 <Carousel mainRef={emblaRef} options={options} sx={{ borderRadius: 2 }}>
                     {data.map((item, index) => (
-                        <Box key={item.id} sx={{ position: 'relative', borderRadius: 2, overflow: 'hidden', height: { xs: 200, sm: 250, md: 350 } }}>
+                        <Box key={item.id} sx={{ position: 'relative', borderRadius: 2, overflow: 'hidden', height: { xs: 200, sm: 250, md: 350, lg: 420 } }}>
                             <IndexLabel index={index + 1} />
 
                             <Box

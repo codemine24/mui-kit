@@ -142,6 +142,7 @@ const ThumbsContainer = styled('ul', {
             props: { axis: 'y' },
             style: {
                 height: '100%',
+                paddingLeft: '0 !important',
                 flexDirection: 'column',
                 touchAction: 'pan-x pinch-zoom',
                 marginTop: `calc(${slideSpacing} * -1)`,

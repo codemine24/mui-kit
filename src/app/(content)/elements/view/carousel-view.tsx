@@ -17,6 +17,7 @@ import { CarouselParallax } from "../components/carousel/preview/carousel-parall
 import { CarouselAutoplayPreview } from "../components/carousel/preview/carousel-auto-play-preview";
 import { CarouselAutoScrollPreview } from "../components/carousel/preview/carousel-auto-scroll-preview";
 import { CarouselThumbsXPreview } from "../components/carousel/preview/carousel-thumbs-x-preview";
+import { CarouselThumbsYPreview } from "../components/carousel/preview/carousel-thumbs-y-preview";
 
 const sections = [
     {
@@ -81,6 +82,13 @@ const sections = [
         description: "Carousel thumbs x description",
         codeString: "",
         preview: <CarouselThumbsXPreview />,
+    },
+    {
+        id: "carousel-10",
+        title: "Thumbs Y",
+        description: "Carousel thumbs y description",
+        codeString: "",
+        preview: <CarouselThumbsYPreview />,
     }
 ];
 
