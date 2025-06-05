@@ -8,9 +8,9 @@ import { PATHS } from "@/router/paths";
 import { Box, Divider } from "@mui/material";
 import React from "react";
 import { copyrightThreeColString } from "../code-string/copyright/copyright-three-col-string";
+import { footerFourColString } from "../code-string/footer/footer-four-col-string";
 import { footerSingleColString } from "../code-string/footer/footer-single-col-string";
-import { footerThreeColString } from "../code-string/footer/footer-three-col-string";
-import { CopyrightThreeColPreview } from "../components/copyright/copyright-three-col-preview";
+import { FooterFourColPreview } from "../components/footer/footer-four-col-preview";
 import { FooterSingleColPreview } from "../components/footer/footer-single-col-preview";
 import { FooterThreeColPreview } from "../components/footer/footer-three-col-preview";
 
@@ -28,16 +28,16 @@ const sections = [
     title: "Three columns",
     description:
       "Three columns footer with about, navigation and social media links.",
-    codeString: footerThreeColString,
+    codeString: copyrightThreeColString,
     preview: <FooterThreeColPreview />,
   },
   {
     id: "footer-3",
-    title: "Three columns",
+    title: "Four columns",
     description:
-      "Three columns copyright section with copyright text, social media links and navigation. ",
-    codeString: copyrightThreeColString,
-    preview: <CopyrightThreeColPreview />,
+      "Four columns footer section with background image, about, navigation and social media links.",
+    codeString: footerFourColString,
+    preview: <FooterFourColPreview />,
   },
 ];
 
