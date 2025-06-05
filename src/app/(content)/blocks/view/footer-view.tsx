@@ -7,23 +7,24 @@ import { useOnThisPage } from "@/contexts/on-thispage-context";
 import { PATHS } from "@/router/paths";
 import { Box, Divider } from "@mui/material";
 import React from "react";
-import { copyrightSingleColString } from "../code-string/copyright/copyright-single-col-string";
 import { copyrightThreeColString } from "../code-string/copyright/copyright-three-col-string";
 import { copyrightTwoColString } from "../code-string/copyright/copyright-two-col-string";
-import { CopyrightSingleColPreview } from "../components/copyright/copyright-single-col-preview";
+import { footerSingleColString } from "../code-string/footer/footer-single-col-string";
 import { CopyrightThreeColPreview } from "../components/copyright/copyright-three-col-preview";
 import { CopyrightTwoColPreview } from "../components/copyright/copyright-two-col-preview";
+import { FooterSingleColPreview } from "../components/footer/footer-single-col-preview";
 
 const sections = [
   {
-    id: "copyright-1",
+    id: "footer-1",
     title: "Single column",
-    description: "Single column copyright section with copyright text only.",
-    codeString: copyrightSingleColString,
-    preview: <CopyrightSingleColPreview />,
+    description:
+      "Single column footer section logo, navigation and copyright. ",
+    codeString: footerSingleColString,
+    preview: <FooterSingleColPreview />,
   },
   {
-    id: "copyright-2",
+    id: "footer-2",
     title: "Two columns",
     description:
       "Two columns copyright section with copyright text and scroll to top button.",
@@ -31,7 +32,7 @@ const sections = [
     preview: <CopyrightTwoColPreview />,
   },
   {
-    id: "copyright-3",
+    id: "footer-3",
     title: "Three columns",
     description:
       "Three columns copyright section with copyright text, social media links and navigation. ",
@@ -40,7 +41,7 @@ const sections = [
   },
 ];
 
-export const CopyrightView = () => {
+export const FooterView = () => {
   const { setSections } = useOnThisPage();
   React.useEffect(() => {
     setSections([]);
@@ -50,12 +51,12 @@ export const CopyrightView = () => {
       <CustomBreadCrumbs
         pathArr={[
           { label: "Blocks", path: PATHS.BLOCKS.OVERVIEW },
-          { label: "Copyright", path: "" },
+          { label: "Footer", path: "" },
         ]}
       />
       <PageTitle
-        title="Copyright"
-        description="Copyright or bottom footer is one of the most commonly used section in any website. Here you will find different variants of copyrights section. "
+        title="Footer"
+        description="We have added modern footer variants designed with material ui and nothing else. "
       />
 
       <Divider sx={{ my: 4 }} />
