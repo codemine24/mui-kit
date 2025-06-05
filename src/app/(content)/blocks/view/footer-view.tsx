@@ -8,11 +8,11 @@ import { PATHS } from "@/router/paths";
 import { Box, Divider } from "@mui/material";
 import React from "react";
 import { copyrightThreeColString } from "../code-string/copyright/copyright-three-col-string";
-import { copyrightTwoColString } from "../code-string/copyright/copyright-two-col-string";
 import { footerSingleColString } from "../code-string/footer/footer-single-col-string";
+import { footerThreeColString } from "../code-string/footer/footer-three-col-string";
 import { CopyrightThreeColPreview } from "../components/copyright/copyright-three-col-preview";
-import { CopyrightTwoColPreview } from "../components/copyright/copyright-two-col-preview";
 import { FooterSingleColPreview } from "../components/footer/footer-single-col-preview";
+import { FooterThreeColPreview } from "../components/footer/footer-three-col-preview";
 
 const sections = [
   {
@@ -25,11 +25,11 @@ const sections = [
   },
   {
     id: "footer-2",
-    title: "Two columns",
+    title: "Three columns",
     description:
-      "Two columns copyright section with copyright text and scroll to top button.",
-    codeString: copyrightTwoColString,
-    preview: <CopyrightTwoColPreview />,
+      "Three columns footer with about, navigation and social media links.",
+    codeString: footerThreeColString,
+    preview: <FooterThreeColPreview />,
   },
   {
     id: "footer-3",
