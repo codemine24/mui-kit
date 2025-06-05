@@ -9,6 +9,7 @@ import { CSView } from "../view/cs-view";
 import { CTAView } from "../view/cta-block-view";
 import { FaqView } from "../view/faq-view";
 import { FeatureView } from "../view/feature-view";
+import { FooterView } from "../view/footer-view";
 
 export async function generateStaticParams() {
   return blocksArr.map((element) => ({
@@ -27,7 +28,8 @@ const componentMap: Record<string, JSX.Element> = {
   copyright: <CopyrightView />,
   faq: <FaqView />,
   "feature-benefit": <FeatureView />,
-};
+  footer: <FooterView />,
+};  
 
 export default async function Page({
   params,
