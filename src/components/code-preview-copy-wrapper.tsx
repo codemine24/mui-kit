@@ -10,7 +10,6 @@ import {
   ToggleButtonGroup,
   useTheme,
 } from "@mui/material";
-import { Stack } from "@mui/system";
 import React, { useState } from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 
@@ -27,7 +26,6 @@ export const CodePreviewCopyWrapper: React.FC<CodePreviewWrapperProps> = ({
   const isDarkMode = theme.palette.mode === "dark";
   const [tab, setTab] = useState<"preview" | "code">("preview");
   const [icon, setIcon] = useState<string>("eva:copy-fill");
-  const [view, setView] = useState<string | null>("desktop");
 
   const isMultiFile = Array.isArray(codeString);
   const [activeFile, setActiveFile] = useState(
@@ -50,13 +48,6 @@ export const CodePreviewCopyWrapper: React.FC<CodePreviewWrapperProps> = ({
     }
   };
 
-  const handleView = (
-    event: React.MouseEvent<HTMLElement>,
-    newAlignment: string | null
-  ) => {
-    setView(newAlignment);
-  };
-
   return (
     <Box
       sx={{
@@ -67,70 +58,49 @@ export const CodePreviewCopyWrapper: React.FC<CodePreviewWrapperProps> = ({
         bgcolor: "background.paper",
       }}
     >
-      <Stack
-        direction="row"
-        alignItems="center"
-        justifyContent="space-between"
-        py={1}
+      <ToggleButtonGroup
+        value={tab}
+        exclusive
+        onChange={(_, newTab) => {
+          if (newTab !== null) setTab(newTab);
+        }}
+        sx={{
+          py: 1,
+        }}
       >
-        <ToggleButtonGroup
-          value={tab}
-          exclusive
-          onChange={(_, newTab) => {
-            if (newTab !== null) setTab(newTab);
-          }}
-          sx={{ p: 0.5 }}
-        >
-          {["preview", "code"].map((value) => (
-            <ToggleButton
-              key={value}
-              value={value}
-              sx={{
-                textTransform: "none",
-                px: 2.5,
-                py: 1,
-                fontWeight: 500,
-                "&.Mui-selected": {
-                  bgcolor: "primary.main",
-                  color: "white",
-                  "&:hover": {
-                    bgcolor: "primary.main",
-                    color: "white",
-                  },
-                },
+        {["preview", "code"].map((value) => (
+          <ToggleButton
+            key={value}
+            value={value}
+            sx={{
+              textTransform: "uppercase",
+              px: 2.5,
+              py: 1,
+              fontWeight: 500,
+              border: `1px solid ${theme.palette.primary.main}`,
+              color: "primary.main",
+              "&.Mui-selected": {
+                bgcolor: "primary.main",
+                color: "white",
                 "&:hover": {
                   bgcolor: "primary.main",
                   color: "white",
                 },
-              }}
-            >
-              {value.charAt(0).toUpperCase() + value.slice(1)}
-            </ToggleButton>
-          ))}
-        </ToggleButtonGroup>
-
-        <ToggleButtonGroup
-          value={view}
-          exclusive
-          onChange={handleView}
-          aria-label="different screen sizes"
-          size="small"
-          sx={{ display: { xs: "none", md: "flex" } }}
-        >
-          <ToggleButton value="desktop" title="Desktop view">
-            <Iconify icon="mynaui:desktop" />
+              },
+              "&:hover": {
+                bgcolor: "primary.main",
+                color: "white",
+              },
+            }}
+          >
+            {value.charAt(0).toUpperCase() + value.slice(1)}
           </ToggleButton>
-          <ToggleButton value="tab" title="Tablet view">
-            <Iconify icon="teenyicons:tablet-outline" />
-          </ToggleButton>
-          <ToggleButton value="mobile" title="Mobile view">
-            <Iconify icon="mynaui:mobile" />
-          </ToggleButton>
-        </ToggleButtonGroup>
-      </Stack>
+        ))}
+      </ToggleButtonGroup>
 
       <Box
         sx={{
+          position: "relative",
           overflow: "hidden",
           display: "flex",
           justifyContent: "center",
@@ -144,8 +114,6 @@ export const CodePreviewCopyWrapper: React.FC<CodePreviewWrapperProps> = ({
           <Box
             sx={{
               width: "100%",
-              maxWidth:
-                view === "tab" ? "768px" : view === "mobile" ? "375px" : "100%",
               p: 2,
               bgcolor: "background.default",
               display: "flex",
@@ -157,7 +125,6 @@ export const CodePreviewCopyWrapper: React.FC<CodePreviewWrapperProps> = ({
         ) : (
           <Box
             sx={{
-              position: "relative",
               height: "500px",
               overflow: "auto",
               bgcolor: "background.default",
@@ -180,7 +147,6 @@ export const CodePreviewCopyWrapper: React.FC<CodePreviewWrapperProps> = ({
                 style={{
                   height: 32,
                   width: 32,
-                  boxShadow: "0 1px 4px rgba(0, 0, 0, 0.1)",
                   transition: "box-shadow 0.2s ease",
                   borderRadius: "3px",
                   padding: 4,
