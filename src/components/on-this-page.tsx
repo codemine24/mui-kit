@@ -123,6 +123,10 @@ export const OnThisPage = () => {
                         "&:hover": {
                           color: "text.primary",
                         },
+                        transition: isActive
+                          ? "transform 0.1s ease-in-out"
+                          : "none",
+                        transform: isActive ? "scale(1.05)" : "none",
                       }}
                     >
                       {section.title}
