@@ -9,6 +9,7 @@ import { PATHS } from "@/router/paths";
 import { Box, Divider } from "@mui/material";
 import React from "react";
 import { pricingTableDarkString } from "../code-string/pricing-table/pricing-table-dark-string";
+import { pricingTableLightString } from "../code-string/pricing-table/pricing-table-light-string";
 import { PricingTableDarkPreview } from "../components/pricing-table/pricing-table-dark-preview";
 import { PricingTableLightPreview } from "../components/pricing-table/pricing-table-light-preview";
 
@@ -25,7 +26,7 @@ const sections = [
     title: "Light variant",
     description:
       "Simple pricing table with light background image and background overlay. ",
-    codeString: pricingTableDarkString,
+    codeString: pricingTableLightString,
     preview: <PricingTableLightPreview />,
   },
 ];
