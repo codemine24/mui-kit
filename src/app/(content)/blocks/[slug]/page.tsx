@@ -10,8 +10,9 @@ import { CTAView } from "../view/cta-block-view";
 import { FaqView } from "../view/faq-view";
 import { FeatureView } from "../view/feature-view";
 import { FooterView } from "../view/footer-view";
-import { PricingTableView } from "../view/pricint-table-view";
+import { PricingTableView } from "../view/pricing-table-view";
 import { ServicesView } from "../view/services-view";
+import { PricingMenuView } from "../view/pricing-menu-view";
 
 export async function generateStaticParams() {
   return blocksArr.map((element) => ({
@@ -33,6 +34,7 @@ const componentMap: Record<string, JSX.Element> = {
   footer: <FooterView />,
   "pricing-table": <PricingTableView />,
   services: <ServicesView />,
+  "pricing-menu": <PricingMenuView />,
 };
 
 export default async function Page({

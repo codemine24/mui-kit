@@ -1,5 +1,4 @@
 "use client";
-"use client";
 import { CodePreviewCopyWrapper } from "@/components/code-preview-copy-wrapper";
 import { CustomBreadCrumbs } from "@/components/core/breadcrumbs";
 import { PageTitle } from "@/components/core/page-title";
@@ -10,16 +9,16 @@ import { Box, Divider } from "@mui/material";
 import React from "react";
 import { pricingTableDarkString } from "../code-string/pricing-table/pricing-table-dark-string";
 import { pricingTableLightString } from "../code-string/pricing-table/pricing-table-light-string";
-import { PricingTableDarkPreview } from "../components/pricing-table/pricing-table-dark-preview";
 import { PricingTableLightPreview } from "../components/pricing-table/pricing-table-light-preview";
+import { PricingMenuImgPreview } from "../components/pricing-menu/pricing-menu-img-preview";
 
 const sections = [
   {
     id: "pricing-table-1",
-    title: "Dark variant",
+    title: "With img",
     description: "Simple pricing table with dark background. ",
     codeString: pricingTableDarkString,
-    preview: <PricingTableDarkPreview />,
+    preview: <PricingMenuImgPreview />,
   },
   {
     id: "pricing-table-2",
