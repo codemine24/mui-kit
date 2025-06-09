@@ -10,6 +10,7 @@ import { CTAView } from "../view/cta-block-view";
 import { FaqView } from "../view/faq-view";
 import { FeatureView } from "../view/feature-view";
 import { FooterView } from "../view/footer-view";
+import { PricingTableView } from "../view/pricint-table-view";
 
 export async function generateStaticParams() {
   return blocksArr.map((element) => ({
@@ -29,7 +30,8 @@ const componentMap: Record<string, JSX.Element> = {
   faq: <FaqView />,
   "feature-benefit": <FeatureView />,
   footer: <FooterView />,
-};  
+  "pricing-table": <PricingTableView />,
+};
 
 export default async function Page({
   params,
