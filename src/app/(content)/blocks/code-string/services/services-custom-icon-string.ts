@@ -1,4 +1,4 @@
-import { Icon } from "@iconify/react/dist/iconify.js";
+export const servicesCustomIconString = `import { Icon } from "@iconify/react/dist/iconify.js";
 import {
   Box,
   Button,
@@ -48,7 +48,7 @@ const cardData = [
   },
 ];
 
-export const FeatureCustomIconPreview = () => {
+export const ServicesCustomIconPreview = () => {
   return (
     <Box
       sx={{
@@ -68,7 +68,7 @@ export const FeatureCustomIconPreview = () => {
           fontWeight: 500,
         }}
       >
-        Features & Benefits
+        Optional Subtitle
       </Typography>
       <Typography
         sx={{
@@ -80,7 +80,7 @@ export const FeatureCustomIconPreview = () => {
           lineHeight: 1.5,
         }}
       >
-        Power at your fingertips!
+        Services
       </Typography>
 
       <Typography
@@ -102,9 +102,10 @@ export const FeatureCustomIconPreview = () => {
       <Grid container spacing={1} sx={{ width: "100%", maxWidth: "1140px" }}>
         {cardData.map((card) => (
           <Grid
-            size={{ xs: 12, sm: 6, md: 6 }}
+            size={{ xs: 12,  md: 4 }}
             key={card.id}
             position={"relative"}
+           
           >
             <Card
               sx={{
@@ -112,18 +113,20 @@ export const FeatureCustomIconPreview = () => {
                 height: { xs: "auto", md: 150 },
                 display: "flex",
                 gap: 2,
-                alignItems: { xs: "start", md: "center" },
+                alignItems: { xs: "start", md: "start" },
                 flexDirection: { xs: "column", md: "row" },
                 p: 1,
-                boxShadow: 1,
+                background: "transparent",
+                boxShadow: 0,
               }}
             >
               <Icon
                 icon={card.icon}
-                width={80}
-                height={80}
+                width={60}
+                height={60}
                 style={{
                   objectFit: "cover",
+                  color: "#FFAB00",
                 }}
               />
               <Box sx={{ py: 2, px: { xs: 2, md: 0 } }}>
@@ -143,13 +146,12 @@ export const FeatureCustomIconPreview = () => {
                 <CardActions sx={{ p: 0, mt: 1 }}>
                   <Button
                     variant="text"
-                    color="primary"
                     href={card.url}
                     sx={{
                       background: "none",
                       textDecoration: "none",
                       textTransform: "none",
-                      color: "primary.main",
+                      color: "#FFAB00",
                       fontWeight: 500,
                       fontSize: { xs: 13, md: 15 },
                       m: 0,
@@ -166,4 +168,4 @@ export const FeatureCustomIconPreview = () => {
       </Grid>
     </Box>
   );
-};
+};`;

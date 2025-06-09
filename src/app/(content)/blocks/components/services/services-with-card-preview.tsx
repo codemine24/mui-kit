@@ -77,7 +77,7 @@ export const ServicesWithCardPreview = () => {
       </Typography>
       <Typography
         sx={{
-          color: "text.primary",
+          color: "common.black",
           fontFamily: "serif",
           textAlign: "center",
           fontWeight: 500,
@@ -122,6 +122,7 @@ export const ServicesWithCardPreview = () => {
               sx={{
                 height: "100%",
                 transition: "0.3s",
+                background: "common.white",
                 boxShadow: defaultShadow,
                 "&:hover": {
                   boxShadow: hoverShadow,
@@ -139,20 +140,21 @@ export const ServicesWithCardPreview = () => {
                   height: { xs: 350, lg: 300 },
                 }}
               />
-              <CardContent>
+              <CardContent sx={{ background: "#fff" }}>
                 <Typography
                   gutterBottom
                   variant="h6"
                   component="div"
                   fontWeight={600}
+                  sx={{ color: "common.black" }}
                 >
                   {card.title}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">
+                <Typography variant="body2" color="common.black">
                   {card.description}
                 </Typography>
               </CardContent>
-              <Box sx={{ px: 2, pb: 2 }}>
+              <Box sx={{ px: 2, pb: 2, background: "#fff" }}>
                 <Button
                   variant="text"
                   href={card.url}

@@ -1,12 +1,10 @@
+import { Icon } from "@iconify/react/dist/iconify.js";
 import {
   Box,
   Button,
   Card,
   CardActions,
   CardContent,
-  CardMedia,
-  Chip,
-  Divider,
   Grid,
   Typography,
 } from "@mui/material";
@@ -14,34 +12,43 @@ import {
 const cardData = [
   {
     id: 1,
-    img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
+    icon: "solar:stop-circle-linear",
+    subtitle: "lorem 1",
     title: "lorem ipsum dolor",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
     url: "/",
-    isFeatured: false,
   },
   {
     id: 2,
-    img: "https://images.unsplash.com/photo-1511485977113-f34c92461ad9",
+    icon: "fluent:arrow-wrap-20-regular",
+    subtitle: "lorem 2",
     title: "lorem ipsum dolor",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
     url: "/",
-    isFeatured: true,
   },
   {
     id: 3,
-    img: "https://plus.unsplash.com/premium_photo-1673276864867-d0e27d34e5f7",
+    icon: "solar:user-linear",
+    subtitle: "lorem 3",
     title: "lorem ipsum dolor",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
     url: "/",
-    isFeatured: false,
+  },
+  {
+    id: 4,
+    icon: "octicon:typography-24",
+    subtitle: "lorem 4",
+    title: "lorem ipsum dolor",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
+    url: "/",
   },
 ];
 
-export const FeatureHorizontalCardPreview = () => {
+export const ServicesCustomIconPreview = () => {
   return (
     <Box
       sx={{
@@ -56,7 +63,7 @@ export const FeatureHorizontalCardPreview = () => {
     >
       <Typography
         sx={{
-          color: "primary.main",
+          color: "text.secondary",
           textTransform: "uppercase",
           fontWeight: 500,
         }}
@@ -70,19 +77,12 @@ export const FeatureHorizontalCardPreview = () => {
           textAlign: "center",
           fontWeight: 500,
           fontSize: { xs: 32, md: 44, lg: 52 },
-          lineHeight: 1,
+          lineHeight: 1.5,
         }}
       >
-        Features & Benefits
+        Services
       </Typography>
-      <Divider
-        sx={{
-          borderColor: "primary.main",
-          width: "130px",
-          borderBottomWidth: "2px",
-          my: { xs: 1, lg: 2 },
-        }}
-      />
+
       <Typography
         sx={{
           color: "#929292",
@@ -102,43 +102,33 @@ export const FeatureHorizontalCardPreview = () => {
       <Grid container spacing={1} sx={{ width: "100%", maxWidth: "1140px" }}>
         {cardData.map((card) => (
           <Grid
-            size={{ xs: 12, sm: 6, md: 6, lg: 4 }}
+            size={{ xs: 12,  md: 4 }}
             key={card.id}
             position={"relative"}
+           
           >
-            {card?.isFeatured && (
-              <Chip
-                label="☆ Featured"
-                color="primary"
-                size="small"
-                sx={{ position: "absolute", top: 6, left: 6, borderRadius: 0 }}
-              />
-            )}
             <Card
               sx={{
                 maxWidth: 600,
                 height: { xs: "auto", md: 150 },
                 display: "flex",
                 gap: 2,
-                alignItems: "stretch",
+                alignItems: { xs: "start", md: "start" },
                 flexDirection: { xs: "column", md: "row" },
-                border: card.isFeatured ? "2px solid" : "1px solid",
-                borderColor: card.isFeatured ? "primary.main" : "divider",
-                boxShadow: card.isFeatured ? 4 : 1,
+                p: 1,
+                background: "transparent",
+                boxShadow: 0,
               }}
             >
-              <CardMedia
-                component="img"
-                image={card.img}
-                alt="Paella dish"
-                width={100}
-                sx={{
-                  width: { xs: "100%", md: 200 },
-                  height: { xs: 200, lg: "auto" },
+              <Icon
+                icon={card.icon}
+                width={60}
+                height={60}
+                style={{
                   objectFit: "cover",
+                  color: "#FFAB00",
                 }}
               />
-
               <Box sx={{ py: 2, px: { xs: 2, md: 0 } }}>
                 <CardContent sx={{ p: 0 }}>
                   <Typography
@@ -156,13 +146,12 @@ export const FeatureHorizontalCardPreview = () => {
                 <CardActions sx={{ p: 0, mt: 1 }}>
                   <Button
                     variant="text"
-                    color="primary"
                     href={card.url}
                     sx={{
                       background: "none",
                       textDecoration: "none",
                       textTransform: "none",
-                      color: "primary.main",
+                      color: "#FFAB00",
                       fontWeight: 500,
                       fontSize: { xs: 13, md: 15 },
                       m: 0,
