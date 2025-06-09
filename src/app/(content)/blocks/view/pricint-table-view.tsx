@@ -10,14 +10,23 @@ import { Box, Divider } from "@mui/material";
 import React from "react";
 import { pricingTableDarkString } from "../code-string/pricing-table/pricing-table-dark-string";
 import { PricingTableDarkPreview } from "../components/pricing-table/pricing-table-dark-preview";
+import { PricingTableLightPreview } from "../components/pricing-table/pricing-table-light-preview";
 
 const sections = [
   {
-    id: "feature-1",
+    id: "pricing-table-1",
     title: "Dark variant",
     description: "Simple pricing table with dark background. ",
     codeString: pricingTableDarkString,
     preview: <PricingTableDarkPreview />,
+  },
+  {
+    id: "pricing-table-2",
+    title: "Light variant",
+    description:
+      "Simple pricing table with light background image and background overlay. ",
+    codeString: pricingTableDarkString,
+    preview: <PricingTableLightPreview />,
   },
 ];
 
