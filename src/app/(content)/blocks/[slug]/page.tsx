@@ -11,6 +11,7 @@ import { FaqView } from "../view/faq-view";
 import { FeatureView } from "../view/feature-view";
 import { FooterView } from "../view/footer-view";
 import { PricingTableView } from "../view/pricint-table-view";
+import { ServicesView } from "../view/services-view";
 
 export async function generateStaticParams() {
   return blocksArr.map((element) => ({
@@ -31,6 +32,7 @@ const componentMap: Record<string, JSX.Element> = {
   "feature-benefit": <FeatureView />,
   footer: <FooterView />,
   "pricing-table": <PricingTableView />,
+  services: <ServicesView />,
 };
 
 export default async function Page({
