@@ -4,6 +4,7 @@ import { CustomBreadCrumbs } from "@/components/core/breadcrumbs";
 import { PageTitle } from "@/components/core/page-title";
 import { SectionTitle } from "@/components/core/section-title";
 import { useOnThisPage } from "@/contexts/on-thispage-context";
+import { PATHS } from "@/router/paths";
 import { Box, Divider } from "@mui/material";
 import React from "react";
 import { Accordion1CodeString } from "../code-string/accordion/accordion-1";
@@ -22,7 +23,6 @@ import Accordion5 from "../components/accordion/accordion-5";
 import Accordion6 from "../components/accordion/accordion-6";
 import Accordion7 from "../components/accordion/accordion-7";
 import Accordion8 from "../components/accordion/accordion-8";
-import { PATHS } from "@/router/paths";
 
 const sections = [
   {
@@ -70,16 +70,16 @@ const sections = [
   },
   {
     id: "accordion-7",
-    title: "Multiple openable Accordion",
-    description:
-      "In this Material UI accordion variant you can open multiple accordion children at the same time.",
+    title: "Two Column Accordion",
+    description: "Two column combination.",
     codeString: Accordion7CodeString,
     preview: <Accordion7 />,
   },
   {
     id: "accordion-8",
-    title: "Two Column Accordion",
-    description: "Two column combination",
+    title: "Multiple openable Accordion",
+    description:
+      "In this Material UI accordion variant you can open multiple accordion children at the same time.",
     codeString: Accordion8CodeString,
     preview: <Accordion8 />,
   },
@@ -107,7 +107,6 @@ export const AccordionView = () => {
 
       <Divider sx={{ my: 4 }} />
 
-      {/* Accordion - 1 */}
       {sections.map((section) => (
         <Box key={section.id} sx={{ mb: 4 }}>
           <SectionTitle
