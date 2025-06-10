@@ -27,21 +27,21 @@ import Accordion8 from "../components/accordion/accordion-8";
 const sections = [
   {
     id: "accordion-1",
-    title: "Solid Background Accordion ",
+    title: "Solid background",
     description: "A regular but elegant accordion with solid background color",
     codeString: Accordion1CodeString,
     preview: <Accordion1 />,
   },
   {
     id: "accordion-2",
-    title: "Outlined Accordion",
+    title: "Outlined",
     description: "Outlined accordion with custom mui icon",
     codeString: Accordion2CodeString,
     preview: <Accordion2 />,
   },
   {
     id: "accordion-3",
-    title: "Box Shadow Accordion",
+    title: "Box shadow",
     description:
       "Use this beautiful accordion if you are looking for an accordion with box shadow.",
     codeString: Accordion3CodeString,
@@ -49,35 +49,35 @@ const sections = [
   },
   {
     id: "accordion-4",
-    title: "Icon Left Aligned",
+    title: "Icon left aligned",
     description: "Icon position is different from traditional accordions",
     codeString: Accordion4CodeString,
     preview: <Accordion4 />,
   },
   {
     id: "accordion-5",
-    title: "MUI Accordion with vertical line",
+    title: "MUI accordion with vertical line",
     description: "Each section has a vertical line to separate them",
     codeString: Accordion5CodeString,
     preview: <Accordion5 />,
   },
   {
     id: "accordion-6",
-    title: "Multi colored Accordion",
+    title: "Multi colored accordion",
     description: "Each section has a different color",
     codeString: Accordion6CodeString,
     preview: <Accordion6 />,
   },
   {
     id: "accordion-7",
-    title: "Two Column Accordion",
+    title: "Two Columns",
     description: "Two column combination.",
     codeString: Accordion7CodeString,
     preview: <Accordion7 />,
   },
   {
     id: "accordion-8",
-    title: "Multiple openable Accordion",
+    title: "Multiple openable accordion",
     description:
       "In this Material UI accordion variant you can open multiple accordion children at the same time.",
     codeString: Accordion8CodeString,
@@ -102,7 +102,7 @@ export const AccordionView = () => {
       />
       <PageTitle
         title="Accordion"
-        description="Material UI core accordion with extended design, and functionality. "
+        description="Use material ui accordion with different styles to show your FAQ's and other info."
       />
 
       <Divider sx={{ my: 4 }} />
