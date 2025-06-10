@@ -23,21 +23,21 @@ import { PATHS } from "@/router/paths";
 const sections = [
   {
     id: "avatar-1",
-    title: "Different Shape",
+    title: "Different shape",
     description: "This variants contain avatars with different shapes.",
     codeString: avatarShapeString,
     preview: <AvatarShapePreview />,
   },
   {
     id: "avatar-2",
-    title: "Different Size",
+    title: "Different size",
     description: "Avatars with different sizes.",
     codeString: avatarSizeString,
     preview: <AvatarSizePreview />,
   },
   {
     id: "avatar-3",
-    title: "Icon Avatars",
+    title: "Icon avatars",
     description:
       "If your project requires avatars with no image, you can use icon instead. ",
     codeString: avatarIconString,
@@ -45,14 +45,14 @@ const sections = [
   },
   {
     id: "avatar-4",
-    title: "Letter Avatars",
+    title: "Letter avatars",
     description: "Letter avatars designed with material ui only. ",
     codeString: avatarLetterString,
     preview: <AvatarLetterPreview />,
   },
   {
     id: "avatar-5",
-    title: "Active Status",
+    title: "Active status",
     description:
       "If you need active status with the avatar, you can use this variant.",
     codeString: avatarStatusString,
@@ -60,7 +60,7 @@ const sections = [
   },
   {
     id: "avatar-6",
-    title: "Avatar Group",
+    title: "Avatar group",
     description:
       "If you need more than one one, you can go with Material ui avatar group.",
     codeString: avatarGroupString,
