@@ -3,52 +3,42 @@ import { CodePreviewCopyWrapper } from "@/components/code-preview-copy-wrapper";
 import { CustomBreadCrumbs } from "@/components/core/breadcrumbs";
 import { PageTitle } from "@/components/core/page-title";
 import { SectionTitle } from "@/components/core/section-title";
-import { ExternalPackageAlert } from "@/components/external-package-alert";
 import { useOnThisPage } from "@/contexts/on-thispage-context";
 import { PATHS } from "@/router/paths";
 import { Box, Divider } from "@mui/material";
 import React from "react";
-import { FeatureProductWithCarousel } from "../components/feature-product/feature-product-with-carousel-preview";
-import { featureProductWithCarouselString } from "../code-string/feature-products/feature-product-with-carousel-string";
-import { FeatureProductHero } from "../components/feature-product/feature-product-hero-preview";
-import { featureProductHeroString } from "../code-string/feature-products/feature-product-hero-string";
-import { FeatureProductSimple } from "../components/feature-product/feature-product-simple-preview";
-import { featureProductSimpleString } from "../code-string/feature-products/feature-product-simple-string";
-import FeaturedProductMinimalAnimationSection from "../components/feature-product/featured-product-minimal-animation-preview";
 import { featureProductMinimalAnimationString } from "../code-string/feature-products/feature-product-minimal-animation-string";
-
-
-
+import { featureProductSimpleString } from "../code-string/feature-products/feature-product-simple-string";
+import { featureProductWithCarouselString } from "../code-string/feature-products/feature-product-with-carousel-string";
+import { FeatureProductSimplePreview } from "../components/feature-product/feature-product-simple-preview";
+import { FeatureProductWithCarouselPreview } from "../components/feature-product/feature-product-with-carousel-preview";
+import { FeaturedProductMinimalAnimationPreview } from "../components/feature-product/featured-product-minimal-animation-preview";
 
 const sections = [
   {
     id: "feature-product-1",
-    title: "Product with Carousel",
-    description: "Featured product section with customer feedback carousel. Includes product image, description, ratings, and testimonials.",
-    codeString: featureProductWithCarouselString,
-    preview: <FeatureProductWithCarousel />,
+    title: "Simple featured product",
+    description:
+      "Featured product section with customer feedback carousel. Includes product image, description, ratings, and testimonials.",
+    codeString: featureProductSimpleString,
+    preview: <FeatureProductSimplePreview />,
   },
-    //   {
-    //     id: "feature-product-2",
-    //     title: "Product with Hero",
-    //     description: "Featured product section with customer feedback carousel. Includes product image, description, ratings, and testimonials.",
-    //     codeString: featureProductHeroString,
-    //     preview: <FeatureProductHero />,
-    //   },
-    {
-        id: "feature-product-2",
-        title: "Product with Simple",
-        description: "Featured product section with customer feedback carousel. Includes product image, description, ratings, and testimonials.",
-        codeString: featureProductSimpleString,
-        preview: <FeatureProductSimple />,
-      },
-      {
-        id: "feature-product-2",
-        title: "Product with Simple",
-        description: "Featured product section with customer feedback carousel. Includes product image, description, ratings, and testimonials.",
-        codeString: featureProductMinimalAnimationString,
-        preview: <FeaturedProductMinimalAnimationSection />,
-      },
+  {
+    id: "feature-product-2",
+    title: "Product with carousel",
+    description:
+      "Featured product section with customer feedback carousel. Includes product image, description, ratings, and testimonials.",
+    codeString: featureProductWithCarouselString,
+    preview: <FeatureProductWithCarouselPreview />,
+  },
+  {
+    id: "feature-product-3",
+    title: "Featured product with minimal animation",
+    description:
+      "Add minimal hover animation to your featured product section.",
+    codeString: featureProductMinimalAnimationString,
+    preview: <FeaturedProductMinimalAnimationPreview />,
+  },
 ];
 
 export const FeatureProductView = () => {
@@ -71,18 +61,7 @@ export const FeatureProductView = () => {
       />
 
       <Divider sx={{ my: 4 }} />
-      <ExternalPackageAlert
-        packages={[
-          {
-            name: "@mui/material",
-            url: "https://www.npmjs.com/package/@mui/material",
-          },
-          {
-            name: "@mui/icons-material",
-            url: "https://www.npmjs.com/package/@mui/icons-material",
-          },
-        ]}
-      />
+
       {sections.map((section) => (
         <Box key={section.id} sx={{ mb: 4 }}>
           <SectionTitle

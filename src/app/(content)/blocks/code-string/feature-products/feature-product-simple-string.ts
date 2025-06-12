@@ -1,11 +1,11 @@
-export const featureProductSimpleString = `
-import React from "react";
+export const featureProductSimpleString = `import React from "react";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 
-const productImage = "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80";
+const productImage =
+  "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80";
 
 export const FeatureProductSimple = () => {
   return (
@@ -24,7 +24,7 @@ export const FeatureProductSimple = () => {
       }}
     >
       <Grid container spacing={0} alignItems="center">
-    
+        {/* Left: Content */}
         <Grid size={{ xs: 12, md: 6 }}>
           <Box sx={{ pr: { md: 6 }, py: 2 }}>
             <Typography
@@ -36,20 +36,26 @@ export const FeatureProductSimple = () => {
                 mb: 2,
               }}
             >
-              Featured<br />Product
+              Featured
+              <br />
+              Product
             </Typography>
             <Box sx={{ width: 40, height: 2, bgcolor: "#1a2440", mb: 2 }} />
             <Typography sx={{ color: "#929292", mb: 2, fontSize: 15 }}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
+              tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
             </Typography>
             <Typography sx={{ color: "#929292", fontSize: 14, mb: 2 }}>
-              <span style={{ fontStyle: "italic" }}>
+              <Box component={"span"} style={{ fontStyle: "italic" }}>
                 Lorem ipsum dolor sit amet consectetur adipiscing elit dolor
-              </span>
+              </Box>
               <br />
-              <span style={{ fontWeight: 700, color: "#1a2440", letterSpacing: 1 }}>
+              <Box
+                component={"span"}
+                style={{ fontWeight: 700, color: "#1a2440", letterSpacing: 1 }}
+              >
                 FIRSTNAME SURNAME, REVIEWER
-              </span>
+              </Box>
             </Typography>
             <Button
               variant="outlined"
@@ -63,14 +69,14 @@ export const FeatureProductSimple = () => {
                 color: "#1a2440",
                 textTransform: "none",
                 mt: 1,
-                '&:hover': { borderColor: '#1a2440', background: '#f0f1f3' },
+                "&:hover": { borderColor: "#1a2440", background: "#f0f1f3" },
               }}
             >
               VIEW DETAILS
             </Button>
           </Box>
         </Grid>
-            
+        {/* Right: Product Image */}
         <Grid size={{ xs: 12, md: 6 }}>
           <Box
             sx={{
@@ -85,7 +91,8 @@ export const FeatureProductSimple = () => {
               boxShadow: 2,
             }}
           >
-            <img
+            <Box
+              component={"img"}
               src={productImage}
               alt="Featured Product"
               style={{
@@ -100,6 +107,4 @@ export const FeatureProductSimple = () => {
       </Grid>
     </Box>
   );
-};
-
-`
+};`;
