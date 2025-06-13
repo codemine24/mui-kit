@@ -22,6 +22,7 @@ import { CarouselVariableWidthsPreview } from "../components/carousel/preview/ca
 import { CarouselAutoHeight } from "../components/carousel/preview/carousel-auto-height-preview";
 import { CarouselYaxisPreview } from "../components/carousel/preview/carousel-yaxis-preview";
 import { CarouselDotsNumberPreview } from "../components/carousel/preview/carousel-dots-number-preview";
+import { CarouselCustoms } from "../components/carousel/preview/carousel-custom-preview";
 
 const sections = [
     {
@@ -121,6 +122,13 @@ const sections = [
         description: "Carousel dots number description",
         codeString: "",
         preview: <CarouselDotsNumberPreview />,
+    },
+    {
+        id: "carousel-15",
+        title: "Custom",
+        description: "Carousel custom description",
+        codeString: "",
+        preview: <CarouselCustoms />,
     },
 ];
 
