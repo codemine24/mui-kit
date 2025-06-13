@@ -17,7 +17,7 @@ export function CarouselSlide({ sx, options, children, className, ...other }: Ca
         >
             {options?.parallax ? (
                 <div className="carousel-slide-content">
-                    <div className="carousel-slide-parallax">{children}</div>
+                    <div className="carousel__slide__content__parallax">{children}</div>
                 </div>
             ) : (
                 children

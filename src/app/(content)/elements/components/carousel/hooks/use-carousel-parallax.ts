@@ -15,11 +15,10 @@ export function useParallax(mainApi?: EmblaCarouselType, parallax?: CarouselOpti
         tweenNodes.current = _mainApi
             .slideNodes()
             .map(
-                (slideNode) => slideNode.querySelector(`.minima_carousel__slide__content__parallax`) as HTMLElement
+                (slideNode) => slideNode.querySelector(`.carousel__slide__content__parallax`) as HTMLElement
             );
     }, []);
 
-    console.log(tweenNodes.current);
 
     const setTweenFactor = useCallback(
         (_mainApi: EmblaCarouselType) => {

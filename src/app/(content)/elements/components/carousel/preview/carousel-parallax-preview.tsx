@@ -59,7 +59,14 @@ export function CarouselParallax() {
                     ))}
                 </Carousel>
 
-                <CarouselArrowFloatButtons disablePrev={disablePrev} disableNext={disableNext} onClickPrev={onClickPrev} onClickNext={onClickNext} />
+                <Box display="flex" alignItems="center" justifyContent="space-between" gap={2} sx={{ position: 'absolute', top: '50%', transform: 'translateY(-50%)', width: '100%' }}>
+                    <CarouselArrowFloatButtons
+                        disablePrev={disablePrev}
+                        disableNext={disableNext}
+                        onClickPrev={onClickPrev}
+                        onClickNext={onClickNext}
+                    />
+                </Box>
             </Box>
 
             <CarouselDotButtons
