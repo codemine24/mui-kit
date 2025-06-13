@@ -20,7 +20,8 @@ import { CarouselThumbsXPreview } from "../components/carousel/preview/carousel-
 import { CarouselThumbsYPreview } from "../components/carousel/preview/carousel-thumbs-y-preview";
 import { CarouselVariableWidthsPreview } from "../components/carousel/preview/carousel-variable-width-preview";
 import { CarouselAutoHeight } from "../components/carousel/preview/carousel-auto-height-preview";
-import { CarouselYaxis } from "../components/carousel/preview/carousel-yaxis-preview";
+import { CarouselYaxisPreview } from "../components/carousel/preview/carousel-yaxis-preview";
+import { CarouselDotsNumberPreview } from "../components/carousel/preview/carousel-dots-number-preview";
 
 const sections = [
     {
@@ -112,7 +113,14 @@ const sections = [
         title: "Y Axis",
         description: "Carousel y axis description",
         codeString: "",
-        preview: <CarouselYaxis />,
+        preview: <CarouselYaxisPreview />,
+    },
+    {
+        id: "carousel-14",
+        title: "Dots Number",
+        description: "Carousel dots number description",
+        codeString: "",
+        preview: <CarouselDotsNumberPreview />,
     },
 ];
 

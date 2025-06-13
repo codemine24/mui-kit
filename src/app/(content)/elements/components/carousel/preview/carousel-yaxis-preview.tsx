@@ -36,7 +36,7 @@ const data = [
 ]
 
 
-export function CarouselYaxis() {
+export function CarouselYaxisPreview() {
     const options: CarouselOptions = {
         axis: 'y',
     }
