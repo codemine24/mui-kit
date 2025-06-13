@@ -18,6 +18,7 @@ import { CarouselAutoplayPreview } from "../components/carousel/preview/carousel
 import { CarouselAutoScrollPreview } from "../components/carousel/preview/carousel-auto-scroll-preview";
 import { CarouselThumbsXPreview } from "../components/carousel/preview/carousel-thumbs-x-preview";
 import { CarouselThumbsYPreview } from "../components/carousel/preview/carousel-thumbs-y-preview";
+import { CarouselVariableWidthsPreview } from "../components/carousel/preview/carousel-variable-width-preview";
 
 const sections = [
     {
@@ -89,7 +90,14 @@ const sections = [
         description: "Carousel thumbs y description",
         codeString: "",
         preview: <CarouselThumbsYPreview />,
-    }
+    },
+    {
+        id: "carousel-11",
+        title: "Variable Width",
+        description: "Carousel variable width description",
+        codeString: "",
+        preview: <CarouselVariableWidthsPreview />,
+    },
 ];
 
 export const CarouselView = () => {
