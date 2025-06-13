@@ -19,6 +19,7 @@ import { CarouselAutoScrollPreview } from "../components/carousel/preview/carous
 import { CarouselThumbsXPreview } from "../components/carousel/preview/carousel-thumbs-x-preview";
 import { CarouselThumbsYPreview } from "../components/carousel/preview/carousel-thumbs-y-preview";
 import { CarouselVariableWidthsPreview } from "../components/carousel/preview/carousel-variable-width-preview";
+import { CarouselAutoHeight } from "../components/carousel/preview/carousel-auto-height-preview";
 
 const sections = [
     {
@@ -97,6 +98,13 @@ const sections = [
         description: "Carousel variable width description",
         codeString: "",
         preview: <CarouselVariableWidthsPreview />,
+    },
+    {
+        id: "carousel-12",
+        title: "Auto Height",
+        description: "Carousel auto height description",
+        codeString: "",
+        preview: <CarouselAutoHeight />,
     },
 ];
 

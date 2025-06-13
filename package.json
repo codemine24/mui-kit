@@ -22,6 +22,7 @@
     "@tanstack/react-query": "^5.72.1",
     "axios": "^1.8.4",
     "embla-carousel": "^8.6.0",
+    "embla-carousel-auto-height": "^8.6.0",
     "embla-carousel-auto-scroll": "^8.6.0",
     "embla-carousel-autoplay": "^8.6.0",
     "embla-carousel-fade": "^8.6.0",
