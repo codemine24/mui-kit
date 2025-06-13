@@ -100,6 +100,7 @@ export const HeroSection = () => {
             borderRadius: "50%",
             background: `linear-gradient(135deg, ${gradientFrom}, ${gradientTo})`,
             filter: "blur(80px)",
+            
           }}
         />
         <Box
@@ -153,8 +154,7 @@ export const HeroSection = () => {
               fontSize: { xs: pxToRem(12), md: pxToRem(14) },
             }}
           >
-            No Installation Required. Copy and paste directly into
-            your project.
+            No Installation Required. Copy and paste directly into your project.
           </Alert>
 
           <Typography
@@ -221,6 +221,7 @@ export const HeroSection = () => {
             maxWidth: { xs: 300, lg: 600 },
             height: isMobile ? 400 : 500,
             display: { xs: "none", md: "flex" },
+            overflowX: "visible",
           }}
         >
           <InfiniteScroll

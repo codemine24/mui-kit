@@ -10,6 +10,11 @@ const contributors = [
     url: "https://github.com/Yead191",
   },
   {
+    name: "Sumit",
+    avatar: "https://avatars.githubusercontent.com/u/76784329?v=4",
+    url: "https://github.com/sumit2401",
+  },
+  {
     name: "Rapu",
     avatar: "https://avatars.githubusercontent.com/u/108398425?v=4",
     url: "https://github.com/riyazulhaque64",
@@ -47,7 +52,7 @@ export const ContributorsOverview = () => {
                 in MUI Kit. If you are an open-source enthusiast and want to
                 contribute, you can find us on{" "}
                 <Link
-                  href="https://github.com/your-org/your-repo"
+                  href="https://github.com/codemine24/mui-kit"
                   target="_blank"
                   rel="noopener"
                   sx={{
