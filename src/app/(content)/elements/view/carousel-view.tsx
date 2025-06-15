@@ -4,6 +4,7 @@ import { CodePreviewCopyWrapper } from "@/components/code-preview-copy-wrapper";
 import { CustomBreadCrumbs } from "@/components/core/breadcrumbs";
 import { PageTitle } from "@/components/core/page-title";
 import { SectionTitle } from "@/components/core/section-title";
+import { ExternalPackageAlert } from "@/components/external-package-alert";
 import { useOnThisPage } from "@/contexts/on-thispage-context";
 import { PATHS } from "@/router/paths";
 import { Box, Divider } from "@mui/material";
@@ -18,6 +19,10 @@ import {
   useCarouselArrowString,
   useCarouselDotsString,
 } from "../code-string/carousel/carousel-common";
+import { carouselFadeString } from "../code-string/carousel/carousel-fade-preview";
+import { carouselOpacityString } from "../code-string/carousel/carousel-opacity-string";
+import { carouselProgressString } from "../code-string/carousel/carousel-progress-string";
+import { carouselScaleString } from "../code-string/carousel/carousel-scale-string";
 import { CarouselAlignPreview } from "../components/carousel/preview/carousel-align-preview";
 import { CarouselAutoHeight } from "../components/carousel/preview/carousel-auto-height-preview";
 import { CarouselAutoplayPreview } from "../components/carousel/preview/carousel-auto-play-preview";
@@ -33,10 +38,6 @@ import { CarouselThumbsXPreview } from "../components/carousel/preview/carousel-
 import { CarouselThumbsYPreview } from "../components/carousel/preview/carousel-thumbs-y-preview";
 import { CarouselVariableWidthsPreview } from "../components/carousel/preview/carousel-variable-width-preview";
 import { CarouselYaxisPreview } from "../components/carousel/preview/carousel-yaxis-preview";
-import { ExternalPackageAlert } from "@/components/external-package-alert";
-import { carouselProgressString } from "../code-string/carousel/carousel-progress-string";
-import { carouselOpacityString } from "../code-string/carousel/carousel-opacity-string";
-import { carouselScaleString } from "../code-string/carousel/carousel-scale-string";
 
 const sections = [
   {
@@ -49,7 +50,7 @@ const sections = [
       { name: "CarouselOptions.ts", code: carouselOptionsString },
       { name: "useCarouselArrows.ts", code: useCarouselArrowString },
       { name: "useCarouselDots.ts", code: useCarouselDotsString },
-      { name: "carousel.tsx", code: carouseString },
+      { name: "Carousel.tsx", code: carouseString },
       {
         name: "CarouselArrowBasicButtons.tsx",
         code: carouselArrowButtonsString,
@@ -68,7 +69,7 @@ const sections = [
       { name: "CarouselOptions.ts", code: carouselOptionsString },
       { name: "useCarouselArrows.ts", code: useCarouselArrowString },
       { name: "useCarouselDots.ts", code: useCarouselDotsString },
-      { name: "carousel.tsx", code: carouseString },
+      { name: "Carousel.tsx", code: carouseString },
       {
         name: "CarouselArrowBasicButtons.tsx",
         code: carouselArrowButtonsString,
@@ -84,7 +85,7 @@ const sections = [
     description: "Different opacity for active and inactive items.",
     codeString: [
       { name: "carouselOpacity.tsx", code: carouselOpacityString },
-      { name: "carousel.tsx", code: carouseString },
+      { name: "Carousel.tsx", code: carouseString },
       {
         name: "CarouselArrowBasicButtons.tsx",
         code: carouselArrowButtonsString,
@@ -103,7 +104,7 @@ const sections = [
     description: "Different scale for active slide.",
     codeString: [
       { name: "carouselScale.tsx", code: carouselScaleString },
-      { name: "carousel.tsx", code: carouseString },
+      { name: "Carousel.tsx", code: carouseString },
       { name: "CarouselDotButtons.tsx", code: carouselDotButtonsString },
       { name: "IndexLabel.tsx", code: indexLabelString },
       { name: "useCarouselDots.ts", code: useCarouselDotsString },
@@ -114,8 +115,20 @@ const sections = [
   {
     id: "carousel-5",
     title: "Fade",
-    description: "Carousel fade description",
-    codeString: "",
+    description: "Fade animation effect on changing slides.",
+    codeString: [
+      { name: "carouselFade.tsx", code: carouselFadeString },
+      { name: "Carousel.tsx", code: carouseString },
+      {
+        name: "CarouselArrowBasicButtons.tsx",
+        code: carouselArrowButtonsString,
+      },
+      { name: "CarouselDotButtons.tsx", code: carouselDotButtonsString },
+      { name: "IndexLabel.tsx", code: indexLabelString },
+      { name: "useCarouselArrows.ts", code: useCarouselArrowString },
+      { name: "useCarouselDots.ts", code: useCarouselDotsString },
+      { name: "CarouselOptions.ts", code: carouselOptionsString },
+    ],
     preview: <CarouselFade />,
   },
   {

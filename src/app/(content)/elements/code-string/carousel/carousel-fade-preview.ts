@@ -1,4 +1,4 @@
-import Box from "@mui/material/Box";
+export const carouselFadeString = `import Box from "@mui/material/Box";
 import Fade from "embla-carousel-fade";
 
 import useEmblaCarousel from "embla-carousel-react";
@@ -118,4 +118,4 @@ function CarouselItem({ item, index }: CarouselItemProps) {
       />
     </Box>
   );
-}
+}`;
