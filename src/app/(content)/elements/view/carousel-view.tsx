@@ -39,7 +39,7 @@ import { CarouselThumbsXString } from "../code-string/carousel/carousel-thumbs-x
 import { carouselThumbsYString } from "../code-string/carousel/carousel-thumbs-y-string";
 import { carouselVariableWidthString } from "../code-string/carousel/carousel-variable-width-string";
 import { CarouselAlignPreview } from "../components/carousel/preview/carousel-align-preview";
-import { CarouselAutoHeight } from "../components/carousel/preview/carousel-auto-height-preview";
+import { CarouselAutoHeightPreview } from "../components/carousel/preview/carousel-auto-height-preview";
 import { CarouselAutoplayPreview } from "../components/carousel/preview/carousel-auto-play-preview";
 import { CarouselAutoScrollPreview } from "../components/carousel/preview/carousel-auto-scroll-preview";
 import { CarouselCustoms } from "../components/carousel/preview/carousel-custom-preview";
@@ -53,6 +53,7 @@ import { CarouselThumbsXPreview } from "../components/carousel/preview/carousel-
 import { CarouselThumbsYPreview } from "../components/carousel/preview/carousel-thumbs-y-preview";
 import { CarouselVariableWidthPreview } from "../components/carousel/preview/carousel-variable-width-preview";
 import { CarouselYaxisPreview } from "../components/carousel/preview/carousel-yaxis-preview";
+import { carouselAutoHeightString } from "../code-string/carousel/carousel-auto-height-string";
 
 const sections = [
   {
@@ -250,10 +251,21 @@ const sections = [
   },
   {
     id: "carousel-12",
-    title: "Auto Height",
-    description: "Carousel auto height description",
-    codeString: "",
-    preview: <CarouselAutoHeight />,
+    title: "Auto height",
+    description: "Custom height for each slide.",
+    codeString: [
+      { name: "CarouselAutoHeight.tsx", code: carouselAutoHeightString },
+      { name: "Carousel.tsx", code: carouselString },
+      {
+        name: "CarouselArrowBasicButtons.tsx",
+        code: carouselArrowButtonsString,
+      },
+      { name: "IndexLabel.tsx", code: indexLabelString },
+
+      { name: "useCarouselArrows.ts", code: useCarouselArrowString },
+      { name: "CarouselOptions.ts", code: carouselOptionsString },
+    ],
+    preview: <CarouselAutoHeightPreview />,
   },
   {
     id: "carousel-13",
