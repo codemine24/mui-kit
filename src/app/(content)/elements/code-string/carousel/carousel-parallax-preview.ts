@@ -1,4 +1,4 @@
-import Box from "@mui/material/Box";
+export const carouselParallaxString = `import Box from "@mui/material/Box";
 import useEmblaCarousel from "embla-carousel-react";
 import {
     Carousel,
@@ -132,4 +132,4 @@ function CarouselItem({ item, index }: CarouselItemProps) {
       />
     </Box>
   );
-}
+}`;

@@ -18,9 +18,11 @@ import {
   indexLabelString,
   useCarouselArrowString,
   useCarouselDotsString,
+  useParallaxString,
 } from "../code-string/carousel/carousel-common";
 import { carouselFadeString } from "../code-string/carousel/carousel-fade-preview";
 import { carouselOpacityString } from "../code-string/carousel/carousel-opacity-string";
+import { carouselParallaxString } from "../code-string/carousel/carousel-parallax-preview";
 import { carouselProgressString } from "../code-string/carousel/carousel-progress-string";
 import { carouselScaleString } from "../code-string/carousel/carousel-scale-string";
 import { CarouselAlignPreview } from "../components/carousel/preview/carousel-align-preview";
@@ -134,8 +136,21 @@ const sections = [
   {
     id: "carousel-6",
     title: "Parallax",
-    description: "Carousel parallax description",
-    codeString: "",
+    description: "Parallax animation effect on changing slides.",
+    codeString: [
+      { name: "CarouselParallax.tsx", code: carouselParallaxString },
+      { name: "Carousel.tsx", code: carouseString },
+      {
+        name: "CarouselArrowBasicButtons.tsx",
+        code: carouselArrowButtonsString,
+      },
+      { name: "CarouselDotButtons.tsx", code: carouselDotButtonsString },
+      { name: "IndexLabel.tsx", code: indexLabelString },
+      { name: "useCarouselArrows.ts", code: useCarouselArrowString },
+      { name: "useCarouselDots.ts", code: useCarouselDotsString },
+      { name: "useParallax.ts", code: useParallaxString },
+      { name: "CarouselOptions.ts", code: carouselOptionsString },
+    ],
     preview: <CarouselParallax />,
   },
   {
