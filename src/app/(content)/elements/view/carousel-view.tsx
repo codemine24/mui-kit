@@ -17,7 +17,9 @@ import {
   carouselDotButtonsString,
   carouselOptionsString,
   carouselProgressBarString,
-  carouseString,
+  carouselString,
+  carouselThumbsString,
+  carouselThumbString,
   indexLabelString,
   playButtonString,
   useCarouselArrowString,
@@ -26,12 +28,14 @@ import {
   useCarouselDotsString,
   useCarouseProgressString,
   useParallaxString,
+  useThumbsString,
 } from "../code-string/carousel/carousel-common";
 import { carouselFadeString } from "../code-string/carousel/carousel-fade-preview";
 import { carouselOpacityString } from "../code-string/carousel/carousel-opacity-string";
 import { carouselParallaxString } from "../code-string/carousel/carousel-parallax-preview";
 import { carouselProgressString } from "../code-string/carousel/carousel-progress-string";
 import { carouselScaleString } from "../code-string/carousel/carousel-scale-string";
+import { CarouselThumbsXString } from "../code-string/carousel/carousel-thumbs-x-string";
 import { CarouselAlignPreview } from "../components/carousel/preview/carousel-align-preview";
 import { CarouselAutoHeight } from "../components/carousel/preview/carousel-auto-height-preview";
 import { CarouselAutoplayPreview } from "../components/carousel/preview/carousel-auto-play-preview";
@@ -59,7 +63,7 @@ const sections = [
       { name: "CarouselOptions.ts", code: carouselOptionsString },
       { name: "useCarouselArrows.ts", code: useCarouselArrowString },
       { name: "useCarouselDots.ts", code: useCarouselDotsString },
-      { name: "Carousel.tsx", code: carouseString },
+      { name: "Carousel.tsx", code: carouselString },
       {
         name: "CarouselArrowBasicButtons.tsx",
         code: carouselArrowButtonsString,
@@ -78,7 +82,7 @@ const sections = [
       { name: "CarouselOptions.ts", code: carouselOptionsString },
       { name: "useCarouselArrows.ts", code: useCarouselArrowString },
       { name: "useCarouselDots.ts", code: useCarouselDotsString },
-      { name: "Carousel.tsx", code: carouseString },
+      { name: "Carousel.tsx", code: carouselString },
       {
         name: "CarouselArrowBasicButtons.tsx",
         code: carouselArrowButtonsString,
@@ -94,7 +98,7 @@ const sections = [
     description: "Different opacity for active and inactive items.",
     codeString: [
       { name: "carouselOpacity.tsx", code: carouselOpacityString },
-      { name: "Carousel.tsx", code: carouseString },
+      { name: "Carousel.tsx", code: carouselString },
       {
         name: "CarouselArrowBasicButtons.tsx",
         code: carouselArrowButtonsString,
@@ -113,7 +117,7 @@ const sections = [
     description: "Different scale for active slide.",
     codeString: [
       { name: "carouselScale.tsx", code: carouselScaleString },
-      { name: "Carousel.tsx", code: carouseString },
+      { name: "Carousel.tsx", code: carouselString },
       { name: "CarouselDotButtons.tsx", code: carouselDotButtonsString },
       { name: "IndexLabel.tsx", code: indexLabelString },
       { name: "useCarouselDots.ts", code: useCarouselDotsString },
@@ -127,7 +131,7 @@ const sections = [
     description: "Fade animation effect on changing slides.",
     codeString: [
       { name: "carouselFade.tsx", code: carouselFadeString },
-      { name: "Carousel.tsx", code: carouseString },
+      { name: "Carousel.tsx", code: carouselString },
       {
         name: "CarouselArrowBasicButtons.tsx",
         code: carouselArrowButtonsString,
@@ -146,7 +150,7 @@ const sections = [
     description: "Parallax animation effect on changing slides.",
     codeString: [
       { name: "CarouselParallax.tsx", code: carouselParallaxString },
-      { name: "Carousel.tsx", code: carouseString },
+      { name: "Carousel.tsx", code: carouselString },
       {
         name: "CarouselArrowBasicButtons.tsx",
         code: carouselArrowButtonsString,
@@ -166,7 +170,7 @@ const sections = [
     description: "Make your slider auto play with this variant.",
     codeString: [
       { name: "CarouselAutoplay.tsx", code: carouselAutoPlayString },
-      { name: "Carousel.tsx", code: carouseString },
+      { name: "Carousel.tsx", code: carouselString },
       { name: "CarouselDotButtons.tsx", code: carouselDotButtonsString },
       { name: "IndexLabel.tsx", code: indexLabelString },
       { name: "PlayButton.tsx", code: playButtonString },
@@ -181,7 +185,7 @@ const sections = [
     description: "Continuous horizontal scrolling effect.",
     codeString: [
       { name: "CarouselAutoScroll.tsx", code: carouselAutoScrollString },
-      { name: "Carousel.tsx", code: carouseString },
+      { name: "Carousel.tsx", code: carouselString },
       { name: "CarouselProgressBar.tsx", code: carouselProgressBarString },
       { name: "IndexLabel.tsx", code: indexLabelString },
       { name: "PlayButton.tsx", code: playButtonString },
@@ -194,7 +198,16 @@ const sections = [
     id: "carousel-9",
     title: "Thumbs X",
     description: "Carousel thumbs x description",
-    codeString: "",
+    codeString: [
+      { name: "CarouselThumbsX.tsx", code: CarouselThumbsXString },
+      { name: "Carousel.tsx", code: carouselString },
+      { name: "CarouselThumbs.tsx", code: carouselThumbString },
+      { name: "CarouselThumbs.tsx", code: carouselThumbsString },
+      { name: "IndexLabel.tsx", code: indexLabelString },
+
+      { name: "useThumbs.ts", code: useThumbsString },
+      { name: "CarouselOptions.ts", code: carouselOptionsString },
+    ],
     preview: <CarouselThumbsXPreview />,
   },
   {

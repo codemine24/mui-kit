@@ -1,4 +1,4 @@
-import Box from "@mui/material/Box";
+export const CarouselThumbsXString = `import Box from "@mui/material/Box";
 import useEmblaCarousel from "embla-carousel-react";
 import {
   Carousel,
@@ -118,3 +118,4 @@ export function CarouselThumbsXPreview() {
     </Box>
   );
 }
+`;

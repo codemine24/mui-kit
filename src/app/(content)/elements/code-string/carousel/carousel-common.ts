@@ -1,4 +1,4 @@
-export const carouseString = `import { Children, isValidElement } from 'react';
+export const carouselString = `import { Children, isValidElement } from 'react';
 import { styled } from '@mui/material/styles';
 import type { CarouselProps, CarouselOptions } from '../types/type';
 import { CarouselSlide } from './carousel-slide';
@@ -513,6 +513,231 @@ const ProgressBar = styled("span")(({ theme }) => ({
 }));
 `;
 
+export const carouselThumbString = `import { Box } from "@mui/material";
+import ButtonBase from "@mui/material/ButtonBase";
+import { styled } from "@mui/material/styles";
+import type { CarouselThumbProps } from "../types/type";
+
+// ----------------------------------------------------------------------
+
+export function CarouselThumb({
+  sx,
+  src,
+  index,
+  selected,
+  ...other
+}: CarouselThumbProps) {
+  return (
+    <ThumbRoot selected={selected} sx={sx} {...other}>
+      <Box
+        component="img"
+        alt={\`carousel-thumb-\${index}\`}
+        src={src}
+        className="carousel-thumb-image"
+      />
+    </ThumbRoot>
+  );
+}
+
+// ----------------------------------------------------------------------
+
+const ThumbRoot = styled(ButtonBase, {
+  shouldForwardProp: (prop: string) => !["selected", "sx"].includes(prop),
+})<Pick<CarouselThumbProps, "selected">>(({ theme }) => ({
+  opacity: 0.48,
+  flexShrink: 0,
+  cursor: "pointer",
+  borderRadius: 10,
+  transition: theme.transitions.create(["opacity", "box-shadow"], {
+    easing: theme.transitions.easing.sharp,
+    duration: theme.transitions.duration.short,
+  }),
+  [\`& .carousel-thumb-image\`]: {
+    width: "100%",
+    height: "100%",
+    objectFit: "cover",
+    borderRadius: 10,
+  },
+  variants: [
+    {
+      props: { selected: true },
+      style: {
+        opacity: 1,
+        boxShadow: \`0 0 0 2px \${theme.palette.primary.main}\`,
+      },
+    },
+  ],
+}));
+`;
+
+export const carouselThumbsString = `import { Children, isValidElement } from "react";
+
+import { styled } from "@mui/material/styles";
+import type { CarouselOptions, CarouselThumbsProps } from "../types/type";
+import { CarouselSlide } from "./carousel-slide";
+
+export function CarouselThumbs({
+  sx,
+  options,
+  children,
+  slotProps,
+  ...other
+}: CarouselThumbsProps) {
+  const axis = options?.axis ?? "x";
+  const slideSpacing = options?.slideSpacing ?? "12px";
+
+  const renderChildren = () =>
+    Children.map(children, (child) => {
+      if (isValidElement(child)) {
+        const reactChild = child as React.ReactElement<{ key?: React.Key }>;
+
+        return (
+          <CarouselSlide
+            key={reactChild.key}
+            options={{ ...options, slideSpacing }}
+            sx={{
+              ...slotProps?.slide,
+              flex: "0 0 auto",
+            }}
+          >
+            {child}
+          </CarouselSlide>
+        );
+      }
+      return null;
+    });
+
+  return (
+    <ThumbsRoot
+      axis={axis}
+      enableMask={!slotProps?.disableMask}
+      sx={{
+        ...sx,
+        maxWidth: "100%",
+        overflow: "hidden",
+      }}
+      className="carousel-thumbs-root"
+      {...other}
+    >
+      <ThumbsContainer
+        axis={axis}
+        slideSpacing={slideSpacing}
+        sx={{
+          ...slotProps?.container,
+        }}
+        className="carousel-thumbs-container"
+      >
+        {renderChildren()}
+      </ThumbsContainer>
+    </ThumbsRoot>
+  );
+}
+
+// ----------------------------------------------------------------------
+
+type ThumbsRootProps = Pick<CarouselOptions, "axis"> & {
+  enableMask?: boolean;
+};
+
+const ThumbsRoot = styled("div", {
+  shouldForwardProp: (prop: string) =>
+    !["axis", "enableMask", "sx"].includes(prop),
+})<ThumbsRootProps>(({ enableMask, theme }) => {
+  const maskBg = \`\${theme.palette.background.paper} 20%, transparent 100%)\`;
+
+  return {
+    flexShrink: 0,
+    margin: "auto",
+    maxWidth: "100%",
+    overflow: "hidden",
+    position: "relative",
+    variants: [
+      {
+        props: { axis: "x" },
+        style: {
+          maxWidth: "100%",
+          padding: theme.spacing(0.5),
+          ...(enableMask && {
+            "&::before, &::after": {
+              top: 0,
+              zIndex: 9,
+              width: 40,
+              content: '""',
+              height: "100%",
+              position: "absolute",
+            },
+            "&::before": {
+              left: -8,
+              background: \`linear-gradient(to right, \${maskBg}\`,
+            },
+            "&::after": {
+              right: -8,
+              background: \`linear-gradient(to left, \${maskBg}\`,
+            },
+          }),
+        },
+      },
+      {
+        props: { axis: "y" },
+        style: {
+          height: "100%",
+          maxHeight: "100%",
+          padding: theme.spacing(0.5),
+          ...(enableMask && {
+            "&::before, &::after": {
+              left: 0,
+              zIndex: 9,
+              height: 40,
+              content: '""',
+              width: "100%",
+              position: "absolute",
+            },
+            "&::before": {
+              top: -8,
+              background: \`linear-gradient(to bottom, \${maskBg}\`,
+            },
+            "&::after": {
+              bottom: -8,
+              background: \`linear-gradient(to top, \${maskBg}\`,
+            },
+          }),
+        },
+      },
+    ],
+  };
+});
+
+type ThumbsContainerProps = Pick<CarouselOptions, "axis" | "slideSpacing">;
+
+const ThumbsContainer = styled("ul", {
+  shouldForwardProp: (prop: string) =>
+    !["axis", "slideSpacing", "sx"].includes(prop),
+})<ThumbsContainerProps>(({ slideSpacing }) => ({
+  display: "flex",
+  backfaceVisibility: "hidden",
+  variants: [
+    {
+      props: { axis: "x" },
+      style: {
+        touchAction: "pan-y pinch-zoom",
+        marginLeft: \`calc(\${slideSpacing} * -1)\`,
+      },
+    },
+    {
+      props: { axis: "y" },
+      style: {
+        height: "100%",
+        paddingLeft: "0 !important",
+        flexDirection: "column",
+        touchAction: "pan-x pinch-zoom",
+        marginTop: \`calc(\${slideSpacing} * -1)\`,
+      },
+    },
+  ],
+}));
+`;
+
+// hook string
 export const useCarouselArrowString = `import type { EmblaCarouselType } from 'embla-carousel';
 
 import { useState, useEffect, useCallback } from 'react';
@@ -842,5 +1067,52 @@ export function useCarouselProgress(
   }, [mainApi, onScroll]);
 
   return { value: scrollProgress };
+}
+`;
+
+export const useThumbsString = `import type { EmblaCarouselType } from "embla-carousel";
+import useEmblaCarousel from "embla-carousel-react";
+import { useCallback, useEffect, useState } from "react";
+import type { CarouselOptions, UseCarouselThumbsReturn } from "../types/type";
+
+export function useThumbs(
+  mainApi?: EmblaCarouselType,
+  options?: Partial<CarouselOptions>
+): UseCarouselThumbsReturn {
+  const [thumbsRef, thumbsApi] = useEmblaCarousel({
+    containScroll: "keepSnaps",
+    dragFree: true,
+    ...options,
+  });
+
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
+  const onClickThumb = useCallback(
+    (index: number) => {
+      if (!mainApi || !thumbsApi) return;
+      mainApi.scrollTo(index);
+    },
+    [mainApi, thumbsApi]
+  );
+
+  const onSelect = useCallback(() => {
+    if (!mainApi || !thumbsApi) return;
+    setSelectedIndex(mainApi.selectedScrollSnap());
+    thumbsApi.scrollTo(mainApi.selectedScrollSnap());
+  }, [mainApi, thumbsApi, setSelectedIndex]);
+
+  useEffect(() => {
+    if (!mainApi) return;
+    onSelect();
+    mainApi.on("select", onSelect);
+    mainApi.on("reInit", onSelect);
+  }, [mainApi, onSelect]);
+
+  return {
+    onClickThumb,
+    thumbsRef,
+    thumbsApi,
+    selectedIndex,
+  };
 }
 `;
