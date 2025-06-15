@@ -34,6 +34,8 @@ import { CarouselThumbsYPreview } from "../components/carousel/preview/carousel-
 import { CarouselVariableWidthsPreview } from "../components/carousel/preview/carousel-variable-width-preview";
 import { CarouselYaxisPreview } from "../components/carousel/preview/carousel-yaxis-preview";
 import { ExternalPackageAlert } from "@/components/external-package-alert";
+import { carouselProgressString } from "../code-string/carousel/carousel-progress-string";
+import { carouselOpacityString } from "../code-string/carousel/carousel-opacity-string";
 
 const sections = [
   {
@@ -43,6 +45,9 @@ const sections = [
       "Initial carousel align is little different from regular ones. You can customize the alignment position.",
     codeString: [
       { name: "carouselAlign.tsx", code: carouselAlignString },
+      { name: "CarouselOptions.ts", code: carouselOptionsString },
+      { name: "useCarouselArrows.ts", code: useCarouselArrowString },
+      { name: "useCarouselDots.ts", code: useCarouselDotsString },
       { name: "carousel.tsx", code: carouseString },
       {
         name: "CarouselArrowBasicButtons.tsx",
@@ -50,24 +55,46 @@ const sections = [
       },
       { name: "CarouselDotButtons.tsx", code: carouselDotButtonsString },
       { name: "IndexLabel.tsx", code: indexLabelString },
-      { name: "useCarouselArrows.ts", code: useCarouselArrowString },
-      { name: "useCarouselDots.ts", code: useCarouselDotsString },
-      { name: "CarouselOptions.ts", code: carouselOptionsString },
     ],
     preview: <CarouselAlignPreview />,
   },
   {
     id: "carousel-2",
     title: "Progress",
-    description: "Carousel progress description",
-    codeString: "",
+    description: "You can display carousel progress with this variant. ",
+    codeString: [
+      { name: "carouselProgress.tsx", code: carouselProgressString },
+      { name: "CarouselOptions.ts", code: carouselOptionsString },
+      { name: "useCarouselArrows.ts", code: useCarouselArrowString },
+      { name: "useCarouselDots.ts", code: useCarouselDotsString },
+      { name: "carousel.tsx", code: carouseString },
+      {
+        name: "CarouselArrowBasicButtons.tsx",
+        code: carouselArrowButtonsString,
+      },
+      { name: "CarouselDotButtons.tsx", code: carouselDotButtonsString },
+      { name: "IndexLabel.tsx", code: indexLabelString },
+    ],
     preview: <CarouselProgressPreview />,
   },
   {
     id: "carousel-3",
     title: "Opacity",
-    description: "Carousel opacity description",
-    codeString: "",
+    description: "Different opacity for active and inactive items.",
+    codeString: [
+      { name: "carouselOpacity.tsx", code: carouselOpacityString },
+      { name: "carousel.tsx", code: carouseString },
+      {
+        name: "CarouselArrowBasicButtons.tsx",
+        code: carouselArrowButtonsString,
+      },
+      { name: "CarouselDotButtons.tsx", code: carouselDotButtonsString },
+      { name: "IndexLabel.tsx", code: indexLabelString },
+      { name: "CarouselOptions.ts", code: carouselOptionsString },
+      { name: "useCarouselArrows.ts", code: useCarouselArrowString },
+      { name: "useCarouselDots.ts", code: useCarouselDotsString },
+      
+    ],
     preview: <CarouselOpacityPreview />,
   },
   {
