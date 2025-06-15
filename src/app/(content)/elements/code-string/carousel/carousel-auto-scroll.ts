@@ -1,4 +1,4 @@
-import Box from "@mui/material/Box";
+export const carouselAutoScrollString = `import Box from "@mui/material/Box";
 import AutoScroll from "embla-carousel-auto-scroll";
 import useEmblaCarousel from "embla-carousel-react";
 import {
@@ -109,4 +109,4 @@ function CarouselItem({ item, index }: CarouselItemProps) {
       />
     </Box>
   );
-}
+}`;

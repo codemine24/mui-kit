@@ -10,17 +10,21 @@ import { PATHS } from "@/router/paths";
 import { Box, Divider } from "@mui/material";
 import React from "react";
 import { carouselAlignString } from "../code-string/carousel";
+import { carouselAutoScrollString } from "../code-string/carousel/carousel-auto-scroll";
 import { carouselAutoPlayString } from "../code-string/carousel/carousel-autoplay-string";
 import {
   carouselArrowButtonsString,
   carouselDotButtonsString,
   carouselOptionsString,
+  carouselProgressBarString,
   carouseString,
   indexLabelString,
   playButtonString,
   useCarouselArrowString,
   useCarouselAutoplayString,
+  useCarouselAutoScrollString,
   useCarouselDotsString,
+  useCarouseProgressString,
   useParallaxString,
 } from "../code-string/carousel/carousel-common";
 import { carouselFadeString } from "../code-string/carousel/carousel-fade-preview";
@@ -158,7 +162,7 @@ const sections = [
   },
   {
     id: "carousel-7",
-    title: "Auto Play",
+    title: "Auto play",
     description: "Make your slider auto play with this variant.",
     codeString: [
       { name: "CarouselAutoplay.tsx", code: carouselAutoPlayString },
@@ -173,9 +177,17 @@ const sections = [
   },
   {
     id: "carousel-8",
-    title: "Auto Scroll",
-    description: "Carousel auto scroll description",
-    codeString: "",
+    title: "Auto scroll",
+    description: "Continuous horizontal scrolling effect.",
+    codeString: [
+      { name: "CarouselAutoScroll.tsx", code: carouselAutoScrollString },
+      { name: "Carousel.tsx", code: carouseString },
+      { name: "CarouselProgressBar.tsx", code: carouselProgressBarString },
+      { name: "IndexLabel.tsx", code: indexLabelString },
+      { name: "PlayButton.tsx", code: playButtonString },
+      { name: "useCarouselAutoScroll.ts", code: useCarouselAutoScrollString },
+      { name: "useCarouselProgress.ts", code: useCarouseProgressString },
+    ],
     preview: <CarouselAutoScrollPreview />,
   },
   {

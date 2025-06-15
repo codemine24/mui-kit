@@ -467,6 +467,52 @@ export function PlayButton({
 }
 `;
 
+export const carouselProgressBarString = `import { alpha, styled } from "@mui/material/styles";
+import type { CarouselProgressBarProps } from "../types/type";
+
+// ----------------------------------------------------------------------
+
+export function CarouselProgressBar({
+  sx,
+  value,
+  ...other
+}: CarouselProgressBarProps) {
+  return (
+    <ProgressBarRoot
+      sx={[{ "--progress-value": value }, ...(Array.isArray(sx) ? sx : [sx])]}
+      {...other}
+    >
+      <ProgressBar />
+    </ProgressBarRoot>
+  );
+}
+
+// ----------------------------------------------------------------------
+
+const ProgressBarRoot = styled("div")(({ theme }) => ({
+  height: 6,
+  maxWidth: 120,
+  width: "100%",
+  borderRadius: 6,
+  overflow: "hidden",
+  position: "relative",
+  color: theme.palette.text.primary,
+  backgroundColor: alpha(theme.palette.grey[500], 0.2),
+}));
+
+const ProgressBar = styled("span")(({ theme }) => ({
+  top: 0,
+  bottom: 0,
+  width: "100%",
+  left: "-100%",
+  position: "absolute",
+  backgroundColor: "currentColor",
+  transform: \`translate3d(calc(var(--progress-value) * \${
+    theme.direction === "rtl" ? -1 : 1
+  }%), 0px, 0px)\`,
+}));
+`;
+
 export const useCarouselArrowString = `import type { EmblaCarouselType } from 'embla-carousel';
 
 import { useState, useEffect, useCallback } from 'react';
@@ -711,4 +757,90 @@ export function useCarouselAutoPlay(
 
   return { isPlaying, onTogglePlay, onClickAutoplay };
 }
-`
+`;
+
+export const useCarouselAutoScrollString = `import type { EmblaCarouselType } from "embla-carousel";
+import type { } from "embla-carousel-auto-scroll";
+
+import { useCallback, useEffect, useState } from "react";
+
+import type { UseCarouselAutoPlayReturn } from "../types/type";
+
+// ----------------------------------------------------------------------
+
+export function useCarouselAutoScroll(
+  mainApi?: EmblaCarouselType
+): UseCarouselAutoPlayReturn {
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const onClickAutoplay = useCallback(
+    (callback: () => void) => {
+      const autoScroll = mainApi?.plugins()?.autoScroll;
+      if (!autoScroll) return;
+
+      const resetOrStop =
+        autoScroll.options.stopOnInteraction === false
+          ? autoScroll.reset
+          : autoScroll.stop;
+
+      resetOrStop();
+      callback();
+    },
+    [mainApi]
+  );
+
+  const onTogglePlay = useCallback(() => {
+    const autoScroll = mainApi?.plugins()?.autoScroll;
+    if (!autoScroll) return;
+
+    const playOrStop = autoScroll.isPlaying()
+      ? autoScroll.stop
+      : autoScroll.play;
+    playOrStop();
+  }, [mainApi]);
+
+  useEffect(() => {
+    const autoScroll = mainApi?.plugins()?.autoScroll;
+    if (!autoScroll) return;
+
+    setIsPlaying(autoScroll.isPlaying());
+    mainApi
+      .on("autoScroll:play", () => setIsPlaying(true))
+      .on("autoScroll:stop", () => setIsPlaying(false))
+      .on("reInit", () => setIsPlaying(false));
+  }, [mainApi]);
+
+  return { isPlaying, onTogglePlay, onClickAutoplay };
+}
+`;
+
+export const useCarouseProgressString = `import type { EmblaCarouselType } from "embla-carousel";
+
+import { useCallback, useEffect, useState } from "react";
+
+import type { UseCarouselProgressReturn } from "../types/type";
+
+// ----------------------------------------------------------------------
+
+export function useCarouselProgress(
+  mainApi?: EmblaCarouselType
+): UseCarouselProgressReturn {
+  const [scrollProgress, setScrollProgress] = useState(0);
+
+  const onScroll = useCallback((_mainApi: EmblaCarouselType) => {
+    const progress = Math.max(0, Math.min(1, _mainApi.scrollProgress()));
+
+    setScrollProgress(progress * 100);
+  }, []);
+
+  useEffect(() => {
+    if (!mainApi) return;
+
+    onScroll(mainApi);
+    mainApi.on("reInit", onScroll);
+    mainApi.on("scroll", onScroll);
+  }, [mainApi, onScroll]);
+
+  return { value: scrollProgress };
+}
+`;
