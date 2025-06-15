@@ -1,4 +1,4 @@
-import Box from "@mui/material/Box";
+export const carouselDotsNumberString = `import Box from "@mui/material/Box";
 import CardContent from "@mui/material/CardContent";
 import Link from "@mui/material/Link";
 import Typography from "@mui/material/Typography";
@@ -135,7 +135,7 @@ function CarouselItem({ item, index }: CarouselItemProps) {
           textAlign: "left",
           position: "absolute",
           color: "common.white",
-          backgroundImage: `linear-gradient(to top, rgba(0,0,0,0.8) 25%, transparent)`,
+          backgroundImage: \`linear-gradient(to top, rgba(0,0,0,0.8) 25%, transparent)\`,
         })}
       >
         <Typography variant="h5" sx={[]}>
@@ -159,4 +159,4 @@ function CarouselItem({ item, index }: CarouselItemProps) {
       </CardContent>
     </Box>
   );
-}
+}`;

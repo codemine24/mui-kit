@@ -10,6 +10,7 @@ import { PATHS } from "@/router/paths";
 import { Box, Divider } from "@mui/material";
 import React from "react";
 import { carouselAlignString } from "../code-string/carousel";
+import { carouselAutoHeightString } from "../code-string/carousel/carousel-auto-height-string";
 import { carouselAutoScrollString } from "../code-string/carousel/carousel-auto-scroll";
 import { carouselAutoPlayString } from "../code-string/carousel/carousel-autoplay-string";
 import {
@@ -30,6 +31,7 @@ import {
   useParallaxString,
   useThumbsString,
 } from "../code-string/carousel/carousel-common";
+import { carouselDotsNumberString } from "../code-string/carousel/carousel-dots-number-string";
 import { carouselFadeString } from "../code-string/carousel/carousel-fade-preview";
 import { carouselOpacityString } from "../code-string/carousel/carousel-opacity-string";
 import { carouselParallaxString } from "../code-string/carousel/carousel-parallax-preview";
@@ -38,6 +40,7 @@ import { carouselScaleString } from "../code-string/carousel/carousel-scale-stri
 import { CarouselThumbsXString } from "../code-string/carousel/carousel-thumbs-x-string";
 import { carouselThumbsYString } from "../code-string/carousel/carousel-thumbs-y-string";
 import { carouselVariableWidthString } from "../code-string/carousel/carousel-variable-width-string";
+import { carouselYaxisString } from "../code-string/carousel/carousel-yaxis-string";
 import { CarouselAlignPreview } from "../components/carousel/preview/carousel-align-preview";
 import { CarouselAutoHeightPreview } from "../components/carousel/preview/carousel-auto-height-preview";
 import { CarouselAutoplayPreview } from "../components/carousel/preview/carousel-auto-play-preview";
@@ -53,8 +56,6 @@ import { CarouselThumbsXPreview } from "../components/carousel/preview/carousel-
 import { CarouselThumbsYPreview } from "../components/carousel/preview/carousel-thumbs-y-preview";
 import { CarouselVariableWidthPreview } from "../components/carousel/preview/carousel-variable-width-preview";
 import { CarouselYaxisPreview } from "../components/carousel/preview/carousel-yaxis-preview";
-import { carouselAutoHeightString } from "../code-string/carousel/carousel-auto-height-string";
-import { carouselYaxisString } from "../code-string/carousel/carousel-yaxis-string";
 
 const sections = [
   {
@@ -292,9 +293,24 @@ const sections = [
   },
   {
     id: "carousel-14",
-    title: "Dots Number",
-    description: "Carousel dots number description",
-    codeString: "",
+    title: "Dots number",
+    description: "Instead of dots, you can show the number of the slide.",
+    codeString: [
+      { name: "CarouselDotsNumber.tsx", code: carouselDotsNumberString },
+
+      { name: "Carousel.tsx", code: carouselString },
+      {
+        name: "CarouselArrowBasicButtons.tsx",
+        code: carouselArrowButtonsString,
+      },
+      { name: "CarouselDotButtons.tsx", code: carouselDotButtonsString },
+      { name: "IndexLabel.tsx", code: indexLabelString },
+
+      { name: "useCarouselArrows.ts", code: useCarouselArrowString },
+      { name: "useCarouselDots.ts", code: useCarouselDotsString },
+
+      { name: "CarouselOptions.ts", code: carouselOptionsString },
+    ],
     preview: <CarouselDotsNumberPreview />,
   },
   {
