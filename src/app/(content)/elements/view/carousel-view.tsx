@@ -51,6 +51,7 @@ import { CarouselThumbsXPreview } from "../components/carousel/preview/carousel-
 import { CarouselThumbsYPreview } from "../components/carousel/preview/carousel-thumbs-y-preview";
 import { CarouselVariableWidthsPreview } from "../components/carousel/preview/carousel-variable-width-preview";
 import { CarouselYaxisPreview } from "../components/carousel/preview/carousel-yaxis-preview";
+import { carouselThumbsYString } from "../code-string/carousel/carousel-thumbs-y-string";
 
 const sections = [
   {
@@ -197,11 +198,11 @@ const sections = [
   {
     id: "carousel-9",
     title: "Thumbs X",
-    description: "Carousel thumbs x description",
+    description: "Horizontal Mini map for the slide items. ",
     codeString: [
       { name: "CarouselThumbsX.tsx", code: CarouselThumbsXString },
       { name: "Carousel.tsx", code: carouselString },
-      { name: "CarouselThumbs.tsx", code: carouselThumbString },
+      { name: "CarouselThumb.tsx", code: carouselThumbString },
       { name: "CarouselThumbs.tsx", code: carouselThumbsString },
       { name: "IndexLabel.tsx", code: indexLabelString },
 
@@ -213,8 +214,17 @@ const sections = [
   {
     id: "carousel-10",
     title: "Thumbs Y",
-    description: "Carousel thumbs y description",
-    codeString: "",
+    description: "Vertical Mini map for the slide items. ",
+    codeString: [
+      { name: "CarouselThumbsY.tsx", code: carouselThumbsYString },
+      { name: "Carousel.tsx", code: carouselString },
+      { name: "CarouselThumb.tsx", code: carouselThumbString },
+      { name: "CarouselThumbs.tsx", code: carouselThumbsString },
+      { name: "IndexLabel.tsx", code: indexLabelString },
+
+      { name: "useThumbs.ts", code: useThumbsString },
+      { name: "CarouselOptions.ts", code: carouselOptionsString },
+    ],
     preview: <CarouselThumbsYPreview />,
   },
   {
