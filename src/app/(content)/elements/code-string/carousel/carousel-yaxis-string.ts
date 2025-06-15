@@ -1,4 +1,4 @@
-import Box from "@mui/material/Box";
+export const carouselYaxisString = `import Box from "@mui/material/Box";
 
 import useEmblaCarousel from "embla-carousel-react";
 import {
@@ -118,4 +118,4 @@ function CarouselItem({ item, index }: CarouselItemProps) {
       />
     </Box>
   );
-}
+}`;

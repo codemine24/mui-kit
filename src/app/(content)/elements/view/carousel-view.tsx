@@ -54,6 +54,7 @@ import { CarouselThumbsYPreview } from "../components/carousel/preview/carousel-
 import { CarouselVariableWidthPreview } from "../components/carousel/preview/carousel-variable-width-preview";
 import { CarouselYaxisPreview } from "../components/carousel/preview/carousel-yaxis-preview";
 import { carouselAutoHeightString } from "../code-string/carousel/carousel-auto-height-string";
+import { carouselYaxisString } from "../code-string/carousel/carousel-yaxis-string";
 
 const sections = [
   {
@@ -269,9 +270,24 @@ const sections = [
   },
   {
     id: "carousel-13",
-    title: "Y Axis",
-    description: "Carousel y axis description",
-    codeString: "",
+    title: "Y axis",
+    description: "Vertical scrolling effect.",
+    codeString: [
+      { name: "CarouselYaxis.tsx", code: carouselYaxisString },
+
+      { name: "Carousel.tsx", code: carouselString },
+      {
+        name: "CarouselArrowBasicButtons.tsx",
+        code: carouselArrowButtonsString,
+      },
+      { name: "CarouselDotButtons.tsx", code: carouselDotButtonsString },
+      { name: "IndexLabel.tsx", code: indexLabelString },
+
+      { name: "useCarouselArrows.ts", code: useCarouselArrowString },
+      { name: "useCarouselDots.ts", code: useCarouselDotsString },
+
+      { name: "CarouselOptions.ts", code: carouselOptionsString },
+    ],
     preview: <CarouselYaxisPreview />,
   },
   {
