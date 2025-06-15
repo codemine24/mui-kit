@@ -14,6 +14,7 @@ import { PopoverView } from "../view/popover-view";
 import { StepperView } from "../view/stepper-view";
 import { TableView } from "../view/table-view";
 import { TimelineView } from "../view/timeline-view";
+import { CarouselView } from "../view/carousel-view";
 
 export async function generateStaticParams() {
   return elementsArr.map((element) => ({
@@ -38,6 +39,7 @@ const componentMap: Record<string, JSX.Element> = {
   table: <TableView />,
   timeline: <TimelineView />,
   stepper: <StepperView />,
+  carousel: <CarouselView />,
 };
 
 export default async function Page({
