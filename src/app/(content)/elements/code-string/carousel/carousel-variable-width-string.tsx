@@ -1,4 +1,4 @@
-import Box from "@mui/material/Box";
+export const carouselVariableWidthString = `import Box from "@mui/material/Box";
 
 import useEmblaCarousel from "embla-carousel-react";
 import {
@@ -109,3 +109,4 @@ function CarouselItem({ item, index }: CarouselItemProps) {
     </Box>
   );
 }
+`;
