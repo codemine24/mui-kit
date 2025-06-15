@@ -45,7 +45,6 @@ import { CarouselAlignPreview } from "../components/carousel/preview/carousel-al
 import { CarouselAutoHeightPreview } from "../components/carousel/preview/carousel-auto-height-preview";
 import { CarouselAutoplayPreview } from "../components/carousel/preview/carousel-auto-play-preview";
 import { CarouselAutoScrollPreview } from "../components/carousel/preview/carousel-auto-scroll-preview";
-import { CarouselCustoms } from "../components/carousel/preview/carousel-custom-preview";
 import { CarouselDotsNumberPreview } from "../components/carousel/preview/carousel-dots-number-preview";
 import { CarouselFade } from "../components/carousel/preview/carousel-fade-preview";
 import { CarouselOpacityPreview } from "../components/carousel/preview/carousel-opacity-preview";
@@ -313,13 +312,13 @@ const sections = [
     ],
     preview: <CarouselDotsNumberPreview />,
   },
-  {
-    id: "carousel-15",
-    title: "Custom",
-    description: "Carousel custom description",
-    codeString: "",
-    preview: <CarouselCustoms />,
-  },
+  // {
+  //   id: "carousel-15",
+  //   title: "Custom",
+  //   description: "Carousel custom description",
+  //   codeString: "",
+  //   preview: <CarouselCustoms />,
+  // },
 ];
 
 export const CarouselView = () => {
