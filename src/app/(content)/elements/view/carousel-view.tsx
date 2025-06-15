@@ -36,6 +36,7 @@ import { CarouselYaxisPreview } from "../components/carousel/preview/carousel-ya
 import { ExternalPackageAlert } from "@/components/external-package-alert";
 import { carouselProgressString } from "../code-string/carousel/carousel-progress-string";
 import { carouselOpacityString } from "../code-string/carousel/carousel-opacity-string";
+import { carouselScaleString } from "../code-string/carousel/carousel-scale-string";
 
 const sections = [
   {
@@ -93,15 +94,21 @@ const sections = [
       { name: "CarouselOptions.ts", code: carouselOptionsString },
       { name: "useCarouselArrows.ts", code: useCarouselArrowString },
       { name: "useCarouselDots.ts", code: useCarouselDotsString },
-      
     ],
     preview: <CarouselOpacityPreview />,
   },
   {
     id: "carousel-4",
     title: "Scale",
-    description: "Carousel scale description",
-    codeString: "",
+    description: "Different scale for active slide.",
+    codeString: [
+      { name: "carouselScale.tsx", code: carouselScaleString },
+      { name: "carousel.tsx", code: carouseString },
+      { name: "CarouselDotButtons.tsx", code: carouselDotButtonsString },
+      { name: "IndexLabel.tsx", code: indexLabelString },
+      { name: "useCarouselDots.ts", code: useCarouselDotsString },
+      { name: "CarouselOptions.ts", code: carouselOptionsString },
+    ],
     preview: <CarouselScalePreview />,
   },
   {

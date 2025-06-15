@@ -1,4 +1,4 @@
-import Box from "@mui/material/Box";
+export const carouselScaleString = `import Box from "@mui/material/Box";
 import useEmblaCarousel from "embla-carousel-react";
 import { Carousel, CarouselDotButtons, IndexLabel } from "../components";
 import { useCarouselDots } from "../hooks";
@@ -108,4 +108,4 @@ function CarouselItem({ item, index, selected }: CarouselItemProps) {
       />
     </Box>
   );
-}
+}`;
