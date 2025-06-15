@@ -444,6 +444,29 @@ export const IndexLabel = ({ index }: { index: number }) => {
     );
 }`;
 
+export const playButtonString = `import { PlayCircle, Stop } from "@mui/icons-material";
+import type { ButtonProps } from "@mui/material/Button";
+import Button from "@mui/material/Button";
+
+export function PlayButton({
+  isPlaying,
+  ...other
+}: ButtonProps & {
+  isPlaying: boolean;
+}) {
+  return (
+    <Button
+      color={isPlaying ? "error" : "primary"}
+      variant="contained"
+      startIcon={isPlaying ? <Stop /> : <PlayCircle />}
+      {...other}
+    >
+      {isPlaying ? "Stop" : "Play"}
+    </Button>
+  );
+}
+`;
+
 export const useCarouselArrowString = `import type { EmblaCarouselType } from 'embla-carousel';
 
 import { useState, useEffect, useCallback } from 'react';
@@ -545,7 +568,6 @@ export const carouselOptionsString = `export type CarouselOptions = CarouselBase
     };
 };`;
 
-
 export const useParallaxString = `import type { EmblaEventType, EmblaCarouselType } from 'embla-carousel';
 
 import { useRef, useEffect, useCallback } from 'react';
@@ -636,4 +658,57 @@ export function useParallax(mainApi?: EmblaCarouselType, parallax?: CarouselOpti
     }, [mainApi, tweenParallax]);
 
     return null;
-}`
+}`;
+
+export const useCarouselAutoplayString = `import type { EmblaCarouselType } from "embla-carousel";
+import type { } from "embla-carousel-autoplay";
+
+import { useCallback, useEffect, useState } from "react";
+
+import type { UseCarouselAutoPlayReturn } from "../types/type";
+
+// ----------------------------------------------------------------------
+
+export function useCarouselAutoPlay(
+  mainApi?: EmblaCarouselType
+): UseCarouselAutoPlayReturn {
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const onClickAutoplay = useCallback(
+    (callback: () => void) => {
+      const autoplay = mainApi?.plugins()?.autoplay;
+      if (!autoplay) return;
+
+      const resetOrStop =
+        autoplay.options.stopOnInteraction === false
+          ? autoplay.reset
+          : autoplay.stop;
+
+      resetOrStop();
+      callback();
+    },
+    [mainApi]
+  );
+
+  const onTogglePlay = useCallback(() => {
+    const autoplay = mainApi?.plugins()?.autoplay;
+    if (!autoplay) return;
+
+    const playOrStop = autoplay.isPlaying() ? autoplay.stop : autoplay.play;
+    playOrStop();
+  }, [mainApi]);
+
+  useEffect(() => {
+    const autoplay = mainApi?.plugins()?.autoplay;
+    if (!autoplay) return;
+
+    setIsPlaying(autoplay.isPlaying());
+    mainApi
+      .on("autoplay:play", () => setIsPlaying(true))
+      .on("autoplay:stop", () => setIsPlaying(false))
+      .on("reInit", () => setIsPlaying(false));
+  }, [mainApi]);
+
+  return { isPlaying, onTogglePlay, onClickAutoplay };
+}
+`

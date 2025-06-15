@@ -1,13 +1,13 @@
-import Box from "@mui/material/Box";
+export const carouselAutoPlayString = `import Box from "@mui/material/Box";
+import Autoplay from "embla-carousel-autoplay";
 import useEmblaCarousel from "embla-carousel-react";
 import {
-    Carousel,
-    CarouselArrowFloatButtons,
-    CarouselDotButtons,
-    IndexLabel,
+  Carousel,
+  CarouselDotButtons,
+  IndexLabel,
+  PlayButton,
 } from "../components";
-import { useCarouselArrows, useCarouselDots, useParallax } from "../hooks";
-import type { CarouselOptions } from "../types/type";
+import { useCarouselAutoPlay, useCarouselDots } from "../hooks";
 
 {
   /* 
@@ -43,65 +43,45 @@ const data = [
   },
 ];
 
-export function CarouselParallaxPreview() {
-  const options: CarouselOptions = {
-    dragFree: true,
-    loop: true,
-    parallax: true,
-    slidesToShow: "70%",
-    slideSpacing: "20px",
-  };
-  const [emblaRef, emblaApi] = useEmblaCarousel(options);
-  const { disablePrev, disableNext, onClickPrev, onClickNext } =
-    useCarouselArrows(emblaApi);
+export function CarouselAutoplayPreview() {
+  const options = { loop: true };
+  const [emblaRef, emblaApi] = useEmblaCarousel(options, [
+    Autoplay({ playOnInit: false, delay: 2000 }),
+  ]);
+  const autoplay = useCarouselAutoPlay(emblaApi);
   const dots = useCarouselDots(emblaApi);
-  useParallax(emblaApi, options.parallax);
 
   return (
     <Box width="100%">
+      <Box display="flex" justifyContent="flex-end">
+        <PlayButton
+          isPlaying={autoplay?.isPlaying}
+          onClick={autoplay?.onTogglePlay}
+        />
+      </Box>
+
       <Box sx={{ position: "relative" }}>
-        <Carousel
-          mainRef={emblaRef}
-          options={options}
-          slotProps={{ slide: { borderRadius: 2 } }}
-        >
+        <Carousel mainRef={emblaRef} options={options}>
           {data.map((item, index) => (
             <CarouselItem key={item.id} index={index} item={item} />
           ))}
         </Carousel>
 
-        <Box
-          display="flex"
-          alignItems="center"
-          justifyContent="space-between"
-          gap={2}
+        <CarouselDotButtons
+          scrollSnaps={dots.scrollSnaps}
+          selectedIndex={dots.selectedIndex}
+          onClickDot={dots.onClickDot}
           sx={{
+            top: 16,
+            right: 16,
             position: "absolute",
-            top: "50%",
-            transform: "translateY(-50%)",
-            width: "100%",
+            color: "common.white",
           }}
-        >
-          <CarouselArrowFloatButtons
-            disablePrev={disablePrev}
-            disableNext={disableNext}
-            onClickPrev={onClickPrev}
-            onClickNext={onClickNext}
-          />
-        </Box>
+        />
       </Box>
-
-      <CarouselDotButtons
-        scrollSnaps={dots.scrollSnaps}
-        selectedIndex={dots.selectedIndex}
-        onClickDot={dots.onClickDot}
-        sx={{ width: 1, justifyContent: "center", mt: 3 }}
-      />
     </Box>
   );
 }
-
-// ----------------------------------------------------------------------
 
 type CarouselItemProps = {
   index: number;
@@ -122,7 +102,7 @@ function CarouselItem({ item, index }: CarouselItemProps) {
 
       <Box
         component="img"
-        alt={item.coverUrl}
+        alt={item.id}
         src={item.coverUrl}
         sx={{
           width: "100%",
@@ -132,4 +112,4 @@ function CarouselItem({ item, index }: CarouselItemProps) {
       />
     </Box>
   );
-}
+}`;

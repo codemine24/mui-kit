@@ -10,13 +10,16 @@ import { PATHS } from "@/router/paths";
 import { Box, Divider } from "@mui/material";
 import React from "react";
 import { carouselAlignString } from "../code-string/carousel";
+import { carouselAutoPlayString } from "../code-string/carousel/carousel-autoplay-string";
 import {
   carouselArrowButtonsString,
   carouselDotButtonsString,
   carouselOptionsString,
   carouseString,
   indexLabelString,
+  playButtonString,
   useCarouselArrowString,
+  useCarouselAutoplayString,
   useCarouselDotsString,
   useParallaxString,
 } from "../code-string/carousel/carousel-common";
@@ -33,7 +36,7 @@ import { CarouselCustoms } from "../components/carousel/preview/carousel-custom-
 import { CarouselDotsNumberPreview } from "../components/carousel/preview/carousel-dots-number-preview";
 import { CarouselFade } from "../components/carousel/preview/carousel-fade-preview";
 import { CarouselOpacityPreview } from "../components/carousel/preview/carousel-opacity-preview";
-import { CarouselParallax } from "../components/carousel/preview/carousel-parallax-preview";
+import { CarouselParallaxPreview } from "../components/carousel/preview/carousel-parallax-preview";
 import { CarouselProgressPreview } from "../components/carousel/preview/carousel-progress-preview";
 import { CarouselScalePreview } from "../components/carousel/preview/carousel-scale-preview";
 import { CarouselThumbsXPreview } from "../components/carousel/preview/carousel-thumbs-x-preview";
@@ -151,13 +154,21 @@ const sections = [
       { name: "useParallax.ts", code: useParallaxString },
       { name: "CarouselOptions.ts", code: carouselOptionsString },
     ],
-    preview: <CarouselParallax />,
+    preview: <CarouselParallaxPreview />,
   },
   {
     id: "carousel-7",
     title: "Auto Play",
-    description: "Carousel auto play description",
-    codeString: "",
+    description: "Make your slider auto play with this variant.",
+    codeString: [
+      { name: "CarouselAutoplay.tsx", code: carouselAutoPlayString },
+      { name: "Carousel.tsx", code: carouseString },
+      { name: "CarouselDotButtons.tsx", code: carouselDotButtonsString },
+      { name: "IndexLabel.tsx", code: indexLabelString },
+      { name: "PlayButton.tsx", code: playButtonString },
+      { name: "useCarouselAutoPlay.ts", code: useCarouselAutoplayString },
+      { name: "useCarouselDots.ts", code: useCarouselDotsString },
+    ],
     preview: <CarouselAutoplayPreview />,
   },
   {
