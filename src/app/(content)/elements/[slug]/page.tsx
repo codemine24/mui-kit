@@ -3,10 +3,12 @@ import { elementsArr } from "@/router/router";
 import { JSX } from "react";
 import { AccordionView } from "../view/accordion-view";
 import { AlertView } from "../view/alert-view";
+import { AppBarView } from "../view/app-bar-view";
 import { AvatarView } from "../view/avatar-view";
 import { BreadcrumbsView } from "../view/breadcrumbs-view";
 import { ButtonView } from "../view/button-view";
 import { CardView } from "../view/card-view";
+import { CarouselView } from "../view/carousel-view";
 import { DialogView } from "../view/dialog-view";
 import { DrawerView } from "../view/drawer-view";
 import { PaginationView } from "../view/pagination-view";
@@ -14,7 +16,6 @@ import { PopoverView } from "../view/popover-view";
 import { StepperView } from "../view/stepper-view";
 import { TableView } from "../view/table-view";
 import { TimelineView } from "../view/timeline-view";
-import { CarouselView } from "../view/carousel-view";
 
 export async function generateStaticParams() {
   return elementsArr.map((element) => ({
@@ -40,6 +41,7 @@ const componentMap: Record<string, JSX.Element> = {
   timeline: <TimelineView />,
   stepper: <StepperView />,
   carousel: <CarouselView />,
+  "app-bar": <AppBarView />,
 };
 
 export default async function Page({

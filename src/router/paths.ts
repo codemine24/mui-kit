@@ -3,6 +3,7 @@ export const PATHS = {
     OVERVIEW: "/elements",
     ACCORDION: "/elements/accordion",
     ALERT: "/elements/alert",
+    APP_BAR: "/elements/app-bar",
     AVATAR: "/elements/avatar",
     BREADCRUMB: "/elements/breadcrumb",
     BUTTON: "/elements/button",
