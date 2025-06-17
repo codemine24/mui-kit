@@ -8,8 +8,10 @@ import { useOnThisPage } from "@/contexts/on-thispage-context";
 import { PATHS } from "@/router/paths";
 import { Box, Divider } from "@mui/material";
 import React from "react";
-import { AppBarBasicPreview } from "../components/app-bar/app-bar-basic-preview";
 import { appBarBasicString } from "../code-string/app-bar/app-bar-basic-string";
+import { appBarSubmenuString } from "../code-string/app-bar/app-bar-submenu-string";
+import { AppBarBasicPreview } from "../components/app-bar/app-bar-basic-preview";
+import { AppBarSubmenuPreview } from "../components/app-bar/app-bar-submenu-preview";
 
 const sections = [
   {
@@ -18,6 +20,13 @@ const sections = [
     description: "Most basic app bar with logo, navigation and simple button.",
     codeString: appBarBasicString,
     preview: <AppBarBasicPreview />,
+  },
+  {
+    id: "app-bar-2",
+    title: "With submenu",
+    description: "This app bar contains submenu. ",
+    codeString: appBarSubmenuString,
+    preview: <AppBarSubmenuPreview />,
   },
 ];
 
