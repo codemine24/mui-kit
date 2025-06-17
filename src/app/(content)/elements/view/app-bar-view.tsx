@@ -9,13 +9,14 @@ import { PATHS } from "@/router/paths";
 import { Box, Divider } from "@mui/material";
 import React from "react";
 import { AppBarBasicPreview } from "../components/app-bar/app-bar-basic-preview";
+import { appBarBasicString } from "../code-string/app-bar/app-bar-basic-string";
 
 const sections = [
   {
     id: "app-bar-1",
     title: "Basic App bar",
     description: "Most basic app bar with logo, navigation and simple button.",
-    codeString: "",
+    codeString: appBarBasicString,
     preview: <AppBarBasicPreview />,
   },
 ];

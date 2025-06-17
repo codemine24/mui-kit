@@ -1,4 +1,4 @@
-import AdbIcon from "@mui/icons-material/Adb";
+export const appBarBasicString = `import AdbIcon from "@mui/icons-material/Adb";
 import MenuIcon from "@mui/icons-material/Menu";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -216,4 +216,4 @@ const Logo = () => {
       </Typography>
     </Box>
   );
-};
+};`;
