@@ -13,13 +13,23 @@ import { SwapGridPreview } from "../components/dnd/preview/swap-grid-preivew";
 import { SortableVerticalPreview } from "../components/dnd/preview/vertical-preview";
 import { SortableHorizontalPreview } from "../components/dnd/preview/horizontal-preview";
 
+import { sortableItemString } from "../code-string/dnd/sortable-item-string";
+import { horizontalString } from "../code-string/dnd/horizontal-string";
+import { sortableGridDragOverlayString } from "../code-string/dnd/sortable-grid-drag-overlay-string";
+import { sortableGridString } from "../code-string/dnd/sortable-grid-string";
+import { swapGridString } from "../code-string/dnd/swap-grid-string";
+import { verticalString } from "../code-string/dnd/vertical-string";
+
 const sections = [
     {
         id: "dnd-1",
         title: "Sortable Grid",
         description:
             "A simple sortable grid design with dummy content. You can replace the content with almost anything.",
-        codeString: "",
+        codeString: [
+            { name: "SortableGrid", code: sortableGridString },
+            { name: "ItemBase", code: sortableItemString },
+        ],
         preview: <SortableGridPreview />,
     },
     {
@@ -27,7 +37,10 @@ const sections = [
         title: "Sortable Grid Drag Overlay",
         description:
             "A simple sortable grid design with dummy content. You can replace the content with almost anything.",
-        codeString: "",
+        codeString: [
+            { name: "SortableGridDragOverlay", code: sortableGridDragOverlayString },
+            { name: "ItemBase", code: sortableItemString },
+        ],
         preview: <SortableGridDragOverlayPreview />,
     },
     {
@@ -35,7 +48,10 @@ const sections = [
         title: "Swap Grid",
         description:
             "A simple swap grid design with dummy content. You can replace the content with almost anything.",
-        codeString: "",
+        codeString: [
+            { name: "SwapGrid", code: swapGridString },
+            { name: "ItemBase", code: sortableItemString },
+        ],
         preview: <SwapGridPreview />,
     },
     {
@@ -43,7 +59,10 @@ const sections = [
         title: "Vertical Grid",
         description:
             "A simple vertical grid design with dummy content. You can replace the content with almost anything.",
-        codeString: "",
+        codeString: [
+            { name: "SortableVertical", code: verticalString },
+            { name: "ItemBase", code: sortableItemString },
+        ],
         preview: <SortableVerticalPreview />,
     },
     {
@@ -51,7 +70,10 @@ const sections = [
         title: "Horizontal Grid",
         description:
             "A simple horizontal grid design with dummy content. You can replace the content with almost anything.",
-        codeString: "",
+        codeString: [
+            { name: "SortableHorizontal", code: horizontalString },
+            { name: "ItemBase", code: sortableItemString },
+        ],
         preview: <SortableHorizontalPreview />,
     },
 ];
