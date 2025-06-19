@@ -1,7 +1,7 @@
 import type { UniqueIdentifier } from '@dnd-kit/core';
 import type { NewIndexGetter, AnimateLayoutChanges } from '@dnd-kit/sortable';
 
-import { useRef, useState, useEffect } from 'react';
+import { useState } from 'react';
 import {
     arrayMove,
     useSortable,
@@ -36,14 +36,10 @@ export function SortableGridPreview() {
         useSensor(KeyboardSensor, { coordinateGetter: sortableKeyboardCoordinates })
     );
 
-    const isFirstAnnouncement = useRef(true);
     const [activeId, setActiveId] = useState<UniqueIdentifier | null>(null);
 
     const getIndex = (id: UniqueIdentifier) => items.indexOf(id);
     const activeIndex = activeId != null ? getIndex(activeId) : -1;
-
-    const strategy = rectSortingStrategy;
-    const reorderItems = arrayMove;
 
     const getNewIndex = ({
         id,
@@ -51,13 +47,7 @@ export function SortableGridPreview() {
         activeIndex: currentIndex,
         overIndex,
     }: NewIndexGetter['arguments']) =>
-        reorderItems(currentItems, currentIndex, overIndex).indexOf(id)
-
-    useEffect(() => {
-        if (activeId == null) {
-            isFirstAnnouncement.current = true;
-        }
-    }, [activeId]);
+        arrayMove(currentItems, currentIndex, overIndex).indexOf(id)
 
     //  Add Item
     const handleAdd = () => {
@@ -101,12 +91,12 @@ export function SortableGridPreview() {
                     if (over) {
                         const overIndex = getIndex(over.id);
                         if (activeIndex !== overIndex) {
-                            setItems((prev) => reorderItems(prev, activeIndex, overIndex));
+                            setItems((prev) => arrayMove(prev, activeIndex, overIndex));
                         }
                     }
                 }}
             >
-                <SortableContext items={items} strategy={strategy}>
+                <SortableContext items={items} strategy={rectSortingStrategy}>
                     <Box
                         component="ul"
                         sx={{

@@ -3,10 +3,10 @@ import type { NewIndexGetter, AnimateLayoutChanges } from '@dnd-kit/sortable';
 
 import { useState } from 'react';
 import {
-    arrayMove,
+    arraySwap,
     useSortable,
     SortableContext,
-    rectSortingStrategy,
+    rectSwappingStrategy,
     sortableKeyboardCoordinates,
     defaultAnimateLayoutChanges,
 } from '@dnd-kit/sortable';
@@ -34,7 +34,7 @@ const dropAnimationConfig: DropAnimation = {
     }),
 };
 
-export function SortableGridDragOverlayPreview() {
+export function SwapGridPreview() {
     const createItems = Array.from({ length: 12 }, (_, index) => index + 1);
 
     const [items, setItems] = useState<UniqueIdentifier[]>(createItems);
@@ -48,29 +48,26 @@ export function SortableGridDragOverlayPreview() {
     const [activeId, setActiveId] = useState<UniqueIdentifier | null>(null);
 
     const getIndex = (id: UniqueIdentifier) => items.indexOf(id);
+
     const activeIndex = activeId != null ? getIndex(activeId) : -1;
 
-    // Get New Index
     const getNewIndex = ({
         id,
         items: currentItems,
         activeIndex: currentIndex,
         overIndex,
     }: NewIndexGetter['arguments']) =>
-        arrayMove(currentItems, currentIndex, overIndex).indexOf(id)
+        arraySwap(currentItems, currentIndex, overIndex).indexOf(id)
 
-    //  Add Item
     const handleAdd = () => {
         setItems([...items, items.length + 1]);
     };
 
-    //  Remove Item
     const handleRemove = (id: UniqueIdentifier) => {
         const updatedItems = items.filter((item) => item !== id);
         setItems(updatedItems);
     };
 
-    //  Drag Overlay
     const renderDragOverlay = () => (
         <Portal>
             <DragOverlay dropAnimation={dropAnimationConfig}>
@@ -83,12 +80,9 @@ export function SortableGridDragOverlayPreview() {
 
     return (
         <Box
-            sx={{
-                display: 'flex',
-                alignItems: 'flex-end',
-                flexDirection: 'column',
-                width: "100%"
-            }}
+            sx={[
+                { display: 'flex', alignItems: 'flex-end', flexDirection: 'column', width: "100%" },
+            ]}
         >
             <Button variant="contained" onClick={handleAdd}>
                 + Add item
@@ -112,12 +106,12 @@ export function SortableGridDragOverlayPreview() {
                     if (over) {
                         const overIndex = getIndex(over.id);
                         if (activeIndex !== overIndex) {
-                            setItems((prev) => arrayMove(prev, activeIndex, overIndex));
+                            setItems((prev) => arraySwap(prev, activeIndex, overIndex));
                         }
                     }
                 }}
             >
-                <SortableContext items={items} strategy={rectSortingStrategy}>
+                <SortableContext items={items} strategy={rectSwappingStrategy}>
                     <Box
                         component="ul"
                         sx={{

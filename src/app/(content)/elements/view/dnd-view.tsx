@@ -9,6 +9,7 @@ import { useOnThisPage } from "@/contexts/on-thispage-context";
 import { PATHS } from "@/router/paths";
 import { SortableGridPreview } from "../components/dnd/preview/sortable-grid-preview";
 import { SortableGridDragOverlayPreview } from "../components/dnd/preview/sortable-grid-drag-overlay-preview";
+import { SwapGridPreview } from "../components/dnd/preview/swap-grid-preivew";
 
 const sections = [
     {
@@ -26,6 +27,14 @@ const sections = [
             "A simple sortable grid design with dummy content. You can replace the content with almost anything.",
         codeString: "",
         preview: <SortableGridDragOverlayPreview />,
+    },
+    {
+        id: "dnd-3",
+        title: "Swap Grid",
+        description:
+            "A simple swap grid design with dummy content. You can replace the content with almost anything.",
+        codeString: "",
+        preview: <SwapGridPreview />,
     },
 ];
 
