@@ -21,7 +21,7 @@ type ItemBaseProps = React.ComponentProps<'div'> & {
         transition?: string | null;
         transform?: Transform | null;
         listeners?: DraggableSyntheticListeners;
-        handleProps?: any;
+        handleProps?: { ref?: (node: HTMLElement | null) => void };
     };
 };
 

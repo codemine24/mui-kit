@@ -5,7 +5,8 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 
 // Updated space station image URL - using a 3D ring-shaped space station similar to the reference
-const productImage = "https://images.unsplash.com/photo-1516849841032-87cbac4d88f7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80";
+const productImage =
+  "https://images.unsplash.com/photo-1516849841032-87cbac4d88f7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80";
 
 export const FeatureProductHero = () => {
   return (
@@ -43,7 +44,7 @@ export const FeatureProductHero = () => {
           zIndex: 1,
         }}
       />
-      
+
       <Box
         sx={{
           position: "relative",
@@ -61,10 +62,22 @@ export const FeatureProductHero = () => {
           zIndex: 2,
         }}
       >
-        <Grid container alignItems="center" justifyContent="flex-start" spacing={0}>
+        <Grid
+          container
+          alignItems="center"
+          justifyContent="flex-start"
+          spacing={0}
+        >
           {/* Left: Text Content */}
           <Grid size={{ xs: 12, md: 6 }}>
-            <Box sx={{ color: "#fff", pr: { md: 4 }, position: "relative", zIndex: 3 }}>
+            <Box
+              sx={{
+                color: "#fff",
+                pr: { md: 4 },
+                position: "relative",
+                zIndex: 3,
+              }}
+            >
               <Typography
                 variant="h1"
                 sx={{
@@ -75,35 +88,40 @@ export const FeatureProductHero = () => {
                   fontSize: { xs: 36, md: 52 },
                   textAlign: { xs: "center", md: "left" },
                   textTransform: "uppercase",
-                  background: "linear-gradient(135deg, #ffffff 0%, #e0e0e0 100%)",
+                  background:
+                    "linear-gradient(135deg, #ffffff 0%, #e0e0e0 100%)",
                   backgroundClip: "text",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                 }}
               >
-                FEATURED<br />PRODUCT
+                FEATURED
+                <br />
+                PRODUCT
               </Typography>
-              <Box 
-                sx={{ 
-                  width: 80, 
-                  height: 4, 
-                  background: "linear-gradient(90deg, #ffffff 0%, rgba(255,255,255,0.3) 100%)", 
-                  mb: 4, 
-                  ml: { xs: "auto", md: 0 }, 
-                  mr: { xs: "auto", md: 0 } 
-                }} 
+              <Box
+                sx={{
+                  width: 80,
+                  height: 4,
+                  background:
+                    "linear-gradient(90deg, #ffffff 0%, rgba(255,255,255,0.3) 100%)",
+                  mb: 4,
+                  ml: { xs: "auto", md: 0 },
+                  mr: { xs: "auto", md: 0 },
+                }}
               />
-              <Typography 
-                sx={{ 
-                  color: "rgba(255,255,255,0.85)", 
-                  mb: 5, 
-                  fontSize: { xs: 16, md: 18 }, 
+              <Typography
+                sx={{
+                  color: "rgba(255,255,255,0.85)",
+                  mb: 5,
+                  fontSize: { xs: 16, md: 18 },
                   lineHeight: 1.6,
-                  maxWidth: 450, 
-                  textAlign: { xs: "center", md: "left" } 
+                  maxWidth: 450,
+                  textAlign: { xs: "center", md: "left" },
                 }}
               >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
+                tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
               </Typography>
               <Button
                 variant="outlined"
@@ -121,12 +139,12 @@ export const FeatureProductHero = () => {
                   mx: { xs: "auto", md: 0 },
                   textTransform: "uppercase",
                   transition: "all 0.3s ease",
-                  '&:hover': { 
-                    background: '#fff', 
-                    color: '#0b0f1e', 
-                    borderColor: '#fff',
+                  "&:hover": {
+                    background: "#fff",
+                    color: "#0b0f1e",
+                    borderColor: "#fff",
                     transform: "translateY(-2px)",
-                    boxShadow: "0 8px 25px rgba(255,255,255,0.3)"
+                    boxShadow: "0 8px 25px rgba(255,255,255,0.3)",
                   },
                 }}
               >
@@ -134,7 +152,7 @@ export const FeatureProductHero = () => {
               </Button>
             </Box>
           </Grid>
-          
+
           {/* Right: Product Image */}
           <Grid size={{ xs: 12, md: 6 }} sx={{ position: "relative" }}>
             <Box
@@ -157,14 +175,16 @@ export const FeatureProductHero = () => {
                   width: "100%",
                 }}
               >
-                <img
+                <Box
+                  component={"img"}
                   src={productImage}
                   alt="Featured Space Station"
                   style={{
                     width: "100%",
                     height: "auto",
                     objectFit: "contain",
-                    filter: "drop-shadow(0 15px 50px rgba(0,0,0,0.8)) brightness(1.1) contrast(1.1)",
+                    filter:
+                      "drop-shadow(0 15px 50px rgba(0,0,0,0.8)) brightness(1.1) contrast(1.1)",
                     pointerEvents: "none",
                     userSelect: "none",
                   }}
@@ -178,7 +198,8 @@ export const FeatureProductHero = () => {
                     transform: "translate(-50%, -50%)",
                     width: "120%",
                     height: "120%",
-                    background: "radial-gradient(circle, rgba(100,149,237,0.3) 0%, transparent 70%)",
+                    background:
+                      "radial-gradient(circle, rgba(100,149,237,0.3) 0%, transparent 70%)",
                     borderRadius: "50%",
                     zIndex: -1,
                     animation: "pulse 3s ease-in-out infinite",
@@ -189,11 +210,12 @@ export const FeatureProductHero = () => {
           </Grid>
         </Grid>
       </Box>
-      
+
       {/* CSS Animation */}
       <style jsx>{`
         @keyframes pulse {
-          0%, 100% {
+          0%,
+          100% {
             opacity: 0.3;
             transform: translate(-50%, -50%) scale(1);
           }
@@ -205,4 +227,4 @@ export const FeatureProductHero = () => {
       `}</style>
     </Box>
   );
-}; 
+};
