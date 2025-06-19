@@ -10,6 +10,7 @@ import { PATHS } from "@/router/paths";
 import { SortableGridPreview } from "../components/dnd/preview/sortable-grid-preview";
 import { SortableGridDragOverlayPreview } from "../components/dnd/preview/sortable-grid-drag-overlay-preview";
 import { SwapGridPreview } from "../components/dnd/preview/swap-grid-preivew";
+import { SortableVerticalPreview } from "../components/dnd/preview/vertical-preview";
 
 const sections = [
     {
@@ -35,6 +36,14 @@ const sections = [
             "A simple swap grid design with dummy content. You can replace the content with almost anything.",
         codeString: "",
         preview: <SwapGridPreview />,
+    },
+    {
+        id: "dnd-4",
+        title: "Vertical Grid",
+        description:
+            "A simple vertical grid design with dummy content. You can replace the content with almost anything.",
+        codeString: "",
+        preview: <SortableVerticalPreview />,
     },
 ];
 
