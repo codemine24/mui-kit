@@ -11,6 +11,7 @@ import { SortableGridPreview } from "../components/dnd/preview/sortable-grid-pre
 import { SortableGridDragOverlayPreview } from "../components/dnd/preview/sortable-grid-drag-overlay-preview";
 import { SwapGridPreview } from "../components/dnd/preview/swap-grid-preivew";
 import { SortableVerticalPreview } from "../components/dnd/preview/vertical-preview";
+import { SortableHorizontalPreview } from "../components/dnd/preview/horizontal-preview";
 
 const sections = [
     {
@@ -44,6 +45,14 @@ const sections = [
             "A simple vertical grid design with dummy content. You can replace the content with almost anything.",
         codeString: "",
         preview: <SortableVerticalPreview />,
+    },
+    {
+        id: "dnd-5",
+        title: "Horizontal Grid",
+        description:
+            "A simple horizontal grid design with dummy content. You can replace the content with almost anything.",
+        codeString: "",
+        preview: <SortableHorizontalPreview />,
     },
 ];
 

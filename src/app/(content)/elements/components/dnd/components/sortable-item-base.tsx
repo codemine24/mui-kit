@@ -51,6 +51,7 @@ function ItemBase({ item, stateProps, onRemove, ref, sx, ...other }: ItemBasePro
                 touchAction: 'manipulation',
                 zIndex: isOverlay ? 999 : 'auto',
                 transition: stateProps?.transition ?? undefined,
+                ...sx,
             }}
         >
             <Box

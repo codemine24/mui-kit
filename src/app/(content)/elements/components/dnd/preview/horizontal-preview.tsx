@@ -1,15 +1,12 @@
-import type { BoxProps } from '@mui/material/Box';
 import type { DropAnimation, UniqueIdentifier } from '@dnd-kit/core';
 import type { NewIndexGetter, AnimateLayoutChanges } from '@dnd-kit/sortable';
 
-import { useRef, useState, useEffect } from 'react';
+import { useState } from 'react';
 import {
-    arraySwap,
     arrayMove,
     useSortable,
     SortableContext,
     rectSortingStrategy,
-    rectSwappingStrategy,
     sortableKeyboardCoordinates,
     defaultAnimateLayoutChanges,
 } from '@dnd-kit/sortable';
@@ -29,11 +26,7 @@ import {
 import Box from '@mui/material/Box';
 import Portal from '@mui/material/Portal';
 import Button from '@mui/material/Button';
-
-// import { itemClasses } from './classes';
-import ItemBase from './sortable-item-base';
-
-// ----------------------------------------------------------------------
+import SortableItemBase from '../components/sortable-item-base';
 
 const dropAnimationConfig: DropAnimation = {
     sideEffects: defaultDropAnimationSideEffects({
@@ -41,20 +34,8 @@ const dropAnimationConfig: DropAnimation = {
     }),
 };
 
-type Props = BoxProps & {
-    swap?: boolean;
-    itemCount?: number;
-    layout?: 'grid' | 'vertical' | 'horizontal';
-};
-
-export function SortableContainer({
-    sx,
-    itemCount = 12,
-    swap = true,
-    layout = 'grid',
-    ...other
-}: Props) {
-    const createItems = Array.from({ length: itemCount }, (_, index) => index + 1);
+export function SortableHorizontalPreview() {
+    const createItems = Array.from({ length: 6 }, (_, index) => index + 1);
 
     const [items, setItems] = useState<UniqueIdentifier[]>(createItems);
 
@@ -64,49 +45,37 @@ export function SortableContainer({
         useSensor(KeyboardSensor, { coordinateGetter: sortableKeyboardCoordinates })
     );
 
-    const isFirstAnnouncement = useRef(true);
-
-    const randomId = Math.floor(Math.random() * 200);
-
     const [activeId, setActiveId] = useState<UniqueIdentifier | null>(null);
 
     const getIndex = (id: UniqueIdentifier) => items.indexOf(id);
-
     const activeIndex = activeId != null ? getIndex(activeId) : -1;
 
-    const strategy = swap ? rectSwappingStrategy : rectSortingStrategy;
-    const reorderItems = swap ? arraySwap : arrayMove;
+    // Get New Index
+    const getNewIndex = ({
+        id,
+        items: currentItems,
+        activeIndex: currentIndex,
+        overIndex,
+    }: NewIndexGetter['arguments']) =>
+        arrayMove(currentItems, currentIndex, overIndex).indexOf(id)
 
-    const getNewIndex = swap
-        ? ({
-            id,
-            items: currentItems,
-            activeIndex: currentIndex,
-            overIndex,
-        }: NewIndexGetter['arguments']) =>
-            reorderItems(currentItems, currentIndex, overIndex).indexOf(id)
-        : undefined;
-
-    useEffect(() => {
-        if (activeId == null) {
-            isFirstAnnouncement.current = true;
-        }
-    }, [activeId]);
-
+    //  Add Item
     const handleAdd = () => {
-        setItems([...items, randomId]);
+        setItems([...items, items.length + 1]);
     };
 
+    //  Remove Item
     const handleRemove = (id: UniqueIdentifier) => {
         const updatedItems = items.filter((item) => item !== id);
         setItems(updatedItems);
     };
 
+    //  Drag Overlay
     const renderDragOverlay = () => (
         <Portal>
             <DragOverlay dropAnimation={dropAnimationConfig}>
                 {activeId != null ? (
-                    <ItemBase item={items[activeIndex]} stateProps={{ dragOverlay: true }} />
+                    <SortableItemBase item={items[activeIndex]} stateProps={{ dragOverlay: true }} />
                 ) : null}
             </DragOverlay>
         </Portal>
@@ -114,11 +83,12 @@ export function SortableContainer({
 
     return (
         <Box
-            sx={[
-                { display: 'flex', alignItems: 'flex-end', flexDirection: 'column', width: "100%" },
-                ...(Array.isArray(sx) ? sx : [sx]),
-            ]}
-            {...other}
+            sx={{
+                display: 'flex',
+                alignItems: 'flex-end',
+                flexDirection: 'column',
+                width: "100%"
+            }}
         >
             <Button variant="contained" onClick={handleAdd}>
                 + Add item
@@ -142,32 +112,22 @@ export function SortableContainer({
                     if (over) {
                         const overIndex = getIndex(over.id);
                         if (activeIndex !== overIndex) {
-                            setItems((prev) => reorderItems(prev, activeIndex, overIndex));
+                            setItems((prev) => arrayMove(prev, activeIndex, overIndex));
                         }
                     }
                 }}
             >
-                <SortableContext items={items} strategy={strategy}>
+                <SortableContext items={items} strategy={rectSortingStrategy}>
                     <Box
                         component="ul"
                         sx={{
                             p: 0,
+                            pb: 4,
                             gap: 2,
                             width: 1,
-                            display: 'grid',
-                            gridTemplateColumns: {
-                                xs: 'repeat(2, 1fr)',
-                                sm: 'repeat(4, 1fr)',
-                            },
-                            // ...(layout === 'vertical' && {
-                            //     display: 'flex',
-                            //     flexDirection: 'column',
-                            // }),
-                            // ...(layout === 'horizontal' && {
-                            //     display: 'flex',
-                            //     overflowX: 'auto',
-                            //     flexDirection: 'row',
-                            // }),
+                            display: 'flex',
+                            overflowX: 'auto',
+                            flexDirection: 'row',
                         }}
                     >
                         {items.map((item, index) => (
@@ -213,12 +173,13 @@ function SortableGridItem({ id, index, onRemove, getNewIndex }: SortableItemProp
     } = useSortable({ id, getNewIndex, animateLayoutChanges });
 
     return (
-        <ItemBase
+        <SortableItemBase
             ref={setNodeRef}
             item={id}
             data-id={id}
             data-index={index}
             onRemove={onRemove}
+            sx={{ width: 180 }}
             stateProps={{
                 listeners,
                 transform,
