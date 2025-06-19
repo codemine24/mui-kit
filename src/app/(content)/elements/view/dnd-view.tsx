@@ -8,6 +8,7 @@ import { Box, Divider } from "@mui/material";
 import { useOnThisPage } from "@/contexts/on-thispage-context";
 import { PATHS } from "@/router/paths";
 import { SortableGridPreview } from "../components/dnd/preview/sortable-grid-preview";
+import { SortableGridDragOverlayPreview } from "../components/dnd/preview/sortable-grid-drag-overlay-preview";
 
 const sections = [
     {
@@ -17,6 +18,14 @@ const sections = [
             "A simple sortable grid design with dummy content. You can replace the content with almost anything.",
         codeString: "",
         preview: <SortableGridPreview />,
+    },
+    {
+        id: "dnd-2",
+        title: "Sortable Grid Drag Overlay",
+        description:
+            "A simple sortable grid design with dummy content. You can replace the content with almost anything.",
+        codeString: "",
+        preview: <SortableGridDragOverlayPreview />,
     },
 ];
 

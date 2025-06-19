@@ -1,4 +1,4 @@
-import type { UniqueIdentifier } from '@dnd-kit/core';
+import type { DropAnimation, UniqueIdentifier } from '@dnd-kit/core';
 import type { NewIndexGetter, AnimateLayoutChanges } from '@dnd-kit/sortable';
 
 import { useRef, useState, useEffect } from 'react';
@@ -14,18 +14,27 @@ import {
     useSensor,
     DndContext,
     useSensors,
+    DragOverlay,
     MouseSensor,
     TouchSensor,
     closestCenter,
     KeyboardSensor,
     MeasuringStrategy,
+    defaultDropAnimationSideEffects,
 } from '@dnd-kit/core';
 
 import Box from '@mui/material/Box';
+import Portal from '@mui/material/Portal';
 import Button from '@mui/material/Button';
 import SortableItemBase from '../components/sortable-item-base';
 
-export function SortableGridPreview() {
+const dropAnimationConfig: DropAnimation = {
+    sideEffects: defaultDropAnimationSideEffects({
+        styles: { active: { opacity: '0.5' } },
+    }),
+};
+
+export function SortableGridDragOverlayPreview() {
     const createItems = Array.from({ length: 12 }, (_, index) => index + 1);
 
     const [items, setItems] = useState<UniqueIdentifier[]>(createItems);
@@ -69,6 +78,17 @@ export function SortableGridPreview() {
         const updatedItems = items.filter((item) => item !== id);
         setItems(updatedItems);
     };
+
+    //  Drag Overlay
+    const renderDragOverlay = () => (
+        <Portal>
+            <DragOverlay dropAnimation={dropAnimationConfig}>
+                {activeId != null ? (
+                    <SortableItemBase item={items[activeIndex]} stateProps={{ dragOverlay: true }} />
+                ) : null}
+            </DragOverlay>
+        </Portal>
+    );
 
     return (
         <Box
@@ -131,6 +151,8 @@ export function SortableGridPreview() {
                         ))}
                     </Box>
                 </SortableContext>
+
+                {renderDragOverlay()}
             </DndContext>
         </Box>
     );
