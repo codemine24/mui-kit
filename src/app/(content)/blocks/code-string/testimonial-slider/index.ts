@@ -1,0 +1,1 @@
+export { testimonialSliderAdvancedString } from './testimonial-slider-advanced-string'; 
