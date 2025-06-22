@@ -8,16 +8,16 @@ import { PATHS } from "@/router/paths";
 import { Box, Divider } from "@mui/material";
 import React from "react";
 import { SoftAlertsCodeString } from "../code-string/alert/alert-1";
-import SoftAlerts from "../components/alert/alert-1";
+import Editor1 from "../components/editor/editor-1";
 
 const sections = [
   {
-    id: "alert-1",
-    title: "Soft",
+    id: "editor-1",
+    title: "Editor",
     description:
       "Use Material UI soft alerts with extended design. No extra package required.",
     codeString: SoftAlertsCodeString,
-    preview: <SoftAlerts />,
+    preview: <Editor1 />,
   },
 ];
 
