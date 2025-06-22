@@ -1,3 +1,4 @@
+export const Editor1LinkBlockCodeString = `
 import { useCallback, useState } from "react";
 
 import Box from "@mui/material/Box";
@@ -102,3 +103,4 @@ export function LinkBlock({ editor }: Pick<EditorToolbarProps, "editor">) {
     </>
   );
 }
+`;

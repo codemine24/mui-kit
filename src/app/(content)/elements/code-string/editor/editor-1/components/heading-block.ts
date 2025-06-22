@@ -1,3 +1,4 @@
+export const Editor1HeadingBlockCodeString = `
 import { useState } from "react";
 
 import ButtonBase, { buttonBaseClasses } from "@mui/material/ButtonBase";
@@ -53,7 +54,7 @@ export function HeadingBlock({ editor }: Pick<EditorToolbarProps, "editor">) {
           borderRadius: 0.75,
           typography: "body2",
           justifyContent: "space-between",
-          border: () => `solid 1px ${alpha(STATIC_COLOR, 0.2)}`,
+          border: () => \`solid 1px \${alpha(STATIC_COLOR, 0.2)}\`,
         }}
       >
         {(editor.isActive("heading", { level: 1 }) && "Heading 1") ||
@@ -84,12 +85,12 @@ export function HeadingBlock({ editor }: Pick<EditorToolbarProps, "editor">) {
           paper: {
             sx: {
               width: 120,
-              [`& .${listClasses.root}`]: {
+              [\`& .\${listClasses.root}\`]: {
                 gap: 0.5,
                 display: "flex",
                 flexDirection: "column",
               },
-              [`& .${buttonBaseClasses.root}`]: {
+              [\`& .\${buttonBaseClasses.root}\`]: {
                 px: 1,
                 width: 1,
                 height: 34,
@@ -138,3 +139,4 @@ export function HeadingBlock({ editor }: Pick<EditorToolbarProps, "editor">) {
     </>
   );
 }
+`;

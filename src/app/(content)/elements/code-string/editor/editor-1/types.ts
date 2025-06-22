@@ -1,3 +1,4 @@
+export const Editor1TypesCodeString = `
 import type { SxProps, Theme } from "@mui/material/styles";
 import type { Editor, EditorOptions, Extension } from "@tiptap/react";
 
@@ -39,3 +40,4 @@ export type EditorCodeHighlightBlockProps = {
     };
   };
 };
+`;

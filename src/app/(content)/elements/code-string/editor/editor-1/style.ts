@@ -1,3 +1,4 @@
+export const Editor1StyleCodeString = `
 import type { StackProps } from "@mui/material/Stack";
 
 import Stack from "@mui/material/Stack";
@@ -20,11 +21,11 @@ export const StyledRoot = styled(Stack, {
 })<StyledRootProps>(({ error, disabled, fullScreen, theme }) => ({
   minHeight: 240,
   borderRadius: theme.shape.borderRadius,
-  border: `solid 1px ${alpha(STATIC_COLOR, 0.2)}`,
+  border: \`solid 1px \${alpha(STATIC_COLOR, 0.2)}\`,
   scrollbarWidth: "thin",
-  scrollbarColor: `${alpha(STATIC_COLOR, 0.4)} ${alpha(STATIC_COLOR, 0.08)}`,
+  scrollbarColor: \`\${alpha(STATIC_COLOR, 0.4)} \${alpha(STATIC_COLOR, 0.08)}\`,
   ...(error && {
-    border: `solid 1px ${theme.palette.error.main}`,
+    border: \`solid 1px \${theme.palette.error.main}\`,
   }),
   ...(disabled && {
     opacity: 0.48,
@@ -36,11 +37,11 @@ export const StyledRoot = styled(Stack, {
     position: "fixed",
     zIndex: theme.zIndex.modal,
     maxHeight: "unset !important",
-    width: `calc(100% - ${32}px)`,
-    height: `calc(100% - ${32}px)`,
+    width: \`calc(100% - \${32}px)\`,
+    height: \`calc(100% - \${32}px)\`,
     backgroundColor: theme.palette.background.default,
   }),
-  [`& .${editorClasses.content.placeholder}`]: {
+  [\`& .\${editorClasses.content.placeholder}\`]: {
     "&:first-of-type::before": {
       ...theme.typography.body2,
       height: 0,
@@ -50,7 +51,7 @@ export const StyledRoot = styled(Stack, {
       color: theme.palette.text.disabled,
     },
   },
-  [`& .${editorClasses.content.root}`]: {
+  [\`& .\${editorClasses.content.root}\`]: {
     display: "flex",
     flex: "1 1 auto",
     overflowY: "auto",
@@ -78,11 +79,11 @@ export const StyledRoot = styled(Stack, {
       h5: { ...theme.typography.h5, marginTop: 24, marginBottom: 8 },
       h6: { ...theme.typography.h6, marginTop: 24, marginBottom: 8 },
       p: { ...theme.typography.body1, marginBottom: "1.25rem" },
-      [`& .${editorClasses.content.heading}`]: {},
-      [`& .${editorClasses.content.link}`]: {
+      [\`& .\${editorClasses.content.heading}\`]: {},
+      [\`& .\${editorClasses.content.link}\`]: {
         color: theme.palette.primary.main,
       },
-      [`& .${editorClasses.content.hr}`]: {
+      [\`& .\${editorClasses.content.hr}\`]: {
         flexShrink: 0,
         borderWidth: 0,
         margin: "2em 0",
@@ -92,24 +93,24 @@ export const StyledRoot = styled(Stack, {
         borderBottomWidth: "thin",
         borderColor: theme.palette.divider,
       },
-      [`& .${editorClasses.content.image}`]: {
+      [\`& .\${editorClasses.content.image}\`]: {
         width: "100%",
         height: "auto",
         maxWidth: "100%",
         margin: "auto auto 1.25em",
       },
-      [`& .${editorClasses.content.bulletList}`]: {
+      [\`& .\${editorClasses.content.bulletList}\`]: {
         paddingLeft: 16,
         listStyleType: "disc",
       },
-      [`& .${editorClasses.content.orderedList}`]: {
+      [\`& .\${editorClasses.content.orderedList}\`]: {
         paddingLeft: 16,
       },
-      [`& .${editorClasses.content.listItem}`]: {
+      [\`& .\${editorClasses.content.listItem}\`]: {
         lineHeight: 2,
         "& > p": { margin: 0 },
       },
-      [`& .${editorClasses.content.blockquote}`]: {
+      [\`& .\${editorClasses.content.blockquote}\`]: {
         lineHeight: 1.5,
         fontSize: "1.5em",
         margin: "24px auto",
@@ -117,7 +118,7 @@ export const StyledRoot = styled(Stack, {
         fontFamily: "Georgia, serif",
         padding: theme.spacing(3, 3, 3, 8),
         color: theme.palette.text.secondary,
-        borderLeft: `solid 8px ${alpha(STATIC_COLOR, 0.08)}`,
+        borderLeft: \`solid 8px \${alpha(STATIC_COLOR, 0.08)}\`,
         [theme.breakpoints.up("md")]: {
           width: "100%",
           maxWidth: 640,
@@ -137,14 +138,14 @@ export const StyledRoot = styled(Stack, {
           color: theme.palette.text.disabled,
         },
       },
-      [`& .${editorClasses.content.codeInline}`]: {
+      [\`& .\${editorClasses.content.codeInline}\`]: {
         padding: theme.spacing(0.25, 0.5),
         color: theme.palette.text.secondary,
         fontSize: theme.typography.body2.fontSize,
         borderRadius: theme.shape.borderRadius / 2,
         backgroundColor: alpha(STATIC_COLOR, 0.2),
       },
-      [`& .${editorClasses.content.codeBlock}`]: {
+      [\`& .\${editorClasses.content.codeBlock}\`]: {
         position: "relative",
         "& pre": {
           overflowX: "auto",
@@ -155,7 +156,7 @@ export const StyledRoot = styled(Stack, {
           fontFamily: "'JetBrainsMono', monospace",
           "& code": { fontSize: theme.typography.body2.fontSize },
         },
-        [`& .${editorClasses.content.langSelect}`]: {
+        [\`& .\${editorClasses.content.langSelect}\`]: {
           top: 8,
           right: 8,
           zIndex: 1,
@@ -172,3 +173,4 @@ export const StyledRoot = styled(Stack, {
     },
   },
 }));
+`;

@@ -1,20 +1,18 @@
-import { useState, useCallback } from 'react';
+import { useCallback, useState } from "react";
 
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Popover from '@mui/material/Popover';
-import TextField from '@mui/material/TextField';
-import Typography from '@mui/material/Typography';
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Popover from "@mui/material/Popover";
+import TextField from "@mui/material/TextField";
+import Typography from "@mui/material/Typography";
 
-import { editorClasses } from '../classes';
-import { ToolbarItem } from './toolbar-item';
+import { editorClasses } from "../classes";
+import { ToolbarItem } from "./toolbar-item";
 
-import type { EditorToolbarProps } from '../types';
+import type { EditorToolbarProps } from "../types";
 
-// ----------------------------------------------------------------------
-
-export function ImageBlock({ editor }: Pick<EditorToolbarProps, 'editor'>) {
-  const [url, setUrl] = useState('');
+export function ImageBlock({ editor }: Pick<EditorToolbarProps, "editor">) {
+  const [url, setUrl] = useState("");
 
   const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
 
@@ -50,11 +48,11 @@ export function ImageBlock({ editor }: Pick<EditorToolbarProps, 'editor'>) {
       />
 
       <Popover
-        id={anchorEl ? 'simple-popover' : undefined}
+        id={anchorEl ? "simple-popover" : undefined}
         open={!!anchorEl}
         anchorEl={anchorEl}
         onClose={handleClosePopover}
-        anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
+        anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
         slotProps={{ paper: { sx: { p: 2.5 } } }}
       >
         <Typography variant="subtitle2" sx={{ mb: 1 }}>

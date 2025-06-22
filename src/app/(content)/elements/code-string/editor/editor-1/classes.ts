@@ -1,3 +1,4 @@
+export const Editor1ClassesCodeString = `
 export const editorClasses = {
   root: "nml__editor__root",
   toolbar: {
@@ -41,3 +42,4 @@ export const editorClasses = {
     orderedList: "nml__editor__content__ordered__list",
   },
 };
+`;

@@ -1,3 +1,4 @@
+export const Editor1CodeString = `
 import CodeBlockLowlightExtension from "@tiptap/extension-code-block-lowlight";
 import ImageExtension from "@tiptap/extension-image";
 import LinkExtension from "@tiptap/extension-link";
@@ -142,7 +143,7 @@ export const Editor = forwardRef<HTMLDivElement, EditorProps>(
             disabled={!editable}
             fullScreen={fullScreen}
             className={editorClasses.root.concat(
-              className ? ` ${className}` : ""
+              className ? \`\${className}\` : ""
             )}
             sx={sx}
           >
@@ -173,3 +174,4 @@ export const Editor = forwardRef<HTMLDivElement, EditorProps>(
 );
 
 Editor.displayName = "Editor";
+`;

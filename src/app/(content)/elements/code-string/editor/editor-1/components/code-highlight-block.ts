@@ -1,3 +1,4 @@
+export const Editor1CodeHighlightBlock = `
 import "./code-highlight-block.css";
 
 import {
@@ -41,3 +42,4 @@ export function CodeHighlightBlock({
     </NodeViewWrapper>
   );
 }
+`;

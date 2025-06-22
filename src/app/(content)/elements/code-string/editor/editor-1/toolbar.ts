@@ -1,3 +1,4 @@
+export const Editor1ToolbarCodeString = `
 import Divider from "@mui/material/Divider";
 import Stack from "@mui/material/Stack";
 
@@ -39,7 +40,7 @@ export function Toolbar({
         bgcolor: "background.paper",
         borderTopRightRadius: "inherit",
         borderTopLeftRadius: "inherit",
-        borderBottom: () => `solid 1px ${alpha(STATIC_COLOR, 0.2)}`,
+        borderBottom: () => \`solid 1px \${alpha(STATIC_COLOR, 0.2)}\`,
       }}
     >
       <HeadingBlock editor={editor} />
@@ -255,3 +256,4 @@ export function Toolbar({
     </Stack>
   );
 }
+`;

@@ -1,3 +1,4 @@
+export const Editor1ToolbarItemCodeString = `
 import type { ButtonBaseProps } from "@mui/material/ButtonBase";
 
 import ButtonBase from "@mui/material/ButtonBase";
@@ -38,3 +39,4 @@ export function ToolbarItem({
     </ButtonBase>
   );
 }
+`;
