@@ -7,8 +7,14 @@ import { useOnThisPage } from "@/contexts/on-thispage-context";
 import { PATHS } from "@/router/paths";
 import { Box, Divider } from "@mui/material";
 import React from "react";
-import { testimonialSliderAdvancedString } from "../code-string/testimonial-slider";
+import {
+  testimonialSliderAdvancedString,
+  testimonialJourneyString,
+  testimonialSimpleString,
+} from "../code-string/testimonial-slider";
 import { TestimonialSliderAdvancedPreview } from "../components/testimonial-slider/testimonial-slider-advanced-preview";
+import { TestimonialJourneyPreview } from "../components/testimonial-slider/testimonial-journey-preview";
+import { TestimonialSimplePreview } from "../components/testimonial-slider/testimonial-simple-preview";
 
 const sections = [
   {
@@ -18,6 +24,21 @@ const sections = [
       "A sophisticated testimonial slider with autoplay, manual controls, and a modern, engaging design.",
     codeString: testimonialSliderAdvancedString,
     preview: <TestimonialSliderAdvancedPreview />,
+  },
+  {
+    id: "testimonial-journey",
+    title: "Testimonial Journey",
+    description:
+      "A sophisticated testimonial slider with autoplay, manual controls, and a modern, engaging design.",
+    codeString: testimonialJourneyString,
+    preview: <TestimonialJourneyPreview />,
+  },
+  {
+    id: "testimonial-simple",
+    title: "Simple Testimonial Slider",
+    description: "A minimal and clean testimonial slider with autoplay and simple navigation.",
+    codeString: testimonialSimpleString,
+    preview: <TestimonialSimplePreview />,
   },
 ];
 

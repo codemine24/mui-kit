@@ -14,6 +14,9 @@ import { FeatureProductSimplePreview } from "../components/feature-product/featu
 import { FeatureProductWithCarouselPreview } from "../components/feature-product/feature-product-with-carousel-preview";
 import { FeaturedProductMinimalAnimationPreview } from "../components/feature-product/featured-product-minimal-animation-preview";
 import { NewsletterSubscriptionHorizontal } from "../components/newsletter-subscription/newsletter-subscription-horizontal-preview";
+import { NewsletterSubscriptionModernPreview } from "../components/newsletter-subscription/newsletter-subscription-modern-preview";
+import { NewsletterSubscriptionEcosystemPreview } from "../components/newsletter-subscription/newsletter-subscription-ecosystem-preview";
+import { NewsletterSubscriptionLiquidPreview } from "../components/newsletter-subscription/newsletter-subscription-liquid-preview";
 
 const sections = [
   {
@@ -22,24 +25,24 @@ const sections = [
     description:
       "Simple newsletter subscription section with email input and subscribe button.",
     codeString: featureProductSimpleString,
-    preview: <NewsletterSubscriptionHorizontal />,
+    preview: <NewsletterSubscriptionModernPreview />,
   },
-//   {
-//     id: "feature-product-2",
-//     title: "Product with carousel",
-//     description:
-//       "Featured product section with customer feedback carousel. Includes product image, description, ratings, and testimonials.",
-//     codeString: featureProductWithCarouselString,
-//     preview: <FeatureProductWithCarouselPreview />,
-//   },
-//   {
-//     id: "feature-product-3",
-//     title: "Featured product with minimal animation",
-//     description:
-//       "Add minimal hover animation to your featured product section.",
-//     codeString: featureProductMinimalAnimationString,
-//     preview: <FeaturedProductMinimalAnimationPreview />,
-//   },
+  {
+    id: "feature-product-2",
+    title: "Product with carousel",
+    description:
+      "Featured product section with customer feedback carousel. Includes product image, description, ratings, and testimonials.",
+    codeString: featureProductWithCarouselString,
+    preview: <NewsletterSubscriptionEcosystemPreview />,
+  },
+  {
+    id: "feature-product-3",
+    title: "Featured product with minimal animation",
+    description:
+      "Add minimal hover animation to your featured product section.",
+    codeString: featureProductMinimalAnimationString,
+    preview: <NewsletterSubscriptionLiquidPreview />,
+  },
 ];
 
 export const NewsletterSubscriptionView = () => {

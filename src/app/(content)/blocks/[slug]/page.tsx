@@ -18,6 +18,7 @@ import { NewsletterSubscriptionView } from "../view/newsletter-subscription-view
 import { HeroView } from "../view/hero-view";
 import { TestimonialGridView } from "../view/testimonial-grid-view";
 import { TestimonialSliderView } from "../view/testimonial-slider-view";
+import { TeamView } from "../view/team-view";
 
 export async function generateStaticParams() {
   return blocksArr.map((element) => ({
@@ -44,6 +45,7 @@ const componentMap: Record<string, JSX.Element> = {
   "pricing-menu": <PricingMenuView />,
   "testimonial-grid": <TestimonialGridView />,
   "testimonial-slider": <TestimonialSliderView />,
+  team: <TeamView />,
   hero: <HeroView />,
 };
 
