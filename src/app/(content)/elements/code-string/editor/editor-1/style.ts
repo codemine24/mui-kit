@@ -1,5 +1,4 @@
-export const Editor1StyleCodeString = `
-import type { StackProps } from "@mui/material/Stack";
+export const Editor1StyleCodeString = `import type { StackProps } from "@mui/material/Stack";
 
 import Stack from "@mui/material/Stack";
 import { alpha, styled } from "@mui/material/styles";

@@ -1,5 +1,4 @@
-export const Editor1IndexPageCodeString = `
-import Stack from "@mui/material/Stack";
+export const Editor1IndexPageCodeString = `import Stack from "@mui/material/Stack";
 import { useState } from "react";
 import { Editor } from "./editor";
 
@@ -7,7 +6,8 @@ const defaultValue = \`
   <h2>Welcome to the Editor</h2>
   <h4>Getting Started</h4>
   <p>
-    This editor lets you create and format content with ease. You can add headings, style text, insert code, and much more.
+    This editor lets you create and format content with ease. 
+    You can add headings, style text, insert code, and much more.
   </p>
   <ul>
     <li>Use <code>&lt;h2&gt;</code> for main headings</li>
@@ -30,5 +30,4 @@ export default function Editor1() {
       />
     </Stack>
   );
-}
-`;
+}`;

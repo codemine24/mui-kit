@@ -1,5 +1,4 @@
-export const Editor1CodeString = `
-import CodeBlockLowlightExtension from "@tiptap/extension-code-block-lowlight";
+export const Editor1CodeString = `import CodeBlockLowlightExtension from "@tiptap/extension-code-block-lowlight";
 import ImageExtension from "@tiptap/extension-image";
 import LinkExtension from "@tiptap/extension-link";
 import PlaceholderExtension from "@tiptap/extension-placeholder";

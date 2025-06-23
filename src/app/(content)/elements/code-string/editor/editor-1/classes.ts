@@ -1,5 +1,4 @@
-export const Editor1ClassesCodeString = `
-export const editorClasses = {
+export const Editor1ClassesCodeString = `export const editorClasses = {
   root: "nml__editor__root",
   toolbar: {
     hr: "nml__editor__toolbar__hr",

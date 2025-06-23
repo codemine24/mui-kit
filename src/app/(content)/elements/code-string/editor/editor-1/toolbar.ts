@@ -1,5 +1,4 @@
-export const Editor1ToolbarCodeString = `
-import Divider from "@mui/material/Divider";
+export const Editor1ToolbarCodeString = `import Divider from "@mui/material/Divider";
 import Stack from "@mui/material/Stack";
 
 import { alpha } from "@mui/material/styles";

@@ -1,4 +1,5 @@
-export const Editor1ImageBlockCodeString = `
+export const Editor1ImageBlockCodeString = `// ../components/image-block.tsx
+
 import { useCallback, useState } from "react";
 
 import Box from "@mui/material/Box";

@@ -1,4 +1,5 @@
-export const Editor1CodeHighlightBlock = `
+export const Editor1CodeHighlightBlock = `//../components/code-highlight-block.tsx
+
 import "./code-highlight-block.css";
 
 import {
