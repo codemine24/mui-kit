@@ -1,4 +1,5 @@
-export const Editor1LinkBlockCodeString = `
+export const Editor1LinkBlockCodeString = `// ../components/link-block.tsx
+
 import { useCallback, useState } from "react";
 
 import Box from "@mui/material/Box";

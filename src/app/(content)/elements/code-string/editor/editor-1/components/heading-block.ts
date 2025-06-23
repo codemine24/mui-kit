@@ -1,4 +1,5 @@
-export const Editor1HeadingBlockCodeString = `
+export const Editor1HeadingBlockCodeString = `// ../components/heading-block.tsx
+
 import { useState } from "react";
 
 import ButtonBase, { buttonBaseClasses } from "@mui/material/ButtonBase";

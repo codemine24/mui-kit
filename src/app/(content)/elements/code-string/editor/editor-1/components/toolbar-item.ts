@@ -1,4 +1,5 @@
-export const Editor1ToolbarItemCodeString = `
+export const Editor1ToolbarItemCodeString = `// ../components/toolbar-item.tsx
+
 import type { ButtonBaseProps } from "@mui/material/ButtonBase";
 
 import ButtonBase from "@mui/material/ButtonBase";

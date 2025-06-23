@@ -348,6 +348,26 @@ export const CarouselView = () => {
             name: "embla-carousel",
             url: "https://www.npmjs.com/package/embla-carousel",
           },
+          {
+            name: "embla-carousel-auto-height",
+            url: "https://www.npmjs.com/package/embla-carousel-auto-height",
+          },
+          {
+            name: "embla-carousel-auto-scroll",
+            url: "https://www.npmjs.com/package/embla-carousel-auto-scroll",
+          },
+          {
+            name: "embla-carousel-autoplay",
+            url: "https://www.npmjs.com/package/embla-carousel-autoplay",
+          },
+          {
+            name: "embla-carousel-fade",
+            url: "https://www.npmjs.com/package/embla-carousel-fade",
+          },
+          {
+            name: "embla-carousel-react",
+            url: "https://www.npmjs.com/package/embla-carousel-react",
+          },
         ]}
       />
       {/* Carousel Section */}
