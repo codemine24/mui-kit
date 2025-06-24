@@ -8,6 +8,14 @@ import { PATHS } from "@/router/paths";
 import { Box, Divider } from "@mui/material";
 import React from "react";
 import { OTPBasicCodeString } from "../code-string/otp/otp-basic";
+import { OTPCustomStyledCodeString } from "../code-string/otp/otp-custom-styled";
+import { OTPFilledCodeString } from "../code-string/otp/otp-filled";
+import { OTPFractionCodeString } from "../code-string/otp/otp-fraction";
+import { OTPPasteableCodeString } from "../code-string/otp/otp-pasteable";
+import { OTPTextSupportedCodeString } from "../code-string/otp/otp-text-supported";
+import { OTPUnderlinedCodeString } from "../code-string/otp/otp-underlined";
+import { OTPWithPredefinedFieldCodeString } from "../code-string/otp/otp-with-predefined-field";
+import { OTPWithTimerAndResendCodeString } from "../code-string/otp/otp-with-timer-and-resend";
 import OTPBasic from "../components/otp/otp-basic";
 import OTPCustomStyled from "../components/otp/otp-custom-styled";
 import OTPFilled from "../components/otp/otp-filled";
@@ -32,7 +40,7 @@ const sections = [
     title: "Filled",
     description:
       "Filled input style with hover and focus effects. No extra package required.",
-    codeString: OTPBasicCodeString,
+    codeString: OTPFilledCodeString,
     preview: <OTPFilled />,
   },
   {
@@ -40,7 +48,7 @@ const sections = [
     title: "Underlined",
     description:
       "Underlined input style with hover and focus effects. No extra package required.",
-    codeString: OTPBasicCodeString,
+    codeString: OTPUnderlinedCodeString,
     preview: <OTPUnderlined />,
   },
   {
@@ -48,7 +56,7 @@ const sections = [
     title: "Custom styled",
     description:
       "Custom styled and animated otp fields. No extra package required.",
-    codeString: OTPBasicCodeString,
+    codeString: OTPCustomStyledCodeString,
     preview: <OTPCustomStyled />,
   },
   {
@@ -56,7 +64,7 @@ const sections = [
     title: "Pasteable",
     description:
       "Supports pasting full OTP codes in one go. No extra package required.",
-    codeString: OTPBasicCodeString,
+    codeString: OTPPasteableCodeString,
     preview: <OTPPasteable />,
   },
   {
@@ -64,14 +72,14 @@ const sections = [
     title: "With timer and resend",
     description:
       "Complete verification flow with countdown timer and resend functionality. No extra package required.",
-    codeString: OTPBasicCodeString,
+    codeString: OTPWithTimerAndResendCodeString,
     preview: <OTPWithTimerAndResend />,
   },
   {
     id: "otp-7",
     title: "Text supported",
     description: "Supports text input. No extra package required.",
-    codeString: OTPBasicCodeString,
+    codeString: OTPTextSupportedCodeString,
     preview: <OTPTextSupported />,
   },
   {
@@ -79,7 +87,7 @@ const sections = [
     title: "Fractional",
     description:
       "Two groups of digits separated by a dash, with smart navigation between groups. No extra package required.",
-    codeString: OTPBasicCodeString,
+    codeString: OTPFractionCodeString,
     preview: <OTPFraction />,
   },
   {
@@ -87,7 +95,7 @@ const sections = [
     title: "With predefined field",
     description:
       "OTP fields can be fixed/predefined while others are editable. Fixed fields have dashed borders. No extra package required.",
-    codeString: OTPBasicCodeString,
+    codeString: OTPWithPredefinedFieldCodeString,
     preview: <OTPWithPredefinedField />,
   },
 ];
