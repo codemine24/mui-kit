@@ -9,6 +9,7 @@ import { Box, Divider } from "@mui/material";
 import React from "react";
 import { OTPBasicCodeString } from "../code-string/otp/otp-basic";
 import OTPBasic from "../components/otp/otp-basic";
+import OTPCustomStyled from "../components/otp/otp-custom-styled";
 import OTPFilled from "../components/otp/otp-filled";
 import OTPUnderlined from "../components/otp/otp-underlined";
 
@@ -36,6 +37,14 @@ const sections = [
       "Underlined input style with hover and focus effects. No extra package required.",
     codeString: OTPBasicCodeString,
     preview: <OTPUnderlined />,
+  },
+  {
+    id: "otp-4",
+    title: "Custom styled",
+    description:
+      "Custom styled and animated otp fields. No extra package required.",
+    codeString: OTPBasicCodeString,
+    preview: <OTPCustomStyled />,
   },
 ];
 
