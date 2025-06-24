@@ -8,16 +8,20 @@ import { PATHS } from "@/router/paths";
 import { Box, Divider } from "@mui/material";
 import React from "react";
 import { OTPBasicString } from "../code-string/otp/otp-basic-string";
-import { OTPCustomStyledCodeString } from "../code-string/otp/otp-custom-styled";
+import {
+  OTPCustomStyledString
+} from "../code-string/otp/otp-custom-styled-string";
 import { OTPFilledString } from "../code-string/otp/otp-filled-string";
 import { OTPFractionCodeString } from "../code-string/otp/otp-fraction";
 import { OTPPasteableCodeString } from "../code-string/otp/otp-pasteable";
 import { OTPTextSupportedCodeString } from "../code-string/otp/otp-text-supported";
-import { OTPUnderlinedString } from "../code-string/otp/otp-underlined";
+import { OTPUnderlinedString } from "../code-string/otp/otp-underlined-string";
 import { OTPWithPredefinedFieldCodeString } from "../code-string/otp/otp-with-predefined-field";
 import { OTPWithTimerAndResendCodeString } from "../code-string/otp/otp-with-timer-and-resend";
-import {OTPBasicPreview} from "../components/otp/otp-basic-preview";
-import OTPCustomStyled from "../components/otp/otp-custom-styled";
+import { OTPBasicPreview } from "../components/otp/otp-basic-preview";
+import {
+  OTPCustomStyledPreview,
+} from "../components/otp/otp-custom-styled-preview";
 import { OTPFilledPreview } from "../components/otp/otp-filled-preview";
 import OTPFraction from "../components/otp/otp-fraction";
 import OTPPasteable from "../components/otp/otp-pasteable";
@@ -52,9 +56,9 @@ const sections = [
     id: "otp-4",
     title: "Custom styled",
     description:
-      "Custom styled and animated otp fields. No extra package required.",
-    codeString: OTPCustomStyledCodeString,
-    preview: <OTPCustomStyled />,
+      "Border radius, hover effect, active color, everything is customized. If you want to control the style more deeply, this OTP variant is for you. ",
+    codeString: OTPCustomStyledString,
+    preview: <OTPCustomStyledPreview />,
   },
   {
     id: "otp-5",

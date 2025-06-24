@@ -3,7 +3,7 @@ import { useRef, useState } from "react";
 
 const length = 6;
 
-export default function OTPCustomStyled() {
+export const OTPCustomStyledPreview = () => {
   const [otp, setOtp] = useState<string[]>(new Array(length).fill(""));
   const [focusedIndex, setFocusedIndex] = useState<number | null>(null);
   const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
@@ -38,7 +38,6 @@ export default function OTPCustomStyled() {
             maxLength: 1,
             style: {
               textAlign: "center",
-              fontSize: "1.5rem",
               fontWeight: "bold",
             },
           }}
@@ -52,9 +51,13 @@ export default function OTPCustomStyled() {
           onBlur={() => setFocusedIndex(null)}
           variant="outlined"
           sx={{
-            width: "60px",
+            width: { xs: 35, md: 45, lg: 60 },
+            "& input": {
+              fontSize: { xs: "1rem", md: "1.5rem" },
+              padding: { xs: 0.5, md: 1, lg: 2 },
+            },
             "& .MuiOutlinedInput-root": {
-              borderRadius: "12px",
+              borderRadius: { xs: "7px", md: "10px", lg: "12px" },
               transition: "all 0.3s ease",
               transform: focusedIndex === index ? "scale(1.05)" : "scale(1)",
               boxShadow:
@@ -81,4 +84,4 @@ export default function OTPCustomStyled() {
       ))}
     </Box>
   );
-}
+};
