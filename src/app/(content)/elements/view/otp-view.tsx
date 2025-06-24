@@ -10,22 +10,18 @@ import React from "react";
 import { OTPBasicString } from "../code-string/otp/otp-basic-string";
 import { OTPCustomStyledString } from "../code-string/otp/otp-custom-styled-string";
 import { OTPFilledString } from "../code-string/otp/otp-filled-string";
-import { OTPFractionCodeString } from "../code-string/otp/otp-fraction";
+import { OTPFractionString } from "../code-string/otp/otp-fraction-string";
 import { OTPPasteableString } from "../code-string/otp/otp-pasteable-string";
-import {
-  OTPTextSupportedString
-} from "../code-string/otp/otp-text-supported-string";
+import { OTPTextSupportedString } from "../code-string/otp/otp-text-supported-string";
 import { OTPUnderlinedString } from "../code-string/otp/otp-underlined-string";
 import { OTPWithPredefinedFieldCodeString } from "../code-string/otp/otp-with-predefined-field";
 import { OTPWithTimerAndResendString } from "../code-string/otp/otp-with-timer-and-resend-string";
 import { OTPBasicPreview } from "../components/otp/otp-basic-preview";
 import { OTPCustomStyledPreview } from "../components/otp/otp-custom-styled-preview";
 import { OTPFilledPreview } from "../components/otp/otp-filled-preview";
-import OTPFraction from "../components/otp/otp-fraction";
+import { OTPFractionPreview } from "../components/otp/otp-fraction-preview";
 import { OTPPasteablePreview } from "../components/otp/otp-pasteable-preview";
-import {
-  OTPTextSupportedPreview,
-} from "../components/otp/otp-text-supported-preview";
+import { OTPTextSupportedPreview } from "../components/otp/otp-text-supported-preview";
 import { OTPUnderlinedPreview } from "../components/otp/otp-underlined-preview";
 import OTPWithPredefinedField from "../components/otp/otp-with-predefined-field";
 import { OTPWithTimerAndResendPreview } from "../components/otp/otp-with-timer-and-resend-preview";
@@ -88,9 +84,9 @@ const sections = [
     id: "otp-8",
     title: "Fractional",
     description:
-      "Two groups of digits separated by a dash, with smart navigation between groups. No extra package required.",
-    codeString: OTPFractionCodeString,
-    preview: <OTPFraction />,
+      "You can divide the OTP fields into separate groups. Here we've divided into 2 groups. Try pasting this code 123456",
+    codeString: OTPFractionString,
+    preview: <OTPFractionPreview />,
   },
   {
     id: "otp-9",

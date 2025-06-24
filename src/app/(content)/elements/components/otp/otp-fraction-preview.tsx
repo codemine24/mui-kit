@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 const firstLength = 2;
 const secondLength = 4;
 
-export default function OTPFraction() {
+export const OTPFractionPreview = () => {
   const [firstGroup, setFirstGroup] = useState<string[]>(
     new Array(firstLength).fill("")
   );
@@ -139,7 +139,7 @@ export default function OTPFraction() {
 
   return (
     <Box>
-      <Box display="flex" alignItems="center" gap={2} mb={2}>
+      <Box display="flex" alignItems="center" gap={{ xs: 1, md: 2 }}>
         {/* First Group */}
         <Box display="flex" gap={1}>
           {firstGroup.map((data, index) => (
@@ -151,7 +151,6 @@ export default function OTPFraction() {
                 maxLength: 1,
                 style: {
                   textAlign: "center",
-                  fontSize: "1.5rem",
                   fontWeight: "bold",
                 },
               }}
@@ -164,7 +163,11 @@ export default function OTPFraction() {
               onFocus={(e) => e.target.select()}
               variant="outlined"
               sx={{
-                width: "60px",
+                width: { xs: 35, md: 45, lg: 60 },
+                "& input": {
+                  fontSize: { xs: "1rem", md: "1.5rem" },
+                  padding: { xs: 0.8, md: 1, lg: 2 },
+                },
                 "& .MuiOutlinedInput-root": {
                   "& fieldset": {
                     borderColor: data ? "#4caf50" : "grey.400",
@@ -197,7 +200,6 @@ export default function OTPFraction() {
                 maxLength: 1,
                 style: {
                   textAlign: "center",
-                  fontSize: "1.5rem",
                   fontWeight: "bold",
                 },
               }}
@@ -210,7 +212,11 @@ export default function OTPFraction() {
               onFocus={(e) => e.target.select()}
               variant="outlined"
               sx={{
-                width: "60px",
+                width: { xs: 35, md: 45, lg: 60 },
+                "& input": {
+                  fontSize: { xs: "1rem", md: "1.5rem" },
+                  padding: { xs: 0.8, md: 1, lg: 2 },
+                },
                 "& .MuiOutlinedInput-root": {
                   "& fieldset": {
                     borderColor: data ? "#4caf50" : "grey.400",
@@ -232,4 +238,4 @@ export default function OTPFraction() {
       )}
     </Box>
   );
-}
+};
