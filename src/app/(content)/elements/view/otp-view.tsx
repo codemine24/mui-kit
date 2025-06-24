@@ -11,6 +11,7 @@ import { OTPBasicCodeString } from "../code-string/otp/otp-basic";
 import OTPBasic from "../components/otp/otp-basic";
 import OTPCustomStyled from "../components/otp/otp-custom-styled";
 import OTPFilled from "../components/otp/otp-filled";
+import OTPPasteable from "../components/otp/otp-pasteable";
 import OTPUnderlined from "../components/otp/otp-underlined";
 
 const sections = [
@@ -45,6 +46,14 @@ const sections = [
       "Custom styled and animated otp fields. No extra package required.",
     codeString: OTPBasicCodeString,
     preview: <OTPCustomStyled />,
+  },
+  {
+    id: "otp-5",
+    title: "Pasteable",
+    description:
+      "Supports pasting full OTP codes in one go. No extra package required.",
+    codeString: OTPBasicCodeString,
+    preview: <OTPPasteable />,
   },
 ];
 
