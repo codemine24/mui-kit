@@ -13,6 +13,7 @@ export default function OTPPasteable() {
 
   const handleChange = (element: HTMLInputElement, index: number) => {
     if (isNaN(Number(element.value))) return false;
+    setError("");
 
     setOtp([...otp.map((d, idx) => (idx === index ? element.value : d))]);
 
@@ -82,7 +83,7 @@ export default function OTPPasteable() {
               width: "60px",
               "& .MuiOutlinedInput-root": {
                 "& fieldset": {
-                  borderColor: data ? "#4caf50" : "rgba(0, 0, 0, 0.23)",
+                  borderColor: data ? "#4caf50" : "grey.500",
                   borderWidth: data ? "2px" : "1px",
                 },
               },

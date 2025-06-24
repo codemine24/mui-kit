@@ -167,7 +167,7 @@ export default function OTPFraction() {
                 width: "60px",
                 "& .MuiOutlinedInput-root": {
                   "& fieldset": {
-                    borderColor: data ? "#4caf50" : "rgba(0, 0, 0, 0.23)",
+                    borderColor: data ? "#4caf50" : "grey.400",
                     borderWidth: data ? "2px" : "1px",
                   },
                 },
@@ -211,7 +211,7 @@ export default function OTPFraction() {
                 width: "60px",
                 "& .MuiOutlinedInput-root": {
                   "& fieldset": {
-                    borderColor: data ? "#4caf50" : "rgba(0, 0, 0, 0.23)",
+                    borderColor: data ? "#4caf50" : "grey.400",
                     borderWidth: data ? "2px" : "1px",
                   },
                 },

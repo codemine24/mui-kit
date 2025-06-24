@@ -63,7 +63,8 @@ export default function OTPCustomStyled() {
                   : "none",
               "& fieldset": {
                 borderWidth: "2px",
-                borderColor: data ? "primary.main" : "rgba(0, 0, 0, 0.23)",
+                borderColor: (theme) =>
+                  data ? theme.palette.primary.main : theme.palette.grey[400],
               },
               "&:hover fieldset": {
                 borderColor: "#1976d2",

@@ -50,12 +50,18 @@ export default function OTPFilled() {
             width: "60px",
             paddingTop: "10px",
             "& .MuiFilledInput-root": {
-              backgroundColor: "rgba(0, 0, 0, 0.04)",
+              backgroundColor: (theme) =>
+                theme.palette.mode === "light"
+                  ? theme.palette.grey[200]
+                  : theme.palette.grey[800],
               "&:hover": {
-                backgroundColor: "rgba(0, 0, 0, 0.08)",
+                backgroundColor: (theme) =>
+                  theme.palette.mode === "light"
+                    ? theme.palette.grey[300]
+                    : theme.palette.grey[700],
               },
               "&.Mui-focused": {
-                backgroundColor: "rgba(25, 118, 210, 0.08)",
+                backgroundColor: "rgba(25, 118, 210, 0.1)",
               },
             },
           }}
