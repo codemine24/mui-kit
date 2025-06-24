@@ -37,7 +37,7 @@ export default function OTPBasicPreview() {
   }, [otp, setCompletedOTP]);
 
   return (
-    <Stack alignItems="center" spacing={2} sx={{ width: "100%", py: 6 }}>
+    <Stack alignItems="center" spacing={2} sx={{ width: "100%" }}>
       <Box display="flex" gap={{ xs: 0.5, md: 1 }}>
         {otp.map((data, index) => (
           <TextField

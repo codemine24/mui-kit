@@ -1,4 +1,4 @@
-export const OTPFilledCodeString = `
+export const OTPFilledString = `
 import { Box, TextField } from "@mui/material";
 import { useRef, useState } from "react";
 

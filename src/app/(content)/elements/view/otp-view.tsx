@@ -9,7 +9,7 @@ import { Box, Divider } from "@mui/material";
 import React from "react";
 import { OTPBasicString } from "../code-string/otp/otp-basic-string";
 import { OTPCustomStyledCodeString } from "../code-string/otp/otp-custom-styled";
-import { OTPFilledCodeString } from "../code-string/otp/otp-filled";
+import { OTPFilledString } from "../code-string/otp/otp-filled-string";
 import { OTPFractionCodeString } from "../code-string/otp/otp-fraction";
 import { OTPPasteableCodeString } from "../code-string/otp/otp-pasteable";
 import { OTPTextSupportedCodeString } from "../code-string/otp/otp-text-supported";
@@ -18,7 +18,7 @@ import { OTPWithPredefinedFieldCodeString } from "../code-string/otp/otp-with-pr
 import { OTPWithTimerAndResendCodeString } from "../code-string/otp/otp-with-timer-and-resend";
 import OTPBasicPreview from "../components/otp/otp-basic-preview";
 import OTPCustomStyled from "../components/otp/otp-custom-styled";
-import OTPFilled from "../components/otp/otp-filled";
+import { OTPFilledPreview } from "../components/otp/otp-filled-preview";
 import OTPFraction from "../components/otp/otp-fraction";
 import OTPPasteable from "../components/otp/otp-pasteable";
 import OTPTextSupported from "../components/otp/otp-text-supported";
@@ -37,10 +37,9 @@ const sections = [
   {
     id: "otp-2",
     title: "Filled",
-    description:
-      "Filled input style with hover and focus effects. No extra package required.",
-    codeString: OTPFilledCodeString,
-    preview: <OTPFilled />,
+    description: "OTP filled with solid background.",
+    codeString: OTPFilledString,
+    preview: <OTPFilledPreview />,
   },
   {
     id: "otp-3",
@@ -116,7 +115,7 @@ export const OTPView = () => {
       />
       <PageTitle
         title="OTP"
-        description="OTP field with extended design, and functionality. "
+        description="Functional OTP fields fully compatible with Material UI. No extra packages required. "
       />
 
       <Divider sx={{ my: 4 }} />

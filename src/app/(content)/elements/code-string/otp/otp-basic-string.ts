@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 
 const length = 6;
 
-export default function OTPBasic() {
+export default function OTPBasicPreview() {
   const [otp, setOtp] = useState<string[]>(new Array(length).fill(""));
   const [completedOTP, setCompletedOTP] = useState<string>("");
 
@@ -37,7 +37,7 @@ export default function OTPBasic() {
   }, [otp, setCompletedOTP]);
 
   return (
-    <Stack alignItems="center" spacing={2} sx={{ width: "100%", py: 6 }}>
+    <Stack alignItems="center" spacing={2} sx={{ width: "100%" }}>
       <Box display="flex" gap={{ xs: 0.5, md: 1 }}>
         {otp.map((data, index) => (
           <TextField
