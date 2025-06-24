@@ -11,6 +11,7 @@ import { OTPBasicCodeString } from "../code-string/otp/otp-basic";
 import OTPBasic from "../components/otp/otp-basic";
 import OTPCustomStyled from "../components/otp/otp-custom-styled";
 import OTPFilled from "../components/otp/otp-filled";
+import OTPFraction from "../components/otp/otp-fraction";
 import OTPPasteable from "../components/otp/otp-pasteable";
 import OTPTextSupported from "../components/otp/otp-text-supported";
 import OTPUnderlined from "../components/otp/otp-underlined";
@@ -71,6 +72,14 @@ const sections = [
     description: "Supports text input. No extra package required.",
     codeString: OTPBasicCodeString,
     preview: <OTPTextSupported />,
+  },
+  {
+    id: "otp-8",
+    title: "Fractional",
+    description:
+      "Two groups of digits separated by a dash, with smart navigation between groups. No extra package required.",
+    codeString: OTPBasicCodeString,
+    preview: <OTPFraction />,
   },
 ];
 
