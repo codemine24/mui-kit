@@ -8,23 +8,19 @@ import { PATHS } from "@/router/paths";
 import { Box, Divider } from "@mui/material";
 import React from "react";
 import { OTPBasicString } from "../code-string/otp/otp-basic-string";
-import {
-  OTPCustomStyledString
-} from "../code-string/otp/otp-custom-styled-string";
+import { OTPCustomStyledString } from "../code-string/otp/otp-custom-styled-string";
 import { OTPFilledString } from "../code-string/otp/otp-filled-string";
 import { OTPFractionCodeString } from "../code-string/otp/otp-fraction";
-import { OTPPasteableCodeString } from "../code-string/otp/otp-pasteable";
+import { OTPPasteableString } from "../code-string/otp/otp-pasteable-string";
 import { OTPTextSupportedCodeString } from "../code-string/otp/otp-text-supported";
 import { OTPUnderlinedString } from "../code-string/otp/otp-underlined-string";
 import { OTPWithPredefinedFieldCodeString } from "../code-string/otp/otp-with-predefined-field";
 import { OTPWithTimerAndResendCodeString } from "../code-string/otp/otp-with-timer-and-resend";
 import { OTPBasicPreview } from "../components/otp/otp-basic-preview";
-import {
-  OTPCustomStyledPreview,
-} from "../components/otp/otp-custom-styled-preview";
+import { OTPCustomStyledPreview } from "../components/otp/otp-custom-styled-preview";
 import { OTPFilledPreview } from "../components/otp/otp-filled-preview";
 import OTPFraction from "../components/otp/otp-fraction";
-import OTPPasteable from "../components/otp/otp-pasteable";
+import { OTPPasteablePreview } from "../components/otp/otp-pasteable-preview";
 import OTPTextSupported from "../components/otp/otp-text-supported";
 import { OTPUnderlinedPreview } from "../components/otp/otp-underlined-preview";
 import OTPWithPredefinedField from "../components/otp/otp-with-predefined-field";
@@ -64,9 +60,9 @@ const sections = [
     id: "otp-5",
     title: "Pasteable",
     description:
-      "Supports pasting full OTP codes in one go. No extra package required.",
-    codeString: OTPPasteableCodeString,
-    preview: <OTPPasteable />,
+      "You can paste entire OTP at once instead of one by one. Try pasting this code 123456",
+    codeString: OTPPasteableString,
+    preview: <OTPPasteablePreview />,
   },
   {
     id: "otp-6",

@@ -1,10 +1,10 @@
-import { CheckCircle, Error } from "@mui/icons-material";
+export const OTPPasteableString = `import { CheckCircle, Error } from "@mui/icons-material";
 import { Alert, Box, TextField } from "@mui/material";
 import { useEffect, useRef, useState } from "react";
 
 const length = 6;
 
-export default function OTPPasteable() {
+export const OTPPasteablePreview = () => {
   const [otp, setOtp] = useState<string[]>(new Array(length).fill(""));
   const [isComplete, setIsComplete] = useState(false);
   const [error, setError] = useState("");
@@ -59,7 +59,7 @@ export default function OTPPasteable() {
 
   return (
     <Box>
-      <Box display="flex" gap={1} mb={2}>
+      <Box display="flex" gap={{ xs: 0.5, md: 1 }}>
         {otp.map((data, index) => (
           <TextField
             key={index}
@@ -69,7 +69,6 @@ export default function OTPPasteable() {
               maxLength: 1,
               style: {
                 textAlign: "center",
-                fontSize: "1.5rem",
                 fontWeight: "bold",
               },
             }}
@@ -80,7 +79,11 @@ export default function OTPPasteable() {
             onFocus={(e) => e.target.select()}
             variant="outlined"
             sx={{
-              width: "60px",
+              width: { xs: 35, md: 45, lg: 60 },
+              "& input": {
+                fontSize: { xs: "1rem", md: "1.5rem" },
+                padding: { xs: 0.5, md: 1, lg: 2 },
+              },
               "& .MuiOutlinedInput-root": {
                 "& fieldset": {
                   borderColor: data ? "#4caf50" : "grey.500",
@@ -105,4 +108,4 @@ export default function OTPPasteable() {
       )}
     </Box>
   );
-}
+};`;
