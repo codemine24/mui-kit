@@ -12,6 +12,7 @@ import OTPBasic from "../components/otp/otp-basic";
 import OTPCustomStyled from "../components/otp/otp-custom-styled";
 import OTPFilled from "../components/otp/otp-filled";
 import OTPPasteable from "../components/otp/otp-pasteable";
+import OTPTextSupported from "../components/otp/otp-text-supported";
 import OTPUnderlined from "../components/otp/otp-underlined";
 import OTPWithTimerAndResend from "../components/otp/otp-with-timer-and-resend";
 
@@ -63,6 +64,13 @@ const sections = [
       "Complete verification flow with countdown timer and resend functionality. No extra package required.",
     codeString: OTPBasicCodeString,
     preview: <OTPWithTimerAndResend />,
+  },
+  {
+    id: "otp-7",
+    title: "Text supported",
+    description: "Supports text input. No extra package required.",
+    codeString: OTPBasicCodeString,
+    preview: <OTPTextSupported />,
   },
 ];
 

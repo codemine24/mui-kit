@@ -56,7 +56,7 @@ export default function OTPUnderlined() {
             },
           }}
           autoComplete="one-time-code"
-          //   inputMode="numeric"
+          inputMode="numeric"
         />
       ))}
     </Box>

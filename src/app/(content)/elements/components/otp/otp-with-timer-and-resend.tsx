@@ -131,6 +131,7 @@ export default function OTPWithTimerAndResend() {
         ))}
       </Box>
 
+      {/* show resend button if otp is not received */}
       {!error && !isComplete && (
         <Box display="flex" justifyContent="space-between" alignItems="center">
           <Typography variant="body2" color="text.secondary">
@@ -147,12 +148,14 @@ export default function OTPWithTimerAndResend() {
         </Box>
       )}
 
+      {/* Show success message when otp is completed */}
       {isComplete && (
         <Alert severity="success" icon={<CheckCircle />}>
           OTP entered successfully!
         </Alert>
       )}
 
+      {/* Show error message with resend button */}
       {error && (
         <Alert
           severity="error"
