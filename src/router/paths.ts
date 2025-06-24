@@ -46,6 +46,7 @@ export const PATHS = {
     TOP_LOADER: "/elements/top-loader",
     UPLOAD: "/elements/upload",
     VIDEO: "/elements/video",
+    OTP: "/elements/otp",
   },
   DOCS: {
     ROOT: "/docs",
