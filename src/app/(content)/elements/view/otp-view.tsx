@@ -10,6 +10,7 @@ import React from "react";
 import { OTPBasicCodeString } from "../code-string/otp/otp-basic";
 import OTPBasic from "../components/otp/otp-basic";
 import OTPFilled from "../components/otp/otp-filled";
+import OTPUnderlined from "../components/otp/otp-underlined";
 
 const sections = [
   {
@@ -27,6 +28,14 @@ const sections = [
       "Filled input style with hover and focus effects. No extra package required.",
     codeString: OTPBasicCodeString,
     preview: <OTPFilled />,
+  },
+  {
+    id: "otp-3",
+    title: "Underlined",
+    description:
+      "Underlined input style with hover and focus effects. No extra package required.",
+    codeString: OTPBasicCodeString,
+    preview: <OTPUnderlined />,
   },
 ];
 
