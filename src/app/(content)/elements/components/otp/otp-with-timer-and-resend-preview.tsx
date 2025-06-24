@@ -1,4 +1,3 @@
-export const OTPWithTimerAndResendCodeString = `
 import {
   CheckCircle,
   Error,
@@ -7,12 +6,13 @@ import {
   Timer,
 } from "@mui/icons-material";
 import { Alert, Box, Button, Chip, TextField, Typography } from "@mui/material";
+import { Stack } from "@mui/system";
 import { useEffect, useRef, useState } from "react";
 
 const length = 6;
 const time = 60; // seconds
 
-export default function OTPWithTimerAndResend() {
+export const OTPWithTimerAndResendPreview = () => {
   const [otp, setOtp] = useState<string[]>(new Array(length).fill(""));
   const [timer, setTimer] = useState(time);
   const [canResend, setCanResend] = useState(false);
@@ -74,7 +74,7 @@ export default function OTPWithTimerAndResend() {
   const formatTime = (seconds: number) => {
     const mins = Math.floor(seconds / 60);
     const secs = seconds % 60;
-    return \`\${mins}:\${secs.toString().padStart(2, "0")}\`;
+    return `${mins}:${secs.toString().padStart(2, "0")}`;
   };
 
   useEffect(() => {
@@ -94,12 +94,21 @@ export default function OTPWithTimerAndResend() {
 
   return (
     <Box>
-      <Box display="flex" alignItems="center" gap={2} mb={3}>
-        <Security color="primary" />
-        <Typography variant="h6">Enter Verification Code</Typography>
+      <Box display="flex" alignItems="center" gap={{ xs: 1, md: 2 }} mb={3}>
+        <Stack direction={"row"} gap={0.5}>
+          <Security
+            color="primary"
+            sx={{ fontSize: { xs: "15px", md: "22px" } }}
+          />
+          <Typography
+            sx={{ fontSize: { xs: "12px", md: "16px", fontWeight: "bold" } }}
+          >
+            Enter Verification Code
+          </Typography>
+        </Stack>
         {!isComplete && (
           <Chip
-            icon={<Timer />}
+            icon={<Timer sx={{ fontSize: { xs: "15px", md: "22px" } }} />}
             label={formatTime(timer)}
             color={timer < Math.round(time / 4) ? "error" : "primary"}
             variant="outlined"
@@ -107,7 +116,7 @@ export default function OTPWithTimerAndResend() {
         )}
       </Box>
 
-      <Box display="flex" gap={1} mb={3}>
+      <Box display="flex" gap={{ xs: 0.5, md: 1 }}>
         {otp.map((data, index) => (
           <TextField
             key={index}
@@ -117,7 +126,6 @@ export default function OTPWithTimerAndResend() {
               maxLength: 1,
               style: {
                 textAlign: "center",
-                fontSize: "1.5rem",
                 fontWeight: "bold",
               },
             }}
@@ -127,7 +135,13 @@ export default function OTPWithTimerAndResend() {
             onFocus={(e) => e.target.select()}
             onPaste={(e) => handlePaste(e, index)}
             variant="outlined"
-            sx={{ width: "60px" }}
+            sx={{
+              width: { xs: 35, md: 45, lg: 60 },
+              "& input": {
+                fontSize: { xs: "1rem", md: "1.5rem" },
+                padding: { xs: 0.5, md: 1, lg: 2 },
+              },
+            }}
             autoComplete="one-time-code"
             inputMode="numeric"
           />
@@ -145,6 +159,7 @@ export default function OTPWithTimerAndResend() {
             onClick={handleResend}
             disabled={!canResend}
             startIcon={<Refresh />}
+            sx={{ fontSize: { xs: "12px", md: "14px", textTransform: "none" } }}
           >
             Resend Code
           </Button>
@@ -180,5 +195,4 @@ export default function OTPWithTimerAndResend() {
       )}
     </Box>
   );
-}
-`;
+};

@@ -15,7 +15,7 @@ import { OTPPasteableString } from "../code-string/otp/otp-pasteable-string";
 import { OTPTextSupportedCodeString } from "../code-string/otp/otp-text-supported";
 import { OTPUnderlinedString } from "../code-string/otp/otp-underlined-string";
 import { OTPWithPredefinedFieldCodeString } from "../code-string/otp/otp-with-predefined-field";
-import { OTPWithTimerAndResendCodeString } from "../code-string/otp/otp-with-timer-and-resend";
+import { OTPWithTimerAndResendString } from "../code-string/otp/otp-with-timer-and-resend-string";
 import { OTPBasicPreview } from "../components/otp/otp-basic-preview";
 import { OTPCustomStyledPreview } from "../components/otp/otp-custom-styled-preview";
 import { OTPFilledPreview } from "../components/otp/otp-filled-preview";
@@ -24,7 +24,7 @@ import { OTPPasteablePreview } from "../components/otp/otp-pasteable-preview";
 import OTPTextSupported from "../components/otp/otp-text-supported";
 import { OTPUnderlinedPreview } from "../components/otp/otp-underlined-preview";
 import OTPWithPredefinedField from "../components/otp/otp-with-predefined-field";
-import OTPWithTimerAndResend from "../components/otp/otp-with-timer-and-resend";
+import { OTPWithTimerAndResendPreview } from "../components/otp/otp-with-timer-and-resend-preview";
 
 const sections = [
   {
@@ -68,9 +68,9 @@ const sections = [
     id: "otp-6",
     title: "With timer and resend",
     description:
-      "Complete verification flow with countdown timer and resend functionality. No extra package required.",
-    codeString: OTPWithTimerAndResendCodeString,
-    preview: <OTPWithTimerAndResend />,
+      "You can add custom timer, resend otp button. Try pasting this code 123456",
+    codeString: OTPWithTimerAndResendString,
+    preview: <OTPWithTimerAndResendPreview />,
   },
   {
     id: "otp-7",
