@@ -59,6 +59,8 @@ export default function OTPFilled() {
               },
             },
           }}
+          autoComplete="one-time-code"
+          inputMode="numeric"
         />
       ))}
     </Box>

@@ -1,4 +1,4 @@
-import { CheckCircle } from "@mui/icons-material";
+import { CheckCircle, Error } from "@mui/icons-material";
 import { Alert, Box, TextField } from "@mui/material";
 import { useEffect, useRef, useState } from "react";
 
@@ -7,6 +7,8 @@ const length = 6;
 export default function OTPPasteable() {
   const [otp, setOtp] = useState<string[]>(new Array(length).fill(""));
   const [isComplete, setIsComplete] = useState(false);
+  const [error, setError] = useState("");
+
   const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
 
   const handleChange = (element: HTMLInputElement, index: number) => {
@@ -30,6 +32,7 @@ export default function OTPPasteable() {
 
   const handlePaste = (e: React.ClipboardEvent, index: number) => {
     e.preventDefault();
+    setError("");
     const pasteData = e.clipboardData.getData("text");
     const pasteArray = pasteData.slice(0, length - index).split("");
 
@@ -44,6 +47,8 @@ export default function OTPPasteable() {
 
       const nextIndex = Math.min(index + pasteArray.length, length - 1);
       inputRefs.current[nextIndex]?.focus();
+    } else {
+      setError("Invalid OTP, should be numeric only.");
     }
   };
 
@@ -82,12 +87,19 @@ export default function OTPPasteable() {
                 },
               },
             }}
+            autoComplete="one-time-code"
+            inputMode="numeric"
           />
         ))}
       </Box>
       {isComplete && (
         <Alert severity="success" icon={<CheckCircle />}>
           OTP entered successfully!
+        </Alert>
+      )}
+      {error && (
+        <Alert severity="error" icon={<Error />}>
+          {error}
         </Alert>
       )}
     </Box>

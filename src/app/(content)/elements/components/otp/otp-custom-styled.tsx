@@ -74,6 +74,8 @@ export default function OTPCustomStyled() {
               },
             },
           }}
+          autoComplete="one-time-code"
+          inputMode="numeric"
         />
       ))}
     </Box>
