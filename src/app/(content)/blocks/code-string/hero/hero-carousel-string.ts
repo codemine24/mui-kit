@@ -99,6 +99,13 @@ export const WatchHeroCarouselMui = () => {
         alignItems: "center",
         overflow: "hidden",
         transition: "background 1s cubic-bezier(0.25,0.46,0.45,0.94)",
+        '@media (max-width:600px)': {
+          minHeight: "100vh",
+          alignItems: "flex-start",
+          flexDirection: "column",
+          justifyContent: "flex-start",
+          padding: "16px 0",
+        },
       }}
     >
       {/* Status badges */}
@@ -114,6 +121,11 @@ export const WatchHeroCarouselMui = () => {
           color: current.accentColor,
           zIndex: 10,
           transition: "all 0.7s",
+          '@media (max-width:600px)': {
+            top: 12,
+            left: 12,
+            fontSize: 10,
+          },
         }}
       >
         {current.limited}
@@ -130,6 +142,11 @@ export const WatchHeroCarouselMui = () => {
           color: current.accentColor,
           zIndex: 10,
           transition: "all 0.7s",
+          '@media (max-width:600px)': {
+            top: 12,
+            right: 12,
+            fontSize: 10,
+          },
         }}
       >
         {current.available}
@@ -143,6 +160,10 @@ export const WatchHeroCarouselMui = () => {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
+          '@media (max-width:600px)': {
+            position: "relative",
+            minHeight: 220,
+          },
         }}
       >
         {/* Previous image (slide out) */}
@@ -190,6 +211,12 @@ export const WatchHeroCarouselMui = () => {
             animation: prevIndex !== index ? \`\${dir === "right" ? "slideInFromRight" : "slideInFromLeft"} 0.7s forwards\` : undefined,
             transition: "opacity 0.7s, transform 0.7s, filter 0.7s",
             filter: prevIndex === index ? "blur(0px)" : "blur(1px)",
+            '@media (max-width:600px)': {
+              position: "relative",
+              width: "100%",
+              justifyContent: "center",
+              alignItems: "center",
+            },
           }}
         >
           <Box>
@@ -202,6 +229,8 @@ export const WatchHeroCarouselMui = () => {
                 objectFit: "contain",
                 filter: prevIndex === index ? "blur(0px)" : "blur(0.5px)",
                 transition: "all 0.7s",
+                maxWidth: "100%",
+                height: "auto",
               }}
               priority
             />
@@ -218,6 +247,17 @@ export const WatchHeroCarouselMui = () => {
           transform: "translateY(-50%)",
           zIndex: 20,
           maxWidth: 520,
+          '@media (max-width:600px)': {
+            position: "relative",
+            left: "auto",
+            top: "auto",
+            transform: "none",
+            maxWidth: "100%",
+            width: "100%",
+            padding: "0 16px",
+            mt: 2,
+            zIndex: 30,
+          },
         }}
       >
         <Typography
@@ -229,6 +269,10 @@ export const WatchHeroCarouselMui = () => {
             mb: 3,
             fontWeight: 300,
             transition: "all 0.7s",
+            '@media (max-width:600px)': {
+              fontSize: 12,
+              mb: 1,
+            },
           }}
         >
           {current.subtitle}
@@ -244,6 +288,10 @@ export const WatchHeroCarouselMui = () => {
             color: "#fff",
             letterSpacing: 1,
             transition: "all 0.7s",
+            '@media (max-width:600px)': {
+              fontSize: "2rem",
+              mb: 2,
+            },
           }}
         >
           {current.title.map((titlePart, i) => (
@@ -272,6 +320,12 @@ export const WatchHeroCarouselMui = () => {
               color: '#000',
               borderColor: current.buttonColor,
             },
+            '@media (max-width:600px)': {
+              width: "100%",
+              fontSize: 11,
+              px: 2,
+              py: 1,
+            },
           }}
         >
           FIND OUT MORE
@@ -297,6 +351,15 @@ export const WatchHeroCarouselMui = () => {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
+          '@media (max-width:600px)': {
+            position: "relative",
+            right: "auto",
+            top: "auto",
+            transform: "none",
+            margin: "16px auto 0 auto",
+            width: 80,
+            height: 80,
+          },
         }}
       >
         <Image
@@ -307,9 +370,10 @@ export const WatchHeroCarouselMui = () => {
           style={{ 
             objectFit: "cover", 
             width: 120, 
-            height: 120,
             filter: prevIndex === index ? "blur(0px)" : "blur(0.3px)",
-            transition: "all 0.7s"
+            transition: "all 0.7s",
+            maxWidth: "100%",
+            height: "auto",
           }}
         />
         <Box
@@ -332,6 +396,10 @@ export const WatchHeroCarouselMui = () => {
               alignItems: "center",
               justifyContent: "center",
               ml: 1,
+              '@media (max-width:600px)': {
+                width: 24,
+                height: 24,
+              },
             }}
           >
             {/* Play triangle */}
@@ -343,6 +411,11 @@ export const WatchHeroCarouselMui = () => {
                 borderTop: "6px solid transparent",
                 borderBottom: "6px solid transparent",
                 ml: 0.5,
+                '@media (max-width:600px)': {
+                  borderLeft: "7px solid #fff",
+                  borderTop: "4px solid transparent",
+                  borderBottom: "4px solid transparent",
+                },
               }}
             />
           </Box>
@@ -358,6 +431,14 @@ export const WatchHeroCarouselMui = () => {
           transform: "translateX(-50%)",
           display: "flex",
           gap: 2,
+          '@media (max-width:600px)': {
+            position: "relative",
+            bottom: "auto",
+            left: "auto",
+            transform: "none",
+            mt: 2,
+            gap: 1,
+          },
         }}
       >
         {watches.map((_, i) => (
@@ -379,6 +460,10 @@ export const WatchHeroCarouselMui = () => {
                 background: i === index ? current.accentColor : "rgba(255,255,255,0.5)",
                 transform: "scale(1.1)",
               },
+              '@media (max-width:600px)': {
+                width: 10,
+                height: 10,
+              },
             }}
           />
         ))}
@@ -399,6 +484,18 @@ export const WatchHeroCarouselMui = () => {
           letterSpacing: 2,
           color: "rgba(255,255,255,0.5)",
           transition: "all 0.7s",
+          '@media (max-width:600px)': {
+            position: "relative",
+            bottom: "auto",
+            left: "auto",
+            right: "auto",
+            flexDirection: "column",
+            alignItems: "flex-start",
+            gap: 1,
+            fontSize: 10,
+            mt: 1,
+            px: 2,
+          },
         }}
       >
         <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
@@ -411,13 +508,17 @@ export const WatchHeroCarouselMui = () => {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
+              '@media (max-width:600px)': {
+                width: 12,
+                height: 12,
+              },
             }}
           >
             <Box sx={{ width: 6, height: 6, borderRadius: "50%", background: "rgba(255,255,255,0.5)" }} />
           </Box>
           <span>{current.title.join(" ")}</span>
         </Box>
-        <Box sx={{ display: "flex", alignItems: "center", gap: 4 }}>
+        <Box sx={{ display: "flex", alignItems: "center", gap: 4, '@media (max-width:600px)': { gap: 2 } }}>
           <Box sx={{ display: "flex", gap: 0.5 }}>
             {watches.map((_, i) => (
               <Box
@@ -428,6 +529,10 @@ export const WatchHeroCarouselMui = () => {
                   borderRadius: "50%",
                   background: i === index ? current.accentColor : "rgba(255,255,255,0.3)",
                   transition: "all 0.3s",
+                  '@media (max-width:600px)': {
+                    width: 5,
+                    height: 5,
+                  },
                 }}
               />
             ))}
@@ -442,6 +547,10 @@ export const WatchHeroCarouselMui = () => {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
+              '@media (max-width:600px)': {
+                width: 12,
+                height: 12,
+              },
             }}
           >
             <Box sx={{ width: 6, height: 6, borderRadius: "50%", background: "rgba(255,255,255,0.5)" }} />
@@ -449,18 +558,16 @@ export const WatchHeroCarouselMui = () => {
         </Box>
       </Box>
 
-      <Box
-        sx={{
-          '@keyframes slideInFromRight': {
-            from: { opacity: 0, transform: 'translateX(120px)' },
-            to: { opacity: 1, transform: 'translateX(0)' },
-          },
-          '@keyframes slideInFromLeft': {
-            from: { opacity: 0, transform: 'translateX(-120px)' },
-            to: { opacity: 1, transform: 'translateX(0)' },
-          },
-        }}
-      />
+      <style jsx global>{\`
+        @keyframes slideInFromRight {
+          from { opacity: 0; transform: translateX(120px); }
+          to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes slideInFromLeft {
+          from { opacity: 0; transform: translateX(-120px); }
+          to { opacity: 1; transform: translateX(0); }
+        }
+      \`}</style>
     </Box>
   )
-} `; 
+}`; 
