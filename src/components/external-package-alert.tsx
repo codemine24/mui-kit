@@ -1,6 +1,7 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { Alert } from "@mui/material";
 import { Box } from "@mui/material";
+import { useState } from "react";
 
 interface IProps {
   packages: {
@@ -9,10 +10,31 @@ interface IProps {
   }[];
 }
 export const ExternalPackageAlert = ({ packages }: IProps) => {
+  const [icon, setIcon] = useState<string>("solar:copy-line-duotone");
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(
+        `npm install ${packages.map((pkg) => pkg.name).join(" ")}`
+      );
+      setIcon("eva:checkmark-fill");
+      setTimeout(() => {
+        setIcon("solar:copy-line-duotone");
+      }, 2000);
+    } catch (err) {
+      console.error("Copy failed:", err);
+    }
+  };
   return (
     <Alert
       severity="warning"
-      icon={<Icon icon="typcn:info-outline" width={24} height={24} />}
+      icon={
+        <Box
+          sx={{ title: "Copy to clipboard", cursor: "pointer" }}
+          onClick={handleCopy}
+        >
+          <Icon icon={icon} width={24} height={24} />
+        </Box>
+      }
       sx={{
         padding: "0 1rem",
         mb: 2,

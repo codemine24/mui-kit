@@ -25,7 +25,7 @@ export const CodePreviewCopyWrapper: React.FC<CodePreviewWrapperProps> = ({
   const theme = useTheme();
   const isDarkMode = theme.palette.mode === "dark";
   const [tab, setTab] = useState<"preview" | "code">("preview");
-  const [icon, setIcon] = useState<string>("eva:copy-fill");
+  const [icon, setIcon] = useState<string>("solar:copy-line-duotone");
 
   const isMultiFile = Array.isArray(codeString);
   const [activeFile, setActiveFile] = useState(
