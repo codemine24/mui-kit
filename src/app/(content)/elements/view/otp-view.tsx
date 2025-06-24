@@ -15,6 +15,7 @@ import OTPFraction from "../components/otp/otp-fraction";
 import OTPPasteable from "../components/otp/otp-pasteable";
 import OTPTextSupported from "../components/otp/otp-text-supported";
 import OTPUnderlined from "../components/otp/otp-underlined";
+import OTPWithPredefinedField from "../components/otp/otp-with-predefined-field";
 import OTPWithTimerAndResend from "../components/otp/otp-with-timer-and-resend";
 
 const sections = [
@@ -80,6 +81,14 @@ const sections = [
       "Two groups of digits separated by a dash, with smart navigation between groups. No extra package required.",
     codeString: OTPBasicCodeString,
     preview: <OTPFraction />,
+  },
+  {
+    id: "otp-9",
+    title: "With predefined field",
+    description:
+      "OTP fields can be fixed/predefined while others are editable. Fixed fields have dashed borders. No extra package required.",
+    codeString: OTPBasicCodeString,
+    preview: <OTPWithPredefinedField />,
   },
 ];
 
