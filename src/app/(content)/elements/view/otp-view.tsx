@@ -14,7 +14,7 @@ import { OTPFractionString } from "../code-string/otp/otp-fraction-string";
 import { OTPPasteableString } from "../code-string/otp/otp-pasteable-string";
 import { OTPTextSupportedString } from "../code-string/otp/otp-text-supported-string";
 import { OTPUnderlinedString } from "../code-string/otp/otp-underlined-string";
-import { OTPWithPredefinedFieldCodeString } from "../code-string/otp/otp-with-predefined-field";
+import { OTPWithPredefinedFieldString } from "../code-string/otp/otp-with-predefined-field-string";
 import { OTPWithTimerAndResendString } from "../code-string/otp/otp-with-timer-and-resend-string";
 import { OTPBasicPreview } from "../components/otp/otp-basic-preview";
 import { OTPCustomStyledPreview } from "../components/otp/otp-custom-styled-preview";
@@ -23,7 +23,7 @@ import { OTPFractionPreview } from "../components/otp/otp-fraction-preview";
 import { OTPPasteablePreview } from "../components/otp/otp-pasteable-preview";
 import { OTPTextSupportedPreview } from "../components/otp/otp-text-supported-preview";
 import { OTPUnderlinedPreview } from "../components/otp/otp-underlined-preview";
-import OTPWithPredefinedField from "../components/otp/otp-with-predefined-field";
+import { OTPWithPredefinedFieldPreview } from "../components/otp/otp-with-predefined-field-preview";
 import { OTPWithTimerAndResendPreview } from "../components/otp/otp-with-timer-and-resend-preview";
 
 const sections = [
@@ -91,10 +91,9 @@ const sections = [
   {
     id: "otp-9",
     title: "With predefined field",
-    description:
-      "OTP fields can be fixed/predefined while others are editable. Fixed fields have dashed borders. No extra package required.",
-    codeString: OTPWithPredefinedFieldCodeString,
-    preview: <OTPWithPredefinedField />,
+    description: "You can use predefined OTP letter. ",
+    codeString: OTPWithPredefinedFieldString,
+    preview: <OTPWithPredefinedFieldPreview />,
   },
 ];
 

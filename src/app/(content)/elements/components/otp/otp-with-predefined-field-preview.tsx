@@ -5,7 +5,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 const length = 6;
 const fixedPositions = { 0: "G" };
 
-export default function OTPWithPredefinedField() {
+export const OTPWithPredefinedFieldPreview = () => {
   const [otp, setOtp] = useState<string[]>(() => {
     const initialOtp = new Array(length).fill("");
     // Set fixed values
@@ -132,7 +132,7 @@ export default function OTPWithPredefinedField() {
 
   return (
     <Box>
-      <Box display="flex" gap={1} mb={2}>
+      <Box display="flex" gap={{ xs: 0.5, md: 1 }}>
         {otp.map((data, index) => (
           <TextField
             key={index}
@@ -142,7 +142,6 @@ export default function OTPWithPredefinedField() {
               maxLength: 1,
               style: {
                 textAlign: "center",
-                fontSize: "1.5rem",
                 fontWeight: "bold",
                 cursor: isFixedPosition(index) ? "not-allowed" : "text",
               },
@@ -157,7 +156,11 @@ export default function OTPWithPredefinedField() {
             }
             variant="outlined"
             sx={{
-              width: "60px",
+              width: { xs: 35, md: 45, lg: 60 },
+              "& input": {
+                fontSize: { xs: "1rem", md: "1.5rem" },
+                padding: { xs: 0.8, md: 1, lg: 2 },
+              },
               "& .MuiOutlinedInput-root": {
                 borderRadius: "8px",
                 "& fieldset": {
@@ -188,4 +191,4 @@ export default function OTPWithPredefinedField() {
       )}
     </Box>
   );
-}
+};
