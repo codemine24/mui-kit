@@ -47,8 +47,7 @@ export const OTPBasicPreview = () => {
             inputProps={{
               maxLength: 1,
               style: {
-                textAlign: "center",
-                // fontSize: {},
+                textAlign: "center", 
                 fontWeight: "bold",
               },
             }}
@@ -61,7 +60,7 @@ export const OTPBasicPreview = () => {
               width: { xs: 35, md: 45, lg: 60 },
               "& input": {
                 fontSize: { xs: "1rem", md: "1.5rem" },
-                padding: { xs: 0.5, md: 1, lg: 2 },
+                padding: { xs: 0.8, md: 1, lg: 2 },
               },
             }}
             autoComplete="one-time-code"

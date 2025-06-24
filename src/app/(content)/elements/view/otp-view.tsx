@@ -12,7 +12,9 @@ import { OTPCustomStyledString } from "../code-string/otp/otp-custom-styled-stri
 import { OTPFilledString } from "../code-string/otp/otp-filled-string";
 import { OTPFractionCodeString } from "../code-string/otp/otp-fraction";
 import { OTPPasteableString } from "../code-string/otp/otp-pasteable-string";
-import { OTPTextSupportedCodeString } from "../code-string/otp/otp-text-supported";
+import {
+  OTPTextSupportedString
+} from "../code-string/otp/otp-text-supported-string";
 import { OTPUnderlinedString } from "../code-string/otp/otp-underlined-string";
 import { OTPWithPredefinedFieldCodeString } from "../code-string/otp/otp-with-predefined-field";
 import { OTPWithTimerAndResendString } from "../code-string/otp/otp-with-timer-and-resend-string";
@@ -21,7 +23,9 @@ import { OTPCustomStyledPreview } from "../components/otp/otp-custom-styled-prev
 import { OTPFilledPreview } from "../components/otp/otp-filled-preview";
 import OTPFraction from "../components/otp/otp-fraction";
 import { OTPPasteablePreview } from "../components/otp/otp-pasteable-preview";
-import OTPTextSupported from "../components/otp/otp-text-supported";
+import {
+  OTPTextSupportedPreview,
+} from "../components/otp/otp-text-supported-preview";
 import { OTPUnderlinedPreview } from "../components/otp/otp-underlined-preview";
 import OTPWithPredefinedField from "../components/otp/otp-with-predefined-field";
 import { OTPWithTimerAndResendPreview } from "../components/otp/otp-with-timer-and-resend-preview";
@@ -75,9 +79,10 @@ const sections = [
   {
     id: "otp-7",
     title: "Text supported",
-    description: "Supports text input. No extra package required.",
-    codeString: OTPTextSupportedCodeString,
-    preview: <OTPTextSupported />,
+    description:
+      "This OTP variant support text as well. Try pasting this code 12CD56",
+    codeString: OTPTextSupportedString,
+    preview: <OTPTextSupportedPreview />,
   },
   {
     id: "otp-8",
