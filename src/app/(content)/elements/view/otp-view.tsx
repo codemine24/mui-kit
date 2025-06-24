@@ -9,6 +9,7 @@ import { Box, Divider } from "@mui/material";
 import React from "react";
 import { OTPBasicCodeString } from "../code-string/otp/otp-basic";
 import OTPBasic from "../components/otp/otp-basic";
+import OTPFilled from "../components/otp/otp-filled";
 
 const sections = [
   {
@@ -18,6 +19,14 @@ const sections = [
       "Standard outlined otp fields with auto-focus navigation. No extra package required.",
     codeString: OTPBasicCodeString,
     preview: <OTPBasic />,
+  },
+  {
+    id: "otp-2",
+    title: "Filled",
+    description:
+      "Filled input style with hover and focus effects. No extra package required.",
+    codeString: OTPBasicCodeString,
+    preview: <OTPFilled />,
   },
 ];
 
