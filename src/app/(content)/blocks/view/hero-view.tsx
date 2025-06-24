@@ -8,33 +8,58 @@ import { PATHS } from "@/router/paths";
 import { Box, Divider } from "@mui/material";
 import React from "react";
 import { heroParalaxString } from "../code-string/hero/hero-paralax-string";
-import WatchHeroCarousel from "../components/hero/hero-carousel-preview";
+import { heroMinimalString } from "../code-string/hero/hero-minimal-string";
+import { heroModernString } from "../code-string/hero/hero-modern-string";
+import { heroCarouselString } from "../code-string/hero/hero-carousel-string";
+import { heroBasicString } from "../code-string/hero/hero-basic-string";
+import { heroSparkleString } from "../code-string/hero/hero-sparkle-string";
+import BasicHero from "../components/hero/hero-basic-preview";
+import { WatchHeroCarouselMui } from "../components/hero/hero-carouel";
+import { HeroMinimalPreview } from "../components/hero/hero-minimal-preview";
+import { HeroModernPreview } from "../components/hero/hero-modern-preview";
+import HeroSparklePreview from "../components/hero/hero-sparkle-preview";
 
 const sections = [
+  // {
+  //   id: "hero-sparkle",
+  //   title: "Hero with Sparkle Effects",
+  //   description:
+  //     "Animated hero section with sparkle effects, floating elements, and dynamic gradients.",
+  //   codeString: heroSparkleString,
+  //   preview: <HeroSparklePreview />,
+  // },
   {
-    id: "hero-paralax-1",
+    id: "hero-carousel",
+    title: "Featured product with carousel",
+    description:
+      "Featured product section with customer feedback carousel. Includes product image, description, ratings, and testimonials.",
+    codeString: heroCarouselString,
+    preview: <WatchHeroCarouselMui />,
+  },
+  {
+    id: "hero-paralax",
     title: "Hero Parallax",
     description:
       "Hero parallax section with image and text.",
     codeString: heroParalaxString,
-    preview: <WatchHeroCarousel />,
+    preview: <HeroModernPreview />,
   },
-//   {
-//     id: "feature-product-2",
-//     title: "Product with carousel",
-//     description:
-//       "Featured product section with customer feedback carousel. Includes product image, description, ratings, and testimonials.",
-//     codeString: featureProductWithCarouselString,
-//     preview: <FeatureProductWithCarouselPreview />,
-//   },
-//   {
-//     id: "feature-product-3",
-//     title: "Featured product with minimal animation",
-//     description:
-//       "Add minimal hover animation to your featured product section.",
-//     codeString: featureProductMinimalAnimationString,
-//     preview: <FeaturedProductMinimalAnimationPreview />,
-//   },
+  {
+    id: "hero-minimal",
+    title: "Hero Minimal",
+    description:
+      "Clean and minimal hero section with modern design and circular image elements.",
+    codeString: heroMinimalString,
+    preview: <HeroMinimalPreview />,
+  },
+  // {
+  //   id: "hero-basic",
+  //   title: "Hero Basic",
+  //   description:
+  //     "Simple and clean hero section with basic layout and typography.",
+  //   codeString: heroBasicString,
+  //   preview: <BasicHero />,
+  // },
 ];
 
 export const HeroView = () => {

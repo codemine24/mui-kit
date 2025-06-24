@@ -1,6 +1,6 @@
 'use client';
 
-import { Avatar, Box, Container, Typography } from '@mui/material';
+import { Avatar, Box, Container, Typography, useTheme, useMediaQuery } from '@mui/material';
 
 
 export const teamMembers = [
@@ -61,25 +61,34 @@ export const teamMembers = [
   ]; 
 
 export const TeamCirclePreview = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
   const centerMember = teamMembers[0];
   const surroundingMembers = teamMembers.slice(1);
+
+  // Responsive values
+  const radius = isMobile ? 150 : 210;
+  const centerAvatarSize = isMobile ? 64 : 96;
+  const surroundAvatarSize = isMobile ? 40 : 64;
+  const containerSize = isMobile ? 262 : 384;
 
   return (
     <Container
       component="section"
       sx={{ width: '100%', py: { xs: 8, md: 12, lg: 16 } }}
     >
-      <Box sx={{ mb: 16, textAlign: 'center' }}>
-        <Typography variant="h2" sx={{ fontWeight: 'bold' }}>
+      <Box sx={{ mb: { xs: 14, md: 18 }, textAlign: 'center' }}>
+        <Typography variant={isMobile ? 'h4' : 'h2'} sx={{ fontWeight: 'bold' }}>
           Our Circle
         </Typography>
-        <Typography sx={{ mx: 'auto', maxWidth: '700px', color: 'text.secondary' }}>
+        <Typography sx={{ mx: 'auto', maxWidth: '700px', color: 'text.secondary', fontSize: isMobile ? '1rem' : undefined }}>
           United by purpose, driven by passion
         </Typography>
       </Box>
 
-      <Box sx={{ position: 'relative', maxWidth: '42rem', mx: 'auto' }}>
-        <Box sx={{ position: 'relative', width: 384, height: 384, mx: 'auto' }}>
+      <Box sx={{ position: 'relative', maxWidth: containerSize, mx: 'auto', overflow: 'visible', mt: { xs: 10, md: 12 } }}>
+        <Box sx={{ position: 'relative', width: containerSize, height: containerSize, mx: 'auto' }}>
           {/* Center member */}
           <Box
             sx={{
@@ -89,14 +98,15 @@ export const TeamCirclePreview = () => {
               transform: 'translate(-50%, -50%)',
               zIndex: 10,
               textAlign: 'center',
+              
             }}
           >
             <Avatar
               src={centerMember.image}
               alt={centerMember.name}
               sx={{
-                width: 96,
-                height: 96,
+                width: centerAvatarSize,
+                height: centerAvatarSize,
                 mx: 'auto',
                 mb: 2,
                 border: 4,
@@ -109,10 +119,10 @@ export const TeamCirclePreview = () => {
             >
               {centerMember.initials}
             </Avatar>
-            <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
+            <Typography variant={isMobile ? 'subtitle1' : 'h6'} sx={{ fontWeight: 'bold' }}>
               {centerMember.name}
             </Typography>
-            <Typography variant="body2" sx={{ color: 'primary.main' }}>
+            <Typography variant="body2" sx={{ color: 'primary.main', fontSize: isMobile ? '0.9rem' : undefined }}>
               {centerMember.role}
             </Typography>
           </Box>
@@ -120,7 +130,6 @@ export const TeamCirclePreview = () => {
           {/* Surrounding members */}
           {surroundingMembers.map((member, index) => {
             const angle = -90 + (index * 360) / surroundingMembers.length;
-            const radius = 180;
             const x = Math.cos((angle * Math.PI) / 180) * radius;
             const y = Math.sin((angle * Math.PI) / 180) * radius;
 
@@ -140,8 +149,8 @@ export const TeamCirclePreview = () => {
                   src={member.image}
                   alt={member.name}
                   sx={{
-                    width: 64,
-                    height: 64,
+                    width: surroundAvatarSize,
+                    height: surroundAvatarSize,
                     mx: 'auto',
                     mb: 1,
                     border: 2,
@@ -157,11 +166,12 @@ export const TeamCirclePreview = () => {
                   {member.initials}
                 </Avatar>
                 <Typography
-                  variant="subtitle2"
+                  variant={isMobile ? 'body2' : 'subtitle2'}
                   sx={{
                     fontWeight: 'semibold',
                     opacity: 0,
                     transition: 'opacity 300ms',
+                    fontSize: isMobile ? '0.8rem' : undefined,
                     '.group:hover &': {
                       opacity: 1,
                     },
@@ -175,6 +185,7 @@ export const TeamCirclePreview = () => {
                     color: 'secondary.main',
                     opacity: 0,
                     transition: 'opacity 300ms',
+                    fontSize: isMobile ? '0.7rem' : undefined,
                     '.group:hover &': {
                       opacity: 1,
                     },
@@ -198,15 +209,14 @@ export const TeamCirclePreview = () => {
               opacity: 0.2,
               color: 'primary.light',
             }}
-            viewBox="0 0 384 384"
+            viewBox={`0 0 ${containerSize} ${containerSize}`}
           >
             {surroundingMembers.map((_, index) => {
               const angle = -90 + (index * 360) / surroundingMembers.length;
-              const radius = 180;
-              const x = Math.cos((angle * Math.PI) / 180) * radius + 192;
-              const y = Math.sin((angle * Math.PI) / 180) * radius + 192;
+              const x = Math.cos((angle * Math.PI) / 180) * radius + containerSize / 2;
+              const y = Math.sin((angle * Math.PI) / 180) * radius + containerSize / 2;
 
-              return <line key={index} x1="192" y1="192" x2={x} y2={y} stroke="currentColor" strokeWidth="1" />;
+              return <line key={index} x1={containerSize / 2} y1={containerSize / 2} x2={x} y2={y} stroke="currentColor" strokeWidth="1" />;
             })}
           </Box>
         </Box>

@@ -7,48 +7,66 @@ import { useOnThisPage } from "@/contexts/on-thispage-context";
 import { PATHS } from "@/router/paths";
 import { Box, Divider } from "@mui/material";
 import React from "react";
-import { featureProductMinimalAnimationString } from "../code-string/feature-products/feature-product-minimal-animation-string";
-import { featureProductSimpleString } from "../code-string/feature-products/feature-product-simple-string";
-import { featureProductWithCarouselString } from "../code-string/feature-products/feature-product-with-carousel-string";
-import { FeatureProductSimplePreview } from "../components/feature-product/feature-product-simple-preview";
-import { FeatureProductWithCarouselPreview } from "../components/feature-product/feature-product-with-carousel-preview";
-import { FeaturedProductMinimalAnimationPreview } from "../components/feature-product/featured-product-minimal-animation-preview";
+import { 
+  newsletterSubscriptionSimpleString,
+  newsletterSubscriptionModernString,
+  newsletterSubscriptionEcosystemString,
+  newsletterSubscriptionLiquidString,
+  newsletterSubscriptionHorizontalString
+} from "../code-string/newsletter-subscription";
 import { NewsletterSubscriptionHorizontal } from "../components/newsletter-subscription/newsletter-subscription-horizontal-preview";
 import { NewsletterSubscriptionModernPreview } from "../components/newsletter-subscription/newsletter-subscription-modern-preview";
 import { NewsletterSubscriptionEcosystemPreview } from "../components/newsletter-subscription/newsletter-subscription-ecosystem-preview";
 import { NewsletterSubscriptionLiquidPreview } from "../components/newsletter-subscription/newsletter-subscription-liquid-preview";
+import NewsletterSubscriptionSimplePreview from "../components/newsletter-subscription/newsletter-subscription-simple-preview";
 
 const sections = [
   {
-    id: "newsletter-subscription-1",
-    title: "Simple newsletter subscription",
+    id: "newsletter-subscription-simple",
+    title: "Simple Newsletter Subscription",
     description:
-      "Simple newsletter subscription section with email input and subscribe button.",
-    codeString: featureProductSimpleString,
+      "A clean and minimal newsletter subscription section with email input and subscribe button. Perfect for straightforward email collection.",
+    codeString: newsletterSubscriptionSimpleString,
+    preview: <NewsletterSubscriptionSimplePreview />,
+  },
+  {
+    id: "newsletter-subscription-modern",
+    title: "Modern Newsletter Subscription",
+    description:
+      "A modern newsletter subscription with feature highlights, social proof, and a professional design. Includes success state and trust indicators.",
+    codeString: newsletterSubscriptionModernString,
     preview: <NewsletterSubscriptionModernPreview />,
   },
   {
-    id: "feature-product-2",
-    title: "Product with carousel",
+    id: "newsletter-subscription-ecosystem",
+    title: "Ecosystem Newsletter Subscription",
     description:
-      "Featured product section with customer feedback carousel. Includes product image, description, ratings, and testimonials.",
-    codeString: featureProductWithCarouselString,
+      "An innovative newsletter subscription featuring a hexagonal grid layout and interconnected knowledge domains. Perfect for educational or tech platforms.",
+    codeString: newsletterSubscriptionEcosystemString,
     preview: <NewsletterSubscriptionEcosystemPreview />,
   },
   {
-    id: "feature-product-3",
-    title: "Featured product with minimal animation",
+    id: "newsletter-subscription-liquid",
+    title: "Liquid Newsletter Subscription",
     description:
-      "Add minimal hover animation to your featured product section.",
-    codeString: featureProductMinimalAnimationString,
+      "A dynamic newsletter subscription with animated liquid background effects and flowing design elements. Features smooth animations and modern aesthetics.",
+    codeString: newsletterSubscriptionLiquidString,
     preview: <NewsletterSubscriptionLiquidPreview />,
+  },
+  {
+    id: "newsletter-subscription-horizontal",
+    title: "Horizontal Floating Newsletter",
+    description:
+      "A floating newsletter subscription that appears as a horizontal card with smooth animations. Perfect for non-intrusive email collection with close functionality.",
+    codeString: newsletterSubscriptionHorizontalString,
+    preview: <NewsletterSubscriptionHorizontal  />,
   },
 ];
 
 export const NewsletterSubscriptionView = () => {
   const { setSections } = useOnThisPage();
   React.useEffect(() => {
-    setSections([]);
+    setSections(sections);
   }, [setSections]);
 
   return (
@@ -61,13 +79,13 @@ export const NewsletterSubscriptionView = () => {
       />
       <PageTitle
         title="Newsletter Subscription"
-        description="Showcase your newsletter subscription section with email input and subscribe button."
+        description="Showcase your newsletter subscription section with various designs and email input components. Choose from simple, modern, ecosystem, liquid, or floating horizontal layouts."
       />
 
       <Divider sx={{ my: 4 }} />
 
       {sections.map((section) => (
-        <Box key={section.id} sx={{ mb: 4 }}>
+        <Box key={section.id} sx={{ mb: 6 }}>
           <SectionTitle
             title={section.title}
             description={section.description || ""}
