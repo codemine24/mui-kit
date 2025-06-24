@@ -3,7 +3,7 @@ import { useRef, useState } from "react";
 
 const length = 6;
 
-export default function OTPUnderlined() {
+export const OTPUnderlinedPreview = () => {
   const [otp, setOtp] = useState<string[]>(new Array(length).fill(""));
   const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
 
@@ -27,7 +27,7 @@ export default function OTPUnderlined() {
   };
 
   return (
-    <Box display="flex" gap={2}>
+    <Box display="flex" gap={1}>
       {otp.map((data, index) => (
         <TextField
           key={index}
@@ -37,7 +37,6 @@ export default function OTPUnderlined() {
             maxLength: 1,
             style: {
               textAlign: "center",
-              fontSize: "2rem",
               fontWeight: "bold",
             },
           }}
@@ -47,7 +46,11 @@ export default function OTPUnderlined() {
           onFocus={(e) => e.target.select()}
           variant="standard"
           sx={{
-            width: "60px",
+            width: { xs: 35, md: 45, lg: 60 },
+            "& input": {
+              fontSize: { xs: "1rem", md: "1.5rem" },
+              padding: { xs: 0.5, md: 1, lg: 2 },
+            },
             "& .MuiInput-underline:before": {
               borderBottomWidth: "2px",
             },
@@ -61,4 +64,4 @@ export default function OTPUnderlined() {
       ))}
     </Box>
   );
-}
+};

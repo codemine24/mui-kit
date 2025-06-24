@@ -1,4 +1,4 @@
-export const OTPUnderlinedCodeString = `
+export const OTPUnderlinedString = `
 import { Box, TextField } from "@mui/material";
 import { useRef, useState } from "react";
 

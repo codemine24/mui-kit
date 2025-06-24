@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 
 const length = 6;
 
-export default function OTPBasicPreview() {
+export const OTPBasicPreview = () => {
   const [otp, setOtp] = useState<string[]>(new Array(length).fill(""));
   const [completedOTP, setCompletedOTP] = useState<string>("");
 
@@ -76,4 +76,4 @@ export default function OTPBasicPreview() {
       )}
     </Stack>
   );
-}
+};

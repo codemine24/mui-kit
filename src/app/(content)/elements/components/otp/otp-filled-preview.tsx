@@ -27,7 +27,7 @@ export const OTPFilledPreview = () => {
   };
 
   return (
-    <Box display="flex" gap={1}>
+    <Box display="flex" gap={{ xs: 0.5, md: 1 }}>
       {otp.map((data, index) => (
         <TextField
           key={index}

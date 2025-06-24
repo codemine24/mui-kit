@@ -13,16 +13,16 @@ import { OTPFilledString } from "../code-string/otp/otp-filled-string";
 import { OTPFractionCodeString } from "../code-string/otp/otp-fraction";
 import { OTPPasteableCodeString } from "../code-string/otp/otp-pasteable";
 import { OTPTextSupportedCodeString } from "../code-string/otp/otp-text-supported";
-import { OTPUnderlinedCodeString } from "../code-string/otp/otp-underlined";
+import { OTPUnderlinedString } from "../code-string/otp/otp-underlined";
 import { OTPWithPredefinedFieldCodeString } from "../code-string/otp/otp-with-predefined-field";
 import { OTPWithTimerAndResendCodeString } from "../code-string/otp/otp-with-timer-and-resend";
-import OTPBasicPreview from "../components/otp/otp-basic-preview";
+import {OTPBasicPreview} from "../components/otp/otp-basic-preview";
 import OTPCustomStyled from "../components/otp/otp-custom-styled";
 import { OTPFilledPreview } from "../components/otp/otp-filled-preview";
 import OTPFraction from "../components/otp/otp-fraction";
 import OTPPasteable from "../components/otp/otp-pasteable";
 import OTPTextSupported from "../components/otp/otp-text-supported";
-import OTPUnderlined from "../components/otp/otp-underlined";
+import { OTPUnderlinedPreview } from "../components/otp/otp-underlined-preview";
 import OTPWithPredefinedField from "../components/otp/otp-with-predefined-field";
 import OTPWithTimerAndResend from "../components/otp/otp-with-timer-and-resend";
 
@@ -44,10 +44,9 @@ const sections = [
   {
     id: "otp-3",
     title: "Underlined",
-    description:
-      "Underlined input style with hover and focus effects. No extra package required.",
-    codeString: OTPUnderlinedCodeString,
-    preview: <OTPUnderlined />,
+    description: "Underlined OTP fields. Perfect if you like outlined stuff. ",
+    codeString: OTPUnderlinedString,
+    preview: <OTPUnderlinedPreview />,
   },
   {
     id: "otp-4",

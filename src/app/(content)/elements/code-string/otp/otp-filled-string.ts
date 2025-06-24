@@ -1,10 +1,9 @@
-export const OTPFilledString = `
-import { Box, TextField } from "@mui/material";
+export const OTPFilledString = `import { Box, TextField } from "@mui/material";
 import { useRef, useState } from "react";
 
 const length = 6;
 
-export default function OTPFilled() {
+export const OTPFilledPreview = () => {
   const [otp, setOtp] = useState<string[]>(new Array(length).fill(""));
   const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
 
@@ -28,7 +27,7 @@ export default function OTPFilled() {
   };
 
   return (
-    <Box display="flex" gap={1}>
+    <Box display="flex" gap={{ xs: 0.5, md: 1 }}>
       {otp.map((data, index) => (
         <TextField
           key={index}
@@ -38,7 +37,6 @@ export default function OTPFilled() {
             maxLength: 1,
             style: {
               textAlign: "center",
-              fontSize: "1.5rem",
               fontWeight: "bold",
             },
           }}
@@ -48,8 +46,11 @@ export default function OTPFilled() {
           onFocus={(e) => e.target.select()}
           variant="filled"
           sx={{
-            width: "60px",
-            paddingTop: "10px",
+            width: { xs: 35, md: 45, lg: 60 },
+            "& input": {
+              fontSize: { xs: "1rem", md: "1.5rem" },
+              padding: { xs: 0.5, md: 1, lg: 2 },
+            },
             "& .MuiFilledInput-root": {
               backgroundColor: (theme) =>
                 theme.palette.mode === "light"
@@ -72,5 +73,4 @@ export default function OTPFilled() {
       ))}
     </Box>
   );
-}
-`;
+};`;
