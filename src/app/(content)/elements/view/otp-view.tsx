@@ -7,7 +7,7 @@ import { useOnThisPage } from "@/contexts/on-thispage-context";
 import { PATHS } from "@/router/paths";
 import { Box, Divider } from "@mui/material";
 import React from "react";
-import { OTPBasicCodeString } from "../code-string/otp/otp-basic";
+import { OTPBasicString } from "../code-string/otp/otp-basic-string";
 import { OTPCustomStyledCodeString } from "../code-string/otp/otp-custom-styled";
 import { OTPFilledCodeString } from "../code-string/otp/otp-filled";
 import { OTPFractionCodeString } from "../code-string/otp/otp-fraction";
@@ -16,7 +16,7 @@ import { OTPTextSupportedCodeString } from "../code-string/otp/otp-text-supporte
 import { OTPUnderlinedCodeString } from "../code-string/otp/otp-underlined";
 import { OTPWithPredefinedFieldCodeString } from "../code-string/otp/otp-with-predefined-field";
 import { OTPWithTimerAndResendCodeString } from "../code-string/otp/otp-with-timer-and-resend";
-import OTPBasic from "../components/otp/otp-basic";
+import OTPBasicPreview from "../components/otp/otp-basic-preview";
 import OTPCustomStyled from "../components/otp/otp-custom-styled";
 import OTPFilled from "../components/otp/otp-filled";
 import OTPFraction from "../components/otp/otp-fraction";
@@ -30,10 +30,9 @@ const sections = [
   {
     id: "otp-1",
     title: "Basic",
-    description:
-      "Standard outlined otp fields with auto-focus navigation. No extra package required.",
-    codeString: OTPBasicCodeString,
-    preview: <OTPBasic />,
+    description: "Standard outlined otp fields with auto-focus navigation.",
+    codeString: OTPBasicString,
+    preview: <OTPBasicPreview />,
   },
   {
     id: "otp-2",

@@ -1,4 +1,4 @@
-import { Box, Stack, TextField, Typography } from "@mui/material";
+export const OTPBasicString = `import { Box, Stack, TextField, Typography } from "@mui/material";
 import { useEffect, useRef, useState } from "react";
 
 const length = 6;
@@ -38,7 +38,7 @@ export default function OTPBasic() {
 
   return (
     <Stack alignItems="center" spacing={2} sx={{ width: "100%", py: 6 }}>
-      <Box display="flex" gap={1}>
+      <Box display="flex" gap={{ xs: 0.5, md: 1 }}>
         {otp.map((data, index) => (
           <TextField
             key={index}
@@ -48,7 +48,7 @@ export default function OTPBasic() {
               maxLength: 1,
               style: {
                 textAlign: "center",
-                fontSize: "1.5rem",
+                // fontSize: {},
                 fontWeight: "bold",
               },
             }}
@@ -57,7 +57,13 @@ export default function OTPBasic() {
             onKeyDown={(e) => handleKeyDown(e, index)}
             onFocus={(e) => e.target.select()}
             variant="outlined"
-            sx={{ width: "60px" }}
+            sx={{
+              width: { xs: 35, md: 45, lg: 60 },
+              "& input": {
+                fontSize: { xs: "1rem", md: "1.5rem" },
+                padding: { xs: 0.5, md: 1, lg: 2 },
+              },
+            }}
             autoComplete="one-time-code"
             inputMode="numeric"
           />
@@ -70,4 +76,4 @@ export default function OTPBasic() {
       )}
     </Stack>
   );
-}
+}`;
