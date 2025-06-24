@@ -13,6 +13,7 @@ import OTPCustomStyled from "../components/otp/otp-custom-styled";
 import OTPFilled from "../components/otp/otp-filled";
 import OTPPasteable from "../components/otp/otp-pasteable";
 import OTPUnderlined from "../components/otp/otp-underlined";
+import OTPWithTimerAndResend from "../components/otp/otp-with-timer-and-resend";
 
 const sections = [
   {
@@ -54,6 +55,14 @@ const sections = [
       "Supports pasting full OTP codes in one go. No extra package required.",
     codeString: OTPBasicCodeString,
     preview: <OTPPasteable />,
+  },
+  {
+    id: "otp-6",
+    title: "With timer and resend",
+    description:
+      "Complete verification flow with countdown timer and resend functionality. No extra package required.",
+    codeString: OTPBasicCodeString,
+    preview: <OTPWithTimerAndResend />,
   },
 ];
 
