@@ -37,6 +37,7 @@ const componentMap: Record<string, JSX.Element> = {
   "pricing-table": <PricingTableView />,
   services: <ServicesView />,
   "pricing-menu": <PricingMenuView />,
+  "single-profile": <CSView />,
 };
 
 export default async function Page({
