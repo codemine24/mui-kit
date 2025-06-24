@@ -172,6 +172,8 @@ export default function OTPFraction() {
                   },
                 },
               }}
+              autoComplete="one-time-code"
+              inputMode="numeric"
             />
           ))}
         </Box>
@@ -216,6 +218,8 @@ export default function OTPFraction() {
                   },
                 },
               }}
+              autoComplete="one-time-code"
+              inputMode="numeric"
             />
           ))}
         </Box>

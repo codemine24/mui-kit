@@ -127,6 +127,8 @@ export default function OTPWithTimerAndResend() {
             onPaste={(e) => handlePaste(e, index)}
             variant="outlined"
             sx={{ width: "60px" }}
+            autoComplete="one-time-code"
+            inputMode="numeric"
           />
         ))}
       </Box>

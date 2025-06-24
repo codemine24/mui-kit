@@ -175,6 +175,8 @@ export default function OTPWithPredefinedField() {
                 },
               },
             }}
+            autoComplete="one-time-code"
+            inputMode="numeric"
           />
         ))}
       </Box>
