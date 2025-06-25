@@ -175,7 +175,7 @@ export const TeamOrganicPreview = () => {
                   <Typography
                     variant="body2"
                     sx={{
-                      color: theme.palette.mode === 'dark' ? 'grey.300' : 'grey.600',
+                      color: "text.primary",
                       lineHeight: 1.6,
                       opacity: 0,
                       transition: 'opacity 0.3s ease',

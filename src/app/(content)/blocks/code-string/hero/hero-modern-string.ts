@@ -1,7 +1,7 @@
 export const heroModernString = `
 import { Box, Typography, Button, TextField, Stack } from "@mui/material";
 
-export default function HeroModernPreview() {
+export const HeroModernPreview = () => {
   return (
     <Box
       sx={{
@@ -67,7 +67,7 @@ export default function HeroModernPreview() {
             All your projects, docs, and team collaboration in one place. Boost productivity, stay organized, and work smarter with powerful tools designed for modern teams and creators.
           </Typography>
           <Box sx={{ mb: 2 }}>
-            <Box sx={{ display: "flex", gap: 2, maxWidth: 500 }}>
+            <Box sx={{ display: "flex", flexDirection: { xs: "column", md: "row" }, gap: 2, maxWidth: 500 }}>
               <TextField
                 placeholder="Enter your email"
                 size="medium"
@@ -98,7 +98,14 @@ export default function HeroModernPreview() {
           </Typography>
         </Box>
         {/* Right Side */}
-        <Box sx={{ flex: 1, display: "flex", justifyContent: { xs: 'flex-start', lg: 'center' }, alignItems: { xs: 'center', lg: 'center' }, width: "100%", mt: { xs: 2, lg: 0 } }}>
+        <Box sx={{ 
+          flex: 1, 
+          display: { xs: 'none', md: 'flex' }, 
+          justifyContent: { xs: 'flex-start', lg: 'center' }, 
+          alignItems: { xs: 'center', lg: 'center' }, 
+          width: "100%", 
+          mt: { xs: 2, lg: 0 } 
+        }}>
           <Box sx={{ position: "relative", display: "flex", justifyContent: "center", width: { xs: '100%', sm: 200, md: 260, lg: 320 }, maxWidth: { xs: '100%', sm: 320, md: 380 }, height: { xs: 180, sm: 200, md: 260, lg: 380 } }}>
             <Box
               sx={{
@@ -148,4 +155,4 @@ export default function HeroModernPreview() {
       </Stack>
     </Box>
   );
-}`; 
+} `; 

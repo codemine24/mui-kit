@@ -80,7 +80,7 @@ export const NewsletterSubscriptionLiquidPreview = () => {
           <Typography
             variant="h6"
             sx={{
-              color: isDark ? "#bdb4d8" : "#5b5b7a",
+             color: "text.primary",
               fontWeight: 400,
               maxWidth: 600,
               mx: "auto",

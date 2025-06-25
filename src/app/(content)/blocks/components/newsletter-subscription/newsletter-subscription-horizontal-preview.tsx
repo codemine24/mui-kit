@@ -199,11 +199,12 @@ export const NewsletterSubscriptionHorizontal = () => {
                     variant="contained"
                     size="large"
                     onClick={handleSubscribe}
-                    disabled={!email}
+          
                     sx={{
                       borderRadius: 2,
                       py: 1.5,
                       fontWeight: 600,
+                      color:"#fff",
                       textTransform: "none",
                       fontSize: "1rem",
                       background: `linear-gradient(45deg, 

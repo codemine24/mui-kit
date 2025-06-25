@@ -28,7 +28,7 @@ const NewsletterSubscriptionSimplePreview = () => {
           sx={{
             mb: 2,
             bgcolor: "#1e293b", // slate-800
-            color: "text.secondary", // slate-200
+            color: "text.primary", // slate-200
             fontWeight: 600,
             fontSize: 16,
             borderRadius: 2,

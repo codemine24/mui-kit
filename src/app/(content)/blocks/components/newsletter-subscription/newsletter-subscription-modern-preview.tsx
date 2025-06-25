@@ -15,12 +15,12 @@ export const NewsletterSubscriptionModernPreview = () => {
     {
       icon: <CheckCircleIcon sx={{ color: 'success.main', fontSize: 28 }} />, title: "Curated Content", desc: "Hand-picked insights from 100+ sources"
     },
-    {
-      icon: <AccessTimeIcon sx={{ color: 'success.main', fontSize: 28 }} />, title: "5-Minute Read", desc: "Digestible format for busy professionals"
-    },
-    {
-      icon: <TrendingUpIcon sx={{ color: 'success.main', fontSize: 28 }} />, title: "Market Intelligence", desc: "Data-driven insights and predictions"
-    },
+    // {
+    //   icon: <AccessTimeIcon sx={{ color: 'success.main', fontSize: 28 }} />, title: "5-Minute Read", desc: "Digestible format for busy professionals"
+    // },
+    // {
+    //   icon: <TrendingUpIcon sx={{ color: 'success.main', fontSize: 28 }} />, title: "Market Intelligence", desc: "Data-driven insights and predictions"
+    // },
     {
       icon: <GroupsIcon sx={{ color: 'success.main', fontSize: 28 }} />, title: "Expert Network", desc: "Exclusive interviews and insights"
     },
@@ -47,7 +47,7 @@ export const NewsletterSubscriptionModernPreview = () => {
                   Your competitive advantage delivered every Tuesday. Get the insights, strategies, and trends that successful professionals use to stay ahead.
                 </Typography>
               </Box>
-              <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 3 }}>
+              <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr ' }, gap: 3 }}>
                 {features.map((f, i) => (
                   <Box key={f.title} sx={{ display: 'flex', alignItems: 'flex-start', gap: 2 }}>
                     <Box sx={{ width: 40, height: 40, bgcolor: 'success.lighter', borderRadius: 2, display: 'flex', alignItems: 'center', justifyContent: 'center', mt: 0.5, flexShrink: 0 }}>
@@ -64,7 +64,7 @@ export const NewsletterSubscriptionModernPreview = () => {
             {/* Right: Subscription Card */}
             <Box sx={{ position: 'relative', zIndex: 1 }}>
               <Box sx={{ position: 'absolute', inset: 0, zIndex: 0, borderRadius: 6, transform: 'rotate(5deg)', bgcolor: 'success.main', background: 'linear-gradient(90deg, #10b981 0%, #14b8a6 100%)', opacity: 0.9 }} />
-              <Paper elevation={6} sx={{ position: 'relative', zIndex: 1, borderRadius: 6, p: { xs: 4, md: 4 }, minWidth: { xs: 'auto', md: 380 }, border: '1px solid', borderColor: 'grey.100', boxShadow: 8 }}>
+              <Paper elevation={6} sx={{ position: 'relative', zIndex: 1, borderRadius: 6, p: { xs: 4, md: 4 }, minWidth: { xs: 'auto', md: 380 }, border:theme.palette.mode === 'dark' ? '' : '1px solid #e2e8f0', boxShadow: 8 }}>
                 <Box sx={{ textAlign: 'center', mb: 4 }}>
                   <Typography variant="h5" sx={{ fontWeight: 600, color: 'text.primary', mb: 0.5 }}>Join 28,000+ Readers</Typography>
                   <Typography variant="body2" sx={{ color: 'text.secondary' }}>Get your weekly edge starting today</Typography>
@@ -91,7 +91,7 @@ export const NewsletterSubscriptionModernPreview = () => {
                       variant="contained"
                       size="large"
                       fullWidth
-                      disabled={!email}
+                      // disabled={!email}
                       onClick={() => setSubscribed(true)}
                       sx={{
                         borderRadius: 3,
@@ -104,7 +104,7 @@ export const NewsletterSubscriptionModernPreview = () => {
                           background: 'linear-gradient(90deg, #14b8a6 0%, #10b981 100%)',
                           boxShadow: 4,
                         },
-                        color:"#000",
+                        color:"text.primary",
                         textTransform: 'none',
                         display: 'flex',
                         alignItems: 'center',

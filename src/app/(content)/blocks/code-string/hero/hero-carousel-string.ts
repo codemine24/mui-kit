@@ -1,7 +1,7 @@
 export const heroCarouselString = `"use client"
 
 import { useState, useEffect, useRef } from "react"
-import { Box, Typography, Button, IconButton } from "@mui/material"
+import { Box, Typography, Button, IconButton, useMediaQuery } from "@mui/material"
 import Image from "next/image"
 
 // ---------- data ----------
@@ -69,6 +69,7 @@ export const WatchHeroCarouselMui = () => {
   const [dir, setDir] = useState<"left" | "right">("right")
   const [prevIndex, setPrevIndex] = useState(0)
 
+  const isMobile = useMediaQuery('(max-width:600px)')
   useEffect(() => {
     const id = setInterval(() => {
       setDir("right")
@@ -92,19 +93,19 @@ export const WatchHeroCarouselMui = () => {
     <Box
       sx={{
         position: "relative",
-        minHeight: "70vh",
+        minHeight: { xs: "unset", md: "70vh" },
         width: "100%",
         background: current.background,
         display: "flex",
         alignItems: "center",
         overflow: "hidden",
         transition: "background 1s cubic-bezier(0.25,0.46,0.45,0.94)",
+        py: { xs: 2, md: 0 },
         '@media (max-width:600px)': {
-          minHeight: "100vh",
           alignItems: "flex-start",
           flexDirection: "column",
           justifyContent: "flex-start",
-          padding: "16px 0",
+          padding: 0,
         },
       }}
     >
@@ -112,20 +113,15 @@ export const WatchHeroCarouselMui = () => {
       <Box
         sx={{
           position: "absolute",
-          top: 48,
-          left: 48,
-          fontSize: 12,
+          top: { xs: 8, md: 48 },
+          left: { xs: 8, md: 48 },
+          fontSize: { xs: 10, md: 12 },
           fontWeight: 500,
           letterSpacing: 2,
           textTransform: "uppercase",
           color: current.accentColor,
           zIndex: 10,
           transition: "all 0.7s",
-          '@media (max-width:600px)': {
-            top: 12,
-            left: 12,
-            fontSize: 10,
-          },
         }}
       >
         {current.limited}
@@ -133,20 +129,15 @@ export const WatchHeroCarouselMui = () => {
       <Box
         sx={{
           position: "absolute",
-          top: 48,
-          right: 48,
-          fontSize: 12,
+          top: { xs: 8, md: 48 },
+          right: { xs: 8, md: 48 },
+          fontSize: { xs: 10, md: 12 },
           fontWeight: 500,
           letterSpacing: 2,
           textTransform: "uppercase",
           color: current.accentColor,
           zIndex: 10,
           transition: "all 0.7s",
-          '@media (max-width:600px)': {
-            top: 12,
-            right: 12,
-            fontSize: 10,
-          },
         }}
       >
         {current.available}
@@ -155,15 +146,13 @@ export const WatchHeroCarouselMui = () => {
       {/* Watch images stage */}
       <Box
         sx={{
-          position: "absolute",
-          inset: 0,
+          position: { xs: "relative", md: "absolute" },
+          inset: { md: 0 },
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          '@media (max-width:600px)': {
-            position: "relative",
-            minHeight: 220,
-          },
+          minHeight: { xs: 180, md: "auto" },
+          mt: { xs: 3, md: 0 },
         }}
       >
         {/* Previous image (slide out) */}
@@ -186,12 +175,14 @@ export const WatchHeroCarouselMui = () => {
               <Image
                 src={previous.image || "/placeholder.svg"}
                 alt={previous.title.join(" ")}
-                width={500}
-                height={500}
+                width={300}
+                height={300}
                 style={{
                   objectFit: "contain",
                   filter: "blur(1px)",
                   transition: "all 0.7s",
+                  maxWidth: "100%",
+                  height: "auto",
                 }}
                 priority
               />
@@ -202,7 +193,7 @@ export const WatchHeroCarouselMui = () => {
         <Box
           key={current.id + "-current"}
           sx={{
-            position: "absolute",
+            position: { xs: "relative", md: "absolute" },
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
@@ -211,26 +202,25 @@ export const WatchHeroCarouselMui = () => {
             animation: prevIndex !== index ? \`\${dir === "right" ? "slideInFromRight" : "slideInFromLeft"} 0.7s forwards\` : undefined,
             transition: "opacity 0.7s, transform 0.7s, filter 0.7s",
             filter: prevIndex === index ? "blur(0px)" : "blur(1px)",
-            '@media (max-width:600px)': {
-              position: "relative",
-              width: "100%",
-              justifyContent: "center",
-              alignItems: "center",
-            },
+            width: { xs: "100%", md: "auto" },
+            justifySelf: "center",
           }}
         >
-          <Box>
+          <Box sx={{ width: { xs: "100%", md: "auto" }, mx: "auto" }}>
             <Image
               src={current.image || "/placeholder.svg"}
               alt={current.title.join(" ")}
-              width={500}
-              height={500}
+              width={400}
+              height={400}
               style={{
                 objectFit: "contain",
                 filter: prevIndex === index ? "blur(0px)" : "blur(0.5px)",
                 transition: "all 0.7s",
                 maxWidth: "100%",
-                height: "auto",
+                width: isMobile ? "100%" : 400,
+                height: isMobile ? "auto" : 400,
+                display: "block",
+                margin: "0 auto",
               }}
               priority
             />
@@ -241,38 +231,28 @@ export const WatchHeroCarouselMui = () => {
       {/* Left content */}
       <Box
         sx={{
-          position: "absolute",
-          left: 48,
-          top: "50%",
-          transform: "translateY(-50%)",
+          position: { xs: "relative", md: "absolute" },
+          left: { md: 48 },
+          top: { md: "50%" },
+          transform: { md: "translateY(-50%)" },
           zIndex: 20,
-          maxWidth: 520,
-          '@media (max-width:600px)': {
-            position: "relative",
-            left: "auto",
-            top: "auto",
-            transform: "none",
-            maxWidth: "100%",
-            width: "100%",
-            padding: "0 16px",
-            mt: 2,
-            zIndex: 30,
-          },
+          maxWidth: { xs: "100%", md: 520 },
+          width: { xs: "100%", md: "auto" },
+          padding: { xs: "0 8px", md: 0 },
+          mt: { xs: 2, md: 0 },
         }}
       >
         <Typography
           sx={{
-            fontSize: 14,
+            fontSize: { xs: 12, md: 14 },
             textTransform: "uppercase",
             letterSpacing: 2,
             color: "rgba(255,255,255,0.7)",
-            mb: 3,
+            mb: { xs: 0.5, md: 3 },
             fontWeight: 300,
             transition: "all 0.7s",
-            '@media (max-width:600px)': {
-              fontSize: 12,
-              mb: 1,
-            },
+            width: { xs: "100%", md: "auto" },
+            textAlign: { xs: "left", md: "inherit" },
           }}
         >
           {current.subtitle}
@@ -280,22 +260,20 @@ export const WatchHeroCarouselMui = () => {
         <Typography
           component="h1"
           sx={{
-            fontSize: "3.5rem",
+            fontSize: { xs: "1.4rem", md: "3.5rem" },
             fontWeight: 300,
-            lineHeight: 0.9,
+            lineHeight: { xs: 1.15, md: 0.9 },
             textTransform: "uppercase",
-            mb: 6,
+            mb: { xs: 1.5, md: 6 },
             color: "#fff",
             letterSpacing: 1,
             transition: "all 0.7s",
-            '@media (max-width:600px)': {
-              fontSize: "2rem",
-              mb: 2,
-            },
+            width: { xs: "100%", md: "auto" },
+            textAlign: { xs: "left", md: "inherit" },
           }}
         >
           {current.title.map((titlePart, i) => (
-            <Box key={i} sx={{ display: "block", transition: "all 0.7s" }}>
+            <Box key={i} sx={{ display: "block", transition: "all 0.7s", width: { xs: "100%", md: "auto" }, textAlign: { xs: "left", md: "inherit" } }}>
               {titlePart}
             </Box>
           ))}
@@ -303,28 +281,23 @@ export const WatchHeroCarouselMui = () => {
         <Button
           variant="outlined"
           sx={{
-            mt: 4,
-            px: 6,
-            py: 1.5,
+            mt: { xs: 2, md: 4 },
+            px: { xs: 2, md: 6 },
+            py: { xs: 1, md: 1.5 },
             borderRadius: 0,
-            fontSize: 12,
+            fontSize: { xs: 11, md: 12 },
             fontWeight: 600,
             letterSpacing: 2,
             textTransform: "uppercase",
             color: current.buttonColor,
             borderColor: current.buttonColor,
             background: "transparent",
+            width: { xs: "100%", md: "auto" },
             transition: "all 0.3s",
             '&:hover': {
               background: current.buttonColor,
               color: '#000',
               borderColor: current.buttonColor,
-            },
-            '@media (max-width:600px)': {
-              width: "100%",
-              fontSize: 11,
-              px: 2,
-              py: 1,
             },
           }}
         >
@@ -348,7 +321,7 @@ export const WatchHeroCarouselMui = () => {
           boxShadow: 3,
           transition: "all 0.7s",
           background: "#111",
-          display: "flex",
+          display: { xs: "none", sm: "flex" },
           alignItems: "center",
           justifyContent: "center",
           '@media (max-width:600px)': {
@@ -429,7 +402,7 @@ export const WatchHeroCarouselMui = () => {
           bottom: 48,
           left: "50%",
           transform: "translateX(-50%)",
-          display: "flex",
+          display: { xs: "none", sm: "flex" },
           gap: 2,
           '@media (max-width:600px)': {
             position: "relative",
@@ -476,7 +449,7 @@ export const WatchHeroCarouselMui = () => {
           bottom: 24,
           left: 48,
           right: 48,
-          display: "flex",
+          display: { xs: "none", sm: "flex" },
           justifyContent: "space-between",
           alignItems: "center",
           fontSize: 12,

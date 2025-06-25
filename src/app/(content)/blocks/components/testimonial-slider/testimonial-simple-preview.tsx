@@ -103,7 +103,7 @@ export const TestimonialSimplePreview = () => {
 
         <Box
           sx={{
-            minHeight: 320,
+            minHeight: 250,
             display: "grid",
             gridTemplateColumns: {
               xs: "1fr",

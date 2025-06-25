@@ -71,10 +71,9 @@ export const TeamPolaroidPreview = () => {
       }}
     >
       <Container>
-        <Box sx={{ mb: 16, textAlign: 'center' }}>
+        <Box sx={{ mb: { xs: 4, md: 6 }, textAlign: 'center' }}>
           <Typography
-            variant="h2"
-            sx={{ fontWeight: 'bold', mb: 2, color: 'text.primary' }}
+            sx={{ fontWeight: 'bold', mb: 2, color: 'text.primary', fontSize: { xs: 28, md: 36 } }}
           >
             Team Memories
           </Typography>
@@ -114,7 +113,7 @@ export const TeamPolaroidPreview = () => {
                   sx={{
                     bgcolor: 'white',
                     p: 2,
-                    pb: 10,
+                    pb: 5,
                     boxShadow: 8,
                     borderRadius: 1,
                     backgroundColor: 'background.paper',

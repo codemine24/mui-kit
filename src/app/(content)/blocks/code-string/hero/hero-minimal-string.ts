@@ -113,7 +113,7 @@ export default function HeroMinimalPreview() {
             </Stack>
           </Box>
           {/* Right Side */}
-          <Box sx={{ flex: 1, display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%' }}>
+          <Box sx={{ flex: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'center', alignItems: 'center', width: '100%' }}>
             <Box sx={{ position: 'relative', width: { xs: 260, sm: 320, md: 360, lg: 400 }, height: { xs: 260, sm: 320, md: 360, lg: 400 } }}>
               {/* Main image circle */}
               <Box

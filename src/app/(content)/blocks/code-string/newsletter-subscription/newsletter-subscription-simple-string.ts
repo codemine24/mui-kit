@@ -29,7 +29,7 @@ const NewsletterSubscriptionSimplePreview = () => {
           sx={{
             mb: 2,
             bgcolor: "#1e293b",
-            color: "text.secondary",
+               color: "text.primary", 
             fontWeight: 600,
             fontSize: 16,
             borderRadius: 2,

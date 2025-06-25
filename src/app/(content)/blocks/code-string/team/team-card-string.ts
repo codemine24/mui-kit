@@ -77,8 +77,8 @@ export const TeamCardPreview = () => {
   return (
     <Box sx={{ width: '100%', py: { xs: 8, md: 12 }, bgcolor: 'background.paper' }}>
       <Container>
-        <Box sx={{ mb: 16, textAlign: 'center' }}>
-          <Typography variant="h2" sx={{ fontWeight: 'bold', mb: 2 }}>
+        <Box sx={{ mb: { xs: 4, md: 6 }, textAlign: 'center' }}>
+          <Typography  sx={{ fontWeight: 'bold', mb: 2, fontSize: { xs: 28, md: 36 } }}>
             Our Team
           </Typography>
           <Typography sx={{ mx: 'auto', maxWidth: '700px', color: 'text.secondary' }}>
@@ -92,7 +92,7 @@ export const TeamCardPreview = () => {
                 className="group"
                 sx={{
                   height: '100%',
-                  '&:hover': { boxShadow: 6 },
+                  '&:hover': { boxShadow: 3 },
                   transition: (theme) => theme.transitions.create('box-shadow'),
                 }}
               >

@@ -77,7 +77,7 @@ export const NewsletterSubscriptionLiquidPreview = () => {
           <Typography
             variant="h6"
             sx={{
-              color: isDark ? "#bdb4d8" : "#5b5b7a",
+              color: "text.primary",
               fontWeight: 400,
               maxWidth: 600,
               mx: "auto",
@@ -184,7 +184,7 @@ export const NewsletterSubscriptionLiquidPreview = () => {
                 variant="contained"
                 fullWidth
                 size="large"
-                disabled={!email}
+                // disabled={!email}
                 sx={{
                   height: 56,
                   borderRadius: 3,
