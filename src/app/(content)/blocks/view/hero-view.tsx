@@ -7,27 +7,14 @@ import { useOnThisPage } from "@/contexts/on-thispage-context";
 import { PATHS } from "@/router/paths";
 import { Box, Divider } from "@mui/material";
 import React from "react";
-import { heroParalaxString } from "../code-string/hero/hero-paralax-string";
-import { heroMinimalString } from "../code-string/hero/hero-minimal-string";
-import { heroModernString } from "../code-string/hero/hero-modern-string";
 import { heroCarouselString } from "../code-string/hero/hero-carousel-string";
-import { heroBasicString } from "../code-string/hero/hero-basic-string";
-import { heroSparkleString } from "../code-string/hero/hero-sparkle-string";
-import BasicHero from "../components/hero/hero-basic-preview";
+import { heroMinimalString } from "../code-string/hero/hero-minimal-string";
+import { heroParalaxString } from "../code-string/hero/hero-paralax-string";
 import { WatchHeroCarouselMui } from "../components/hero/hero-carouel";
 import { HeroMinimalPreview } from "../components/hero/hero-minimal-preview";
 import { HeroModernPreview } from "../components/hero/hero-modern-preview";
-import HeroSparklePreview from "../components/hero/hero-sparkle-preview";
 
 const sections = [
-  // {
-  //   id: "hero-sparkle",
-  //   title: "Hero with Sparkle Effects",
-  //   description:
-  //     "Animated hero section with sparkle effects, floating elements, and dynamic gradients.",
-  //   codeString: heroSparkleString,
-  //   preview: <HeroSparklePreview />,
-  // },
   {
     id: "hero-carousel",
     title: "Featured product with carousel",
@@ -39,8 +26,7 @@ const sections = [
   {
     id: "hero-paralax",
     title: "Hero Parallax",
-    description:
-      "Hero parallax section with image and text.",
+    description: "Hero parallax section with image and text.",
     codeString: heroParalaxString,
     preview: <HeroModernPreview />,
   },

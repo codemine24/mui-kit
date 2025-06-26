@@ -1,8 +1,8 @@
 "use client"
 
-import { useState, useEffect, useRef } from "react"
-import { Box, Typography, Button, IconButton, useMediaQuery } from "@mui/material"
+import { Box, Button, Typography, useMediaQuery } from "@mui/material"
 import Image from "next/image"
+import { useEffect, useState } from "react"
 
 // ---------- data ----------
 interface Watch {

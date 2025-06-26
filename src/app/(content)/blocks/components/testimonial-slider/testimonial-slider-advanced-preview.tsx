@@ -1,24 +1,23 @@
-import React, { useState, useEffect, useRef } from "react";
 import {
+  ChevronLeft,
+  ChevronRight,
+  FormatQuote,
+  Pause,
+  PlayArrow,
+} from "@mui/icons-material";
+import StarIcon from "@mui/icons-material/Star";
+import {
+  Avatar,
   Box,
   Card,
   CardContent,
-  Typography,
-  Avatar,
-  Button,
   Chip,
   Container,
   IconButton,
   Stack,
+  Typography
 } from "@mui/material";
-import {
-  ChevronLeft,
-  ChevronRight,
-  PlayArrow,
-  Pause,
-  FormatQuote,
-} from "@mui/icons-material";
-import StarIcon from "@mui/icons-material/Star";
+import { useEffect, useRef, useState } from "react";
 
 const testimonials = [
   {
@@ -200,7 +199,7 @@ export const TestimonialSliderAdvancedPreview = () => {
                   <Box>
                     <FormatQuote sx={{ width: 48, height: 48, color: "#a855f7", mb: 1 }} />
                     <Typography sx={{ fontSize: "1.125rem", lineHeight: 1.75, mb: 1 }}>
-                      "{testimonial.content}"
+                      {testimonial.content}
                     </Typography>
                     <StarRating rating={testimonial.rating} />
                   </Box>

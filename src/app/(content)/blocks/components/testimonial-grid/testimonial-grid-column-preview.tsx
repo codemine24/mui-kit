@@ -1,5 +1,5 @@
-import { Avatar, Box, Card, CardContent, Chip, Grid, Stack, Typography, Container } from "@mui/material";
 import StarIcon from "@mui/icons-material/Star";
+import { Avatar, Box, Card, CardContent, Chip, Container, Grid, Stack, Typography } from "@mui/material";
 
 const testimonials = [
   {
@@ -133,7 +133,7 @@ export const TestimonialGridColumnPreview = () => (
                       <StarRating rating={testimonial.rating} />
                     </Box>
                   </Box>
-                  <Typography sx={{ lineHeight: 1.625 }}>"{testimonial.content}"</Typography>
+                  <Typography sx={{ lineHeight: 1.625 }}>&quot;{testimonial.content}&quot;</Typography>
                 </CardContent>
               </Card>
             ))}

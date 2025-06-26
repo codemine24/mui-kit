@@ -121,7 +121,7 @@ export const TestimonialGridSpotlightPreview = () => {
                         color="text.secondary"
                         sx={{ mb: 3, fontStyle: 'italic' }}
                       >
-                        "{testimonial.quote}"
+                        {testimonial.quote}
                       </Typography>
                       <Typography variant="h6" component="p" sx={{ fontWeight: 'bold' }}>
                         {testimonial.name}

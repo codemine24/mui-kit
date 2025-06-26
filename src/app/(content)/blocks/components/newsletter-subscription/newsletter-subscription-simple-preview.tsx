@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Box, Typography, Button, TextField, Chip, useTheme } from "@mui/material";
+import { Box, Button, Chip, TextField, Typography } from "@mui/material";
+import { useState } from "react";
 
 const NewsletterSubscriptionSimplePreview = () => {
   const [email, setEmail] = useState("");
@@ -45,7 +45,7 @@ const NewsletterSubscriptionSimplePreview = () => {
             fontSize: { xs: 28, md: 36 },
           }}
         >
-          Don't Miss Out
+          Don&apos;t Miss Out
         </Typography>
         <Typography
           variant="body1"

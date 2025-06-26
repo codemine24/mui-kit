@@ -1,6 +1,6 @@
-import { Avatar, Box, Container, Stack, Typography } from "@mui/material";
 import FormatQuoteIcon from "@mui/icons-material/FormatQuote";
 import StarIcon from "@mui/icons-material/Star";
+import { Avatar, Box, Stack, Typography } from "@mui/material";
 
 const testimonials = [
   {
@@ -49,7 +49,7 @@ export const TestimonialGridQuotePreview = () => {
             
             }}
           >
-            "{testimonial.content}"
+            {testimonial.content}
           </Typography>
           <Stack
             direction="row"
