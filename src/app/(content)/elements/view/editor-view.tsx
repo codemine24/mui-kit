@@ -3,6 +3,7 @@ import { CodePreviewCopyWrapper } from "@/components/code-preview-copy-wrapper";
 import { CustomBreadCrumbs } from "@/components/core/breadcrumbs";
 import { PageTitle } from "@/components/core/page-title";
 import { SectionTitle } from "@/components/core/section-title";
+import { ExternalPackageAlert } from "@/components/external-package-alert";
 import { useOnThisPage } from "@/contexts/on-thispage-context";
 import { PATHS } from "@/router/paths";
 import { Box, Divider } from "@mui/material";
@@ -20,11 +21,19 @@ import { Editor1StyleCodeString } from "../code-string/editor/editor-1/style";
 import { Editor1ToolbarCodeString } from "../code-string/editor/editor-1/toolbar";
 import { Editor1TypesCodeString } from "../code-string/editor/editor-1/types";
 import Editor1 from "../components/editor/editor-1";
-import { ExternalPackageAlert } from "@/components/external-package-alert";
+import { EditorQuillPreview } from "../components/editor/editor-quill/editor-quill-preview";
 
 const sections = [
   {
     id: "editor-1",
+    title: "All in one editor",
+    description:
+      "We packaged almost every possible functionality that a rich text editor can have. You can remove some of them if you don't need.",
+    codeString: [{ name: "index.tsx", code: Editor1IndexPageCodeString }],
+    preview: <EditorQuillPreview />,
+  },
+  {
+    id: "editor-2",
     title: "All in one editor",
     description:
       "We packaged almost every possible functionality that a rich text editor can have. You can remove some of them if you don't need.",

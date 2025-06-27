@@ -34,7 +34,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "src/app/(content)/elements/components/breadcrumb/breadcrumb.-icon-preview.tsx"
-  ],
+, "src/app/(content)/elements/components/editor/editor-quill/editor.js", "src/app/(content)/elements/components/editor/editor-quill/editor-quill-preview.tsx"  ],
   "exclude": [
     "node_modules"
   ]
