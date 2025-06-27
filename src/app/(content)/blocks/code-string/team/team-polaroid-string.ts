@@ -1,4 +1,4 @@
-"use client";
+export const teamPolaroidString = `"use client";
 
 import { Avatar, Box, Container, Grid, Typography } from "@mui/material";
 
@@ -105,9 +105,9 @@ export const TeamPolaroidPreview = () => {
                 className="group"
                 sx={{
                   position: "relative",
-                  transform: `rotate(${
+                  transform: \`rotate(\${
                     (index % 2 === 0 ? 1 : -1) * (Math.random() * 4 + 1)
-                  }deg)`,
+                  }deg)\`,
                   transition: (theme) => theme.transitions.create("transform"),
                   "&:hover": {
                     transform: "scale(1.05)",
@@ -239,4 +239,4 @@ export const TeamPolaroidPreview = () => {
       </Container>
     </Box>
   );
-};
+};`

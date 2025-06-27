@@ -7,18 +7,18 @@ import { useOnThisPage } from "@/contexts/on-thispage-context";
 import { PATHS } from "@/router/paths";
 import { Box, Divider } from "@mui/material";
 import React from "react";
-import { TeamCirclePreview } from "../components/team/team-circle-preview";
-import { TeamCardPreview } from "../components/team/team-card-preview";
-import { TeamPolaroidPreview } from "../components/team/team-polaroid-preview";
-import { TeamOrganicPreview } from "../components/team/team-organic-preview";
 import { teamCardString } from "../code-string/team/team-card-string";
 import { teamCircleString } from "../code-string/team/team-circle-string";
-import { teamPolaroidString } from "../code-string/team/team-polaroid.string";
 import { teamOrganicString } from "../code-string/team/team-organic-string";
+import { teamPolaroidString } from "../code-string/team/team-polaroid-string";
+import { TeamCardPreview } from "../components/team/team-card-preview";
+import { TeamCirclePreview } from "../components/team/team-circle-preview";
+import { TeamOrganicPreview } from "../components/team/team-organic-preview";
+import { TeamPolaroidPreview } from "../components/team/team-polaroid-preview";
 
 const sections = [
   {
-    id: "team-card",
+    id: "team-1",
     title: "Team Card",
     description:
       "A clean and professional team section with card-based layout, featuring team member photos, roles, bios, and social contact information with hover effects.",
@@ -26,7 +26,7 @@ const sections = [
     preview: <TeamCardPreview />,
   },
   {
-    id: "team-circle",
+    id: "team-2",
     title: "Team Circle",
     description:
       "An innovative circular team layout with a central leader surrounded by team members in a connected, visually engaging arrangement with interactive hover effects.",
@@ -34,7 +34,7 @@ const sections = [
     preview: <TeamCirclePreview />,
   },
   {
-    id: "team-polaroid",
+    id: "team-3",
     title: "Team Polaroid",
     description:
       "A nostalgic polaroid-style team section with vintage aesthetics, featuring tilted photo frames, handwritten typography, and tape effects for a unique presentation.",
@@ -42,7 +42,7 @@ const sections = [
     preview: <TeamPolaroidPreview />,
   },
   {
-    id: "team-organic",
+    id: "team-4",
     title: "Team Organic",
     description:
       "A modern organic team layout with fluid shapes, gradient backgrounds, and smooth animations that create a natural, flowing presentation of team members.",
