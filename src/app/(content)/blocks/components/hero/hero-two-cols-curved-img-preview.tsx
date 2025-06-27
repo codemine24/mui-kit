@@ -1,4 +1,4 @@
-export const heroTwoColsCurvedImgString = `import { Box, Typography, Button, Stack } from "@mui/material";
+import { Box, Typography, Button, Stack } from "@mui/material";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 
 export const HeroTwoColsCurvedImgPreview = () => {
@@ -201,4 +201,4 @@ export const HeroTwoColsCurvedImgPreview = () => {
       </Box>
     </Box>
   );
-};`; 
+};

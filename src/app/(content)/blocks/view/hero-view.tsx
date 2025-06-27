@@ -8,17 +8,15 @@ import { PATHS } from "@/router/paths";
 import { Box, Divider } from "@mui/material";
 import React from "react";
 import { heroCarouselString } from "../code-string/hero/hero-carousel-string";
-import { heroMinimalString } from "../code-string/hero/hero-minimal-string";
+import { heroTwoColsCurvedImgString } from "../code-string/hero/hero-minimal-string";
 import { heroBasicTwoColsString } from "../code-string/hero/hero-paralax-string";
-import {
-  HeroBasicTwoColsPreview
-} from "../components/hero/hero-basic-two-cols-preview";
+import { HeroBasicTwoColsPreview } from "../components/hero/hero-basic-two-cols-preview";
 import { WatchHeroCarouselPreview } from "../components/hero/hero-carouel-preview";
-import { HeroMinimalPreview } from "../components/hero/hero-minimal-preview";
+import { HeroTwoColsCurvedImgPreview } from "../components/hero/hero-two-cols-curved-img-preview";
 
 const sections = [
   {
-    id: "hero-carousel",
+    id: "hero-1",
     title: "Featured product with carousel",
     description:
       "Featured product section with customer feedback carousel. Includes product image, description, ratings, and testimonials.",
@@ -26,19 +24,19 @@ const sections = [
     preview: <WatchHeroCarouselPreview />,
   },
   {
-    id: "hero-paralax",
+    id: "hero-2",
     title: "Hero Basic Two Columns",
     description: "Two columns hero section with title and image. ",
     codeString: heroBasicTwoColsString,
     preview: <HeroBasicTwoColsPreview />,
   },
   {
-    id: "hero-minimal",
-    title: "Hero Minimal",
+    id: "hero-3",
+    title: "Two columns curved image",
     description:
-      "Clean and minimal hero section with modern design and circular image elements.",
-    codeString: heroMinimalString,
-    preview: <HeroMinimalPreview />,
+      "Two columns hero section with title, description, and curved image. ",
+    codeString: heroTwoColsCurvedImgString,
+    preview: <HeroTwoColsCurvedImgPreview />,
   },
 ];
 
