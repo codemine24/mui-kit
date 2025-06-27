@@ -119,7 +119,7 @@ export const featuredComponents = [
   },
   {
     label: "Carousel",
-    url: PATHS.ELEMENTS.EDITOR,
+    url: PATHS.ELEMENTS.CAROUSEL,
     icon: "bx:carousel",
   },
   {
@@ -167,8 +167,8 @@ export const featuredComponents = [
 // featured blocks
 export const featuredBlocks = [
   {
-    label: "Pricing Menu",
-    url: PATHS.BLOCKS.PRICING_MENU,
+    label: "Pricing Table",
+    url: PATHS.BLOCKS.PRICING_TABLE,
     icon: "tabler:currency-dollar",
   },
   {
