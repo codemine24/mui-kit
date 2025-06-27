@@ -1,5 +1,15 @@
-export const testimonialGridColumnString = `import { Avatar, Box, Card, CardContent, Chip, Grid, Stack, Typography, Container } from "@mui/material";
-import StarIcon from "@mui/icons-material/Star";
+export const testimonialGridColumnString = `import StarIcon from "@mui/icons-material/Star";
+import {
+  Avatar,
+  Box,
+  Card,
+  CardContent,
+  Chip,
+  Container,
+  Grid,
+  Stack,
+  Typography,
+} from "@mui/material";
 
 const testimonials = [
   {
@@ -39,7 +49,7 @@ const StarRating = ({ rating }: { rating: number }) => (
   </Box>
 );
 
-export const TestimonialGridColumnString = () => (
+export const TestimonialGridColumnPreview = () => (
   <Box component="section" sx={{ py: 4 }}>
     <Container maxWidth="lg">
       <Grid container spacing={6} alignItems="center">
@@ -62,12 +72,20 @@ export const TestimonialGridColumnString = () => (
             Real Stories from Real Customers
           </Typography>
           <Typography sx={{ fontSize: "1.125rem", lineHeight: 1.625, mb: 4 }}>
-            Our customers are at the heart of everything we do. Their success stories inspire us to continue innovating
-            and delivering exceptional value.
+            Our customers are at the heart of everything we do. Their success
+            stories inspire us to continue innovating and delivering exceptional
+            value.
           </Typography>
           <Box sx={{ display: "flex", alignItems: "center", gap: 4 }}>
             <Box sx={{ textAlign: "center" }}>
-              <Typography component="p" sx={{ fontSize: "1.875rem", fontWeight: "bold", color: "indigo.400" }}>
+              <Typography
+                component="p"
+                sx={{
+                  fontSize: "1.875rem",
+                  fontWeight: "bold",
+                  color: "indigo.400",
+                }}
+              >
                 500+
               </Typography>
               <Typography component="p" sx={{ fontSize: "0.875rem" }}>
@@ -75,7 +93,14 @@ export const TestimonialGridColumnString = () => (
               </Typography>
             </Box>
             <Box sx={{ textAlign: "center" }}>
-              <Typography component="p" sx={{ fontSize: "1.875rem", fontWeight: "bold", color: "indigo.400" }}>
+              <Typography
+                component="p"
+                sx={{
+                  fontSize: "1.875rem",
+                  fontWeight: "bold",
+                  color: "indigo.400",
+                }}
+              >
                 4.9/5
               </Typography>
               <Typography component="p" sx={{ fontSize: "0.875rem" }}>
@@ -83,7 +108,14 @@ export const TestimonialGridColumnString = () => (
               </Typography>
             </Box>
             <Box sx={{ textAlign: "center" }}>
-              <Typography component="p" sx={{ fontSize: "1.875rem", fontWeight: "bold", color: "indigo.400" }}>
+              <Typography
+                component="p"
+                sx={{
+                  fontSize: "1.875rem",
+                  fontWeight: "bold",
+                  color: "indigo.400",
+                }}
+              >
                 99%
               </Typography>
               <Typography component="p" sx={{ fontSize: "0.875rem" }}>
@@ -99,22 +131,30 @@ export const TestimonialGridColumnString = () => (
               <Card
                 key={testimonial.id}
                 sx={{
-                  "&:hover": { 
-                    boxShadow: (theme) => theme.shadows[8]
+                  "&:hover": {
+                    boxShadow: (theme) => theme.shadows[8],
                   },
-                  transition: (theme) => theme.transitions.create("background-color"),
+                  transition: (theme) =>
+                    theme.transitions.create("background-color"),
                 }}
               >
                 <CardContent sx={{ p: 3 }}>
-                  <Box sx={{ display: "flex", alignItems: "center", gap: 1.5, mb: 2 }}>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: 1.5,
+                      mb: 2,
+                    }}
+                  >
                     <Avatar src={testimonial.avatar} alt={testimonial.name}>
                       {testimonial.name
                         .split(" ")
                         .map((n) => n[0])
                         .join("")}
                     </Avatar>
-                        <Box>
-                        <Typography component="p" sx={{ fontWeight: "semibold" }}>
+                    <Box>
+                      <Typography component="p" sx={{ fontWeight: "semibold" }}>
                         {testimonial.name}
                       </Typography>
                       <Typography component="p" sx={{ fontSize: "0.875rem" }}>
@@ -125,7 +165,9 @@ export const TestimonialGridColumnString = () => (
                       <StarRating rating={testimonial.rating} />
                     </Box>
                   </Box>
-                  <Typography sx={{ lineHeight: 1.625 }}>"{testimonial.content}"</Typography>
+                  <Typography sx={{ lineHeight: 1.625 }}>
+                    &quot;{testimonial.content}&quot;
+                  </Typography>
                 </CardContent>
               </Card>
             ))}
@@ -134,4 +176,4 @@ export const TestimonialGridColumnString = () => (
       </Grid>
     </Container>
   </Box>
-);`; 
+);`;
