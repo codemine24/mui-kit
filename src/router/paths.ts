@@ -70,7 +70,7 @@ export const PATHS = {
     IMAGE_GALLERY: "/blocks/image-gallery",
     LOGO_GRID: "/blocks/logo-grid",
     MAP: "/blocks/map",
-    NEW_LETTER: "/blocks/new-letter",
+    NEWSLETTER_SUBSCRIPTION: "/blocks/newsletter-subscription",
     POPUP: "/blocks/popup",
     PRICING_MENU: "/blocks/pricing-menu",
     PRICING_TABLE: "/blocks/pricing-table",

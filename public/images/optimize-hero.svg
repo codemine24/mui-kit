@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Phone Frame -->
+  <rect x="250" y="50" width="300" height="500" rx="30" fill="#F4F6F8" stroke="#212B36" stroke-width="4"/>
+  
+  <!-- Screen -->
+  <rect x="265" y="65" width="270" height="470" rx="20" fill="white" stroke="#E5E8EB" stroke-width="2"/>
+  
+  <!-- UI Elements -->
+  <!-- Header -->
+  <rect x="285" y="95" width="230" height="40" rx="8" fill="#F4F6F8"/>
+  <circle cx="305" cy="115" r="10" fill="#637381"/>
+  <rect x="325" y="110" width="100" height="10" rx="2" fill="#637381"/>
+  
+  <!-- Content Blocks -->
+  <rect x="285" y="155" width="230" height="60" rx="8" fill="#F4F6F8"/>
+  <rect x="305" y="175" width="140" height="8" rx="2" fill="#637381"/>
+  <rect x="305" y="191" width="90" height="8" rx="2" fill="#637381"/>
+  
+  <rect x="285" y="235" width="230" height="60" rx="8" fill="#F4F6F8"/>
+  <rect x="305" y="255" width="140" height="8" rx="2" fill="#637381"/>
+  <rect x="305" y="271" width="90" height="8" rx="2" fill="#637381"/>
+  
+  <!-- Graph -->
+  <path d="M285 375 L515 375" stroke="#E5E8EB" stroke-width="2"/>
+  <path d="M285 345 L515 345" stroke="#E5E8EB" stroke-width="2"/>
+  <path d="M285 405 L515 405" stroke="#E5E8EB" stroke-width="2"/>
+  <path d="M305 335 L335 385 L365 355 L395 395 L425 365 L455 385 L485 345" 
+        stroke="#2065D1" stroke-width="3" fill="none"/>
+  
+  <!-- Bottom Navigation -->
+  <rect x="285" y="465" width="230" height="50" rx="8" fill="#F4F6F8"/>
+  <circle cx="325" cy="490" r="10" fill="#637381"/>
+  <circle cx="400" cy="490" r="10" fill="#637381"/>
+  <circle cx="475" cy="490" r="10" fill="#637381"/>
+  
+  <!-- Hand Drawing -->
+  <path d="M520 400 C580 380, 600 420, 620 460" 
+        stroke="#212B36" stroke-width="4" fill="none"/>
+</svg> 
