@@ -86,7 +86,7 @@ export const TestimonialGridSpotlightPreview = () => {
               bgcolor: "background.paper",
               borderRadius: "40px",
               boxShadow: (theme) =>
-                \`0 0 0 8px \${
+                \`\0 0 0 8px \${
                   theme.palette.mode === "light"
                     ? theme.palette.grey[200]
                     : theme.palette.grey[800]
