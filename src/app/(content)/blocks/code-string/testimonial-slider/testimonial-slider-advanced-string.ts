@@ -1,24 +1,23 @@
-export const testimonialSliderAdvancedString = `import React, { useState, useEffect, useRef } from "react";
+export const testimonialSliderAdvancedString = `import {
+  ChevronLeft,
+  ChevronRight,
+  FormatQuote,
+  Pause,
+  PlayArrow,
+} from "@mui/icons-material";
+import StarIcon from "@mui/icons-material/Star";
 import {
+  Avatar,
   Box,
   Card,
   CardContent,
-  Typography,
-  Avatar,
-  Button,
   Chip,
   Container,
   IconButton,
   Stack,
+  Typography,
 } from "@mui/material";
-import {
-  ChevronLeft,
-  ChevronRight,
-  PlayArrow,
-  Pause,
-  FormatQuote,
-} from "@mui/icons-material";
-import StarIcon from "@mui/icons-material/Star";
+import { useEffect, useRef, useState } from "react";
 
 const testimonials = [
   {
@@ -105,16 +104,27 @@ export const TestimonialSliderAdvancedPreview = () => {
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+    setCurrentIndex(
+      (prev) => (prev - 1 + testimonials.length) % testimonials.length
+    );
   };
 
   const getSlidePosition = (index: number) => {
     const diff = index - currentIndex;
-    if (diff === 0) return { transform: "translateX(-50%) scale(1)", zIndex: 20, opacity: 1 };
+    if (diff === 0)
+      return { transform: "translateX(-50%) scale(1)", zIndex: 20, opacity: 1 };
     if (diff === 1 || diff === -(testimonials.length - 1))
-      return { transform: "translateX(40%) scale(0.8)", zIndex: 10, opacity: 0.5 };
+      return {
+        transform: "translateX(40%) scale(0.8)",
+        zIndex: 10,
+        opacity: 0.5,
+      };
     if (diff === -1 || diff === testimonials.length - 1)
-      return { transform: "translateX(-140%) scale(0.8)", zIndex: 10, opacity: 0.5 };
+      return {
+        transform: "translateX(-140%) scale(0.8)",
+        zIndex: 10,
+        opacity: 0.5,
+      };
     return { transform: "translateX(100%) scale(0.5)", zIndex: 0, opacity: 0 };
   };
 
@@ -135,7 +145,7 @@ export const TestimonialSliderAdvancedPreview = () => {
             sx={{
               mb: 2,
               bgcolor: "rgba(255, 255, 255, 0.1)",
-             
+
               borderColor: "primary.main",
               "& .MuiChip-label": {
                 color: "text.primary",
@@ -161,7 +171,8 @@ export const TestimonialSliderAdvancedPreview = () => {
               mx: "auto",
             }}
           >
-            Discover how industry leaders are achieving remarkable results with our platform
+            Discover how industry leaders are achieving remarkable results with
+            our platform
           </Typography>
         </Box>
 
@@ -198,9 +209,13 @@ export const TestimonialSliderAdvancedPreview = () => {
                   }}
                 >
                   <Box>
-                    <FormatQuote sx={{ width: 48, height: 48, color: "#a855f7", mb: 1 }} />
-                    <Typography sx={{ fontSize: "1.125rem", lineHeight: 1.75, mb: 1 }}>
-                      "{testimonial.content}"
+                    <FormatQuote
+                      sx={{ width: 48, height: 48, color: "#a855f7", mb: 1 }}
+                    />
+                    <Typography
+                      sx={{ fontSize: "1.125rem", lineHeight: 1.75, mb: 1 }}
+                    >
+                      {testimonial.content}
                     </Typography>
                     <StarRating rating={testimonial.rating} />
                   </Box>
@@ -216,11 +231,17 @@ export const TestimonialSliderAdvancedPreview = () => {
                         component="img"
                         src={testimonial.avatar}
                         alt={testimonial.name}
-                        sx={{ width: "100%", height: "100%", objectFit: "cover" }}
+                        sx={{
+                          width: "100%",
+                          height: "100%",
+                          objectFit: "cover",
+                        }}
                       />
                     </Avatar>
                     <Box>
-                      <Typography sx={{ fontWeight: "semibold", fontSize: "1.125rem" }}>
+                      <Typography
+                        sx={{ fontWeight: "semibold", fontSize: "1.125rem" }}
+                      >
                         {testimonial.name}
                       </Typography>
                       <Typography sx={{ color: "#a855f7" }}>
@@ -266,13 +287,16 @@ export const TestimonialSliderAdvancedPreview = () => {
                   width: index === currentIndex ? 32 : 12,
                   height: 12,
                   borderRadius: "6px",
-                  bgcolor: index === currentIndex ? "text.primary" : "text.secondary",
+                  bgcolor:
+                    index === currentIndex ? "text.primary" : "text.secondary",
                   cursor: "pointer",
-
 
                   transition: "all 0.3s ease",
                   "&:hover": {
-                    bgcolor: index === currentIndex ? "text.primary" : "text.secondary",
+                    bgcolor:
+                      index === currentIndex
+                        ? "text.primary"
+                        : "text.secondary",
                   },
                 }}
               />
@@ -310,4 +334,4 @@ export const TestimonialSliderAdvancedPreview = () => {
       </Container>
     </Box>
   );
-};  `; 
+};`; 

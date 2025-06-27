@@ -1,6 +1,4 @@
-export const testimonialSimpleString = `
-"use client";
-import { ChevronLeft, ChevronRight } from "@mui/icons-material";
+export const testimonialSimpleString = `import { ChevronLeft, ChevronRight } from "@mui/icons-material";
 import {
   Avatar,
   Box,
@@ -20,7 +18,8 @@ const testimonials = [
     role: "Product Designer",
     avatar: "/images/avatar.png",
     rating: 5,
-    content: "Clean, intuitive, and exactly what we needed. The simplicity is its strength.",
+    content:
+      "Clean, intuitive, and exactly what we needed. The simplicity is its strength.",
   },
   {
     id: 2,
@@ -28,7 +27,8 @@ const testimonials = [
     role: "Creative Director",
     avatar: "/images/avatar-2.png",
     rating: 5,
-    content: "Elegant solution that gets out of the way and lets us focus on what matters.",
+    content:
+      "Elegant solution that gets out of the way and lets us focus on what matters.",
   },
   {
     id: 3,
@@ -36,7 +36,8 @@ const testimonials = [
     role: "UX Lead",
     avatar: "/images/avatar.png",
     rating: 5,
-    content: "Perfect balance of functionality and aesthetics. Minimalism done right.",
+    content:
+      "Perfect balance of functionality and aesthetics. Minimalism done right.",
   },
   {
     id: 4,
@@ -52,7 +53,8 @@ const testimonials = [
     role: "Creative Director",
     avatar: "/images/avatar.png",
     rating: 5,
-    content: "This is the benchmark for quality in its class. Highly recommended.",
+    content:
+      "This is the benchmark for quality in its class. Highly recommended.",
   },
   {
     id: 6,
@@ -60,7 +62,8 @@ const testimonials = [
     role: "Operations Manager",
     avatar: "/images/avatar-2.png",
     rating: 5,
-    content: "A seamless experience from start to finish. Truly impressive work.",
+    content:
+      "A seamless experience from start to finish. Truly impressive work.",
   },
 ];
 
@@ -97,14 +100,18 @@ export const TestimonialSimplePreview = () => {
           <Typography variant="h2" sx={{ fontWeight: "light", mb: 2 }}>
             Client Stories
           </Typography>
-          <Typography variant="body1" sx={{ color: "text.secondary", maxWidth: "md", mx: "auto" }}>
-            Simple testimonials from people who value clean design and thoughtful experiences.
+          <Typography
+            variant="body1"
+            sx={{ color: "text.secondary", maxWidth: "md", mx: "auto" }}
+          >
+            Simple testimonials from people who value clean design and
+            thoughtful experiences.
           </Typography>
         </Box>
 
         <Box
           sx={{
-             minHeight: 250,
+            minHeight: 250,
             display: "grid",
             gridTemplateColumns: {
               xs: "1fr",
@@ -123,7 +130,8 @@ export const TestimonialSimplePreview = () => {
                 boxShadow: "none",
                 bgcolor: "background.paper",
                 border: "1px solid",
-                borderColor: (theme) => (theme.palette.mode === "light" ? "grey.200" : "grey.800"),
+                borderColor: (theme) =>
+                  theme.palette.mode === "light" ? "grey.200" : "grey.800",
                 p: 2,
               }}
             >
@@ -143,10 +151,16 @@ export const TestimonialSimplePreview = () => {
                     sx={{ width: 48, height: 48, mr: 2 }}
                   />
                   <Box>
-                    <Typography variant="subtitle1" sx={{ fontWeight: "medium" }}>
+                    <Typography
+                      variant="subtitle1"
+                      sx={{ fontWeight: "medium" }}
+                    >
                       {testimonial.name}
                     </Typography>
-                    <Typography variant="body2" sx={{ color: "text.secondary" }}>
+                    <Typography
+                      variant="body2"
+                      sx={{ color: "text.secondary" }}
+                    >
                       {testimonial.role}
                     </Typography>
                   </Box>
@@ -156,8 +170,19 @@ export const TestimonialSimplePreview = () => {
           ))}
         </Box>
 
-        <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", mt: 6 }}>
-          <IconButton onClick={handlePrev} size="small" sx={{ color: "text.secondary" }}>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            mt: 6,
+          }}
+        >
+          <IconButton
+            onClick={handlePrev}
+            size="small"
+            sx={{ color: "text.secondary" }}
+          >
             <ChevronLeft />
           </IconButton>
 
@@ -178,12 +203,15 @@ export const TestimonialSimplePreview = () => {
             ))}
           </Box>
 
-          <IconButton onClick={handleNext} size="small" sx={{ color: "text.secondary" }}>
+          <IconButton
+            onClick={handleNext}
+            size="small"
+            sx={{ color: "text.secondary" }}
+          >
             <ChevronRight />
           </IconButton>
         </Box>
       </Container>
     </Box>
   );
-}; 
-`; 
+};`; 

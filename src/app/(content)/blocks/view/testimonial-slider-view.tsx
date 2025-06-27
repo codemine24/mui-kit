@@ -8,13 +8,13 @@ import { PATHS } from "@/router/paths";
 import { Box, Divider } from "@mui/material";
 import React from "react";
 import {
-  testimonialSliderAdvancedString,
   testimonialJourneyString,
   testimonialSimpleString,
+  testimonialSliderAdvancedString,
 } from "../code-string/testimonial-slider";
-import { TestimonialSliderAdvancedPreview } from "../components/testimonial-slider/testimonial-slider-advanced-preview";
 import { TestimonialJourneyPreview } from "../components/testimonial-slider/testimonial-journey-preview";
 import { TestimonialSimplePreview } from "../components/testimonial-slider/testimonial-simple-preview";
+import { TestimonialSliderAdvancedPreview } from "../components/testimonial-slider/testimonial-slider-advanced-preview";
 
 const sections = [
   {
@@ -36,7 +36,8 @@ const sections = [
   {
     id: "testimonial-simple",
     title: "Simple Testimonial Slider",
-    description: "A minimal and clean testimonial slider with autoplay and simple navigation.",
+    description:
+      "A minimal and clean testimonial slider with autoplay and simple navigation.",
     codeString: testimonialSimpleString,
     preview: <TestimonialSimplePreview />,
   },
