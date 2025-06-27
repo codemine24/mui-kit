@@ -9,10 +9,12 @@ import { Box, Divider } from "@mui/material";
 import React from "react";
 import { heroCarouselString } from "../code-string/hero/hero-carousel-string";
 import { heroMinimalString } from "../code-string/hero/hero-minimal-string";
-import { heroParalaxString } from "../code-string/hero/hero-paralax-string";
-import { WatchHeroCarouselMui } from "../components/hero/hero-carouel";
+import { heroBasicTwoColsString } from "../code-string/hero/hero-paralax-string";
+import {
+  HeroBasicTwoColsPreview
+} from "../components/hero/hero-basic-two-cols-preview";
+import { WatchHeroCarouselPreview } from "../components/hero/hero-carouel-preview";
 import { HeroMinimalPreview } from "../components/hero/hero-minimal-preview";
-import { HeroModernPreview } from "../components/hero/hero-modern-preview";
 
 const sections = [
   {
@@ -21,14 +23,14 @@ const sections = [
     description:
       "Featured product section with customer feedback carousel. Includes product image, description, ratings, and testimonials.",
     codeString: heroCarouselString,
-    preview: <WatchHeroCarouselMui />,
+    preview: <WatchHeroCarouselPreview />,
   },
   {
     id: "hero-paralax",
-    title: "Hero Parallax",
-    description: "Hero parallax section with image and text.",
-    codeString: heroParalaxString,
-    preview: <HeroModernPreview />,
+    title: "Hero Basic Two Columns",
+    description: "Two columns hero section with title and image. ",
+    codeString: heroBasicTwoColsString,
+    preview: <HeroBasicTwoColsPreview />,
   },
   {
     id: "hero-minimal",
@@ -38,14 +40,6 @@ const sections = [
     codeString: heroMinimalString,
     preview: <HeroMinimalPreview />,
   },
-  // {
-  //   id: "hero-basic",
-  //   title: "Hero Basic",
-  //   description:
-  //     "Simple and clean hero section with basic layout and typography.",
-  //   codeString: heroBasicString,
-  //   preview: <BasicHero />,
-  // },
 ];
 
 export const HeroView = () => {
@@ -64,7 +58,7 @@ export const HeroView = () => {
       />
       <PageTitle
         title="Hero"
-        description="Explore a collection of modern hero sections to make a bold first impression. Find inspiration for impactful headlines, backgrounds, and call-to-action layouts."
+        description="We tried to design some commonly used hero sections for you. All the section are designed with purely material ui and nothing else. "
       />
 
       <Divider sx={{ my: 4 }} />

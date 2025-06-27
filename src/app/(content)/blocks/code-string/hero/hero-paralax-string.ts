@@ -1,264 +1,203 @@
-export const heroParalaxString = `
-import React, { useEffect, useState } from 'react';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import Stack from '@mui/material/Stack';
+export const heroBasicTwoColsString = `import { Box, Button, Stack, TextField, Typography } from "@mui/material";
 
-const HeroParallaxPreview = () => {
-  const [scrollY, setScrollY] = useState(0);
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY);
-    window.addEventListener('scroll', handleScroll);
-    setIsLoaded(true);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
+export const HeroBasicTwoColsPreview = () => {
   return (
     <Box
-      component="section"
       sx={{
-        position: 'relative',
-        height: '100vh',
-        overflow: 'hidden',
-        background: 'linear-gradient(135deg, #064e3b 0%, #134e4a 50%, #0e7490 100%)',
+        display: "flex",
+        alignItems: "center",
+        px: { xs: 1, sm: 2, md: 10 },
+        py: { xs: 2, md: 8 },
+        bgcolor: "background.paper",
       }}
     >
-      {/* Parallax Mountain Background */}
-      <Box
-        sx={{
-          position: 'absolute',
-          inset: 0,
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixlib=rb-4.0.3&auto=format&fit=crop&w=2048&q=80')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          opacity: 0.4,
-          // eslint-disable-next-line
-          transform: 'translateY(' + (scrollY * 0.4) + 'px) scale(1.1)',
-          transition: 'transform 0.2s',
-          zIndex: 1,
-        }}
-      />
-      {/* Animated Overlay */}
-      <Box
-        sx={{
-          position: 'absolute',
-          inset: 0,
-          background:
-            'linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.0) 60%, rgba(0,0,0,0.2) 100%)',
-          zIndex: 2,
-        }}
-      />
-      {/* Content */}
-      <Box
-        sx={{
-          position: 'relative',
-          zIndex: 3,
-          height: '100%',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-        }}
+      <Stack
+        direction={{ xs: "column", lg: "row" }}
+        spacing={{ xs: 4, sm: 6, md: 10, lg: 12 }}
+        alignItems={{ xs: "flex-start", lg: "center" }}
+        justifyContent="center"
+        sx={{ maxWidth: 1440, mx: "auto", width: "100%" }}
       >
-        <Box sx={{ textAlign: 'center', maxWidth: 900, mx: 'auto', px: 3 }}>
-          <Box
+        {/* Left Side */}
+        <Box
+          sx={{
+            flex: 1,
+            maxWidth: 520,
+            width: "100%",
+            mx: { xs: "auto", lg: 0 },
+            py: { xs: 4, md: 8 },
+            pr: { lg: 6 },
+          }}
+        >
+          <Box sx={{ mb: 3 }}>
+            <Box
+              sx={{
+                display: "inline-block",
+                bgcolor: "#000",
+                color: "#fff",
+                px: 2,
+                py: 0.5,
+                borderRadius: 999,
+                fontSize: 14,
+                fontWeight: 500,
+                mb: 2,
+              }}
+            >
+              New Release
+            </Box>
+          </Box>
+          <Typography
+            component="h1"
             sx={{
-              transform: isLoaded ? 'translateY(0)' : 'translateY(40px)',
-              opacity: isLoaded ? 1 : 0,
-              transition: 'all 1s cubic-bezier(.4,0,.2,1)',
+              fontSize: {
+                xs: "2.2rem",
+                sm: "2.8rem",
+                md: "3.5rem",
+                lg: "4.2rem",
+              },
+              fontWeight: 300,
+              lineHeight: 1.05,
+              letterSpacing: -1,
+              wordBreak: "break-word",
+              mb: 2,
             }}
           >
-            <Typography
-              variant="subtitle2"
+            Meet Your
+            <Box component="span" sx={{ display: "block", fontWeight: 900 }}>
+              Next-Gen Workspace
+            </Box>
+          </Typography>
+          <Typography
+            sx={{
+              color: "#64748b",
+              fontSize: { xs: 16, md: 18 },
+              mb: 4,
+              maxWidth: 420,
+              fontWeight: 300,
+              lineHeight: 1.7,
+            }}
+          >
+            All your projects, docs, and team collaboration in one place. Boost
+            productivity, stay organized, and work smarter with powerful tools
+            designed for modern teams and creators.
+          </Typography>
+          <Box sx={{ mb: 2 }}>
+            <Box
               sx={{
-                color: '#34d399',
-                letterSpacing: 2,
-                fontWeight: 500,
-                textTransform: 'uppercase',
+                display: "flex",
+                flexDirection: { xs: "column", md: "row" },
+                gap: 2,
+                maxWidth: 500,
               }}
             >
-              EXPLORE THE UNKNOWN
-            </Typography>
-            <Typography
-              variant="h1"
-              sx={{
-                mt: 3,
-                fontWeight: 700,
-                fontSize: { xs: '2.5rem', md: '4.5rem' },
-                color: '#fff',
-                lineHeight: 1.1,
-              }}
-            >
-              Journey Beyond
-              <br />
-              <Box
-                component="span"
+              <TextField
+                placeholder="Enter your email"
+                size="medium"
+                fullWidth
                 sx={{
-                  background: 'linear-gradient(90deg, #34d399, #2dd4bf, #22d3ee)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  backgroundClip: 'text',
-                  textFillColor: 'transparent',
-                  display: 'inline-block',
+                  bgcolor: "background.paper",
+                  borderRadius: 2,
+                  color: "text.primary",
                 }}
-              >
-                Expectations
-              </Box>
-            </Typography>
-            <Typography
-              variant="h6"
-              sx={{
-                mt: 5,
-                color: '#e0e7ef',
-                maxWidth: 600,
-                mx: 'auto',
-                fontWeight: 400,
-              }}
-            >
-              Discover breathtaking landscapes and create memories that last a lifetime. Adventure awaits at every summit.
-            </Typography>
-            <Stack
-              direction={{ xs: 'column', sm: 'row' }}
-              spacing={3}
-              justifyContent="center"
-              sx={{ mt: 6 }}
-            >
+                InputProps={{
+                  sx: { borderRadius: 2 },
+                }}
+              />
               <Button
                 variant="contained"
                 sx={{
-                  background: 'linear-gradient(90deg, #059669, #06b6d4)',
-                  color: '#fff',
-                  px: 6,
-                  py: 2,
-                  fontSize: '1.15rem',
+                  width: { xs: "100%", md: "50%" },
+                  bgcolor: "#000",
+                  color: "#fff",
+                  px: 3,
+                  borderRadius: 2,
                   fontWeight: 600,
-                  borderRadius: 999,
-                  boxShadow: 3,
-                  textTransform: 'none',
-                  transition: 'all 0.3s',
-                  '&:hover': {
-                    background: 'linear-gradient(90deg, #047857, #0891b2)',
-                    transform: 'scale(1.05)',
-                    boxShadow: 6,
-                  },
+                  "&:hover": { bgcolor: "#222" },
                 }}
               >
-                Start Adventure
+                Join Waitlist
               </Button>
-              <Button
-                variant="outlined"
-                sx={{
-                  borderColor: '#34d399',
-                  color: '#34d399',
-                  px: 6,
-                  py: 2,
-                  fontSize: '1.15rem',
-                  fontWeight: 600,
-                  borderRadius: 999,
-                  textTransform: 'none',
-                  background: 'rgba(255,255,255,0.05)',
-                  transition: 'all 0.3s',
-                  '&:hover': {
-                    background: '#34d399',
-                    color: '#111827',
-                    borderColor: '#34d399',
-                  },
-                }}
-              >
-                View Gallery
-              </Button>
-            </Stack>
+            </Box>
           </Box>
+          <Typography sx={{ color: "#6b7280", fontSize: 14 }}>
+            Join 50,000+ professionals already using our platform
+          </Typography>
         </Box>
-      </Box>
-      {/* Floating Navigation Dots */}
-      <Box
-        sx={{
-          position: 'absolute',
-          right: 32,
-          top: '50%',
-          transform: 'translateY(-50%)',
-          zIndex: 4,
-          display: 'flex',
-          flexDirection: 'column',
-          gap: 2,
-        }}
-      >
-        {[...Array(4)].map((_, i) => (
-          <Box
-            key={i}
-            sx={{
-              width: 14,
-              height: 14,
-              borderRadius: '50%',
-              background: 'rgba(255,255,255,0.4)',
-              cursor: 'pointer',
-              transition: 'all 0.3s',
-              '&:hover': {
-                background: 'rgba(255,255,255,0.8)',
-              },
-              // eslint-disable-next-line
-              transform: 'translateY(' + (Math.sin(scrollY * 0.01 + i) * 5) + 'px)'
-            }}
-          />
-        ))}
-      </Box>
-      {/* Scroll Indicator */}
-      <Box
-        sx={{
-          position: 'absolute',
-          left: '50%',
-          bottom: 32,
-          transform: 'translateX(-50%)',
-          zIndex: 4,
-          color: 'rgba(255,255,255,0.7)',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          animation: 'bounce 2s infinite',
-          '@keyframes bounce': {
-            '0%, 100%': { transform: 'translateX(-50%) translateY(0)' },
-            '50%': { transform: 'translateX(-50%) translateY(-10px)' },
-          },
-        }}
-      >
-        <Typography variant="body2" sx={{ mb: 1, fontSize: '1rem' }}>
-          Scroll to explore
-        </Typography>
+        {/* Right Side */}
         <Box
           sx={{
-            width: 28,
-            height: 44,
-            border: '2px solid rgba(255,255,255,0.4)',
-            borderRadius: 16,
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'flex-start',
+            flex: 1,
+            display: { xs: "none", md: "flex" },
+            justifyContent: { xs: "flex-start", lg: "center" },
+            alignItems: { xs: "center", lg: "center" },
+            width: "100%",
+            mt: { xs: 2, lg: 0 },
           }}
         >
           <Box
             sx={{
-              width: 4,
-              height: 16,
-              background: 'rgba(255,255,255,0.6)',
-              borderRadius: 2,
-              mt: 1.5,
-              animation: 'pulse 1.5s infinite',
-              '@keyframes pulse': {
-                '0%, 100%': { opacity: 1 },
-                '50%': { opacity: 0.3 },
-              },
+              position: "relative",
+              display: "flex",
+              justifyContent: "center",
+              width: { xs: "100%", sm: 200, md: 260, lg: 320 },
+              maxWidth: { xs: "100%", sm: 320, md: 380 },
+              height: { xs: 180, sm: 200, md: 260, lg: 380 },
             }}
-          />
+          >
+            <Box
+              sx={{
+                aspectRatio: { xs: "1/1", md: "4/5" },
+                width: "100%",
+                height: "100%",
+                borderRadius: 4,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                position: "relative",
+                boxShadow: 3,
+                backgroundImage:
+                  "url(https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80)",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+            >
+              {/* Optionally overlay */}
+              <Box
+                sx={{
+                  position: "absolute",
+                  inset: 0,
+                  bgcolor: "rgba(0,0,0,0.10)",
+                  borderRadius: 4,
+                }}
+              />
+            </Box>
+            <Box
+              sx={{
+                position: "absolute",
+                top: { xs: -18, md: -32 },
+                right: { xs: -18, md: -32 },
+                width: { xs: 44, md: 84 },
+                height: { xs: 44, md: 84 },
+                backgroundColor: "background.paper",
+                borderRadius: "50%",
+                boxShadow: 1,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <Box
+                sx={{
+                  width: { xs: 20, md: 32 },
+                  height: { xs: 20, md: 32 },
+                  bgcolor: "#000",
+                  borderRadius: "50%",
+                }}
+              />
+            </Box>
+          </Box>
         </Box>
-      </Box>
+      </Stack>
     </Box>
   );
-};
-
-export default HeroParallaxPreview;
-
-`;
+};`;

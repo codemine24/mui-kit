@@ -12,9 +12,9 @@ interface Watch {
   title: string[]
   limited: string
   available: string
-  background: string // will be used as sx background
-  accentColor: string // sx color
-  buttonColor: string // sx color
+  background: string 
+  accentColor: string 
+  buttonColor: string 
 }
 
 const watches: Watch[] = [
@@ -64,7 +64,7 @@ const watches: Watch[] = [
   },
 ]
 
-export const WatchHeroCarouselMui = () => {
+export const WatchHeroCarouselPreview = () => {
   const [index, setIndex] = useState(0)
   const [dir, setDir] = useState<"left" | "right">("right")
   const [prevIndex, setPrevIndex] = useState(0)
