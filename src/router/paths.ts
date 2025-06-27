@@ -46,6 +46,7 @@ export const PATHS = {
     TOP_LOADER: "/elements/top-loader",
     UPLOAD: "/elements/upload",
     VIDEO: "/elements/video",
+    OTP: "/elements/otp",
   },
   DOCS: {
     ROOT: "/docs",
@@ -69,7 +70,7 @@ export const PATHS = {
     IMAGE_GALLERY: "/blocks/image-gallery",
     LOGO_GRID: "/blocks/logo-grid",
     MAP: "/blocks/map",
-    NEW_LETTER: "/blocks/new-letter",
+    NEWSLETTER_SUBSCRIPTION: "/blocks/newsletter-subscription",
     POPUP: "/blocks/popup",
     PRICING_MENU: "/blocks/pricing-menu",
     PRICING_TABLE: "/blocks/pricing-table",
