@@ -1,10 +1,7 @@
-export const newsletterSubscriptionSimpleString = `
-'use client';
+export const newsletterSubscriptionSimpleString = `import { Box, Button, Chip, TextField, Typography } from "@mui/material";
+import { useState } from "react";
 
-import React, { useState } from "react";
-import { Box, Typography, Button, TextField, Chip, useTheme } from "@mui/material";
-
-const NewsletterSubscriptionSimplePreview = () => {
+export const NewsletterSubscriptionSimplePreview = () => {
   const [email, setEmail] = useState("");
 
   return (
@@ -29,7 +26,7 @@ const NewsletterSubscriptionSimplePreview = () => {
           sx={{
             mb: 2,
             bgcolor: "#1e293b",
-               color: "text.primary", 
+            color: "text.primary",
             fontWeight: 600,
             fontSize: 16,
             borderRadius: 2,
@@ -46,7 +43,7 @@ const NewsletterSubscriptionSimplePreview = () => {
             fontSize: { xs: 28, md: 36 },
           }}
         >
-          Don't Miss Out
+          Don&apos;t Miss Out
         </Typography>
         <Typography
           variant="body1"
@@ -56,7 +53,8 @@ const NewsletterSubscriptionSimplePreview = () => {
             fontSize: { xs: 16, md: 18 },
           }}
         >
-          Subscribe to our newsletter and be the first to know about new features, updates, and exclusive content.
+          Subscribe to our newsletter and be the first to know about new
+          features, updates, and exclusive content.
         </Typography>
         <Box
           sx={{
@@ -71,7 +69,7 @@ const NewsletterSubscriptionSimplePreview = () => {
             type="email"
             placeholder="Your email address"
             value={email}
-            onChange={e => setEmail(e.target.value)}
+            onChange={(e) => setEmail(e.target.value)}
             fullWidth
             sx={{
               bgcolor: "background.paper",
@@ -103,7 +101,7 @@ const NewsletterSubscriptionSimplePreview = () => {
               whiteSpace: "nowrap",
               boxShadow: "0 4px 20px 0 rgba(59,130,246,0.15)",
               transition: "background 0.3s, box-shadow 0.3s",
-              '&:hover': {
+              "&:hover": {
                 bgcolor: "linear-gradient(90deg, #818cf8 0%, #60a5fa 100%)",
                 boxShadow: "0 6px 24px 0 rgba(59,130,246,0.22)",
               },
@@ -116,7 +114,4 @@ const NewsletterSubscriptionSimplePreview = () => {
       </Box>
     </Box>
   );
-};
-
-export default NewsletterSubscriptionSimplePreview;
-` 
+};`;

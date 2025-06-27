@@ -1,53 +1,92 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Box, TextField, Button, Typography, IconButton, Paper, Fade, Zoom, useTheme, alpha, Tooltip } from "@mui/material"
-import { NotificationsActive, Close, Email, CheckCircle, MarkEmailUnread } from "@mui/icons-material"
-import { keyframes } from "@mui/system"
+import { useState } from "react";
+import {
+  Box,
+  TextField,
+  Button,
+  Typography,
+  IconButton,
+  Paper,
+  Fade,
+  Zoom,
+  useTheme,
+  alpha,
+  Tooltip,
+} from "@mui/material";
+import {
+  NotificationsActive,
+  Close,
+  Email,
+  CheckCircle,
+  MarkEmailUnread,
+} from "@mui/icons-material";
+import { keyframes } from "@mui/system";
 
 // Custom animations
 const bellRing = keyframes`
   0%, 50%, 100% { transform: rotate(0deg); }
   10%, 30% { transform: rotate(-10deg); }
   20%, 40% { transform: rotate(10deg); }
-`
+`;
 
 const pulseGlow = keyframes`
   0%, 100% { box-shadow: 0 0 20px rgba(25, 118, 210, 0.3); }
   50% { box-shadow: 0 0 30px rgba(25, 118, 210, 0.6); }
-`
+`;
 
 export const NewsletterSubscriptionHorizontal = () => {
-  const [email, setEmail] = useState("")
-  const [isSubscribed, setIsSubscribed] = useState(false)
-  const [isVisible, setIsVisible] = useState(false)
-  const [isHovered, setIsHovered] = useState(false)
-  const theme = useTheme()
+  const [email, setEmail] = useState("");
+  const [isSubscribed, setIsSubscribed] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+  const theme = useTheme();
 
   const handleSubscribe = () => {
     if (email) {
-      setIsSubscribed(true)
+      setIsSubscribed(true);
       setTimeout(() => {
-        setIsVisible(false)
-      }, 2000)
+        setIsVisible(false);
+      }, 2000);
     }
-  }
+  };
 
   const handleClose = () => {
-    setIsVisible(false)
-  }
+    setIsVisible(false);
+  };
 
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', minHeight: 320, justifyContent: 'center', position: 'relative' }}>
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        minHeight: 320,
+        justifyContent: "center",
+        position: "relative",
+      }}
+    >
       {!isVisible && (
         <Tooltip title="Open Newsletter Subscription">
-          <IconButton color="primary" onClick={() => setIsVisible(true)} size="large" sx={{ mb: 2 }}>
+          <IconButton
+            color="primary"
+            onClick={() => setIsVisible(true)}
+            size="large"
+            sx={{ mb: 2 }}
+          >
             <MarkEmailUnread sx={{ fontSize: 40 }} />
           </IconButton>
         </Tooltip>
       )}
       <Fade in={isVisible} timeout={600} unmountOnExit>
-        <Box sx={{ width: '100%', maxWidth: 400, mx: 'auto', position: 'relative' }}>
+        <Box
+          sx={{
+            width: "100%",
+            maxWidth: 400,
+            mx: "auto",
+            position: "relative",
+          }}
+        >
           <Paper
             elevation={8}
             onMouseEnter={() => setIsHovered(true)}
@@ -76,7 +115,7 @@ export const NewsletterSubscriptionHorizontal = () => {
                 background: `linear-gradient(90deg, 
                   transparent, 
                   ${alpha(theme.palette.primary.main, 0.1)}, 
-                  transparent)` ,
+                  transparent)`,
                 transition: "left 0.6s",
               },
               "&:hover::before": {
@@ -111,7 +150,9 @@ export const NewsletterSubscriptionHorizontal = () => {
                       sx={{
                         mr: 2,
                         mt: 0.5,
-                        animation: isVisible ? `${bellRing} 2s ease-in-out infinite` : "none",
+                        animation: isVisible
+                          ? `${bellRing} 2s ease-in-out infinite`
+                          : "none",
                         animationDelay: "1s",
                       }}
                     >
@@ -119,7 +160,8 @@ export const NewsletterSubscriptionHorizontal = () => {
                         sx={{
                           fontSize: 32,
                           color: theme.palette.primary.main,
-                          filter: "drop-shadow(0 2px 4px rgba(25, 118, 210, 0.3))",
+                          filter:
+                            "drop-shadow(0 2px 4px rgba(25, 118, 210, 0.3))",
                         }}
                       />
                     </Box>
@@ -199,12 +241,11 @@ export const NewsletterSubscriptionHorizontal = () => {
                     variant="contained"
                     size="large"
                     onClick={handleSubscribe}
-          
                     sx={{
                       borderRadius: 2,
                       py: 1.5,
                       fontWeight: 600,
-                      color:"#fff",
+                      color: "#fff",
                       textTransform: "none",
                       fontSize: "1rem",
                       background: `linear-gradient(45deg, 
@@ -216,7 +257,10 @@ export const NewsletterSubscriptionHorizontal = () => {
                           ${theme.palette.primary.dark}, 
                           ${theme.palette.primary.main})`,
                         transform: "translateY(-2px)",
-                        boxShadow: `0 8px 25px ${alpha(theme.palette.primary.main, 0.4)}`,
+                        boxShadow: `0 8px 25px ${alpha(
+                          theme.palette.primary.main,
+                          0.4
+                        )}`,
                       },
                       "&:active": {
                         transform: "translateY(0px)",
@@ -264,7 +308,10 @@ export const NewsletterSubscriptionHorizontal = () => {
                   >
                     Welcome aboard! 🎉
                   </Typography>
-                  <Typography variant="body2" sx={{ color: theme.palette.text.secondary }}>
+                  <Typography
+                    variant="body2"
+                    sx={{ color: theme.palette.text.secondary }}
+                  >
                     Check your email for confirmation
                   </Typography>
                 </Box>
@@ -274,5 +321,5 @@ export const NewsletterSubscriptionHorizontal = () => {
         </Box>
       </Fade>
     </Box>
-  )
-}
+  );
+};

@@ -7,22 +7,22 @@ import { useOnThisPage } from "@/contexts/on-thispage-context";
 import { PATHS } from "@/router/paths";
 import { Box, Divider } from "@mui/material";
 import React from "react";
-import { 
+import {
   newsletterSubscriptionSimpleString,
   newsletterSubscriptionModernString,
   newsletterSubscriptionEcosystemString,
   newsletterSubscriptionLiquidString,
-  newsletterSubscriptionHorizontalString
+  newsletterSubscriptionHorizontalString,
 } from "../code-string/newsletter-subscription";
 import { NewsletterSubscriptionHorizontal } from "../components/newsletter-subscription/newsletter-subscription-horizontal-preview";
 import { NewsletterSubscriptionModernPreview } from "../components/newsletter-subscription/newsletter-subscription-modern-preview";
 import { NewsletterSubscriptionEcosystemPreview } from "../components/newsletter-subscription/newsletter-subscription-ecosystem-preview";
 import { NewsletterSubscriptionLiquidPreview } from "../components/newsletter-subscription/newsletter-subscription-liquid-preview";
-import NewsletterSubscriptionSimplePreview from "../components/newsletter-subscription/newsletter-subscription-simple-preview";
+import { NewsletterSubscriptionSimplePreview } from "../components/newsletter-subscription/newsletter-subscription-simple-preview";
 
 const sections = [
   {
-    id: "newsletter-subscription-simple",
+    id: "newsletter-subscription-1",
     title: "Simple Newsletter Subscription",
     description:
       "A clean and minimal newsletter subscription section with email input and subscribe button. Perfect for straightforward email collection.",
@@ -30,7 +30,7 @@ const sections = [
     preview: <NewsletterSubscriptionSimplePreview />,
   },
   {
-    id: "newsletter-subscription-modern",
+    id: "newsletter-subscription-2",
     title: "Modern Newsletter Subscription",
     description:
       "A modern newsletter subscription with feature highlights, social proof, and a professional design. Includes success state and trust indicators.",
@@ -38,7 +38,7 @@ const sections = [
     preview: <NewsletterSubscriptionModernPreview />,
   },
   {
-    id: "newsletter-subscription-ecosystem",
+    id: "newsletter-subscription-3",
     title: "Ecosystem Newsletter Subscription",
     description:
       "An innovative newsletter subscription featuring a hexagonal grid layout and interconnected knowledge domains. Perfect for educational or tech platforms.",
@@ -46,7 +46,7 @@ const sections = [
     preview: <NewsletterSubscriptionEcosystemPreview />,
   },
   {
-    id: "newsletter-subscription-liquid",
+    id: "newsletter-subscription-4",
     title: "Liquid Newsletter Subscription",
     description:
       "A dynamic newsletter subscription with animated liquid background effects and flowing design elements. Features smooth animations and modern aesthetics.",
@@ -54,12 +54,12 @@ const sections = [
     preview: <NewsletterSubscriptionLiquidPreview />,
   },
   {
-    id: "newsletter-subscription-horizontal",
+    id: "newsletter-subscription-5",
     title: "Horizontal Floating Newsletter",
     description:
       "A floating newsletter subscription that appears as a horizontal card with smooth animations. Perfect for non-intrusive email collection with close functionality.",
     codeString: newsletterSubscriptionHorizontalString,
-    preview: <NewsletterSubscriptionHorizontal  />,
+    preview: <NewsletterSubscriptionHorizontal />,
   },
 ];
 
@@ -79,7 +79,7 @@ export const NewsletterSubscriptionView = () => {
       />
       <PageTitle
         title="Newsletter Subscription"
-        description="Showcase your newsletter subscription section with various designs and email input components. Choose from simple, modern, ecosystem, liquid, or floating horizontal layouts."
+        description="Newsletter subscription designed with purely material ui. "
       />
 
       <Divider sx={{ my: 4 }} />

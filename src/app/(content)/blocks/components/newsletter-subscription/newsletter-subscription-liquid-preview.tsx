@@ -253,7 +253,6 @@ export const NewsletterSubscriptionLiquidPreview = () => {
                 variant="contained"
                 fullWidth
                 size="large"
-                // disabled={!email}
                 sx={{
                   height: 56,
                   borderRadius: 3,
