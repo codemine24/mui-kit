@@ -19,41 +19,46 @@ import PathSVG from "./PathSVG";
 import { HeroInfinityCard } from "./hero-infinity-card";
 
 const items = [
-  { content: <HeroInfinityCard title="Header" url={PATHS.BLOCKS.HEADER} /> },
+  { content: <HeroInfinityCard title="Editor" url={PATHS.ELEMENTS.EDITOR} /> },
   {
-    content: (
-      <HeroInfinityCard title="Header" url={PATHS.BLOCKS.CALL_TO_ACTION} />
-    ),
-  },
-  { content: <HeroInfinityCard title="Footer" url={PATHS.BLOCKS.HEADER} /> },
-  {
-    content: <HeroInfinityCard title="Testimonial" url={PATHS.BLOCKS.HEADER} />,
+    content: <HeroInfinityCard title="DND" url={PATHS.ELEMENTS.DND} />,
   },
   {
     content: (
-      <HeroInfinityCard title="About Section" url={PATHS.BLOCKS.HEADER} />
+      <HeroInfinityCard title="Carousel" url={PATHS.ELEMENTS.CAROUSEL} />
     ),
   },
   {
     content: (
-      <HeroInfinityCard title="Hero Section" url={PATHS.BLOCKS.HEADER} />
+      <HeroInfinityCard title="Timeline" url={PATHS.ELEMENTS.TIMELINE} />
+    ),
+  },
+  {
+    content: <HeroInfinityCard title="Stepper" url={PATHS.ELEMENTS.STEPPER} />,
+  },
+  {
+    content: <HeroInfinityCard title="OTP" url={PATHS.ELEMENTS.OTP} />,
+  },
+  {
+    content: (
+      <HeroInfinityCard title="Pagination" url={PATHS.ELEMENTS.PAGINATION} />
+    ),
+  },
+  { content: <HeroInfinityCard title="Hero" url={PATHS.BLOCKS.HERO} /> },
+  { content: <HeroInfinityCard title="About" url={PATHS.BLOCKS.ABOUT} /> },
+  {
+    content: (
+      <HeroInfinityCard title="PricingTable" url={PATHS.BLOCKS.PRICING_MENU} />
     ),
   },
   {
     content: (
-      <HeroInfinityCard title="Contact Section" url={PATHS.BLOCKS.HEADER} />
+      <HeroInfinityCard
+        title="Testimonial"
+        url={PATHS.BLOCKS.TESTIMONIAL_GRID}
+      />
     ),
   },
-  { content: <HeroInfinityCard title="Carousel" url={PATHS.BLOCKS.HEADER} /> },
-  { content: <HeroInfinityCard title="Dialog" url={PATHS.BLOCKS.HEADER} /> },
-  { content: <HeroInfinityCard title="Mega menu" url={PATHS.BLOCKS.HEADER} /> },
-  { content: <HeroInfinityCard title="Lightbox" url={PATHS.BLOCKS.HEADER} /> },
-  {
-    content: <HeroInfinityCard title="Drag & Drop" url={PATHS.BLOCKS.HEADER} />,
-  },
-  { content: <HeroInfinityCard title="Chart" url={PATHS.BLOCKS.HEADER} /> },
-  { content: <HeroInfinityCard title="Gallery" url={PATHS.BLOCKS.HEADER} /> },
-  { content: <HeroInfinityCard title="Timeline" url={PATHS.BLOCKS.HEADER} /> },
 ];
 
 export const HeroSection = () => {
@@ -100,7 +105,6 @@ export const HeroSection = () => {
             borderRadius: "50%",
             background: `linear-gradient(135deg, ${gradientFrom}, ${gradientTo})`,
             filter: "blur(80px)",
-            
           }}
         />
         <Box

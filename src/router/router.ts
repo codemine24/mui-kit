@@ -89,13 +89,6 @@ export const contentSidebarPathGroups: ContentSidebarPathGroup[] = [
     path: PATHS.BLOCKS.OVERVIEW,
     type: "group",
   },
-  {
-    key: "FORM",
-    label: "Form",
-    path: PATHS.FORM.ROOT,
-    type: "single",
-    items: [],
-  },
 ];
 
 // header navigation
@@ -115,6 +108,26 @@ export const footerItems = [
 // featured components
 export const featuredComponents = [
   {
+    label: "DND",
+    url: PATHS.ELEMENTS.DND,
+    icon: "bi:grid-1x2",
+  },
+  {
+    label: "Editor",
+    url: PATHS.ELEMENTS.EDITOR,
+    icon: "material-symbols-light:text-ad-outline-sharp",
+  },
+  {
+    label: "Carousel",
+    url: PATHS.ELEMENTS.EDITOR,
+    icon: "bx:carousel",
+  },
+  {
+    label: "Timeline",
+    url: PATHS.ELEMENTS.TIMELINE,
+    icon: "gravity-ui:list-timeline",
+  },
+  {
     label: "Accordion",
     url: PATHS.ELEMENTS.ACCORDION,
     icon: "tabler:layout-list",
@@ -132,42 +145,32 @@ export const featuredComponents = [
   {
     label: "Button",
     url: PATHS.ELEMENTS.BUTTON,
-    icon: "tabler:square-rounded-arrow-right",
-  },
-  {
-    label: "Button Group",
-    url: PATHS.ELEMENTS.BUTTON_GROUP,
-    icon: "tabler:layout-grid",
+    icon: "proicons:button",
   },
   {
     label: "Card",
     url: PATHS.ELEMENTS.CARD,
-    icon: "tabler:id",
+    icon: "solar:card-linear",
   },
   {
     label: "Dialog",
     url: PATHS.ELEMENTS.DIALOG,
-    icon: "tabler:message-2",
-  },
-  {
-    label: "Slider",
-    url: PATHS.ELEMENTS.SLIDER,
-    icon: "tabler:slideshow",
+    icon: "carbon:popup",
   },
   {
     label: "Stepper",
     url: PATHS.ELEMENTS.STEPPER,
     icon: "tabler:list-numbers",
   },
-  {
-    label: "Tab",
-    url: PATHS.ELEMENTS.TABS,
-    icon: "tabler:layout-navbar-expand",
-  },
 ];
 
 // featured blocks
 export const featuredBlocks = [
+  {
+    label: "Pricing Menu",
+    url: PATHS.BLOCKS.PRICING_MENU,
+    icon: "tabler:currency-dollar",
+  },
   {
     label: "About",
     url: PATHS.BLOCKS.ABOUT,
@@ -197,23 +200,12 @@ export const featuredBlocks = [
     icon: "tabler:package",
   },
   {
-    label: "Focus Boxes",
-    url: PATHS.BLOCKS.FOCUS_BOXES,
-    icon: "tabler:focus-2",
-  },
-  {
     label: "Footer",
     url: PATHS.BLOCKS.FOOTER,
     icon: "tabler:layout-navbar-collapse",
   },
-  { label: "Gallery", url: PATHS.BLOCKS.GALLERY, icon: "tabler:photo" },
-  { label: "Logo Grid", url: PATHS.BLOCKS.LOGO_GRID, icon: "tabler:grid-dots" },
   { label: "Hero", url: PATHS.BLOCKS.HERO, icon: "tabler:layout-dashboard" },
-  {
-    label: "Pricing Menu",
-    url: PATHS.BLOCKS.PRICING_MENU,
-    icon: "tabler:currency-dollar",
-  },
+
   {
     label: "Testimonial",
     url: PATHS.BLOCKS.TESTIMONIAL_SLIDER,
