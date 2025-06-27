@@ -154,9 +154,9 @@ export const OnThisPage = () => {
         >
           We&apos;re looking for sponsors!
         </Typography>
-        <Typography
+        <Typography 
           component={Link}
-          href="/"
+          href="/contact"
           variant="body2"
           sx={{
             color: "primary.main",
