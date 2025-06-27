@@ -1,12 +1,6 @@
 "use client";
-import {
-  Box,
-  Container,
-  Link,
-  Stack,
-  Typography,
-  useTheme,
-} from "@mui/material";
+import { Box, Container, Stack, Typography, useTheme } from "@mui/material";
+import Link from "next/link";
 
 export const TopHeader = () => {
   const theme = useTheme();
@@ -35,19 +29,17 @@ export const TopHeader = () => {
               fontWeight: 400,
             }}
           >
-            🚀 Learn In-Demand Skills Online with Ostad – Join 1 Million+
-            Learners!{" "}
+            Please support us running this open source project by{" "}
             <Link
-              href="https://ostad.app/"
-              target="_blank"
+              href="/contact"
               rel="noopener noreferrer"
-              underline="hover"
-              sx={{
+              
+              style={{
                 color: theme.palette.common.white,
-                textDecoration: "underline",
+                textDecoration: "underline",  
               }}
             >
-              Learn more
+              sponsoring
             </Link>
           </Typography>
         </Stack>

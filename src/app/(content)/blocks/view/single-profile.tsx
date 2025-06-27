@@ -15,15 +15,15 @@ import { ExternalPackageAlert } from "@/components/external-package-alert";
 
 const sections = [
   {
-    id: "services-1",
-    title: "Vertical cards",
+    id: "single-profile-1",
+    title: "Creative artist",
     description:
-      "Service section with simple cards with image, title and description. Fully responsive and designed with material ui only. ",
+      "If you are an artist this profile section could be a good fit for you to show your skills. ",
     codeString: servicesWithCardString,
     preview: <ServicesWithCardPreview />,
   },
   {
-    id: "services-2",
+    id: "single-profile-2",
     title: "With custom icons",
     description:
       "If you don't want to use image box, you can go with custom icons. All these icons are imported from iconify but you can replace it with any icon library. ",

@@ -59,6 +59,7 @@ export const ComponentOverviewV2 = () => {
                 sx={{
                   mr: { xs: 0.5, md: 1 },
                   mb: { xs: 1, md: 2 },
+                  px: { xs: 1, md: 3 },
                   border: "1px solid var(--divider-color)",
                   borderRadius: (theme) => theme.shape.borderRadius,
                   textTransform: "capitalize",

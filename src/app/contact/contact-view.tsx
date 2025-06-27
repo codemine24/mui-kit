@@ -21,7 +21,7 @@ export const ContactView = () => {
 
       <Box sx={{ mb: 3 }}>
         <Typography variant="body1">
-          📧 For business inquiries, reach us at:{" "}
+          📧 For sponsorship or business inquiries, reach us at:{" "}
           <Link
             href="mailto:codemine24@gmail.com"
             underline="hover"

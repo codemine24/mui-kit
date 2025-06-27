@@ -8,17 +8,17 @@ import { CopyrightView } from "../view/copyright-view";
 import { CSView } from "../view/cs-view";
 import { CTAView } from "../view/cta-block-view";
 import { FaqView } from "../view/faq-view";
+import { FeatureProductView } from "../view/feature-product-view";
 import { FeatureView } from "../view/feature-view";
 import { FooterView } from "../view/footer-view";
+import { HeroView } from "../view/hero-view";
+import { NewsletterSubscriptionView } from "../view/newsletter-subscription-view";
+import { PricingMenuView } from "../view/pricing-menu-view";
 import { PricingTableView } from "../view/pricing-table-view";
 import { ServicesView } from "../view/services-view";
-import { PricingMenuView } from "../view/pricing-menu-view";
-import { FeatureProductView } from "../view/feature-product-view";
-import { NewsletterSubscriptionView } from "../view/newsletter-subscription-view";
-import { HeroView } from "../view/hero-view";
+import { TeamView } from "../view/team-view";
 import { TestimonialGridView } from "../view/testimonial-grid-view";
 import { TestimonialSliderView } from "../view/testimonial-slider-view";
-import { TeamView } from "../view/team-view";
 
 export async function generateStaticParams() {
   return blocksArr.map((element) => ({
@@ -43,6 +43,7 @@ const componentMap: Record<string, JSX.Element> = {
   "pricing-table": <PricingTableView />,
   services: <ServicesView />,
   "pricing-menu": <PricingMenuView />,
+  "single-profile": <CSView />,
   "testimonial-grid": <TestimonialGridView />,
   "testimonial-slider": <TestimonialSliderView />,
   team: <TeamView />,
