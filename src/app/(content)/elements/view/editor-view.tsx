@@ -3,7 +3,6 @@ import { CodePreviewCopyWrapper } from "@/components/code-preview-copy-wrapper";
 import { CustomBreadCrumbs } from "@/components/core/breadcrumbs";
 import { PageTitle } from "@/components/core/page-title";
 import { SectionTitle } from "@/components/core/section-title";
-import { ExternalPackageAlert } from "@/components/external-package-alert";
 import { useOnThisPage } from "@/contexts/on-thispage-context";
 import { PATHS } from "@/router/paths";
 import { Box, Divider } from "@mui/material";
@@ -20,23 +19,24 @@ import { Editor1CodeString } from "../code-string/editor/editor-1/editor";
 import { Editor1StyleCodeString } from "../code-string/editor/editor-1/style";
 import { Editor1ToolbarCodeString } from "../code-string/editor/editor-1/toolbar";
 import { Editor1TypesCodeString } from "../code-string/editor/editor-1/types";
+import { EditorQuillString } from "../code-string/editor/quill-editor/editor-quill-string";
 import Editor1 from "../components/editor/editor-1";
 import { EditorQuillPreview } from "../components/editor/editor-quill/editor-quill-preview";
 
 const sections = [
   {
     id: "editor-1",
-    title: "All in one editor",
+    title: "Quill editor",
     description:
-      "We packaged almost every possible functionality that a rich text editor can have. You can remove some of them if you don't need.",
-    codeString: [{ name: "index.tsx", code: Editor1IndexPageCodeString }],
+      "If you need a very basic editor with minimal functionality, this quill editor is for you.",
+    codeString: EditorQuillString,
     preview: <EditorQuillPreview />,
   },
   {
     id: "editor-2",
-    title: "All in one editor",
+    title: "Tiptap editor (complex)",
     description:
-      "We packaged almost every possible functionality that a rich text editor can have. You can remove some of them if you don't need.",
+      "Tiptap editor kind of complex and large editor. Use this variant if you need huge functionality and full control over the editor.",
     codeString: [
       { name: "index.tsx", code: Editor1IndexPageCodeString },
       { name: "editor.tsx", code: Editor1CodeString },
@@ -94,50 +94,6 @@ export const EditorView = () => {
       />
       <Divider sx={{ my: 4 }} />
       <Divider sx={{ my: 4 }} />
-      <ExternalPackageAlert
-        packages={[
-          {
-            name: "@tiptap/react",
-            url: "https://www.npmjs.com/package/@tiptap/react",
-          },
-          {
-            name: "@tiptap/starter-kit",
-            url: "https://www.npmjs.com/package/@tiptap/starter-kit",
-          },
-          {
-            name: "@tiptap/extension-image",
-            url: "https://www.npmjs.com/package/@tiptap/extension-image",
-          },
-          {
-            name: "@tiptap/extension-text-align",
-            url: "https://www.npmjs.com/package/@tiptap/extension-text-align",
-          },
-          {
-            name: "@tiptap/extension-placeholder",
-            url: "https://www.npmjs.com/package/@tiptap/extension-placeholder",
-          },
-          {
-            name: "@tiptap/extension-code-block-lowlight",
-            url: "https://www.npmjs.com/package/@tiptap/extension-code-block-lowlight",
-          },
-          {
-            name: "lowlight",
-            url: "https://www.npmjs.com/package/lowlight",
-          },
-          {
-            name: "@iconify/react",
-            url: "https://www.npmjs.com/package/@iconify/react",
-          },
-          {
-            name: "@tiptap/extension-link",
-            url: "https://www.npmjs.com/package/@tiptap/extension-link",
-          },
-          {
-            name: "@tiptap/extension-underline",
-            url: "https://www.npmjs.com/package/@tiptap/extension-underline",
-          },
-        ]}
-      />
 
       {/* Alert Section */}
       {sections.map((section) => (

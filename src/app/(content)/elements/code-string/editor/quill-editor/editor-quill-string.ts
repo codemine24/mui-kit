@@ -1,6 +1,4 @@
-"use client";
-
-import { ExternalPackageAlert } from "@/components/external-package-alert";
+export const EditorQuillString = `import { ExternalPackageAlert } from "@/components/external-package-alert";
 import { Box } from "@mui/material";
 import React, { useState } from "react";
 import ReactQuill from "react-quill-new";
@@ -27,4 +25,4 @@ export const EditorQuillPreview = () => {
       </Box>
     </Box>
   );
-};
+};`;

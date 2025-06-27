@@ -8,13 +8,16 @@ interface IProps {
     name: string;
     url: string;
   }[];
+  force?: boolean;
 }
-export const ExternalPackageAlert = ({ packages }: IProps) => {
+export const ExternalPackageAlert = ({ packages, force = false }: IProps) => {
   const [icon, setIcon] = useState<string>("solar:copy-line-duotone");
   const handleCopy = async () => {
     try {
       await navigator.clipboard.writeText(
-        `npm install ${packages.map((pkg) => pkg.name).join(" ")}`
+        `npm install ${packages.map((pkg) => pkg.name).join(" ")} ${
+          force ? "--force" : ""
+        }`
       );
       setIcon("eva:checkmark-fill");
       setTimeout(() => {
