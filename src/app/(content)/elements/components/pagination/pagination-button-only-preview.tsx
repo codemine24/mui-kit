@@ -7,8 +7,9 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import { Divider } from "@mui/material";
-import { ChevronLeft, ChevronRight } from "@mui/icons-material";
+import Divider from "@mui/material/Divider";
+import ChevronLeft from "@mui/icons-material/ChevronLeft";
+import ChevronRight from "@mui/icons-material/ChevronRight";
 
 const totalCount = 100;
 const rowsPerPage = 10;
@@ -28,8 +29,7 @@ export const PaginationButtonOnlyPreview = () => {
         flexDirection="column"
         alignItems="center"
         justifyContent="space-between"
-        gap={2}
-      >
+        gap={2}>
         <Typography variant="body2">
           {start}–{end} of {totalCount}
         </Typography>
@@ -51,22 +51,18 @@ export const PaginationButtonOnlyPreview = () => {
                       sx={{
                         display: "flex",
                         alignItems: "center",
-                        gap: 4,
-                      }}
-                    >
+                        gap: 4
+                      }}>
                       <ArrowBackIcon fontSize="small" />
                       Prev
                     </Box>
                   ),
                   next: () => (
-                    <Box
-                      component={"span"}
-                      sx={{ display: "flex", alignItems: "center", gap: 4 }}
-                    >
+                    <Box component={"span"} sx={{ display: "flex", alignItems: "center", gap: 4 }}>
                       Next
                       <ArrowForwardIcon fontSize="small" />
                     </Box>
-                  ),
+                  )
                 }}
                 sx={{
                   borderRadius: 0,
@@ -74,8 +70,8 @@ export const PaginationButtonOnlyPreview = () => {
                   color: "white",
                   margin: 0,
                   "&:hover": {
-                    bgcolor: "primary.main",
-                  },
+                    bgcolor: "primary.main"
+                  }
                 }}
               />
             );
@@ -90,8 +86,7 @@ export const PaginationButtonOnlyPreview = () => {
         flexDirection="column"
         alignItems="center"
         justifyContent="space-between"
-        gap={2}
-      >
+        gap={2}>
         <Pagination
           count={totalPages}
           page={page}
@@ -110,25 +105,19 @@ export const PaginationButtonOnlyPreview = () => {
                 {...item}
                 slots={{
                   previous: () => (
-                    <span
-                      style={{ display: "flex", alignItems: "center", gap: 4 }}
-                    >
+                    <span style={{ display: "flex", alignItems: "center", gap: 4 }}>
                       <ChevronLeft fontSize="small" />
                     </span>
                   ),
                   next: () => (
-                    <span
-                      style={{ display: "flex", alignItems: "center", gap: 4 }}
-                    >
+                    <span style={{ display: "flex", alignItems: "center", gap: 4 }}>
                       <ChevronRight fontSize="small" />
                     </span>
-                  ),
+                  )
                 }}
                 sx={{
                   borderRadius: 0,
-                  backgroundColor: isCurrent
-                    ? "transparent"
-                    : "rgba(230, 0, 118, 0.1)",
+                  backgroundColor: isCurrent ? "transparent" : "rgba(230, 0, 118, 0.1)",
                   border: isCurrent ? "none" : "1px solid #E60076",
                   color: "#E60076",
                   margin: 1,
@@ -138,8 +127,8 @@ export const PaginationButtonOnlyPreview = () => {
                     color: "#E60076",
                     fontWeight: "bold",
                     fontSize: "20px",
-                    border: "none",
-                  },
+                    border: "none"
+                  }
                 }}
               />
             );

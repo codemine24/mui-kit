@@ -1,4 +1,8 @@
-export const timelineHorizontalString = `import { Box, Stack, Typography, useMediaQuery, useTheme } from "@mui/material";
+export const timelineHorizontalString = `import Box from "@mui/material/Box";
+import Stack from "@mui/material/Stack";
+import Typography from "@mui/material/Typography";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme } from "@mui/material/styles";
 
 const timelineData = [
   {

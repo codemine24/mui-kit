@@ -4,9 +4,10 @@ import Alert from "@mui/material/Alert";
 import Stack from "@mui/material/Stack";
 import DoneAllIcon from "@mui/icons-material/DoneAll";
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
-import { AlertTitle, alpha, Box } from "@mui/material";
+import AlertTitle from "@mui/material/AlertTitle";
+import { alpha, keyframes } from "@mui/material/styles";
+import Box from "@mui/material/Box";
 import EmergencyShareIcon from "@mui/icons-material/EmergencyShare";
-import { keyframes } from "@emotion/react";
 
 export default function DescriptionAlerts() {
   return (

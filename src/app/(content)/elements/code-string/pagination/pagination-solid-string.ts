@@ -1,11 +1,10 @@
-export const paginationSolidString = `import { East, KeyboardBackspace } from "@mui/icons-material";
-import {
-    Box,
-    Divider,
-    Pagination,
-    PaginationItem,
-    Typography,
-} from "@mui/material";
+export const paginationSolidString = `import East from "@mui/icons-material/East";
+import KeyboardBackspace from "@mui/icons-material/KeyboardBackspace";
+import Box from "@mui/material/Box";
+import Divider from "@mui/material/Divider";
+import Pagination from "@mui/material/Pagination";
+import PaginationItem from "@mui/material/PaginationItem";
+import Typography from "@mui/material/Typography";
 import React from "react";
 
 const MAX_PAGE = 50;

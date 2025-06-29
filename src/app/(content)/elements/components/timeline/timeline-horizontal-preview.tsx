@@ -1,30 +1,34 @@
-import { Box, Stack, Typography, useMediaQuery, useTheme } from "@mui/material";
+import Box from "@mui/material/Box";
+import Stack from "@mui/material/Stack";
+import Typography from "@mui/material/Typography";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme } from "@mui/material/styles";
 
 const timelineData = [
   {
     date: "Mar 15, 2024",
     title: "Project Kickoff",
     description: "Initial team meeting.",
-    color: "#E91E63",
+    color: "#E91E63"
   },
   {
     date: "Mar 22, 2024",
     title: "Design Phase",
     description: "Completed wire frames.",
-    color: "#3F51B5",
+    color: "#3F51B5"
   },
   {
     date: "Apr 5, 2024",
     title: "Development Sprint",
     description: "Backend development.",
-    color: "#4CAF50",
+    color: "#4CAF50"
   },
   {
     date: "Apr 19, 2024",
     title: "Testing & Deployment",
     description: "Performance optimization.",
-    color: "#008659",
-  },
+    color: "#008659"
+  }
 ];
 
 export function TimelineHorizontalPreview() {
@@ -44,7 +48,7 @@ export function TimelineHorizontalPreview() {
               bottom: 0,
               width: 2,
               backgroundColor: "#E0E0E0",
-              zIndex: 0,
+              zIndex: 0
             }}
           />
           <Stack spacing={4} position="relative" zIndex={1}>
@@ -61,7 +65,7 @@ export function TimelineHorizontalPreview() {
                     backgroundColor: "background.default",
                     border: "2px solid",
                     borderColor: step.color,
-                    zIndex: 2,
+                    zIndex: 2
                   }}
                 />
                 {/* Text */}
@@ -72,11 +76,7 @@ export function TimelineHorizontalPreview() {
                   <Typography fontWeight={600} fontSize={14}>
                     {step.title}
                   </Typography>
-                  <Typography
-                    variant="body2"
-                    color="text.secondary"
-                    fontSize={13}
-                  >
+                  <Typography variant="body2" color="text.secondary" fontSize={13}>
                     {step.description}
                   </Typography>
                 </Box>
@@ -96,15 +96,14 @@ export function TimelineHorizontalPreview() {
               right: 0,
               height: 2,
               backgroundColor: "#E0E0E0",
-              zIndex: 1,
+              zIndex: 1
             }}
           />
           <Box
             sx={{
               display: "flex",
-              justifyContent: "space-between",
-            }}
-          >
+              justifyContent: "space-between"
+            }}>
             {timelineData.map((step, i) => (
               <Box
                 key={i}
@@ -113,9 +112,8 @@ export function TimelineHorizontalPreview() {
                   flexDirection: "column",
                   position: "relative",
                   width: "25%",
-                  pr: 2,
-                }}
-              >
+                  pr: 2
+                }}>
                 {/* Dot */}
                 <Box
                   sx={{
@@ -128,7 +126,7 @@ export function TimelineHorizontalPreview() {
                     position: "absolute",
                     top: 10,
                     left: 0,
-                    zIndex: 2,
+                    zIndex: 2
                   }}
                 />
                 {/* Text */}
@@ -139,11 +137,7 @@ export function TimelineHorizontalPreview() {
                   <Typography fontWeight={600} fontSize={14}>
                     {step.title}
                   </Typography>
-                  <Typography
-                    variant="body2"
-                    color="text.secondary"
-                    fontSize={13}
-                  >
+                  <Typography variant="body2" color="text.secondary" fontSize={13}>
                     {step.description}
                   </Typography>
                 </Box>

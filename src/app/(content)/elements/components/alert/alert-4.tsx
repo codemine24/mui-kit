@@ -3,9 +3,10 @@ import Alert from "@mui/material/Alert";
 import Stack from "@mui/material/Stack";
 import DoneAllIcon from "@mui/icons-material/DoneAll";
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
-import { AlertTitle, alpha, Box } from "@mui/material";
+import AlertTitle from "@mui/material/AlertTitle";
+import { alpha, keyframes } from "@mui/material/styles";
+import Box from "@mui/material/Box";
 import EmergencyShareIcon from "@mui/icons-material/EmergencyShare";
-import { keyframes } from "@emotion/react";
 
 export default function DescriptionAlerts() {
   return (
@@ -41,11 +42,7 @@ export default function DescriptionAlerts() {
         This is a without icon Alert with an informative title.
       </Alert>
       {/* Rounded */}
-      <Alert
-        severity="warning"
-        icon={<HelpOutlineIcon />}
-        sx={{ borderRadius: "50px" }}
-      >
+      <Alert severity="warning" icon={<HelpOutlineIcon />} sx={{ borderRadius: "50px" }}>
         <AlertTitle>Rounded</AlertTitle>
         This is a rounded Alert with an cautious title.
       </Alert>
@@ -56,18 +53,16 @@ export default function DescriptionAlerts() {
           backgroundColor: alpha("#e600e6", 0.08),
           color: "#e600e6",
           "& .MuiAlert-icon": {
-            color: "#e600e6",
-          },
-        }}
-      >
+            color: "#e600e6"
+          }
+        }}>
         <AlertTitle>Custom Color</AlertTitle>
         This is a custom color Alert with an encouraging title.
       </Alert>
       {/* Center aligned */}
       <Alert
         severity="success"
-        sx={{ display: "flex", alignItems: "start", justifyContent: "center" }}
-      >
+        sx={{ display: "flex", alignItems: "start", justifyContent: "center" }}>
         <AlertTitle>Center Aligned</AlertTitle>
         This is a center-aligned Alert with an encouraging title.
       </Alert>
@@ -77,9 +72,8 @@ export default function DescriptionAlerts() {
         icon={false}
         sx={{
           justifyContent: "flex-end",
-          textAlign: "right",
-        }}
-      >
+          textAlign: "right"
+        }}>
         <AlertTitle>Right Aligned</AlertTitle>
         <Box sx={{ display: "flex", alignItems: "center", gap: 1.5 }}>
           <span>This is a right-aligned alert</span>
@@ -92,10 +86,9 @@ export default function DescriptionAlerts() {
         severity="warning"
         sx={{
           "& .MuiAlert-icon": {
-            animation: `${bounce} 1s infinite ease alternate`,
-          },
-        }}
-      >
+            animation: `${bounce} 1s infinite ease alternate`
+          }
+        }}>
         <AlertTitle>Right Aligned</AlertTitle>
         This is a animated Alert.
       </Alert>

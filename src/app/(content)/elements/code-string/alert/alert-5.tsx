@@ -2,7 +2,9 @@ export const ActionAlertsCodeString = `
 import * as React from "react";
 import Alert from "@mui/material/Alert";
 import Stack from "@mui/material/Stack";
-import { Button, Chip, IconButton } from "@mui/material";
+import Button from "@mui/material/Button";
+import Chip from "@mui/material/Chip";
+import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
 import FmdBadIcon from "@mui/icons-material/FmdBad";
 import SchoolIcon from "@mui/icons-material/School";

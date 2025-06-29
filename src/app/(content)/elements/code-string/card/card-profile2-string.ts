@@ -1,4 +1,9 @@
-export const cardProfile2String = `import { Card, CardMedia, Box, CardContent, Typography, Stack } from "@mui/material";
+export const cardProfile2String = `import Card from "@mui/material/Card";
+import CardMedia from "@mui/material/CardMedia";
+import Box from "@mui/material/Box";
+import CardContent from "@mui/material/CardContent";
+import Typography from "@mui/material/Typography";
+import Stack from "@mui/material/Stack";
 import HeadphonesIcon from "@mui/icons-material/Headphones";
 import BusinessIcon from "@mui/icons-material/Business";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
@@ -41,4 +46,4 @@ export const CardProfile2 = () => {
             </CardContent>
         </Card>
     )
-}`
+}`;

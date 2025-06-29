@@ -1,14 +1,16 @@
-export const buttonIconString = `import {
-  ArrowForward,
-  ChevronRight,
-  Download,
-  IosShare,
-  MailOutline,
-  Refresh,
-  ThumbUp,
-  FavoriteBorder,
-} from "@mui/icons-material";
-import { Box, Button, Divider, IconButton, Stack } from "@mui/material";
+export const buttonIconString = `import ArrowForward from "@mui/icons-material/ArrowForward";
+import ChevronRight from "@mui/icons-material/ChevronRight";
+import Download from "@mui/icons-material/Download";
+import IosShare from "@mui/icons-material/IosShare";
+import MailOutline from "@mui/icons-material/MailOutline";
+import Refresh from "@mui/icons-material/Refresh";
+import ThumbUp from "@mui/icons-material/ThumbUp";
+import FavoriteBorder from "@mui/icons-material/FavoriteBorder";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Divider from "@mui/material/Divider";
+import IconButton from "@mui/material/IconButton";
+import Stack from "@mui/material/Stack";
 
 export const ButtonIconPreview = () => {
   return (
@@ -297,4 +299,4 @@ export const ButtonIconPreview = () => {
       </Stack>
     </Box>
   );
-};`
+};`;

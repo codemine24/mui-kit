@@ -1,6 +1,8 @@
 export const buttonPaymentString = `import { Icon } from "@iconify/react";
-import { Apple } from "@mui/icons-material";
-import { Box, Button, Stack } from "@mui/material";
+import Apple from "@mui/icons-material/Apple";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Stack from "@mui/material/Stack";
 
 export const ButtonPaymentPreview = () => {
     return (
@@ -131,4 +133,4 @@ export const ButtonPaymentPreview = () => {
             </Stack>
         </Box>
     );
-};`
+};`;

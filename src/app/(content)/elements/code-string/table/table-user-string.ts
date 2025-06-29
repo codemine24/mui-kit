@@ -1,24 +1,22 @@
-export const userTableString = `import {
-  Box,
-  Avatar,
-  Typography,
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TableRow,
-  TablePagination,
-  Paper,
-  Checkbox,
-  TableSortLabel,
-  Dialog,
-  DialogActions,
-  DialogContent,
-  DialogTitle,
-  TextField,
-  Button,
-} from "@mui/material";
+export const userTableString = `import Box from "@mui/material/Box";
+import Avatar from "@mui/material/Avatar";
+import Typography from "@mui/material/Typography";
+import Table from "@mui/material/Table";
+import TableBody from "@mui/material/TableBody";
+import TableCell from "@mui/material/TableCell";
+import TableContainer from "@mui/material/TableContainer";
+import TableHead from "@mui/material/TableHead";
+import TableRow from "@mui/material/TableRow";
+import TablePagination from "@mui/material/TablePagination";
+import Paper from "@mui/material/Paper";
+import Checkbox from "@mui/material/Checkbox";
+import TableSortLabel from "@mui/material/TableSortLabel";
+import Dialog from "@mui/material/Dialog";
+import DialogActions from "@mui/material/DialogActions";
+import DialogContent from "@mui/material/DialogContent";
+import DialogTitle from "@mui/material/DialogTitle";
+import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
 import * as React from "react";
 
 type Order = "asc" | "desc";
@@ -350,4 +348,4 @@ export function UserTablePreview() {
       </Dialog>
     </>
   );
-}`
+}`;

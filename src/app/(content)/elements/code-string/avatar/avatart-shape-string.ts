@@ -1,7 +1,7 @@
 export const avatarShapeString = `
 import * as React from "react";
 import Stack from "@mui/material/Stack";
-import { Avatar } from "@mui/material";
+import Avatar from "@mui/material/Avatar";
 
 const squareAvatarSrc = "/images/avatar-2.png";
 

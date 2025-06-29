@@ -1,12 +1,10 @@
-import {
-  Paper,
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TableRow,
-} from "@mui/material";
+import Paper from "@mui/material/Paper";
+import Table from "@mui/material/Table";
+import TableBody from "@mui/material/TableBody";
+import TableCell from "@mui/material/TableCell";
+import TableContainer from "@mui/material/TableContainer";
+import TableHead from "@mui/material/TableHead";
+import TableRow from "@mui/material/TableRow";
 import Stack from "@mui/material/Stack";
 
 const data = [
@@ -15,22 +13,22 @@ const data = [
     calories: 159,
     fat: 6.0,
     carbs: 24,
-    protein: 4.0,
+    protein: 4.0
   },
   {
     name: "Ice cream sandwich",
     calories: 237,
     fat: 9.0,
     carbs: 37,
-    protein: 4.3,
+    protein: 4.3
   },
   {
     name: "Eclair",
     calories: 262,
     fat: 16.0,
     carbs: 23,
-    protein: 6.0,
-  },
+    protein: 6.0
+  }
 ];
 
 export function BasicTablePreview() {
@@ -50,10 +48,7 @@ export function BasicTablePreview() {
           </TableHead>
           <TableBody>
             {data.map((row) => (
-              <TableRow
-                key={row.name}
-                sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-              >
+              <TableRow key={row.name} sx={{ "&:last-child td, &:last-child th": { border: 0 } }}>
                 <TableCell component="th" scope="row">
                   {row.name}
                 </TableCell>

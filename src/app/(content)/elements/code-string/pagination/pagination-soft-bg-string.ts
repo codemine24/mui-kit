@@ -1,4 +1,7 @@
-export const paginationSoftBgString = `import { Box, Divider, Pagination, Typography } from "@mui/material";
+export const paginationSoftBgString = `import Box from "@mui/material/Box";
+import Divider from "@mui/material/Divider";
+import Pagination from "@mui/material/Pagination";
+import Typography from "@mui/material/Typography";
 import React from "react";
 
 const MAX_PAGE = 50;

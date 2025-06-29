@@ -1,4 +1,6 @@
-import { Box, Chip, Typography } from "@mui/material";
+import Box from "@mui/material/Box";
+import Chip from "@mui/material/Chip";
+import Typography from "@mui/material/Typography";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -7,9 +9,8 @@ export const Logo = () => {
     <Box
       sx={{
         position: "relative",
-        display: "inline-flex",
-      }}
-    >
+        display: "inline-flex"
+      }}>
       <Box
         component={Link}
         href="/"
@@ -17,9 +18,8 @@ export const Logo = () => {
           display: "inline-flex",
           alignItems: "center",
           color: "inherit",
-          textDecoration: "none",
-        }}
-      >
+          textDecoration: "none"
+        }}>
         <Image src="/images/logo.png" alt="logo" width={24} height={24} />
         <Typography
           variant="h6"
@@ -31,9 +31,8 @@ export const Logo = () => {
             color: "text.primary",
             textDecoration: "none",
             display: "flex",
-            alignItems: "center",
-          }}
-        >
+            alignItems: "center"
+          }}>
           <Box component="span" sx={{ color: "primary.main", mr: 1 }}>
             MUI
           </Box>{" "}
@@ -51,8 +50,8 @@ export const Logo = () => {
           fontWeight: "bold",
           height: "16px",
           "& .MuiChip-label": {
-            padding: "0 4px",
-          },
+            padding: "0 4px"
+          }
         }}
       />
     </Box>

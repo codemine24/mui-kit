@@ -19,7 +19,7 @@ const HEADING_OPTIONS = [
   "Heading 3",
   "Heading 4",
   "Heading 5",
-  "Heading 6",
+  "Heading 6"
 ];
 
 export function HeadingBlock({ editor }: Pick<EditorToolbarProps, "editor">) {
@@ -53,9 +53,8 @@ export function HeadingBlock({ editor }: Pick<EditorToolbarProps, "editor">) {
           borderRadius: 0.75,
           typography: "body2",
           justifyContent: "space-between",
-          border: () => `solid 1px ${alpha(STATIC_COLOR, 0.2)}`,
-        }}
-      >
+          border: () => `solid 1px ${alpha(STATIC_COLOR, 0.2)}`
+        }}>
         {(editor.isActive("heading", { level: 1 }) && "Heading 1") ||
           (editor.isActive("heading", { level: 2 }) && "Heading 2") ||
           (editor.isActive("heading", { level: 3 }) && "Heading 3") ||
@@ -66,11 +65,7 @@ export function HeadingBlock({ editor }: Pick<EditorToolbarProps, "editor">) {
 
         <Icon
           width={16}
-          icon={
-            anchorEl
-              ? "eva:arrow-ios-upward-fill"
-              : "eva:arrow-ios-downward-fill"
-          }
+          icon={anchorEl ? "eva:arrow-ios-upward-fill" : "eva:arrow-ios-downward-fill"}
         />
       </ButtonBase>
 
@@ -87,7 +82,7 @@ export function HeadingBlock({ editor }: Pick<EditorToolbarProps, "editor">) {
               [`& .${listClasses.root}`]: {
                 gap: 0.5,
                 display: "flex",
-                flexDirection: "column",
+                flexDirection: "column"
               },
               [`& .${buttonBaseClasses.root}`]: {
                 px: 1,
@@ -95,12 +90,11 @@ export function HeadingBlock({ editor }: Pick<EditorToolbarProps, "editor">) {
                 height: 34,
                 borderRadius: 0.75,
                 justifyContent: "flex-start",
-                "&:hover": { backgroundColor: "action.hover" },
-              },
-            },
-          },
-        }}
-      >
+                "&:hover": { backgroundColor: "action.hover" }
+              }
+            }
+          }
+        }}>
         <ToolbarItem
           component="li"
           label="Paragraph"
@@ -128,8 +122,8 @@ export function HeadingBlock({ editor }: Pick<EditorToolbarProps, "editor">) {
               sx={{
                 ...(heading !== "Paragraph" && {
                   fontSize: 18 - index,
-                  fontWeight: "fontWeightBold",
-                }),
+                  fontWeight: "fontWeightBold"
+                })
               }}
             />
           );

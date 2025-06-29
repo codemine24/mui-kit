@@ -1,15 +1,11 @@
-import { Stack, Button, Box } from "@mui/material";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Stack from "@mui/material/Stack";
 
 export const ButtonTextPreview = () => {
   return (
     <Box>
-      <Stack
-        direction="row"
-        spacing={2}
-        flexWrap="wrap"
-        alignItems={"center"}
-        rowGap={2}
-      >
+      <Stack direction="row" spacing={2} flexWrap="wrap" alignItems={"center"} rowGap={2}>
         <Box>
           <Button variant="text" color="primary">
             Primary
@@ -47,10 +43,9 @@ export const ButtonTextPreview = () => {
             sx={{
               color: "#E60076",
               "&:hover": {
-                backgroundColor: "#e6007721",
-              },
-            }}
-          >
+                backgroundColor: "#e6007721"
+              }
+            }}>
             Custom
           </Button>
         </Box>

@@ -19,10 +19,7 @@ Installation
 Clone the repository:git clone https://github.com/your-username/mui-component-library.git
 cd mui-component-library
 
-
 Install dependencies:npm install
-
-
 
 Running the Development Server
 Start the development server:
@@ -34,7 +31,7 @@ Import components into your Next.js or React project:
 import { Button } from './components/Button';
 
 export default function Page() {
-  return <Button variant="primary" design="rounded">Click Me</Button>;
+return <Button variant="primary" design="rounded">Click Me</Button>;
 }
 
 Explore the /components directory for available components and their variants. Check the documentation for detailed usage guides.
@@ -49,13 +46,10 @@ We welcome contributions to enhance our component library! To contribute:
 
 Fork the Repository: Click the "Fork" button on GitHub and clone your fork:git clone https://github.com/your-username/mui-component-library.git
 
-
 Sync with Upstream:git remote add upstream https://github.com/your-username/mui-component-library.git
 git pull upstream main
 
-
 Create a Branch: Work on a feature or bug fix:git checkout -b feature/new-button-variant
-
 
 Submit a Pull Request: Push your changes and open a PR to the main branch.
 
@@ -66,20 +60,24 @@ Submit a Pull Request: Push your changes and open a PR to the main branch.
 We follow [Conventional Commits](https://www.conventionalcommits.org/) to maintain a clean and meaningful Git history.
 
 ### ✅ Use these prefixes for commits:
-| Prefix     | Use When...                                                     |
-|------------|-----------------------------------------------------------------|
-| `feat:`    | **adding a new feature**                                           |
-| `fix:`     | **fixing a bug**                                                   |
-| `refactor:`| **changing code structure** without altering core functionality    |
-| `docs:`    | **editing documentation**                                          |
-| `style:`   | making **code format changes** (e.g., linting, spacing)            |
-| `test:`    | **adding or updating tests**                                       |
-| `chore:`   | making **non-code changes** (e.g., config, deps update)            |
+
+| Prefix      | Use When...                                                     |
+| ----------- | --------------------------------------------------------------- |
+| `feat:`     | **adding a new feature**                                        |
+| `fix:`      | **fixing a bug**                                                |
+| `refactor:` | **changing code structure** without altering core functionality |
+| `docs:`     | **editing documentation**                                       |
+| `style:`    | making **code format changes** (e.g., linting, spacing)         |
+| `test:`     | **adding or updating tests**                                    |
+| `chore:`    | making **non-code changes** (e.g., config, deps update)         |
 
 ### 🔄 If you're enhancing an existing feature:
+
 Use `feat:` if your enhancement significantly improves functionality or performance.
+
 ```bash
 feat: enhance dropdown responsiveness
 
 
 Built with ❤️ by fazlyalahi01 and the open source community.
+```

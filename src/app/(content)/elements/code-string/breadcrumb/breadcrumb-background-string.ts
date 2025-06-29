@@ -1,6 +1,10 @@
 export const breadcrumbBackgroundString = `import * as React from "react";
 import Stack from "@mui/material/Stack";
-import { alpha, Breadcrumbs, Divider, Link, Typography } from "@mui/material";
+import Breadcrumbs from "@mui/material/Breadcrumbs";
+import Divider from "@mui/material/Divider";
+import Link from "@mui/material/Link";
+import Typography from "@mui/material/Typography";
+import { alpha } from "@mui/material/styles";
 import HomeIcon from "@mui/icons-material/Home";
 import CollectionsIcon from "@mui/icons-material/Collections";
 import WebIcon from "@mui/icons-material/Web";
@@ -376,4 +380,4 @@ export const BreadcrumbBackground = () => {
     </Stack>
   );
 }
-`
+`;

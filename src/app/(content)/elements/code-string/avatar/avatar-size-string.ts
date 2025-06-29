@@ -1,5 +1,5 @@
 export const avatarSizeString = `
-import { Avatar } from "@mui/material";
+import Avatar from "@mui/material/Avatar";
 import Stack from "@mui/material/Stack";
 
 const squareAvatarSrc = "/images/avatar-2.png";

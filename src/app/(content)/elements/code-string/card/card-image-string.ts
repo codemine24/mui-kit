@@ -1,5 +1,10 @@
-export const cardImageString = `import { Button, Card, CardActions, CardContent, CardMedia, Typography } from "@mui/material";
-import { ArrowRightAlt } from "@mui/icons-material";
+export const cardImageString = `import Button from "@mui/material/Button";
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Typography from "@mui/material/Typography";
+import ArrowRightAlt from "@mui/icons-material/ArrowRightAlt";
 
 export const CardImage = () => {
     return (

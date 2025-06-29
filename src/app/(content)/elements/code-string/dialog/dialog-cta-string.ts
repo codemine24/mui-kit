@@ -1,6 +1,9 @@
-export const dialogCTAString = `import { Dialog, IconButton, Stack, Typography, Box, Button, } from "@mui/material";
-import { useState } from "react";
-import CloseIcon from '@mui/icons-material/Close';
+export const dialogCTAString = `import { useState } from "react";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Stack from "@mui/material/Stack";
+import Typography from "@mui/material/Typography";
+import Dialog from "@mui/material/Dialog";
 
 export const DialogCTA = () => {
     const [open, setOpen] = useState(false);
@@ -187,4 +190,4 @@ export const DialogCTA = () => {
             </Dialog>
         </>
     );
-}`
+}`;

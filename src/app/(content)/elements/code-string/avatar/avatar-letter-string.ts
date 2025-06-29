@@ -1,7 +1,7 @@
 export const avatarLetterString = `
 import * as React from "react";
 import Stack from "@mui/material/Stack";
-import { Avatar } from "@mui/material";
+import Avatar from "@mui/material/Avatar";
 import { pink } from "@mui/material/colors";
 
 export default function LetterVariants() {

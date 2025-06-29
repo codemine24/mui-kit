@@ -1,5 +1,8 @@
-export const buttonSoftWithBorderString = `import { Check } from "@mui/icons-material";
-import { Box, Button, Divider, Stack } from "@mui/material";
+export const buttonSoftWithBorderString = `import Check from "@mui/icons-material/Check";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Divider from "@mui/material/Divider";
+import Stack from "@mui/material/Stack";
 
 export const ButtonSoftWithBorderPreview = () => {
   return (
@@ -270,4 +273,4 @@ export const ButtonSoftWithBorderPreview = () => {
       </Stack>
     </Box>
   );
-};`
+};`;

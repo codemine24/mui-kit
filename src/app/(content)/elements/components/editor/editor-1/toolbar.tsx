@@ -11,11 +11,7 @@ import { ToolbarItem } from "./components/toolbar-item";
 import { STATIC_COLOR } from "./styles";
 import type { EditorToolbarProps } from "./types";
 
-export function Toolbar({
-  editor,
-  fullScreen,
-  onToggleFullScreen,
-}: EditorToolbarProps) {
+export function Toolbar({ editor, fullScreen, onToggleFullScreen }: EditorToolbarProps) {
   if (!editor) {
     return null;
   }
@@ -26,22 +22,15 @@ export function Toolbar({
       direction="row"
       flexWrap="wrap"
       alignItems="center"
-      divider={
-        <Divider
-          orientation="vertical"
-          flexItem
-          sx={{ height: 16, my: "auto" }}
-        />
-      }
+      divider={<Divider orientation="vertical" flexItem sx={{ height: 16, my: "auto" }} />}
       className={editorClasses.toolbar.root}
       sx={{
         p: 1.25,
         bgcolor: "background.paper",
         borderTopRightRadius: "inherit",
         borderTopLeftRadius: "inherit",
-        borderBottom: () => `solid 1px ${alpha(STATIC_COLOR, 0.2)}`,
-      }}
-    >
+        borderBottom: () => `solid 1px ${alpha(STATIC_COLOR, 0.2)}`
+      }}>
       <HeadingBlock editor={editor} />
 
       {/* Text style */}
@@ -60,9 +49,7 @@ export function Toolbar({
           active={editor.isActive("italic")}
           className={editorClasses.toolbar.italic}
           onClick={() => editor.chain().focus().toggleItalic().run()}
-          icon={
-            <path d="M15 20H7V18H9.92661L12.0425 6H9V4H17V6H14.0734L11.9575 18H15V20Z" />
-          }
+          icon={<path d="M15 20H7V18H9.92661L12.0425 6H9V4H17V6H14.0734L11.9575 18H15V20Z" />}
         />
         <ToolbarItem
           aria-label="Underline"
@@ -113,36 +100,28 @@ export function Toolbar({
           active={editor.isActive({ textAlign: "left" })}
           className={editorClasses.toolbar.alignLeft}
           onClick={() => editor.chain().focus().setTextAlign("left").run()}
-          icon={
-            <path d="M3 4H21V6H3V4ZM3 19H17V21H3V19ZM3 14H21V16H3V14ZM3 9H17V11H3V9Z" />
-          }
+          icon={<path d="M3 4H21V6H3V4ZM3 19H17V21H3V19ZM3 14H21V16H3V14ZM3 9H17V11H3V9Z" />}
         />
         <ToolbarItem
           aria-label="Align center"
           active={editor.isActive({ textAlign: "center" })}
           className={editorClasses.toolbar.alignCenter}
           onClick={() => editor.chain().focus().setTextAlign("center").run()}
-          icon={
-            <path d="M3 4H21V6H3V4ZM5 19H19V21H5V19ZM3 14H21V16H3V14ZM5 9H19V11H5V9Z" />
-          }
+          icon={<path d="M3 4H21V6H3V4ZM5 19H19V21H5V19ZM3 14H21V16H3V14ZM5 9H19V11H5V9Z" />}
         />
         <ToolbarItem
           aria-label="Align right"
           active={editor.isActive({ textAlign: "right" })}
           className={editorClasses.toolbar.alignRight}
           onClick={() => editor.chain().focus().setTextAlign("right").run()}
-          icon={
-            <path d="M3 4H21V6H3V4ZM7 19H21V21H7V19ZM3 14H21V16H3V14ZM7 9H21V11H7V9Z" />
-          }
+          icon={<path d="M3 4H21V6H3V4ZM7 19H21V21H7V19ZM3 14H21V16H3V14ZM7 9H21V11H7V9Z" />}
         />
         <ToolbarItem
           aria-label="Align justify"
           active={editor.isActive({ textAlign: "justify" })}
           className={editorClasses.toolbar.alignJustify}
           onClick={() => editor.chain().focus().setTextAlign("justify").run()}
-          icon={
-            <path d="M3 4H21V6H3V4ZM3 19H21V21H3V19ZM3 14H21V16H3V14ZM3 9H21V11H3V9Z" />
-          }
+          icon={<path d="M3 4H21V6H3V4ZM3 19H21V21H3V19ZM3 14H21V16H3V14ZM3 9H21V11H3V9Z" />}
         />
       </Stack>
 
@@ -183,9 +162,7 @@ export function Toolbar({
           aria-label="Horizontal"
           className={editorClasses.toolbar.hr}
           onClick={() => editor.chain().focus().setHorizontalRule().run()}
-          icon={
-            <path d="M2 11H4V13H2V11ZM6 11H18V13H6V11ZM20 11H22V13H20V11Z" />
-          }
+          icon={<path d="M2 11H4V13H2V11ZM6 11H18V13H6V11ZM20 11H22V13H20V11Z" />}
         />
       </Stack>
 
@@ -208,9 +185,7 @@ export function Toolbar({
         <ToolbarItem
           aria-label="Clear"
           className={editorClasses.toolbar.clear}
-          onClick={() =>
-            editor.chain().focus().clearNodes().unsetAllMarks().run()
-          }
+          onClick={() => editor.chain().focus().clearNodes().unsetAllMarks().run()}
           icon={
             <path d="M12.6512 14.0654L11.6047 20H9.57389L10.9247 12.339L3.51465 4.92892L4.92886 3.51471L20.4852 19.0711L19.071 20.4853L12.6512 14.0654ZM11.7727 7.53009L12.0425 5.99999H10.2426L8.24257 3.99999H19.9999V5.99999H14.0733L13.4991 9.25652L11.7727 7.53009Z" />
           }

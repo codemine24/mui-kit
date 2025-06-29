@@ -1,4 +1,7 @@
-export const cardBottomImageString = `import { Card, CardContent, CardMedia, Typography } from "@mui/material";
+export const cardBottomImageString = `import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Typography from "@mui/material/Typography";
 
 export const CardBottomImage = () => {
     return (
@@ -17,4 +20,4 @@ export const CardBottomImage = () => {
             </CardContent>
         </Card>
     )
-}`
+}`;

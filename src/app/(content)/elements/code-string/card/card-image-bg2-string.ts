@@ -1,4 +1,8 @@
-export const cardImageBg2String = `import { Card, CardMedia, Box, Typography, Avatar } from "@mui/material";
+export const cardImageBg2String = `import Card from "@mui/material/Card";
+import CardMedia from "@mui/material/CardMedia";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Avatar from "@mui/material/Avatar";
 
 export const CardImageBg2 = () => {
     return (
@@ -29,5 +33,4 @@ export const CardImageBg2 = () => {
             </Box>
         </Card>
     )
-}`
-
+}`;

@@ -1,6 +1,10 @@
 import * as React from "react";
 import Stack from "@mui/material/Stack";
-import { alpha, Breadcrumbs, Divider, Link, Typography } from "@mui/material";
+import Breadcrumbs from "@mui/material/Breadcrumbs";
+import Divider from "@mui/material/Divider";
+import Link from "@mui/material/Link";
+import Typography from "@mui/material/Typography";
+import { alpha } from "@mui/material/styles";
 import HomeIcon from "@mui/icons-material/Home";
 import CollectionsIcon from "@mui/icons-material/Collections";
 import WebIcon from "@mui/icons-material/Web";
@@ -12,8 +16,7 @@ export const BreadcrumbBackgroundPreview = () => {
       alignItems="center"
       justifyContent="center"
       sx={{ width: "100%", py: 6 }}
-      spacing={2}
-    >
+      spacing={2}>
       {/* Default */}
       <Breadcrumbs
         aria-label="breadcrumb"
@@ -22,18 +25,16 @@ export const BreadcrumbBackgroundPreview = () => {
           backgroundColor: "#f5f5f5",
           px: 2,
           py: 1,
-          borderRadius: 1,
-        }}
-      >
+          borderRadius: 1
+        }}>
         <Link
           color="inherit"
           href="#"
           sx={{
             fontSize: "0.8rem",
             textDecoration: "none",
-            "&:hover": { color: "primary.main" },
-          }}
-        >
+            "&:hover": { color: "primary.main" }
+          }}>
           Home
         </Link>
         <Link
@@ -42,9 +43,8 @@ export const BreadcrumbBackgroundPreview = () => {
           sx={{
             fontSize: "0.8rem",
             textDecoration: "none",
-            "&:hover": { color: "primary.main" },
-          }}
-        >
+            "&:hover": { color: "primary.main" }
+          }}>
           Galle
         </Link>
         <Link
@@ -53,17 +53,15 @@ export const BreadcrumbBackgroundPreview = () => {
           sx={{
             fontSize: "0.8rem",
             textDecoration: "none",
-            "&:hover": { color: "primary.main" },
-          }}
-        >
+            "&:hover": { color: "primary.main" }
+          }}>
           Web
         </Link>
         <Typography
           sx={{
             fontSize: "0.8rem",
-            fontWeight: "bold",
-          }}
-        >
+            fontWeight: "bold"
+          }}>
           Project
         </Typography>
       </Breadcrumbs>
@@ -77,9 +75,8 @@ export const BreadcrumbBackgroundPreview = () => {
           backgroundColor: "#f5f5f5",
           px: 2,
           py: 1,
-          borderRadius: 1,
-        }}
-      >
+          borderRadius: 1
+        }}>
         <Link
           color="inherit"
           href="#"
@@ -89,9 +86,8 @@ export const BreadcrumbBackgroundPreview = () => {
             gap: 0.5,
             fontSize: "0.8rem",
             textDecoration: "none",
-            "&:hover": { color: "primary.main" },
-          }}
-        >
+            "&:hover": { color: "primary.main" }
+          }}>
           <HomeIcon fontSize="small" />
           Home
         </Link>
@@ -104,9 +100,8 @@ export const BreadcrumbBackgroundPreview = () => {
             gap: 0.5,
             fontSize: "0.8rem",
             textDecoration: "none",
-            "&:hover": { color: "primary.main" },
-          }}
-        >
+            "&:hover": { color: "primary.main" }
+          }}>
           <CollectionsIcon fontSize="small" />
           Galle
         </Link>
@@ -119,18 +114,16 @@ export const BreadcrumbBackgroundPreview = () => {
             gap: 0.5,
             fontSize: "0.8rem",
             textDecoration: "none",
-            "&:hover": { color: "primary.main" },
-          }}
-        >
+            "&:hover": { color: "primary.main" }
+          }}>
           <WebIcon fontSize="small" />
           Web
         </Link>
         <Typography
           sx={{
             fontSize: "0.8rem",
-            fontWeight: "bold",
-          }}
-        >
+            fontWeight: "bold"
+          }}>
           Project
         </Typography>
       </Breadcrumbs>
@@ -144,18 +137,16 @@ export const BreadcrumbBackgroundPreview = () => {
           backgroundColor: "#f5f5f5",
           px: 2,
           py: 1,
-          borderRadius: 1,
-        }}
-      >
+          borderRadius: 1
+        }}>
         <Link
           color="inherit"
           href="#"
           sx={{
             fontSize: "0.8rem",
             textDecoration: "none",
-            "&:hover": { color: "#ff00ff" },
-          }}
-        >
+            "&:hover": { color: "#ff00ff" }
+          }}>
           Home
         </Link>
         <Link
@@ -164,9 +155,8 @@ export const BreadcrumbBackgroundPreview = () => {
           sx={{
             fontSize: "0.8rem",
             textDecoration: "none",
-            "&:hover": { color: "#ff00ff" },
-          }}
-        >
+            "&:hover": { color: "#ff00ff" }
+          }}>
           Galle
         </Link>
         <Link
@@ -175,18 +165,16 @@ export const BreadcrumbBackgroundPreview = () => {
           sx={{
             fontSize: "0.8rem",
             textDecoration: "none",
-            "&:hover": { color: "#ff00ff" },
-          }}
-        >
+            "&:hover": { color: "#ff00ff" }
+          }}>
           Web
         </Link>
         <Typography
           sx={{
             color: "#ff00ff",
             fontSize: "0.8rem",
-            fontWeight: "bold",
-          }}
-        >
+            fontWeight: "bold"
+          }}>
           Project
         </Typography>
       </Breadcrumbs>
@@ -202,18 +190,16 @@ export const BreadcrumbBackgroundPreview = () => {
           color: "#09590F",
           px: 2,
           py: 1,
-          borderRadius: 1,
-        }}
-      >
+          borderRadius: 1
+        }}>
         <Link
           color="inherit"
           href="#"
           sx={{
             fontSize: "0.8rem",
             textDecoration: "none",
-            "&:hover": { color: "primary.main" },
-          }}
-        >
+            "&:hover": { color: "primary.main" }
+          }}>
           Home
         </Link>
         <Link
@@ -222,9 +208,8 @@ export const BreadcrumbBackgroundPreview = () => {
           sx={{
             fontSize: "0.8rem",
             textDecoration: "none",
-            "&:hover": { color: "primary.main" },
-          }}
-        >
+            "&:hover": { color: "primary.main" }
+          }}>
           Galle
         </Link>
         <Link
@@ -233,17 +218,15 @@ export const BreadcrumbBackgroundPreview = () => {
           sx={{
             fontSize: "0.8rem",
             textDecoration: "none",
-            "&:hover": { color: "primary.main" },
-          }}
-        >
+            "&:hover": { color: "primary.main" }
+          }}>
           Web
         </Link>
         <Typography
           sx={{
             fontSize: "0.8rem",
-            fontWeight: "bold",
-          }}
-        >
+            fontWeight: "bold"
+          }}>
           Project
         </Typography>
       </Breadcrumbs>
@@ -258,18 +241,16 @@ export const BreadcrumbBackgroundPreview = () => {
           color: "#0066ff",
           px: 2,
           py: 1,
-          borderRadius: 1,
-        }}
-      >
+          borderRadius: 1
+        }}>
         <Link
           color="inherit"
           href="#"
           sx={{
             fontSize: "0.8rem",
             textDecoration: "none",
-            "&:hover": { color: "primary.main" },
-          }}
-        >
+            "&:hover": { color: "primary.main" }
+          }}>
           Home
         </Link>
         <Link
@@ -278,9 +259,8 @@ export const BreadcrumbBackgroundPreview = () => {
           sx={{
             fontSize: "0.8rem",
             textDecoration: "none",
-            "&:hover": { color: "primary.main" },
-          }}
-        >
+            "&:hover": { color: "primary.main" }
+          }}>
           Galle
         </Link>
         <Link
@@ -289,17 +269,15 @@ export const BreadcrumbBackgroundPreview = () => {
           sx={{
             fontSize: "0.8rem",
             textDecoration: "none",
-            "&:hover": { color: "primary.main" },
-          }}
-        >
+            "&:hover": { color: "primary.main" }
+          }}>
           Web
         </Link>
         <Typography
           sx={{
             fontSize: "0.8rem",
-            fontWeight: "bold",
-          }}
-        >
+            fontWeight: "bold"
+          }}>
           Project
         </Typography>
       </Breadcrumbs>
@@ -314,9 +292,8 @@ export const BreadcrumbBackgroundPreview = () => {
           color: alpha("#ff00ff", 0.7),
           px: 2,
           py: 1,
-          borderRadius: 1,
-        }}
-      >
+          borderRadius: 1
+        }}>
         <Link
           color="inherit"
           href="#"
@@ -326,9 +303,8 @@ export const BreadcrumbBackgroundPreview = () => {
             gap: 0.5,
             fontSize: "0.8rem",
             textDecoration: "none",
-            "&:hover": { color: "#ff00ff" },
-          }}
-        >
+            "&:hover": { color: "#ff00ff" }
+          }}>
           <HomeIcon fontSize="small" />
           Home
         </Link>
@@ -341,9 +317,8 @@ export const BreadcrumbBackgroundPreview = () => {
             gap: 0.5,
             fontSize: "0.8rem",
             textDecoration: "none",
-            "&:hover": { color: "#ff00ff" },
-          }}
-        >
+            "&:hover": { color: "#ff00ff" }
+          }}>
           <CollectionsIcon fontSize="small" />
           Galle
         </Link>
@@ -357,9 +332,8 @@ export const BreadcrumbBackgroundPreview = () => {
             gap: 0.5,
             fontSize: "0.8rem",
             textDecoration: "none",
-            "&:hover": { color: "#ff00ff" },
-          }}
-        >
+            "&:hover": { color: "#ff00ff" }
+          }}>
           <WebIcon fontSize="small" />
           Web
         </Link>
@@ -367,12 +341,11 @@ export const BreadcrumbBackgroundPreview = () => {
         <Typography
           sx={{
             fontSize: "0.8rem",
-            fontWeight: "bold",
-          }}
-        >
+            fontWeight: "bold"
+          }}>
           Project
         </Typography>
       </Breadcrumbs>
     </Stack>
   );
-}
+};

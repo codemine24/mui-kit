@@ -2,14 +2,12 @@
 
 import { Iconify } from "@/components/iconify";
 import { getCustomSyntaxStyle } from "@/utils/getCustomSyntaxStyle";
-import {
-  Box,
-  Tab,
-  Tabs,
-  ToggleButton,
-  ToggleButtonGroup,
-  useTheme,
-} from "@mui/material";
+import Box from "@mui/material/Box";
+import Tab from "@mui/material/Tab";
+import Tabs from "@mui/material/Tabs";
+import ToggleButton from "@mui/material/ToggleButton";
+import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
+import { useTheme } from "@mui/material/styles";
 import React, { useState } from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 
@@ -20,7 +18,7 @@ interface CodePreviewWrapperProps {
 
 export const CodePreviewCopyWrapper: React.FC<CodePreviewWrapperProps> = ({
   codeString,
-  preview,
+  preview
 }) => {
   const theme = useTheme();
   const isDarkMode = theme.palette.mode === "dark";
@@ -28,9 +26,7 @@ export const CodePreviewCopyWrapper: React.FC<CodePreviewWrapperProps> = ({
   const [icon, setIcon] = useState<string>("solar:copy-line-duotone");
 
   const isMultiFile = Array.isArray(codeString);
-  const [activeFile, setActiveFile] = useState(
-    isMultiFile ? codeString[0]?.name : ""
-  );
+  const [activeFile, setActiveFile] = useState(isMultiFile ? codeString[0]?.name : "");
 
   const currentCode = isMultiFile
     ? codeString.find((f) => f.name === activeFile)?.code || ""
@@ -55,9 +51,8 @@ export const CodePreviewCopyWrapper: React.FC<CodePreviewWrapperProps> = ({
         borderRadius: theme.shape.borderRadius,
         px: 2,
         pb: 2,
-        bgcolor: "background.paper",
-      }}
-    >
+        bgcolor: "background.paper"
+      }}>
       <ToggleButtonGroup
         value={tab}
         exclusive
@@ -65,9 +60,8 @@ export const CodePreviewCopyWrapper: React.FC<CodePreviewWrapperProps> = ({
           if (newTab !== null) setTab(newTab);
         }}
         sx={{
-          py: 1,
-        }}
-      >
+          py: 1
+        }}>
         {["preview", "code"].map((value) => (
           <ToggleButton
             key={value}
@@ -84,15 +78,14 @@ export const CodePreviewCopyWrapper: React.FC<CodePreviewWrapperProps> = ({
                 color: "white",
                 "&:hover": {
                   bgcolor: "primary.main",
-                  color: "white",
-                },
+                  color: "white"
+                }
               },
               "&:hover": {
                 bgcolor: "primary.main",
-                color: "white",
-              },
-            }}
-          >
+                color: "white"
+              }
+            }}>
             {value.charAt(0).toUpperCase() + value.slice(1)}
           </ToggleButton>
         ))}
@@ -107,9 +100,8 @@ export const CodePreviewCopyWrapper: React.FC<CodePreviewWrapperProps> = ({
           backgroundImage: isDarkMode
             ? "linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px)"
             : "linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px)",
-          backgroundSize: "20px 20px",
-        }}
-      >
+          backgroundSize: "20px 20px"
+        }}>
         {tab === "preview" ? (
           <Box
             sx={{
@@ -117,9 +109,8 @@ export const CodePreviewCopyWrapper: React.FC<CodePreviewWrapperProps> = ({
               p: 2,
               bgcolor: "background.default",
               display: "flex",
-              justifyContent: "center",
-            }}
-          >
+              justifyContent: "center"
+            }}>
             {preview}
           </Box>
         ) : (
@@ -129,9 +120,8 @@ export const CodePreviewCopyWrapper: React.FC<CodePreviewWrapperProps> = ({
               overflow: "auto",
               bgcolor: "background.default",
               p: 2,
-              width: "100%",
-            }}
-          >
+              width: "100%"
+            }}>
             <Box
               onClick={handleCopy}
               sx={{
@@ -139,9 +129,8 @@ export const CodePreviewCopyWrapper: React.FC<CodePreviewWrapperProps> = ({
                 top: 10,
                 right: 10,
                 cursor: "pointer",
-                zIndex: 10,
-              }}
-            >
+                zIndex: 10
+              }}>
               <Iconify
                 icon={icon}
                 style={{
@@ -149,7 +138,7 @@ export const CodePreviewCopyWrapper: React.FC<CodePreviewWrapperProps> = ({
                   width: 32,
                   transition: "box-shadow 0.2s ease",
                   borderRadius: "3px",
-                  padding: 4,
+                  padding: 4
                 }}
               />
             </Box>
@@ -160,8 +149,7 @@ export const CodePreviewCopyWrapper: React.FC<CodePreviewWrapperProps> = ({
                 onChange={(_, newFile) => setActiveFile(newFile)}
                 variant="scrollable"
                 scrollButtons="auto"
-                sx={{ mb: 2 }}
-              >
+                sx={{ mb: 2 }}>
                 {codeString.map((file) => (
                   <Tab
                     key={file.name}
@@ -176,8 +164,7 @@ export const CodePreviewCopyWrapper: React.FC<CodePreviewWrapperProps> = ({
             <SyntaxHighlighter
               language="tsx"
               style={getCustomSyntaxStyle(theme.palette.mode)}
-              customStyle={{ margin: 0 }}
-            >
+              customStyle={{ margin: 0 }}>
               {currentCode}
             </SyntaxHighlighter>
           </Box>

@@ -1,5 +1,7 @@
 "use client";
-import { Box, Typography, useTheme } from "@mui/material";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import { useTheme } from "@mui/material/styles";
 import Link from "next/link";
 
 export default function NotFound() {
@@ -13,18 +15,16 @@ export default function NotFound() {
         alignItems: "center",
         justifyContent: "center",
         bgcolor: "background.default",
-        p: 3,
-      }}
-    >
+        p: 3
+      }}>
       <Typography
         variant="h1"
         sx={{
           fontSize: { xs: "3rem", md: "5rem" },
           fontWeight: "bold",
           color: "text.primary",
-          mb: 2,
-        }}
-      >
+          mb: 2
+        }}>
         404
       </Typography>
       <Typography
@@ -32,16 +32,12 @@ export default function NotFound() {
         sx={{
           color: "text.secondary",
           mb: 4,
-          textAlign: "center",
+          textAlign: "center"
           // maxWidth: "600px",
-        }}
-      >
+        }}>
         Oops! The page you&apos;re looking for doesn&apos;t exist.
       </Typography>
-      <Link
-        href="/"
-        style={{ textDecoration: "none", color: theme.palette.primary.main }}
-      >
+      <Link href="/" style={{ textDecoration: "none", color: theme.palette.primary.main }}>
         Back to home
       </Link>
     </Box>

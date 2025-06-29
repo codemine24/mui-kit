@@ -1,4 +1,5 @@
-import { Box, Typography } from "@mui/material";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
 
 interface RichTextPart {
   text: string;
@@ -13,10 +14,7 @@ interface IProps {
 export const PageTitle = ({ title, description }: IProps) => {
   return (
     <Box>
-      <Typography
-        variant="h4"
-        sx={{ mt: { xs: 1, md: 2 }, mb: { xs: 1, md: 1.5 } }}
-      >
+      <Typography variant="h4" sx={{ mt: { xs: 1, md: 2 }, mb: { xs: 1, md: 1.5 } }}>
         {title}
       </Typography>
 
@@ -30,9 +28,8 @@ export const PageTitle = ({ title, description }: IProps) => {
                   component="span"
                   sx={{
                     color: part.highlight ? "primary.main" : "text.secondary",
-                    fontWeight: part.highlight ? 500 : "normal",
-                  }}
-                >
+                    fontWeight: part.highlight ? 500 : "normal"
+                  }}>
                   {part.text}
                 </Box>
               ))}

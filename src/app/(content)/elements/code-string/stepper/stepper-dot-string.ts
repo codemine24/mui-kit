@@ -1,20 +1,17 @@
 export const stepperDotString = `
 'use client';
 
-import {
-    Stepper,
-    Step,
-    StepConnector,
-    useMediaQuery,
-    Box,
-    styled,
-    Button,
-    StepIconProps,
-    stepConnectorClasses,
-    StepLabel,
-} from '@mui/material';
-import { useTheme } from '@mui/material/styles';
-import { useState } from 'react';
+import { useState } from "react";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Step from "@mui/material/Step";
+import Stepper from "@mui/material/Stepper";
+import StepLabel from "@mui/material/StepLabel";
+import StepConnector from "@mui/material/StepConnector";
+import { StepIconProps } from "@mui/material/StepIcon";
+import { stepConnectorClasses } from "@mui/material/StepConnector";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { styled, useTheme } from "@mui/material/styles";
 
 const steps = [1, 2, 3];
 

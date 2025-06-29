@@ -1,6 +1,8 @@
 import * as React from "react";
 import Stack from "@mui/material/Stack";
-import { Breadcrumbs, Link, Typography } from "@mui/material";
+import Link from "@mui/material/Link";
+import Typography from "@mui/material/Typography";
+import Breadcrumbs from "@mui/material/Breadcrumbs";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 import TrendingFlatIcon from "@mui/icons-material/TrendingFlat";
 
@@ -14,7 +16,7 @@ export const BreadcrumbCustomSeparatorPreview = () => {
     </Link>,
     <Typography key="3" sx={{ color: "text.primary" }}>
       Breadcrumb
-    </Typography>,
+    </Typography>
   ];
 
   return (
@@ -23,23 +25,16 @@ export const BreadcrumbCustomSeparatorPreview = () => {
       alignItems="center"
       justifyContent="center"
       sx={{ width: "100%", py: 6 }}
-      spacing={2}
-    >
+      spacing={2}>
       <Breadcrumbs separator="›" aria-label="breadcrumb">
         {breadcrumbs}
       </Breadcrumbs>
-      <Breadcrumbs
-        separator={<ArrowRightIcon fontSize="small" />}
-        aria-label="breadcrumb"
-      >
+      <Breadcrumbs separator={<ArrowRightIcon fontSize="small" />} aria-label="breadcrumb">
         {breadcrumbs}
       </Breadcrumbs>
-      <Breadcrumbs
-        separator={<TrendingFlatIcon fontSize="small" />}
-        aria-label="breadcrumb"
-      >
+      <Breadcrumbs separator={<TrendingFlatIcon fontSize="small" />} aria-label="breadcrumb">
         {breadcrumbs}
       </Breadcrumbs>
     </Stack>
   );
-}
+};

@@ -1,13 +1,11 @@
-import { Box, Grid, Paper, Typography, useTheme } from "@mui/material";
+import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
+import Paper from "@mui/material/Paper";
+import Typography from "@mui/material/Typography";
+import { useTheme } from "@mui/material/styles";
 import { useRouter } from "next/navigation";
 
-export const HeroInfinityCard = ({
-  title,
-  url,
-}: {
-  title: string;
-  url: string;
-}) => {
+export const HeroInfinityCard = ({ title, url }: { title: string; url: string }) => {
   const theme = useTheme();
   const router = useRouter();
   const isDarkMode = theme.palette.mode === "dark";
@@ -48,20 +46,18 @@ export const HeroInfinityCard = ({
             padding: "1px",
             background:
               "radial-gradient(500px circle at var(--cursor-x, -9999px) var(--cursor-y, -9999px), rgba(34, 211, 238, 0.8) 10%, transparent 90%)",
-            WebkitMask:
-              "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+            WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
             WebkitMaskComposite: "xor",
             maskComposite: "exclude",
             pointerEvents: "none",
             zIndex: 1,
-            transition: "opacity 0.3s ease",
+            transition: "opacity 0.3s ease"
           },
           "&:hover": {
-            transform: "translateY(-4px)",
+            transform: "translateY(-4px)"
           },
-          transition: "transform 0.3s, background 0.3s",
-        }}
-      >
+          transition: "transform 0.3s, background 0.3s"
+        }}>
         {/* Background Grid */}
         <Box
           sx={{
@@ -76,7 +72,7 @@ export const HeroInfinityCard = ({
               : "linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px)",
             backgroundSize: "20px 20px",
             opacity: 0.5,
-            borderRadius: "12px",
+            borderRadius: "12px"
           }}
           onClick={() => router.push(url)}
         />
@@ -86,8 +82,7 @@ export const HeroInfinityCard = ({
           align="center"
           gutterBottom
           fontWeight="bold"
-          sx={{ color: isDarkMode ? "common.white" : "text.primary" }}
-        >
+          sx={{ color: isDarkMode ? "common.white" : "text.primary" }}>
           {title}
         </Typography>
       </Paper>

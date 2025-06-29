@@ -1,11 +1,9 @@
-export const headlessTableString = `import {
-    Paper,
-    Table,
-    TableBody,
-    TableCell,
-    TableContainer,
-    TableRow,
-} from "@mui/material";
+export const headlessTableString = `import Paper from "@mui/material/Paper";
+import Table from "@mui/material/Table";
+import TableBody from "@mui/material/TableBody";
+import TableCell from "@mui/material/TableCell";
+import TableContainer from "@mui/material/TableContainer";
+import TableRow from "@mui/material/TableRow";
 
 const data = [
   { id: 1, title: "System Update", time: "10:45 AM", status: "Completed" },

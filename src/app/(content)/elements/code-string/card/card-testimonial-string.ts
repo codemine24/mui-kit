@@ -1,4 +1,9 @@
-export const cardTestimonialString = `import { Card, CardContent, Typography, Box, Avatar, Rating } from "@mui/material";
+export const cardTestimonialString = `import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
+import Avatar from "@mui/material/Avatar";
+import Rating from "@mui/material/Rating";
 
 export const CardTestimonialPreview = () => {
     return (
@@ -31,4 +36,4 @@ export const CardTestimonialPreview = () => {
             </CardContent>
         </Card>
     )
-}`
+}`;

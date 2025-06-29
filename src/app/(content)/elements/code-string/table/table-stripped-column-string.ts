@@ -1,14 +1,12 @@
-export const strippedColumnTableString = `import {
-    Table,
-    TableBody,
-    TableCell,
-    TableContainer,
-    TableHead,
-    TableRow,
-    Paper,
-    Typography,
-    useTheme,
-} from "@mui/material";
+export const strippedColumnTableString = `import Paper from "@mui/material/Paper";
+import Table from "@mui/material/Table";
+import TableBody from "@mui/material/TableBody";
+import TableCell from "@mui/material/TableCell";
+import TableContainer from "@mui/material/TableContainer";
+import TableHead from "@mui/material/TableHead";
+import TableRow from "@mui/material/TableRow";
+import Typography from "@mui/material/Typography";
+import { useTheme } from "@mui/material/styles";
 import React from "react";
 
 const salesData = [
@@ -63,4 +61,4 @@ export function StripedColumnTable() {
         </Paper>
     );
 }
-`
+`;

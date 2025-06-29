@@ -1,4 +1,9 @@
-export const cardErrorString = `import { Alert, Button, Card, CardContent, Stack, Typography } from "@mui/material";
+export const cardErrorString = `import Alert from "@mui/material/Alert";
+import Button from "@mui/material/Button";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import Stack from "@mui/material/Stack";
+import Typography from "@mui/material/Typography";
 import ArrowRightAlt from "@mui/icons-material/ArrowRightAlt";
 import LanguageIcon from "@mui/icons-material/Language";
 
@@ -25,4 +30,4 @@ export const CardError = () => {
             </CardContent>
         </Card>
     )
-}`
+}`;

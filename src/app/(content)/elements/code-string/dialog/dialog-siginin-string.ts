@@ -1,6 +1,17 @@
-export const dialogSignInString = `import { Dialog, DialogContent, DialogTitle, IconButton, Stack, TextField, Typography, Box, Button, FormControlLabel, Checkbox, Link } from "@mui/material";
-import { useState } from "react";
-import CloseIcon from '@mui/icons-material/Close';
+export const dialogSignInString = `import { useState } from "react";
+import Dialog from "@mui/material/Dialog";
+import DialogContent from "@mui/material/DialogContent";
+import DialogTitle from "@mui/material/DialogTitle";
+import IconButton from "@mui/material/IconButton";
+import Stack from "@mui/material/Stack";
+import TextField from "@mui/material/TextField";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import Checkbox from "@mui/material/Checkbox";
+import Link from "@mui/material/Link";
+import CloseIcon from "@mui/icons-material/Close";
 
 export const DialogSignIn = () => {
     const [open, setOpen] = useState(false);
@@ -130,4 +141,4 @@ export const DialogSignIn = () => {
             </Dialog>
         </>
     );
-}`
+}`;

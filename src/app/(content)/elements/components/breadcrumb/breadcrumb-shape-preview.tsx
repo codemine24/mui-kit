@@ -2,20 +2,16 @@ import CollectionsIcon from "@mui/icons-material/Collections";
 import FolderSpecialIcon from "@mui/icons-material/FolderSpecial";
 import HomeIcon from "@mui/icons-material/Home";
 import WebIcon from "@mui/icons-material/Web";
-import {
-    Box,
-    Breadcrumbs,
-    Divider,
-    Link,
-    Stack,
-    alpha,
-    styled,
-} from "@mui/material";
+import Box from "@mui/material/Box";
+import Breadcrumbs from "@mui/material/Breadcrumbs";
+import Divider from "@mui/material/Divider";
+import Stack from "@mui/material/Stack";
+import Link from "@mui/material/Link";
+import { alpha, styled } from "@mui/material/styles";
 
 // Chevron item style
 const ChevronItem = styled(Box, {
-  shouldForwardProp: (prop) =>
-    prop !== "active" && prop !== "first" && prop !== "last",
+  shouldForwardProp: (prop) => prop !== "active" && prop !== "first" && prop !== "last"
 })<{
   active?: boolean;
   first?: boolean;
@@ -41,8 +37,8 @@ const ChevronItem = styled(Box, {
   fontSize: 14,
   "& svg": {
     marginRight: 1,
-    fontSize: 20,
-  },
+    fontSize: 20
+  }
 }));
 
 export const BreadcrumbShapePreview = () => {
@@ -52,19 +48,17 @@ export const BreadcrumbShapePreview = () => {
       alignItems="center"
       justifyContent="center"
       sx={{ width: "100%", py: 6 }}
-      spacing={2}
-    >
+      spacing={2}>
       <Breadcrumbs
         sx={{
           display: "flex",
           alignItems: "center",
           "& .MuiBreadcrumbs-separator": { display: "none" },
           "& .css-1uwp4ue-MuiBreadcrumbs-ol": {
-            gap: { xs: 0.5, sm: 0 },
-          },
+            gap: { xs: 0.5, sm: 0 }
+          }
         }}
-        separator={false}
-      >
+        separator={false}>
         <ChevronItem first component={Link} href="#">
           Home
         </ChevronItem>
@@ -87,11 +81,10 @@ export const BreadcrumbShapePreview = () => {
           alignItems: "center",
           "& .MuiBreadcrumbs-separator": { display: "none" },
           "& .css-1uwp4ue-MuiBreadcrumbs-ol": {
-            gap: { xs: 0.5, sm: 0 },
-          },
+            gap: { xs: 0.5, sm: 0 }
+          }
         }}
-        separator={false}
-      >
+        separator={false}>
         <ChevronItem first component={Link} href="#">
           <HomeIcon />
           Home

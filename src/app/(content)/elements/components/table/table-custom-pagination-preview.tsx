@@ -1,17 +1,15 @@
 "use client";
 
-import {
-  Box,
-  Pagination,
-  Paper,
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TableRow,
-  Typography,
-} from "@mui/material";
+import Box from "@mui/material/Box";
+import Pagination from "@mui/material/Pagination";
+import Paper from "@mui/material/Paper";
+import Table from "@mui/material/Table";
+import TableBody from "@mui/material/TableBody";
+import TableCell from "@mui/material/TableCell";
+import TableContainer from "@mui/material/TableContainer";
+import TableHead from "@mui/material/TableHead";
+import TableRow from "@mui/material/TableRow";
+import Typography from "@mui/material/Typography";
 import React from "react";
 
 interface Order {
@@ -26,10 +24,8 @@ const orders: Order[] = Array.from({ length: 42 }).map((_, i) => ({
   id: `ORD-${1000 + i}`,
   customer: `Customer ${i + 1}`,
   date: `2024-05-${((i % 30) + 1).toString().padStart(2, "0")}`,
-  status: ["Pending", "Shipped", "Delivered", "Cancelled"][
-    i % 4
-  ] as Order["status"],
-  amount: Number((Math.random() * 500 + 50).toFixed(2)),
+  status: ["Pending", "Shipped", "Delivered", "Cancelled"][i % 4] as Order["status"],
+  amount: Number((Math.random() * 500 + 50).toFixed(2))
 }));
 
 const rowsPerPage = 10;
@@ -40,10 +36,7 @@ export function CustomPaginationTablePreview() {
     setPage(value);
   };
 
-  const paginatedOrders = orders.slice(
-    (page - 1) * rowsPerPage,
-    page * rowsPerPage
-  );
+  const paginatedOrders = orders.slice((page - 1) * rowsPerPage, page * rowsPerPage);
 
   return (
     <Paper sx={{ width: "100%", overflowX: "auto", p: 2 }}>

@@ -1,21 +1,19 @@
 import AddIcon from "@mui/icons-material/Add";
 import DeleteIcon from "@mui/icons-material/Delete";
 import RemoveIcon from "@mui/icons-material/Remove";
-import {
-    Avatar,
-    Box,
-    IconButton,
-    Paper,
-    Table,
-    TableBody,
-    TableCell,
-    TableContainer,
-    TableHead,
-    TablePagination,
-    TableRow,
-    TableSortLabel,
-    Typography,
-} from "@mui/material";
+import Avatar from "@mui/material/Avatar";
+import Box from "@mui/material/Box";
+import IconButton from "@mui/material/IconButton";
+import Paper from "@mui/material/Paper";
+import Table from "@mui/material/Table";
+import TableBody from "@mui/material/TableBody";
+import TableCell from "@mui/material/TableCell";
+import TableContainer from "@mui/material/TableContainer";
+import TableHead from "@mui/material/TableHead";
+import TablePagination from "@mui/material/TablePagination";
+import TableRow from "@mui/material/TableRow";
+import TableSortLabel from "@mui/material/TableSortLabel";
+import Typography from "@mui/material/Typography";
 import * as React from "react";
 
 type Order = "asc" | "desc";
@@ -39,26 +37,14 @@ function createProduct(
 }
 
 const initialProducts: Product[] = [
-  createProduct(
-    1,
-    "Wireless Mouse",
-    "https://via.placeholder.com/50",
-    29.99,
-    1
-  ),
-  createProduct(
-    2,
-    "Bluetooth Headphones",
-    "https://via.placeholder.com/50",
-    59.99,
-    2
-  ),
+  createProduct(1, "Wireless Mouse", "https://via.placeholder.com/50", 29.99, 1),
+  createProduct(2, "Bluetooth Headphones", "https://via.placeholder.com/50", 59.99, 2),
   createProduct(3, "Laptop Stand", "https://via.placeholder.com/50", 19.99, 1),
   createProduct(4, "Webcam", "https://via.placeholder.com/50", 39.99, 3),
   createProduct(5, "USB-C Hub", "https://via.placeholder.com/50", 24.99, 1),
   createProduct(6, "AirPods", "https://via.placeholder.com/50", 199.99, 1),
   createProduct(7, "Smartphone", "https://via.placeholder.com/50", 399.99, 1),
-  createProduct(8, "Smartwatch", "https://via.placeholder.com/50", 199.99, 1),
+  createProduct(8, "Smartwatch", "https://via.placeholder.com/50", 199.99, 1)
 ];
 
 export function ProductTablePreview() {
@@ -78,19 +64,11 @@ export function ProductTablePreview() {
   const getComparator =
     <Key extends keyof Product>(order: Order, orderBy: Key) =>
     (a: Product, b: Product) =>
-      order === "desc"
-        ? b[orderBy] < a[orderBy]
-          ? -1
-          : 1
-        : a[orderBy] < b[orderBy]
-        ? -1
-        : 1;
+      order === "desc" ? (b[orderBy] < a[orderBy] ? -1 : 1) : a[orderBy] < b[orderBy] ? -1 : 1;
 
   const handleQuantityChange = (id: number, delta: number) => {
     setProducts((prev) =>
-      prev.map((p) =>
-        p.id === id ? { ...p, quantity: Math.max(1, p.quantity + delta) } : p
-      )
+      prev.map((p) => (p.id === id ? { ...p, quantity: Math.max(1, p.quantity + delta) } : p))
     );
   };
 
@@ -103,9 +81,7 @@ export function ProductTablePreview() {
     setPage(newPage);
   };
 
-  const handleChangeRowsPerPage = (
-    event: React.ChangeEvent<HTMLInputElement>
-  ) => {
+  const handleChangeRowsPerPage = (event: React.ChangeEvent<HTMLInputElement>) => {
     setRowsPerPage(parseInt(event.target.value, 10));
     setPage(0);
   };
@@ -129,8 +105,7 @@ export function ProductTablePreview() {
                 <TableSortLabel
                   active={orderBy === "name"}
                   direction={order}
-                  onClick={() => handleSort("name")}
-                >
+                  onClick={() => handleSort("name")}>
                   Product
                 </TableSortLabel>
               </TableCell>
@@ -139,8 +114,7 @@ export function ProductTablePreview() {
                 <TableSortLabel
                   active={orderBy === "price"}
                   direction={order}
-                  onClick={() => handleSort("price")}
-                >
+                  onClick={() => handleSort("price")}>
                   Price
                 </TableSortLabel>
               </TableCell>
@@ -158,25 +132,18 @@ export function ProductTablePreview() {
                 </TableCell>
                 <TableCell>
                   <Box display="flex" alignItems="center" gap={1}>
-                    <IconButton
-                      onClick={() => handleQuantityChange(product.id, -1)}
-                    >
+                    <IconButton onClick={() => handleQuantityChange(product.id, -1)}>
                       <RemoveIcon />
                     </IconButton>
                     <Typography>{product.quantity}</Typography>
-                    <IconButton
-                      onClick={() => handleQuantityChange(product.id, 1)}
-                    >
+                    <IconButton onClick={() => handleQuantityChange(product.id, 1)}>
                       <AddIcon />
                     </IconButton>
                   </Box>
                 </TableCell>
                 <TableCell>${product.price.toFixed(2)}</TableCell>
                 <TableCell>
-                  <IconButton
-                    color="error"
-                    onClick={() => handleRemove(product.id)}
-                  >
+                  <IconButton color="error" onClick={() => handleRemove(product.id)}>
                     <DeleteIcon />
                   </IconButton>
                 </TableCell>

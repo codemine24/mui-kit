@@ -1,6 +1,8 @@
-export const buttonLoaderString = `import { Box, Button, Divider, Stack } from "@mui/material";
-import { styled } from "@mui/material/styles";
-import { keyframes } from "@mui/system";
+export const buttonLoaderString = `import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Divider from "@mui/material/Divider";
+import Stack from "@mui/material/Stack";
+import { styled, keyframes } from "@mui/material/styles";
 import { Icon } from "@iconify/react";
 
 const spin = keyframes\`
@@ -101,4 +103,4 @@ export const ButtonLoaderPreview = () => {
       </Stack>
     </Box>
   );
-};`
+};`;

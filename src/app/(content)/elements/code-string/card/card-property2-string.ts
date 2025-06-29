@@ -1,15 +1,13 @@
 export const cardProperty2String = `import React from 'react';
-import {
-    Box,
-    Card,
-    CardContent,
-    CardMedia,
-    Typography,
-    Stack,
-    Button,
-    Chip,
-    IconButton,
-} from '@mui/material';
+import Box from "@mui/material/Box";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Typography from "@mui/material/Typography";
+import Stack from "@mui/material/Stack";
+import Button from "@mui/material/Button";
+import Chip from "@mui/material/Chip";
+import IconButton from "@mui/material/IconButton";
 import StarIcon from '@mui/icons-material/Star';
 import PhotoCameraIcon from '@mui/icons-material/PhotoCamera';
 import WifiIcon from '@mui/icons-material/Wifi';
@@ -72,4 +70,4 @@ export const CardProperty2 = () => {
             </CardContent>
         </Card>
     );
-}`
+}`;

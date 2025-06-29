@@ -26,12 +26,11 @@ export function ToolbarItem({
         ...(disabled && {
           pointerEvents: "none",
           cursor: "not-allowed",
-          opacity: 0.48,
+          opacity: 0.48
         }),
-        ...sx,
+        ...sx
       }}
-      {...other}
-    >
+      {...other}>
       {icon && <SvgIcon sx={{ fontSize: 18 }}>{icon}</SvgIcon>}
 
       {label && label}

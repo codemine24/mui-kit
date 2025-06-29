@@ -4,9 +4,9 @@ import Alert from "@mui/material/Alert";
 import Stack from "@mui/material/Stack";
 import DoneAllIcon from "@mui/icons-material/DoneAll";
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
-import { Box } from "@mui/material";
+import Box from "@mui/material/Box";
 import EmergencyShareIcon from "@mui/icons-material/EmergencyShare";
-import { keyframes } from "@emotion/react";
+import { keyframes } from "@mui/material/styles";
 
 export default function SolidAlerts() {
   return (

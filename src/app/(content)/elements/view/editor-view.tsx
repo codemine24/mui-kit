@@ -5,7 +5,8 @@ import { PageTitle } from "@/components/core/page-title";
 import { SectionTitle } from "@/components/core/section-title";
 import { useOnThisPage } from "@/contexts/on-thispage-context";
 import { PATHS } from "@/router/paths";
-import { Box, Divider } from "@mui/material";
+import Box from "@mui/material/Box";
+import Divider from "@mui/material/Divider";
 import React from "react";
 import { Editor1IndexPageCodeString } from "../code-string/editor/editor-1";
 import { Editor1ClassesCodeString } from "../code-string/editor/editor-1/classes";
@@ -34,34 +35,34 @@ const sections = [
       { name: "classes.ts", code: Editor1ClassesCodeString },
       {
         name: "code-highlight-block.tsx",
-        code: Editor1CodeHighlightBlock,
+        code: Editor1CodeHighlightBlock
       },
       { name: "styles.tsx", code: Editor1StyleCodeString },
       { name: "toolbar.tsx", code: Editor1ToolbarCodeString },
       { name: "types.ts", code: Editor1TypesCodeString },
       {
         name: "toolbar-item.tsx",
-        code: Editor1ToolbarItemCodeString,
+        code: Editor1ToolbarItemCodeString
       },
       {
         name: "heading-block.tsx",
-        code: Editor1HeadingBlockCodeString,
+        code: Editor1HeadingBlockCodeString
       },
       {
         name: "image-block.tsx",
-        code: Editor1ImageBlockCodeString,
+        code: Editor1ImageBlockCodeString
       },
       {
         name: "link-block.tsx",
-        code: Editor1LinkBlockCodeString,
+        code: Editor1LinkBlockCodeString
       },
       {
         name: "code-highlight-block.css",
-        code: editor1CodeHighlightBlockCSSString,
-      },
+        code: editor1CodeHighlightBlockCSSString
+      }
     ],
-    preview: <Editor1 />,
-  },
+    preview: <Editor1 />
+  }
 ];
 
 export const EditorView = () => {
@@ -76,7 +77,7 @@ export const EditorView = () => {
       <CustomBreadCrumbs
         pathArr={[
           { label: "Elements", path: PATHS.ELEMENTS.OVERVIEW },
-          { label: "Editor", path: "" },
+          { label: "Editor", path: "" }
         ]}
       />
       <PageTitle
@@ -89,44 +90,44 @@ export const EditorView = () => {
         packages={[
           {
             name: "@tiptap/react",
-            url: "https://www.npmjs.com/package/@tiptap/react",
+            url: "https://www.npmjs.com/package/@tiptap/react"
           },
           {
             name: "@tiptap/starter-kit",
-            url: "https://www.npmjs.com/package/@tiptap/starter-kit",
+            url: "https://www.npmjs.com/package/@tiptap/starter-kit"
           },
           {
             name: "@tiptap/extension-image",
-            url: "https://www.npmjs.com/package/@tiptap/extension-image",
+            url: "https://www.npmjs.com/package/@tiptap/extension-image"
           },
           {
             name: "@tiptap/extension-text-align",
-            url: "https://www.npmjs.com/package/@tiptap/extension-text-align",
+            url: "https://www.npmjs.com/package/@tiptap/extension-text-align"
           },
           {
             name: "@tiptap/extension-placeholder",
-            url: "https://www.npmjs.com/package/@tiptap/extension-placeholder",
+            url: "https://www.npmjs.com/package/@tiptap/extension-placeholder"
           },
           {
             name: "@tiptap/extension-code-block-lowlight",
-            url: "https://www.npmjs.com/package/@tiptap/extension-code-block-lowlight",
+            url: "https://www.npmjs.com/package/@tiptap/extension-code-block-lowlight"
           },
           {
             name: "lowlight",
-            url: "https://www.npmjs.com/package/lowlight",
+            url: "https://www.npmjs.com/package/lowlight"
           },
           {
             name: "@iconify/react",
-            url: "https://www.npmjs.com/package/@iconify/react",
+            url: "https://www.npmjs.com/package/@iconify/react"
           },
           {
             name: "@tiptap/extension-link",
-            url: "https://www.npmjs.com/package/@tiptap/extension-link",
+            url: "https://www.npmjs.com/package/@tiptap/extension-link"
           },
           {
             name: "@tiptap/extension-underline",
-            url: "https://www.npmjs.com/package/@tiptap/extension-underline",
-          },
+            url: "https://www.npmjs.com/package/@tiptap/extension-underline"
+          }
         ]}
       />
 
@@ -139,10 +140,7 @@ export const EditorView = () => {
             id={section.id}
           />
 
-          <CodePreviewCopyWrapper
-            codeString={section.codeString}
-            preview={section.preview}
-          />
+          <CodePreviewCopyWrapper codeString={section.codeString} preview={section.preview} />
         </Box>
       ))}
     </Box>

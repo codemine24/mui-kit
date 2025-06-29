@@ -1,17 +1,11 @@
-import { Box } from "@mui/material";
+import Box from "@mui/material/Box";
 import ButtonBase from "@mui/material/ButtonBase";
 import { styled } from "@mui/material/styles";
 import type { CarouselThumbProps } from "../types/type";
 
 // ----------------------------------------------------------------------
 
-export function CarouselThumb({
-  sx,
-  src,
-  index,
-  selected,
-  ...other
-}: CarouselThumbProps) {
+export function CarouselThumb({ sx, src, index, selected, ...other }: CarouselThumbProps) {
   return (
     <ThumbRoot selected={selected} sx={sx} {...other}>
       <Box
@@ -27,7 +21,7 @@ export function CarouselThumb({
 // ----------------------------------------------------------------------
 
 const ThumbRoot = styled(ButtonBase, {
-  shouldForwardProp: (prop: string) => !["selected", "sx"].includes(prop),
+  shouldForwardProp: (prop: string) => !["selected", "sx"].includes(prop)
 })<Pick<CarouselThumbProps, "selected">>(({ theme }) => ({
   opacity: 0.48,
   flexShrink: 0,
@@ -35,21 +29,21 @@ const ThumbRoot = styled(ButtonBase, {
   borderRadius: 10,
   transition: theme.transitions.create(["opacity", "box-shadow"], {
     easing: theme.transitions.easing.sharp,
-    duration: theme.transitions.duration.short,
+    duration: theme.transitions.duration.short
   }),
   [`& .carousel-thumb-image`]: {
     width: "100%",
     height: "100%",
     objectFit: "cover",
-    borderRadius: 10,
+    borderRadius: 10
   },
   variants: [
     {
       props: { selected: true },
       style: {
         opacity: 1,
-        boxShadow: `0 0 0 2px ${theme.palette.primary.main}`,
-      },
-    },
-  ],
+        boxShadow: `0 0 0 2px ${theme.palette.primary.main}`
+      }
+    }
+  ]
 }));

@@ -1,32 +1,29 @@
 "use client";
 
-import {
-    Box,
-    Button,
-    Step,
-    StepConnector,
-    stepConnectorClasses,
-    StepIconProps,
-    StepLabel,
-    Stepper,
-    styled,
-    useMediaQuery,
-} from "@mui/material";
-import { useTheme } from "@mui/material/styles";
 import { useState } from "react";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Step from "@mui/material/Step";
+import Stepper from "@mui/material/Stepper";
+import StepLabel from "@mui/material/StepLabel";
+import StepConnector from "@mui/material/StepConnector";
+import { StepIconProps } from "@mui/material/StepIcon";
+import { stepConnectorClasses } from "@mui/material/StepConnector";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { styled, useTheme } from "@mui/material/styles";
 
 const steps = [1, 2, 3];
 
 const DotConnector = styled(StepConnector)(() => ({
   [`&.${stepConnectorClasses.alternativeLabel}`]: {
-    top: 10,
+    top: 10
   },
   [`& .${stepConnectorClasses.line}`]: {
     borderColor: "#E2E8F0",
     borderTopWidth: 2,
     borderRadius: 1,
-    top: 6,
-  },
+    top: 6
+  }
 }));
 
 const DotStepIconRoot = styled("div")<{
@@ -35,15 +32,11 @@ const DotStepIconRoot = styled("div")<{
   width: 20,
   height: 20,
   borderRadius: "50%",
-  backgroundColor: ownerState.active
-    ? "#4ADE80"
-    : ownerState.completed
-    ? "#E60076"
-    : "#E2E8F0",
+  backgroundColor: ownerState.active ? "#4ADE80" : ownerState.completed ? "#E60076" : "#E2E8F0",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  marginTop: 3,
+  marginTop: 3
 }));
 
 function DotStepIcon(props: StepIconProps) {
@@ -66,31 +59,24 @@ export const StepperDotPreview = () => {
 
   return (
     <Box width="100%">
-      <Stepper
-        activeStep={activeStep}
-        connector={<DotConnector />}
-        alternativeLabel={!isMobile}
-      >
+      <Stepper activeStep={activeStep} connector={<DotConnector />} alternativeLabel={!isMobile}>
         {steps.map((_, index) => (
           <Step key={index}>
-            <StepLabel StepIconComponent={DotStepIcon} />
+            <StepLabel
+              slots={{
+                stepIcon: DotStepIcon
+              }}>
+              {index + 1}
+            </StepLabel>
           </Step>
         ))}
       </Stepper>
 
       <Box mt={4} display="flex" justifyContent="center" gap={2}>
-        <Button
-          variant="outlined"
-          onClick={handleBack}
-          disabled={activeStep === 0}
-        >
+        <Button variant="outlined" onClick={handleBack} disabled={activeStep === 0}>
           Previous
         </Button>
-        <Button
-          variant="contained"
-          onClick={handleNext}
-          disabled={activeStep === steps.length - 1}
-        >
+        <Button variant="contained" onClick={handleNext} disabled={activeStep === steps.length - 1}>
           Next
         </Button>
       </Box>

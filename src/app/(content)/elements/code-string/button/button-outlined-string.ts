@@ -1,4 +1,6 @@
-export const buttonOutlinedString = `import { Stack, Button, Box } from "@mui/material";
+export const buttonOutlinedString = `import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Stack from "@mui/material/Stack";
 
 export const ButtonOutlinedPreview = () => {
   return (
@@ -59,4 +61,4 @@ export const ButtonOutlinedPreview = () => {
       </Stack>
     </Box>
   );
-};`
+};`;

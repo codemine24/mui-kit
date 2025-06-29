@@ -15,8 +15,7 @@ type StyledRootProps = StackProps & {
 };
 
 export const StyledRoot = styled(Stack, {
-  shouldForwardProp: (prop) =>
-    prop !== "error" && prop !== "disabled" && prop !== "fullScreen",
+  shouldForwardProp: (prop) => prop !== "error" && prop !== "disabled" && prop !== "fullScreen"
 })<StyledRootProps>(({ error, disabled, fullScreen, theme }) => ({
   minHeight: 240,
   borderRadius: theme.shape.borderRadius,
@@ -24,11 +23,11 @@ export const StyledRoot = styled(Stack, {
   scrollbarWidth: "thin",
   scrollbarColor: `${alpha(STATIC_COLOR, 0.4)} ${alpha(STATIC_COLOR, 0.08)}`,
   ...(error && {
-    border: `solid 1px ${theme.palette.error.main}`,
+    border: `solid 1px ${theme.palette.error.main}`
   }),
   ...(disabled && {
     opacity: 0.48,
-    pointerEvents: "none",
+    pointerEvents: "none"
   }),
   ...(fullScreen && {
     top: 16,
@@ -38,7 +37,7 @@ export const StyledRoot = styled(Stack, {
     maxHeight: "unset !important",
     width: `calc(100% - ${32}px)`,
     height: `calc(100% - ${32}px)`,
-    backgroundColor: theme.palette.background.default,
+    backgroundColor: theme.palette.background.default
   }),
   [`& .${editorClasses.content.placeholder}`]: {
     "&:first-of-type::before": {
@@ -47,8 +46,8 @@ export const StyledRoot = styled(Stack, {
       float: "left",
       pointerEvents: "none",
       content: "attr(data-placeholder)",
-      color: theme.palette.text.disabled,
-    },
+      color: theme.palette.text.disabled
+    }
   },
   [`& .${editorClasses.content.root}`]: {
     display: "flex",
@@ -59,17 +58,17 @@ export const StyledRoot = styled(Stack, {
     borderBottomRightRadius: "inherit",
     backgroundColor: alpha(STATIC_COLOR, 0.08),
     ...(error && {
-      backgroundColor: alpha(STATIC_COLOR, 0.08),
+      backgroundColor: alpha(STATIC_COLOR, 0.08)
     }),
     "& .tiptap": {
       "> * + *": {
         marginTop: 0,
-        marginBottom: MARGIN,
+        marginBottom: MARGIN
       },
       "&.ProseMirror": {
         flex: "1 1 auto",
         outline: "none",
-        padding: theme.spacing(0, 2),
+        padding: theme.spacing(0, 2)
       },
       h1: { ...theme.typography.h1, marginTop: 40, marginBottom: 8 },
       h2: { ...theme.typography.h2, marginTop: 40, marginBottom: 8 },
@@ -80,7 +79,7 @@ export const StyledRoot = styled(Stack, {
       p: { ...theme.typography.body1, marginBottom: "1.25rem" },
       [`& .${editorClasses.content.heading}`]: {},
       [`& .${editorClasses.content.link}`]: {
-        color: theme.palette.primary.main,
+        color: theme.palette.primary.main
       },
       [`& .${editorClasses.content.hr}`]: {
         flexShrink: 0,
@@ -90,24 +89,24 @@ export const StyledRoot = styled(Stack, {
         WebkitFlexShrink: 0,
         borderStyle: "solid",
         borderBottomWidth: "thin",
-        borderColor: theme.palette.divider,
+        borderColor: theme.palette.divider
       },
       [`& .${editorClasses.content.image}`]: {
         width: "100%",
         height: "auto",
         maxWidth: "100%",
-        margin: "auto auto 1.25em",
+        margin: "auto auto 1.25em"
       },
       [`& .${editorClasses.content.bulletList}`]: {
         paddingLeft: 16,
-        listStyleType: "disc",
+        listStyleType: "disc"
       },
       [`& .${editorClasses.content.orderedList}`]: {
-        paddingLeft: 16,
+        paddingLeft: 16
       },
       [`& .${editorClasses.content.listItem}`]: {
         lineHeight: 2,
-        "& > p": { margin: 0 },
+        "& > p": { margin: 0 }
       },
       [`& .${editorClasses.content.blockquote}`]: {
         lineHeight: 1.5,
@@ -120,12 +119,12 @@ export const StyledRoot = styled(Stack, {
         borderLeft: `solid 8px ${alpha(STATIC_COLOR, 0.08)}`,
         [theme.breakpoints.up("md")]: {
           width: "100%",
-          maxWidth: 640,
+          maxWidth: 640
         },
         "& p": {
           margin: 0,
           fontSize: "inherit",
-          fontFamily: "inherit",
+          fontFamily: "inherit"
         },
         "&::before": {
           left: 16,
@@ -134,15 +133,15 @@ export const StyledRoot = styled(Stack, {
           fontSize: "3em",
           content: '"\\201C"',
           position: "absolute",
-          color: theme.palette.text.disabled,
-        },
+          color: theme.palette.text.disabled
+        }
       },
       [`& .${editorClasses.content.codeInline}`]: {
         padding: theme.spacing(0.25, 0.5),
         color: theme.palette.text.secondary,
         fontSize: theme.typography.body2.fontSize,
         borderRadius: theme.shape.borderRadius / 2,
-        backgroundColor: alpha(STATIC_COLOR, 0.2),
+        backgroundColor: alpha(STATIC_COLOR, 0.2)
       },
       [`& .${editorClasses.content.codeBlock}`]: {
         position: "relative",
@@ -153,7 +152,7 @@ export const StyledRoot = styled(Stack, {
           borderRadius: theme.shape.borderRadius,
           backgroundColor: theme.palette.grey[900],
           fontFamily: "'JetBrainsMono', monospace",
-          "& code": { fontSize: theme.typography.body2.fontSize },
+          "& code": { fontSize: theme.typography.body2.fontSize }
         },
         [`& .${editorClasses.content.langSelect}`]: {
           top: 8,
@@ -166,9 +165,9 @@ export const StyledRoot = styled(Stack, {
           color: theme.palette.text.secondary,
           fontWeight: theme.typography.fontWeightMedium,
           borderColor: alpha(STATIC_COLOR, 0.08),
-          backgroundColor: alpha(STATIC_COLOR, 0.08),
-        },
-      },
-    },
-  },
+          backgroundColor: alpha(STATIC_COLOR, 0.08)
+        }
+      }
+    }
+  }
 }));

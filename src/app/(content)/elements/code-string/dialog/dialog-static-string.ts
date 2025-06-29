@@ -1,13 +1,10 @@
 export const dialogStaticString = `import React from "react";
-import {
-  Button,
-  Dialog,
-  DialogActions,
-  DialogContent,
-  DialogContentText,
-  DialogProps,
-  DialogTitle,
-} from "@mui/material";
+import Button from "@mui/material/Button";
+import Dialog, { type DialogProps } from "@mui/material/Dialog";
+import DialogActions from "@mui/material/DialogActions";
+import DialogContent from "@mui/material/DialogContent";
+import DialogContentText from "@mui/material/DialogContentText";
+import DialogTitle from "@mui/material/DialogTitle";
 
 export const DialogStatic = () => {
   const [open, setOpen] = React.useState(false);

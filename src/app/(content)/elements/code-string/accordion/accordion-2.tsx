@@ -1,12 +1,10 @@
 export const Accordion2CodeString = `
 import * as React from "react";
-import {
-  Accordion as MuiAccordion,
-  AccordionSummary as MuiAccordionSummary,
-  AccordionDetails as MuiAccordionDetails,
-} from "@mui/material";
+import MuiAccordion, { accordionClasses } from "@mui/material/Accordion";
+import MuiAccordionSummary, { accordionSummaryClasses } from "@mui/material/AccordionSummary";
+import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
-import { Box } from "@mui/material";
+import Box from "@mui/material/Box";
 import { styled } from "@mui/material/styles";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
@@ -14,12 +12,12 @@ import RemoveIcon from "@mui/icons-material/Remove";
 const Accordion = styled(MuiAccordion)(() => ({
   boxShadow: "none",
   margin: 0,
-  "&.Mui-expanded": {
-    margin: 0,
+  [\`&.\${accordionClasses.expanded}\`]: {
+    margin: 0
   },
   "&:before": {
-    display: "none",
-  },
+    display: "none"
+  }
 }));
 
 const AccordionSummary = styled(MuiAccordionSummary)(({ theme }) => ({
@@ -27,26 +25,26 @@ const AccordionSummary = styled(MuiAccordionSummary)(({ theme }) => ({
   color: "rgba(0, 0, 0, 0.70)",
   borderBottom: "2px solid",
   borderColor: theme.palette.divider,
-  "& .MuiAccordionSummary-expandIconWrapper": {
+  [\`& .\${accordionSummaryClasses.expandIconWrapper}\`]: {
     color: "rgba(0, 0, 0, 0.70)",
     border: "2px solid",
     borderColor: theme.palette.divider,
-    borderRadius: "50%",
+    borderRadius: "50%"
   },
-  "&.Mui-expanded": {
+  [\`&.\${accordionSummaryClasses.expanded}\`]: {
     color: theme.palette.primary.main,
     borderColor: theme.palette.primary.main,
     minHeight: "44px",
-    "& .MuiAccordionSummary-expandIconWrapper": {
+    [\`& .\${accordionSummaryClasses.expandIconWrapper}\`]: {
       color: theme.palette.primary.main,
       border: "2px solid",
       borderColor: theme.palette.primary.main,
-      borderRadius: "50%",
-    },
+      borderRadius: "50%"
+    }
   },
-  "& .MuiAccordionSummary-content.Mui-expanded": {
-    margin: "0px",
-  },
+  [\`& .\${accordionSummaryClasses.content}.\${accordionSummaryClasses.expanded}\`]: {
+    margin: "0px"
+  }
 }));
 
 const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({

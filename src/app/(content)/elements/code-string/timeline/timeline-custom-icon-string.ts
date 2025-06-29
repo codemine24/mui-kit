@@ -1,13 +1,12 @@
 export const timelineCustomIconString = `import { Icon } from "@iconify/react/dist/iconify.js";
-import {
-  Timeline,
-  TimelineConnector,
-  TimelineContent,
-  TimelineItem,
-  TimelineOppositeContent,
-  TimelineSeparator,
-} from "@mui/lab";
-import { Box, Typography } from "@mui/material";
+import Timeline from "@mui/lab/Timeline";
+import TimelineConnector from "@mui/lab/TimelineConnector";
+import TimelineContent from "@mui/lab/TimelineContent";
+import TimelineItem from "@mui/lab/TimelineItem";
+import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
+import TimelineSeparator from "@mui/lab/TimelineSeparator";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
 
 const timelineData = [
   {
@@ -90,4 +89,4 @@ export function TimelineCustomIconPreview() {
       ))}
     </Timeline>
   );
-}`
+}`;

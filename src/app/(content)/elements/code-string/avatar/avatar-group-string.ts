@@ -1,7 +1,9 @@
 export const avatarGroupString = `
 import * as React from "react";
+import Badge from "@mui/material/Badge";
 import Stack from "@mui/material/Stack";
-import { Avatar, AvatarGroup, Badge } from "@mui/material";
+import Avatar from "@mui/material/Avatar";
+import AvatarGroup from "@mui/material/AvatarGroup";
 import { styled } from "@mui/material/styles";
 
 const SmallAvatar = styled(Avatar)(({ theme }) => ({

@@ -5,15 +5,13 @@ import InfiniteScroll from "@/components/infinity-scroll";
 import { PATHS } from "@/router/paths";
 import { pxToRem } from "@/utils/pxToRem";
 import GridViewIcon from "@mui/icons-material/GridView";
-import {
-  Alert,
-  Box,
-  Button,
-  Stack,
-  Typography,
-  useMediaQuery,
-  useTheme,
-} from "@mui/material";
+import Alert from "@mui/material/Alert";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Stack from "@mui/material/Stack";
+import Typography from "@mui/material/Typography";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme } from "@mui/material/styles";
 import Link from "next/link";
 import PathSVG from "./PathSVG";
 import { HeroInfinityCard } from "./hero-infinity-card";
@@ -21,44 +19,31 @@ import { HeroInfinityCard } from "./hero-infinity-card";
 const items = [
   { content: <HeroInfinityCard title="Editor" url={PATHS.ELEMENTS.EDITOR} /> },
   {
-    content: <HeroInfinityCard title="DND" url={PATHS.ELEMENTS.DND} />,
+    content: <HeroInfinityCard title="DND" url={PATHS.ELEMENTS.DND} />
   },
   {
-    content: (
-      <HeroInfinityCard title="Carousel" url={PATHS.ELEMENTS.CAROUSEL} />
-    ),
+    content: <HeroInfinityCard title="Carousel" url={PATHS.ELEMENTS.CAROUSEL} />
   },
   {
-    content: (
-      <HeroInfinityCard title="Timeline" url={PATHS.ELEMENTS.TIMELINE} />
-    ),
+    content: <HeroInfinityCard title="Timeline" url={PATHS.ELEMENTS.TIMELINE} />
   },
   {
-    content: <HeroInfinityCard title="Stepper" url={PATHS.ELEMENTS.STEPPER} />,
+    content: <HeroInfinityCard title="Stepper" url={PATHS.ELEMENTS.STEPPER} />
   },
   {
-    content: <HeroInfinityCard title="OTP" url={PATHS.ELEMENTS.OTP} />,
+    content: <HeroInfinityCard title="OTP" url={PATHS.ELEMENTS.OTP} />
   },
   {
-    content: (
-      <HeroInfinityCard title="Pagination" url={PATHS.ELEMENTS.PAGINATION} />
-    ),
+    content: <HeroInfinityCard title="Pagination" url={PATHS.ELEMENTS.PAGINATION} />
   },
   { content: <HeroInfinityCard title="Hero" url={PATHS.BLOCKS.HERO} /> },
   { content: <HeroInfinityCard title="About" url={PATHS.BLOCKS.ABOUT} /> },
   {
-    content: (
-      <HeroInfinityCard title="PricingTable" url={PATHS.BLOCKS.PRICING_MENU} />
-    ),
+    content: <HeroInfinityCard title="PricingTable" url={PATHS.BLOCKS.PRICING_MENU} />
   },
   {
-    content: (
-      <HeroInfinityCard
-        title="Testimonial"
-        url={PATHS.BLOCKS.TESTIMONIAL_GRID}
-      />
-    ),
-  },
+    content: <HeroInfinityCard title="Testimonial" url={PATHS.BLOCKS.TESTIMONIAL_GRID} />
+  }
 ];
 
 export const HeroSection = () => {
@@ -67,13 +52,9 @@ export const HeroSection = () => {
 
   // Define theme-aware colors for background elements
   const gradientFrom =
-    theme.palette.mode === "dark"
-      ? "rgba(30, 136, 229, 0.2)"
-      : "rgba(33, 150, 243, 0.2)";
+    theme.palette.mode === "dark" ? "rgba(30, 136, 229, 0.2)" : "rgba(33, 150, 243, 0.2)";
   const gradientTo =
-    theme.palette.mode === "dark"
-      ? "rgba(0, 229, 255, 0.2)"
-      : "rgba(0, 188, 212, 0.2)";
+    theme.palette.mode === "dark" ? "rgba(0, 229, 255, 0.2)" : "rgba(0, 188, 212, 0.2)";
 
   return (
     <Box
@@ -82,18 +63,16 @@ export const HeroSection = () => {
         overflow: "hidden",
         py: { xs: 8, md: 0 },
         width: "100%",
-        maxWidth: "100%",
-      }}
-    >
+        maxWidth: "100%"
+      }}>
       {/* Background Elements */}
       <Box
         sx={{
           position: "absolute",
           inset: 0,
           overflow: "hidden",
-          zIndex: -1,
-        }}
-      >
+          zIndex: -1
+        }}>
         {/* Gradient Circles */}
         <Box
           sx={{
@@ -104,7 +83,7 @@ export const HeroSection = () => {
             height: { xs: "16rem", md: "24rem" },
             borderRadius: "50%",
             background: `linear-gradient(135deg, ${gradientFrom}, ${gradientTo})`,
-            filter: "blur(80px)",
+            filter: "blur(80px)"
           }}
         />
         <Box
@@ -116,7 +95,7 @@ export const HeroSection = () => {
             height: { xs: "14rem", md: "20rem" },
             borderRadius: "50%",
             background: `linear-gradient(135deg, ${gradientFrom}, ${gradientTo})`,
-            filter: "blur(80px)",
+            filter: "blur(80px)"
           }}
         />
       </Box>
@@ -132,9 +111,8 @@ export const HeroSection = () => {
           zIndex: 1,
           maxWidth: "xl",
           mx: "auto",
-          px: { xs: 2, md: 3 },
-        }}
-      >
+          px: { xs: 2, md: 3 }
+        }}>
         {/* Left text box */}
         <Box sx={{ maxWidth: 800, position: "relative" }}>
           <Box
@@ -142,9 +120,8 @@ export const HeroSection = () => {
               position: "absolute",
               top: -60,
               left: 0,
-              zIndex: 1,
-            }}
-          >
+              zIndex: 1
+            }}>
             <PathSVG />
           </Box>
           <Alert
@@ -155,9 +132,8 @@ export const HeroSection = () => {
               width: "fit-content",
               padding: "0 1rem",
               mb: 2,
-              fontSize: { xs: pxToRem(12), md: pxToRem(14) },
-            }}
-          >
+              fontSize: { xs: pxToRem(12), md: pxToRem(14) }
+            }}>
             No Installation Required. Copy and paste directly into your project.
           </Alert>
 
@@ -167,9 +143,8 @@ export const HeroSection = () => {
               fontSize: { xs: pxToRem(34), md: pxToRem(40), lg: pxToRem(50) },
               fontWeight: 800,
               lineHeight: { xs: 1.1, md: 1.3 },
-              "& span": { color: "primary.main" },
-            }}
-          >
+              "& span": { color: "primary.main" }
+            }}>
             We&apos;ve covered, what <span>Material UI</span> is missing!
           </Typography>
 
@@ -186,18 +161,16 @@ export const HeroSection = () => {
               flexDirection: { xs: "column", md: "row" },
               justifyContent: "start",
               gap: 2,
-              mt: 4,
-            }}
-          >
+              mt: 4
+            }}>
             <Button
               LinkComponent={Link}
               href={PATHS.DOCS.INSTALL}
               variant="contained"
               sx={{
                 borderRadius: theme.shape.borderRadius,
-                width: "fit-content",
-              }}
-            >
+                width: "fit-content"
+              }}>
               Get Started
             </Button>
 
@@ -208,10 +181,9 @@ export const HeroSection = () => {
               color="primary"
               sx={{
                 borderRadius: theme.shape.borderRadius,
-                width: "fit-content",
+                width: "fit-content"
               }}
-              startIcon={<GridViewIcon />}
-            >
+              startIcon={<GridViewIcon />}>
               Explore Elements
             </Button>
           </Box>
@@ -225,9 +197,8 @@ export const HeroSection = () => {
             maxWidth: { xs: 300, lg: 600 },
             height: isMobile ? 400 : 500,
             display: { xs: "none", md: "flex" },
-            overflowX: "visible",
-          }}
-        >
+            overflowX: "visible"
+          }}>
           <InfiniteScroll
             items={items}
             isTilted={true}

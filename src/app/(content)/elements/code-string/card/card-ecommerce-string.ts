@@ -1,6 +1,11 @@
-export const cardECommerceString = `import { Card, CardActions, CardContent, CardMedia, Chip, Typography } from "@mui/material";
-import { Button } from "@mui/material";
-import { ArrowRightAlt } from "@mui/icons-material";
+export const cardECommerceString = `import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Chip from "@mui/material/Chip";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
+import ArrowRightAlt from "@mui/icons-material/ArrowRightAlt";
 
 export const CardECommerce = () => {
     return (

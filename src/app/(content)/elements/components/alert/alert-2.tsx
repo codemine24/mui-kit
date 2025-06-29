@@ -3,9 +3,9 @@ import Alert from "@mui/material/Alert";
 import Stack from "@mui/material/Stack";
 import DoneAllIcon from "@mui/icons-material/DoneAll";
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
-import { Box } from "@mui/material";
 import EmergencyShareIcon from "@mui/icons-material/EmergencyShare";
-import { keyframes } from "@emotion/react";
+import Box from "@mui/material/Box";
+import { keyframes } from "@mui/material/styles";
 
 export default function OutlinedAlerts() {
   return (
@@ -39,8 +39,7 @@ export default function OutlinedAlerts() {
         variant="outlined"
         severity="warning"
         icon={<HelpOutlineIcon />}
-        sx={{ borderRadius: "50px" }}
-      >
+        sx={{ borderRadius: "50px" }}>
         This is a rounded Alert.
       </Alert>
       {/* Custom color */}
@@ -51,18 +50,16 @@ export default function OutlinedAlerts() {
           border: "1px solid #e600e6",
           color: "#e600e6",
           "& .MuiAlert-icon": {
-            color: "#e600e6",
-          },
-        }}
-      >
+            color: "#e600e6"
+          }
+        }}>
         This is a custom color Alert.
       </Alert>
       {/* Center aligned */}
       <Alert
         variant="outlined"
         severity="success"
-        sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}
-      >
+        sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
         This is a center-aligned Alert.
       </Alert>
       {/* Right aligned */}
@@ -72,9 +69,8 @@ export default function OutlinedAlerts() {
         icon={false}
         sx={{
           justifyContent: "flex-end",
-          textAlign: "right",
-        }}
-      >
+          textAlign: "right"
+        }}>
         <Box sx={{ display: "flex", alignItems: "center", gap: 1.5 }}>
           <span>This is a right-aligned alert</span>
           <EmergencyShareIcon sx={{ color: "info.main" }} />
@@ -87,10 +83,9 @@ export default function OutlinedAlerts() {
         severity="warning"
         sx={{
           "& .MuiAlert-icon": {
-            animation: `${bounce} 1s infinite ease alternate`,
-          },
-        }}
-      >
+            animation: `${bounce} 1s infinite ease alternate`
+          }
+        }}>
         This is a animated Alert.
       </Alert>
     </Stack>

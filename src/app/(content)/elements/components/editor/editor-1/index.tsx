@@ -23,11 +23,7 @@ export default function Editor1() {
   const [content, setContent] = useState(defaultValue);
   return (
     <Stack sx={{ width: "100%" }} spacing={2}>
-      <Editor
-        value={content}
-        onChange={(value) => setContent(value)}
-        sx={{ maxHeight: 720 }}
-      />
+      <Editor value={content} onChange={(value) => setContent(value)} sx={{ maxHeight: 720 }} />
     </Stack>
   );
 }

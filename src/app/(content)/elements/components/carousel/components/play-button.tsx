@@ -1,6 +1,6 @@
-import { PlayCircle, Stop } from "@mui/icons-material";
-import type { ButtonProps } from "@mui/material/Button";
-import Button from "@mui/material/Button";
+import Stop from "@mui/icons-material/Stop";
+import PlayCircle from "@mui/icons-material/PlayCircle";
+import Button, { type ButtonProps } from "@mui/material/Button";
 
 export function PlayButton({
   isPlaying,
@@ -13,8 +13,7 @@ export function PlayButton({
       color={isPlaying ? "error" : "primary"}
       variant="contained"
       startIcon={isPlaying ? <Stop /> : <PlayCircle />}
-      {...other}
-    >
+      {...other}>
       {isPlaying ? "Stop" : "Play"}
     </Button>
   );

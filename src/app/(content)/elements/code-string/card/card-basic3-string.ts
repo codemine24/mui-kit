@@ -1,5 +1,9 @@
-export const cardBasic3String = `import { ArrowRightAlt } from "@mui/icons-material";
-import { Button, Card, CardContent, Stack, Typography } from "@mui/material";
+export const cardBasic3String = `import ArrowRightAlt from "@mui/icons-material/ArrowRightAlt";
+import Button from "@mui/material/Button";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import Stack from "@mui/material/Stack";
+import Typography from "@mui/material/Typography";
 
 export const CardBasic3 = () => {
     return (

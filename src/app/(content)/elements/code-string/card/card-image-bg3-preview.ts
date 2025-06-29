@@ -1,10 +1,8 @@
-export const cardImageBg3String = `import {
-    Box,
-    Button,
-    Typography
-} from '@mui/material';
-import Grid from '@mui/material/Grid';
-import { ArrowCircleRight } from '@mui/icons-material';
+export const cardImageBg3String = `import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
+import Grid from "@mui/material/Grid";
+import ArrowCircleRight from "@mui/icons-material/ArrowCircleRight";
 
 export const CardImageBg3Preview = () => {
     return (
@@ -171,4 +169,4 @@ export const CardImageBg3Preview = () => {
             </Box>
         </Box>
     );
-};`
+};`;

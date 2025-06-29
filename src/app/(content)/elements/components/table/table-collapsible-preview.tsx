@@ -32,14 +32,14 @@ function createData(
       {
         date: "2020-01-05",
         customerId: "11091700",
-        amount: 3,
+        amount: 3
       },
       {
         date: "2020-01-02",
         customerId: "Anonymous",
-        amount: 1,
-      },
-    ],
+        amount: 1
+      }
+    ]
   };
 }
 
@@ -51,11 +51,7 @@ function Row(props: { row: ReturnType<typeof createData> }) {
     <React.Fragment>
       <TableRow sx={{ "& > *": { borderBottom: "unset" } }}>
         <TableCell>
-          <IconButton
-            aria-label="expand row"
-            size="small"
-            onClick={() => setOpen(!open)}
-          >
+          <IconButton aria-label="expand row" size="small" onClick={() => setOpen(!open)}>
             {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
           </IconButton>
         </TableCell>
@@ -110,7 +106,7 @@ const rows = [
   createData("Ice cream sandwich", 237, 9.0, 37, 4.3, 4.99),
   createData("Eclair", 262, 16.0, 24, 6.0, 3.79),
   createData("Cupcake", 305, 3.7, 67, 4.3, 2.5),
-  createData("Gingerbread", 356, 16.0, 49, 3.9, 1.5),
+  createData("Gingerbread", 356, 16.0, 49, 3.9, 1.5)
 ];
 export function CollapsibleTablePreview() {
   return (
@@ -122,28 +118,16 @@ export function CollapsibleTablePreview() {
             <TableCell sx={{ backgroundColor: "#E60076", color: "#fff" }}>
               Dessert (100g serving)
             </TableCell>
-            <TableCell
-              align="right"
-              sx={{ backgroundColor: "#E60076", color: "#fff" }}
-            >
+            <TableCell align="right" sx={{ backgroundColor: "#E60076", color: "#fff" }}>
               Calories
             </TableCell>
-            <TableCell
-              align="right"
-              sx={{ backgroundColor: "#E60076", color: "#fff" }}
-            >
+            <TableCell align="right" sx={{ backgroundColor: "#E60076", color: "#fff" }}>
               Fat&nbsp;(g)
             </TableCell>
-            <TableCell
-              align="right"
-              sx={{ backgroundColor: "#E60076", color: "#fff" }}
-            >
+            <TableCell align="right" sx={{ backgroundColor: "#E60076", color: "#fff" }}>
               Carbs&nbsp;(g)
             </TableCell>
-            <TableCell
-              align="right"
-              sx={{ backgroundColor: "#E60076", color: "#fff" }}
-            >
+            <TableCell align="right" sx={{ backgroundColor: "#E60076", color: "#fff" }}>
               Protein&nbsp;(g)
             </TableCell>
           </TableRow>
