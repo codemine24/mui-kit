@@ -1,4 +1,5 @@
-import { Box, TextField } from "@mui/material";
+import Box from "@mui/material/Box";
+import TextField from "@mui/material/TextField";
 import { useRef, useState } from "react";
 
 const length = 6;
@@ -18,10 +19,7 @@ export const OTPCustomStyledPreview = () => {
     }
   };
 
-  const handleKeyDown = (
-    e: React.KeyboardEvent<HTMLDivElement>,
-    index: number
-  ) => {
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>, index: number) => {
     if (e.key === "Backspace" && !otp[index] && index > 0) {
       inputRefs.current[index - 1]?.focus();
     }
@@ -38,8 +36,8 @@ export const OTPCustomStyledPreview = () => {
             maxLength: 1,
             style: {
               textAlign: "center",
-              fontWeight: "bold",
-            },
+              fontWeight: "bold"
+            }
           }}
           value={data}
           onChange={(e) => handleChange(e.target as HTMLInputElement, index)}
@@ -54,29 +52,26 @@ export const OTPCustomStyledPreview = () => {
             width: { xs: 35, md: 45, lg: 60 },
             "& input": {
               fontSize: { xs: "1rem", md: "1.5rem" },
-              padding: { xs: 0.8, md: 1, lg: 2 },
+              padding: { xs: 0.8, md: 1, lg: 2 }
             },
             "& .MuiOutlinedInput-root": {
               borderRadius: { xs: "7px", md: "10px", lg: "12px" },
               transition: "all 0.3s ease",
               transform: focusedIndex === index ? "scale(1.05)" : "scale(1)",
-              boxShadow:
-                focusedIndex === index
-                  ? "0 4px 12px rgba(25, 118, 210, 0.3)"
-                  : "none",
+              boxShadow: focusedIndex === index ? "0 4px 12px rgba(25, 118, 210, 0.3)" : "none",
               "& fieldset": {
                 borderWidth: "2px",
                 borderColor: (theme) =>
-                  data ? theme.palette.primary.main : theme.palette.grey[400],
+                  data ? theme.palette.primary.main : theme.palette.grey[400]
               },
               "&:hover fieldset": {
-                borderColor: "#1976d2",
+                borderColor: "#1976d2"
               },
               "&.Mui-focused fieldset": {
                 borderColor: "#1976d2",
-                borderWidth: "3px",
-              },
-            },
+                borderWidth: "3px"
+              }
+            }
           }}
           autoComplete="one-time-code"
           inputMode="numeric"

@@ -3,23 +3,19 @@
 import { getTheme } from "@/theme/theme";
 import { setThemeCSSVars } from "@/theme/utils";
 import { ThemeProvider } from "@emotion/react";
-import { CssBaseline } from "@mui/material";
+import CssBaseline from "@mui/material/CssBaseline";
 import React, { useEffect, useMemo, useState } from "react";
 
 type Mode = "light" | "dark";
 
 const ColorModeContext = React.createContext({
   mode: "light" as Mode,
-  toggleColorMode: () => {},
+  toggleColorMode: () => {}
 });
 
 export const useColorMode = () => React.useContext(ColorModeContext);
 
-export default function AppProvider({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function AppProvider({ children }: { children: React.ReactNode }) {
   const [mode, setMode] = useState<Mode | null>(null);
   const theme = useMemo(() => getTheme(mode || "dark"), [mode]);
 
@@ -41,9 +37,7 @@ export default function AppProvider({
     if (storedMode) {
       setMode(storedMode);
     } else {
-      const prefersDark = window.matchMedia(
-        "(prefers-color-scheme: dark)"
-      ).matches;
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
       const defaultMode: Mode = prefersDark ? "dark" : "light";
       setMode(defaultMode);
       localStorage.setItem("mui-mode", defaultMode);

@@ -1,25 +1,21 @@
-import {
-  ArrowForward,
-  ChevronRight,
-  Download,
-  IosShare,
-  MailOutline,
-  Refresh,
-  ThumbUp,
-  FavoriteBorder,
-} from "@mui/icons-material";
-import { Box, Button, Divider, IconButton, Stack } from "@mui/material";
+import ChevronRight from "@mui/icons-material/ChevronRight";
+import Download from "@mui/icons-material/Download";
+import IosShare from "@mui/icons-material/IosShare";
+import MailOutline from "@mui/icons-material/MailOutline";
+import Refresh from "@mui/icons-material/Refresh";
+import ThumbUp from "@mui/icons-material/ThumbUp";
+import ArrowForward from "@mui/icons-material/ArrowForward";
+import FavoriteBorder from "@mui/icons-material/FavoriteBorder";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Divider from "@mui/material/Divider";
+import IconButton from "@mui/material/IconButton";
+import Stack from "@mui/material/Stack";
 
 export const ButtonIconPreview = () => {
   return (
     <Box>
-      <Stack
-        direction="row"
-        spacing={2}
-        rowGap={2}
-        flexWrap="wrap"
-        alignItems="center"
-      >
+      <Stack direction="row" spacing={2} rowGap={2} flexWrap="wrap" alignItems="center">
         <IconButton color="primary" title="Primary">
           <MailOutline />
         </IconButton>
@@ -52,13 +48,7 @@ export const ButtonIconPreview = () => {
       <Divider sx={{ my: 2 }} />
 
       {/* Bordered Icon */}
-      <Stack
-        direction="row"
-        spacing={2}
-        rowGap={2}
-        flexWrap="wrap"
-        alignItems="center"
-      >
+      <Stack direction="row" spacing={2} rowGap={2} flexWrap="wrap" alignItems="center">
         <Box>
           <IconButton
             sx={{
@@ -67,9 +57,8 @@ export const ButtonIconPreview = () => {
               borderColor: "primary.main",
               borderRadius: "8px",
               padding: 1,
-              color: "white",
-            }}
-          >
+              color: "white"
+            }}>
             <ArrowForward />
           </IconButton>
         </Box>
@@ -82,9 +71,8 @@ export const ButtonIconPreview = () => {
               borderColor: "primary.main",
               borderRadius: "50%",
               padding: 1,
-              color: "white",
-            }}
-          >
+              color: "white"
+            }}>
             <ArrowForward />
           </IconButton>
         </Box>
@@ -96,9 +84,8 @@ export const ButtonIconPreview = () => {
               border: "1px solid",
               borderColor: "primary.main",
               borderRadius: "8px",
-              padding: 1,
-            }}
-          >
+              padding: 1
+            }}>
             <ThumbUp />
           </IconButton>
         </Box>
@@ -110,9 +97,8 @@ export const ButtonIconPreview = () => {
               border: "1px solid",
               borderColor: "primary.main",
               borderRadius: "50%",
-              padding: 1,
-            }}
-          >
+              padding: 1
+            }}>
             <ThumbUp />
           </IconButton>
         </Box>
@@ -124,9 +110,8 @@ export const ButtonIconPreview = () => {
               border: "1px dashed",
               borderColor: "primary.main",
               borderRadius: "50%",
-              padding: 1,
-            }}
-          >
+              padding: 1
+            }}>
             <Download />
           </IconButton>
         </Box>
@@ -137,9 +122,8 @@ export const ButtonIconPreview = () => {
               border: "1px dashed",
               borderColor: "gray",
               borderRadius: "50%",
-              padding: 1,
-            }}
-          >
+              padding: 1
+            }}>
             <IosShare />
           </IconButton>
         </Box>
@@ -148,20 +132,13 @@ export const ButtonIconPreview = () => {
       <Divider sx={{ my: 2 }} />
 
       {/* Contained Icon Button*/}
-      <Stack
-        direction="row"
-        spacing={2}
-        rowGap={2}
-        flexWrap="wrap"
-        alignItems="center"
-      >
+      <Stack direction="row" spacing={2} rowGap={2} flexWrap="wrap" alignItems="center">
         <Box>
           <Button
             variant="contained"
             color="primary"
             sx={{ borderRadius: "999px" }}
-            startIcon={<MailOutline />}
-          >
+            startIcon={<MailOutline />}>
             Start Icon
           </Button>
         </Box>
@@ -170,8 +147,7 @@ export const ButtonIconPreview = () => {
             variant="contained"
             color="secondary"
             sx={{ borderRadius: "999px" }}
-            startIcon={<MailOutline />}
-          >
+            startIcon={<MailOutline />}>
             End Icon
           </Button>
         </Box>
@@ -192,10 +168,9 @@ export const ButtonIconPreview = () => {
               minWidth: "auto",
               "&:hover": {
                 backgroundColor: "#ffebee",
-                opacity: 0.9,
-              },
-            }}
-          >
+                opacity: 0.9
+              }
+            }}>
             Icon Warning
           </Button>
         </Box>
@@ -206,8 +181,7 @@ export const ButtonIconPreview = () => {
             color="primary"
             disabled
             startIcon={<MailOutline />}
-            sx={{ borderRadius: "999px" }}
-          >
+            sx={{ borderRadius: "999px" }}>
             Icon Disalbed
           </Button>
         </Box>
@@ -216,20 +190,13 @@ export const ButtonIconPreview = () => {
       <Divider sx={{ my: 2 }} />
 
       {/* Outlined Icon Button*/}
-      <Stack
-        direction="row"
-        spacing={2}
-        rowGap={2}
-        flexWrap="wrap"
-        alignItems="center"
-      >
+      <Stack direction="row" spacing={2} rowGap={2} flexWrap="wrap" alignItems="center">
         <Box>
           <Button
             variant="outlined"
             color="primary"
             startIcon={<MailOutline />}
-            sx={{ borderRadius: "999px" }}
-          >
+            sx={{ borderRadius: "999px" }}>
             Start Icon
           </Button>
         </Box>
@@ -238,8 +205,7 @@ export const ButtonIconPreview = () => {
             variant="outlined"
             color="info"
             endIcon={<Refresh />}
-            sx={{ borderRadius: "999px" }}
-          >
+            sx={{ borderRadius: "999px" }}>
             End Icon
           </Button>
         </Box>
@@ -249,8 +215,7 @@ export const ButtonIconPreview = () => {
             color="primary"
             disabled
             endIcon={<MailOutline />}
-            sx={{ borderRadius: "999px" }}
-          >
+            sx={{ borderRadius: "999px" }}>
             Disabled Outlined
           </Button>
         </Box>
@@ -259,38 +224,19 @@ export const ButtonIconPreview = () => {
       <Divider sx={{ my: 2 }} />
 
       {/* text icon button */}
-      <Stack
-        direction="row"
-        spacing={2}
-        rowGap={2}
-        flexWrap="wrap"
-        alignItems="center"
-      >
+      <Stack direction="row" spacing={2} rowGap={2} flexWrap="wrap" alignItems="center">
         <Box>
-          <Button
-            variant="text"
-            color="primary"
-            endIcon={<ChevronRight fontSize="large" />}
-          >
+          <Button variant="text" color="primary" endIcon={<ChevronRight fontSize="large" />}>
             Read More
           </Button>
         </Box>
         <Box>
-          <Button
-            variant="text"
-            color="secondary"
-            startIcon={<FavoriteBorder />}
-          >
+          <Button variant="text" color="secondary" startIcon={<FavoriteBorder />}>
             Add To Favorite
           </Button>
         </Box>
         <Box>
-          <Button
-            variant="text"
-            color="primary"
-            disabled
-            endIcon={<MailOutline />}
-          >
+          <Button variant="text" color="primary" disabled endIcon={<MailOutline />}>
             Text Disabled
           </Button>
         </Box>

@@ -1,4 +1,4 @@
-import { Alert } from "@mui/material";
+import Alert from "@mui/material/Alert";
 
 export const RegularAlert = ({ message }: { message: string }) => {
   return (
@@ -8,9 +8,8 @@ export const RegularAlert = ({ message }: { message: string }) => {
         padding: "0 1rem",
         mb: 2,
         borderRadius: (theme) => theme.shape.borderRadius,
-        py: 2,
-      }}
-    >
+        py: 2
+      }}>
       {message}
     </Alert>
   );

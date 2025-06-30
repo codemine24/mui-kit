@@ -1,18 +1,16 @@
 import EditIcon from "@mui/icons-material/Edit";
-import {
-  Avatar,
-  Box,
-  Chip,
-  IconButton,
-  Paper,
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TableRow,
-  Typography,
-} from "@mui/material";
+import Avatar from "@mui/material/Avatar";
+import Box from "@mui/material/Box";
+import Chip from "@mui/material/Chip";
+import IconButton from "@mui/material/IconButton";
+import Paper from "@mui/material/Paper";
+import Table from "@mui/material/Table";
+import TableBody from "@mui/material/TableBody";
+import TableCell from "@mui/material/TableCell";
+import TableContainer from "@mui/material/TableContainer";
+import TableHead from "@mui/material/TableHead";
+import TableRow from "@mui/material/TableRow";
+import Typography from "@mui/material/Typography";
 
 const data = [
   {
@@ -23,7 +21,7 @@ const data = [
     status: "PAID",
     account: "Visa 1234",
     cardType: "visa",
-    expiry: "06/2026",
+    expiry: "06/2026"
   },
   {
     brand: "Amazon",
@@ -33,7 +31,7 @@ const data = [
     status: "PAID",
     account: "Master Card 1234",
     cardType: "mastercard",
-    expiry: "06/2026",
+    expiry: "06/2026"
   },
   {
     brand: "Pinterest",
@@ -43,7 +41,7 @@ const data = [
     status: "PENDING",
     account: "Master Card 1234",
     cardType: "mastercard",
-    expiry: "06/2026",
+    expiry: "06/2026"
   },
   {
     brand: "Google",
@@ -53,7 +51,7 @@ const data = [
     status: "PAID",
     account: "Visa 1234",
     cardType: "visa",
-    expiry: "06/2026",
+    expiry: "06/2026"
   },
   {
     brand: "Netflix",
@@ -63,14 +61,14 @@ const data = [
     status: "CANCELLED",
     account: "Visa 1234",
     cardType: "visa",
-    expiry: "06/2026",
-  },
+    expiry: "06/2026"
+  }
 ];
 
 const statusColors: Record<string, "success" | "warning" | "error"> = {
   PAID: "success",
   PENDING: "warning",
-  CANCELLED: "error",
+  CANCELLED: "error"
 };
 
 export function TransactionTablePreview() {
@@ -92,11 +90,7 @@ export function TransactionTablePreview() {
             <TableRow key={idx}>
               <TableCell>
                 <Box display="flex" alignItems="center" gap={1.5}>
-                  <Avatar
-                    src={row.logo}
-                    alt={row.brand}
-                    sx={{ width: 30, height: 30 }}
-                  />
+                  <Avatar src={row.logo} alt={row.brand} sx={{ width: 30, height: 30 }} />
                   <Typography fontWeight={600}>{row.brand}</Typography>
                 </Box>
               </TableCell>

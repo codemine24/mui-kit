@@ -1,5 +1,4 @@
-import type { Theme } from '@mui/material/styles';
-import { styled } from '@mui/material/styles';
+import { styled, type Theme } from '@mui/material/styles';
 import { ArrowButton } from './arrow-button';
 
 import type { CarouselArrowButtonsProps } from '../types/type';

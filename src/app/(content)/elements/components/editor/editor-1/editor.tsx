@@ -57,48 +57,48 @@ export const Editor = forwardRef<HTMLDivElement, EditorProps>(
           code: { HTMLAttributes: { class: editorClasses.content.codeInline } },
           heading: { HTMLAttributes: { class: editorClasses.content.heading } },
           horizontalRule: {
-            HTMLAttributes: { class: editorClasses.content.hr },
+            HTMLAttributes: { class: editorClasses.content.hr }
           },
           listItem: {
-            HTMLAttributes: { class: editorClasses.content.listItem },
+            HTMLAttributes: { class: editorClasses.content.listItem }
           },
           blockquote: {
-            HTMLAttributes: { class: editorClasses.content.blockquote },
+            HTMLAttributes: { class: editorClasses.content.blockquote }
           },
           bulletList: {
-            HTMLAttributes: { class: editorClasses.content.bulletList },
+            HTMLAttributes: { class: editorClasses.content.bulletList }
           },
           orderedList: {
-            HTMLAttributes: { class: editorClasses.content.orderedList },
-          },
+            HTMLAttributes: { class: editorClasses.content.orderedList }
+          }
         }),
         PlaceholderExtension.configure({
           placeholder,
-          emptyEditorClass: editorClasses.content.placeholder,
+          emptyEditorClass: editorClasses.content.placeholder
         }),
         ImageExtension.configure({
-          HTMLAttributes: { class: editorClasses.content.image },
+          HTMLAttributes: { class: editorClasses.content.image }
         }),
         TextAlignExtension.configure({ types: ["heading", "paragraph"] }),
         LinkExtension.configure({
           autolink: true,
           openOnClick: false,
-          HTMLAttributes: { class: editorClasses.content.link },
+          HTMLAttributes: { class: editorClasses.content.link }
         }),
         CodeBlockLowlightExtension.extend({
           addNodeView() {
             return ReactNodeViewRenderer(CodeHighlightBlock);
-          },
+          }
         }).configure({
           lowlight,
-          HTMLAttributes: { class: editorClasses.content.codeBlock },
-        }),
+          HTMLAttributes: { class: editorClasses.content.codeBlock }
+        })
       ],
       onUpdate({ editor: _editor }) {
         const html = _editor.getHTML();
         onChange?.(html);
       },
-      ...other,
+      ...other
     });
 
     useEffect(() => {
@@ -127,25 +127,19 @@ export const Editor = forwardRef<HTMLDivElement, EditorProps>(
 
     return (
       <Portal disablePortal={!fullScreen}>
-        {fullScreen && (
-          <Backdrop open sx={{ zIndex: (theme) => theme.zIndex.modal - 1 }} />
-        )}
+        {fullScreen && <Backdrop open sx={{ zIndex: (theme) => theme.zIndex.modal - 1 }} />}
 
         <Stack
           sx={{
             ...(!editable && { cursor: "not-allowed" }),
-            ...slotProps?.wrap,
-          }}
-        >
+            ...slotProps?.wrap
+          }}>
           <StyledRoot
             error={!!error}
             disabled={!editable}
             fullScreen={fullScreen}
-            className={editorClasses.root.concat(
-              className ? ` ${className}` : ""
-            )}
-            sx={sx}
-          >
+            className={editorClasses.root.concat(className ? ` ${className}` : "")}
+            sx={sx}>
             <Toolbar
               editor={editor}
               fullScreen={fullScreen}

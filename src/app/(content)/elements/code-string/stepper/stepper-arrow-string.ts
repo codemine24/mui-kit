@@ -1,19 +1,17 @@
 export const stepperArrowString = `"use client";
 
-import {
-  Stepper,
-  Step,
-  StepLabel,
-  Box,
-  Button,
-  styled,
-  useTheme,
-  useMediaQuery,
-} from "@mui/material";
+import { useState } from "react";
+import Box from "@mui/material/Box";
+import Step from "@mui/material/Step";
+import Button from "@mui/material/Button";
+import Stepper from "@mui/material/Stepper";
+import { stepConnectorClasses } from "@mui/material/StepConnector";
+import StepLabel, { stepLabelClasses } from "@mui/material/StepLabel";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { styled, useTheme } from "@mui/material/styles";
+import Check from "@mui/icons-material/Check";
 import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArrowRight";
 import KeyboardDoubleArrowDownIcon from "@mui/icons-material/KeyboardDoubleArrowDown";
-import { useState } from "react";
-import { Check } from "@mui/icons-material";
 
 interface StepItem {
   label: string;
@@ -22,20 +20,20 @@ interface StepItem {
 const steps: StepItem[] = [
   { label: "Personal Info" },
   { label: "Profile Details" },
-  { label: "Preferences" },
+  { label: "Preferences" }
 ];
 
 const ArrowConnector = styled(KeyboardDoubleArrowRightIcon)(() => ({
-  [\`\&.MuiStepConnector-root\`]: {
-        padding: 0,
-    },
-    [\`\& .MuiStepConnector-line\`]: {
-        display: 'none',
-    },
-    [\`\&.MuiStepConnector-horizontal\`]: {
-        marginLeft: 0,
-        marginRight: 0,
-    },
+  \`&.\${stepConnectorClasses.root}\`: {
+    padding: 0
+  },
+  \`& .\${stepConnectorClasses.line}\`: {
+    display: "none"
+  },
+  \`&.\${stepConnectorClasses.horizontal}\`: {
+    marginLeft: 0,
+    marginRight: 0
+  }
 }));
 
 interface CustomStepIconProps {

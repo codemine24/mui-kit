@@ -1,15 +1,13 @@
 import CheckIcon from "@mui/icons-material/Check";
 import CloseIcon from "@mui/icons-material/Close";
-import {
-  Paper,
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TableRow,
-  Typography,
-} from "@mui/material";
+import Paper from "@mui/material/Paper";
+import Table from "@mui/material/Table";
+import TableBody from "@mui/material/TableBody";
+import TableCell from "@mui/material/TableCell";
+import TableContainer from "@mui/material/TableContainer";
+import TableHead from "@mui/material/TableHead";
+import TableRow from "@mui/material/TableRow";
+import Typography from "@mui/material/Typography";
 
 interface FeatureComparison {
   feature: string;
@@ -23,7 +21,7 @@ const features: FeatureComparison[] = [
   { feature: "Unlimited File Uploads", monthly: true, yearly: true },
   { feature: "Custom Branding", monthly: false, yearly: true },
   { feature: "Team Collaboration", monthly: false, yearly: true },
-  { feature: "Version History", monthly: true, yearly: true },
+  { feature: "Version History", monthly: true, yearly: true }
 ];
 
 export function ComparisonTablePreview() {
@@ -49,18 +47,10 @@ export function ComparisonTablePreview() {
               <TableRow key={index} hover>
                 <TableCell>{row.feature}</TableCell>
                 <TableCell align="center">
-                  {row.monthly ? (
-                    <CheckIcon color="success" />
-                  ) : (
-                    <CloseIcon color="error" />
-                  )}
+                  {row.monthly ? <CheckIcon color="success" /> : <CloseIcon color="error" />}
                 </TableCell>
                 <TableCell align="center">
-                  {row.yearly ? (
-                    <CheckIcon color="success" />
-                  ) : (
-                    <CloseIcon color="error" />
-                  )}
+                  {row.yearly ? <CheckIcon color="success" /> : <CloseIcon color="error" />}
                 </TableCell>
               </TableRow>
             ))}

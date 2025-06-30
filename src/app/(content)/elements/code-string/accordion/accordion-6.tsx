@@ -1,12 +1,10 @@
 export const Accordion6CodeString = `
 import * as React from "react";
-import {
-  Accordion as MuiAccordion,
-  AccordionSummary as MuiAccordionSummary,
-  AccordionDetails as MuiAccordionDetails,
-} from "@mui/material";
-import Typography from "@mui/material/Typography";
-import { Box } from "@mui/material";
+import MuiAccordion, { accordionClasses } from "@mui/material/Accordion";
+import MuiAccordionSummary, { accordionSummaryClasses } from "@mui/material/AccordionSummary";
+import MuiAccordionDetails from "@mui/material/AccordionDetails";
+import Typography, { typographyClasses } from "@mui/material/Typography";
+import Box from "@mui/material/Box";
 import { styled } from "@mui/material/styles";
 import AccessAlarmIcon from "@mui/icons-material/AccessAlarm";
 import ApiIcon from "@mui/icons-material/Api";
@@ -17,26 +15,26 @@ const Accordion = styled(MuiAccordion)(() => ({
   boxShadow: "none",
   padding: "10px",
   marginBottom: 8,
-  "&.Mui-expanded": {
+  [\`&.\${accordionClasses.expanded}\`]: {
     marginBottom: 8,
-    marginTop: 8,
+    marginTop: 8
   },
   "&:before": {
-    display: "none",
-  },
+    display: "none"
+  }
 }));
 
 const AccordionSummary = styled(MuiAccordionSummary)(() => ({
   padding: 0,
-  "& .MuiTypography-root": {
-    fontWeight: 600,
+  [\`& .\${typographyClasses.root}\`]: {
+    fontWeight: 600
   },
-  "&.Mui-expanded": {
-    minHeight: "44px",
+  [\`&.\${accordionSummaryClasses.expanded}\`]: {
+    minHeight: "44px"
   },
-  "& .MuiAccordionSummary-content.Mui-expanded": {
-    margin: "0px",
-  },
+  [\`& .\${accordionSummaryClasses.content}.\${accordionSummaryClasses.expanded}\`]: {
+    margin: "0px"
+  }
 }));
 
 const AccordionDetails = styled(MuiAccordionDetails)(() => ({

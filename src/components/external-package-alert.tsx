@@ -1,6 +1,6 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
-import { Alert } from "@mui/material";
-import { Box } from "@mui/material";
+import Alert from "@mui/material/Alert";
+import Box from "@mui/material/Box";
 import { useState } from "react";
 
 interface IProps {
@@ -31,10 +31,7 @@ export const ExternalPackageAlert = ({ packages, force = false }: IProps) => {
     <Alert
       severity="warning"
       icon={
-        <Box
-          sx={{ title: "Copy to clipboard", cursor: "pointer" }}
-          onClick={handleCopy}
-        >
+        <Box sx={{ title: "Copy to clipboard", cursor: "pointer" }} onClick={handleCopy}>
           <Icon icon={icon} width={24} height={24} />
         </Box>
       }
@@ -42,9 +39,8 @@ export const ExternalPackageAlert = ({ packages, force = false }: IProps) => {
         padding: "0 1rem",
         mb: 2,
         borderRadius: (theme) => theme.shape.borderRadius,
-        py: 2,
-      }}
-    >
+        py: 2
+      }}>
       Following external package(s) in used:
       {packages.map((item, index) => (
         <Box
@@ -53,8 +49,7 @@ export const ExternalPackageAlert = ({ packages, force = false }: IProps) => {
           href={item.url}
           target="_blank"
           rel="noopener noreferrer"
-          sx={{ textDecoration: "underline", color: "inherit", ml: 1 }}
-        >
+          sx={{ textDecoration: "underline", color: "inherit", ml: 1 }}>
           {item.name}
         </Box>
       ))}

@@ -1,24 +1,22 @@
-import {
-  Box,
-  Avatar,
-  Typography,
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TableRow,
-  TablePagination,
-  Paper,
-  Checkbox,
-  TableSortLabel,
-  Dialog,
-  DialogActions,
-  DialogContent,
-  DialogTitle,
-  TextField,
-  Button,
-} from "@mui/material";
+import Paper from "@mui/material/Paper";
+import Table from "@mui/material/Table";
+import Avatar from "@mui/material/Avatar";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Checkbox from "@mui/material/Checkbox";
+import Dialog from "@mui/material/Dialog";
+import DialogActions from "@mui/material/DialogActions";
+import DialogContent from "@mui/material/DialogContent";
+import TableBody from "@mui/material/TableBody";
+import TableCell from "@mui/material/TableCell";
+import TableContainer from "@mui/material/TableContainer";
+import TableHead from "@mui/material/TableHead";
+import TablePagination from "@mui/material/TablePagination";
+import TableRow from "@mui/material/TableRow";
+import TableSortLabel from "@mui/material/TableSortLabel";
+import Typography from "@mui/material/Typography";
+import DialogTitle from "@mui/material/DialogTitle";
+import TextField from "@mui/material/TextField";
 import * as React from "react";
 
 type Order = "asc" | "desc";
@@ -111,7 +109,7 @@ const initialRows: User[] = [
     "https://randomuser.me/api/portraits/women/10.jpg",
     "Inactive",
     "Scrum Master"
-  ),
+  )
 ];
 
 export function UserTablePreview() {
@@ -126,9 +124,7 @@ export function UserTablePreview() {
 
   const handleChangePage = (_: unknown, newPage: number) => setPage(newPage);
 
-  const handleChangeRowsPerPage = (
-    event: React.ChangeEvent<HTMLInputElement>
-  ) => {
+  const handleChangeRowsPerPage = (event: React.ChangeEvent<HTMLInputElement>) => {
     setRowsPerPage(+event.target.value);
     setPage(0);
   };
@@ -189,9 +185,7 @@ export function UserTablePreview() {
 
   const handleSave = () => {
     if (!currentUser) return;
-    setRows(
-      rows.map((row) => (row.name === currentUser.name ? currentUser : row))
-    );
+    setRows(rows.map((row) => (row.name === currentUser.name ? currentUser : row)));
     handleCloseModal();
   };
 
@@ -201,27 +195,20 @@ export function UserTablePreview() {
         <Table stickyHeader>
           <TableHead>
             <TableRow>
-              <TableCell
-                padding="checkbox"
-                sx={{ backgroundColor: "#E60076", color: "#fff" }}
-              >
+              <TableCell padding="checkbox" sx={{ backgroundColor: "#E60076", color: "#fff" }}>
                 <Checkbox
                   checked={selected.length === rows.length}
-                  indeterminate={
-                    selected.length > 0 && selected.length < rows.length
-                  }
+                  indeterminate={selected.length > 0 && selected.length < rows.length}
                   onChange={handleSelectAllClick}
                 />
               </TableCell>
               <TableCell
                 sx={{ backgroundColor: "#E60076", color: "#fff" }}
-                sortDirection={orderBy === "name" ? order : false}
-              >
+                sortDirection={orderBy === "name" ? order : false}>
                 <TableSortLabel
                   active={orderBy === "name"}
                   direction={order}
-                  onClick={() => handleRequestSort("name")}
-                >
+                  onClick={() => handleRequestSort("name")}>
                   Name
                 </TableSortLabel>
               </TableCell>
@@ -229,8 +216,7 @@ export function UserTablePreview() {
                 <TableSortLabel
                   active={orderBy === "position"}
                   direction={order}
-                  onClick={() => handleRequestSort("position")}
-                >
+                  onClick={() => handleRequestSort("position")}>
                   Position
                 </TableSortLabel>
               </TableCell>
@@ -238,14 +224,11 @@ export function UserTablePreview() {
                 <TableSortLabel
                   active={orderBy === "status"}
                   direction={order}
-                  onClick={() => handleRequestSort("status")}
-                >
+                  onClick={() => handleRequestSort("status")}>
                   Status
                 </TableSortLabel>
               </TableCell>
-              <TableCell sx={{ backgroundColor: "#E60076", color: "#fff" }}>
-                Action
-              </TableCell>
+              <TableCell sx={{ backgroundColor: "#E60076", color: "#fff" }}>Action</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -258,15 +241,10 @@ export function UserTablePreview() {
                 return (
                   <TableRow key={row.name} hover selected={isItemSelected}>
                     <TableCell padding="checkbox">
-                      <Checkbox
-                        checked={isItemSelected}
-                        onClick={() => handleClick(row.name)}
-                      />
+                      <Checkbox checked={isItemSelected} onClick={() => handleClick(row.name)} />
                     </TableCell>
                     <TableCell>
-                      <Box
-                        sx={{ display: "flex", alignItems: "center", gap: 1 }}
-                      >
+                      <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
                         <Avatar src={row.profile} alt={row.name} />
                         <Box>
                           <Typography>{row.name}</Typography>
@@ -280,11 +258,7 @@ export function UserTablePreview() {
                     <TableCell>{row.position}</TableCell>
                     <TableCell>{row.status}</TableCell>
                     <TableCell>
-                      <Button
-                        variant="outlined"
-                        size="small"
-                        onClick={() => handleEditClick(row)}
-                      >
+                      <Button variant="outlined" size="small" onClick={() => handleEditClick(row)}>
                         Edit
                       </Button>
                     </TableCell>
@@ -307,9 +281,7 @@ export function UserTablePreview() {
       {/* Edit Modal */}
       <Dialog fullWidth open={openModal} onClose={handleCloseModal}>
         <DialogTitle>Edit User</DialogTitle>
-        <DialogContent
-          sx={{ display: "flex", flexDirection: "column", gap: 3, mt: 1 }}
-        >
+        <DialogContent sx={{ display: "flex", flexDirection: "column", gap: 3, mt: 1 }}>
           <TextField
             label="Name"
             fullWidth

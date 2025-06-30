@@ -1,5 +1,7 @@
-export const OTPPasteableString = `import { CheckCircle, Error } from "@mui/icons-material";
-import { Alert, Box, TextField } from "@mui/material";
+export const OTPPasteableString = `import Box from "@mui/material/Box";
+import Stack from "@mui/material/Stack";
+import TextField from "@mui/material/TextField";
+import Typography from "@mui/material/Typography";
 import { useEffect, useRef, useState } from "react";
 
 const length = 6;

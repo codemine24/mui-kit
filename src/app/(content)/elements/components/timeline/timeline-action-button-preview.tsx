@@ -1,13 +1,14 @@
-import {
-  Timeline,
-  TimelineConnector,
-  TimelineContent,
-  TimelineDot,
-  TimelineItem,
-  TimelineOppositeContent,
-  TimelineSeparator,
-} from "@mui/lab";
-import { Button, Card, CardContent, Typography } from "@mui/material";
+import Timeline from "@mui/lab/Timeline";
+import TimelineConnector from "@mui/lab/TimelineConnector";
+import TimelineContent from "@mui/lab/TimelineContent";
+import TimelineDot from "@mui/lab/TimelineDot";
+import TimelineItem from "@mui/lab/TimelineItem";
+import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
+import TimelineSeparator from "@mui/lab/TimelineSeparator";
+import Button from "@mui/material/Button";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import Typography from "@mui/material/Typography";
 
 const timelineData = [
   {
@@ -15,25 +16,25 @@ const timelineData = [
     title: "Project Kickoff",
     description: "Initial team meeting.",
     action: "View Details",
-    handler: () => alert("You clicked Project Kickoff"),
+    handler: () => alert("You clicked Project Kickoff")
   },
   {
     date: "Mar 22, 2024",
     title: "Design Phase",
     description: "Completed wireframes.",
     action: "View Details",
-    handler: () => alert("You clicked Design Phase"),
+    handler: () => alert("You clicked Design Phase")
   },
   {
     date: "Apr 5, 2024",
     title: "Development Sprint",
-    description: "Backend development.",
+    description: "Backend development."
   },
   {
     date: "Apr 19, 2024",
     title: "Testing & Deployment",
-    description: "Performance optimization.",
-  },
+    description: "Performance optimization."
+  }
 ];
 
 export function TimelineActionButtonPreview() {
@@ -53,15 +54,13 @@ export function TimelineActionButtonPreview() {
               variant="outlined"
               sx={{
                 mt: 1,
-                borderRadius: 2,
-              }}
-            >
+                borderRadius: 2
+              }}>
               <CardContent sx={{ py: 1.5, px: 2 }}>
                 <Typography
                   variant="caption"
                   color="text.secondary"
-                  sx={{ mt: 0.5, display: "block" }}
-                >
+                  sx={{ mt: 0.5, display: "block" }}>
                   {item.date}
                 </Typography>
                 <Typography variant="body1" fontWeight={600}>
@@ -76,8 +75,7 @@ export function TimelineActionButtonPreview() {
                     color="primary"
                     size="small"
                     sx={{ mt: 1 }}
-                    onClick={item.handler}
-                  >
+                    onClick={item.handler}>
                     {item.action}
                   </Button>
                 )}

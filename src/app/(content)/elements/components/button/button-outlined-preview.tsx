@@ -1,15 +1,11 @@
-import { Stack, Button, Box } from "@mui/material";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Stack from "@mui/material/Stack";
 
 export const ButtonOutlinedPreview = () => {
   return (
     <Box>
-      <Stack
-        direction="row"
-        spacing={2}
-        flexWrap="wrap"
-        alignItems={"center"}
-        rowGap={2}
-      >
+      <Stack direction="row" spacing={2} flexWrap="wrap" alignItems={"center"} rowGap={2}>
         <Box>
           <Button variant="outlined" color="primary">
             Primary
@@ -49,10 +45,9 @@ export const ButtonOutlinedPreview = () => {
               color: "#E60076",
               "&:hover": {
                 borderColor: "#E60076",
-                backgroundColor: "#e6007715",
-              },
-            }}
-          >
+                backgroundColor: "#e6007715"
+              }
+            }}>
             Custom
           </Button>
         </Box>

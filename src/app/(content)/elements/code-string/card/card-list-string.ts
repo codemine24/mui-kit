@@ -1,17 +1,15 @@
 export const cardListString = `import React from 'react';
-import {
-    Card,
-    CardContent,
-    Typography,
-    Box,
-    Avatar,
-    List,
-    ListItem,
-    ListItemAvatar,
-    ListItemText,
-    Divider,
-    Button
-} from '@mui/material';
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
+import Avatar from "@mui/material/Avatar";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemAvatar from "@mui/material/ListItemAvatar";
+import ListItemText from "@mui/material/ListItemText";
+import Divider from "@mui/material/Divider";
+import Button from "@mui/material/Button";
 
 export const ListCard = () => {
     const customers = [

@@ -1,16 +1,14 @@
-export const dialogHeaderFooterString = `import React, { useState } from 'react';
-import {
-    Dialog,
-    TextField,
-    Button,
-    Typography,
-    Box,
-    Checkbox,
-    FormControlLabel,
-    IconButton,
-    Link,
-} from '@mui/material';
-import { Close } from '@mui/icons-material';
+export const dialogHeaderFooterString = `import React, { useState } from "react";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Checkbox from "@mui/material/Checkbox";
+import Dialog from "@mui/material/Dialog";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import IconButton from "@mui/material/IconButton";
+import Link from "@mui/material/Link";
+import TextField from "@mui/material/TextField";
+import Typography from "@mui/material/Typography";
+import Close from "@mui/icons-material/Close";
 
 export const DialogHeaderFooter = () => {
     const [open, setOpen] = useState(false);
@@ -121,4 +119,4 @@ export const DialogHeaderFooter = () => {
             </Dialog>
         </div>
     );
-}`
+}`;

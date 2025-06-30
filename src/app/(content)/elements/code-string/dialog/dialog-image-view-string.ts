@@ -1,16 +1,16 @@
-export const dialogImageViewPreviewString = `import React from 'react';
-import {
-    Avatar,
-    Box,
-    Button,
-    CardMedia,
-    Dialog,
-    DialogContent,
-    Grid,
-    IconButton,
-    Typography
-} from '@mui/material';
-import { Download, FavoriteBorder, Share } from '@mui/icons-material';
+export const dialogImageViewPreviewString = `import React from "react";
+import Avatar from "@mui/material/Avatar";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import CardMedia from "@mui/material/CardMedia";
+import Dialog from "@mui/material/Dialog";
+import DialogContent from "@mui/material/DialogContent";
+import Grid from "@mui/material/Grid";
+import IconButton from "@mui/material/IconButton";
+import Typography from "@mui/material/Typography";
+import Download from "@mui/icons-material/Download";
+import FavoriteBorder from "@mui/icons-material/FavoriteBorder";
+import Share from "@mui/icons-material/Share";
 
 export const DialogImageView = () => {
     const [open, setOpen] = React.useState(false);
@@ -106,4 +106,4 @@ export const DialogImageView = () => {
         </React.Fragment>
     );
 }
-`
+`;

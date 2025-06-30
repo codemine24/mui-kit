@@ -1,18 +1,16 @@
 export const dialogAnimationString = `import * as React from 'react';
-import {
-    Button,
-    Dialog,
-    DialogTitle,
-    DialogContent,
-    DialogActions,
-    Typography,
-    Slide,
-    Grow,
-    Fade,
-    Zoom,
-    Stack,
-} from '@mui/material';
-import { TransitionProps } from '@mui/material/transitions';
+import type { TransitionProps } from "@mui/material/transitions";
+import Button from "@mui/material/Button";
+import Dialog from "@mui/material/Dialog";
+import DialogTitle from "@mui/material/DialogTitle";
+import DialogContent from "@mui/material/DialogContent";
+import DialogActions from "@mui/material/DialogActions";
+import Typography from "@mui/material/Typography";
+import Slide from "@mui/material/Slide";
+import Grow from "@mui/material/Grow";
+import Fade from "@mui/material/Fade";
+import Zoom from "@mui/material/Zoom";
+import Stack from "@mui/material/Stack";
 
 // Slide Up
 const TransitionSlideUp = React.forwardRef<
@@ -228,4 +226,4 @@ export const DialogAnimation = () => {
         </Stack>
     );
 }
-`
+`;

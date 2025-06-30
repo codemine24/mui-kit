@@ -1,17 +1,15 @@
-export const dialogMultiStepString = `import React, { Fragment, useState } from 'react';
-import {
-    Dialog,
-    DialogTitle,
-    DialogContent,
-    Stepper,
-    Step,
-    StepLabel,
-    TextField,
-    Button,
-    Box,
-    Typography,
-    Grid,
-} from '@mui/material';
+export const dialogMultiStepString = `import React, { Fragment, useState } from "react";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Dialog from "@mui/material/Dialog";
+import DialogContent from "@mui/material/DialogContent";
+import DialogTitle from "@mui/material/DialogTitle";
+import Grid from "@mui/material/Grid";
+import Stepper from "@mui/material/Stepper";
+import Step from "@mui/material/Step";
+import StepLabel from "@mui/material/StepLabel";
+import TextField from "@mui/material/TextField";
+import Typography from "@mui/material/Typography";
 
 const steps = ['My Information', 'My Experience', 'Application Questions', 'Terms & Conditions'];
 
@@ -188,4 +186,4 @@ export const DialogMultiStep = () => {
         </Fragment>
     );
 };
-`
+`;

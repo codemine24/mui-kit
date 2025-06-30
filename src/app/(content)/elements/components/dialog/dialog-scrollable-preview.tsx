@@ -7,7 +7,7 @@ import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
-import { Stack } from "@mui/material";
+import Stack from "@mui/material/Stack";
 
 export const DialogScrollablePreview = () => {
   const [open, setOpen] = React.useState(false);
@@ -47,15 +47,13 @@ export const DialogScrollablePreview = () => {
         onClose={handleClose}
         scroll={scroll}
         aria-labelledby="scroll-dialog-title"
-        aria-describedby="scroll-dialog-description"
-      >
+        aria-describedby="scroll-dialog-description">
         <DialogTitle id="scroll-dialog-title">Subscribe</DialogTitle>
         <DialogContent dividers={scroll === "paper"}>
           <DialogContentText
             id="scroll-dialog-description"
             ref={descriptionElementRef}
-            tabIndex={-1}
-          >
+            tabIndex={-1}>
             {[...new Array(50)]
               .map(
                 () => `Cras mattis consectetur purus sit amet fermentum.

@@ -1,7 +1,6 @@
 import Box from "@mui/material/Box";
 import ButtonBase from "@mui/material/ButtonBase";
-import type { CSSObject } from "@mui/material/styles";
-import { styled } from "@mui/material/styles";
+import { styled, type CSSObject } from "@mui/material/styles";
 
 import type { CarouselDotButtonsProps } from "../types/type";
 
@@ -22,7 +21,7 @@ export function CarouselDotButtons({
   const SIZES = {
     circular: slotProps?.dot?.size ?? 18,
     rounded: slotProps?.dot?.size ?? 18,
-    number: slotProps?.dot?.size ?? 28,
+    number: slotProps?.dot?.size ?? 28
   };
 
   return (
@@ -35,13 +34,12 @@ export function CarouselDotButtons({
           zIndex: 9,
           display: "flex",
           "& > li": {
-            display: "inline-flex",
-          },
+            display: "inline-flex"
+          }
         }),
-        ...(Array.isArray(sx) ? sx : [sx]),
+        ...(Array.isArray(sx) ? sx : [sx])
       ]}
-      {...other}
-    >
+      {...other}>
       {scrollSnaps.map((_, index) => {
         const selected = index === selectedIndex;
 
@@ -56,13 +54,12 @@ export function CarouselDotButtons({
               sx={[
                 () => ({
                   width: SIZES[variant],
-                  height: SIZES[variant],
+                  height: SIZES[variant]
                 }),
                 ...(Array.isArray(slotProps?.dot?.sx)
                   ? slotProps?.dot?.sx ?? []
-                  : [slotProps?.dot?.sx]),
-              ]}
-            >
+                  : [slotProps?.dot?.sx])
+              ]}>
               {variant === "number" && index + 1}
             </DotItem>
           </li>
@@ -79,8 +76,7 @@ type DotItemProps = Pick<CarouselDotButtonsProps, "variant"> & {
 };
 
 const DotItem = styled(ButtonBase, {
-  shouldForwardProp: (prop: string) =>
-    !["variant", "selected", "sx"].includes(prop),
+  shouldForwardProp: (prop: string) => !["variant", "selected", "sx"].includes(prop)
 })<DotItemProps>(({ selected, theme }) => {
   const dotStyles: CSSObject = {
     width: 8,
@@ -91,8 +87,8 @@ const DotItem = styled(ButtonBase, {
     backgroundColor: "currentColor",
     transition: theme.transitions.create(["width", "opacity"], {
       easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.short,
-    }),
+      duration: theme.transitions.duration.short
+    })
   };
 
   return {
@@ -100,8 +96,8 @@ const DotItem = styled(ButtonBase, {
       {
         props: { variant: "circular" },
         style: {
-          "&::before": { ...dotStyles, ...(selected && { opacity: 1 }) },
-        },
+          "&::before": { ...dotStyles, ...(selected && { opacity: 1 }) }
+        }
       },
       {
         props: { variant: "rounded" },
@@ -111,10 +107,10 @@ const DotItem = styled(ButtonBase, {
             ...(selected && {
               opacity: 1,
               width: "calc(100% - 4px)",
-              borderRadius: theme.shape.borderRadius,
-            }),
-          },
-        },
+              borderRadius: theme.shape.borderRadius
+            })
+          }
+        }
       },
       {
         props: { variant: "number" },
@@ -128,11 +124,11 @@ const DotItem = styled(ButtonBase, {
             backgroundColor: theme.palette.text.primary,
             fontWeight: theme.typography.fontWeightBold,
             ...theme.applyStyles("dark", {
-              color: theme.palette.grey[800],
-            }),
-          }),
-        },
-      },
-    ],
+              color: theme.palette.grey[800]
+            })
+          })
+        }
+      }
+    ]
   };
 });

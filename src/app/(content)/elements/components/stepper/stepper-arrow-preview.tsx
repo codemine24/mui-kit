@@ -1,19 +1,17 @@
 "use client";
 
-import {
-  Stepper,
-  Step,
-  StepLabel,
-  Box,
-  Button,
-  styled,
-  useTheme,
-  useMediaQuery,
-} from "@mui/material";
+import { useState } from "react";
+import Box from "@mui/material/Box";
+import Step from "@mui/material/Step";
+import Button from "@mui/material/Button";
+import Stepper from "@mui/material/Stepper";
+import { stepConnectorClasses } from "@mui/material/StepConnector";
+import StepLabel, { stepLabelClasses } from "@mui/material/StepLabel";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { styled, useTheme } from "@mui/material/styles";
+import Check from "@mui/icons-material/Check";
 import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArrowRight";
 import KeyboardDoubleArrowDownIcon from "@mui/icons-material/KeyboardDoubleArrowDown";
-import { useState } from "react";
-import { Check } from "@mui/icons-material";
 
 interface StepItem {
   label: string;
@@ -22,20 +20,20 @@ interface StepItem {
 const steps: StepItem[] = [
   { label: "Personal Info" },
   { label: "Profile Details" },
-  { label: "Preferences" },
+  { label: "Preferences" }
 ];
 
 const ArrowConnector = styled(KeyboardDoubleArrowRightIcon)(() => ({
-  [`&.MuiStepConnector-root`]: {
-    padding: 0,
+  [`&.${stepConnectorClasses.root}`]: {
+    padding: 0
   },
-  [`& .MuiStepConnector-line`]: {
-    display: "none",
+  [`& .${stepConnectorClasses.line}`]: {
+    display: "none"
   },
-  [`&.MuiStepConnector-horizontal`]: {
+  [`&.${stepConnectorClasses.horizontal}`]: {
     marginLeft: 0,
-    marginRight: 0,
-  },
+    marginRight: 0
+  }
 }));
 
 interface CustomStepIconProps {
@@ -45,29 +43,24 @@ interface CustomStepIconProps {
 }
 
 const CustomStepIconRoot = styled("div", {
-  shouldForwardProp: (prop) => prop !== "ownerState",
-})<{ ownerState: { completed: boolean; active: boolean } }>(
-  ({ theme, ownerState }) => ({
-    background: ownerState.completed
-      ? theme.palette.success.main
-      : ownerState.active
-      ? `linear-gradient(136deg, ${theme.palette.primary.main} 0%, ${theme.palette.secondary.main} 100%)`
-      : theme.palette.grey[300],
-    zIndex: 1,
-    color:
-      ownerState.active && ownerState.completed
-        ? theme.palette.primary.main
-        : "#ffff",
-    width: 30,
-    height: 30,
-    display: "flex",
-    borderRadius: "50%",
-    justifyContent: "center",
-    alignItems: "center",
-    fontWeight: 600,
-    fontSize: "1rem",
-  })
-);
+  shouldForwardProp: (prop) => prop !== "ownerState"
+})<{ ownerState: { completed: boolean; active: boolean } }>(({ theme, ownerState }) => ({
+  background: ownerState.completed
+    ? theme.palette.success.main
+    : ownerState.active
+    ? `linear-gradient(136deg, ${theme.palette.primary.main} 0%, ${theme.palette.secondary.main} 100%)`
+    : theme.palette.grey[300],
+  zIndex: 1,
+  color: ownerState.active && ownerState.completed ? theme.palette.primary.main : "#ffff",
+  width: 30,
+  height: 30,
+  display: "flex",
+  borderRadius: "50%",
+  justifyContent: "center",
+  alignItems: "center",
+  fontWeight: 600,
+  fontSize: "1rem"
+}));
 
 function CustomStepIcon(props: CustomStepIconProps) {
   const { active, completed, icon } = props;
@@ -97,17 +90,15 @@ export const StepperArrowPreview = () => {
       <Stepper
         activeStep={activeStep}
         alternativeLabel={false}
-        connector={
-          isMobile ? <KeyboardDoubleArrowDownIcon /> : <ArrowConnector />
-        }
-        orientation={isMobile ? "vertical" : "horizontal"}
-      >
+        connector={isMobile ? <KeyboardDoubleArrowDownIcon /> : <ArrowConnector />}
+        orientation={isMobile ? "vertical" : "horizontal"}>
         {steps.map((step, index) => (
           <Step key={index}>
             <StepLabel
               slots={{ stepIcon: CustomStepIcon }}
               sx={{
-                "& .MuiStepLabel-label": {
+                [`& .${stepLabelClasses.label}`]: {
+                  ml: 1,
                   fontWeight: 600,
                   fontSize: "0.875rem",
                   color:
@@ -115,11 +106,9 @@ export const StepperArrowPreview = () => {
                       ? "secondary.main"
                       : index === activeStep
                       ? "primary.main"
-                      : "",
-                  ml: 1,
-                },
-              }}
-            >
+                      : ""
+                }
+              }}>
               {step.label}
             </StepLabel>
           </Step>
@@ -127,18 +116,10 @@ export const StepperArrowPreview = () => {
       </Stepper>
 
       <Box mt={4} display="flex" justifyContent="center" gap={2}>
-        <Button
-          variant="outlined"
-          onClick={handleBack}
-          disabled={activeStep === 0}
-        >
+        <Button variant="outlined" onClick={handleBack} disabled={activeStep === 0}>
           Previous
         </Button>
-        <Button
-          variant="contained"
-          onClick={handleNext}
-          disabled={activeStep === steps.length - 1}
-        >
+        <Button variant="contained" onClick={handleNext} disabled={activeStep === steps.length - 1}>
           Next
         </Button>
       </Box>

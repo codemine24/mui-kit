@@ -1,25 +1,21 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
-import {
-  Apple,
-  Facebook,
-  GitHub,
-  Google,
-  Microsoft,
-  X,
-} from "@mui/icons-material";
-import { Box, Button, Divider, IconButton, Stack } from "@mui/material";
+import Apple from "@mui/icons-material/Apple";
+import Facebook from "@mui/icons-material/Facebook";
+import GitHub from "@mui/icons-material/GitHub";
+import Google from "@mui/icons-material/Google";
+import Microsoft from "@mui/icons-material/Microsoft";
+import X from "@mui/icons-material/X";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Divider from "@mui/material/Divider";
+import IconButton from "@mui/material/IconButton";
+import Stack from "@mui/material/Stack";
 
 export const ButtonSocialLoginPreview = () => {
   return (
     <Box>
       {/* Contained Social Login buttons*/}
-      <Stack
-        direction="row"
-        spacing={0.5}
-        flexWrap="wrap"
-        alignItems={"center"}
-        rowGap={2}
-      >
+      <Stack direction="row" spacing={0.5} flexWrap="wrap" alignItems={"center"} rowGap={2}>
         <Button
           variant="contained"
           startIcon={<Facebook />}
@@ -27,10 +23,9 @@ export const ButtonSocialLoginPreview = () => {
             bgcolor: "#3C5997",
             color: "#fff",
             "&:hover": {
-              bgcolor: "#1f56cc",
-            },
-          }}
-        >
+              bgcolor: "#1f56cc"
+            }
+          }}>
           Sign In With Facebook
         </Button>
 
@@ -41,10 +36,9 @@ export const ButtonSocialLoginPreview = () => {
             bgcolor: "#1EA1F2",
             color: "#fff",
             "&:hover": {
-              bgcolor: "#0378c2",
-            },
-          }}
-        >
+              bgcolor: "#0378c2"
+            }
+          }}>
           Sign In With X
         </Button>
 
@@ -55,10 +49,9 @@ export const ButtonSocialLoginPreview = () => {
             bgcolor: "#34383e",
             color: "#fff",
             "&:hover": {
-              bgcolor: "#16191d",
-            },
-          }}
-        >
+              bgcolor: "#16191d"
+            }
+          }}>
           Sign In With Github
         </Button>
 
@@ -69,10 +62,9 @@ export const ButtonSocialLoginPreview = () => {
             bgcolor: "#4081EC",
             color: "#fff",
             "&:hover": {
-              bgcolor: "#1865e2",
-            },
-          }}
-        >
+              bgcolor: "#1865e2"
+            }
+          }}>
           Sign In With Google
         </Button>
 
@@ -83,31 +75,23 @@ export const ButtonSocialLoginPreview = () => {
             bgcolor: "#050708",
             color: "#fff",
             "&:hover": {
-              bgcolor: "#090c0e",
-            },
-          }}
-        >
+              bgcolor: "#090c0e"
+            }
+          }}>
           Sign In With Apple
         </Button>
       </Stack>
       <Divider sx={{ my: 2 }} />
       {/* Outlined Social Login buttons */}
-      <Stack
-        direction="row"
-        spacing={0.5}
-        flexWrap="wrap"
-        alignItems={"center"}
-        rowGap={2}
-      >
+      <Stack direction="row" spacing={0.5} flexWrap="wrap" alignItems={"center"} rowGap={2}>
         <Button
           variant="outlined"
           startIcon={<Apple />}
           sx={{
             color: "text.primary",
             textTransform: "none",
-            borderColor: (theme) => theme.palette.divider,
-          }}
-        >
+            borderColor: (theme) => theme.palette.divider
+          }}>
           Sign in with Apple
         </Button>
         <Button
@@ -116,9 +100,8 @@ export const ButtonSocialLoginPreview = () => {
           sx={{
             color: "text.primary",
             textTransform: "none",
-            borderColor: (theme) => theme.palette.divider,
-          }}
-        >
+            borderColor: (theme) => theme.palette.divider
+          }}>
           Sign in with Dropbox
         </Button>
         <Button
@@ -127,9 +110,8 @@ export const ButtonSocialLoginPreview = () => {
           sx={{
             color: "text.primary",
             textTransform: "none",
-            borderColor: (theme) => theme.palette.divider,
-          }}
-        >
+            borderColor: (theme) => theme.palette.divider
+          }}>
           Sign in with Discord
         </Button>
         <Button
@@ -138,9 +120,8 @@ export const ButtonSocialLoginPreview = () => {
           sx={{
             color: "text.primary",
             textTransform: "none",
-            borderColor: (theme) => theme.palette.divider,
-          }}
-        >
+            borderColor: (theme) => theme.palette.divider
+          }}>
           Sign in with Facebook
         </Button>
         <Button
@@ -149,9 +130,8 @@ export const ButtonSocialLoginPreview = () => {
           sx={{
             color: "text.primary",
             textTransform: "none",
-            borderColor: (theme) => theme.palette.divider,
-          }}
-        >
+            borderColor: (theme) => theme.palette.divider
+          }}>
           Sign in with Github
         </Button>
 
@@ -161,9 +141,8 @@ export const ButtonSocialLoginPreview = () => {
           sx={{
             color: "text.primary",
             textTransform: "none",
-            borderColor: (theme) => theme.palette.divider,
-          }}
-        >
+            borderColor: (theme) => theme.palette.divider
+          }}>
           Sign In With Gitlab
         </Button>
         <Button
@@ -172,9 +151,8 @@ export const ButtonSocialLoginPreview = () => {
           sx={{
             color: "text.primary",
             textTransform: "none",
-            borderColor: (theme) => theme.palette.divider,
-          }}
-        >
+            borderColor: (theme) => theme.palette.divider
+          }}>
           Sign In With Google
         </Button>
         <Button
@@ -183,9 +161,8 @@ export const ButtonSocialLoginPreview = () => {
           sx={{
             color: "text.primary",
             textTransform: "none",
-            borderColor: (theme) => theme.palette.divider,
-          }}
-        >
+            borderColor: (theme) => theme.palette.divider
+          }}>
           Sign In With Linkedin
         </Button>
         <Button
@@ -194,9 +171,8 @@ export const ButtonSocialLoginPreview = () => {
           sx={{
             color: "text.primary",
             textTransform: "none",
-            borderColor: (theme) => theme.palette.divider,
-          }}
-        >
+            borderColor: (theme) => theme.palette.divider
+          }}>
           Sign In With Microsoft
         </Button>
         <Button
@@ -205,9 +181,8 @@ export const ButtonSocialLoginPreview = () => {
           sx={{
             color: "text.primary",
             textTransform: "none",
-            borderColor: (theme) => theme.palette.divider,
-          }}
-        >
+            borderColor: (theme) => theme.palette.divider
+          }}>
           Sign In With Twitch
         </Button>
         <Button
@@ -216,9 +191,8 @@ export const ButtonSocialLoginPreview = () => {
           sx={{
             color: "text.primary",
             textTransform: "none",
-            borderColor: (theme) => theme.palette.divider,
-          }}
-        >
+            borderColor: (theme) => theme.palette.divider
+          }}>
           Sign In With Spotify
         </Button>
         <Button
@@ -227,9 +201,8 @@ export const ButtonSocialLoginPreview = () => {
           sx={{
             color: "text.primary",
             textTransform: "none",
-            borderColor: (theme) => theme.palette.divider,
-          }}
-        >
+            borderColor: (theme) => theme.palette.divider
+          }}>
           Sign In With Tiktok
         </Button>
         <Button
@@ -238,9 +211,8 @@ export const ButtonSocialLoginPreview = () => {
           sx={{
             color: "text.primary",
             textTransform: "none",
-            borderColor: (theme) => theme.palette.divider,
-          }}
-        >
+            borderColor: (theme) => theme.palette.divider
+          }}>
           Sign In With Twitter
         </Button>
         <Button
@@ -249,9 +221,8 @@ export const ButtonSocialLoginPreview = () => {
           sx={{
             color: "text.primary",
             textTransform: "none",
-            borderColor: (theme) => theme.palette.divider,
-          }}
-        >
+            borderColor: (theme) => theme.palette.divider
+          }}>
           Sign In With Roblox
         </Button>
         <Button
@@ -260,9 +231,8 @@ export const ButtonSocialLoginPreview = () => {
           sx={{
             color: "text.primary",
             textTransform: "none",
-            borderColor: (theme) => theme.palette.divider,
-          }}
-        >
+            borderColor: (theme) => theme.palette.divider
+          }}>
           Sign In With VK
         </Button>
         <Button
@@ -271,9 +241,8 @@ export const ButtonSocialLoginPreview = () => {
           sx={{
             color: "text.primary",
             textTransform: "none",
-            borderColor: (theme) => theme.palette.divider,
-          }}
-        >
+            borderColor: (theme) => theme.palette.divider
+          }}>
           Sign In With Zoom
         </Button>
       </Stack>
@@ -282,13 +251,7 @@ export const ButtonSocialLoginPreview = () => {
 
       {/* Icon only Social Login Button */}
 
-      <Stack
-        direction="row"
-        spacing={0.5}
-        flexWrap="wrap"
-        alignItems={"center"}
-        rowGap={2}
-      >
+      <Stack direction="row" spacing={0.5} flexWrap="wrap" alignItems={"center"} rowGap={2}>
         <IconButton
           title="Sign in with Apple"
           sx={{
@@ -296,9 +259,8 @@ export const ButtonSocialLoginPreview = () => {
             borderRadius: "3px",
             paddingX: 4,
             paddingY: 0.5,
-            color: "text.primary",
-          }}
-        >
+            color: "text.primary"
+          }}>
           <Apple />
         </IconButton>
         <IconButton
@@ -308,9 +270,8 @@ export const ButtonSocialLoginPreview = () => {
             borderRadius: "3px",
             paddingX: 4,
             paddingY: 0.5,
-            color: "text.primary",
-          }}
-        >
+            color: "text.primary"
+          }}>
           <Icon icon="mingcute:dropbox-fill" />
         </IconButton>
         <IconButton
@@ -320,9 +281,8 @@ export const ButtonSocialLoginPreview = () => {
             borderRadius: "3px",
             paddingX: 4,
             paddingY: 0.5,
-            color: "text.primary",
-          }}
-        >
+            color: "text.primary"
+          }}>
           <Icon icon="ic:baseline-discord" />
         </IconButton>
         <IconButton
@@ -332,9 +292,8 @@ export const ButtonSocialLoginPreview = () => {
             borderRadius: "3px",
             paddingX: 4,
             paddingY: 0.5,
-            color: "text.primary",
-          }}
-        >
+            color: "text.primary"
+          }}>
           <Icon icon="uil:facebook" />
         </IconButton>
         <IconButton
@@ -344,9 +303,8 @@ export const ButtonSocialLoginPreview = () => {
             borderRadius: "3px",
             paddingX: 4,
             paddingY: 0.5,
-            color: "text.primary",
-          }}
-        >
+            color: "text.primary"
+          }}>
           <GitHub />
         </IconButton>
         <IconButton
@@ -356,9 +314,8 @@ export const ButtonSocialLoginPreview = () => {
             borderRadius: "3px",
             paddingX: 4,
             paddingY: 0.5,
-            color: "text.primary",
-          }}
-        >
+            color: "text.primary"
+          }}>
           <Icon icon="ri:gitlab-fill" />
         </IconButton>
         <IconButton
@@ -368,9 +325,8 @@ export const ButtonSocialLoginPreview = () => {
             borderRadius: "3px",
             paddingX: 4,
             paddingY: 0.5,
-            color: "text.primary",
-          }}
-        >
+            color: "text.primary"
+          }}>
           <Icon icon="ri:google-fill" />
         </IconButton>
         <IconButton
@@ -380,9 +336,8 @@ export const ButtonSocialLoginPreview = () => {
             borderRadius: "3px",
             paddingX: 4,
             paddingY: 0.5,
-            color: "text.primary",
-          }}
-        >
+            color: "text.primary"
+          }}>
           <Icon icon="devicon-plain:linkedin" />
         </IconButton>
         <IconButton
@@ -392,9 +347,8 @@ export const ButtonSocialLoginPreview = () => {
             borderRadius: "3px",
             paddingX: 4,
             paddingY: 0.5,
-            color: "text.primary",
-          }}
-        >
+            color: "text.primary"
+          }}>
           <Microsoft />
         </IconButton>
         <IconButton
@@ -404,9 +358,8 @@ export const ButtonSocialLoginPreview = () => {
             borderRadius: "3px",
             paddingX: 4,
             paddingY: 0.5,
-            color: "text.primary",
-          }}
-        >
+            color: "text.primary"
+          }}>
           <Icon icon="mdi:twitch" />
         </IconButton>
         <IconButton
@@ -416,9 +369,8 @@ export const ButtonSocialLoginPreview = () => {
             borderRadius: "3px",
             paddingX: 4,
             paddingY: 0.5,
-            color: "text.primary",
-          }}
-        >
+            color: "text.primary"
+          }}>
           <Icon icon="mdi:spotify" />
         </IconButton>
         <IconButton
@@ -428,9 +380,8 @@ export const ButtonSocialLoginPreview = () => {
             borderRadius: "3px",
             paddingX: 4,
             paddingY: 0.5,
-            color: "text.primary",
-          }}
-        >
+            color: "text.primary"
+          }}>
           <Icon icon="ic:baseline-tiktok" />
         </IconButton>
         <IconButton
@@ -440,9 +391,8 @@ export const ButtonSocialLoginPreview = () => {
             borderRadius: "3px",
             paddingX: 4,
             paddingY: 0.5,
-            color: "text.primary",
-          }}
-        >
+            color: "text.primary"
+          }}>
           <Icon icon="fa6-brands:square-x-twitter" />
         </IconButton>
         <IconButton
@@ -452,9 +402,8 @@ export const ButtonSocialLoginPreview = () => {
             borderRadius: "3px",
             paddingX: 4,
             paddingY: 0.5,
-            color: "text.primary",
-          }}
-        >
+            color: "text.primary"
+          }}>
           <Icon icon="simple-icons:roblox" />
         </IconButton>
         <IconButton
@@ -464,9 +413,8 @@ export const ButtonSocialLoginPreview = () => {
             borderRadius: "3px",
             paddingX: 4,
             paddingY: 0.5,
-            color: "text.primary",
-          }}
-        >
+            color: "text.primary"
+          }}>
           <Icon icon="akar-icons:vk-fill" />
         </IconButton>
         <IconButton
@@ -476,9 +424,8 @@ export const ButtonSocialLoginPreview = () => {
             borderRadius: "3px",
             paddingX: 4,
             paddingY: 0.5,
-            color: "text.primary",
-          }}
-        >
+            color: "text.primary"
+          }}>
           <Icon icon="hugeicons:zoom" />
         </IconButton>
       </Stack>

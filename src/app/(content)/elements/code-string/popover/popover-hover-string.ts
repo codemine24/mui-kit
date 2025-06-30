@@ -1,10 +1,8 @@
-export const popoverHoverString = `import React, { useState, useRef, useEffect } from 'react';
-import {
-    Button,
-    Popover,
-    Typography,
-    Box,
-} from '@mui/material';
+export const popoverHoverString = `import React, { useState, useRef, useEffect } from "react";
+import Button from "@mui/material/Button";
+import Popover from "@mui/material/Popover";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
 
 export const PopoverHover = () => {
     const [open, setOpen] = useState(false);
@@ -81,4 +79,4 @@ export const PopoverHover = () => {
         </Box>
     );
 };
-`
+`;

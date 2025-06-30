@@ -1,5 +1,8 @@
-import { CheckCircle, Error } from "@mui/icons-material";
-import { Alert, Box, TextField } from "@mui/material";
+import CheckCircle from "@mui/icons-material/CheckCircle";
+import Error from "@mui/icons-material/Error";
+import Alert from "@mui/material/Alert";
+import Box from "@mui/material/Box";
+import TextField from "@mui/material/TextField";
 import { useEffect, useRef, useState } from "react";
 
 const length = 6;
@@ -22,10 +25,7 @@ export const OTPPasteablePreview = () => {
     }
   };
 
-  const handleKeyDown = (
-    e: React.KeyboardEvent<HTMLDivElement>,
-    index: number
-  ) => {
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>, index: number) => {
     if (e.key === "Backspace" && !otp[index] && index > 0) {
       inputRefs.current[index - 1]?.focus();
     }
@@ -69,8 +69,8 @@ export const OTPPasteablePreview = () => {
               maxLength: 1,
               style: {
                 textAlign: "center",
-                fontWeight: "bold",
-              },
+                fontWeight: "bold"
+              }
             }}
             value={data}
             onChange={(e) => handleChange(e.target as HTMLInputElement, index)}
@@ -82,14 +82,14 @@ export const OTPPasteablePreview = () => {
               width: { xs: 35, md: 45, lg: 60 },
               "& input": {
                 fontSize: { xs: "1rem", md: "1.5rem" },
-                padding: { xs: 0.8, md: 1, lg: 2 },
+                padding: { xs: 0.8, md: 1, lg: 2 }
               },
               "& .MuiOutlinedInput-root": {
                 "& fieldset": {
                   borderColor: data ? "#4caf50" : "grey.500",
-                  borderWidth: data ? "2px" : "1px",
-                },
-              },
+                  borderWidth: data ? "2px" : "1px"
+                }
+              }
             }}
             autoComplete="one-time-code"
             inputMode="numeric"

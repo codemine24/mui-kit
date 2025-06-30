@@ -1,4 +1,7 @@
-export const buttonSizeString = `import { Stack, Button, Box, Divider } from "@mui/material";
+export const buttonSizeString = `import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Divider from "@mui/material/Divider";
+import Stack from "@mui/material/Stack";
 
 export const ButtonSizePreview = () => {
   return (
@@ -122,4 +125,4 @@ export const ButtonSizePreview = () => {
       </Stack>
     </Box>
   );
-};`
+};`;

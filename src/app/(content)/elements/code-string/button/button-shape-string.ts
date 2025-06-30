@@ -1,4 +1,6 @@
-export const buttonShapeString = `import { Stack, Button, Box } from "@mui/material";
+export const buttonShapeString = `import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Stack from "@mui/material/Stack";
 
 export const ButtonShapePreview = () => {
   return (
@@ -141,4 +143,4 @@ export const ButtonShapePreview = () => {
       </Stack>
     </Box>
   );
-};`
+};`;

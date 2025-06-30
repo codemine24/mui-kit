@@ -4,7 +4,8 @@ import { CodePreviewCopyWrapper } from "@/components/code-preview-copy-wrapper";
 import { CustomBreadCrumbs } from "@/components/core/breadcrumbs";
 import { PageTitle } from "@/components/core/page-title";
 import { SectionTitle } from "@/components/core/section-title";
-import { Box, Divider } from "@mui/material";
+import Box from "@mui/material/Box";
+import Divider from "@mui/material/Divider";
 import { useOnThisPage } from "@/contexts/on-thispage-context";
 
 import {
@@ -16,7 +17,7 @@ import {
   PopoverPositionPreview,
   PopoverPosition2Preview,
   PopoverPosition3Preview,
-  PopoverInfoPreview,
+  PopoverInfoPreview
 } from "../components/popover";
 import {
   popoverBasicString,
@@ -27,7 +28,7 @@ import {
   popoverPositionString,
   popoverPosition2String,
   popoverPosition3String,
-  popoverInfoString,
+  popoverInfoString
 } from "../code-string/popover";
 import { PATHS } from "@/router/paths";
 
@@ -38,67 +39,64 @@ const sections = [
     description:
       "A simple popover design with dummy content. You can replace the content with almost anything.",
     codeString: popoverBasicString,
-    preview: <BasicPopoverPreview />,
+    preview: <BasicPopoverPreview />
   },
   {
     id: "popover-2",
     title: "Hover popover",
     description: "Hover on your target element to show the popover.",
     codeString: popoverHoverString,
-    preview: <PopoverHoverPreview />,
+    preview: <PopoverHoverPreview />
   },
   {
     id: "popover-3",
     title: "Display top",
     description: "Popover will display on top of your target element.",
     codeString: popoverPositionString,
-    preview: <PopoverPositionPreview />,
+    preview: <PopoverPositionPreview />
   },
   {
     id: "popover-4",
     title: "Display center",
     description: "Popover will display on center of your target element.",
     codeString: popoverPosition2String,
-    preview: <PopoverPosition2Preview />,
+    preview: <PopoverPosition2Preview />
   },
   {
     id: "popover-5",
     title: "Display bottom",
     description: "Popover will display on bottom of your target element.",
     codeString: popoverPosition3String,
-    preview: <PopoverPosition3Preview />,
+    preview: <PopoverPosition3Preview />
   },
   {
     id: "popover-6",
     title: "Info popovers",
-    description:
-      "If you want to display quick info, you can go with one of these popovers.",
+    description: "If you want to display quick info, you can go with one of these popovers.",
     codeString: popoverInfoString,
-    preview: <PopoverInfoPreview />,
+    preview: <PopoverInfoPreview />
   },
   {
     id: "popover-7",
     title: "Menu popup",
-    description:
-      "A popover with built in menu items. Ready to use in your application. ",
+    description: "A popover with built in menu items. Ready to use in your application. ",
     codeString: popoverMenuString,
-    preview: <PopoverMenuPreview />,
+    preview: <PopoverMenuPreview />
   },
   {
     id: "popover-8",
     title: "Multi Layer",
     description: "You can hover over and see multiple layers of popovers.",
     codeString: popoverMultiLayerString,
-    preview: <PopoverMultiLayerPreview />,
+    preview: <PopoverMultiLayerPreview />
   },
   {
     id: "popover-9",
     title: "Expand Menu",
-    description:
-      "You can use toggle items inside popover use it as multi layer popover.",
+    description: "You can use toggle items inside popover use it as multi layer popover.",
     codeString: popoverExpandString,
-    preview: <PopoverExpandPreview />,
-  },
+    preview: <PopoverExpandPreview />
+  }
 ];
 
 export const PopoverView = () => {
@@ -113,7 +111,7 @@ export const PopoverView = () => {
       <CustomBreadCrumbs
         pathArr={[
           { label: "Elements", path: PATHS.ELEMENTS.OVERVIEW },
-          { label: "Popover", path: "" },
+          { label: "Popover", path: "" }
         ]}
       />
       <PageTitle
@@ -132,10 +130,7 @@ export const PopoverView = () => {
             id={section.id}
           />
 
-          <CodePreviewCopyWrapper
-            codeString={section.codeString}
-            preview={section.preview}
-          />
+          <CodePreviewCopyWrapper codeString={section.codeString} preview={section.preview} />
         </Box>
       ))}
     </Box>

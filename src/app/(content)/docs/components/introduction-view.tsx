@@ -3,15 +3,13 @@ import { CustomBreadCrumbs } from "@/components/core/breadcrumbs";
 import { PageTitle } from "@/components/core/page-title";
 import { useOnThisPage } from "@/contexts/on-thispage-context";
 import CircleIcon from "@mui/icons-material/Circle";
-import {
-  Box,
-  Divider,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
-  Typography,
-} from "@mui/material";
+import Box from "@mui/material/Box";
+import Divider from "@mui/material/Divider";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import ListItemText from "@mui/material/ListItemText";
+import Typography from "@mui/material/Typography";
 import React from "react";
 
 const sections = [
@@ -19,7 +17,7 @@ const sections = [
   { title: "Composition", id: "composition" },
   { title: "Distribution", id: "distribution" },
   { title: "Beautiful Defaults", id: "beautiful-defaults" },
-  { title: "AI-Ready", id: "ai-ready" },
+  { title: "AI-Ready", id: "ai-ready" }
 ];
 
 export const IntroView = () => {
@@ -33,7 +31,7 @@ export const IntroView = () => {
       <CustomBreadCrumbs
         pathArr={[
           { label: "Docs", path: "/docs/intro" },
-          { label: "Introduction", path: "" },
+          { label: "Introduction", path: "" }
         ]}
       />
       <PageTitle
@@ -42,11 +40,10 @@ export const IntroView = () => {
       />
 
       <Typography variant="body1" sx={{ my: 2 }}>
-        Unlike conventional libraries where you install a package and import
-        components, MUI Kit delivers open, editable code that integrates
-        seamlessly with Material UI’s design system. This approach eliminates
-        the need for workarounds, style overrides, or wrapping components to
-        match your design. MUI Kit is built on the following principles:
+        Unlike conventional libraries where you install a package and import components, MUI Kit
+        delivers open, editable code that integrates seamlessly with Material UI’s design system.
+        This approach eliminates the need for workarounds, style overrides, or wrapping components
+        to match your design. MUI Kit is built on the following principles:
       </Typography>
 
       <Typography id="open-code" variant="h5" fontWeight={600} sx={{ mt: 3 }}>
@@ -54,9 +51,8 @@ export const IntroView = () => {
       </Typography>
       <Divider sx={{ my: 2 }} />
       <Typography variant="body1" sx={{ mb: 1 }}>
-        MUI Kit provides the full source code for every component, giving you
-        complete control to customize and extend them to fit your needs. This
-        means:
+        MUI Kit provides the full source code for every component, giving you complete control to
+        customize and extend them to fit your needs. This means:
       </Typography>
       <List dense>
         <ListItem>
@@ -79,9 +75,8 @@ export const IntroView = () => {
         </ListItem>
       </List>
       <Typography variant="body1" sx={{ mb: 2 }}>
-        With MUI Kit, tweaking a button or creating a new component variant is
-        as simple as editing the code directly—no fighting with external APIs or
-        black-box packages.
+        With MUI Kit, tweaking a button or creating a new component variant is as simple as editing
+        the code directly—no fighting with external APIs or black-box packages.
       </Typography>
 
       <Typography id="composition" variant="h5" fontWeight={600} sx={{ mt: 3 }}>
@@ -89,26 +84,19 @@ export const IntroView = () => {
       </Typography>
       <Divider sx={{ my: 2 }} />
       <Typography variant="body1" sx={{ mb: 2 }}>
-        Every MUI Kit component follows Material UI’s composable interface,
-        ensuring consistency and predictability. Whether you’re using a built-in
-        component or adding a custom one, the shared interface makes integration
-        seamless. This unified approach simplifies development for your team and
-        enables AI tools to work effortlessly with your components.
+        Every MUI Kit component follows Material UI’s composable interface, ensuring consistency and
+        predictability. Whether you’re using a built-in component or adding a custom one, the shared
+        interface makes integration seamless. This unified approach simplifies development for your
+        team and enables AI tools to work effortlessly with your components.
       </Typography>
 
-      <Typography
-        id="distribution"
-        variant="h5"
-        fontWeight={600}
-        sx={{ mt: 3 }}
-      >
+      <Typography id="distribution" variant="h5" fontWeight={600} sx={{ mt: 3 }}>
         Distribution
       </Typography>
       <Divider sx={{ my: 2 }} />
       <Typography variant="body1" sx={{ mb: 1 }}>
-        MUI Kit embraces a copy-and-paste distribution model for ultimate
-        simplicity. No npm installs, no dependencies—just grab the component
-        code and use it. Components are:
+        MUI Kit embraces a copy-and-paste distribution model for ultimate simplicity. No npm
+        installs, no dependencies—just grab the component code and use it. Components are:
       </Typography>
       <List dense>
         <ListItem>
@@ -131,23 +119,17 @@ export const IntroView = () => {
         </ListItem>
       </List>
       <Typography variant="body1" sx={{ mb: 2 }}>
-        You can easily share components across projects or use AI to generate
-        new ones based on MUI Kit’s structure.
+        You can easily share components across projects or use AI to generate new ones based on MUI
+        Kit’s structure.
       </Typography>
 
-      <Typography
-        id="beautiful-defaults"
-        variant="h5"
-        fontWeight={600}
-        sx={{ mt: 3 }}
-      >
+      <Typography id="beautiful-defaults" variant="h5" fontWeight={600} sx={{ mt: 3 }}>
         Beautiful Defaults
       </Typography>
       <Divider sx={{ my: 2 }} />
       <Typography variant="body1" sx={{ mb: 1 }}>
-        MUI Kit components are crafted with Material UI’s design principles,
-        offering polished, responsive designs that look great right away. Key
-        features include:
+        MUI Kit components are crafted with Material UI’s design principles, offering polished,
+        responsive designs that look great right away. Key features include:
       </Typography>
       <List dense>
         <ListItem>
@@ -175,15 +157,13 @@ export const IntroView = () => {
       </Typography>
       <Divider sx={{ my: 2 }} />
       <Typography variant="body1" sx={{ mb: 2 }}>
-        MUI Kit’s open code and consistent Material UI-based structure make it
-        ideal for AI integration. AI models can analyze your components, suggest
-        improvements, or even generate new ones that align with Material UI’s
-        design system.
+        MUI Kit’s open code and consistent Material UI-based structure make it ideal for AI
+        integration. AI models can analyze your components, suggest improvements, or even generate
+        new ones that align with Material UI’s design system.
       </Typography>
       <Typography variant="body1" sx={{ mt: 2 }}>
-        MUI Kit is more than a set of components—it’s a free, open-source
-        toolkit to supercharge your Material UI projects with flexibility,
-        responsiveness, and ease of use.
+        MUI Kit is more than a set of components—it’s a free, open-source toolkit to supercharge
+        your Material UI projects with flexibility, responsiveness, and ease of use.
       </Typography>
     </Box>
   );

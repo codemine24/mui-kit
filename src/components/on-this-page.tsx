@@ -1,14 +1,12 @@
 import { useOnThisPage } from "@/contexts/on-thispage-context";
 import { pxToRem } from "@/utils/pxToRem";
-import {
-  Box,
-  Link,
-  List,
-  ListItem,
-  ListItemText,
-  Typography,
-  useTheme,
-} from "@mui/material";
+import Box from "@mui/material/Box";
+import Link from "@mui/material/Link";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemText from "@mui/material/ListItemText";
+import Typography from "@mui/material/Typography";
+import { useTheme } from "@mui/material/styles";
 import { useEffect, useState } from "react";
 
 export const OnThisPage = () => {
@@ -34,8 +32,7 @@ export const OnThisPage = () => {
             Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, 0)
           );
           const sectionHeight = rect.bottom - rect.top;
-          const visibleRatio =
-            sectionHeight > 0 ? visibleHeight / sectionHeight : 0;
+          const visibleRatio = sectionHeight > 0 ? visibleHeight / sectionHeight : 0;
 
           if (visibleRatio > maxVisibleRatio) {
             maxVisibleRatio = visibleRatio;
@@ -62,7 +59,7 @@ export const OnThisPage = () => {
 
       window.scrollTo({
         top: elementTop - offset,
-        behavior: "smooth",
+        behavior: "smooth"
       });
     }
   };
@@ -73,15 +70,13 @@ export const OnThisPage = () => {
         py: 2,
         width: { md: pxToRem(140), lg: pxToRem(210) },
         height: "90%",
-        flexDirection: "column",
-      }}
-    >
+        flexDirection: "column"
+      }}>
       <Typography
         variant="body2"
         textTransform={"uppercase"}
         fontWeight={600}
-        fontSize={{ xs: 13, sm: 14 }}
-      >
+        fontSize={{ xs: 13, sm: 14 }}>
         On this page
       </Typography>
       <Box
@@ -91,10 +86,9 @@ export const OnThisPage = () => {
           scrollbarWidth: "none",
           msOverflowStyle: "none",
           "&::-webkit-scrollbar": {
-            display: "none",
-          },
-        }}
-      >
+            display: "none"
+          }
+        }}>
         <List dense>
           {sections.map((section) => {
             const isActive = activeSection === section.id;
@@ -104,10 +98,9 @@ export const OnThisPage = () => {
                 disablePadding
                 sx={{
                   "&:hover": {
-                    color: theme.palette.primary.main,
-                  },
-                }}
-              >
+                    color: theme.palette.primary.main
+                  }
+                }}>
                 <ListItemText
                   primary={
                     <Link
@@ -121,14 +114,11 @@ export const OnThisPage = () => {
                         textDecoration: "none",
                         fontWeight: isActive ? 500 : 400,
                         "&:hover": {
-                          color: "text.primary",
+                          color: "text.primary"
                         },
-                        transition: isActive
-                          ? "transform 0.1s ease-in-out"
-                          : "none",
-                        transform: isActive ? "scale(1.05)" : "none",
-                      }}
-                    >
+                        transition: isActive ? "transform 0.1s ease-in-out" : "none",
+                        transform: isActive ? "scale(1.05)" : "none"
+                      }}>
                       {section.title}
                     </Link>
                   }
@@ -144,24 +134,21 @@ export const OnThisPage = () => {
           bgcolor: "background.paper",
           border: `.5px solid`,
           borderColor: "divider",
-          maxWidth: pxToRem(200),
-        }}
-      >
+          maxWidth: pxToRem(200)
+        }}>
         <Typography
           variant="body2"
           color="text.primary"
-          sx={{ mb: 1, fontSize: { md: pxToRem(14), lg: pxToRem(15) } }}
-        >
+          sx={{ mb: 1, fontSize: { md: pxToRem(14), lg: pxToRem(15) } }}>
           We&apos;re looking for sponsors!
         </Typography>
-        <Typography 
+        <Typography
           component={Link}
           href="/contact"
           variant="body2"
           sx={{
-            color: "primary.main",
-          }}
-        >
+            color: "primary.main"
+          }}>
           Support this project
         </Typography>
       </Box>

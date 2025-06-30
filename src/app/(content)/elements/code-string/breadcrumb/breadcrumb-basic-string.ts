@@ -1,6 +1,9 @@
 export const breadcrumbBasicString = `import * as React from "react";
 import Stack from "@mui/material/Stack";
-import { Breadcrumbs, Link, Typography, Divider } from "@mui/material";
+import Breadcrumbs from "@mui/material/Breadcrumbs";
+import Divider from "@mui/material/Divider";
+import Link from "@mui/material/Link";
+import Typography from "@mui/material/Typography";
 
 export const BreadcrumbBasic = () => {
   return (

@@ -1,4 +1,9 @@
-export const breadcrumbShapeString = `import { Breadcrumbs, Box, Link, alpha, styled, Stack, Divider } from "@mui/material";
+export const breadcrumbShapeString = `import Box from "@mui/material/Box";
+import Breadcrumbs from "@mui/material/Breadcrumbs";
+import Divider from "@mui/material/Divider";
+import Link from "@mui/material/Link";
+import Stack from "@mui/material/Stack";
+import { alpha, styled } from "@mui/material/styles";
 import HomeIcon from "@mui/icons-material/Home";
 import CollectionsIcon from "@mui/icons-material/Collections";
 import WebIcon from "@mui/icons-material/Web";
@@ -93,4 +98,4 @@ export const BreadcrumbShape = () => {
         </Stack>
     );
 }
-`
+`;

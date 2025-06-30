@@ -5,7 +5,8 @@ import { PageTitle } from "@/components/core/page-title";
 import { SectionTitle } from "@/components/core/section-title";
 import { useOnThisPage } from "@/contexts/on-thispage-context";
 import { PATHS } from "@/router/paths";
-import { Box, Divider } from "@mui/material";
+import Box from "@mui/material/Box";
+import Divider from "@mui/material/Divider";
 import React from "react";
 import { Accordion1CodeString } from "../code-string/accordion/accordion-1";
 import { Accordion2CodeString } from "../code-string/accordion/accordion-2";
@@ -30,14 +31,14 @@ const sections = [
     title: "Solid background",
     description: "A regular but elegant accordion with solid background color",
     codeString: Accordion1CodeString,
-    preview: <Accordion1 />,
+    preview: <Accordion1 />
   },
   {
     id: "accordion-2",
     title: "Outlined",
     description: "Outlined accordion with custom mui icon",
     codeString: Accordion2CodeString,
-    preview: <Accordion2 />,
+    preview: <Accordion2 />
   },
   {
     id: "accordion-3",
@@ -45,35 +46,35 @@ const sections = [
     description:
       "Use this beautiful accordion if you are looking for an accordion with box shadow.",
     codeString: Accordion3CodeString,
-    preview: <Accordion3 />,
+    preview: <Accordion3 />
   },
   {
     id: "accordion-4",
     title: "Icon left aligned",
     description: "Icon position is different from traditional accordions",
     codeString: Accordion4CodeString,
-    preview: <Accordion4 />,
+    preview: <Accordion4 />
   },
   {
     id: "accordion-5",
     title: "MUI accordion with vertical line",
     description: "Each section has a vertical line to separate them",
     codeString: Accordion5CodeString,
-    preview: <Accordion5 />,
+    preview: <Accordion5 />
   },
   {
     id: "accordion-6",
     title: "Multi colored accordion",
     description: "Each section has a different color",
     codeString: Accordion6CodeString,
-    preview: <Accordion6 />,
+    preview: <Accordion6 />
   },
   {
     id: "accordion-7",
     title: "Two Columns",
     description: "Two column combination.",
     codeString: Accordion7CodeString,
-    preview: <Accordion7 />,
+    preview: <Accordion7 />
   },
   {
     id: "accordion-8",
@@ -81,8 +82,8 @@ const sections = [
     description:
       "In this Material UI accordion variant you can open multiple accordion children at the same time.",
     codeString: Accordion8CodeString,
-    preview: <Accordion8 />,
-  },
+    preview: <Accordion8 />
+  }
 ];
 
 export const AccordionView = () => {
@@ -97,7 +98,7 @@ export const AccordionView = () => {
       <CustomBreadCrumbs
         pathArr={[
           { label: "Elements", path: PATHS.ELEMENTS.OVERVIEW },
-          { label: "Accordion", path: "" },
+          { label: "Accordion", path: "" }
         ]}
       />
       <PageTitle
@@ -115,10 +116,7 @@ export const AccordionView = () => {
             id={section.id}
           />
 
-          <CodePreviewCopyWrapper
-            codeString={section.codeString}
-            preview={section.preview}
-          />
+          <CodePreviewCopyWrapper codeString={section.codeString} preview={section.preview} />
         </Box>
       ))}
     </Box>

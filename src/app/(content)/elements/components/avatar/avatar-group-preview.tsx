@@ -1,12 +1,14 @@
 import * as React from "react";
 import Stack from "@mui/material/Stack";
-import { Avatar, AvatarGroup, Badge } from "@mui/material";
+import Avatar from "@mui/material/Avatar";
+import AvatarGroup from "@mui/material/AvatarGroup";
+import Badge from "@mui/material/Badge";
 import { styled } from "@mui/material/styles";
 
 const SmallAvatar = styled(Avatar)(({ theme }) => ({
   width: 22,
   height: 22,
-  border: `2px solid ${theme.palette.background.paper}`,
+  border: `2px solid ${theme.palette.background.paper}`
 }));
 
 export default function AvatarGroupPreview() {
@@ -16,8 +18,7 @@ export default function AvatarGroupPreview() {
       alignItems="center"
       justifyContent="center"
       sx={{ width: "100%", py: 6 }}
-      spacing={3}
-    >
+      spacing={3}>
       {/* Basic Group */}
       <AvatarGroup max={4}>
         <Avatar alt="Remy Sharp" src="/avatar-1.jpg" />
@@ -28,10 +29,7 @@ export default function AvatarGroupPreview() {
       </AvatarGroup>
 
       {/* Surplus */}
-      <AvatarGroup
-        renderSurplus={(surplus) => <span>+{surplus.toString()[0]}k</span>}
-        total={4251}
-      >
+      <AvatarGroup renderSurplus={(surplus) => <span>+{surplus.toString()[0]}k</span>} total={4251}>
         <Avatar alt="Remy Sharp" src="/avatar-1.jpg" />
         <Avatar alt="Travis Howard" src="/avatar-2.jpg" />
         <Avatar alt="Agnes Walker" />
@@ -50,8 +48,7 @@ export default function AvatarGroupPreview() {
       <Badge
         overlap="circular"
         anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
-        badgeContent={<SmallAvatar alt="Remy Sharp" />}
-      >
+        badgeContent={<SmallAvatar alt="Remy Sharp" />}>
         <Avatar alt="Travis Howard" src="/static/images/avatar/2.jpg" />
       </Badge>
     </Stack>

@@ -4,7 +4,8 @@ import { CustomBreadCrumbs } from "@/components/core/breadcrumbs";
 import { PageTitle } from "@/components/core/page-title";
 import { SectionTitle } from "@/components/core/section-title";
 import { useOnThisPage } from "@/contexts/on-thispage-context";
-import { Box, Divider } from "@mui/material";
+import Box from "@mui/material/Box";
+import Divider from "@mui/material/Divider";
 import React from "react";
 
 import {
@@ -22,7 +23,7 @@ import {
   StepperStaticPreview,
   StepperTimelinePreview,
   StepperWithDescriptionPreview,
-  StepperWithoutLabelPreview,
+  StepperWithoutLabelPreview
 } from "../components/stepper";
 
 import { PATHS } from "@/router/paths";
@@ -41,48 +42,44 @@ import {
   stepperStaticString,
   stepperTimelineString,
   stepperWithDescriptionString,
-  stepperWithoutLabelString,
+  stepperWithoutLabelString
 } from "../code-string/stepper";
 
 const sections = [
   {
     id: "stepper-1",
     title: "Static",
-    description:
-      "Most classic still most commonly used stepper. No fancy styles, simple stepper.",
+    description: "Most classic still most commonly used stepper. No fancy styles, simple stepper.",
     codeString: stepperStaticString,
-    preview: <StepperStaticPreview />,
+    preview: <StepperStaticPreview />
   },
   {
     id: "stepper-2",
     title: "Responsive",
-    description:
-      "Same as static stepper, but it will adjust with most of the website layout.",
+    description: "Same as static stepper, but it will adjust with most of the website layout.",
     codeString: stepperResponsiveString,
-    preview: <StepperResponsivePreview />,
+    preview: <StepperResponsivePreview />
   },
   {
     id: "stepper-3",
     title: "Liner",
-    description:
-      "Spot, connector, and label will always be in linear position. ",
+    description: "Spot, connector, and label will always be in linear position. ",
     codeString: stepperLinerString,
-    preview: <StepperLinerPreview />,
+    preview: <StepperLinerPreview />
   },
   {
     id: "stepper-4",
     title: "Dot",
-    description:
-      "No extra label or fancy style. Simple dot to make the design cleaner. ",
+    description: "No extra label or fancy style. Simple dot to make the design cleaner. ",
     codeString: stepperDotString,
-    preview: <StepperDotPreview />,
+    preview: <StepperDotPreview />
   },
   {
     id: "stepper-5",
     title: "Without Label",
     description: "Simple stepper without label. ",
     codeString: stepperWithoutLabelString,
-    preview: <StepperWithoutLabelPreview />,
+    preview: <StepperWithoutLabelPreview />
   },
   {
     id: "stepper-6",
@@ -90,76 +87,71 @@ const sections = [
     description:
       "Add description with your stepper to help your visitor to understand the message. ",
     codeString: stepperWithDescriptionString,
-    preview: <StepperWithDescriptionPreview />,
+    preview: <StepperWithDescriptionPreview />
   },
   {
     id: "stepper-7",
     title: "Dynamic",
-    description:
-      "This stepper will have different color for active and completed step. ",
+    description: "This stepper will have different color for active and completed step. ",
     codeString: stepperDynamicString,
-    preview: <StepperDynamicPreview />,
+    preview: <StepperDynamicPreview />
   },
   {
     id: "stepper-8",
     title: "Clickable",
-    description:
-      "You can jump between steps by clicking on any specific step. ",
+    description: "You can jump between steps by clicking on any specific step. ",
     codeString: stepperClickableString,
-    preview: <StepperClickablePreview />,
+    preview: <StepperClickablePreview />
   },
   {
     id: "stepper-9",
     title: "Skippable",
     description: "This stepper will allow you to skip any step if you want. ",
     codeString: stepperSkippedString,
-    preview: <StepperSkippedPreview />,
+    preview: <StepperSkippedPreview />
   },
   {
     id: "stepper-10",
     title: "Arrow",
     description: "Use custom arrow icon as connector. ",
     codeString: stepperArrowString,
-    preview: <StepperArrowPreview />,
+    preview: <StepperArrowPreview />
   },
   {
     id: "stepper-11",
     title: "Custom Icon",
     description: "You can use any kind of custom icons as connector. ",
     codeString: stepperCustomIconString,
-    preview: <StepperCustomIconPreview />,
+    preview: <StepperCustomIconPreview />
   },
   {
     id: "stepper-12",
     title: "Vertical",
-    description:
-      "Vertical stepper will allow you to use stepper like a timeline. ",
+    description: "Vertical stepper will allow you to use stepper like a timeline. ",
     codeString: stepperTimelineString,
-    preview: <StepperTimelinePreview />,
+    preview: <StepperTimelinePreview />
   },
   {
     id: "stepper-13",
     title: "Custom Connector Size",
-    description:
-      "You can increase or decrease connector size (width and height). ",
+    description: "You can increase or decrease connector size (width and height). ",
     codeString: stepperCustomConnectorSizeString,
-    preview: <StepperCustomConnectorSizePreview />,
+    preview: <StepperCustomConnectorSizePreview />
   },
   {
     id: "stepper-14",
     title: "Connector Color",
     description: "Use custom color for connector and label. ",
     codeString: stepperConnectorColorString,
-    preview: <StepperConnectorColorPreview />,
+    preview: <StepperConnectorColorPreview />
   },
   {
     id: "stepper-15",
     title: "Custom Element",
-    description:
-      "No only elements, you can use custom elements like image as spot. ",
+    description: "No only elements, you can use custom elements like image as spot. ",
     codeString: stepperCustomElementString,
-    preview: <StepperCustomElementPreview />,
-  },
+    preview: <StepperCustomElementPreview />
+  }
 ];
 
 export const StepperView = () => {
@@ -174,7 +166,7 @@ export const StepperView = () => {
       <CustomBreadCrumbs
         pathArr={[
           { label: "Elements", path: PATHS.ELEMENTS.OVERVIEW },
-          { label: "Stepper", path: "" },
+          { label: "Stepper", path: "" }
         ]}
       />
       <PageTitle
@@ -193,10 +185,7 @@ export const StepperView = () => {
             id={section.id}
           />
 
-          <CodePreviewCopyWrapper
-            codeString={section.codeString}
-            preview={section.preview}
-          />
+          <CodePreviewCopyWrapper codeString={section.codeString} preview={section.preview} />
         </Box>
       ))}
     </Box>

@@ -1,15 +1,11 @@
-import { Stack, Button, Box } from "@mui/material";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Stack from "@mui/material/Stack";
 
 export const ButtonContainedPreview = () => {
   return (
     <Box>
-      <Stack
-        direction="row"
-        spacing={2}
-        flexWrap="wrap"
-        alignItems={"center"}
-        rowGap={2}
-      >
+      <Stack direction="row" spacing={2} flexWrap="wrap" alignItems={"center"} rowGap={2}>
         <Box>
           <Button variant="contained" color="primary">
             Primary
@@ -48,10 +44,9 @@ export const ButtonContainedPreview = () => {
               backgroundColor: "#E60076",
               color: "#ffffff",
               "&:hover": {
-                backgroundColor: "#9b0653",
-              },
-            }}
-          >
+                backgroundColor: "#9b0653"
+              }
+            }}>
             Custom
           </Button>
         </Box>

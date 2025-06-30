@@ -1,29 +1,26 @@
 export const popoverExpandString = `import { useState } from "react";
-import {
-    Button,
-    ClickAwayListener,
-    Popover,
-    MenuList,
-    MenuItem,
-    ListItemText,
-    ListItemIcon,
-    Collapse,
-    Box,
-    Typography
-} from "@mui/material";
-import {
-    ExpandMore as ExpandMoreIcon,
-    ExpandLess as ExpandLessIcon,
-    Home as HomeIcon,
-    Settings as SettingsIcon,
-    Person as PersonIcon,
-    Email as EmailIcon,
-    Help as HelpIcon,
-    Notifications as NotificationIcon,
-    Info as InfoIcon,
-    Security as SecurityIcon,
-    Logout as LogoutIcon
-} from "@mui/icons-material";
+import { useState } from "react";
+import Button from "@mui/material/Button";
+import ClickAwayListener from "@mui/material/ClickAwayListener";
+import Popover from "@mui/material/Popover";
+import MenuList from "@mui/material/MenuList";
+import MenuItem from "@mui/material/MenuItem";
+import ListItemText from "@mui/material/ListItemText";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import Collapse from "@mui/material/Collapse";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import HelpIcon from "@mui/icons-material/Help";
+import NotificationIcon from "@mui/icons-material/Notifications";
+import InfoIcon from "@mui/icons-material/Info";
+import SecurityIcon from "@mui/icons-material/Security";
+import LogoutIcon from "@mui/icons-material/Logout";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import ExpandLessIcon from "@mui/icons-material/ExpandLess";
+import HomeIcon from "@mui/icons-material/Home";
+import SettingsIcon from "@mui/icons-material/Settings";
+import PersonIcon from "@mui/icons-material/Person";
+import EmailIcon from "@mui/icons-material/Email";
 
 type SubMenuItem = {
     id: string;
@@ -211,4 +208,4 @@ export const PopoverExpand = () => {
         </Box>
     );
 };
-`
+`;

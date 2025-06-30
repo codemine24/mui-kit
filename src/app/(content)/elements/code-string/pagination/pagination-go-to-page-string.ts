@@ -1,12 +1,10 @@
 export const paginationGoToPageString = `import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import {
-  Box,
-  Divider,
-  Pagination,
-  PaginationItem,
-  TextField,
-} from "@mui/material";
+import Box from "@mui/material/Box";
+import Divider from "@mui/material/Divider";
+import Pagination from "@mui/material/Pagination";
+import PaginationItem from "@mui/material/PaginationItem";
+import TextField from "@mui/material/TextField";
 import { styled } from "@mui/material/styles";
 import { useState } from "react";
 
@@ -194,4 +192,4 @@ export const PaginationGoToPage = () => {
     </Box>
   );
 };
-`
+`;

@@ -1,7 +1,7 @@
 export const avatarIconString = `
 import * as React from "react";
 import Stack from "@mui/material/Stack";
-import { Avatar } from "@mui/material";
+import Avatar from "@mui/material/Avatar";
 import FaceIcon from "@mui/icons-material/Face";
 import { pink } from "@mui/material/colors";
 import SupervisorAccountIcon from "@mui/icons-material/SupervisorAccount";

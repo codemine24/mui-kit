@@ -1,15 +1,13 @@
 export const cardPricingString = `import React from 'react';
-import {
-    Card,
-    CardContent,
-    Typography,
-    Button,
-    List,
-    ListItem,
-    ListItemIcon,
-    ListItemText,
-    Box
-} from '@mui/material';
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import ListItemText from "@mui/material/ListItemText";
+import Box from "@mui/material/Box";
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked';
 

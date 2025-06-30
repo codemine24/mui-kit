@@ -1,4 +1,7 @@
-export const buttonGradientString = `import { Box, Button, Divider, Stack } from "@mui/material";
+export const buttonGradientString = `import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Divider from "@mui/material/Divider";
+import Stack from "@mui/material/Stack";
 
 export const ButtonGradientPreview = () => {
     return (
@@ -112,4 +115,4 @@ export const ButtonGradientPreview = () => {
             </Stack>
         </Box>
     );
-};`
+};`;

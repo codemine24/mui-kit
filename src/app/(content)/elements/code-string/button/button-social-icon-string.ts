@@ -3,7 +3,9 @@ import XIcon from "@mui/icons-material/X";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import YouTubeIcon from "@mui/icons-material/YouTube";
-import { Box, IconButton, Stack } from "@mui/material";
+import Box from "@mui/material/Box";
+import IconButton from "@mui/material/IconButton";
+import Stack from "@mui/material/Stack";
 import { Icon } from "@iconify/react";
 
 export const ButtonSocialIconPreview = () => {
@@ -137,4 +139,4 @@ export const ButtonSocialIconPreview = () => {
       </Stack>
     </Box>
   );
-};`
+};`;

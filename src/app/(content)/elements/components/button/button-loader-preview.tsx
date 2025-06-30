@@ -1,6 +1,8 @@
-import { Box, Button, Divider, Stack } from "@mui/material";
-import { styled } from "@mui/material/styles";
-import { keyframes } from "@mui/system";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Divider from "@mui/material/Divider";
+import Stack from "@mui/material/Stack";
+import { styled, keyframes } from "@mui/material/styles";
 import { Icon } from "@iconify/react";
 
 const spin = keyframes`
@@ -15,28 +17,24 @@ const spin = keyframes`
 // Styled component for the Loader2 icon
 const SpinningIcon = styled(Icon)({
   animation: `${spin} 1s linear infinite`,
-  fontSize: "24px",
+  fontSize: "24px"
 });
 
 export const ButtonLoaderPreview = () => {
   return (
     <Box>
-      <Stack
-        direction="row"
-        spacing={2}
-        flexWrap="wrap"
-        alignItems={"center"}
-        rowGap={2}
-      >
+      <Stack direction="row" spacing={2} flexWrap="wrap" alignItems={"center"} rowGap={2}>
         <Button
           variant="contained"
           color="primary"
-          startIcon={<SpinningIcon icon="mingcute:loading-fill" />}
-        >
+          startIcon={<SpinningIcon icon="mingcute:loading-fill" />}>
           Loading...
         </Button>
 
-        <Button variant="outlined" color="primary" startIcon={<SpinningIcon icon="mingcute:loading-fill" />}>
+        <Button
+          variant="outlined"
+          color="primary"
+          startIcon={<SpinningIcon icon="mingcute:loading-fill" />}>
           Loading...
         </Button>
 
@@ -45,35 +43,27 @@ export const ButtonLoaderPreview = () => {
             bgcolor: "transparent",
             ":disabled": {
               cursor: "not-allowed",
-              pointerEvents: "all !important",
-            },
+              pointerEvents: "all !important"
+            }
           }}
-          startIcon={<SpinningIcon icon="mingcute:loading-fill" />}
-        >
+          startIcon={<SpinningIcon icon="mingcute:loading-fill" />}>
           Loading...
         </Button>
       </Stack>
 
       <Divider sx={{ my: 2 }} />
 
-      <Stack
-        direction="row"
-        spacing={2}
-        flexWrap="wrap"
-        alignItems={"center"}
-        rowGap={2}
-      >
+      <Stack direction="row" spacing={2} flexWrap="wrap" alignItems={"center"} rowGap={2}>
         <Button
           variant="contained"
           sx={{
             backgroundColor: "#E60076",
             color: "#ffffff",
             "&:hover": {
-              backgroundColor: "#9b0653",
-            },
+              backgroundColor: "#9b0653"
+            }
           }}
-          startIcon={<SpinningIcon icon="mingcute:loading-fill" />}
-        >
+          startIcon={<SpinningIcon icon="mingcute:loading-fill" />}>
           Loading...
         </Button>
 
@@ -82,20 +72,18 @@ export const ButtonLoaderPreview = () => {
           sx={{
             backgroundColor: "transparent",
             borderColor: "#E60076",
-            color: "#E60076",
+            color: "#E60076"
           }}
-          startIcon={<SpinningIcon icon="mingcute:loading-fill" />}
-        >
+          startIcon={<SpinningIcon icon="mingcute:loading-fill" />}>
           Loading...
         </Button>
 
         <Button
           sx={{
             bgcolor: "transparent",
-            color: "#E60076",
+            color: "#E60076"
           }}
-          startIcon={<SpinningIcon icon="mingcute:loading-fill" />}
-        >
+          startIcon={<SpinningIcon icon="mingcute:loading-fill" />}>
           Loading...
         </Button>
       </Stack>

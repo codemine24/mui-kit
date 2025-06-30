@@ -1,6 +1,6 @@
 import * as React from "react";
 import Stack from "@mui/material/Stack";
-import { Avatar } from "@mui/material";
+import Avatar from "@mui/material/Avatar";
 import { pink } from "@mui/material/colors";
 
 export default function AvatarLetterPreview() {
@@ -10,8 +10,7 @@ export default function AvatarLetterPreview() {
       alignItems="center"
       justifyContent="center"
       sx={{ width: "100%", py: 6 }}
-      spacing={3}
-    >
+      spacing={3}>
       {/* Custom Letter */}
       <Avatar alt="John Doe" sx={{ bgcolor: pink[500] }}>
         R
@@ -30,11 +29,9 @@ export default function AvatarLetterPreview() {
         alt="John Doe"
         variant="square"
         sx={{
-          clipPath:
-            "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
-          bgcolor: "blue",
-        }}
-      >
+          clipPath: "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
+          bgcolor: "blue"
+        }}>
         JN
       </Avatar>
     </Stack>

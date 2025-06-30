@@ -1,4 +1,5 @@
-export const OTPUnderlinedString = `import { Box, TextField } from "@mui/material";
+export const OTPUnderlinedString = `import Box from "@mui/material/Box";
+import TextField from "@mui/material/TextField";
 import { useRef, useState } from "react";
 
 const length = 6;

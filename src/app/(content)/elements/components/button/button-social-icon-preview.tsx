@@ -3,19 +3,15 @@ import XIcon from "@mui/icons-material/X";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import YouTubeIcon from "@mui/icons-material/YouTube";
-import { Box, IconButton, Stack } from "@mui/material";
+import Box from "@mui/material/Box";
+import IconButton from "@mui/material/IconButton";
+import Stack from "@mui/material/Stack";
 import { Icon } from "@iconify/react";
 
 export const ButtonSocialIconPreview = () => {
   return (
     <Box>
-      <Stack
-        direction="row"
-        spacing={2}
-        rowGap={2}
-        flexWrap="wrap"
-        alignItems="center"
-      >
+      <Stack direction="row" spacing={2} rowGap={2} flexWrap="wrap" alignItems="center">
         {/* Facebook */}
         <IconButton
           sx={{
@@ -26,10 +22,9 @@ export const ButtonSocialIconPreview = () => {
             backgroundColor: "#4372d6",
             padding: 1,
             "&:hover": {
-              backgroundColor: "#1F56CC",
-            },
-          }}
-        >
+              backgroundColor: "#1F56CC"
+            }
+          }}>
           <FacebookIcon />
         </IconButton>
 
@@ -43,10 +38,9 @@ export const ButtonSocialIconPreview = () => {
             backgroundColor: "#cf2849",
             padding: 1,
             "&:hover": {
-              backgroundColor: "#FF0033",
-            },
-          }}
-        >
+              backgroundColor: "#FF0033"
+            }
+          }}>
           <YouTubeIcon />
         </IconButton>
 
@@ -60,10 +54,9 @@ export const ButtonSocialIconPreview = () => {
             backgroundColor: "#000",
             padding: 1,
             "&:hover": {
-              backgroundColor: "#333",
-            },
-          }}
-        >
+              backgroundColor: "#333"
+            }
+          }}>
           <TwitterIcon />
         </IconButton>
 
@@ -77,10 +70,9 @@ export const ButtonSocialIconPreview = () => {
             backgroundColor: "#000",
             padding: 1,
             "&:hover": {
-              backgroundColor: "#333",
-            },
-          }}
-        >
+              backgroundColor: "#333"
+            }
+          }}>
           <XIcon />
         </IconButton>
 
@@ -94,10 +86,9 @@ export const ButtonSocialIconPreview = () => {
             backgroundColor: "#FF4740",
             padding: 1,
             "&:hover": {
-              backgroundColor: "#de0b04",
-            },
-          }}
-        >
+              backgroundColor: "#de0b04"
+            }
+          }}>
           <Icon icon="mdi:instagram" />
         </IconButton>
 
@@ -111,10 +102,9 @@ export const ButtonSocialIconPreview = () => {
             backgroundColor: "#2c8fc4",
             padding: 1,
             "&:hover": {
-              backgroundColor: "#005580",
-            },
-          }}
-        >
+              backgroundColor: "#005580"
+            }
+          }}>
           <LinkedInIcon />
         </IconButton>
 
@@ -128,10 +118,9 @@ export const ButtonSocialIconPreview = () => {
             backgroundColor: "#de0b04",
             padding: 1,
             "&:hover": {
-              backgroundColor: "#FF0033",
-            },
-          }}
-        >
+              backgroundColor: "#FF0033"
+            }
+          }}>
           <Icon icon="mdi:pinterest" />
         </IconButton>
       </Stack>

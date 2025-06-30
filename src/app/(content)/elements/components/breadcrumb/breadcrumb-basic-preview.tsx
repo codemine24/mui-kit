@@ -1,6 +1,9 @@
 import * as React from "react";
 import Stack from "@mui/material/Stack";
-import { Breadcrumbs, Link, Typography, Divider } from "@mui/material";
+import Breadcrumbs from "@mui/material/Breadcrumbs";
+import Divider from "@mui/material/Divider";
+import Link from "@mui/material/Link";
+import Typography from "@mui/material/Typography";
 
 export const BreadcrumbBasicPreview = () => {
   return (
@@ -9,9 +12,7 @@ export const BreadcrumbBasicPreview = () => {
       alignItems="center"
       justifyContent="center"
       sx={{ width: "100%", py: 6 }}
-      spacing={2}
-    >
-
+      spacing={2}>
       <Breadcrumbs aria-label="breadcrumb">
         <Link underline="hover" color="inherit" href="#">
           MUI Kit
@@ -33,6 +34,6 @@ export const BreadcrumbBasicPreview = () => {
         </Link>
         <Typography sx={{ fontWeight: "medium" }}>Breadcrumbs</Typography>
       </Breadcrumbs>
-    </Stack >
+    </Stack>
   );
-}
+};

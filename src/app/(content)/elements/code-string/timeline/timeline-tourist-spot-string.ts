@@ -1,20 +1,16 @@
-export const timelineTouristSpotString = `import {
-    Box,
-    Typography,
-    useMediaQuery,
-    useTheme,
-    Button,
-} from '@mui/material';
-import {
-    Timeline,
-    TimelineItem,
-    TimelineSeparator,
-    TimelineDot,
-    TimelineConnector,
-    TimelineContent,
-    TimelineOppositeContent,
-} from '@mui/lab';
-import { ArrowRight } from '@mui/icons-material';
+export const timelineTouristSpotString = `import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme } from "@mui/material/styles";
+import Button from "@mui/material/Button";
+import Timeline from "@mui/lab/Timeline";
+import TimelineItem from "@mui/lab/TimelineItem";
+import TimelineSeparator from "@mui/lab/TimelineSeparator";
+import TimelineDot from "@mui/lab/TimelineDot";
+import TimelineConnector from "@mui/lab/TimelineConnector";
+import TimelineContent from "@mui/lab/TimelineContent";
+import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
+import ArrowRight from "@mui/icons-material/ArrowRight";
 
 const timelineItems = [
     {
@@ -90,4 +86,4 @@ export function TimelineTouristSpot() {
             </Timeline>
         </Box>
     );
-}`
+}`;

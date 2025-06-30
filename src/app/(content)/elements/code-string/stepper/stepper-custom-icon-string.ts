@@ -1,10 +1,14 @@
-export const stepperCustomIconString = `import { Stepper, Step, StepLabel, Box, Button } from '@mui/material';
-import { StepIconProps } from '@mui/material/StepIcon';
-import HomeIcon from '@mui/icons-material/Home';
-import SettingsIcon from '@mui/icons-material/Settings';
-import React from 'react';
-import { styled } from '@mui/material/styles';
-import PersonIcon from '@mui/icons-material/Person';
+export const stepperCustomIconString = `import React from "react";
+import Stepper from "@mui/material/Stepper";
+import Step from "@mui/material/Step";
+import StepLabel from "@mui/material/StepLabel";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import { StepIconProps } from "@mui/material/StepIcon";
+import HomeIcon from "@mui/icons-material/Home";
+import SettingsIcon from "@mui/icons-material/Settings";
+import { styled } from "@mui/material/styles";
+import PersonIcon from "@mui/icons-material/Person";
 
 const steps = [
     { label: 'Home', icon: HomeIcon },
@@ -59,7 +63,10 @@ export const StepperCustomIcon = () => {
             <Stepper activeStep={activeStep} alternativeLabel>
                 {steps.map((step) => (
                     <Step key={step.label}>
-                        <StepLabel StepIconComponent={CustomStepIcon(steps.map(s => s.icon))}>
+                        <StepLabel
+                            slots={{
+                                stepIcon: CustomStepIcon(steps.map((s) => s.icon))
+                            }}>
                             {step.label}
                         </StepLabel>
                     </Step>
@@ -90,4 +97,4 @@ export const StepperCustomIcon = () => {
         </Box>
     );
 }
-`
+`;

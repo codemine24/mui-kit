@@ -1,7 +1,11 @@
-export const cardBasic2String = `import { Card, CardContent, IconButton, Stack, Typography } from "@mui/material";
-import { CardGiftcard } from "@mui/icons-material";
-import { Button } from "@mui/material";
-import { ChevronRight } from "@mui/icons-material";
+export const cardBasic2String = `import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import IconButton from "@mui/material/IconButton";
+import Stack from "@mui/material/Stack";
+import Typography from "@mui/material/Typography";
+import CardGiftcard from "@mui/icons-material/CardGiftcard";
+import Button from "@mui/material/Button";
+import ChevronRight from "@mui/icons-material/ChevronRight";
 
 export const CardBasic2 = () => {
     return (

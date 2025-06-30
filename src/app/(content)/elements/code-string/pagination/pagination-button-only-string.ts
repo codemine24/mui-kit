@@ -5,8 +5,9 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import { Divider } from "@mui/material";
-import { ChevronLeft, ChevronRight } from "@mui/icons-material";
+import Divider from "@mui/material/Divider";
+import ChevronLeft from "@mui/icons-material/ChevronLeft";
+import ChevronRight from "@mui/icons-material/ChevronRight";
 
 const totalCount = 100;
 const rowsPerPage = 10;

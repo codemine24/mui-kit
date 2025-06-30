@@ -1,12 +1,13 @@
-export const timelineAvatarString = `import { Avatar, Card, CardContent, Typography } from "@mui/material";
-import {
-  Timeline,
-  TimelineItem,
-  TimelineSeparator,
-  TimelineConnector,
-  TimelineContent,
-  TimelineOppositeContent,
-} from "@mui/lab";
+export const timelineAvatarString = `import Avatar from "@mui/material/Avatar";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import Typography from "@mui/material/Typography";
+import Timeline from "@mui/lab/Timeline";
+import TimelineConnector from "@mui/lab/TimelineConnector";
+import TimelineContent from "@mui/lab/TimelineContent";
+import TimelineItem from "@mui/lab/TimelineItem";
+import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
+import TimelineSeparator from "@mui/lab/TimelineSeparator";
 
 const timelineData = [
   {
@@ -94,4 +95,4 @@ export function TimelineAvatarPreview() {
       ))}
     </Timeline>
   );
-}`
+}`;

@@ -5,7 +5,8 @@ import { CustomBreadCrumbs } from "@/components/core/breadcrumbs";
 import { PageTitle } from "@/components/core/page-title";
 import { SectionTitle } from "@/components/core/section-title";
 import { useOnThisPage } from "@/contexts/on-thispage-context";
-import { Box, Divider } from "@mui/material";
+import Box from "@mui/material/Box";
+import Divider from "@mui/material/Divider";
 import React from "react";
 import {
   cardBasic2String,
@@ -75,59 +76,57 @@ const sections = [
     title: "Simple Card",
     description: "Very simple card without any distraction",
     codeString: cardBasicString,
-    preview: <CardBasicPreview />,
+    preview: <CardBasicPreview />
   },
   {
     id: "basic-card-2",
     title: "Action button Card",
     description: "Use this simple card with a tiny action button",
     codeString: cardBasic2String,
-    preview: <CardBasic2Preview />,
+    preview: <CardBasic2Preview />
   },
   {
     id: "basic-card-3",
     title: "Button Card",
     description: "A solid card with simple button. ",
     codeString: cardBasic3String,
-    preview: <CardBasic3Preview />,
+    preview: <CardBasic3Preview />
   },
   {
     id: "basic-card-4",
     title: "Footer Card",
     description: "A simple card with elegant footer",
     codeString: cardBasic4String,
-    preview: <CardBasic4Preview />,
+    preview: <CardBasic4Preview />
   },
   {
     id: "basic-card-5",
     title: "Header Card",
     description: "Basic card with simple header",
     codeString: cardBasic5String,
-    preview: <CardBasic5Preview />,
+    preview: <CardBasic5Preview />
   },
 
   {
     id: "vertical-card-1",
     title: "Vertical Image Card",
-    description:
-      "Simple vertical card with image. Mostly used for product card",
+    description: "Simple vertical card with image. Mostly used for product card",
     codeString: cardImageString,
-    preview: <CardImagePreview />,
+    preview: <CardImagePreview />
   },
   {
     id: "horizontal-card",
     title: "Horizontal Image Card",
-    description:
-      "Horizontal image with left image and right text designed with material ui only. ",
+    description: "Horizontal image with left image and right text designed with material ui only. ",
     codeString: cardHorizontalString,
-    preview: <CardHorizontalPreview />,
+    preview: <CardHorizontalPreview />
   },
   {
     id: "card-image-2",
     title: "Horizontal Image Card",
     description: "Simple horizontal card with image and perfect for blog card",
     codeString: cardImage2String,
-    preview: <CardImage2Preview />,
+    preview: <CardImage2Preview />
   },
   {
     id: "grid-card",
@@ -135,14 +134,14 @@ const sections = [
     description:
       "Card with multiple grid layout perfect to display your service or product overview.",
     codeString: cardGridString,
-    preview: <CardGridPreview />,
+    preview: <CardGridPreview />
   },
   {
     id: "list-card-1",
     title: "List Card",
     description: "List card is perfect to display product or service preview. ",
     codeString: cardListString,
-    preview: <CardListPreview />,
+    preview: <CardListPreview />
   },
   {
     id: "pricing-card-1",
@@ -150,15 +149,14 @@ const sections = [
     description:
       "Simple pricing card to display your product or service price designed with material ui only. ",
     codeString: cardPricingString,
-    preview: <CardPricingPreview />,
+    preview: <CardPricingPreview />
   },
   {
     id: "profile-card-1",
     title: "Profile card with menu popover",
-    description:
-      "Use this profile menu popover card to display user profile info. ",
+    description: "Use this profile menu popover card to display user profile info. ",
     codeString: cardProfileString,
-    preview: <CardProfilePreview />,
+    preview: <CardProfilePreview />
   },
 
   {
@@ -166,31 +164,28 @@ const sections = [
     title: "Square profile card",
     description: "Another profile card variant with square shape image. ",
     codeString: cardProfile2String,
-    preview: <CardProfile2Preview />,
+    preview: <CardProfile2Preview />
   },
   {
     id: "profile-card-3",
     title: "Rounded Profile Card",
-    description:
-      "Profile card with rounded image perfect for simple design layout. ",
+    description: "Profile card with rounded image perfect for simple design layout. ",
     codeString: cardProfile3String,
-    preview: <CardProfile3Preview />,
+    preview: <CardProfile3Preview />
   },
   {
     id: "download-card",
     title: "Download Card",
-    description:
-      "Use this simple download card to preview your app download links. ",
+    description: "Use this simple download card to preview your app download links. ",
     codeString: cardDownloadString,
-    preview: <CardDownloadPreview />,
+    preview: <CardDownloadPreview />
   },
   {
     id: "property-card-1",
     title: "Simple property card",
-    description:
-      "Add this simple property card to display basic property info. ",
+    description: "Add this simple property card to display basic property info. ",
     codeString: cardPropertyString,
-    preview: <CardPropertyPreview />,
+    preview: <CardPropertyPreview />
   },
   {
     id: "property-card-2",
@@ -198,7 +193,7 @@ const sections = [
     description:
       "Display property information more detailed with this property card designed with material ui. ",
     codeString: cardProperty2String,
-    preview: <CardProperty2Preview />,
+    preview: <CardProperty2Preview />
   },
   {
     id: "card-with-image-3",
@@ -206,14 +201,14 @@ const sections = [
     description:
       "Another simple card variant with bottom image. It's a little bit different but still useful for blog or product card.",
     codeString: cardBottomImageString,
-    preview: <CardBottomImagePreview />,
+    preview: <CardBottomImagePreview />
   },
   {
     id: "error-card-1",
     title: "Error Card",
     description: "A simple material ui card with error alert on top.",
     codeString: cardErrorString,
-    preview: <CardErrorPreview />,
+    preview: <CardErrorPreview />
   },
   {
     id: "e-commerce-card-1",
@@ -221,7 +216,7 @@ const sections = [
     description:
       "Another simple product card with pricing chip. Perfect for e-commerce website uses. ",
     codeString: cardECommerceString,
-    preview: <CardECommercePreview />,
+    preview: <CardECommercePreview />
   },
   {
     id: "product-card",
@@ -229,23 +224,21 @@ const sections = [
     description:
       "Simple but powerful product preview card. Perfect for e-commerce/ digital product website.",
     codeString: cardProductString,
-    preview: <CardProductPreview />,
+    preview: <CardProductPreview />
   },
   {
     id: "product-card-2",
     title: "Product preview card v2",
-    description:
-      "Another version of product preview card with add to cart button.",
+    description: "Another version of product preview card with add to cart button.",
     codeString: cardProduct2String,
-    preview: <CardProduct2Preview />,
+    preview: <CardProduct2Preview />
   },
   {
     id: "review-card",
     title: "Review card",
-    description:
-      "Another review card with simple image and exiting bottom div.",
+    description: "Another review card with simple image and exiting bottom div.",
     codeString: cardReviewString,
-    preview: <CardReviewPreview />,
+    preview: <CardReviewPreview />
   },
 
   {
@@ -253,7 +246,7 @@ const sections = [
     title: "Blog card",
     description: "Another blog archive card with simple image and basic info",
     codeString: cardBlogString,
-    preview: <CardBlogPreview />,
+    preview: <CardBlogPreview />
   },
   {
     id: "card-testimonial",
@@ -261,30 +254,29 @@ const sections = [
     description:
       "Testimonial card to display customer review and feedback. Fully customizable and designed with material ui.",
     codeString: cardTestimonialString,
-    preview: <CardTestimonialPreview />,
+    preview: <CardTestimonialPreview />
   },
   {
     id: "card-image-bg",
     title: "Image in background card",
-    description:
-      "This background image card is perfect for blog or product preview. ",
+    description: "This background image card is perfect for blog or product preview. ",
     codeString: cardImageBgString,
-    preview: <CardImageBgPreview />,
+    preview: <CardImageBgPreview />
   },
   {
     id: "card-image-bg-2",
     title: "Blog image card",
     description: "Unique blog card with image in background",
     codeString: cardImageBg2String,
-    preview: <CardImageBg2Preview />,
+    preview: <CardImageBg2Preview />
   },
   {
     id: "card-image-bg-3",
     title: "Forest card",
     description: "Multipurpose card with image in background.",
     codeString: cardImageBg3String,
-    preview: <CardImageBg3Preview />,
-  },
+    preview: <CardImageBg3Preview />
+  }
 ];
 
 export const CardView = () => {
@@ -299,7 +291,7 @@ export const CardView = () => {
       <CustomBreadCrumbs
         pathArr={[
           { label: "Elements", path: PATHS.ELEMENTS.OVERVIEW },
-          { label: "Card", path: "" },
+          { label: "Card", path: "" }
         ]}
       />
       <PageTitle
@@ -318,10 +310,7 @@ export const CardView = () => {
             id={section.id}
           />
 
-          <CodePreviewCopyWrapper
-            codeString={section.codeString}
-            preview={section.preview}
-          />
+          <CodePreviewCopyWrapper codeString={section.codeString} preview={section.preview} />
         </Box>
       ))}
     </Box>

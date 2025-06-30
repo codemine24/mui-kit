@@ -1,6 +1,8 @@
 export const breadcrumbIconString = `import * as React from "react";
 import Stack from "@mui/material/Stack";
-import { Breadcrumbs, Link, Typography } from "@mui/material";
+import Breadcrumbs from "@mui/material/Breadcrumbs";
+import Link from "@mui/material/Link";
+import Typography from "@mui/material/Typography";
 import HomeIcon from "@mui/icons-material/Home";
 import HubIcon from "@mui/icons-material/Hub";
 import ApiIcon from "@mui/icons-material/Api";
@@ -43,4 +45,4 @@ export const BreadcrumbIcon = () => {
     </Stack>
   );
 }
-`
+`;

@@ -1,10 +1,10 @@
-import { keyframes } from "@emotion/react";
 import DoneAllIcon from "@mui/icons-material/DoneAll";
 import EmergencyShareIcon from "@mui/icons-material/EmergencyShare";
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
-import { alpha, Box } from "@mui/material";
+import Box from "@mui/material/Box";
 import Alert from "@mui/material/Alert";
 import Stack from "@mui/material/Stack";
+import { alpha, keyframes } from "@mui/material/styles";
 
 export default function SoftAlerts() {
   return (
@@ -26,11 +26,7 @@ export default function SoftAlerts() {
         This is a without icon Alert.
       </Alert>
       {/* Rounded */}
-      <Alert
-        severity="warning"
-        icon={<HelpOutlineIcon />}
-        sx={{ borderRadius: "50px" }}
-      >
+      <Alert severity="warning" icon={<HelpOutlineIcon />} sx={{ borderRadius: "50px" }}>
         This is a rounded Alert.
       </Alert>
       {/* Custom color */}
@@ -40,17 +36,15 @@ export default function SoftAlerts() {
           backgroundColor: alpha("#e600e6", 0.08),
           color: "#e600e6",
           "& .MuiAlert-icon": {
-            color: "#e600e6",
-          },
-        }}
-      >
+            color: "#e600e6"
+          }
+        }}>
         This is a custom color Alert.
       </Alert>
       {/* Center aligned */}
       <Alert
         severity="success"
-        sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}
-      >
+        sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
         This is a center-aligned Alert.
       </Alert>
       {/* Right aligned */}
@@ -59,9 +53,8 @@ export default function SoftAlerts() {
         icon={false}
         sx={{
           justifyContent: "flex-end",
-          textAlign: "right",
-        }}
-      >
+          textAlign: "right"
+        }}>
         <Box sx={{ display: "flex", alignItems: "center", gap: 1.5 }}>
           <span>This is a right-aligned alert</span>
           <EmergencyShareIcon sx={{ color: "info.main" }} />
@@ -73,10 +66,9 @@ export default function SoftAlerts() {
         severity="warning"
         sx={{
           "& .MuiAlert-icon": {
-            animation: `${bounce} 1s infinite ease alternate`,
-          },
-        }}
-      >
+            animation: `${bounce} 1s infinite ease alternate`
+          }
+        }}>
         This is a animated Alert.
       </Alert>
 
@@ -88,22 +80,20 @@ export default function SoftAlerts() {
           backgroundColor: alpha("#0000ff", 0.08),
           color: "#0000ff",
           "& .MuiAlert-icon": {
-            color: "#0000ff",
-          },
-        }}
-      >
+            color: "#0000ff"
+          }
+        }}>
         This is a custom color Alert.
       </Alert>
       {/* Alert with external link */}
       <Alert severity="warning">
-        This is an external link 
+        This is an external link
         <Box
           component={"a"}
           href="https://www.codeminetechnologies.com/"
           target="_blank"
           rel="noopener noreferrer"
-          sx={{ textDecoration: "underline", color: "inherit", ml: 1 }}
-        >
+          sx={{ textDecoration: "underline", color: "inherit", ml: 1 }}>
           Click here
         </Box>
       </Alert>

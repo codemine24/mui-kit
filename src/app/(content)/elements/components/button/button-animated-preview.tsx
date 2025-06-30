@@ -1,8 +1,12 @@
 "use client";
 
-import { AutoAwesome } from "@mui/icons-material";
-import { Box, Button, Divider, Stack, Typography } from "@mui/material";
-import { keyframes } from "@mui/system";
+import AutoAwesome from "@mui/icons-material/AutoAwesome";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Divider from "@mui/material/Divider";
+import Stack from "@mui/material/Stack";
+import Typography from "@mui/material/Typography";
+import { keyframes } from "@mui/material/styles";
 import { useState } from "react";
 
 // Keyframes for conic border animation
@@ -27,10 +31,9 @@ export const ButtonAnimatedPreview = () => {
           sx={{
             transition: "all 0.3s ease",
             "&:hover": {
-              boxShadow: "0 8px 16px rgba(0,0,0,0.3)",
-            },
-          }}
-        >
+              boxShadow: "0 8px 16px rgba(0,0,0,0.3)"
+            }
+          }}>
           Hover me
         </Button>
 
@@ -39,10 +42,9 @@ export const ButtonAnimatedPreview = () => {
           sx={{
             transition: "transform 0.3s ease",
             "&:hover": {
-              transform: "scale(1.1)",
-            },
-          }}
-        >
+              transform: "scale(1.1)"
+            }
+          }}>
           Hover me
         </Button>
 
@@ -51,10 +53,9 @@ export const ButtonAnimatedPreview = () => {
           sx={{
             transition: "transform 0.3s ease",
             "&:hover": {
-              transform: "scale(0.9)",
-            },
-          }}
-        >
+              transform: "scale(0.9)"
+            }
+          }}>
           Hover me
         </Button>
 
@@ -64,10 +65,9 @@ export const ButtonAnimatedPreview = () => {
             transition: "transform 0.3s ease, box-shadow 0.3s ease",
             "&:hover": {
               transform: "translateY(-4px)",
-              boxShadow: "0 6px 12px rgba(0,0,0,0.2)",
-            },
-          }}
-        >
+              boxShadow: "0 6px 12px rgba(0,0,0,0.2)"
+            }
+          }}>
           Hover me
         </Button>
 
@@ -77,10 +77,9 @@ export const ButtonAnimatedPreview = () => {
             transition: "transform 0.3s ease, box-shadow 0.3s ease",
             "&:hover": {
               transform: "translateY(4px)",
-              boxShadow: "0 -6px 12px rgba(0,0,0,0.2)",
-            },
-          }}
-        >
+              boxShadow: "0 -6px 12px rgba(0,0,0,0.2)"
+            }
+          }}>
           Hover me
         </Button>
 
@@ -95,10 +94,9 @@ export const ButtonAnimatedPreview = () => {
             transition: "all 0.3s ease",
             "&:hover": {
               bgcolor: "primary.main",
-              color: "white",
-            },
-          }}
-        >
+              color: "white"
+            }
+          }}>
           Hover me
         </Button>
 
@@ -118,16 +116,15 @@ export const ButtonAnimatedPreview = () => {
               height: "100%",
               backgroundColor: "primary.main",
               zIndex: -1,
-              transition: "width 0.3s ease",
+              transition: "width 0.3s ease"
             },
             "&:hover::after": {
-              width: "100%",
+              width: "100%"
             },
             "&:hover": {
-              color: "#ffffff",
-            },
-          }}
-        >
+              color: "#ffffff"
+            }
+          }}>
           Hover me
         </Button>
 
@@ -147,16 +144,15 @@ export const ButtonAnimatedPreview = () => {
               height: "0",
               backgroundColor: "primary.main",
               zIndex: -1,
-              transition: "height 0.3s ease",
+              transition: "height 0.3s ease"
             },
             "&:hover::after": {
-              height: "100%",
+              height: "100%"
             },
             "&:hover": {
-              color: "#ffffff",
-            },
-          }}
-        >
+              color: "#ffffff"
+            }
+          }}>
           Hover me
         </Button>
 
@@ -176,29 +172,22 @@ export const ButtonAnimatedPreview = () => {
               height: "0",
               backgroundColor: "primary.main",
               zIndex: -1,
-              transition: "height 0.3s ease",
+              transition: "height 0.3s ease"
             },
             "&:hover::after": {
-              height: "100%",
+              height: "100%"
             },
             "&:hover": {
-              color: "#ffffff",
-            },
-          }}
-        >
+              color: "#ffffff"
+            }
+          }}>
           Hover me
         </Button>
       </Stack>
 
       <Divider sx={{ my: 2 }} />
 
-      <Stack
-        direction="row"
-        spacing={2}
-        rowGap={2}
-        flexWrap="wrap"
-        alignItems="center"
-      >
+      <Stack direction="row" spacing={2} rowGap={2} flexWrap="wrap" alignItems="center">
         {/* Conic gradient border */}
         <Box
           sx={{
@@ -213,10 +202,9 @@ export const ButtonAnimatedPreview = () => {
             maxWidth: "100%",
             "&:hover .conic-border": {
               animation: `${rotate} 2s linear infinite`,
-              opacity: 1,
-            },
-          }}
-        >
+              opacity: 1
+            }
+          }}>
           {/* Conic gradient border layer */}
           <Box
             className="conic-border"
@@ -227,12 +215,11 @@ export const ButtonAnimatedPreview = () => {
               left: "50%",
               width: "100%",
               aspectRatio: "1",
-              background:
-                "conic-gradient(transparent 270deg, white, transparent)",
+              background: "conic-gradient(transparent 270deg, white, transparent)",
               transform: "translate(-50%, -50%) scale(1.4)",
               opacity: 0,
               transition: "opacity 0.3s ease-in-out",
-              zIndex: 1,
+              zIndex: 1
             }}
           />
 
@@ -244,7 +231,7 @@ export const ButtonAnimatedPreview = () => {
               inset: "var(--offset)",
               borderRadius: "inherit",
               backgroundColor: "#6B32FC",
-              zIndex: 2,
+              zIndex: 2
             }}
           />
 
@@ -259,9 +246,8 @@ export const ButtonAnimatedPreview = () => {
               color: "white",
               fontSize: "1rem",
               background: "transparent",
-              "&:hover": { backgroundColor: "transparent" },
-            }}
-          >
+              "&:hover": { backgroundColor: "transparent" }
+            }}>
             Hello
           </Button>
         </Box>
@@ -279,9 +265,8 @@ export const ButtonAnimatedPreview = () => {
             display: "flex",
             alignItems: "center",
             cursor: "pointer",
-            transition: "background-color 0.3s ease-in-out",
-          }}
-        >
+            transition: "background-color 0.3s ease-in-out"
+          }}>
           <Box
             sx={{
               position: "absolute",
@@ -294,9 +279,8 @@ export const ButtonAnimatedPreview = () => {
               alignItems: "center",
               justifyContent: "center",
               transform: isToggled ? "translateX(32px)" : "translateX(0)",
-              transition: "transform 0.3s ease-in-out",
-            }}
-          >
+              transition: "transform 0.3s ease-in-out"
+            }}>
             {isToggled ? (
               <Typography
                 variant="body1"
@@ -306,9 +290,8 @@ export const ButtonAnimatedPreview = () => {
                   fontSize: "1rem",
                   display: "flex",
                   alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
+                  justifyContent: "center"
+                }}>
                 +
               </Typography>
             ) : (
@@ -320,9 +303,8 @@ export const ButtonAnimatedPreview = () => {
                   fontSize: "1rem",
                   display: "flex",
                   alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
+                  justifyContent: "center"
+                }}>
                 -
               </Typography>
             )}

@@ -1,16 +1,14 @@
-export const stepperCustomElementString = `import React from 'react';
-import {
-    Stepper,
-    Step,
-    StepLabel,
-    Box,
-    Button,
-} from '@mui/material';
-import HomeIcon from '@mui/icons-material/Home';
-import SettingsIcon from '@mui/icons-material/Settings';
-import { styled } from '@mui/material/styles';
-import { StepIconProps } from '@mui/material/StepIcon';
-import Image from 'next/image';
+export const stepperCustomElementString = `import React from "react";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Stepper from "@mui/material/Stepper";
+import Step from "@mui/material/Step";
+import StepLabel from "@mui/material/StepLabel";
+import HomeIcon from "@mui/icons-material/Home";
+import SettingsIcon from "@mui/icons-material/Settings";
+import { styled } from "@mui/material/styles";
+import { StepIconProps } from "@mui/material/StepIcon";
+import Image from "next/image";
 
 const steps = [
     { label: 'Home', icon: HomeIcon },
@@ -93,4 +91,4 @@ export const StepperCustomElement = () => {
         </Box>
     );
 };
-`
+`;

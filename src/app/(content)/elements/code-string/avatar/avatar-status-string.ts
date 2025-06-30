@@ -1,13 +1,15 @@
-export const  avatarStatusString = `
+export const avatarStatusString = `
 import * as React from "react";
 import Stack from "@mui/material/Stack";
-import { Avatar, Badge, Box } from "@mui/material";
+import Avatar from "@mui/material/Avatar";
+import Badge, { badgeClasses } from "@mui/material/Badge";
+import Box from "@mui/material/Box";
 import { styled } from "@mui/material/styles";
 
 const squareAvatarSrc = "/images/avatar-2.png";
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
-  "& .MuiBadge-badge": {
+  [\`& .\${badgeClasses.badge}\`]: {
     backgroundColor: "#44b700",
     color: "#44b700",
     boxShadow: \`0 0 0 2px \${theme.palette.background.paper}\`,
@@ -20,19 +22,19 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
       borderRadius: "50%",
       animation: "ripple 1.2s infinite ease-in-out",
       border: "1px solid currentColor",
-      content: '""',
-    },
+      content: '""'
+    }
   },
   "@keyframes ripple": {
     "0%": {
       transform: "scale(.8)",
-      opacity: 1,
+      opacity: 1
     },
     "100%": {
       transform: "scale(2.4)",
-      opacity: 0,
-    },
-  },
+      opacity: 0
+    }
+  }
 }));
 
 export default function StatusVariants() {

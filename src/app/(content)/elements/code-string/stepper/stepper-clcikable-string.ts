@@ -1,5 +1,10 @@
-export const stepperClickableString = `import React, { useState } from 'react';
-import { Box, Stepper, Step, StepLabel, Typography, Button } from '@mui/material';
+export const stepperClickableString = `import { useState } from "react";
+import Box from "@mui/material/Box";
+import Stepper from "@mui/material/Stepper";
+import Step from "@mui/material/Step";
+import StepLabel from "@mui/material/StepLabel";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
 
 const steps = ['Basic Info', 'Details', 'Confirmation'];
 
@@ -56,4 +61,4 @@ export const StepperClickable = () => {
         </Box>
     );
 }
-`
+`;

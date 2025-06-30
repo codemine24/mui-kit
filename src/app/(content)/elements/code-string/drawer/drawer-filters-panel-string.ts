@@ -1,8 +1,14 @@
 export const drawerFiltersPanelString = `import React from 'react';
-import {
-    Drawer, Box, Typography, Divider, Button, FormControl, InputLabel, Select, MenuItem,
-    Slider, Checkbox, FormControlLabel
-} from '@mui/material';
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import Divider from '@mui/material/Divider';
+import Drawer from '@mui/material/Drawer';
+import FormControl from '@mui/material/FormControl';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import Select from '@mui/material/Select';
+import Slider from '@mui/material/Slider';
+import Typography from '@mui/material/Typography';
 
 export const DrawerFiltersPanel = () => {
     const [open, setOpen] = React.useState(false);
