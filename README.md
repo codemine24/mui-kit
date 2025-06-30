@@ -18,7 +18,7 @@
 
 ## Installation
 
-1. Clone the code by typing the following command:
+1. Clone the repository:
 
 ```bash
 git clone https://github.com/codemine24/mui-kit
@@ -43,7 +43,6 @@ pnpm run dev
 
 Open http://localhost:3000 in your browser to see the component library in action.
 
----
 
 ## Usage
 
@@ -60,7 +59,6 @@ export default function Page() {
 - Browse the `/components` directory to explore available components and their design variants.
 - Refer to the documentation for usage and customization (see below).
 
----
 
 
 ## Documentation
@@ -70,8 +68,6 @@ export default function Page() {
 > - Component Reference  
 > - Design Variants  
 > - Customization Guide  
-
----
 
 
 ## Contributing
@@ -103,7 +99,6 @@ git checkout -b feature/new-button-variant
 
 Follow our commit rules (see below), then push your changes and open a PR to the `main` branch.
 
----
 
 ## Contribution Rules
 
@@ -127,7 +122,6 @@ We use **[Conventional Commits](https://www.conventionalcommits.org/)** to maint
 feat: enhance dropdown responsiveness
 ```
 
----
 
 ## Built With
 
