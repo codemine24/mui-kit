@@ -1,4 +1,4 @@
-![Thumbnail](/thumbnail.png)
+![Thumbnail](public/thumbnail.png)
 
 # MUI KIT
 
