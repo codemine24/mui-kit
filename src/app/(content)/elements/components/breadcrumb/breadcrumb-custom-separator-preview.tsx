@@ -7,17 +7,29 @@ import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 import TrendingFlatIcon from "@mui/icons-material/TrendingFlat";
 
 export const BreadcrumbCustomSeparatorPreview = () => {
-  const breadcrumbs = [
-    <Link underline="hover" key="1" color="inherit" href="#">
-      MUI Kit
-    </Link>,
-    <Link underline="hover" key="2" color="inherit" href="#">
-      Core
-    </Link>,
-    <Typography key="3" sx={{ color: "text.primary" }}>
-      Breadcrumb
-    </Typography>
+  const breadcrumbItems = [
+    { title: "MUI Kit", path: "#" },
+    { title: "Core", path: "#" },
+    { title: "Breadcrumb", path: null }, 
   ];
+
+  const renderBreadcrumbs = () => {
+    return breadcrumbItems.map((item, index) => {
+      if (item.path) {
+        return (
+          <Link key={index} underline="hover" color="inherit" href={item.path}>
+            {item.title}
+          </Link>
+        );
+      } else {
+        return (
+          <Typography key={index} sx={{ color: "text.primary" }}>
+            {item.title}
+          </Typography>
+        );
+      }
+    });
+  };
 
   return (
     <Stack
@@ -27,13 +39,19 @@ export const BreadcrumbCustomSeparatorPreview = () => {
       sx={{ width: "100%", py: 6 }}
       spacing={2}>
       <Breadcrumbs separator="›" aria-label="breadcrumb">
-        {breadcrumbs}
+        {renderBreadcrumbs()}
       </Breadcrumbs>
-      <Breadcrumbs separator={<ArrowRightIcon fontSize="small" />} aria-label="breadcrumb">
-        {breadcrumbs}
+      <Breadcrumbs
+        separator={<ArrowRightIcon fontSize="small" />}
+        aria-label="breadcrumb"
+      >
+        {renderBreadcrumbs()}
       </Breadcrumbs>
-      <Breadcrumbs separator={<TrendingFlatIcon fontSize="small" />} aria-label="breadcrumb">
-        {breadcrumbs}
+      <Breadcrumbs
+        separator={<TrendingFlatIcon fontSize="small" />}
+        aria-label="breadcrumb"
+      >
+        {renderBreadcrumbs()}
       </Breadcrumbs>
     </Stack>
   );
