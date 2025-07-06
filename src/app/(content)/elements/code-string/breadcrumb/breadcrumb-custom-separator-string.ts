@@ -1,6 +1,8 @@
 export const breadcrumbCustomSeparatorString = `import * as React from "react";
 import Stack from "@mui/material/Stack";
-import { Breadcrumbs, Link, Typography } from "@mui/material";
+import Breadcrumbs from "@mui/material/Breadcrumbs";
+import Link from "@mui/material/Link";
+import Typography from "@mui/material/Typography";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 import TrendingFlatIcon from "@mui/icons-material/TrendingFlat";
 

@@ -1,4 +1,7 @@
-export const OTPBasicString = `import { Box, Stack, TextField, Typography } from "@mui/material";
+export const OTPBasicString = `import Box from "@mui/material/Box";
+import Stack from "@mui/material/Stack";
+import TextField from "@mui/material/TextField";
+import Typography from "@mui/material/Typography";
 import { useEffect, useRef, useState } from "react";
 
 const length = 6;

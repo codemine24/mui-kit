@@ -1,6 +1,7 @@
 "use client";
 import { Iconify } from "@/components/iconify";
-import { Box, Button } from "@mui/material";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
 import { useState } from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
@@ -41,10 +42,9 @@ const CodeBlockWrapper: React.FC<CodeBlockWrapperProps> = ({ codeString }) => {
           zIndex: 10,
           display: "flex",
           alignItems: "center",
-          gap: 1,
+          gap: 1
         }}
-        onClick={handleCopy}
-      >
+        onClick={handleCopy}>
         <Iconify icon={icon} />
         {copySuccess ? "Copied" : "Copy"}
       </Button>

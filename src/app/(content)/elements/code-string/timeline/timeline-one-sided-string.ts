@@ -1,12 +1,11 @@
-export const timelineOneSidedString = `import {
-  Timeline,
-  TimelineConnector,
-  TimelineContent,
-  TimelineItem,
-  TimelineOppositeContent,
-  TimelineSeparator,
-} from "@mui/lab";
-import { Box, Typography } from "@mui/material";
+export const timelineOneSidedString = `import Timeline from "@mui/lab/Timeline";
+import TimelineConnector from "@mui/lab/TimelineConnector";
+import TimelineContent from "@mui/lab/TimelineContent";
+import TimelineItem from "@mui/lab/TimelineItem";
+import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
+import TimelineSeparator from "@mui/lab/TimelineSeparator";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
 
 const timelineData = [
   {

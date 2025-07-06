@@ -1,12 +1,15 @@
-import {
-  CheckCircle,
-  Error,
-  Refresh,
-  Security,
-  Timer,
-} from "@mui/icons-material";
-import { Alert, Box, Button, Chip, TextField, Typography } from "@mui/material";
-import { Stack } from "@mui/system";
+import CheckCircle from "@mui/icons-material/CheckCircle";
+import Error from "@mui/icons-material/Error";
+import Refresh from "@mui/icons-material/Refresh";
+import Security from "@mui/icons-material/Security";
+import Timer from "@mui/icons-material/Timer";
+import Alert from "@mui/material/Alert";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Chip from "@mui/material/Chip";
+import TextField from "@mui/material/TextField";
+import Typography from "@mui/material/Typography";
+import Stack from "@mui/material/Stack";
 import { useEffect, useRef, useState } from "react";
 
 const length = 6;
@@ -54,10 +57,7 @@ export const OTPWithTimerAndResendPreview = () => {
     }
   };
 
-  const handleKeyDown = (
-    e: React.KeyboardEvent<HTMLDivElement>,
-    index: number
-  ) => {
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>, index: number) => {
     if (e.key === "Backspace" && !otp[index] && index > 0) {
       inputRefs.current[index - 1]?.focus();
     }
@@ -96,13 +96,8 @@ export const OTPWithTimerAndResendPreview = () => {
     <Box>
       <Box display="flex" alignItems="center" gap={{ xs: 1, md: 2 }} mb={3}>
         <Stack direction={"row"} gap={0.5}>
-          <Security
-            color="primary"
-            sx={{ fontSize: { xs: "15px", md: "22px" } }}
-          />
-          <Typography
-            sx={{ fontSize: { xs: "12px", md: "16px", fontWeight: "bold" } }}
-          >
+          <Security color="primary" sx={{ fontSize: { xs: "15px", md: "22px" } }} />
+          <Typography sx={{ fontSize: { xs: "12px", md: "16px", fontWeight: "bold" } }}>
             Enter Verification Code
           </Typography>
         </Stack>
@@ -126,8 +121,8 @@ export const OTPWithTimerAndResendPreview = () => {
               maxLength: 1,
               style: {
                 textAlign: "center",
-                fontWeight: "bold",
-              },
+                fontWeight: "bold"
+              }
             }}
             value={data}
             onChange={(e) => handleChange(e.target as HTMLInputElement, index)}
@@ -139,8 +134,8 @@ export const OTPWithTimerAndResendPreview = () => {
               width: { xs: 35, md: 45, lg: 60 },
               "& input": {
                 fontSize: { xs: "1rem", md: "1.5rem" },
-                padding: { xs: 0.8, md: 1, lg: 2 },
-              },
+                padding: { xs: 0.8, md: 1, lg: 2 }
+              }
             }}
             autoComplete="one-time-code"
             inputMode="numeric"
@@ -159,8 +154,7 @@ export const OTPWithTimerAndResendPreview = () => {
             onClick={handleResend}
             disabled={!canResend}
             startIcon={<Refresh />}
-            sx={{ fontSize: { xs: "12px", md: "14px", textTransform: "none" } }}
-          >
+            sx={{ fontSize: { xs: "12px", md: "14px", textTransform: "none" } }}>
             Resend Code
           </Button>
         </Box>
@@ -184,12 +178,10 @@ export const OTPWithTimerAndResendPreview = () => {
               color="error"
               size="small"
               variant="contained"
-              onClick={handleResend}
-            >
+              onClick={handleResend}>
               Resend
             </Button>
-          }
-        >
+          }>
           {error}
         </Alert>
       )}

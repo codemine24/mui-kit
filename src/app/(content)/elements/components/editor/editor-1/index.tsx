@@ -1,8 +1,6 @@
 import Stack from "@mui/material/Stack";
 import { useState } from "react";
 import { Editor } from "./editor";
-import { ExternalPackageAlert } from "@/components/external-package-alert";
-import { Box } from "@mui/material";
 
 const defaultValue = `
   <h2>Welcome to the Editor</h2>
@@ -24,58 +22,8 @@ const defaultValue = `
 export default function Editor1() {
   const [content, setContent] = useState(defaultValue);
   return (
-    <Box sx={{ width: "100%" }}>
-      <ExternalPackageAlert
-        packages={[
-          {
-            name: "@tiptap/react",
-            url: "https://www.npmjs.com/package/@tiptap/react",
-          },
-          {
-            name: "@tiptap/starter-kit",
-            url: "https://www.npmjs.com/package/@tiptap/starter-kit",
-          },
-          {
-            name: "@tiptap/extension-image",
-            url: "https://www.npmjs.com/package/@tiptap/extension-image",
-          },
-          {
-            name: "@tiptap/extension-text-align",
-            url: "https://www.npmjs.com/package/@tiptap/extension-text-align",
-          },
-          {
-            name: "@tiptap/extension-placeholder",
-            url: "https://www.npmjs.com/package/@tiptap/extension-placeholder",
-          },
-          {
-            name: "@tiptap/extension-code-block-lowlight",
-            url: "https://www.npmjs.com/package/@tiptap/extension-code-block-lowlight",
-          },
-          {
-            name: "lowlight",
-            url: "https://www.npmjs.com/package/lowlight",
-          },
-          {
-            name: "@iconify/react",
-            url: "https://www.npmjs.com/package/@iconify/react",
-          },
-          {
-            name: "@tiptap/extension-link",
-            url: "https://www.npmjs.com/package/@tiptap/extension-link",
-          },
-          {
-            name: "@tiptap/extension-underline",
-            url: "https://www.npmjs.com/package/@tiptap/extension-underline",
-          },
-        ]}
-      />
-      <Stack sx={{ width: "100%" }} spacing={2}>
-        <Editor
-          value={content}
-          onChange={(value) => setContent(value)}
-          sx={{ maxHeight: 720 }}
-        />
-      </Stack>
-    </Box>
+    <Stack sx={{ width: "100%" }} spacing={2}>
+      <Editor value={content} onChange={(value) => setContent(value)} sx={{ maxHeight: 720 }} />
+    </Stack>
   );
 }

@@ -2,7 +2,7 @@ import AdbIcon from "@mui/icons-material/Adb";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import MenuIcon from "@mui/icons-material/Menu";
-import { IconButton } from "@mui/material";
+import IconButton from "@mui/material/IconButton";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -19,26 +19,20 @@ const pages = [
   { name: "Home", submenu: null },
   {
     name: "Services",
-    submenu: ["Web Development", "Mobile Apps", "UI/UX Design"],
+    submenu: ["Web Development", "Mobile Apps", "UI/UX Design"]
   },
   {
     name: "Contact",
-    submenu: ["FAQ", "Ticket", "Support"],
+    submenu: ["FAQ", "Ticket", "Support"]
   },
-  { name: "About", submenu: null },
+  { name: "About", submenu: null }
 ];
 
 export const AppBarSubmenuPreview = () => {
-  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
-    null
-  );
-  const [submenuAnchor, setSubmenuAnchor] = React.useState<null | HTMLElement>(
-    null
-  );
+  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
+  const [submenuAnchor, setSubmenuAnchor] = React.useState<null | HTMLElement>(null);
   const [activeSubmenu, setActiveSubmenu] = React.useState<string | null>(null);
-  const [mobileSubmenuOpen, setMobileSubmenuOpen] = React.useState<
-    string | null
-  >(null);
+  const [mobileSubmenuOpen, setMobileSubmenuOpen] = React.useState<string | null>(null);
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
@@ -50,10 +44,7 @@ export const AppBarSubmenuPreview = () => {
     setMobileSubmenuOpen(null);
   };
 
-  const handleSubmenuOpen = (
-    event: React.MouseEvent<HTMLElement>,
-    pageName: string
-  ) => {
+  const handleSubmenuOpen = (event: React.MouseEvent<HTMLElement>, pageName: string) => {
     if (pages.find((p) => p.name === pageName)?.submenu) {
       setSubmenuAnchor(event.currentTarget);
       setActiveSubmenu(pageName);
@@ -90,8 +81,7 @@ export const AppBarSubmenuPreview = () => {
               aria-label="menu"
               aria-controls="mobile-menu"
               aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-            >
+              onClick={handleOpenNavMenu}>
               <MenuIcon />
             </IconButton>
             <Menu
@@ -99,12 +89,12 @@ export const AppBarSubmenuPreview = () => {
               anchorEl={anchorElNav}
               anchorOrigin={{
                 vertical: "bottom",
-                horizontal: "right",
+                horizontal: "right"
               }}
               keepMounted
               transformOrigin={{
                 vertical: "top",
-                horizontal: "right",
+                horizontal: "right"
               }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
@@ -115,40 +105,35 @@ export const AppBarSubmenuPreview = () => {
                   borderRadius: "4px",
                   boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.15)",
                   maxHeight: "70vh",
-                  overflowY: "auto",
-                },
+                  overflowY: "auto"
+                }
               }}
               PaperProps={{
                 style: {
-                  maxHeight: "70vh",
-                },
-              }}
-            >
+                  maxHeight: "70vh"
+                }
+              }}>
               {[
                 ...pages.map((page) => [
                   <MenuItem
                     key={`${page.name}-parent`}
                     onClick={
-                      page.submenu
-                        ? () => toggleMobileSubmenu(page.name)
-                        : handleCloseNavMenu
+                      page.submenu ? () => toggleMobileSubmenu(page.name) : handleCloseNavMenu
                     }
                     sx={{
                       py: 1,
                       px: 2,
                       "&:hover": {
-                        backgroundColor: "rgba(164, 19, 60, 0.1)",
-                      },
-                    }}
-                  >
+                        backgroundColor: "rgba(164, 19, 60, 0.1)"
+                      }
+                    }}>
                     <Box
                       sx={{
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "space-between",
-                        width: "100%",
-                      }}
-                    >
+                        width: "100%"
+                      }}>
                       <Typography
                         sx={{
                           color: "common.black",
@@ -157,10 +142,9 @@ export const AppBarSubmenuPreview = () => {
                           "&:hover": {
                             textDecoration: "underline",
                             textDecorationColor: "#F06543",
-                            textUnderlineOffset: "4px",
-                          },
-                        }}
-                      >
+                            textUnderlineOffset: "4px"
+                          }
+                        }}>
                         {page.name}
                       </Typography>
                       {page.submenu &&
@@ -176,8 +160,7 @@ export const AppBarSubmenuPreview = () => {
                       key={`${page.name}-collapse`}
                       in={mobileSubmenuOpen === page.name}
                       timeout="auto"
-                      unmountOnExit
-                    >
+                      unmountOnExit>
                       <Box sx={{ pl: 3 }}>
                         {page.submenu.map((item) => (
                           <MenuItem
@@ -187,10 +170,9 @@ export const AppBarSubmenuPreview = () => {
                               py: 1,
                               px: 2,
                               "&:hover": {
-                                backgroundColor: "rgba(164, 19, 60, 0.1)",
-                              },
-                            }}
-                          >
+                                backgroundColor: "rgba(164, 19, 60, 0.1)"
+                              }
+                            }}>
                             <Typography
                               sx={{
                                 fontSize: "0.85rem",
@@ -198,17 +180,16 @@ export const AppBarSubmenuPreview = () => {
                                 "&:hover": {
                                   textDecoration: "underline",
                                   textDecorationColor: "#F06543",
-                                  textUnderlineOffset: "4px",
-                                },
-                              }}
-                            >
+                                  textUnderlineOffset: "4px"
+                                }
+                              }}>
                               {item}
                             </Typography>
                           </MenuItem>
                         ))}
                       </Box>
                     </Collapse>
-                  ),
+                  )
                 ]),
                 <Box key="contact-button" sx={{ px: 2, py: 1 }}>
                   <Button
@@ -219,13 +200,12 @@ export const AppBarSubmenuPreview = () => {
                       fontSize: "0.9rem",
                       py: 1,
                       "&:hover": {
-                        backgroundColor: "#F06543",
-                      },
-                    }}
-                  >
+                        backgroundColor: "#F06543"
+                      }
+                    }}>
                     Login
                   </Button>
-                </Box>,
+                </Box>
               ]}
             </Menu>
           </Box>
@@ -234,16 +214,14 @@ export const AppBarSubmenuPreview = () => {
           <Box
             sx={{
               flexGrow: 1,
-              display: { xs: "none", lg: "flex", justifyContent: "end", mr: 6 },
-            }}
-          >
+              display: { xs: "none", lg: "flex", justifyContent: "end", mr: 6 }
+            }}>
             {pages.map((page) => (
               <Box
                 key={page.name}
                 sx={{ position: "relative" }}
                 onMouseEnter={(e) => handleSubmenuOpen(e, page.name)}
-                onMouseLeave={handleSubmenuClose}
-              >
+                onMouseLeave={handleSubmenuClose}>
                 <Button
                   onClick={handleCloseNavMenu}
                   sx={{
@@ -261,22 +239,19 @@ export const AppBarSubmenuPreview = () => {
                       height: "2px",
                       backgroundColor: "#F06543",
                       transform: "scaleX(0)",
-                      transition: "transform 0.3s ease-out",
+                      transition: "transform 0.3s ease-out"
                     },
                     "&:hover::after": {
                       transform: "scaleX(1)",
-                      transformOrigin: "bottom left",
-                    },
-                  }}
-                >
+                      transformOrigin: "bottom left"
+                    }
+                  }}>
                   {page.name}
                   {page.submenu &&
                     (activeSubmenu === page.name ? (
                       <KeyboardArrowUpIcon sx={{ ml: 0.5, fontSize: "1rem" }} />
                     ) : (
-                      <KeyboardArrowDownIcon
-                        sx={{ ml: 0.5, fontSize: "1rem" }}
-                      />
+                      <KeyboardArrowDownIcon sx={{ ml: 0.5, fontSize: "1rem" }} />
                     ))}
                 </Button>
 
@@ -288,11 +263,11 @@ export const AppBarSubmenuPreview = () => {
                     onClose={handleSubmenuClose}
                     anchorOrigin={{
                       vertical: "bottom",
-                      horizontal: "left",
+                      horizontal: "left"
                     }}
                     transformOrigin={{
                       vertical: "top",
-                      horizontal: "left",
+                      horizontal: "left"
                     }}
                     sx={{
                       pointerEvents: "none",
@@ -302,11 +277,10 @@ export const AppBarSubmenuPreview = () => {
                         borderRadius: "4px",
                         boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.15)",
                         backgroundColor: "#1a1a1a",
-                        mt: "8px",
-                      },
+                        mt: "8px"
+                      }
                     }}
-                    disableRestoreFocus
-                  >
+                    disableRestoreFocus>
                     {page.submenu.map((item) => (
                       <MenuItem
                         key={item}
@@ -314,10 +288,9 @@ export const AppBarSubmenuPreview = () => {
                           py: 1,
                           px: 3,
                           "&:hover": {
-                            backgroundColor: "rgba(164, 19, 60, 0.1)",
-                          },
-                        }}
-                      >
+                            backgroundColor: "rgba(164, 19, 60, 0.1)"
+                          }
+                        }}>
                         <Typography
                           sx={{
                             fontSize: "0.9rem",
@@ -325,10 +298,9 @@ export const AppBarSubmenuPreview = () => {
                             "&:hover": {
                               textDecoration: "underline",
                               textDecorationColor: "#F06543",
-                              textUnderlineOffset: "4px",
-                            },
-                          }}
-                        >
+                              textUnderlineOffset: "4px"
+                            }
+                          }}>
                           {item}
                         </Typography>
                       </MenuItem>
@@ -339,10 +311,7 @@ export const AppBarSubmenuPreview = () => {
             ))}
           </Box>
           <Box sx={{ display: { xs: "none", lg: "flex" } }}>
-            <Button
-              variant="contained"
-              sx={{ backgroundColor: "#F06543", ml: 2 }}
-            >
+            <Button variant="contained" sx={{ backgroundColor: "#F06543", ml: 2 }}>
               Login
             </Button>
           </Box>
@@ -358,7 +327,7 @@ const Logo = () => {
       <AdbIcon
         sx={{
           mr: 1,
-          color: "common.black",
+          color: "common.black"
         }}
       />
       <Typography
@@ -372,9 +341,8 @@ const Logo = () => {
           fontWeight: 900,
           letterSpacing: ".1rem",
           color: "common.black",
-          textDecoration: "none",
-        }}
-      >
+          textDecoration: "none"
+        }}>
         LOGO
       </Typography>
     </Box>

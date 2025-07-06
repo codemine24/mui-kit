@@ -1,5 +1,7 @@
-export const OTPWithPredefinedFieldString = `import { CheckCircle } from "@mui/icons-material";
-import { Alert, Box, TextField } from "@mui/material";
+export const OTPWithPredefinedFieldString = `import CheckCircle from "@mui/icons-material/CheckCircle";
+import Alert from "@mui/material/Alert";
+import Box from "@mui/material/Box";
+import TextField from "@mui/material/TextField";
 import { useCallback, useEffect, useRef, useState } from "react";
 
 const length = 6;

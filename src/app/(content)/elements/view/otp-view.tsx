@@ -5,7 +5,8 @@ import { PageTitle } from "@/components/core/page-title";
 import { SectionTitle } from "@/components/core/section-title";
 import { useOnThisPage } from "@/contexts/on-thispage-context";
 import { PATHS } from "@/router/paths";
-import { Box, Divider } from "@mui/material";
+import Box from "@mui/material/Box";
+import Divider from "@mui/material/Divider";
 import React from "react";
 import { OTPBasicString } from "../code-string/otp/otp-basic-string";
 import { OTPCustomStyledString } from "../code-string/otp/otp-custom-styled-string";
@@ -32,21 +33,21 @@ const sections = [
     title: "Basic",
     description: "Standard outlined otp fields with auto-focus navigation.",
     codeString: OTPBasicString,
-    preview: <OTPBasicPreview />,
+    preview: <OTPBasicPreview />
   },
   {
     id: "otp-2",
     title: "Filled",
     description: "OTP filled with solid background.",
     codeString: OTPFilledString,
-    preview: <OTPFilledPreview />,
+    preview: <OTPFilledPreview />
   },
   {
     id: "otp-3",
     title: "Underlined",
     description: "Underlined OTP fields. Perfect if you like outlined stuff. ",
     codeString: OTPUnderlinedString,
-    preview: <OTPUnderlinedPreview />,
+    preview: <OTPUnderlinedPreview />
   },
   {
     id: "otp-4",
@@ -54,7 +55,7 @@ const sections = [
     description:
       "Border radius, hover effect, active color, everything is customized. If you want to control the style more deeply, this OTP variant is for you. ",
     codeString: OTPCustomStyledString,
-    preview: <OTPCustomStyledPreview />,
+    preview: <OTPCustomStyledPreview />
   },
   {
     id: "otp-5",
@@ -62,23 +63,21 @@ const sections = [
     description:
       "You can paste entire OTP at once instead of one by one. Try pasting this code 123456",
     codeString: OTPPasteableString,
-    preview: <OTPPasteablePreview />,
+    preview: <OTPPasteablePreview />
   },
   {
     id: "otp-6",
     title: "With timer and resend",
-    description:
-      "You can add custom timer, resend otp button. Try pasting this code 123456",
+    description: "You can add custom timer, resend otp button. Try pasting this code 123456",
     codeString: OTPWithTimerAndResendString,
-    preview: <OTPWithTimerAndResendPreview />,
+    preview: <OTPWithTimerAndResendPreview />
   },
   {
     id: "otp-7",
     title: "Text supported",
-    description:
-      "This OTP variant support text as well. Try pasting this code 12CD56",
+    description: "This OTP variant support text as well. Try pasting this code 12CD56",
     codeString: OTPTextSupportedString,
-    preview: <OTPTextSupportedPreview />,
+    preview: <OTPTextSupportedPreview />
   },
   {
     id: "otp-8",
@@ -86,15 +85,15 @@ const sections = [
     description:
       "You can divide the OTP fields into separate groups. Here we've divided into 2 groups. Try pasting this code 123456",
     codeString: OTPFractionString,
-    preview: <OTPFractionPreview />,
+    preview: <OTPFractionPreview />
   },
   {
     id: "otp-9",
     title: "With predefined field",
     description: "You can use predefined OTP letter. ",
     codeString: OTPWithPredefinedFieldString,
-    preview: <OTPWithPredefinedFieldPreview />,
-  },
+    preview: <OTPWithPredefinedFieldPreview />
+  }
 ];
 
 export const OTPView = () => {
@@ -109,7 +108,7 @@ export const OTPView = () => {
       <CustomBreadCrumbs
         pathArr={[
           { label: "Elements", path: PATHS.ELEMENTS.OVERVIEW },
-          { label: "OTP", path: "" },
+          { label: "OTP", path: "" }
         ]}
       />
       <PageTitle
@@ -128,10 +127,7 @@ export const OTPView = () => {
             id={section.id}
           />
 
-          <CodePreviewCopyWrapper
-            codeString={section.codeString}
-            preview={section.preview}
-          />
+          <CodePreviewCopyWrapper codeString={section.codeString} preview={section.preview} />
         </Box>
       ))}
     </Box>

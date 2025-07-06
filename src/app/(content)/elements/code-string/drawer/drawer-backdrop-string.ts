@@ -1,6 +1,15 @@
 export const drawerBackdropString = `import * as React from 'react';
-import { Box, List, Divider, ListItem, ListItemButton, ListItemIcon, ListItemText, Button, Drawer } from '@mui/material';
-import { Inbox, Mail } from '@mui/icons-material';
+import Box from '@mui/material/Box';
+import List from '@mui/material/List';
+import Divider from '@mui/material/Divider';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import Button from '@mui/material/Button';
+import Drawer from '@mui/material/Drawer';
+import Inbox from '@mui/icons-material/Inbox';
+import Mail from '@mui/icons-material/Mail';
 
 export const DrawerBackdrop = () => {
     const drawerRef = React.useRef<HTMLDivElement | null>(null);

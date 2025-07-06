@@ -1,4 +1,11 @@
-export const cardGridString = `import { Avatar, Box, Grid, Paper, Stack, Typography, useMediaQuery, useTheme } from '@mui/material';
+export const cardGridString = `import Avatar from "@mui/material/Avatar";
+import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
+import Paper from "@mui/material/Paper";
+import Stack from "@mui/material/Stack";
+import Typography from "@mui/material/Typography";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme } from "@mui/material/styles";
 
 export const CardGridPreview = () => {
     const testimonials = [
@@ -87,4 +94,4 @@ export const CardGridPreview = () => {
         </Grid>
     );
 };
-`
+`;

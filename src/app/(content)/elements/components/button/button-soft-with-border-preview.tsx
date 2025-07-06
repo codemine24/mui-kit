@@ -1,5 +1,8 @@
-import { Check } from "@mui/icons-material";
-import { Box, Button, Divider, Stack } from "@mui/material";
+import Check from "@mui/icons-material/Check";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Divider from "@mui/material/Divider";
+import Stack from "@mui/material/Stack";
 
 export const ButtonSoftWithBorderPreview = () => {
   return (
@@ -20,10 +23,9 @@ export const ButtonSoftWithBorderPreview = () => {
             minWidth: "auto",
             "&:hover": {
               backgroundColor: "#e3f2fd",
-              opacity: 0.9,
-            },
-          }}
-        >
+              opacity: 0.9
+            }
+          }}>
           Primary
         </Button>
 
@@ -42,10 +44,9 @@ export const ButtonSoftWithBorderPreview = () => {
             minWidth: "auto",
             "&:hover": {
               backgroundColor: "#ede7f6",
-              opacity: 0.9,
-            },
-          }}
-        >
+              opacity: 0.9
+            }
+          }}>
           Secondary
         </Button>
 
@@ -64,10 +65,9 @@ export const ButtonSoftWithBorderPreview = () => {
             minWidth: "auto",
             "&:hover": {
               backgroundColor: "#e0f7fa",
-              opacity: 0.9,
-            },
-          }}
-        >
+              opacity: 0.9
+            }
+          }}>
           Info
         </Button>
 
@@ -86,10 +86,9 @@ export const ButtonSoftWithBorderPreview = () => {
             minWidth: "auto",
             "&:hover": {
               backgroundColor: "#e8f5e9",
-              opacity: 0.9,
-            },
-          }}
-        >
+              opacity: 0.9
+            }
+          }}>
           Success
         </Button>
 
@@ -108,10 +107,9 @@ export const ButtonSoftWithBorderPreview = () => {
             minWidth: "auto",
             "&:hover": {
               backgroundColor: "#fff3e0",
-              opacity: 0.9,
-            },
-          }}
-        >
+              opacity: 0.9
+            }
+          }}>
           Warning
         </Button>
 
@@ -130,10 +128,9 @@ export const ButtonSoftWithBorderPreview = () => {
             minWidth: "auto",
             "&:hover": {
               backgroundColor: "#ffebee",
-              opacity: 0.9,
-            },
-          }}
-        >
+              opacity: 0.9
+            }
+          }}>
           Error
         </Button>
       </Stack>
@@ -156,10 +153,9 @@ export const ButtonSoftWithBorderPreview = () => {
             minWidth: "auto",
             "&:hover": {
               backgroundColor: "#e3f2fd",
-              opacity: 0.9,
-            },
-          }}
-        >
+              opacity: 0.9
+            }
+          }}>
           <Check />
         </Button>
 
@@ -177,10 +173,9 @@ export const ButtonSoftWithBorderPreview = () => {
             minWidth: "auto",
             "&:hover": {
               backgroundColor: "#ede7f6",
-              opacity: 0.9,
-            },
-          }}
-        >
+              opacity: 0.9
+            }
+          }}>
           <Check />
         </Button>
 
@@ -198,10 +193,9 @@ export const ButtonSoftWithBorderPreview = () => {
             minWidth: "auto",
             "&:hover": {
               backgroundColor: "#e0f7fa",
-              opacity: 0.9,
-            },
-          }}
-        >
+              opacity: 0.9
+            }
+          }}>
           <Check />
         </Button>
 
@@ -219,10 +213,9 @@ export const ButtonSoftWithBorderPreview = () => {
             minWidth: "auto",
             "&:hover": {
               backgroundColor: "#e8f5e9",
-              opacity: 0.9,
-            },
-          }}
-        >
+              opacity: 0.9
+            }
+          }}>
           <Check />
         </Button>
 
@@ -240,10 +233,9 @@ export const ButtonSoftWithBorderPreview = () => {
             minWidth: "auto",
             "&:hover": {
               backgroundColor: "#fff3e0",
-              opacity: 0.9,
-            },
-          }}
-        >
+              opacity: 0.9
+            }
+          }}>
           <Check />
         </Button>
 
@@ -261,10 +253,9 @@ export const ButtonSoftWithBorderPreview = () => {
             minWidth: "auto",
             "&:hover": {
               backgroundColor: "#ffebee",
-              opacity: 0.9,
-            },
-          }}
-        >
+              opacity: 0.9
+            }
+          }}>
           <Check />
         </Button>
       </Stack>

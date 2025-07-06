@@ -1,6 +1,12 @@
 export const cardPropertyString = `import Image from "next/image";
-import { Card, CardContent, Typography, Box, CardMedia } from "@mui/material";
-import { DirectionsCar, Bathtub, Nightlight } from "@mui/icons-material";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
+import CardMedia from "@mui/material/CardMedia";
+import DirectionsCar from "@mui/icons-material/DirectionsCar";
+import Bathtub from "@mui/icons-material/Bathtub";
+import Nightlight from "@mui/icons-material/Nightlight";
 
 export const CardProperty = () => {
     return (
@@ -36,4 +42,4 @@ export const CardProperty = () => {
         </Card>
     );
 }
-`
+`;

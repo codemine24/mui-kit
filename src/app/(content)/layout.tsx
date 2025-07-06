@@ -1,16 +1,12 @@
 "use client";
 import { OnThisPage } from "@/components/on-this-page";
 import { useOnThisPage } from "@/contexts/on-thispage-context";
-import { Container } from "@mui/material";
+import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import React from "react";
 import { ContentSidebar } from "./components/content-sidebar";
 
-export default function ContentLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function ContentLayout({ children }: { children: React.ReactNode }) {
   const { isOnThisPage } = useOnThisPage();
   return (
     <Container maxWidth="xl" sx={{ position: "relative" }}>
@@ -22,9 +18,8 @@ export default function ContentLayout({
             position: "sticky",
             top: 60,
             height: "calc(100vh - 80px)",
-            overflowY: "auto",
-          }}
-        >
+            overflowY: "auto"
+          }}>
           <ContentSidebar variant="sidebar" />
         </Grid>
 
@@ -36,9 +31,8 @@ export default function ContentLayout({
             pt: { xs: 2, md: 3 },
             overflowY: "auto",
             scrollbarWidth: "none",
-            minHeight: "calc(100vh - 175px)",
-          }}
-        >
+            minHeight: "calc(100vh - 175px)"
+          }}>
           {children}
         </Grid>
         <Grid
@@ -48,9 +42,8 @@ export default function ContentLayout({
             position: "sticky",
             top: 62,
             height: "calc(100vh - 20px)",
-            overflowY: "auto",
-          }}
-        >
+            overflowY: "auto"
+          }}>
           <OnThisPage />
         </Grid>
       </Grid>

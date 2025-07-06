@@ -1,18 +1,16 @@
 import CloseIcon from "@mui/icons-material/Close";
-import {
-  Avatar,
-  IconButton,
-  Paper,
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TablePagination,
-  TableRow,
-  TableSortLabel,
-  Typography,
-} from "@mui/material";
+import Avatar from "@mui/material/Avatar";
+import Paper from "@mui/material/Paper";
+import Table from "@mui/material/Table";
+import TableBody from "@mui/material/TableBody";
+import TableCell from "@mui/material/TableCell";
+import IconButton from "@mui/material/IconButton";
+import TableContainer from "@mui/material/TableContainer";
+import TableHead from "@mui/material/TableHead";
+import TablePagination from "@mui/material/TablePagination";
+import TableRow from "@mui/material/TableRow";
+import TableSortLabel from "@mui/material/TableSortLabel";
+import Typography from "@mui/material/Typography";
 import * as React from "react";
 
 type Order = "asc" | "desc";
@@ -31,65 +29,63 @@ const initialCart: Product[] = [
     name: "Wireless Mouse",
     image: "https://via.placeholder.com/50",
     price: 29.99,
-    quantity: 2,
+    quantity: 2
   },
   {
     id: 2,
     name: "Bluetooth Headphones",
     image: "https://via.placeholder.com/50",
     price: 59.99,
-    quantity: 1,
+    quantity: 1
   },
   {
     id: 3,
     name: "Laptop Stand",
     image: "https://via.placeholder.com/50",
     price: 19.99,
-    quantity: 3,
+    quantity: 3
   },
   {
     id: 4,
     name: "Webcam",
     image: "https://via.placeholder.com/50",
     price: 39.99,
-    quantity: 1,
+    quantity: 1
   },
   {
     id: 5,
     name: "USB-C Hub",
     image: "https://via.placeholder.com/50",
     price: 24.99,
-    quantity: 2,
+    quantity: 2
   },
   {
     id: 6,
     name: "AirPods",
     image: "https://via.placeholder.com/50",
     price: 199.99,
-    quantity: 1,
+    quantity: 1
   },
   {
     id: 7,
     name: "Smartphone",
     image: "https://via.placeholder.com/50",
     price: 399.99,
-    quantity: 1,
+    quantity: 1
   },
   {
     id: 8,
     name: "Smartwatch",
     image: "https://via.placeholder.com/50",
     price: 199.99,
-    quantity: 1,
-  },
+    quantity: 1
+  }
 ];
 
 export function ShoppingCartTablePreview() {
   const [cart, setCart] = React.useState<Product[]>(initialCart);
   const [order, setOrder] = React.useState<Order>("asc");
-  const [orderBy, setOrderBy] = React.useState<keyof Product | "totalPrice">(
-    "name"
-  );
+  const [orderBy, setOrderBy] = React.useState<keyof Product | "totalPrice">("name");
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
 
@@ -129,18 +125,13 @@ export function ShoppingCartTablePreview() {
   };
 
   const sortedCart = [...cart].sort(comparator);
-  const paginatedCart = sortedCart.slice(
-    page * rowsPerPage,
-    page * rowsPerPage + rowsPerPage
-  );
+  const paginatedCart = sortedCart.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage);
 
   const handleChangePage = (_event: unknown, newPage: number) => {
     setPage(newPage);
   };
 
-  const handleChangeRowsPerPage = (
-    event: React.ChangeEvent<HTMLInputElement>
-  ) => {
+  const handleChangeRowsPerPage = (event: React.ChangeEvent<HTMLInputElement>) => {
     setRowsPerPage(parseInt(event.target.value, 10));
     setPage(0);
   };
@@ -156,8 +147,7 @@ export function ShoppingCartTablePreview() {
                 <TableSortLabel
                   active={orderBy === "name"}
                   direction={orderBy === "name" ? order : "asc"}
-                  onClick={() => handleSort("name")}
-                >
+                  onClick={() => handleSort("name")}>
                   Name
                 </TableSortLabel>
               </TableCell>
@@ -166,19 +156,15 @@ export function ShoppingCartTablePreview() {
                 <TableSortLabel
                   active={orderBy === "price"}
                   direction={orderBy === "price" ? order : "asc"}
-                  onClick={() => handleSort("price")}
-                >
+                  onClick={() => handleSort("price")}>
                   Price
                 </TableSortLabel>
               </TableCell>
-              <TableCell
-                sortDirection={orderBy === "totalPrice" ? order : false}
-              >
+              <TableCell sortDirection={orderBy === "totalPrice" ? order : false}>
                 <TableSortLabel
                   active={orderBy === "totalPrice"}
                   direction={orderBy === "totalPrice" ? order : "asc"}
-                  onClick={() => handleSort("totalPrice")}
-                >
+                  onClick={() => handleSort("totalPrice")}>
                   Total Price
                 </TableSortLabel>
               </TableCell>
@@ -198,15 +184,9 @@ export function ShoppingCartTablePreview() {
                   <Typography>{product.quantity}</Typography>
                 </TableCell>
                 <TableCell>${product.price.toFixed(2)}</TableCell>
+                <TableCell>${(product.price * product.quantity).toFixed(2)}</TableCell>
                 <TableCell>
-                  ${(product.price * product.quantity).toFixed(2)}
-                </TableCell>
-                <TableCell>
-                  <IconButton
-                    color="error"
-                    onClick={() => handleRemove(product.id)}
-                    size="small"
-                  >
+                  <IconButton color="error" onClick={() => handleRemove(product.id)} size="small">
                     <CloseIcon />
                   </IconButton>
                 </TableCell>

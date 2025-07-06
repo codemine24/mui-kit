@@ -1,6 +1,9 @@
 "use client";
 
-import { Box, Divider, Pagination, Typography } from "@mui/material";
+import Box from "@mui/material/Box";
+import Divider from "@mui/material/Divider";
+import Pagination from "@mui/material/Pagination";
+import Typography from "@mui/material/Typography";
 import React from "react";
 
 const MAX_PAGE = 50;
@@ -28,14 +31,14 @@ export const PaginationSoftBgPreview = () => {
             borderRadius: 0,
             "&:hover": {
               color: "white",
-              backgroundColor: "#E60076 !important",
-            },
+              backgroundColor: "#E60076 !important"
+            }
           },
           "& .Mui-selected": {
             backgroundColor: "#E60076 !important",
             borderColor: "#E60076",
-            color: "#ffffff",
-          },
+            color: "#ffffff"
+          }
         }}
       />
 
@@ -51,7 +54,7 @@ export const PaginationSoftBgPreview = () => {
         onChange={(_, value) => setPage(value)}
         sx={{
           "& .MuiPagination-ul": {
-            gap: 0,
+            gap: 0
           },
           "& .MuiPaginationItem-root": {
             height: "32px",
@@ -60,13 +63,13 @@ export const PaginationSoftBgPreview = () => {
             borderRadius: 0,
             "&:hover": {
               color: "white",
-              backgroundColor: "#E60076",
+              backgroundColor: "#E60076"
             },
             "&.Mui-selected": {
               backgroundColor: "#E60076",
-              color: "#ffffff",
-            },
-          },
+              color: "#ffffff"
+            }
+          }
         }}
       />
 
@@ -87,17 +90,17 @@ export const PaginationSoftBgPreview = () => {
             borderRadius: 0,
             "&:hover": {
               color: "white",
-              backgroundColor: "#E60076",
-            },
+              backgroundColor: "#E60076"
+            }
           },
           "& .Mui-selected": {
             backgroundColor: "rgba(230, 0, 118, 0.1)",
             borderColor: "#E60076",
             color: "#E60076",
             "&:hover": {
-              backgroundColor: "#E60076 !important",
-            },
-          },
+              backgroundColor: "#E60076 !important"
+            }
+          }
         }}
       />
     </Box>

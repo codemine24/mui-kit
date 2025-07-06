@@ -7,7 +7,8 @@ import { SectionTitle } from "@/components/core/section-title";
 import { ExternalPackageAlert } from "@/components/external-package-alert";
 import { useOnThisPage } from "@/contexts/on-thispage-context";
 import { PATHS } from "@/router/paths";
-import { Box, Divider } from "@mui/material";
+import Box from "@mui/material/Box";
+import Divider from "@mui/material/Divider";
 import React from "react";
 import { carouselAlignString } from "../code-string/carousel";
 import { carouselAutoHeightString } from "../code-string/carousel/carousel-auto-height-string";
@@ -29,7 +30,7 @@ import {
   useCarouselDotsString,
   useCarouseProgressString,
   useParallaxString,
-  useThumbsString,
+  useThumbsString
 } from "../code-string/carousel/carousel-common";
 import { carouselDotsNumberString } from "../code-string/carousel/carousel-dots-number-string";
 import { carouselFadeString } from "../code-string/carousel/carousel-fade-preview";
@@ -70,12 +71,12 @@ const sections = [
       { name: "Carousel.tsx", code: carouselString },
       {
         name: "CarouselArrowBasicButtons.tsx",
-        code: carouselArrowButtonsString,
+        code: carouselArrowButtonsString
       },
       { name: "CarouselDotButtons.tsx", code: carouselDotButtonsString },
-      { name: "IndexLabel.tsx", code: indexLabelString },
+      { name: "IndexLabel.tsx", code: indexLabelString }
     ],
-    preview: <CarouselAlignPreview />,
+    preview: <CarouselAlignPreview />
   },
   {
     id: "carousel-2",
@@ -89,12 +90,12 @@ const sections = [
       { name: "Carousel.tsx", code: carouselString },
       {
         name: "CarouselArrowBasicButtons.tsx",
-        code: carouselArrowButtonsString,
+        code: carouselArrowButtonsString
       },
       { name: "CarouselDotButtons.tsx", code: carouselDotButtonsString },
-      { name: "IndexLabel.tsx", code: indexLabelString },
+      { name: "IndexLabel.tsx", code: indexLabelString }
     ],
-    preview: <CarouselProgressPreview />,
+    preview: <CarouselProgressPreview />
   },
   {
     id: "carousel-3",
@@ -105,15 +106,15 @@ const sections = [
       { name: "Carousel.tsx", code: carouselString },
       {
         name: "CarouselArrowBasicButtons.tsx",
-        code: carouselArrowButtonsString,
+        code: carouselArrowButtonsString
       },
       { name: "CarouselDotButtons.tsx", code: carouselDotButtonsString },
       { name: "IndexLabel.tsx", code: indexLabelString },
       { name: "CarouselOptions.ts", code: carouselOptionsString },
       { name: "useCarouselArrows.ts", code: useCarouselArrowString },
-      { name: "useCarouselDots.ts", code: useCarouselDotsString },
+      { name: "useCarouselDots.ts", code: useCarouselDotsString }
     ],
-    preview: <CarouselOpacityPreview />,
+    preview: <CarouselOpacityPreview />
   },
   {
     id: "carousel-4",
@@ -125,9 +126,9 @@ const sections = [
       { name: "CarouselDotButtons.tsx", code: carouselDotButtonsString },
       { name: "IndexLabel.tsx", code: indexLabelString },
       { name: "useCarouselDots.ts", code: useCarouselDotsString },
-      { name: "CarouselOptions.ts", code: carouselOptionsString },
+      { name: "CarouselOptions.ts", code: carouselOptionsString }
     ],
-    preview: <CarouselScalePreview />,
+    preview: <CarouselScalePreview />
   },
   {
     id: "carousel-5",
@@ -138,15 +139,15 @@ const sections = [
       { name: "Carousel.tsx", code: carouselString },
       {
         name: "CarouselArrowBasicButtons.tsx",
-        code: carouselArrowButtonsString,
+        code: carouselArrowButtonsString
       },
       { name: "CarouselDotButtons.tsx", code: carouselDotButtonsString },
       { name: "IndexLabel.tsx", code: indexLabelString },
       { name: "useCarouselArrows.ts", code: useCarouselArrowString },
       { name: "useCarouselDots.ts", code: useCarouselDotsString },
-      { name: "CarouselOptions.ts", code: carouselOptionsString },
+      { name: "CarouselOptions.ts", code: carouselOptionsString }
     ],
-    preview: <CarouselFade />,
+    preview: <CarouselFade />
   },
   {
     id: "carousel-6",
@@ -157,16 +158,16 @@ const sections = [
       { name: "Carousel.tsx", code: carouselString },
       {
         name: "CarouselArrowBasicButtons.tsx",
-        code: carouselArrowButtonsString,
+        code: carouselArrowButtonsString
       },
       { name: "CarouselDotButtons.tsx", code: carouselDotButtonsString },
       { name: "IndexLabel.tsx", code: indexLabelString },
       { name: "useCarouselArrows.ts", code: useCarouselArrowString },
       { name: "useCarouselDots.ts", code: useCarouselDotsString },
       { name: "useParallax.ts", code: useParallaxString },
-      { name: "CarouselOptions.ts", code: carouselOptionsString },
+      { name: "CarouselOptions.ts", code: carouselOptionsString }
     ],
-    preview: <CarouselParallaxPreview />,
+    preview: <CarouselParallaxPreview />
   },
   {
     id: "carousel-7",
@@ -179,9 +180,9 @@ const sections = [
       { name: "IndexLabel.tsx", code: indexLabelString },
       { name: "PlayButton.tsx", code: playButtonString },
       { name: "useCarouselAutoPlay.ts", code: useCarouselAutoplayString },
-      { name: "useCarouselDots.ts", code: useCarouselDotsString },
+      { name: "useCarouselDots.ts", code: useCarouselDotsString }
     ],
-    preview: <CarouselAutoplayPreview />,
+    preview: <CarouselAutoplayPreview />
   },
   {
     id: "carousel-8",
@@ -194,9 +195,9 @@ const sections = [
       { name: "IndexLabel.tsx", code: indexLabelString },
       { name: "PlayButton.tsx", code: playButtonString },
       { name: "useCarouselAutoScroll.ts", code: useCarouselAutoScrollString },
-      { name: "useCarouselProgress.ts", code: useCarouseProgressString },
+      { name: "useCarouselProgress.ts", code: useCarouseProgressString }
     ],
-    preview: <CarouselAutoScrollPreview />,
+    preview: <CarouselAutoScrollPreview />
   },
   {
     id: "carousel-9",
@@ -210,9 +211,9 @@ const sections = [
       { name: "IndexLabel.tsx", code: indexLabelString },
 
       { name: "useThumbs.ts", code: useThumbsString },
-      { name: "CarouselOptions.ts", code: carouselOptionsString },
+      { name: "CarouselOptions.ts", code: carouselOptionsString }
     ],
-    preview: <CarouselThumbsXPreview />,
+    preview: <CarouselThumbsXPreview />
   },
   {
     id: "carousel-10",
@@ -226,9 +227,9 @@ const sections = [
       { name: "IndexLabel.tsx", code: indexLabelString },
 
       { name: "useThumbs.ts", code: useThumbsString },
-      { name: "CarouselOptions.ts", code: carouselOptionsString },
+      { name: "CarouselOptions.ts", code: carouselOptionsString }
     ],
-    preview: <CarouselThumbsYPreview />,
+    preview: <CarouselThumbsYPreview />
   },
   {
     id: "carousel-11",
@@ -239,16 +240,16 @@ const sections = [
       { name: "Carousel.tsx", code: carouselString },
       {
         name: "CarouselArrowBasicButtons.tsx",
-        code: carouselArrowButtonsString,
+        code: carouselArrowButtonsString
       },
       { name: "CarouselDotButtons.tsx", code: carouselDotButtonsString },
       { name: "IndexLabel.tsx", code: indexLabelString },
 
       { name: "useCarouselArrows.ts", code: useCarouselArrowString },
       { name: "useCarouselDots.ts", code: useCarouselDotsString },
-      { name: "CarouselOptions.ts", code: carouselOptionsString },
+      { name: "CarouselOptions.ts", code: carouselOptionsString }
     ],
-    preview: <CarouselVariableWidthPreview />,
+    preview: <CarouselVariableWidthPreview />
   },
   {
     id: "carousel-12",
@@ -259,14 +260,14 @@ const sections = [
       { name: "Carousel.tsx", code: carouselString },
       {
         name: "CarouselArrowBasicButtons.tsx",
-        code: carouselArrowButtonsString,
+        code: carouselArrowButtonsString
       },
       { name: "IndexLabel.tsx", code: indexLabelString },
 
       { name: "useCarouselArrows.ts", code: useCarouselArrowString },
-      { name: "CarouselOptions.ts", code: carouselOptionsString },
+      { name: "CarouselOptions.ts", code: carouselOptionsString }
     ],
-    preview: <CarouselAutoHeightPreview />,
+    preview: <CarouselAutoHeightPreview />
   },
   {
     id: "carousel-13",
@@ -278,7 +279,7 @@ const sections = [
       { name: "Carousel.tsx", code: carouselString },
       {
         name: "CarouselArrowBasicButtons.tsx",
-        code: carouselArrowButtonsString,
+        code: carouselArrowButtonsString
       },
       { name: "CarouselDotButtons.tsx", code: carouselDotButtonsString },
       { name: "IndexLabel.tsx", code: indexLabelString },
@@ -286,9 +287,9 @@ const sections = [
       { name: "useCarouselArrows.ts", code: useCarouselArrowString },
       { name: "useCarouselDots.ts", code: useCarouselDotsString },
 
-      { name: "CarouselOptions.ts", code: carouselOptionsString },
+      { name: "CarouselOptions.ts", code: carouselOptionsString }
     ],
-    preview: <CarouselYaxisPreview />,
+    preview: <CarouselYaxisPreview />
   },
   {
     id: "carousel-14",
@@ -300,7 +301,7 @@ const sections = [
       { name: "Carousel.tsx", code: carouselString },
       {
         name: "CarouselArrowBasicButtons.tsx",
-        code: carouselArrowButtonsString,
+        code: carouselArrowButtonsString
       },
       { name: "CarouselDotButtons.tsx", code: carouselDotButtonsString },
       { name: "IndexLabel.tsx", code: indexLabelString },
@@ -308,10 +309,10 @@ const sections = [
       { name: "useCarouselArrows.ts", code: useCarouselArrowString },
       { name: "useCarouselDots.ts", code: useCarouselDotsString },
 
-      { name: "CarouselOptions.ts", code: carouselOptionsString },
+      { name: "CarouselOptions.ts", code: carouselOptionsString }
     ],
-    preview: <CarouselDotsNumberPreview />,
-  },
+    preview: <CarouselDotsNumberPreview />
+  }
   // {
   //   id: "carousel-15",
   //   title: "Custom",
@@ -333,7 +334,7 @@ export const CarouselView = () => {
       <CustomBreadCrumbs
         pathArr={[
           { label: "Elements", path: PATHS.ELEMENTS.OVERVIEW },
-          { label: "Carousel", path: "" },
+          { label: "Carousel", path: "" }
         ]}
       />
       <PageTitle
@@ -346,28 +347,28 @@ export const CarouselView = () => {
         packages={[
           {
             name: "embla-carousel",
-            url: "https://www.npmjs.com/package/embla-carousel",
+            url: "https://www.npmjs.com/package/embla-carousel"
           },
           {
             name: "embla-carousel-auto-height",
-            url: "https://www.npmjs.com/package/embla-carousel-auto-height",
+            url: "https://www.npmjs.com/package/embla-carousel-auto-height"
           },
           {
             name: "embla-carousel-auto-scroll",
-            url: "https://www.npmjs.com/package/embla-carousel-auto-scroll",
+            url: "https://www.npmjs.com/package/embla-carousel-auto-scroll"
           },
           {
             name: "embla-carousel-autoplay",
-            url: "https://www.npmjs.com/package/embla-carousel-autoplay",
+            url: "https://www.npmjs.com/package/embla-carousel-autoplay"
           },
           {
             name: "embla-carousel-fade",
-            url: "https://www.npmjs.com/package/embla-carousel-fade",
+            url: "https://www.npmjs.com/package/embla-carousel-fade"
           },
           {
             name: "embla-carousel-react",
-            url: "https://www.npmjs.com/package/embla-carousel-react",
-          },
+            url: "https://www.npmjs.com/package/embla-carousel-react"
+          }
         ]}
       />
       {/* Carousel Section */}
@@ -379,10 +380,7 @@ export const CarouselView = () => {
             id={section.id}
           />
 
-          <CodePreviewCopyWrapper
-            codeString={section.codeString}
-            preview={section.preview}
-          />
+          <CodePreviewCopyWrapper codeString={section.codeString} preview={section.preview} />
         </Box>
       ))}
     </Box>

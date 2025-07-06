@@ -1,14 +1,12 @@
-export const stepperSkippedString = `import React, { useState } from 'react';
-import {
-    Box,
-    Stepper,
-    Step,
-    StepLabel,
-    Typography,
-    Button,
-    useMediaQuery,
-    useTheme,
-} from '@mui/material';
+export const stepperSkippedString = `import React, { useState } from "react";
+import Stepper from "@mui/material/Stepper";
+import Step from "@mui/material/Step";
+import StepLabel from "@mui/material/StepLabel";
+import Typography from "@mui/material/Typography";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import { useTheme } from "@mui/material/styles";
 
 const steps = ['Account Info', 'Profile Details', 'Preferences', 'Review'];
 
@@ -139,4 +137,4 @@ export const StepperSkipped = () => {
         </Box>
     );
 };
-`
+`;

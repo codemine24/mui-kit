@@ -1,16 +1,13 @@
 export const dialogPlacementString = `import React from "react";
-import {
-    Button,
-    Dialog,
-    DialogActions,
-    DialogContent,
-    DialogContentText,
-    DialogTitle,
-    Box,
-    MenuItem,
-    Select,
-    SelectChangeEvent,
-} from "@mui/material";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Dialog from "@mui/material/Dialog";
+import DialogActions from "@mui/material/DialogActions";
+import DialogContent from "@mui/material/DialogContent";
+import DialogContentText from "@mui/material/DialogContentText";
+import DialogTitle from "@mui/material/DialogTitle";
+import MenuItem from "@mui/material/MenuItem";
+import Select, { SelectChangeEvent } from "@mui/material/Select";
 
 const placements: Record<string, React.CSSProperties> = {
     "top-left": { top: 20, left: 20 },
@@ -76,4 +73,4 @@ export const DialogPlacement = () => {
         </Box>
     );
 };
-`
+`;

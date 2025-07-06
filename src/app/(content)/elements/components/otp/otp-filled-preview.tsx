@@ -1,4 +1,5 @@
-import { Box, TextField } from "@mui/material";
+import Box from "@mui/material/Box";
+import TextField from "@mui/material/TextField";
 import { useRef, useState } from "react";
 
 const length = 6;
@@ -17,10 +18,7 @@ export const OTPFilledPreview = () => {
     }
   };
 
-  const handleKeyDown = (
-    e: React.KeyboardEvent<HTMLDivElement>,
-    index: number
-  ) => {
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>, index: number) => {
     if (e.key === "Backspace" && !otp[index] && index > 0) {
       inputRefs.current[index - 1]?.focus();
     }
@@ -37,8 +35,8 @@ export const OTPFilledPreview = () => {
             maxLength: 1,
             style: {
               textAlign: "center",
-              fontWeight: "bold",
-            },
+              fontWeight: "bold"
+            }
           }}
           value={data}
           onChange={(e) => handleChange(e.target as HTMLInputElement, index)}
@@ -49,23 +47,19 @@ export const OTPFilledPreview = () => {
             width: { xs: 35, md: 45, lg: 60 },
             "& input": {
               fontSize: { xs: "1rem", md: "1.5rem" },
-              padding: { xs: 0.8, md: 1, lg: 2 },
+              padding: { xs: 0.8, md: 1, lg: 2 }
             },
             "& .MuiFilledInput-root": {
               backgroundColor: (theme) =>
-                theme.palette.mode === "light"
-                  ? theme.palette.grey[200]
-                  : theme.palette.grey[800],
+                theme.palette.mode === "light" ? theme.palette.grey[200] : theme.palette.grey[800],
               "&:hover": {
                 backgroundColor: (theme) =>
-                  theme.palette.mode === "light"
-                    ? theme.palette.grey[300]
-                    : theme.palette.grey[700],
+                  theme.palette.mode === "light" ? theme.palette.grey[300] : theme.palette.grey[700]
               },
               "&.Mui-focused": {
-                backgroundColor: "rgba(25, 118, 210, 0.1)",
-              },
-            },
+                backgroundColor: "rgba(25, 118, 210, 0.1)"
+              }
+            }
           }}
           autoComplete="one-time-code"
           inputMode="numeric"

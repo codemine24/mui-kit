@@ -1,10 +1,17 @@
-export const drawerShoppingCartString = `import React from 'react';
-import {
-    Drawer, Box, Typography, IconButton, Divider, Button, List, ListItem, ListItemAvatar,
-    Avatar, ListItemText
-} from '@mui/material';
-import CloseIcon from '@mui/icons-material/Close';
-import DeleteIcon from '@mui/icons-material/Delete';
+export const drawerShoppingCartString = `import React from "react";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Divider from "@mui/material/Divider";
+import Button from "@mui/material/Button";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemAvatar from "@mui/material/ListItemAvatar";
+import Avatar from "@mui/material/Avatar";
+import ListItemText from "@mui/material/ListItemText";
+import IconButton from "@mui/material/IconButton";
+import Drawer from "@mui/material/Drawer";
+import CloseIcon from "@mui/icons-material/Close";
+import DeleteIcon from "@mui/icons-material/Delete";
 
 const cartItems = [
     { id: 1, name: 'Wireless Headphones', price: '$99', image: '/images/headphones.jpg' },

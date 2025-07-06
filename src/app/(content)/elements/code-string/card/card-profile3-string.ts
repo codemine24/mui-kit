@@ -1,5 +1,12 @@
-export const cardProfile3String = `import { Facebook, Twitter, Instagram } from "@mui/icons-material";
-import { Box, Card, CardContent, CardMedia, Stack, Typography } from "@mui/material";
+export const cardProfile3String = `import Facebook from "@mui/icons-material/Facebook";
+import Twitter from "@mui/icons-material/Twitter";
+import Instagram from "@mui/icons-material/Instagram";
+import Box from "@mui/material/Box";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Stack from "@mui/material/Stack";
+import Typography from "@mui/material/Typography";
 
 export const CardProfile3 = () => {
     return (
@@ -32,4 +39,4 @@ export const CardProfile3 = () => {
             </CardContent>
         </Card>
     )
-}`
+}`;

@@ -1,4 +1,5 @@
-import { Box, Typography } from "@mui/material";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
 
 interface RichTextPart {
   text: string;
@@ -28,9 +29,8 @@ export const SectionTitle = ({ title, description, id }: IProps) => {
                   component="span"
                   sx={{
                     color: part.highlight ? "primary.main" : "text.secondary",
-                    fontWeight: part.highlight ? 500 : "normal",
-                  }}
-                >
+                    fontWeight: part.highlight ? 500 : "normal"
+                  }}>
                   {part.text}
                 </Box>
               ))}

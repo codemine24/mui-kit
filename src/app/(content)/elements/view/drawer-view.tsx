@@ -5,7 +5,8 @@ import { CustomBreadCrumbs } from "@/components/core/breadcrumbs";
 import { PageTitle } from "@/components/core/page-title";
 import { SectionTitle } from "@/components/core/section-title";
 import { useOnThisPage } from "@/contexts/on-thispage-context";
-import { Box, Divider } from "@mui/material";
+import Box from "@mui/material/Box";
+import Divider from "@mui/material/Divider";
 import React from "react";
 import {
   drawerBasicString,
@@ -14,7 +15,7 @@ import {
   drawerFiltersPanelString,
   drawerNotificationsString,
   drawerCustomWidthString,
-  drawerFullWidthString,
+  drawerFullWidthString
 } from "../code-string/drawer";
 
 import {
@@ -24,7 +25,7 @@ import {
   DrawerFiltersPanelPreview,
   DrawerNotificationsPreview,
   DrawerCustomWidthPreview,
-  DrawerFullWidthPreview,
+  DrawerFullWidthPreview
 } from "../components/drawer";
 import { PATHS } from "@/router/paths";
 
@@ -34,7 +35,7 @@ const sections = [
     title: "Basic drawer",
     description: "Default mui drawers with custom mui icon.",
     codeString: drawerBasicString,
-    preview: <DrawerBasicPreview />,
+    preview: <DrawerBasicPreview />
   },
   {
     id: "drawer-2",
@@ -42,7 +43,7 @@ const sections = [
     description:
       "You can change the drawer with by pixel value or percentage. Use this variant if you need a custom width drawer.",
     codeString: drawerCustomWidthString,
-    preview: <DrawerCustomWidthPreview />,
+    preview: <DrawerCustomWidthPreview />
   },
   {
     id: "drawer-3",
@@ -50,37 +51,38 @@ const sections = [
     description:
       "We have 3 different option for drawer backdrop. None, blur and custom color backdrop. Use which one you like. ",
     codeString: drawerFullWidthString,
-    preview: <DrawerFullWidthPreview />,
+    preview: <DrawerFullWidthPreview />
   },
   {
     id: "drawer-4",
     title: "Backdrop",
     description: "Backdrop drawer with custom mui icon",
     codeString: drawerBackdropString,
-    preview: <DrawerBackdropPreview />,
+    preview: <DrawerBackdropPreview />
   },
   {
     id: "drawer-5",
     title: "Shopping Cart",
-    description:
-      "A simple drawer with shopping cart ui. Most common use case of a drawer.",
+    description: "A simple drawer with shopping cart ui. Most common use case of a drawer.",
     codeString: drawerShoppingCartString,
-    preview: <DrawerShoppingCartPreview />,
+    preview: <DrawerShoppingCartPreview />
   },
   {
     id: "drawer-6",
     title: "E-commerce Filters Panel",
-    description: "A responsive e-commerce product filter. You can use it on your product archive page.",
+    description:
+      "A responsive e-commerce product filter. You can use it on your product archive page.",
     codeString: drawerFiltersPanelString,
-    preview: <DrawerFiltersPanelPreview />,
+    preview: <DrawerFiltersPanelPreview />
   },
   {
     id: "drawer-7",
     title: "Notifications",
-    description: "Notifications drawer with custom mui icon. Use this if you need a notifications drawer.",
+    description:
+      "Notifications drawer with custom mui icon. Use this if you need a notifications drawer.",
     codeString: drawerNotificationsString,
-    preview: <DrawerNotificationsPreview />,
-  },
+    preview: <DrawerNotificationsPreview />
+  }
 ];
 
 export const DrawerView = () => {
@@ -95,7 +97,7 @@ export const DrawerView = () => {
       <CustomBreadCrumbs
         pathArr={[
           { label: "Elements", path: PATHS.ELEMENTS.OVERVIEW },
-          { label: "Drawer", path: "" },
+          { label: "Drawer", path: "" }
         ]}
       />
       <PageTitle
@@ -114,10 +116,7 @@ export const DrawerView = () => {
             id={section.id}
           />
 
-          <CodePreviewCopyWrapper
-            codeString={section.codeString}
-            preview={section.preview}
-          />
+          <CodePreviewCopyWrapper codeString={section.codeString} preview={section.preview} />
         </Box>
       ))}
     </Box>

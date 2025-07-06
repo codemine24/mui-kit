@@ -6,7 +6,8 @@ import { PageTitle } from "@/components/core/page-title";
 import { SectionTitle } from "@/components/core/section-title";
 import { useOnThisPage } from "@/contexts/on-thispage-context";
 import { PATHS } from "@/router/paths";
-import { Box, Divider } from "@mui/material";
+import Box from "@mui/material/Box";
+import Divider from "@mui/material/Divider";
 import React from "react";
 import { appBarBasicString } from "../code-string/app-bar/app-bar-basic-string";
 import { appBarSubmenuString } from "../code-string/app-bar/app-bar-submenu-string";
@@ -19,15 +20,15 @@ const sections = [
     title: "Basic App bar",
     description: "Most basic app bar with logo, navigation and simple button.",
     codeString: appBarBasicString,
-    preview: <AppBarBasicPreview />,
+    preview: <AppBarBasicPreview />
   },
   {
     id: "app-bar-2",
     title: "With submenu",
     description: "This app bar contains submenu. ",
     codeString: appBarSubmenuString,
-    preview: <AppBarSubmenuPreview />,
-  },
+    preview: <AppBarSubmenuPreview />
+  }
 ];
 
 export const AppBarView = () => {
@@ -42,7 +43,7 @@ export const AppBarView = () => {
       <CustomBreadCrumbs
         pathArr={[
           { label: "Elements", path: PATHS.ELEMENTS.OVERVIEW },
-          { label: "App bar", path: "" },
+          { label: "App bar", path: "" }
         ]}
       />
       <PageTitle
@@ -60,10 +61,7 @@ export const AppBarView = () => {
             id={section.id}
           />
 
-          <CodePreviewCopyWrapper
-            codeString={section.codeString}
-            preview={section.preview}
-          />
+          <CodePreviewCopyWrapper codeString={section.codeString} preview={section.preview} />
         </Box>
       ))}
     </Box>

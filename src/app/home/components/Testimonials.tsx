@@ -1,6 +1,8 @@
 "use client";
-import { Box, Paper, Typography, useTheme } from "@mui/material";
-import { keyframes } from "@mui/system";
+import Box from "@mui/material/Box";
+import Paper from "@mui/material/Paper";
+import Typography from "@mui/material/Typography";
+import { useTheme, keyframes } from "@mui/material/styles";
 
 // Single left-to-right animation
 const slide = keyframes`
@@ -22,33 +24,33 @@ const testimonials: Testimonial[] = [
   {
     username: "Sarah Johnson",
     handle: "@sarahj_dev",
-    review: "MUI Kit is a game-changer! The components are so easy to use and look amazing.",
+    review: "MUI Kit is a game-changer! The components are so easy to use and look amazing."
   },
   {
     username: "Mike Chen",
     handle: "@mikechen_ui",
-    review: "I’m blown away by MUI Kit’s animations. Building interfaces has never been this fun!",
+    review: "I’m blown away by MUI Kit’s animations. Building interfaces has never been this fun!"
   },
   {
     username: "Emily Davis",
     handle: "@emilyd_codes",
-    review: "The best UI library I’ve used. MUI Kit saves me so much time! 🚀",
+    review: "The best UI library I’ve used. MUI Kit saves me so much time! 🚀"
   },
   {
     username: "Alex Turner",
     handle: "@alexturner_dev",
-    review: "MUI Kit’s responsive design is top-notch. My apps look great on every device!",
+    review: "MUI Kit’s responsive design is top-notch. My apps look great on every device!"
   },
   {
     username: "Priya Sharma",
     handle: "@priya_sharma",
-    review: "Loving the customization options in MUI Kit. It’s perfect for my projects! 💖",
+    review: "Loving the customization options in MUI Kit. It’s perfect for my projects! 💖"
   },
   {
     username: "James Carter",
     handle: "@jamesc_dev",
-    review: "Have you tried MUI Kit yet? It’s packed with awesome features. Highly recommend!",
-  },
+    review: "Have you tried MUI Kit yet? It’s packed with awesome features. Highly recommend!"
+  }
 ];
 
 const duplicatedTestimonials = [...testimonials, ...testimonials];
@@ -65,20 +67,15 @@ const TestimonialCard: React.FC<Testimonial> = ({ username, handle, review }) =>
         width: { xs: 200, md: 250 },
         backdropFilter: "blur(8px)",
         backgroundColor:
-          theme.palette.mode === "dark"
-            ? "rgba(30,30,30,0.9)"
-            : "rgba(255,255,255,0.1)",
+          theme.palette.mode === "dark" ? "rgba(30,30,30,0.9)" : "rgba(255,255,255,0.1)",
         border: `.5px solid ${
-          theme.palette.mode === "dark"
-            ? "rgba(255,255,255,0.1)"
-            : "rgba(0,0,0,0.1)"
+          theme.palette.mode === "dark" ? "rgba(255,255,255,0.1)" : "rgba(0,0,0,0.1)"
         }`,
         color: theme.palette.mode === "dark" ? "white" : "text.primary",
         display: "flex",
         flexDirection: "column",
-        justifyContent: "space-between",
-      }}
-    >
+        justifyContent: "space-between"
+      }}>
       <Box>
         <Typography variant="body2" color="text.secondary">
           {handle}
@@ -101,9 +98,8 @@ export const Testimonials = () => {
         py: 8,
         textAlign: "center",
         bgcolor: "background.default",
-        width: "100%",
-      }}
-    >
+        width: "100%"
+      }}>
       <Typography variant="h4" fontWeight={600} gutterBottom>
         Loved by thousands of developers
       </Typography>
@@ -117,9 +113,8 @@ export const Testimonials = () => {
           display: "grid",
           gridTemplateRows: { xs: "1fr", md: "1fr 1fr" },
           gap: 4,
-          overflow: "hidden",
-        }}
-      >
+          overflow: "hidden"
+        }}>
         {/* Top Row */}
         <Box sx={{ width: "100%", overflow: "hidden" }}>
           <Box
@@ -127,9 +122,8 @@ export const Testimonials = () => {
               display: "flex",
               gap: 3,
               animation: `${slide} 30s linear infinite`,
-              width: "max-content",
-            }}
-          >
+              width: "max-content"
+            }}>
             {duplicatedTestimonials.map((t, i) => (
               <TestimonialCard key={`top-${i}`} {...t} />
             ))}
@@ -144,9 +138,8 @@ export const Testimonials = () => {
               gap: 3,
               flexDirection: "row-reverse",
               animation: `${slide} 30s linear infinite`,
-              width: "max-content",
-            }}
-          >
+              width: "max-content"
+            }}>
             {duplicatedTestimonials.map((t, i) => (
               <TestimonialCard key={`bottom-${i}`} {...t} />
             ))}

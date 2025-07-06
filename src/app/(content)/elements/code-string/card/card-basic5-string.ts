@@ -1,4 +1,7 @@
-export const cardBasic5String = `import { Card, CardContent, Divider, Typography } from "@mui/material";
+export const cardBasic5String = `import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import Divider from "@mui/material/Divider";
+import Typography from "@mui/material/Typography";
 
 export const CardBasic5 = () => {
     return (
@@ -14,4 +17,3 @@ export const CardBasic5 = () => {
         </Card>
     );
 };`;
-

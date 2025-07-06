@@ -1,14 +1,16 @@
-export const popoverMenuString = `import { useState } from 'react';
-import {
-    Button,
-    Popover,
-    Paper,
-    MenuList,
-    MenuItem,
-    ClickAwayListener,
-    Box,
-} from '@mui/material';
-import { HorizontalSplit, ContactSupport, BookmarkAdd, Equalizer, KeyboardCommandKey } from '@mui/icons-material';
+export const popoverMenuString = `import { useState } from "react";
+import Button from "@mui/material/Button";
+import Popover from "@mui/material/Popover";
+import Paper from "@mui/material/Paper";
+import MenuList from "@mui/material/MenuList";
+import MenuItem from "@mui/material/MenuItem";
+import ClickAwayListener from "@mui/material/ClickAwayListener";
+import Box from "@mui/material/Box";
+import HorizontalSplit from "@mui/icons-material/HorizontalSplit";
+import ContactSupport from "@mui/icons-material/ContactSupport";
+import BookmarkAdd from "@mui/icons-material/BookmarkAdd";
+import Equalizer from "@mui/icons-material/Equalizer";
+import KeyboardCommandKey from "@mui/icons-material/KeyboardCommandKey";
 
 interface MenuItemType {
     label: string;
@@ -78,4 +80,4 @@ export const PopoverMenu = () => {
         </>
     );
 };
-`
+`;

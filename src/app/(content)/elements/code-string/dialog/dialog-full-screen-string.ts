@@ -77,4 +77,4 @@ export const DialogFullScreen = () => {
             </Dialog>
         </React.Fragment>
     );
-}`
+}`;

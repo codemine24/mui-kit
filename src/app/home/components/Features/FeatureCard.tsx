@@ -1,11 +1,14 @@
 "use client";
 import { ReactNode, useRef } from "react";
-import { Box, Paper, Typography, useTheme } from "@mui/material";
+import Box from "@mui/material/Box";
+import Paper from "@mui/material/Paper";
+import Typography from "@mui/material/Typography";
+import { useTheme } from "@mui/material/styles";
 
 export default function FeatureCard({
   icon,
   title,
-  desc,
+  desc
 }: {
   icon: ReactNode;
   title: string;
@@ -46,9 +49,7 @@ export default function FeatureCard({
         position: "relative",
         backdropFilter: "blur(8px)",
         backgroundColor:
-          theme.palette.mode === "dark"
-            ? "rgba(30, 30, 30, 0.9)"
-            : "rgba(255, 255, 255, 0.1)",
+          theme.palette.mode === "dark" ? "rgba(30, 30, 30, 0.9)" : "rgba(255, 255, 255, 0.1)",
         border: `.5px solid transparent`,
         borderRadius: 1,
         height: "100%",
@@ -63,18 +64,16 @@ export default function FeatureCard({
           padding: "1px",
           background:
             "radial-gradient(500px circle at var(--cursor-x) var(--cursor-y), rgba(34, 211, 238, 0.5) 0%, transparent 70%)",
-          WebkitMask:
-            "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+          WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
           WebkitMaskComposite: "xor",
           maskComposite: "exclude",
           pointerEvents: "none",
-          zIndex: 1,
+          zIndex: 1
         },
         "&:hover": {
-          transform: "translateY(-4px)",
-        },
-      }}
-    >
+          transform: "translateY(-4px)"
+        }
+      }}>
       {/* Background grid */}
       <Box
         sx={{
@@ -90,7 +89,7 @@ export default function FeatureCard({
               : "linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px)",
           backgroundSize: "20px 20px",
           opacity: 0.5,
-          borderRadius: 1,
+          borderRadius: 1
         }}
       />
       {/* Shadow */}
@@ -109,7 +108,7 @@ export default function FeatureCard({
           filter: "blur(70px)",
           opacity: 0,
           transition: "opacity 0.15s",
-          zIndex: 0,
+          zIndex: 0
         }}
       />
 
@@ -122,14 +121,12 @@ export default function FeatureCard({
           alignItems: "center",
           justifyContent: "center",
           borderRadius: "50%",
-          backgroundColor:
-            theme.palette.mode === "dark" ? "grey.800" : "grey.200",
+          backgroundColor: theme.palette.mode === "dark" ? "grey.800" : "grey.200",
           mb: 2,
           fontSize: 28,
           color: "primary.main",
-          zIndex: 1,
-        }}
-      >
+          zIndex: 1
+        }}>
         {icon}
       </Box>
 
@@ -139,8 +136,7 @@ export default function FeatureCard({
         fontWeight={600}
         gutterBottom
         zIndex={1}
-        sx={{ textTransform: "uppercase", letterSpacing: 1 }}
-      >
+        sx={{ textTransform: "uppercase", letterSpacing: 1 }}>
         {title}
       </Typography>
 

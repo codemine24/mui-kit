@@ -1,5 +1,9 @@
-export const dialogWelcomeString = `import { Button, Dialog, IconButton, Typography, Box } from "@mui/material";
-import { useState } from "react";
+export const dialogWelcomeString = `import { useState } from "react";
+import Button from "@mui/material/Button";
+import Dialog from "@mui/material/Dialog";
+import IconButton from "@mui/material/IconButton";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
 import CloseIcon from "@mui/icons-material/Close";
 
 export const DialogWelcome = () => {
@@ -103,4 +107,4 @@ export const DialogWelcome = () => {
             </Dialog>
         </>
     );
-}`
+}`;

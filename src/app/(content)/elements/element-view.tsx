@@ -4,7 +4,11 @@ import { PageTitle } from "@/components/core/page-title";
 import { useOnThisPage } from "@/contexts/on-thispage-context";
 import { elementsArr } from "@/router/router";
 import { pxToRem } from "@/utils/pxToRem";
-import { Box, Divider, Stack, TextField, useTheme } from "@mui/material";
+import Box from "@mui/material/Box";
+import Divider from "@mui/material/Divider";
+import Stack from "@mui/material/Stack";
+import TextField from "@mui/material/TextField";
+import { useTheme } from "@mui/material/styles";
 import Link from "next/link";
 import React from "react";
 
@@ -36,8 +40,7 @@ export const ElementView = () => {
         direction={{ xs: "column", md: "row" }}
         justifyContent={"space-between"}
         alignItems={{ xs: "start", md: "center" }}
-        spacing={{ xs: 2, md: 0 }}
-      >
+        spacing={{ xs: 2, md: 0 }}>
         <PageTitle
           title="Elements"
           description="Material UI core components with extended design, and functionality. "
@@ -56,12 +59,12 @@ export const ElementView = () => {
               fontSize: { md: pxToRem(14), lg: pxToRem(15) },
               "&.Mui-focused fieldset": {
                 borderColor: "primary.main",
-                boxShadow: theme.shadows[1],
-              },
+                boxShadow: theme.shadows[1]
+              }
             },
             "& .MuiOutlinedInput-notchedOutline": {
-              borderColor: theme.palette.divider,
-            },
+              borderColor: theme.palette.divider
+            }
           }}
           onChange={(e) => setSearchText(e.target.value)}
         />
@@ -84,10 +87,9 @@ export const ElementView = () => {
               width: "fit-content",
               transition: "0.3s",
               "&:hover": {
-                color: theme.palette.primary.main,
-              },
-            }}
-          >
+                color: theme.palette.primary.main
+              }
+            }}>
             {item.label}
           </Box>
         ))}

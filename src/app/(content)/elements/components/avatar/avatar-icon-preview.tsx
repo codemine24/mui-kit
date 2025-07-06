@@ -1,6 +1,6 @@
 import * as React from "react";
 import Stack from "@mui/material/Stack";
-import { Avatar } from "@mui/material";
+import Avatar from "@mui/material/Avatar";
 import FaceIcon from "@mui/icons-material/Face";
 import { pink } from "@mui/material/colors";
 import SupervisorAccountIcon from "@mui/icons-material/SupervisorAccount";
@@ -16,19 +16,14 @@ export default function AvatarIconPreview() {
       alignItems="center"
       justifyContent="center"
       sx={{ width: "100%", py: 6 }}
-      spacing={3}
-    >
+      spacing={3}>
       {/* Circle */}
       <Avatar alt="John Doe" sx={{ bgcolor: pink[500] }}>
         <FaceIcon />
       </Avatar>
 
       {/* Square */}
-      <Avatar
-        alt="John Doe"
-        variant="square"
-        sx={{ borderRadius: "4px", bgcolor: "green" }}
-      >
+      <Avatar alt="John Doe" variant="square" sx={{ borderRadius: "4px", bgcolor: "green" }}>
         <SupervisorAccountIcon fontSize="large" />
       </Avatar>
 
@@ -37,11 +32,9 @@ export default function AvatarIconPreview() {
         alt="John Doe"
         variant="square"
         sx={{
-          clipPath:
-            "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
-          bgcolor: "blue",
-        }}
-      >
+          clipPath: "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
+          bgcolor: "blue"
+        }}>
         <PersonOutlineIcon />
       </Avatar>
 
@@ -51,9 +44,8 @@ export default function AvatarIconPreview() {
         variant="square"
         sx={{
           clipPath: "polygon(50% 0%, 100% 100%, 0% 100%)",
-          bgcolor: "red",
-        }}
-      >
+          bgcolor: "red"
+        }}>
         <NoAccountsIcon fontSize="small" />
       </Avatar>
 
@@ -63,9 +55,8 @@ export default function AvatarIconPreview() {
         variant="square"
         sx={{
           clipPath: "ellipse(40% 50% at 50% 50%)",
-          bgcolor: "purple",
-        }}
-      >
+          bgcolor: "purple"
+        }}>
         <PersonSearchIcon />
       </Avatar>
 
@@ -74,12 +65,10 @@ export default function AvatarIconPreview() {
         alt="John Doe"
         variant="square"
         sx={{
-          clipPath:
-            "polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%)",
+          clipPath: "polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%)",
           borderRadius: 1,
-          bgcolor: "magenta",
-        }}
-      >
+          bgcolor: "magenta"
+        }}>
         <ContactPageIcon fontSize="large" />
       </Avatar>
     </Stack>

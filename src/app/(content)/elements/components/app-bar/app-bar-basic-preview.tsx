@@ -14,9 +14,7 @@ import * as React from "react";
 const pages = ["Home", "About", "Blog", "Contact"];
 
 export const AppBarBasicPreview = () => {
-  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
-    null
-  );
+  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
@@ -43,9 +41,8 @@ export const AppBarBasicPreview = () => {
                 fontWeight: 900,
                 letterSpacing: ".1rem",
                 color: "common.white",
-                textDecoration: "none",
-              }}
-            >
+                textDecoration: "none"
+              }}>
               LOGO
             </Typography>
           </Box>
@@ -63,8 +60,7 @@ export const AppBarBasicPreview = () => {
               aria-controls="mobile-menu"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
-              color="inherit"
-            >
+              color="inherit">
               <MenuIcon />
             </IconButton>
             <Menu
@@ -72,12 +68,12 @@ export const AppBarBasicPreview = () => {
               anchorEl={anchorElNav}
               anchorOrigin={{
                 vertical: "bottom",
-                horizontal: "right",
+                horizontal: "right"
               }}
               keepMounted
               transformOrigin={{
                 vertical: "top",
-                horizontal: "right",
+                horizontal: "right"
               }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
@@ -86,10 +82,9 @@ export const AppBarBasicPreview = () => {
                 "& .MuiPaper-root": {
                   minWidth: "180px",
                   borderRadius: "4px",
-                  boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.15)",
-                },
-              }}
-            >
+                  boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.15)"
+                }
+              }}>
               {pages.map((page) => (
                 <MenuItem
                   key={page}
@@ -98,10 +93,9 @@ export const AppBarBasicPreview = () => {
                     py: 1,
                     px: 2,
                     "&:hover": {
-                      backgroundColor: "rgba(164, 19, 60, 0.1)",
-                    },
-                  }}
-                >
+                      backgroundColor: "rgba(164, 19, 60, 0.1)"
+                    }
+                  }}>
                   <Typography
                     sx={{
                       fontSize: "0.9rem",
@@ -109,10 +103,9 @@ export const AppBarBasicPreview = () => {
                       "&:hover": {
                         textDecoration: "underline",
                         textDecorationColor: "#a4133c",
-                        textUnderlineOffset: "4px",
-                      },
-                    }}
-                  >
+                        textUnderlineOffset: "4px"
+                      }
+                    }}>
                     {page}
                   </Typography>
                 </MenuItem>
@@ -126,10 +119,9 @@ export const AppBarBasicPreview = () => {
                     fontSize: "0.9rem",
                     py: 1,
                     "&:hover": {
-                      backgroundColor: "#8a1033",
-                    },
-                  }}
-                >
+                      backgroundColor: "#8a1033"
+                    }
+                  }}>
                   Contact Us
                 </Button>
               </Box>
@@ -140,9 +132,8 @@ export const AppBarBasicPreview = () => {
           <Box
             sx={{
               flexGrow: 1,
-              display: { xs: "none", lg: "flex", justifyContent: "end", mr: 6 },
-            }}
-          >
+              display: { xs: "none", lg: "flex", justifyContent: "end", mr: 6 }
+            }}>
             {pages.map((page) => (
               <Button
                 key={page}
@@ -161,23 +152,19 @@ export const AppBarBasicPreview = () => {
                     height: "2px",
                     backgroundColor: "#a4133c",
                     transform: "scaleX(0)",
-                    transition: "transform 0.3s ease-out",
+                    transition: "transform 0.3s ease-out"
                   },
                   "&:hover::after": {
                     transform: "scaleX(1)",
-                    transformOrigin: "bottom left",
-                  },
-                }}
-              >
+                    transformOrigin: "bottom left"
+                  }
+                }}>
                 {page}
               </Button>
             ))}
           </Box>
           <Box sx={{ display: { xs: "none", lg: "flex" } }}>
-            <Button
-              variant="contained"
-              sx={{ backgroundColor: "#a4133c", ml: 2 }}
-            >
+            <Button variant="contained" sx={{ backgroundColor: "#a4133c", ml: 2 }}>
               Contact Us
             </Button>
           </Box>
@@ -194,7 +181,7 @@ const Logo = () => {
         sx={{
           display: { xs: "none", lg: "flex" },
           mr: 1,
-          color: "common.white",
+          color: "common.white"
         }}
       />
       <Typography
@@ -209,9 +196,8 @@ const Logo = () => {
           fontWeight: 900,
           letterSpacing: ".1rem",
           color: "common.white",
-          textDecoration: "none",
-        }}
-      >
+          textDecoration: "none"
+        }}>
         LOGO
       </Typography>
     </Box>

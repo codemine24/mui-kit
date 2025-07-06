@@ -1,8 +1,14 @@
-export const drawerNotificationsString = `import React from 'react';
-import {
-    Drawer, Box, Typography, IconButton, Divider, List, ListItem, ListItemText, Button
-} from '@mui/material';
-import CloseIcon from '@mui/icons-material/Close';
+export const drawerNotificationsString = `import React from "react";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Divider from "@mui/material/Divider";
+import Button from "@mui/material/Button";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemText from "@mui/material/ListItemText";
+import IconButton from "@mui/material/IconButton";
+import Drawer from "@mui/material/Drawer";
+import CloseIcon from "@mui/icons-material/Close";
 
 const notifications = [
     { id: 1, title: 'Order Shipped', message: 'Your order #1234 has been shipped.', time: '2h ago' },

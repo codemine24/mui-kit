@@ -1,15 +1,16 @@
 export const ButtonEcommerceCodeString = `import React, { useState } from 'react';
-import {
-    Paper,
-    IconButton,
-    Typography,
-    Box,
-    Stack,
-    Button
-} from '@mui/material';
+import Paper from '@mui/material/Paper';
+import IconButton from '@mui/material/IconButton';
+import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
-import { ArrowRightAlt, Clear, Favorite, ShoppingCart } from '@mui/icons-material';
+import ArrowRightAlt from '@mui/icons-material/ArrowRightAlt';
+import Clear from '@mui/icons-material/Clear';
+import Favorite from '@mui/icons-material/Favorite';
+import ShoppingCart from '@mui/icons-material/ShoppingCart';
 
 const MIN = 1;
 const MAX = 99;
@@ -112,4 +113,4 @@ export const ButtonEcommercePreview = () => {
             </Stack>
         </Box>
     );
-};`
+};`;

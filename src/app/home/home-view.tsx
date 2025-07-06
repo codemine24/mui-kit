@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import Box from "@mui/material/Box";
 import { BlockOverviewV2 } from "./components/blocks-overview-v2";
 import { ComponentOverviewV2 } from "./components/components-overview-v2";
 import { ContributorsOverview } from "./components/contributors";

@@ -1,14 +1,10 @@
-export const stepperWithoutLabelString = `import {
-    Stepper,
-    Step,
-    StepLabel,
-    Typography,
-    useMediaQuery,
-    Box,
-    Button,
-} from '@mui/material';
-import { useTheme } from '@mui/material/styles';
-import { useState } from 'react';
+export const stepperWithoutLabelString = `import Box from "@mui/material/Box";
+import Step from "@mui/material/Step";
+import Stepper from "@mui/material/Stepper";
+import StepLabel from "@mui/material/StepLabel";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
+import { useState } from "react";
 
 const steps: string[] = ['1', '2', '3'];
 
@@ -72,4 +68,4 @@ export const StepperWithoutLabel = () => {
         </Box>
     );
 }
-`
+`;

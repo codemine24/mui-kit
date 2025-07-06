@@ -1,21 +1,17 @@
-export const timelineCompanyMilestoneString = `import {
-    Box,
-    Typography,
-    Card,
-    Avatar,
-    Stack,
-    useMediaQuery,
-    useTheme,
-} from '@mui/material';
-import {
-    Timeline,
-    TimelineItem,
-    TimelineSeparator,
-    TimelineDot,
-    TimelineConnector,
-    TimelineContent,
-    TimelineOppositeContent,
-} from '@mui/lab';
+export const timelineCompanyMilestoneString = `import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Card from "@mui/material/Card";
+import Avatar from "@mui/material/Avatar";
+import Stack from "@mui/material/Stack";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme } from "@mui/material/styles";
+import Timeline from "@mui/lab/Timeline";
+import TimelineItem from "@mui/lab/TimelineItem";
+import TimelineSeparator from "@mui/lab/TimelineSeparator";
+import TimelineDot from "@mui/lab/TimelineDot";
+import TimelineConnector from "@mui/lab/TimelineConnector";
+import TimelineContent from "@mui/lab/TimelineContent";
+import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
 
 const timelineItems = [
     {
@@ -142,4 +138,4 @@ export function TimelineCompanyMilestone() {
             </Timeline>
         </Box>
     );
-}`
+}`;

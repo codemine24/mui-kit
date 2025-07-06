@@ -4,19 +4,16 @@ import { useColorMode } from "@/providers/app-provider";
 import { navItems } from "@/router/router";
 import { pxToRem } from "@/utils/pxToRem";
 import { Icon } from "@iconify/react";
-import {
-  alpha,
-  AppBar,
-  Box,
-  Button,
-  Container,
-  Drawer,
-  IconButton,
-  Stack,
-  Toolbar,
-  Typography,
-  useTheme,
-} from "@mui/material";
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Container from "@mui/material/Container";
+import Drawer from "@mui/material/Drawer";
+import IconButton from "@mui/material/IconButton";
+import Stack from "@mui/material/Stack";
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
+import { alpha, useTheme } from "@mui/material/styles";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
@@ -51,10 +48,8 @@ export const Header = () => {
       sx={{
         backdropFilter: "blur(12px)",
         backgroundColor: alpha(theme.palette.background.default, 0.7),
-        transition:
-          "background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease",
-      }}
-    >
+        transition: "background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease"
+      }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Box sx={{ display: { xs: "none", md: "block" } }}>
@@ -69,8 +64,7 @@ export const Header = () => {
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
-              color="inherit"
-            >
+              color="inherit">
               <Icon icon="mdi:menu" />
             </IconButton>
           </Box>
@@ -79,9 +73,8 @@ export const Header = () => {
           <Box
             sx={{
               flexGrow: 1,
-              display: { xs: "flex", md: "none" },
-            }}
-          >
+              display: { xs: "flex", md: "none" }
+            }}>
             <Logo />
           </Box>
 
@@ -90,9 +83,8 @@ export const Header = () => {
             sx={{
               flexGrow: 1,
               display: { xs: "none", md: "flex" },
-              marginLeft: 6,
-            }}
-          >
+              marginLeft: 6
+            }}>
             {navItems.map((page) => (
               <Button
                 key={page?.path}
@@ -101,9 +93,8 @@ export const Header = () => {
                   color: "text.primary",
                   fontSize: { md: pxToRem(14), lg: pxToRem(15) },
                   fontWeight: 400,
-                  textTransform: "capitalize",
-                }}
-              >
+                  textTransform: "capitalize"
+                }}>
                 {page?.label}
               </Button>
             ))}
@@ -114,19 +105,11 @@ export const Header = () => {
             <Typography
               component={Link}
               href={"https://github.com/codemine24/mui-kit"}
-              target="_blank"
-            >
-              <Iconify
-                icon="mdi:github"
-                style={{ color: theme.palette.text.secondary }}
-              />
+              target="_blank">
+              <Iconify icon="mdi:github" style={{ color: theme.palette.text.secondary }} />
             </Typography>
             <span onClick={toggleColorMode} style={{ cursor: "pointer" }}>
-              <Iconify
-                icon={
-                  mode === "light" ? "tdesign:mode-dark" : "iconoir:sun-light"
-                }
-              />
+              <Iconify icon={mode === "light" ? "tdesign:mode-dark" : "iconoir:sun-light"} />
             </span>
           </Stack>
         </Toolbar>
@@ -141,9 +124,9 @@ export const Header = () => {
           keepMounted: true,
           BackdropProps: {
             sx: {
-              backgroundColor: "transparent",
-            },
-          },
+              backgroundColor: "transparent"
+            }
+          }
         }}
         variant="temporary"
         sx={{
@@ -152,11 +135,10 @@ export const Header = () => {
             boxSizing: "border-box",
             width: 280,
             bgcolor: "background.paper",
-            backgroundImage: "none",
-          },
-        }}
-      >
-        <ContentSidebar variant="drawer"  onClose={handleCloseNavMenu}/>
+            backgroundImage: "none"
+          }
+        }}>
+        <ContentSidebar variant="drawer" onClose={handleCloseNavMenu} />
       </Drawer>
     </AppBar>
   );

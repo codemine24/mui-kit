@@ -1,4 +1,5 @@
-import { Box, TextField } from "@mui/material";
+import Box from "@mui/material/Box";
+import TextField from "@mui/material/TextField";
 import { useRef, useState } from "react";
 
 const length = 6;
@@ -17,10 +18,7 @@ export const OTPUnderlinedPreview = () => {
     }
   };
 
-  const handleKeyDown = (
-    e: React.KeyboardEvent<HTMLDivElement>,
-    index: number
-  ) => {
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>, index: number) => {
     if (e.key === "Backspace" && !otp[index] && index > 0) {
       inputRefs.current[index - 1]?.focus();
     }
@@ -37,8 +35,8 @@ export const OTPUnderlinedPreview = () => {
             maxLength: 1,
             style: {
               textAlign: "center",
-              fontWeight: "bold",
-            },
+              fontWeight: "bold"
+            }
           }}
           value={data}
           onChange={(e) => handleChange(e.target as HTMLInputElement, index)}
@@ -49,14 +47,14 @@ export const OTPUnderlinedPreview = () => {
             width: { xs: 35, md: 45, lg: 60 },
             "& input": {
               fontSize: { xs: "1rem", md: "1.5rem" },
-              padding: { xs: 0.8, md: 1, lg: 2 },
+              padding: { xs: 0.8, md: 1, lg: 2 }
             },
             "& .MuiInput-underline:before": {
-              borderBottomWidth: "2px",
+              borderBottomWidth: "2px"
             },
             "& .MuiInput-underline:after": {
-              borderBottomWidth: "3px",
-            },
+              borderBottomWidth: "3px"
+            }
           }}
           autoComplete="one-time-code"
           inputMode="numeric"

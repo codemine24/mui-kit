@@ -5,7 +5,8 @@ import { CustomBreadCrumbs } from "@/components/core/breadcrumbs";
 import { PageTitle } from "@/components/core/page-title";
 import { SectionTitle } from "@/components/core/section-title";
 import { useOnThisPage } from "@/contexts/on-thispage-context";
-import { Box, Divider } from "@mui/material";
+import Box from "@mui/material/Box";
+import Divider from "@mui/material/Divider";
 import React from "react";
 
 import { ExternalPackageAlert } from "@/components/external-package-alert";
@@ -22,7 +23,7 @@ import {
   timelineProjectsString,
   timelineSocialString,
   timelineTouristSpotString,
-  timelineWithDateString,
+  timelineWithDateString
 } from "../code-string/timeline";
 import { timelineHorizontalCenterString } from "../code-string/timeline/timeline-horizontal-center-string";
 import {
@@ -37,7 +38,7 @@ import {
   TimelineProjectsPreview,
   TimelineSocialPreview,
   TimelineTouristSpotPreview,
-  TimelineWithDatePreview,
+  TimelineWithDatePreview
 } from "../components/timeline";
 import { TimelineHorizontalCenterPreview } from "../components/timeline/timeline-horizontal-center-preview";
 
@@ -45,39 +46,37 @@ const sections = [
   {
     id: "timeline-1",
     title: "Classic",
-    description:
-      "More simple timeline with slick design and basic functionality.",
+    description: "More simple timeline with slick design and basic functionality.",
     codeString: timelineClassicString,
-    preview: <TimelineClassicPreview />,
+    preview: <TimelineClassicPreview />
   },
   {
     id: "timeline-2",
     title: "With date",
     description: "Timeline with date along with title and description.",
     codeString: timelineWithDateString,
-    preview: <TimelineWithDatePreview />,
+    preview: <TimelineWithDatePreview />
   },
   {
     id: "timeline-3",
     title: "Date in one side",
-    description:
-      "Timeline with date but in one side along with title and description.",
+    description: "Timeline with date but in one side along with title and description.",
     codeString: timelineOneSidedString,
-    preview: <TimelineOneSidedPreview />,
+    preview: <TimelineOneSidedPreview />
   },
   {
     id: "timeline-4",
     title: "Custom icon",
     description: "You can add custom icon in timeline. ",
     codeString: timelineCustomIconString,
-    preview: <TimelineCustomIconPreview />,
+    preview: <TimelineCustomIconPreview />
   },
   {
     id: "timeline-5",
     title: "Avatar",
     description: "Instead of icon you can add avatar in timeline.",
     codeString: timelineAvatarString,
-    preview: <TimelineAvatarPreview />,
+    preview: <TimelineAvatarPreview />
   },
   {
     id: "timeline-6",
@@ -85,46 +84,42 @@ const sections = [
     description:
       "Horizontal timeline if you want to show timeline in horizontal layout. Completely designed with material ui and nothing else.",
     codeString: timelineHorizontalString,
-    preview: <TimelineHorizontalPreview />,
+    preview: <TimelineHorizontalPreview />
   },
   {
     id: "timeline-7",
     title: "Horizontal centred timeline",
     description: "Horizontal content in center timeline.",
     codeString: timelineHorizontalCenterString,
-    preview: <TimelineHorizontalCenterPreview />,
+    preview: <TimelineHorizontalCenterPreview />
   },
   {
     id: "timeline-8",
     title: "Action button",
-    description:
-      "Timeline with actionable buttons. Add custom url in action button. ",
+    description: "Timeline with actionable buttons. Add custom url in action button. ",
     codeString: timelineActionButtonString,
-    preview: <TimelineActionButtonPreview />,
+    preview: <TimelineActionButtonPreview />
   },
   {
     id: "timeline-9",
     title: "Projects",
-    description:
-      "Simple project timeline with custom icons and background color. ",
+    description: "Simple project timeline with custom icons and background color. ",
     codeString: timelineProjectsString,
-    preview: <TimelineProjectsPreview />,
+    preview: <TimelineProjectsPreview />
   },
   {
     id: "timeline-10",
     title: "Change log",
-    description:
-      "Change log time to display your application changes over the time. ",
+    description: "Change log time to display your application changes over the time. ",
     codeString: timelineChangeLogString,
-    preview: <TimelineChangeLogPreview />,
+    preview: <TimelineChangeLogPreview />
   },
   {
     id: "timeline-11",
     title: " Milestone",
-    description:
-      "Milestone timeline perfect for showing the accomplishment over the time.",
+    description: "Milestone timeline perfect for showing the accomplishment over the time.",
     codeString: timelineCompanyMilestoneString,
-    preview: <TimelineCompanyMilestonePreview />,
+    preview: <TimelineCompanyMilestonePreview />
   },
   {
     id: "timeline-12",
@@ -132,16 +127,15 @@ const sections = [
     description:
       "Another ready to use material ui timeline. You can customize and use it for multiple purposes.",
     codeString: timelineTouristSpotString,
-    preview: <TimelineTouristSpotPreview />,
+    preview: <TimelineTouristSpotPreview />
   },
   {
     id: "timeline-13",
     title: "Social",
-    description:
-      "Ready to use mui timeline. You can customize and use it for multiple purposes.",
+    description: "Ready to use mui timeline. You can customize and use it for multiple purposes.",
     codeString: timelineSocialString,
-    preview: <TimelineSocialPreview />,
-  },
+    preview: <TimelineSocialPreview />
+  }
 ];
 
 export const TimelineView = () => {
@@ -156,7 +150,7 @@ export const TimelineView = () => {
       <CustomBreadCrumbs
         pathArr={[
           { label: "Elements", path: PATHS.ELEMENTS.OVERVIEW },
-          { label: "Timeline", path: "" },
+          { label: "Timeline", path: "" }
         ]}
       />
       <PageTitle
@@ -169,8 +163,8 @@ export const TimelineView = () => {
         packages={[
           {
             name: "@iconify/react",
-            url: "https://www.npmjs.com/package/@iconify/react",
-          },
+            url: "https://www.npmjs.com/package/@iconify/react"
+          }
         ]}
       />
       {/* Timeline Sections */}
@@ -182,10 +176,7 @@ export const TimelineView = () => {
             id={section.id}
           />
 
-          <CodePreviewCopyWrapper
-            codeString={section.codeString}
-            preview={section.preview}
-          />
+          <CodePreviewCopyWrapper codeString={section.codeString} preview={section.preview} />
         </Box>
       ))}
     </Box>

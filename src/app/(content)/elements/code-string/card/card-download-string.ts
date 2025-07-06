@@ -1,7 +1,9 @@
 export const cardDownloadString = `
-import { Box, Card, Typography } from "@mui/material";
+import Box from "@mui/material/Box";
+import Card from "@mui/material/Card";
+import Typography from "@mui/material/Typography";
 import AppleIcon from '@mui/icons-material/Apple';
-import { Iconify } from "@/components/iconify";
+import Iconify from "@/components/iconify";
 
 export const CardDownload = () => {
     return (

@@ -1,12 +1,14 @@
 import * as React from "react";
 import Stack from "@mui/material/Stack";
-import { Avatar, Badge, Box } from "@mui/material";
+import Avatar from "@mui/material/Avatar";
+import Badge, { badgeClasses } from "@mui/material/Badge";
+import Box from "@mui/material/Box";
 import { styled } from "@mui/material/styles";
 
 const squareAvatarSrc = "/images/avatar-2.png";
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
-  "& .MuiBadge-badge": {
+  [`& .${badgeClasses.badge}`]: {
     backgroundColor: "#44b700",
     color: "#44b700",
     boxShadow: `0 0 0 2px ${theme.palette.background.paper}`,
@@ -19,19 +21,19 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
       borderRadius: "50%",
       animation: "ripple 1.2s infinite ease-in-out",
       border: "1px solid currentColor",
-      content: '""',
-    },
+      content: '""'
+    }
   },
   "@keyframes ripple": {
     "0%": {
       transform: "scale(.8)",
-      opacity: 1,
+      opacity: 1
     },
     "100%": {
       transform: "scale(2.4)",
-      opacity: 0,
-    },
-  },
+      opacity: 0
+    }
+  }
 }));
 
 export default function AvatarStatusPreview() {
@@ -43,14 +45,12 @@ export default function AvatarStatusPreview() {
       alignItems="center"
       justifyContent="center"
       sx={{ width: "100%", py: 6 }}
-      spacing={3}
-    >
+      spacing={3}>
       {/* Dot Animation */}
       <StyledBadge
         overlap="circular"
         anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
-        variant="dot"
-      >
+        variant="dot">
         <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
       </StyledBadge>
 
@@ -62,19 +62,17 @@ export default function AvatarStatusPreview() {
             width: 46,
             height: 46,
             borderRadius: "50%",
-            animation: activeStatus
-              ? "ripple 1.9s infinite ease-in-out"
-              : "none",
+            animation: activeStatus ? "ripple 1.9s infinite ease-in-out" : "none",
             "@keyframes ripple": {
               "0%": {
                 transform: "scale(1)",
-                opacity: 1,
+                opacity: 1
               },
               "100%": {
                 transform: "scale(1.1)",
-                opacity: 0,
-              },
-            },
+                opacity: 0
+              }
+            }
           }}
         />
         <Avatar
@@ -86,7 +84,7 @@ export default function AvatarStatusPreview() {
             border: "2px solid #fff",
             position: "absolute",
             top: 3,
-            left: 3,
+            left: 3
           }}
         />
       </Box>
@@ -99,21 +97,18 @@ export default function AvatarStatusPreview() {
             width: 46,
             height: 46,
             borderRadius: "4px",
-            animation: activeStatus
-              ? "ripple 1.9s infinite ease-in-out"
-              : "none",
+            animation: activeStatus ? "ripple 1.9s infinite ease-in-out" : "none",
             "@keyframes ripple": {
               "0%": {
                 transform: "scale(1)",
-                opacity: 1,
+                opacity: 1
               },
               "100%": {
                 transform: "scale(1.1)",
-                opacity: 0,
-              },
-            },
-          }}
-        ></Box>
+                opacity: 0
+              }
+            }
+          }}></Box>
         <Avatar
           src={squareAvatarSrc}
           alt="John Doe"
@@ -125,7 +120,7 @@ export default function AvatarStatusPreview() {
             border: "2px solid #fff",
             position: "absolute",
             top: 3.5,
-            left: 3,
+            left: 3
           }}
         />
       </Box>
@@ -138,19 +133,17 @@ export default function AvatarStatusPreview() {
             width: 48,
             height: 48,
             clipPath: "ellipse(40% 50% at 50% 50%)",
-            animation: activeStatus
-              ? "ripple 1.9s infinite ease-in-out"
-              : "none",
+            animation: activeStatus ? "ripple 1.9s infinite ease-in-out" : "none",
             "@keyframes ripple": {
               "0%": {
                 transform: "scale(1)",
-                opacity: 1,
+                opacity: 1
               },
               "100%": {
                 transform: "scale(1.1)",
-                opacity: 0,
-              },
-            },
+                opacity: 0
+              }
+            }
           }}
         />
         <Box
@@ -161,7 +154,7 @@ export default function AvatarStatusPreview() {
             position: "absolute",
             top: 2,
             left: 2,
-            clipPath: "ellipse(40% 50% at 50% 50%)",
+            clipPath: "ellipse(40% 50% at 50% 50%)"
           }}
         />
         <Avatar
@@ -174,7 +167,7 @@ export default function AvatarStatusPreview() {
             position: "absolute",
             top: 4,
             left: 4,
-            clipPath: "ellipse(40% 50% at 50% 50%)",
+            clipPath: "ellipse(40% 50% at 50% 50%)"
           }}
         />
       </Box>
@@ -186,22 +179,19 @@ export default function AvatarStatusPreview() {
             backgroundColor: activeStatus ? "#44b700" : "grey",
             width: 48,
             height: 48,
-            clipPath:
-              "polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%)",
+            clipPath: "polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%)",
             borderRadius: 1,
-            animation: activeStatus
-              ? "ripple 1.9s infinite ease-in-out"
-              : "none",
+            animation: activeStatus ? "ripple 1.9s infinite ease-in-out" : "none",
             "@keyframes ripple": {
               "0%": {
                 transform: "scale(1)",
-                opacity: 1,
+                opacity: 1
               },
               "100%": {
                 transform: "scale(1.1)",
-                opacity: 0,
-              },
-            },
+                opacity: 0
+              }
+            }
           }}
         />
         <Box
@@ -212,9 +202,8 @@ export default function AvatarStatusPreview() {
             position: "absolute",
             top: 2.6,
             left: 2,
-            clipPath:
-              "polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%)",
-            borderRadius: 1,
+            clipPath: "polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%)",
+            borderRadius: 1
           }}
         />
         <Avatar
@@ -227,9 +216,8 @@ export default function AvatarStatusPreview() {
             position: "absolute",
             top: 4.3,
             left: 4,
-            clipPath:
-              "polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%)",
-            borderRadius: 1,
+            clipPath: "polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%)",
+            borderRadius: 1
           }}
         />
       </Box>

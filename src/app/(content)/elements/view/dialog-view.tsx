@@ -2,7 +2,8 @@
 
 import React from "react";
 import { useOnThisPage } from "@/contexts/on-thispage-context";
-import { Box, Divider } from "@mui/material";
+import Box from "@mui/material/Box";
+import Divider from "@mui/material/Divider";
 import { CustomBreadCrumbs } from "@/components/core/breadcrumbs";
 import { PageTitle } from "@/components/core/page-title";
 import { SectionTitle } from "@/components/core/section-title";
@@ -23,7 +24,7 @@ import {
   DialogImageViewPreview,
   DialogSignInPreview,
   DialogCTAPreview,
-  DialogWelcomePreview,
+  DialogWelcomePreview
 } from "../components/dialog";
 import {
   dialogCustomBackdropString,
@@ -40,7 +41,7 @@ import {
   dialogImageViewPreviewString,
   dialogSignInString,
   dialogCTAString,
-  dialogWelcomeString,
+  dialogWelcomeString
 } from "../code-string/dialog";
 import { PATHS } from "@/router/paths";
 
@@ -48,10 +49,9 @@ const sections = [
   {
     id: "dialog-sizes",
     title: "Different sizes dialog",
-    description:
-      "Choose your desire dialog four different sizes given by material ui. ",
+    description: "Choose your desire dialog four different sizes given by material ui. ",
     codeString: dialogSizesString,
-    preview: <DialogSizesPreview />,
+    preview: <DialogSizesPreview />
   },
   {
     id: "dialog-placement",
@@ -59,7 +59,7 @@ const sections = [
     description:
       "We have 5 different position for a dialog. Top-left, top-right, bottom-left, bottom-right and center. ",
     codeString: dialogPlacementString,
-    preview: <DialogPlacementPreview />,
+    preview: <DialogPlacementPreview />
   },
   {
     id: "dialog-static",
@@ -67,29 +67,28 @@ const sections = [
     description:
       "This dialog will not close on outside click. If you need a dialog that will not close on outside click, use this.",
     codeString: dialogStaticString,
-    preview: <DialogStaticPreview />,
+    preview: <DialogStaticPreview />
   },
   {
     id: "dialog-custom-backdrop",
     title: "Custom Backdrop",
-    description:
-      "We have 3 different variant for backdrop. `none`, `blur` and `custom color`. ",
+    description: "We have 3 different variant for backdrop. `none`, `blur` and `custom color`. ",
     codeString: dialogCustomBackdropString,
-    preview: <DialogCustomBackdropPreview />,
+    preview: <DialogCustomBackdropPreview />
   },
   {
     id: "dialog-confirmation",
     title: "Confirmation dialog",
     description: "Confirmation dialog for deleting an item. ",
     codeString: dialogConfirmation1String,
-    preview: <DialogConfirmation1Preview />,
+    preview: <DialogConfirmation1Preview />
   },
   {
     id: "dialog-confirmation-2",
     title: "Confirmation dialog v2",
     description: "Another modern and elegant confirmation dialog. ",
     codeString: dialogConfirmation2String,
-    preview: <DialogConfirmation2Preview />,
+    preview: <DialogConfirmation2Preview />
   },
   {
     id: "dialog-multi-step",
@@ -97,7 +96,7 @@ const sections = [
     description:
       "If your need a dialog with multiple steps functionality, you can use this one. We used dummy form fields, but you can replace it with your actual content. ",
     codeString: dialogMultiStepString,
-    preview: <DialogMultiStepPreview />,
+    preview: <DialogMultiStepPreview />
   },
   {
     id: "dialog-scrollable",
@@ -105,15 +104,14 @@ const sections = [
     description:
       "We have 2 scrollable dialog. `Paper` will have header footer sticky and body will be scrollable. But `body` variant will be entirely scrollable. ",
     codeString: dialogScrollableString,
-    preview: <DialogScrollablePreview />,
+    preview: <DialogScrollablePreview />
   },
   {
     id: "dialog-full-screen",
     title: "Full Screen",
-    description:
-      "This dialog will cover your entire screen. Body content will not be visible.",
+    description: "This dialog will cover your entire screen. Body content will not be visible.",
     codeString: dialogFullScreenString,
-    preview: <DialogFullScreenPreview />,
+    preview: <DialogFullScreenPreview />
   },
   {
     id: "dialog-animation",
@@ -121,7 +119,7 @@ const sections = [
     description:
       "You can make your dialog more interesting by using one of these animated dialogs. We have different animation like slide, grow, zoom and fade. ",
     codeString: dialogAnimationString,
-    preview: <DialogAnimationPreview />,
+    preview: <DialogAnimationPreview />
   },
   {
     id: "dialog-header-footer",
@@ -129,7 +127,7 @@ const sections = [
     description:
       "This dialog variant has header and footer. If you need a dialog with header and footer, use this.",
     codeString: dialogHeaderFooterString,
-    preview: <DialogHeaderFooterPreview />,
+    preview: <DialogHeaderFooterPreview />
   },
   {
     id: "dialog-image-view",
@@ -137,31 +135,29 @@ const sections = [
     description:
       "You can use this dialog to preview media like image, video etc. By default we are using it as a image previewer. ",
     codeString: dialogImageViewPreviewString,
-    preview: <DialogImageViewPreview />,
+    preview: <DialogImageViewPreview />
   },
   {
     id: "dialog-signin",
     title: "Sign-in dialog",
     description: "Use this ready to cook sign-in dialog.",
     codeString: dialogSignInString,
-    preview: <DialogSignInPreview />,
+    preview: <DialogSignInPreview />
   },
   {
     id: "dialog-cta",
     title: "Subscribe dialog",
-    description:
-      "Grab your customer attention with this amazing subscribe dialog. ",
+    description: "Grab your customer attention with this amazing subscribe dialog. ",
     codeString: dialogCTAString,
-    preview: <DialogCTAPreview />,
+    preview: <DialogCTAPreview />
   },
   {
     id: "dialog-welcome",
     title: "Welcome dialog",
-    description:
-      "A decent dialog to welcome your user. Perfect for web application onboarding. ",
+    description: "A decent dialog to welcome your user. Perfect for web application onboarding. ",
     codeString: dialogWelcomeString,
-    preview: <DialogWelcomePreview />,
-  },
+    preview: <DialogWelcomePreview />
+  }
 ];
 
 export const DialogView = () => {
@@ -176,7 +172,7 @@ export const DialogView = () => {
       <CustomBreadCrumbs
         pathArr={[
           { label: "Elements", path: PATHS.ELEMENTS.OVERVIEW },
-          { label: "Dialog", path: "" },
+          { label: "Dialog", path: "" }
         ]}
       />
       <PageTitle
@@ -195,10 +191,7 @@ export const DialogView = () => {
             description={section.description || ""}
             id={section.id}
           />
-          <CodePreviewCopyWrapper
-            codeString={section.codeString}
-            preview={section.preview}
-          />
+          <CodePreviewCopyWrapper codeString={section.codeString} preview={section.preview} />
         </Box>
       ))}
     </Box>

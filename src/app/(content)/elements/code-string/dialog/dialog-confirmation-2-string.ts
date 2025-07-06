@@ -1,5 +1,12 @@
 export const dialogConfirmation2String = `import React from "react";
-import { Box, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Button, Typography } from "@mui/material";
+import Box from "@mui/material/Box";
+import Dialog from "@mui/material/Dialog";
+import DialogActions from "@mui/material/DialogActions";
+import DialogContent from "@mui/material/DialogContent";
+import DialogContentText from "@mui/material/DialogContentText";
+import DialogTitle from "@mui/material/DialogTitle";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
 
 export const DialogConfirmation2 = () => {
     const [open, setOpen] = React.useState(false);
@@ -43,4 +50,4 @@ export const DialogConfirmation2 = () => {
             </Dialog>
         </Box>
     )
-}`
+}`;

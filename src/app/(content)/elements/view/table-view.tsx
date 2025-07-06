@@ -4,7 +4,8 @@ import { CustomBreadCrumbs } from "@/components/core/breadcrumbs";
 import { PageTitle } from "@/components/core/page-title";
 import { SectionTitle } from "@/components/core/section-title";
 import { useOnThisPage } from "@/contexts/on-thispage-context";
-import { Box, Divider } from "@mui/material";
+import Box from "@mui/material/Box";
+import Divider from "@mui/material/Divider";
 import React from "react";
 
 import {
@@ -24,7 +25,7 @@ import {
   StripedColumnTablePreview,
   StripedRowTablePreview,
   TransactionTablePreview,
-  UserTablePreview,
+  UserTablePreview
 } from "../components/table";
 
 import { PATHS } from "@/router/paths";
@@ -45,7 +46,7 @@ import {
   strippedColumnTableString,
   strippedRowTableString,
   transactionTableString,
-  userTableString,
+  userTableString
 } from "../code-string/table";
 
 const sections = [
@@ -55,7 +56,7 @@ const sections = [
     description:
       "Very basic material ui table. If you need very simple table without any extra functionality, use this.",
     codeString: basicTableString,
-    preview: <BasicTablePreview />,
+    preview: <BasicTablePreview />
   },
   {
     id: "table-2",
@@ -63,97 +64,91 @@ const sections = [
     description:
       "Default material ui table with sorting, selection, filter and pagination functionality.",
     codeString: dataTableString,
-    preview: <DataTablePreview />,
+    preview: <DataTablePreview />
   },
   {
     id: "table-3",
     title: "Dense",
-    description:
-      "Mui table with dense padding (narrow rows). If you like compact table, use this.",
+    description: "Mui table with dense padding (narrow rows). If you like compact table, use this.",
     codeString: denseTableString,
-    preview: <DenseTablePreview />,
+    preview: <DenseTablePreview />
   },
   {
     id: "table-4",
     title: "Sorting & selecting",
-    description:
-      "Mui default table. If you need custom selection and sorting button, use this. ",
+    description: "Mui default table. If you need custom selection and sorting button, use this. ",
     codeString: sortingTableString,
-    preview: <SortingTablePreview />,
+    preview: <SortingTablePreview />
   },
   {
     id: "table-5",
     title: "Sticky header",
     description: "Material ui default sticky header table component.",
     codeString: stickyHeaderTableString,
-    preview: <StickyHeadTablePreview />,
+    preview: <StickyHeadTablePreview />
   },
   {
     id: "table-6",
     title: "Collapsible",
     description: "Material ui table with collapsible rows.",
     codeString: collapsibleTableString,
-    preview: <CollapsibleTablePreview />,
+    preview: <CollapsibleTablePreview />
   },
   {
     id: "table-7",
     title: "User table",
-    description:
-      "User table, one of the most common table used in any application.",
+    description: "User table, one of the most common table used in any application.",
     codeString: userTableString,
-    preview: <UserTablePreview />,
+    preview: <UserTablePreview />
   },
   {
     id: "table-8",
     title: "Product",
     description: "Product table for e-commerce website.",
     codeString: productTableString,
-    preview: <ProductTablePreview />,
+    preview: <ProductTablePreview />
   },
   {
     id: "table-9",
     title: "Shopping cart",
-    description:
-      "Shopping cart table for e-commerce website with custom design.",
+    description: "Shopping cart table for e-commerce website with custom design.",
     codeString: shoppingCartTableString,
-    preview: <ShoppingCartTablePreview />,
+    preview: <ShoppingCartTablePreview />
   },
   {
     id: "table-10",
     title: "Comparison",
-    description:
-      "Use this feature comparison table built with material ui only. ",
+    description: "Use this feature comparison table built with material ui only. ",
     codeString: comparisonTableString,
-    preview: <ComparisonTablePreview />,
+    preview: <ComparisonTablePreview />
   },
   {
     id: "table-11",
     title: "Stripped column",
-    description:
-      "Stripped column table. You can change the color based on your requirement.",
+    description: "Stripped column table. You can change the color based on your requirement.",
     codeString: strippedColumnTableString,
-    preview: <StripedColumnTablePreview />,
+    preview: <StripedColumnTablePreview />
   },
   {
     id: "table-12",
     title: "Stripped row",
     description: "Stripped row table. ",
     codeString: strippedRowTableString,
-    preview: <StripedRowTablePreview />,
+    preview: <StripedRowTablePreview />
   },
   {
     id: "table-13",
     title: "Hover",
     description: "Mui table with hover effect. ",
     codeString: hoverTableString,
-    preview: <HoverTablePreview />,
+    preview: <HoverTablePreview />
   },
   {
     id: "table-14",
     title: "Headless",
     description: "Material ui table without any header or footer.",
     codeString: headlessTableString,
-    preview: <HeadlessTablePreview />,
+    preview: <HeadlessTablePreview />
   },
   {
     id: "table-15",
@@ -161,14 +156,14 @@ const sections = [
     description:
       "Skip default table pagination and use your custom pagination. The pagination is fully customizable.",
     codeString: customPaginationTableString,
-    preview: <CustomPaginationTablePreview />,
+    preview: <CustomPaginationTablePreview />
   },
   {
     id: "table-16",
     title: "Highlighted field",
     description: "Highlight important fields in a table. ",
     codeString: highlightTableString,
-    preview: <HighlightedFieldTablePreview />,
+    preview: <HighlightedFieldTablePreview />
   },
   {
     id: "table-17",
@@ -176,8 +171,8 @@ const sections = [
     description:
       "Transaction table sample using material ui. You can customize it based on your requirement.  ",
     codeString: transactionTableString,
-    preview: <TransactionTablePreview />,
-  },
+    preview: <TransactionTablePreview />
+  }
 ];
 
 export const TableView = () => {
@@ -192,7 +187,7 @@ export const TableView = () => {
       <CustomBreadCrumbs
         pathArr={[
           { label: "Elements", path: PATHS.ELEMENTS.OVERVIEW },
-          { label: "Table", path: "" },
+          { label: "Table", path: "" }
         ]}
       />
       <PageTitle
@@ -211,10 +206,7 @@ export const TableView = () => {
             id={section.id}
           />
 
-          <CodePreviewCopyWrapper
-            codeString={section.codeString}
-            preview={section.preview}
-          />
+          <CodePreviewCopyWrapper codeString={section.codeString} preview={section.preview} />
         </Box>
       ))}
     </Box>

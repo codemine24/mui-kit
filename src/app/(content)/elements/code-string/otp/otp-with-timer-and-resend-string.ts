@@ -1,12 +1,15 @@
-export const OTPWithTimerAndResendString = `import {
-  CheckCircle,
-  Error,
-  Refresh,
-  Security,
-  Timer,
-} from "@mui/icons-material";
-import { Alert, Box, Button, Chip, TextField, Typography } from "@mui/material";
-import { Stack } from "@mui/system";
+export const OTPWithTimerAndResendString = `import CheckCircle from "@mui/icons-material/CheckCircle";
+import Error from "@mui/icons-material/Error";
+import Refresh from "@mui/icons-material/Refresh";
+import Security from "@mui/icons-material/Security";
+import Timer from "@mui/icons-material/Timer";
+import Alert from "@mui/material/Alert";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Chip from "@mui/material/Chip";
+import TextField from "@mui/material/TextField";
+import Typography from "@mui/material/Typography";
+import Stack from "@mui/material/Stack";
 import { useEffect, useRef, useState } from "react";
 
 const length = 6;

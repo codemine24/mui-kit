@@ -1,13 +1,15 @@
 export const buttonSocialLoginString = `import { Icon } from "@iconify/react/dist/iconify.js";
-import {
-  Apple,
-  Facebook,
-  GitHub,
-  Google,
-  Microsoft,
-  X,
-} from "@mui/icons-material";
-import { Box, Button, Divider, IconButton, Stack } from "@mui/material";
+import Apple from "@mui/icons-material/Apple";
+import Facebook from "@mui/icons-material/Facebook";
+import GitHub from "@mui/icons-material/GitHub";
+import Google from "@mui/icons-material/Google";
+import Microsoft from "@mui/icons-material/Microsoft";
+import X from "@mui/icons-material/X";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Divider from "@mui/material/Divider";
+import IconButton from "@mui/material/IconButton";
+import Stack from "@mui/material/Stack";
 
 export const ButtonSocialLoginPreview = () => {
   return (
@@ -484,4 +486,4 @@ export const ButtonSocialLoginPreview = () => {
       </Stack>
     </Box>
   );
-};`
+};`;

@@ -1,4 +1,9 @@
-export const cardReviewString = `import { Card, Stack, CardMedia, Chip, Typography, Box } from "@mui/material";
+export const cardReviewString = `import Card from "@mui/material/Card";
+import Stack from "@mui/material/Stack";
+import CardMedia from "@mui/material/CardMedia";
+import Chip from "@mui/material/Chip";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
 
 export const CardReview = () => {
     return (
@@ -40,4 +45,4 @@ export const CardReview = () => {
             </Box>
         </Card>
     )
-}`
+}`;

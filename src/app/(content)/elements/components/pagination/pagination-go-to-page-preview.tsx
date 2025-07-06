@@ -2,13 +2,11 @@
 
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import {
-  Box,
-  Divider,
-  Pagination,
-  PaginationItem,
-  TextField,
-} from "@mui/material";
+import Box from "@mui/material/Box";
+import Divider from "@mui/material/Divider";
+import Pagination from "@mui/material/Pagination";
+import PaginationItem from "@mui/material/PaginationItem";
+import TextField from "@mui/material/TextField";
 import { styled } from "@mui/material/styles";
 import { useState } from "react";
 
@@ -21,14 +19,14 @@ export const PaginationGoToPagePreview = () => {
   const NoArrowTextField = styled(TextField)({
     // For Chrome, Safari, Edge, Opera
     "& input[type=number]::-webkit-outer-spin-button, & input[type=number]::-webkit-inner-spin-button":
-    {
-      WebkitAppearance: "none",
-      margin: 0,
-    },
+      {
+        WebkitAppearance: "none",
+        margin: 0
+      },
     // For Firefox
     "& input[type=number]": {
-      MozAppearance: "textfield",
-    },
+      MozAppearance: "textfield"
+    }
   });
 
   const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -51,17 +49,17 @@ export const PaginationGoToPagePreview = () => {
               backgroundColor: "rgba(230, 0, 118, 0.2)",
               borderRadius: 0,
               "&:hover": {
-                backgroundColor: "#E60076",
-              },
+                backgroundColor: "#E60076"
+              }
             },
             "& .MuiPaginationItem-root.Mui-selected": {
               backgroundColor: "#E60076",
-              color: "#ffffff",
-            },
+              color: "#ffffff"
+            }
           }}
           renderItem={(item) => {
-            const isPrev = item.type === 'previous';
-            const isNext = item.type === 'next';
+            const isPrev = item.type === "previous";
+            const isNext = item.type === "next";
 
             return (
               <PaginationItem
@@ -74,9 +72,8 @@ export const PaginationGoToPagePreview = () => {
                         p: 1,
                         display: "flex",
                         alignItems: "center",
-                        gap: 1,
-                      }}
-                    >
+                        gap: 1
+                      }}>
                       <ArrowBackIcon fontSize="small" />
                       Prev
                     </Box>
@@ -88,32 +85,26 @@ export const PaginationGoToPagePreview = () => {
                         p: 1,
                         display: "flex",
                         alignItems: "center",
-                        gap: 1,
-                      }}
-                    >
+                        gap: 1
+                      }}>
                       Next
                       <ArrowForwardIcon fontSize="small" />
                     </Box>
-                  ),
+                  )
                 }}
                 sx={{
                   ...(isPrev || isNext
                     ? {
-                      backgroundColor: "#E60076 !important",
-                    }
-                    : {}),
+                        backgroundColor: "#E60076 !important"
+                      }
+                    : {})
                 }}
               />
             );
           }}
         />
 
-
-
-        <Divider
-          orientation="vertical"
-          sx={{ height: 32, borderColor: "divider" }}
-        />
+        <Divider orientation="vertical" sx={{ height: 32, borderColor: "divider" }} />
 
         <Box display="flex" alignItems="center" gap={1} sx={{ fontSize: 14 }}>
           Go To Page:{" "}
@@ -124,17 +115,17 @@ export const PaginationGoToPagePreview = () => {
               slotProps={{
                 htmlInput: {
                   min: 1,
-                  max: 50,
-                },
+                  max: 50
+                }
               }}
               sx={{
                 "& .MuiInputBase-root": {
                   height: 35,
-                  width: 50,
+                  width: 50
                 },
                 "& .MuiInputBase-input": {
-                  fontSize: 14,
-                },
+                  fontSize: 14
+                }
               }}
             />
           </form>
@@ -153,20 +144,17 @@ export const PaginationGoToPagePreview = () => {
               height: "32px",
               borderRadius: 0,
               "&:hover": {
-                backgroundColor: "divider",
-              },
+                backgroundColor: "divider"
+              }
             },
             "& .Mui-selected": {
               backgroundColor: "#E60076 !important",
-              color: "#ffffff",
-            },
+              color: "#ffffff"
+            }
           }}
         />
 
-        <Divider
-          orientation="vertical"
-          sx={{ height: 32, borderColor: "divider" }}
-        />
+        <Divider orientation="vertical" sx={{ height: 32, borderColor: "divider" }} />
 
         <Box display="flex" alignItems="center" gap={1} sx={{ fontSize: 14 }}>
           Go To Page:{" "}
@@ -177,17 +165,17 @@ export const PaginationGoToPagePreview = () => {
               slotProps={{
                 htmlInput: {
                   min: 1,
-                  max: 50,
-                },
+                  max: 50
+                }
               }}
               sx={{
                 "& .MuiInputBase-root": {
                   height: 35,
-                  width: 50,
+                  width: 50
                 },
                 "& .MuiInputBase-input": {
-                  fontSize: 14,
-                },
+                  fontSize: 14
+                }
               }}
             />
           </form>

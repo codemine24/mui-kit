@@ -1,15 +1,12 @@
 export const stepperDynamicString = `import React from "react";
-import {
-    Stepper,
-    Step,
-    StepLabel,
-    StepConnector,
-    Button,
-    Box,
-    stepConnectorClasses,
-} from "@mui/material";
-import { Check } from "@mui/icons-material";
+import Stepper from "@mui/material/Stepper";
+import Step from "@mui/material/Step";
+import StepLabel from "@mui/material/StepLabel";
+import StepConnector, { stepConnectorClasses } from "@mui/material/StepConnector";
+import Button from "@mui/material/Button";
+import Box from "@mui/material/Box";
 import { styled } from "@mui/material/styles";
+import Check from "@mui/icons-material/Check";
 
 const steps: string[] = ["Step One", "Step Two", "Step Three"];
 
@@ -18,16 +15,16 @@ const CustomConnector = styled(StepConnector)(({ theme }) => ({
         top: 30,
     },
     [\`\&.\${stepConnectorClasses.active}\`]: {
-        "& .MuiStepConnector-line": {
+        [\`\& .\${stepConnectorClasses.line}\`]: {
             backgroundImage: \`linear-gradient(to right, \${theme.palette.primary.main}, \${theme.palette.secondary.main})\`,
         },
     },
     [\`\&.\${stepConnectorClasses.completed}\`]: {
-        "& .MuiStepConnector-line": {
+        [\`\& .\${stepConnectorClasses.line}\`]: {
             backgroundImage: \`linear-gradient(to right, \${theme.palette.success.main}, \${theme.palette.success.light})\`,
         },
     },
-    [\`\& .MuiStepConnector-line\`]: {
+    [\`\& .\${stepConnectorClasses.line}\`]: {
         height: 4,
         border: 0,
         backgroundColor: theme.palette.grey[300],
@@ -119,4 +116,4 @@ export const StepperDynamicPreview = () => {
             </Box>
         </Box>
     );
-}`
+}`;

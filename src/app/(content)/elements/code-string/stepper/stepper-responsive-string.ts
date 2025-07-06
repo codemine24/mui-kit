@@ -1,14 +1,12 @@
-export const stepperResponsiveString = `import {
-    Stepper,
-    Step,
-    StepLabel,
-    Typography,
-    useMediaQuery,
-    Box,
-    Button,
-} from '@mui/material';
-import { useTheme } from '@mui/material/styles';
-import { useState } from 'react';
+export const stepperResponsiveString = `import { useState } from "react";
+import Stepper from "@mui/material/Stepper";
+import Step from "@mui/material/Step";
+import StepLabel from "@mui/material/StepLabel";
+import Typography from "@mui/material/Typography";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import { useTheme } from "@mui/material/styles";
 
 interface StepItem {
     label: string;
@@ -90,4 +88,4 @@ export const StepperResponsive = () => {
         </Box>
     );
 }
-`
+`;

@@ -1,18 +1,14 @@
-export const popoverMultiLayerString = `import React, { useState, useRef, MouseEvent } from 'react';
-import {
-    Button,
-    Popover,
-    Paper,
-    MenuList,
-    MenuItem,
-    Popper,
-    Grow,
-    ClickAwayListener,
-    Typography,
-    Box
-} from '@mui/material';
-import { styled } from '@mui/material/styles';
-import ArrowRightIcon from '@mui/icons-material/ArrowRight';
+export const popoverMultiLayerString = `import ArrowRightIcon from "@mui/icons-material/ArrowRight";
+import Button from "@mui/material/Button";
+import ClickAwayListener from "@mui/material/ClickAwayListener";
+import Grow from "@mui/material/Grow";
+import MenuItem from "@mui/material/MenuItem";
+import MenuList from "@mui/material/MenuList";
+import Paper from "@mui/material/Paper";
+import Popover from "@mui/material/Popover";
+import Popper from "@mui/material/Popper";
+import { styled } from "@mui/material/styles";
+import React, { MouseEvent, useState } from "react";
 
 // Define menu structure type
 interface MenuItemType {
@@ -217,4 +213,4 @@ export const PopoverMultiLayer = () => {
             )}
         </>
     );
-};`
+};`;

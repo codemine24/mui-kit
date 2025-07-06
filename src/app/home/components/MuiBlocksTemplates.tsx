@@ -1,5 +1,7 @@
 "use client";
-import { Box, Button, Typography } from "@mui/material";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -15,31 +17,29 @@ const templateItems: TemplateItem[] = [
     title: "Dashboard Template",
     description:
       "Analytical interfaces that help users visualize missing components and gaps in their MUI kit. Drive insights and enhance functionality.",
-    image:
-      "https://tremor.so/_next/image?url=%2Fimages%2Fhome%2Fdashboard.webp&w=1920&q=75",
-    button: { label: "View Template", url: "/templates/dashboard" },
+    image: "https://tremor.so/_next/image?url=%2Fimages%2Fhome%2Fdashboard.webp&w=1920&q=75",
+    button: { label: "View Template", url: "/templates/dashboard" }
   },
   {
     title: "Marketing Template",
     description:
       "Launch your next idea with a beautiful web template designed for MUI kit marketing solutions.",
     image: "/images/marketing-template.png", // Placeholder image path
-    button: { label: "View Template", url: "/templates/marketing" },
+    button: { label: "View Template", url: "/templates/marketing" }
   },
   {
     title: "Report Template",
     description:
       "Generate detailed reports to identify missing components in your MUI library with this intuitive template.",
     image: "/images/report-template.png", // Placeholder image path
-    button: { label: "View Template", url: "/templates/report" },
+    button: { label: "View Template", url: "/templates/report" }
   },
   {
     title: "MUI Style Visualizer",
-    description:
-      "Explore a visual representation of your MUI design consistency.",
+    description: "Explore a visual representation of your MUI design consistency.",
     image: "/images/style-visualizer.png",
-    button: { label: "View Template", url: "/templates/style" },
-  },
+    button: { label: "View Template", url: "/templates/style" }
+  }
 ];
 
 export const MuiBlocksTemplates = () => {
@@ -50,13 +50,9 @@ export const MuiBlocksTemplates = () => {
       <Typography variant="h3" fontWeight="bold" gutterBottom>
         MUI Blocks & Templates
       </Typography>
-      <Typography
-        variant="body1"
-        color="text.secondary"
-        sx={{ mb: 6, maxWidth: "600px" }}
-      >
-        Carefully crafted MUI templates and blocks to help you identify and
-        build missing components for your library.
+      <Typography variant="body1" color="text.secondary" sx={{ mb: 6, maxWidth: "600px" }}>
+        Carefully crafted MUI templates and blocks to help you identify and build missing components
+        for your library.
       </Typography>
 
       {/* Flex Layout */}
@@ -65,9 +61,8 @@ export const MuiBlocksTemplates = () => {
           display: "flex",
           flexWrap: "wrap",
           gap: 4,
-          justifyContent: "space-between",
-        }}
-      >
+          justifyContent: "space-between"
+        }}>
         {templateItems.map((item, index) => {
           const isLarge = index % 2 === 0;
 
@@ -84,12 +79,11 @@ export const MuiBlocksTemplates = () => {
                 cursor: "pointer",
                 transition: "transform 0.3s ease",
                 "&:hover": {
-                  transform: "translateY(-6px)",
-                },
+                  transform: "translateY(-6px)"
+                }
               }}
               onMouseEnter={() => setHoveredIndex(index)}
-              onMouseLeave={() => setHoveredIndex(null)}
-            >
+              onMouseLeave={() => setHoveredIndex(null)}>
               {/* Background Image */}
               <Box
                 sx={{
@@ -97,7 +91,7 @@ export const MuiBlocksTemplates = () => {
                   height: "100%",
                   backgroundImage: `url(${item.image})`,
                   backgroundSize: "cover",
-                  backgroundPosition: "center",
+                  backgroundPosition: "center"
                 }}
               />
 
@@ -109,18 +103,12 @@ export const MuiBlocksTemplates = () => {
                   left: 0,
                   right: 0,
                   bgcolor: (theme) =>
-                    theme.palette.mode === "dark"
-                      ? "rgba(0,0,0,1)"
-                      : "rgba(255,255,255,0.95)",
+                    theme.palette.mode === "dark" ? "rgba(0,0,0,1)" : "rgba(255,255,255,0.95)",
                   p: 3,
                   textAlign: "center",
-                  transform:
-                    hoveredIndex === index
-                      ? "translateY(0%)"
-                      : "translateY(100%)",
-                  transition: "transform 0.4s ease",
-                }}
-              >
+                  transform: hoveredIndex === index ? "translateY(0%)" : "translateY(100%)",
+                  transition: "transform 0.4s ease"
+                }}>
                 <Typography variant="subtitle2" color="text.secondary">
                   {item.title}
                 </Typography>
@@ -128,7 +116,7 @@ export const MuiBlocksTemplates = () => {
                   {item.description}
                 </Typography>
                 <Link href={item.button.url} passHref>
-                  <Button variant="contained" color="primary" >
+                  <Button variant="contained" color="primary">
                     {item.button.label}
                   </Button>
                 </Link>

@@ -1,6 +1,7 @@
 export const breadcrumbChipString = `import * as React from "react";
 import Stack from "@mui/material/Stack";
-import { Breadcrumbs, Chip } from "@mui/material";
+import Breadcrumbs from "@mui/material/Breadcrumbs";
+import Chip from "@mui/material/Chip";
 import HomeIcon from "@mui/icons-material/Home";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { styled, emphasize } from "@mui/material/styles";
@@ -54,4 +55,3 @@ export const BreadcrumbChip = () => {
   );
 }
 `;
-

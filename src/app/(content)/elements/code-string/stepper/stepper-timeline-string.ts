@@ -1,12 +1,10 @@
-export const stepperTimelineString = `import {
-    Stepper,
-    Step,
-    StepLabel,
-    Typography,
-    Box,
-    Button,
-} from '@mui/material';
-import { useState } from 'react';
+export const stepperTimelineString = `import { useState } from "react";
+import Step from "@mui/material/Step";
+import Stepper from "@mui/material/Stepper";
+import StepLabel from "@mui/material/StepLabel";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
 
 interface StepItem {
     label: string;
@@ -85,4 +83,4 @@ export const StepperTimeline = () => {
         </Box>
     );
 }
-`
+`;

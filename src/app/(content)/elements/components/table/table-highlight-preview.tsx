@@ -1,14 +1,12 @@
-import {
-    Paper,
-    Table,
-    TableBody,
-    TableCell,
-    TableContainer,
-    TableHead,
-    TableRow,
-    Typography,
-    useTheme,
-} from "@mui/material";
+import Paper from "@mui/material/Paper";
+import Table from "@mui/material/Table";
+import TableBody from "@mui/material/TableBody";
+import TableCell from "@mui/material/TableCell";
+import TableContainer from "@mui/material/TableContainer";
+import TableHead from "@mui/material/TableHead";
+import TableRow from "@mui/material/TableRow";
+import Typography from "@mui/material/Typography";
+import { useTheme } from "@mui/material/styles";
 import { useMemo } from "react";
 
 const employees = [
@@ -17,57 +15,57 @@ const employees = [
     department: "Engineering",
     location: "NY",
     age: 28,
-    salary: "$95K",
+    salary: "$95K"
   },
   {
     name: "Bob",
     department: "Marketing",
     location: "LA",
     age: 35,
-    salary: "$85K",
+    salary: "$85K"
   },
   {
     name: "Clara",
     department: "Design",
     location: "SF",
     age: 30,
-    salary: "$90K",
+    salary: "$90K"
   },
   {
     name: "Daniel",
     department: "HR",
     location: "Chicago",
     age: 40,
-    salary: "$80K",
+    salary: "$80K"
   },
   {
     name: "Eva",
     department: "Finance",
     location: "Seattle",
     age: 38,
-    salary: "$100K",
+    salary: "$100K"
   },
   {
     name: "Frank",
     department: "Sales",
     location: "Boston",
     age: 45,
-    salary: "$110K",
+    salary: "$110K"
   },
   {
     name: "Grace",
     department: "Engineering",
     location: "Austin",
     age: 27,
-    salary: "$98K",
+    salary: "$98K"
   },
   {
     name: "Henry",
     department: "Support",
     location: "Denver",
     age: 33,
-    salary: "$75K",
-  },
+    salary: "$75K"
+  }
 ];
 
 const fields = ["name", "department", "location", "age", "salary"] as const;
@@ -81,7 +79,7 @@ export function HighlightedFieldTablePreview() {
       theme.palette.warning.light,
       theme.palette.error.light,
       theme.palette.info.light,
-      theme.palette.secondary.light,
+      theme.palette.secondary.light
     ],
     [theme]
   );
@@ -95,8 +93,7 @@ export function HighlightedFieldTablePreview() {
       const col = Math.floor(Math.random() * fields.length);
       const key = `${row}-${col}`;
       if (!highlights.has(key)) {
-        const color =
-          highlightColors[Math.floor(Math.random() * highlightColors.length)];
+        const color = highlightColors[Math.floor(Math.random() * highlightColors.length)];
         highlights.set(key, color);
       }
     }
@@ -134,9 +131,8 @@ export function HighlightedFieldTablePreview() {
                       key={field}
                       sx={{
                         backgroundColor: bgColor,
-                        transition: "background-color 0.3s ease",
-                      }}
-                    >
+                        transition: "background-color 0.3s ease"
+                      }}>
                       {employee[field]}
                     </TableCell>
                   );

@@ -1,4 +1,7 @@
-export const cardBasic4String = `import { Card, CardContent, Divider, Typography } from "@mui/material";
+export const cardBasic4String = `import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import Divider from "@mui/material/Divider";
+import Typography from "@mui/material/Typography";
 
 export const CardBasic4 = () => {
     return (

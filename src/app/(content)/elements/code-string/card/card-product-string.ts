@@ -1,4 +1,11 @@
-export const cardProductString = `import { Card, CardContent, CardMedia, Typography, Box, Rating, Chip, Button } from "@mui/material";
+export const cardProductString = `import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
+import Rating from "@mui/material/Rating";
+import Chip from "@mui/material/Chip";
+import Button from "@mui/material/Button";
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 
 export const CardProduct = () => {
@@ -19,4 +26,4 @@ export const CardProduct = () => {
         </Card>
 
     )
-}`
+}`;

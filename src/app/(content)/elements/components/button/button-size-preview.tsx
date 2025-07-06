@@ -1,16 +1,13 @@
-import { Stack, Button, Box, Divider } from "@mui/material";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Divider from "@mui/material/Divider";
+import Stack from "@mui/material/Stack";
 
 export const ButtonSizePreview = () => {
   return (
     <Box>
       {/* Contained */}
-      <Stack
-        direction="row"
-        spacing={2}
-        flexWrap="wrap"
-        alignItems={"center"}
-        rowGap={2}
-      >
+      <Stack direction="row" spacing={2} flexWrap="wrap" alignItems={"center"} rowGap={2}>
         <Box>
           <Button variant="contained" size="small">
             small
@@ -33,9 +30,8 @@ export const ButtonSizePreview = () => {
               fontSize: "1rem",
               padding: "2px 8px",
               minWidth: "150px",
-              height: "70px",
-            }}
-          >
+              height: "70px"
+            }}>
             Custom Size
           </Button>
         </Box>
@@ -44,13 +40,7 @@ export const ButtonSizePreview = () => {
       <Divider sx={{ my: 2 }} />
 
       {/* Outlined */}
-      <Stack
-        direction="row"
-        spacing={2}
-        flexWrap="wrap"
-        alignItems={"center"}
-        rowGap={2}
-      >
+      <Stack direction="row" spacing={2} flexWrap="wrap" alignItems={"center"} rowGap={2}>
         <Box>
           <Button variant="outlined" size="small">
             small
@@ -73,9 +63,8 @@ export const ButtonSizePreview = () => {
               fontSize: "1rem",
               padding: "2px 8px",
               minWidth: "150px",
-              height: "70px",
-            }}
-          >
+              height: "70px"
+            }}>
             Custom Size
           </Button>
         </Box>
@@ -84,13 +73,7 @@ export const ButtonSizePreview = () => {
       <Divider sx={{ my: 2 }} />
 
       {/* Text */}
-      <Stack
-        direction="row"
-        spacing={2}
-        flexWrap="wrap"
-        alignItems={"center"}
-        rowGap={2}
-      >
+      <Stack direction="row" spacing={2} flexWrap="wrap" alignItems={"center"} rowGap={2}>
         <Box>
           <Button variant="text" size="small">
             small
@@ -113,9 +96,8 @@ export const ButtonSizePreview = () => {
               fontSize: "1rem",
               padding: "2px 8px",
               minWidth: "150px",
-              height: "70px",
-            }}
-          >
+              height: "70px"
+            }}>
             Custom Size
           </Button>
         </Box>

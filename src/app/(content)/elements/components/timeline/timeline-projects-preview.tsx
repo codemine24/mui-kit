@@ -1,23 +1,19 @@
-import {
-  Timeline,
-  TimelineConnector,
-  TimelineContent,
-  TimelineDot,
-  TimelineDotPropsColorOverrides,
-  TimelineItem,
-  TimelineOppositeContent,
-  TimelineSeparator,
-} from "@mui/lab";
-import { Button, Typography } from "@mui/material";
-
-import { Update } from "@mui/icons-material";
+import Timeline from "@mui/lab/Timeline";
+import TimelineConnector from "@mui/lab/TimelineConnector";
+import TimelineContent from "@mui/lab/TimelineContent";
+import TimelineDot from "@mui/lab/TimelineDot";
+import TimelineItem from "@mui/lab/TimelineItem";
+import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
+import TimelineSeparator from "@mui/lab/TimelineSeparator";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
+import Update from "@mui/icons-material/Update";
 import CheckIcon from "@mui/icons-material/Check";
 import HourglassEmptyIcon from "@mui/icons-material/HourglassEmpty";
-import type { OverridableStringUnion } from "@mui/types";
 import { JSX } from "react";
 
 type TimelineStatus = "complete" | "pending" | "inProgress";
-type MuiDotColor = OverridableStringUnion<
+type MuiDotColor =
   | "inherit"
   | "primary"
   | "secondary"
@@ -25,9 +21,7 @@ type MuiDotColor = OverridableStringUnion<
   | "info"
   | "success"
   | "warning"
-  | "error",
-  TimelineDotPropsColorOverrides
->;
+  | "error";
 
 const timelineData: {
   date?: string;
@@ -38,30 +32,28 @@ const timelineData: {
   {
     date: "Mar 15, 2024",
     title: "Credit Assessment Approved",
-    status: "complete",
+    status: "complete"
   },
   {
     date: "Mar 22, 2024",
     title: "Proposal Sent",
     link: "View Proposal",
-    status: "complete",
+    status: "complete"
   },
   {
     title: "Manage Proposal",
     link: "View & Send Document",
-    status: "inProgress",
+    status: "inProgress"
   },
   {
     title: "Contact",
     link: "Contact Client",
-    status: "pending",
-  },
+    status: "pending"
+  }
 ];
 
 // Choose icon and dot color based on status
-const getIconAndColor = (
-  status: TimelineStatus
-): { icon: JSX.Element; color: MuiDotColor } => {
+const getIconAndColor = (status: TimelineStatus): { icon: JSX.Element; color: MuiDotColor } => {
   switch (status) {
     case "complete":
       return { icon: <CheckIcon fontSize="small" />, color: "success" };
@@ -71,7 +63,7 @@ const getIconAndColor = (
     default:
       return {
         icon: <HourglassEmptyIcon fontSize="small" />,
-        color: "error",
+        color: "error"
       };
   }
 };
@@ -95,20 +87,14 @@ export function TimelineProjectsPreview() {
               <Typography
                 variant="caption"
                 color="text.secondary"
-                sx={{ mt: 0.5, display: "block" }}
-              >
+                sx={{ mt: 0.5, display: "block" }}>
                 {item.date || ""}
               </Typography>
               <Typography variant="body1" fontWeight={600}>
                 {item.title}
               </Typography>
               {item.link && (
-                <Button
-                  variant="text"
-                  color="primary"
-                  size="small"
-                  sx={{ mt: 1 }}
-                >
+                <Button variant="text" color="primary" size="small" sx={{ mt: 1 }}>
                   {item.link}
                 </Button>
               )}

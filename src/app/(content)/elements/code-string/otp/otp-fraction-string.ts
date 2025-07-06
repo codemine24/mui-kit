@@ -1,5 +1,8 @@
-export const OTPFractionString = `import { CheckCircle } from "@mui/icons-material";
-import { Alert, Box, TextField, Typography } from "@mui/material";
+export const OTPFractionString = `import CheckCircle from "@mui/icons-material/CheckCircle";
+import Alert from "@mui/material/Alert";
+import Box from "@mui/material/Box";
+import TextField from "@mui/material/TextField";
+import Typography from "@mui/material/Typography";
 import { useEffect, useRef, useState } from "react";
 
 const firstLength = 2;

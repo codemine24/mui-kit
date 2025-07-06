@@ -1,7 +1,14 @@
 "use client";
 import { overviewItems } from "@/constants/component-overview-data";
 import { Icon } from "@iconify/react";
-import { Box, Button, Chip, Grid, Paper, Stack, Typography, useTheme } from "@mui/material";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Chip from "@mui/material/Chip";
+import Grid from "@mui/material/Grid";
+import Paper from "@mui/material/Paper";
+import Stack from "@mui/material/Stack";
+import Typography from "@mui/material/Typography";
+import { useTheme } from "@mui/material/styles";
 import Link from "next/link";
 
 export const ComponentOverview = () => {
@@ -43,19 +50,17 @@ export const ComponentOverview = () => {
                   padding: "1px",
                   background:
                     "radial-gradient(500px circle at var(--cursor-x) var(--cursor-y), rgba(34, 211, 238, 0.5) 0%, transparent 70%)",
-                  WebkitMask:
-                    "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                  WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
                   WebkitMaskComposite: "xor",
                   maskComposite: "exclude",
                   pointerEvents: "none",
-                  zIndex: 1,
+                  zIndex: 1
                 },
                 "&:hover": {
-                  transform: "translateY(-4px)",
+                  transform: "translateY(-4px)"
                 },
-                transition: "transform 0.3s, background 0.3s",
-              }}
-            >
+                transition: "transform 0.3s, background 0.3s"
+              }}>
               {/* Background Grid */}
               <Box
                 sx={{
@@ -70,7 +75,7 @@ export const ComponentOverview = () => {
                     : "linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px)",
                   backgroundSize: "20px 20px",
                   opacity: 0.5,
-                  borderRadius: "12px",
+                  borderRadius: "12px"
                 }}
               />
               <Box sx={{ display: "flex", justifyContent: "center", mb: 2 }}>
@@ -85,39 +90,23 @@ export const ComponentOverview = () => {
                 align="center"
                 gutterBottom
                 fontWeight="bold"
-                sx={{ color: isDarkMode ? "common.white" : "text.primary" }}
-              >
+                sx={{ color: isDarkMode ? "common.white" : "text.primary" }}>
                 {item.title}
               </Typography>
-              <Typography
-                variant="body2"
-                color="text.secondary"
-                align="center"
-                sx={{ mb: 3 }}
-              >
+              <Typography variant="body2" color="text.secondary" align="center" sx={{ mb: 3 }}>
                 {item.description}
               </Typography>
               <Stack direction="row" justifyContent="center" flexWrap="wrap">
                 {item.tags.map((tag) => (
                   <Link href={tag.url} key={tag.label} passHref>
-                    <Chip
-                      label={tag.label}
-                      size="small"
-                      clickable
-                      sx={{ m: 0.5 }}
-                    />
+                    <Chip label={tag.label} size="small" clickable sx={{ m: 0.5 }} />
                   </Link>
                 ))}
               </Stack>
               {item.button && (
-                <Box
-                  sx={{ mt: "auto", textAlign: "center", marginTop: "1rem" }}
-                >
+                <Box sx={{ mt: "auto", textAlign: "center", marginTop: "1rem" }}>
                   <Link href={item.button.url} passHref>
-                    <Button
-                      endIcon={<Icon icon="mdi:arrow-right" />}
-                      color="primary"
-                    >
+                    <Button endIcon={<Icon icon="mdi:arrow-right" />} color="primary">
                       {item.button.label}
                     </Button>
                   </Link>

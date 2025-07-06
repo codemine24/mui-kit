@@ -1,5 +1,7 @@
-import { CheckCircle } from "@mui/icons-material";
-import { Alert, Box, TextField } from "@mui/material";
+import CheckCircle from "@mui/icons-material/CheckCircle";
+import Alert from "@mui/material/Alert";
+import Box from "@mui/material/Box";
+import TextField from "@mui/material/TextField";
 import { useCallback, useEffect, useRef, useState } from "react";
 
 const length = 6;
@@ -30,9 +32,7 @@ export const OTPWithPredefinedFieldPreview = () => {
     if (isFixedPosition(index)) return; // Don't allow changes to fixed positions
     if (isNaN(Number(element.value))) return false;
 
-    const newOtp = [
-      ...otp.map((d, idx) => (idx === index ? element.value : d)),
-    ];
+    const newOtp = [...otp.map((d, idx) => (idx === index ? element.value : d))];
     setOtp(newOtp);
 
     // Move to next editable field
@@ -47,10 +47,7 @@ export const OTPWithPredefinedFieldPreview = () => {
     }
   };
 
-  const handleKeyDown = (
-    e: React.KeyboardEvent<HTMLDivElement>,
-    index: number
-  ) => {
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>, index: number) => {
     if (isFixedPosition(index)) return;
 
     if (e.key === "Backspace" && !otp[index] && index > 0) {
@@ -93,10 +90,7 @@ export const OTPWithPredefinedFieldPreview = () => {
     }
   };
 
-  const handleFocus = (
-    e: React.FocusEvent<HTMLInputElement>,
-    index: number
-  ) => {
+  const handleFocus = (e: React.FocusEvent<HTMLInputElement>, index: number) => {
     if (isFixedPosition(index)) {
       // If trying to focus on fixed field, move to next editable field
       let nextIndex = index + 1;
@@ -143,40 +137,30 @@ export const OTPWithPredefinedFieldPreview = () => {
               style: {
                 textAlign: "center",
                 fontWeight: "bold",
-                cursor: isFixedPosition(index) ? "not-allowed" : "text",
+                cursor: isFixedPosition(index) ? "not-allowed" : "text"
               },
-              readOnly: isFixedPosition(index),
+              readOnly: isFixedPosition(index)
             }}
             value={data}
             onChange={(e) => handleChange(e.target as HTMLInputElement, index)}
             onKeyDown={(e) => handleKeyDown(e, index)}
             onPaste={(e) => handlePaste(e, index)}
-            onFocus={(e: React.FocusEvent<HTMLInputElement>) =>
-              handleFocus(e, index)
-            }
+            onFocus={(e: React.FocusEvent<HTMLInputElement>) => handleFocus(e, index)}
             variant="outlined"
             sx={{
               width: { xs: 35, md: 45, lg: 60 },
               "& input": {
                 fontSize: { xs: "1rem", md: "1.5rem" },
-                padding: { xs: 0.8, md: 1, lg: 2 },
+                padding: { xs: 0.8, md: 1, lg: 2 }
               },
               "& .MuiOutlinedInput-root": {
                 borderRadius: "8px",
                 "& fieldset": {
-                  borderColor: isFixedPosition(index)
-                    ? "#9e9e9e"
-                    : data
-                    ? "#4caf50"
-                    : "#9e9e9e",
-                  borderWidth: isFixedPosition(index)
-                    ? "1px"
-                    : data
-                    ? "2px"
-                    : "1px",
-                  borderStyle: isFixedPosition(index) ? "dashed" : "solid",
-                },
-              },
+                  borderColor: isFixedPosition(index) ? "#9e9e9e" : data ? "#4caf50" : "#9e9e9e",
+                  borderWidth: isFixedPosition(index) ? "1px" : data ? "2px" : "1px",
+                  borderStyle: isFixedPosition(index) ? "dashed" : "solid"
+                }
+              }
             }}
             autoComplete="one-time-code"
             inputMode="numeric"

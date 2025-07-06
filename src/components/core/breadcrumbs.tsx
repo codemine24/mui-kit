@@ -1,4 +1,6 @@
-import { Breadcrumbs, Stack, Typography } from "@mui/material";
+import Breadcrumbs from "@mui/material/Breadcrumbs";
+import Stack from "@mui/material/Stack";
+import Typography from "@mui/material/Typography";
 import Link from "next/link";
 
 interface IBreadCrumbs {
@@ -25,15 +27,13 @@ export const CustomBreadCrumbs = ({ pathArr }: IBreadCrumbs) => {
         style={{
           fontSize: 15,
           textDecoration: "none",
-          color: "text.secondary",
-        }}
-      >
+          color: "text.secondary"
+        }}>
         <Typography
           color="text.secondary"
           key={index}
           fontSize={15}
-          sx={{ "&:hover": { textDecoration: "underline" } }}
-        >
+          sx={{ "&:hover": { textDecoration: "underline" } }}>
           {item.label}
         </Typography>
       </Link>
