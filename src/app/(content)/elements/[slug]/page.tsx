@@ -19,7 +19,7 @@ import { PopoverView } from "../view/popover-view";
 import { StepperView } from "../view/stepper-view";
 import { TableView } from "../view/table-view";
 import { TimelineView } from "../view/timeline-view";
-
+import { Rating } from "../view/rating-view";
 export async function generateStaticParams() {
   return elementsArr.map((element) => ({
     slug: element.path?.split("/").pop(),
@@ -48,6 +48,7 @@ const componentMap: Record<string, JSX.Element> = {
   dnd: <DndView />,
   editor: <EditorView />,
   otp: <OTPView />,
+  rating: <Rating/>
 };
 
 export default async function Page({

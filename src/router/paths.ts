@@ -19,6 +19,7 @@ export const PATHS = {
     TABLE: "/elements/table",
     TIMELINE: "/elements/timeline",
     OTP: "/elements/otp",
+    RATING:"/elements/rating"
   },
   DOCS: {
     ROOT: "/docs",
