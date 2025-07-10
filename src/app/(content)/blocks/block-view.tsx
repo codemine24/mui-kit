@@ -13,7 +13,6 @@ export const BlockView = () => {
   const [searchText, setSearchText] = React.useState<string>("");
   const [filteredData, setFilteredData] = React.useState(blocksArr);
   const { setSections } = useOnThisPage();
-  console.log("New comment");
 
   React.useEffect(() => {
     setSections([]);

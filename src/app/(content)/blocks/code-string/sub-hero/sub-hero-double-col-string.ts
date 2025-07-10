@@ -6,7 +6,6 @@ import { useState } from "react";
 
 export const SubHeroPreview = () => {
   const [open, setOpen] = useState(false);
-  const handlePlayClick = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
   return (
@@ -77,7 +76,7 @@ export const SubHeroPreview = () => {
             <Button
               variant="contained"
               sx={{
-                width: { xstextAlign: { xs: "center", md: "left" },: "50%" },
+                width: { xs: "50%" },
                 bgcolor: "#000",
                 color: "#fff",
                 px: 3,
@@ -133,5 +132,4 @@ export const SubHeroPreview = () => {
       </Dialog>
     </Box>
   );
-};
-`;
+};`;

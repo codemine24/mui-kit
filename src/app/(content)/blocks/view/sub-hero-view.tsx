@@ -19,34 +19,34 @@ import { SubHeroSingleColTwoPreview } from "../components/sub-hero/sub-hero-sing
 
 const sections = [
   {
-    id: "sub-hero-single-col",
-    title: "Single column sub hero section",
+    id: "sub-hero-1",
+    title: "Sub hero with background image",
     description:
-      "Basic sub hero section with title, subtitle, cta button and image. Most of the portfolio and corporate website use this section to introduce yourself",
+      "Basic sub hero section with title, subtitle, and background image. Perfect if you want to showcase your skills or to tell about yourself.",
     codeString: subHeroSingleColString,
     preview: <SubHeroSingleColPreview />,
   },
   {
-    id: "sub-hero-single-col-two",
-    title: "Single column sub hero section ",
+    id: "sub-hero-2",
+    title: "Sub hero without bg",
     description:
-      "Basic sub hero section with title, subtitle, cta button and image. Most of the portfolio and corporate website use this section to introduce yourself",
+      "Single column sub hero section with no background image. Designed with material ui only, nothing else.",
     codeString: subHeroSingleColTwoString,
     preview: <SubHeroSingleColTwoPreview />,
   },
   {
-    id: "sub-hero-1",
-    title: "Double column sub hero section ",
+    id: "sub-hero-3",
+    title: "Sub hero with image grid",
     description:
-      "Basic sub hero section with title, subtitle, cta button and image. Most of the portfolio and corporate website use this section to introduce yourself",
+      "If you want to display a photo along with the information, you can use this material ui sub hero design. ",
     codeString: subHeroDoubleColString,
     preview: <SubHeroPreview />,
   },
   {
-    id: "sub-hero-double-col-two",
-    title: "Double column sub hero section ",
+    id: "sub-hero-4",
+    title: "Stylish sub hero",
     description:
-      "Basic sub hero section with title, subtitle, cta button and image. Most of the portfolio and corporate website use this section to introduce yourself",
+      "If you want to use a unique variant designed with material ui, you can use this block. ",
     codeString: subHeroDoubleColTwoString,
     preview: <SubHeroDoubleColTwoPreview />,
   },
@@ -67,7 +67,7 @@ export const SubHeroView = () => {
       />
       <PageTitle
         title="Sub Hero"
-        description="Showcase your services with modern service cards design with material ui only."
+        description="Sub Hero section is perfect to showcase your skills or to tell about yourself. All these section has been built using Material UI and nothing else."
       />
 
       <Divider sx={{ my: 4 }} />

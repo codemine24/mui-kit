@@ -6,7 +6,6 @@ import { useState } from "react";
 
 export const SubHeroPreview = () => {
   const [open, setOpen] = useState(false);
-  const handlePlayClick = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
   return (

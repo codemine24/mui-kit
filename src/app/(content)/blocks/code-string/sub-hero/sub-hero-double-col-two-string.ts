@@ -36,14 +36,13 @@ export const SubHeroDoubleColTwoPreview = () => {
           </Typography>
         </Grid>
         <Grid
-          item
+          
           size={{ xs: 12, md: 6 }}
           sx={{
             display: "flex",
             flexGrow: 1,
-            alignItems: "flex-end", // Align to bottom
+            alignItems: "flex-end", 
             justifyContent: "flex-end",
-            // Align to right
             px: { xs: 0, md: 2 },
           }}
         >
@@ -59,5 +58,4 @@ export const SubHeroDoubleColTwoPreview = () => {
       </Grid>
     </Box>
   );
-};
-`;
+};`;
