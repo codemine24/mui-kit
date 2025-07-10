@@ -26,39 +26,22 @@ git clone https://github.com/codemine24/mui-kit
 2. Navigate to the project directory and open the project
 
 ```bash
-cd mui-kit && code .
+cd mui-kit
 ```
 
 3. Install packages
 
 ```bash
-pnpm install
+npm install
 ```
 
 4. Running the Development Server
 
 ```bash
-pnpm run dev
+npm run dev
 ```
 
 Open http://localhost:3000 in your browser to see the component library in action.
-
-
-## Usage
-
-Import components into your React or Next.js project:
-
-```tsx
-import { Button } from './components/Button';
-
-export default function Page() {
-  return <Button variant="primary" design="rounded">Click Me</Button>;
-}
-```
-
-- Browse the `/components` directory to explore available components and their design variants.
-- Refer to the documentation for usage and customization (see below).
-
 
 
 ## Documentation
@@ -125,7 +108,7 @@ feat: enhance dropdown responsiveness
 
 ## Built With
 
-Built with ❤️ by fazlyalahi01 and the amazing open source community.
+Built with ❤️ by [codemine](https://www.linkedin.com/company/codemine24/) and the amazing open source community.
 
 ## Badges
 

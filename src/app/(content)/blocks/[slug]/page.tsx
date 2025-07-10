@@ -16,6 +16,7 @@ import { NewsletterSubscriptionView } from "../view/newsletter-subscription-view
 import { PricingMenuView } from "../view/pricing-menu-view";
 import { PricingTableView } from "../view/pricing-table-view";
 import { ServicesView } from "../view/services-view";
+import { SubHeroView } from "../view/sub-hero-view";
 import { TeamView } from "../view/team-view";
 import { TestimonialGridView } from "../view/testimonial-grid-view";
 import { TestimonialSliderView } from "../view/testimonial-slider-view";
@@ -48,6 +49,7 @@ const componentMap: Record<string, JSX.Element> = {
   "testimonial-slider": <TestimonialSliderView />,
   team: <TeamView />,
   hero: <HeroView />,
+  "sub-hero": <SubHeroView />,
 };
 
 export default async function Page({
