@@ -1,4 +1,4 @@
-export const subHeroString = `"use client";
+export const subHeroSingleColString = `"use client";
 import AlbumSharpIcon from "@mui/icons-material/AlbumSharp";
 import MailOutline from "@mui/icons-material/MailOutline";
 import { Box, Button, Dialog, Grid, Typography } from "@mui/material";

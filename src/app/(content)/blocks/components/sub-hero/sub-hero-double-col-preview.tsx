@@ -27,6 +27,7 @@ export const SubHeroPreview = () => {
               fontSize: { xs: 24, md: 32 },
               fontWeight: 900,
               letterSpacing: 2,
+              textAlign: { xs: "center", md: "left" },
             }}
           >
             Product Designer based in Nepal
@@ -37,6 +38,8 @@ export const SubHeroPreview = () => {
               letterSpacing: 2,
               fontSize: { xs: 12, md: 14 },
               fontWeight: 300,
+              textAlign: { xs: "center", md: "left" },
+              mt: "10px",
             }}
           >
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias totam
@@ -46,16 +49,24 @@ export const SubHeroPreview = () => {
             nihil vitae maxime ad quod ipsum laborum ea cumque minus ducimus
             architecto, fugiat nam qui illo id excepturi.
           </Typography>
-          <Box sx={{ mt: "50px" }}>
+          <Box
+            sx={{
+              mt: "30px",
+              display: "flex",
+              gap: "5px",
+              justifyContent: { xs: "space-between" },
+            }}
+          >
             <Button
               variant="contained"
               sx={{
-                width: { xs: "100%", md: "50%" },
+                width: { xs: "50%" },
                 bgcolor: "#000",
                 color: "#fff",
                 px: 1,
                 borderRadius: 2,
                 fontWeight: 600,
+                border: "1px solid #333",
                 "&:hover": { bgcolor: "#222" },
               }}
               startIcon={<MailOutline />}
@@ -66,13 +77,13 @@ export const SubHeroPreview = () => {
             <Button
               variant="contained"
               sx={{
-                width: { xs: "100%", md: "50%" },
+                width: { xs: "50%" },
                 bgcolor: "#000",
                 color: "#fff",
                 px: 3,
                 borderRadius: 2,
                 fontWeight: 600,
-
+                border: "1px solid #333",
                 "&:hover": { bgcolor: "#222" },
               }}
               startIcon={<AlbumSharpIcon sx={{ color: "#00a152" }} />}
