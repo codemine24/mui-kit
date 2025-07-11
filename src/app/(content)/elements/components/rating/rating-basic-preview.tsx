@@ -1,11 +1,8 @@
-export const BasicRatingString = `
-
 import React from 'react';
-import { Rating as MuiRating, RatingProps as MuiRatingProps } from '@mui/material';
+import { Rating as MuiRating } from '@mui/material';
+import { RatingProps as MuiRatingProps } from '@mui/material';
 
-export interface RatingProps extends MuiRatingProps {}
-
-const Rating: React.FC<RatingProps> = ({
+export const RatingBasicPreview: React.FC<MuiRatingProps> = ({
   value,
   onChange,
   readOnly = false,
@@ -22,7 +19,3 @@ const Rating: React.FC<RatingProps> = ({
     />
   );
 };
-
-export default Rating;
-
-`;

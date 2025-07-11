@@ -1,9 +1,7 @@
-export const RatingWithFeedBackString = `
-
 import React, { useState } from 'react';
 import { Rating as MuiRating, TextField, Box, Typography, Button } from '@mui/material';
 
-const RatingWithFeedback: React.FC = () => {
+export const RatingFeedbackPreview: React.FC = () => {
   const [rating, setRating] = useState<number | null>(null);
   const [text, setText] = useState('');
 
@@ -11,9 +9,8 @@ const RatingWithFeedback: React.FC = () => {
     console.log('Rating:', rating);
     console.log('Feedback:', text);
     setText('')
-    // You can send this to your backend or save in state
   };
-
+  
   return (
     <Box sx={{ maxWidth: 400, mx: 'auto', p: 2 }}>
       <Typography variant="h6" gutterBottom>
@@ -49,7 +46,3 @@ const RatingWithFeedback: React.FC = () => {
     </Box>
   );
 };
-
-export default RatingWithFeedback;
-
-`;

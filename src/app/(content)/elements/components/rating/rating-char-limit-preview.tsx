@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Rating, TextField, Typography, Box } from '@mui/material';
 
-const RatingWithCharLimit: React.FC = () => {
+export const RatingCharLimitPreview: React.FC = () => {
   const [rating, setRating] = useState<number | null>(null);
   const [text, setText] = useState('');
 
@@ -30,5 +30,3 @@ const RatingWithCharLimit: React.FC = () => {
     </Box>
   );
 };
-
-export default RatingWithCharLimit;

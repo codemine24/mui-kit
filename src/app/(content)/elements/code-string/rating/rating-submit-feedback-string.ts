@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+export const ratingSubmitFeedbackString = `import React, { useState } from 'react';
 import {
   Rating,
   TextField,
@@ -9,7 +9,7 @@ import {
   Alert,
 } from '@mui/material';
 
-const RatingWithSubmitSnackbar: React.FC = () => {
+export const RatingSubmitFeedbackPreview: React.FC = () => {
   const [rating, setRating] = useState<number | null>(null);
   const [text, setText] = useState('');
   const [submitted, setSubmitted] = useState(false);
@@ -66,6 +66,4 @@ const RatingWithSubmitSnackbar: React.FC = () => {
       </Snackbar>
     </Box>
   );
-};
-
-export default RatingWithSubmitSnackbar;
+};`;

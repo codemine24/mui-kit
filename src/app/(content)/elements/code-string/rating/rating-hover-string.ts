@@ -1,6 +1,5 @@
-export const HoverPreviewString = `
-import React, { useState } from 'react';
-import { Rating as MuiRating } from '@mui/material';
+export const ratingHoverString = `import React, { useState } from 'react';
+import { Rating as MuiRating, } from '@mui/material';
 
 const labels: { [index: number]: string } = {
   1: 'Poor',
@@ -10,7 +9,7 @@ const labels: { [index: number]: string } = {
   5: 'Excellent',
 };
 
-const Rating: React.FC = () => {
+export const RatingHoverPreview: React.FC = () => {
   const [value, setValue] = useState<number | null>(3);
   const [hover, setHover] = useState(-1);
 
@@ -22,11 +21,8 @@ const Rating: React.FC = () => {
         onChange={(event, newValue) => setValue(newValue)}
         onChangeActive={(event, newHover) => setHover(newHover)}
       />
-      <span>{labels[hover !== -1 ? hover : value || 0]}</span>
+        <span style={{ textAlign : 'center', display: 'block'}} >{labels[hover !== -1 ? hover : value || 0]}</span>
     </div>
   );
 };
-
-export default Rating;
-
 `;

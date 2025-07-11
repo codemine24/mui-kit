@@ -9,7 +9,7 @@ const labels: { [index: number]: string } = {
   5: 'Excellent',
 };
 
-const HoverPreview: React.FC = () => {
+export const RatingHoverPreview: React.FC = () => {
   const [value, setValue] = useState<number | null>(3);
   const [hover, setHover] = useState(-1);
 
@@ -25,5 +25,3 @@ const HoverPreview: React.FC = () => {
     </div>
   );
 };
-
-export default HoverPreview;

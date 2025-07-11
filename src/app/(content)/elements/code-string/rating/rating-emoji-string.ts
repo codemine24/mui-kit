@@ -1,5 +1,4 @@
-export const RatingWithEmojiLabelString = `
-import React, { useState } from 'react';
+export const ratingEmojiString = `import React, { useState } from 'react';
 import { Rating, Box, Typography } from '@mui/material';
 
 const labels: Record<number, string> = {
@@ -10,7 +9,7 @@ const labels: Record<number, string> = {
   5: 'Excellent 🤩',
 };
 
-const RatingWithEmojiLabel: React.FC = () => {
+export const RatingEmojiPreview: React.FC = () => {
   const [rating, setRating] = useState<number | null>(null);
 
   return (
@@ -29,8 +28,4 @@ const RatingWithEmojiLabel: React.FC = () => {
       )}
     </Box>
   );
-};
-
-export default RatingWithEmojiLabel;
-
-`;
+};`;

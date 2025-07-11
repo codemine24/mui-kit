@@ -1,11 +1,8 @@
-export const HeartIconString = `
-import React from 'react';
+export const ratingHeartString = `import React from 'react';
 import { Favorite, FavoriteBorder } from '@mui/icons-material';
 import { Rating as MuiRating, RatingProps as MuiRatingProps } from '@mui/material';
 
-export interface RatingProps extends MuiRatingProps {}
-
-const HeartIcon: React.FC<RatingProps> = ({
+export const RatingHeartPreview: React.FC<MuiRatingProps> = ({
   value,
   onChange,
   ...rest
@@ -19,8 +16,4 @@ const HeartIcon: React.FC<RatingProps> = ({
       {...rest}
     />
   );
-};
-
-export default HeartIcon;
-
-`;
+};`;

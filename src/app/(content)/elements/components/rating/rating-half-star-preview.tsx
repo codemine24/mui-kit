@@ -1,17 +1,16 @@
-export const HalfRating = `
 import React from 'react';
 import { Rating as MuiRating, RatingProps as MuiRatingProps } from '@mui/material';
 
 export interface RatingProps extends MuiRatingProps {
-  precision?: number; // Add custom precision control
+  precision?: number; 
 }
 
-const HalfStar: React.FC<RatingProps> = ({
+export const RatingHalfStarPreview: React.FC<RatingProps> = ({
   value,
   onChange,
   readOnly = false,
   size = 'medium',
-  precision = 0.5,
+  precision = 0.5, // Default to half-star steps
   ...rest
 }) => {
   return (
@@ -25,7 +24,3 @@ const HalfStar: React.FC<RatingProps> = ({
     />
   );
 };
-
-export default HalfStar;
-
-`;
