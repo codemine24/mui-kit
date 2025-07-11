@@ -3,7 +3,6 @@ import { CodePreviewCopyWrapper } from "@/components/code-preview-copy-wrapper";
 import { CustomBreadCrumbs } from "@/components/core/breadcrumbs";
 import { PageTitle } from "@/components/core/page-title";
 import { SectionTitle } from "@/components/core/section-title";
-import { ExternalPackageAlert } from "@/components/external-package-alert";
 import { useOnThisPage } from "@/contexts/on-thispage-context";
 import { PATHS } from "@/router/paths";
 import { Box, Divider } from "@mui/material";
@@ -12,7 +11,7 @@ import { subHeroDoubleColString } from "../code-string/sub-hero/sub-hero-double-
 import { subHeroDoubleColTwoString } from "../code-string/sub-hero/sub-hero-double-col-two-string";
 import { subHeroSingleColString } from "../code-string/sub-hero/sub-hero-single-col-string";
 import { subHeroSingleColTwoString } from "../code-string/sub-hero/sub-hero-single-col-two-string";
-import { SubHeroPreview } from "../components/sub-hero/sub-hero-double-col-preview";
+import { SubHeroDoubleColPreview } from "../components/sub-hero/sub-hero-double-col-preview";
 import { SubHeroDoubleColTwoPreview } from "../components/sub-hero/sub-hero-double-col-two-preview";
 import { SubHeroSingleColPreview } from "../components/sub-hero/sub-hero-single-col-preview";
 import { SubHeroSingleColTwoPreview } from "../components/sub-hero/sub-hero-single-col-two-preview";
@@ -40,7 +39,7 @@ const sections = [
     description:
       "If you want to display a photo along with the information, you can use this material ui sub hero design. ",
     codeString: subHeroDoubleColString,
-    preview: <SubHeroPreview />,
+    preview: <SubHeroDoubleColPreview />,
   },
   {
     id: "sub-hero-4",
@@ -71,14 +70,7 @@ export const SubHeroView = () => {
       />
 
       <Divider sx={{ my: 4 }} />
-      <ExternalPackageAlert
-        packages={[
-          {
-            name: "@iconify/react",
-            url: "https://www.npmjs.com/package/@iconify/react",
-          },
-        ]}
-      />
+      
       {sections.map((section) => (
         <Box key={section.id} sx={{ mb: 4 }}>
           <SectionTitle
