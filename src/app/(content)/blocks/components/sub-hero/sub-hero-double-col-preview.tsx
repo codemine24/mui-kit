@@ -4,7 +4,7 @@ import MailOutline from "@mui/icons-material/MailOutline";
 import { Box, Button, Dialog, Grid, Typography } from "@mui/material";
 import { useState } from "react";
 
-export const SubHeroPreview = () => {
+export const SubHeroDoubleColPreview = () => {
   const [open, setOpen] = useState(false);
   const handleClose = () => setOpen(false);
 

@@ -1,10 +1,9 @@
-export const subHeroDoubleColString = `"use client";
-import AlbumSharpIcon from "@mui/icons-material/AlbumSharp";
+export const subHeroDoubleColString = `import AlbumSharpIcon from "@mui/icons-material/AlbumSharp";
 import MailOutline from "@mui/icons-material/MailOutline";
 import { Box, Button, Dialog, Grid, Typography } from "@mui/material";
 import { useState } from "react";
 
-export const SubHeroPreview = () => {
+export const SubHeroDoubleColPreview = () => {
   const [open, setOpen] = useState(false);
   const handleClose = () => setOpen(false);
 
