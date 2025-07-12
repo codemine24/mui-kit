@@ -1,124 +1,88 @@
-export const subHeroSingleColString = `import AlbumSharpIcon from "@mui/icons-material/AlbumSharp";
-import MailOutline from "@mui/icons-material/MailOutline";
-import { Box, Button, Dialog, Grid, Typography } from "@mui/material";
-import { useState } from "react";
+export const subHeroSingleColString = `import { Box, Divider, Typography } from "@mui/material";
 
-export const SubHeroView = () => {
-  const [open, setOpen] = useState(false);
-  const handlePlayClick = () => setOpen(true);
-  const handleClose = () => setOpen(false);
-
+export const SubHeroSingleColPreview = () => {
   return (
-    <Box>
-      <Grid container>
-        <Grid
-          size={{ xs: 12, md: 6 }}
-          sx={{
-            p: { xs: 2, md: 4 },
-            background: "#060606",
-            alignItems: "center",
-          }}
-        >
-          <Typography
-            sx={{
-              textTransform: "uppercase",
-              color: "white",
-              fontSize: { xs: 24, md: 32 },
-              fontWeight: 900,
-              letterSpacing: 2,
-            }}
-          >
-            Product Designer based in Nepal
-          </Typography>
-          <Typography
-            sx={{
-              color: "#64748b",
-              letterSpacing: 2,
-              fontSize: { xs: 12, md: 14 },
-              fontWeight: 300,
-            }}
-          >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias totam
-            nulla exercitationem eum? Minus consectetur sapiente explicabo
-            accusantium neque obcaecati voluptates facere ab. Possimus,
-            similique? Accusamus atque odio consectetur! Cupiditate a tempora
-            nihil vitae maxime ad quod ipsum laborum ea cumque minus ducimus
-            architecto, fugiat nam qui illo id excepturi.
-          </Typography>
-          <Box sx={{ mt: "50px" }}>
-            <Button
-              variant="contained"
-              sx={{
-                width: { xs: "100%", md: "50%" },
-                bgcolor: "#000",
-                color: "#fff",
-                px: 1,
-                borderRadius: 2,
-                fontWeight: 600,
-                "&:hover": { bgcolor: "#222" },
-              }}
-              startIcon={<MailOutline />}
-            >
-              Contact
-            </Button>
+    <Box
+      sx={{
+        position: "relative",
+        backgroundImage: \`url("https://img.freepik.com/premium-photo/fluid-organic-white-color-abstract-background-unique-designs_851755-381525.jpg?semt=ais_hybrid&w=740")\`,
+        py: { xs: 8, md: 12 },
+        px: { xs: 2, md: 4 },
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        width: "100%",
+      }}
+    >
+      <Box
+        sx={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundColor: \`linear-gradient(to right, rgba(40, 10, 60, 0.5), rgba(80, 20, 100, 0.3))\`,
+          zIndex: 1,
+        }}
+      />
 
-            <Button
-              variant="contained"
-              sx={{
-                width: { xs: "100%", md: "50%" },
-                bgcolor: "#000",
-                color: "#fff",
-                px: 3,
-                borderRadius: 2,
-                fontWeight: 600,
-
-                "&:hover": { bgcolor: "#222" },
-              }}
-              startIcon={<AlbumSharpIcon sx={{ color: "#00a152" }} />}
-            >
-              Available for collaboration
-            </Button>
-          </Box>
-        </Grid>
-        <Grid size={{ xs: 12, md: 6 }} sx={{ position: "relative" }}>
-          <Box
-            component={"img"}
-            src="https://i.postimg.cc/02fdM0y9/need-just-right-side.png"
-            sx={{
-              width: "100%",
-              height: "auto",
-              objectFit: "cover",
-              //   borderRadius: 2,
-            }}
-          />
-        </Grid>
-      </Grid>
-
-      {/* DIALOG */}
-      <Dialog
-        open={open}
-        onClose={handleClose}
-        maxWidth="md"
-        fullWidth
-        PaperProps={{
-          sx: {
-            backgroundColor: "black",
-            position: "relative",
-          },
+      <Box
+        sx={{
+          zIndex: 40,
+          position: "relative",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          gap: 2,
         }}
       >
-        <Box
-          component="video"
-          src="https://www.w3schools.com/html/mov_bbb.mp4"
-          controls
-          autoPlay
+        <Typography
           sx={{
-            width: "100%",
-            height: "auto",
-            outline: "none",
+            fontSize: "0.9rem",
+            color: "#FFAB08",
+            textTransform: "uppercase",
+            fontWeight: 500,
+          }}
+        >
+          Optional subtitle
+        </Typography>
+        <Typography
+          sx={{
+            color: "common.black",
+            fontFamily: "serif",
+            textAlign: "center",
+            fontWeight: 500,
+            fontSize: { xs: 32, md: 44, lg: 52 },
+
+            lineHeight: 1,
+          }}
+        >
+          Subhero Title
+        </Typography>
+        <Divider
+          sx={{
+            borderColor: "#FFAB08",
+            width: "100px",
+            borderBottomWidth: "5px",
           }}
         />
-      </Dialog>
+        <Typography
+          sx={{
+            color: "common.black",
+            textAlign: "center",
+            fontWeight: 400,
+            fontSize: { xs: 16, md: 16 },
+            px: { xs: 0, md: "15%" },
+            lineHeight: 1.5,
+          }}
+        >
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
+          laudantium cupiditate, dicta modi eum, reiciendis cumque deleniti
+          maiores error ipsum !
+        </Typography>
+      </Box>
     </Box>
   );
-};`;
+};
+`;

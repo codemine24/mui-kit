@@ -1,3 +1,4 @@
+"use client";
 import { Box, Divider, Typography } from "@mui/material";
 
 export const SubHeroSingleColPreview = () => {

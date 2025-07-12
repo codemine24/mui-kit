@@ -1,3 +1,4 @@
+"use client";
 import { Box, Divider, Grid, Typography } from "@mui/material";
 
 export const SubHeroDoubleColTwoPreview = () => {
@@ -36,12 +37,11 @@ export const SubHeroDoubleColTwoPreview = () => {
           </Typography>
         </Grid>
         <Grid
-          
           size={{ xs: 12, md: 6 }}
           sx={{
             display: "flex",
             flexGrow: 1,
-            alignItems: "flex-end", 
+            alignItems: "flex-end",
             justifyContent: "flex-end",
             px: { xs: 0, md: 2 },
           }}

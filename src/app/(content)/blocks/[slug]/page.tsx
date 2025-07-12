@@ -10,6 +10,7 @@ import { CTAView } from "../view/cta-block-view";
 import { FaqView } from "../view/faq-view";
 import { FeatureProductView } from "../view/feature-product-view";
 import { FeatureView } from "../view/feature-view";
+import { FocusBoxView } from "../view/focus-box-view";
 import { FooterView } from "../view/footer-view";
 import { HeroView } from "../view/hero-view";
 import { NewsletterSubscriptionView } from "../view/newsletter-subscription-view";
@@ -50,6 +51,7 @@ const componentMap: Record<string, JSX.Element> = {
   team: <TeamView />,
   hero: <HeroView />,
   "sub-hero": <SubHeroView />,
+  "focus-box": <FocusBoxView />,
 };
 
 export default async function Page({

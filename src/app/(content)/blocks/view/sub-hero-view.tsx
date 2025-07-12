@@ -70,7 +70,7 @@ export const SubHeroView = () => {
       />
 
       <Divider sx={{ my: 4 }} />
-      
+
       {sections.map((section) => (
         <Box key={section.id} sx={{ mb: 4 }}>
           <SectionTitle

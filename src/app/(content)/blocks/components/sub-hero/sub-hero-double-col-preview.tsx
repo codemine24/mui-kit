@@ -76,7 +76,7 @@ export const SubHeroDoubleColPreview = () => {
             <Button
               variant="contained"
               sx={{
-                width: { xs: "50%" },
+                width: { xs: "50%", textAlign: { xs: "center", md: "left" } },
                 bgcolor: "#000",
                 color: "#fff",
                 px: 3,
