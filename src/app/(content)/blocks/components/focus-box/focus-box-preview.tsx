@@ -25,7 +25,6 @@ export const FocusBoxPreview = () => {
             backgroundColor: "common.primary",
             boxShadow: "none",
             position: "relative",
-            flexDirection: { xs: "row", sm: "column" },
           }}
         >
           <CardMedia

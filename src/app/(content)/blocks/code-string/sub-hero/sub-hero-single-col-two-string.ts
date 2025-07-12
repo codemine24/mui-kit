@@ -14,7 +14,7 @@ export const SubHeroSingleColTwoPreview = () => {
         width: "100%",
       }}
     >
-      {/* New  */}
+      
       <Box
         sx={{
           display: "flex",

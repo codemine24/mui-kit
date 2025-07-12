@@ -20,7 +20,7 @@ export const FocusBoxThreePreview = () => {
         <Grid size={{ xs: 12, sm: 6 }} sx={{ alignItems: "center" }}>
           <Card
             sx={{
-              background: `url(${cardBgImage1}) center / cover no-repeat`,
+              background: \`url(\${cardBgImage1}) center / cover no-repeat\`,
               height: "100%",
               position: "relative",
               display: "flex",
@@ -35,7 +35,7 @@ export const FocusBoxThreePreview = () => {
                 left: 0,
                 right: 0,
                 bottom: 0,
-                backgroundColor: `rgb(194 206 212 / 51%)`,
+                backgroundColor: \`rgb(194 206 212 / 51%)\`,
                 zIndex: 1,
               }}
             />
@@ -62,7 +62,7 @@ export const FocusBoxThreePreview = () => {
             <Grid size={{ xs: 12 }}>
               <Card
                 sx={{
-                  background: `url(${cardBgImage2}) center / cover no-repeat`,
+                  background: \`url(\${cardBgImage2}) center / cover no-repeat\`,
                   position: "relative",
                   display: "flex",
                   alignItems: "center",
@@ -76,7 +76,7 @@ export const FocusBoxThreePreview = () => {
                     left: 0,
                     right: 0,
                     bottom: 0,
-                    backgroundColor: `rgb(213 228 218 / 16%)`,
+                    backgroundColor: \`rgb(213 228 218 / 16%)\`,
                     zIndex: 1,
                   }}
                 />
@@ -94,7 +94,7 @@ export const FocusBoxThreePreview = () => {
             <Grid size={{ xs: 12 }}>
               <Card
                 sx={{
-                  background: `url(${cardBgImage3}) center / cover no-repeat`,
+                  background: \`url(\${cardBgImage3}) center / cover no-repeat\`,
                   display: "flex",
                   alignItems: "center",
                   position: "relative",
@@ -108,7 +108,7 @@ export const FocusBoxThreePreview = () => {
                     left: 0,
                     right: 0,
                     bottom: 0,
-                    backgroundColor: `rgb(210 218 222 / 26%)`,
+                    backgroundColor: \`rgb(210 218 222 / 26%)\`,
                     zIndex: 1,
                   }}
                 />
@@ -129,4 +129,4 @@ export const FocusBoxThreePreview = () => {
     </>
   );
 };
-`
+`;
