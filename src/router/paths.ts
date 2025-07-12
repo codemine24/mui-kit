@@ -19,7 +19,7 @@ export const PATHS = {
     TABLE: "/elements/table",
     TIMELINE: "/elements/timeline",
     OTP: "/elements/otp",
-    RATING:"/elements/rating"
+    RATING: "/elements/rating",
   },
   DOCS: {
     ROOT: "/docs",
@@ -47,6 +47,7 @@ export const PATHS = {
     TESTIMONIAL_GRID: "/blocks/testimonial-grid",
     TESTIMONIAL_SLIDER: "/blocks/testimonial-slider",
     COMING_SOON: "/blocks/coming-soon",
+    FOCUS_BOX: "/blocks/focus-box",
   },
   TEMPLATES: {
     ROOT: "/templates",
