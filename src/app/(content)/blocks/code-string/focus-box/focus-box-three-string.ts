@@ -15,7 +15,6 @@ export const FocusBoxThreePreview = () => {
   const cardBgImage3 =
     "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
   return (
-    <>
       <Grid container spacing={3}>
         <Grid size={{ xs: 12, sm: 6 }} sx={{ alignItems: "center" }}>
           <Card
@@ -126,7 +125,6 @@ export const FocusBoxThreePreview = () => {
           </Grid>
         </Grid>
       </Grid>
-    </>
   );
 };
 `;

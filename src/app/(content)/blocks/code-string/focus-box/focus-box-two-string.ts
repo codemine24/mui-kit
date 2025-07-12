@@ -26,23 +26,23 @@ export const FocusBoxTwoPreview = () => {
             gap: 2,
           }}
         >
-          <Box sx={{ flex: 1, height: "1px", bgcolor: "text.primary" }} />
+          <Box sx={{ flex: 1, height: "1px", bgcolor: "common.white" }} />
           <Typography
             sx={{
               textTransform: "uppercase",
-              color: "text.primary",
+              color: "common.white",
               whiteSpace: "nowrap",
             }}
           >
             Sub Title
           </Typography>
-          <Box sx={{ flex: 1, height: "1px", bgcolor: "text.primary" }} />
+          <Box sx={{ flex: 1, height: "1px", bgcolor: "common.white" }} />
         </Box>
 
         <Typography
           sx={{
             textTransform: "uppercase",
-            color: "text.primary",
+            color: "common.white",
             fontSize: { xs: 24, md: 32 },
             fontWeight: 500,
             textAlign: "center",

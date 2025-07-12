@@ -21,7 +21,7 @@ export const SubHeroSingleColPreview = () => {
           left: 0,
           right: 0,
           bottom: 0,
-          backgroundColor: ``linear-gradient(to right, rgba(40, 10, 60, 0.5), rgba(80, 20, 100, 0.3))``,
+          backgroundColor: \`linear-gradient(to right, rgba(40, 10, 60, 0.5), rgba(80, 20, 100, 0.3))\`,
           zIndex: 1,
         }}
       />
