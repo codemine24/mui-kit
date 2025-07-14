@@ -7,42 +7,43 @@ import { useOnThisPage } from "@/contexts/on-thispage-context";
 import { PATHS } from "@/router/paths";
 import { Box, Divider } from "@mui/material";
 import React from "react";
+import { jumbotronBasicString } from "../code-string/jumbotron/jumbotron-basic-string";
+import { jumbotronTwoString } from "../code-string/jumbotron/jumbotron-two-string";
+import { JumbotronBasicPreview } from "../components/jumbotron/jumbotron-basic-preview";
 import { JumbotronFourPreview } from "../components/jumbotron/jumbotron-four-preview";
-import { JumbotronPreview } from "../components/jumbotron/jumbotron-preview";
-import { JumbotronThreePreview } from "../components/jumbotron/jumbotron-three-preview";
+import { JumbotronImageBgPreview } from "../components/jumbotron/jumbotron-image-bg-preview";
 import { JumbotronTwoPreview } from "../components/jumbotron/jumbotron-two-preview";
 
 const sections = [
   {
     id: "jumbotron-1",
-    title: "Featured product with carousel",
+    title: "Basic Jumbotron",
     description:
-      "Featured product section with customer feedback carousel. Includes product image, description, ratings, and testimonials.",
-    // codeString: heroCarouselString,
-    preview: <JumbotronPreview />,
+      "Use this center aligned to show minimal marketing content with action buttons. ",
+    codeString: jumbotronBasicString,
+    preview: <JumbotronBasicPreview />,
   },
   {
     id: "jumbotron-2",
-    title: "Featured product with carousel",
+    title: "Left aligned Jumbotron",
     description:
-      "Featured product section with customer feedback carousel. Includes product image, description, ratings, and testimonials.",
-    // codeString: heroCarouselString,
+      "Use this simple left aligned jumbotron build with material ui only.",
+    codeString: jumbotronTwoString,
     preview: <JumbotronTwoPreview />,
   },
   {
     id: "jumbotron-3",
-    title: "Featured product with carousel",
-    description:
-      "Featured product section with customer feedback carousel. Includes product image, description, ratings, and testimonials.",
-    // codeString: heroCarouselString,
-    preview: <JumbotronThreePreview />,
+    title: "Jumbotron with background image",
+    description: "use this jumbotron section if you need background image. ",
+    codeString: jumbotronBasicString,
+    preview: <JumbotronImageBgPreview />,
   },
   {
     id: "jumbotron-4",
     title: "Featured product with carousel",
     description:
       "Featured product section with customer feedback carousel. Includes product image, description, ratings, and testimonials.",
-    // codeString: heroCarouselString,
+    codeString: jumbotronBasicString,
     preview: <JumbotronFourPreview />,
   },
 ];
@@ -58,12 +59,12 @@ export const JumbotronView = () => {
       <CustomBreadCrumbs
         pathArr={[
           { label: "Blocks", path: PATHS.BLOCKS.OVERVIEW },
-          { label: "Hero", path: "" },
+          { label: "Jumbotron", path: "" },
         ]}
       />
       <PageTitle
-        title="Hero"
-        description="We tried to design some commonly used hero sections for you. All the section are designed with purely material ui and nothing else. "
+        title="Jumbotron"
+        description="Use Jumbotron section to show marketing message to your users based on a headline and image inside of a card box based on Material Ui"
       />
 
       <Divider sx={{ my: 4 }} />

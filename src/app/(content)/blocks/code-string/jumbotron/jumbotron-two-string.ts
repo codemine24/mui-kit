@@ -1,6 +1,5 @@
-"use client";
-import { ArrowForward } from "@mui/icons-material";
-import LoyaltyIcon from '@mui/icons-material/Loyalty';
+export const jumbotronTwoString = `import { ArrowForward } from "@mui/icons-material";
+import VideocamIcon from "@mui/icons-material/Videocam";
 import { Box, Button, Typography } from "@mui/material";
 
 export const JumbotronTwoPreview = () => {
@@ -32,7 +31,7 @@ export const JumbotronTwoPreview = () => {
               color: "#1C4ED8",
             }}
           >
-            <LoyaltyIcon />
+            <VideocamIcon />
             <Typography
               sx={{
                 color: "primary.white",
@@ -41,7 +40,7 @@ export const JumbotronTwoPreview = () => {
                 lineHeight: 1,
               }}
             >
-              Winter Sale
+             Winter Sale
             </Typography>
           </Box>
           <Typography
@@ -92,4 +91,4 @@ export const JumbotronTwoPreview = () => {
       </Box>
     </Box>
   );
-};
+};`;

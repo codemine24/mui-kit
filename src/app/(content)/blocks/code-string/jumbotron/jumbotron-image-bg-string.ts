@@ -1,8 +1,8 @@
-"use client";
+export const jumbotronImageBgString = `"use client";
 import { ArrowForward } from "@mui/icons-material";
 import { Box, Button, Typography } from "@mui/material";
 
-export const JumbotronPreview = () => {
+export const JumbotronBasicPreview = () => {
   return (
     <Box>
       <Box sx={{ position: "relative" }}>
@@ -24,11 +24,11 @@ export const JumbotronPreview = () => {
               color: "primary.white",
               textAlign: "center",
               fontWeight: 700,
-              fontSize: { xs: 32, md: 44, lg: 52 },
-              lineHeight: 1,
+              fontSize: { xs: 28, md: 44, lg: 52 },
+              lineHeight: 1.2,
             }}
           >
-            We invest in the world&apos;s potential
+            Get started with Mui Kit
           </Typography>
 
           <Typography
@@ -41,10 +41,18 @@ export const JumbotronPreview = () => {
               lineHeight: 1.5,
             }}
           >
-            Here at Flowbite we focus on markets where technology, innovation,
-            and capital can unlock long-term value and drive economic growth.
+            Mui kit is a set of beautifully-designed, accessible components and
+            a code designed on top of material UI. Works with your favorite
+            frameworks and AI models.
           </Typography>
-          <Box sx={{ display: "flex", justifyContent: "center", gap: 1 }}>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: { xs: "column", md: "row" },
+              justifyContent: "center",
+              gap: 1,
+            }}
+          >
             <Button
               endIcon={<ArrowForward />}
               variant="contained"
@@ -80,4 +88,4 @@ export const JumbotronPreview = () => {
       </Box>
     </Box>
   );
-};
+};`
