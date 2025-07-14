@@ -1,8 +1,19 @@
+"use client";
 import BoltIcon from "@mui/icons-material/Bolt";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import { Box, Button, Stack, Typography } from "@mui/material";
+import { Box, Button, keyframes, Stack, Typography } from "@mui/material";
 
 export const FancyBackgroundPreview = () => {
+  const pulse = keyframes`
+ 0% {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+  75%, 100% {
+    opacity: 0;
+    transform: scale(2);
+  }
+`;
   return (
     <Box
       sx={{
@@ -24,12 +35,58 @@ export const FancyBackgroundPreview = () => {
         }}
       />
 
-      <Box sx={{ position: "relative", zIndex: 1, verticalAlign: "middle" }}>
-        <Stack sx={{ justifyContent = "center" }}>
-          <Box />
-          <Typography>Lorem ipsum dolor sit amet.</Typography>
-          <BoltIcon />
-          <Typography>Lorem ipsum dolor sit amet.</Typography>
+      <Box sx={{ position: "relative", zIndex: 1 }}>
+        <Stack
+          component="a"
+          href="#"
+          sx={{
+            flexDirection: "row",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: 1,
+            bgcolor: "#F7F7FE",
+            width: "fit-content",
+            px: "10px",
+            py: "5px",
+            borderRadius: "50px",
+            m: "auto",
+            boxShadow: "0 10px 15px -3px #0000001a,0 4px 6px -4px #0000001a",
+            textDecoration: "none",
+          }}
+        >
+          <Box
+            component="span"
+            sx={{
+              width: ".55rem",
+              height: ".55rem",
+              borderRadius: "50%",
+              backgroundColor: "#00d492",
+              position: "relative",
+              "&::after": {
+                content: '""',
+                position: "absolute",
+                width: "100%",
+                height: "100%",
+                borderRadius: "50%",
+                backgroundColor: "green",
+                opacity: 0.7,
+                animation: `${pulse} 1.5s infinite ease-out`,
+              },
+            }}
+          />
+          <Typography
+            component="span"
+            sx={{ color: "#101828", fontSize: "14px", fontWeight: "600" }}
+          >
+            Lorem ipsum
+          </Typography>
+          <BoltIcon sx={{ color: "#FF6900", fontSize: "18px" }} />
+          <Typography
+            component="span"
+            sx={{ color: "#101828", fontSize: "14px", fontWeight: "600" }}
+          >
+            Read More
+          </Typography>
         </Stack>
         <Typography
           variant="h1"
@@ -43,7 +100,18 @@ export const FancyBackgroundPreview = () => {
           variant="h3"
           component="h2"
           gutterBottom
-          sx={{ fontWeight: "bold", textAlign: "center" }}
+          sx={{
+            fontWeight: "bold",
+            textAlign: "center",
+            backgroundImage:
+              "linear-gradient(to right, #171717, #64748b, #737373)",
+            backgroundSize: "200% auto",
+            backgroundClip: "text",
+            WebkitBackgroundClip: "text",
+            color: "transparent",
+            lineHeight: "1.25",
+            transition: "all 300ms ease",
+          }}
         >
           Patterns Backgrounds
         </Typography>
@@ -51,7 +119,8 @@ export const FancyBackgroundPreview = () => {
           variant="body1"
           paragraph
           sx={{
-            fontWeight: "bold",
+            color: "#4a5565",
+            fontSize: "16px",
             textAlign: "center",
             width: { xs: "100%", sm: "65%" },
             m: "auto",
