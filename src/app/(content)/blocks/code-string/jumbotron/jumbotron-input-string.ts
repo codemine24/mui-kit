@@ -1,6 +1,4 @@
-export const jumbotronInputString = `"use client";
-
-import EmailIcon from "@mui/icons-material/Email";
+export const jumbotronInputString = `import EmailIcon from "@mui/icons-material/Email";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import { Box, Button, TextField, Typography } from "@mui/material";
 

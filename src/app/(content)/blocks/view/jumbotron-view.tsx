@@ -8,6 +8,7 @@ import { PATHS } from "@/router/paths";
 import { Box, Divider } from "@mui/material";
 import React from "react";
 import { jumbotronBasicString } from "../code-string/jumbotron/jumbotron-basic-string";
+import { jumbotronInputString } from "../code-string/jumbotron/jumbotron-input-string";
 import { jumbotronTwoString } from "../code-string/jumbotron/jumbotron-two-string";
 import { JumbotronBasicPreview } from "../components/jumbotron/jumbotron-basic-preview";
 import { JumbotronImageBgPreview } from "../components/jumbotron/jumbotron-image-bg-preview";
@@ -43,7 +44,7 @@ const sections = [
     title: "With input field",
     description:
       "Material Ui jumbotron with an input field to collect user info if needed",
-    codeString: jumbotronBasicString,
+    codeString: jumbotronInputString,
     preview: <JumbotronInputPreview />,
   },
 ];
