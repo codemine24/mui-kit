@@ -1,10 +1,9 @@
-"use client";
-import BoltIcon from "@mui/icons-material/Bolt";
+export const FancyBackgroundString = `import BoltIcon from "@mui/icons-material/Bolt";
 import RemoveRedEyeTwoToneIcon from "@mui/icons-material/RemoveRedEyeTwoTone";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { Box, Button, keyframes, Stack, Typography } from "@mui/material";
 export const FancyBackgroundPreview = () => {
-  const pulse = keyframes`
+  const pulse = keyframes\`
  0% {
     opacity: 0.7;
     transform: scale(1);
@@ -13,7 +12,7 @@ export const FancyBackgroundPreview = () => {
     opacity: 0;
     transform: scale(2);
   }
-`;
+\`;
   return (
     <Box
       sx={{
@@ -70,7 +69,7 @@ export const FancyBackgroundPreview = () => {
                 borderRadius: "50%",
                 backgroundColor: "green",
                 opacity: 0.7,
-                animation: `${pulse} 1.5s infinite ease-out`,
+                animation: \`\${pulse} 1.5s infinite ease-out\`,
               },
             }}
           />
@@ -199,3 +198,4 @@ export const FancyBackgroundPreview = () => {
     </Box>
   );
 };
+`;

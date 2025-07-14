@@ -8,6 +8,7 @@ import { PATHS } from "@/router/paths";
 import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
 import React from "react";
+import { FancyBackgroundString } from "../code-string/fancy-background/fancy-backgroundString";
 import { FancyBackgroundPreview } from "../components/fancy-background/fancy-background-preview";
 
 const sections = [
@@ -15,7 +16,7 @@ const sections = [
     id: "otp-1",
     title: "Basic",
     description: "Standard outlined otp fields with auto-focus navigation.",
-    // codeString: OTPBasicString,
+    codeString: FancyBackgroundString,
     preview: <FancyBackgroundPreview />,
   },
 ];
