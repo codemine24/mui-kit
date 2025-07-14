@@ -35,6 +35,7 @@ export const FancyBackgroundPreview = () => {
         }}
       />
 
+<<<<<<< HEAD
       <Box sx={{ position: "relative", zIndex: 1 }}>
         <Stack
           component="a"
@@ -87,6 +88,14 @@ export const FancyBackgroundPreview = () => {
           >
             Read More
           </Typography>
+=======
+      <Box sx={{ position: "relative", zIndex: 1, verticalAlign: "middle" }}>
+        <Stack sx={{ justifyContent: "center" }}>
+          <Box />
+          <Typography>Lorem ipsum dolor sit amet.</Typography>
+          <BoltIcon />
+          <Typography>Lorem ipsum dolor sit amet.</Typography>
+>>>>>>> 097dcdfa27ea66725f1094cf7f8bc9de4a154b86
         </Stack>
         <Typography
           variant="h1"
