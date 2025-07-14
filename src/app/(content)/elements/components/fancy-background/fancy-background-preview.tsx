@@ -25,7 +25,7 @@ export const FancyBackgroundPreview = () => {
       />
 
       <Box sx={{ position: "relative", zIndex: 1, verticalAlign: "middle" }}>
-        <Stack sx={{ justifyContent = "center" }}>
+        <Stack sx={{ justifyContent: "center" }}>
           <Box />
           <Typography>Lorem ipsum dolor sit amet.</Typography>
           <BoltIcon />
