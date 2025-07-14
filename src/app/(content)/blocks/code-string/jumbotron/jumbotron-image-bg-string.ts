@@ -1,5 +1,4 @@
-export const jumbotronImageBgString = `"use client";
-import { ArrowForward } from "@mui/icons-material";
+export const jumbotronImageBgString = `import { ArrowForward } from "@mui/icons-material";
 import { Box, Button, Typography } from "@mui/material";
 
 export const JumbotronBasicPreview = () => {

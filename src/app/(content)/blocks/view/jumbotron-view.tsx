@@ -10,8 +10,8 @@ import React from "react";
 import { jumbotronBasicString } from "../code-string/jumbotron/jumbotron-basic-string";
 import { jumbotronTwoString } from "../code-string/jumbotron/jumbotron-two-string";
 import { JumbotronBasicPreview } from "../components/jumbotron/jumbotron-basic-preview";
-import { JumbotronFourPreview } from "../components/jumbotron/jumbotron-four-preview";
 import { JumbotronImageBgPreview } from "../components/jumbotron/jumbotron-image-bg-preview";
+import { JumbotronInputPreview } from "../components/jumbotron/jumbotron-input-preview";
 import { JumbotronTwoPreview } from "../components/jumbotron/jumbotron-two-preview";
 
 const sections = [
@@ -40,11 +40,11 @@ const sections = [
   },
   {
     id: "jumbotron-4",
-    title: "Featured product with carousel",
+    title: "With input field",
     description:
-      "Featured product section with customer feedback carousel. Includes product image, description, ratings, and testimonials.",
+      "Material Ui jumbotron with an input field to collect user info if needed",
     codeString: jumbotronBasicString,
-    preview: <JumbotronFourPreview />,
+    preview: <JumbotronInputPreview />,
   },
 ];
 
