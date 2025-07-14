@@ -13,6 +13,7 @@ import { FeatureView } from "../view/feature-view";
 import { FocusBoxView } from "../view/focus-box-view";
 import { FooterView } from "../view/footer-view";
 import { HeroView } from "../view/hero-view";
+import { JumbotronView } from "../view/jumbotron-view";
 import { NewsletterSubscriptionView } from "../view/newsletter-subscription-view";
 import { PricingMenuView } from "../view/pricing-menu-view";
 import { PricingTableView } from "../view/pricing-table-view";
@@ -52,6 +53,7 @@ const componentMap: Record<string, JSX.Element> = {
   hero: <HeroView />,
   "sub-hero": <SubHeroView />,
   "focus-box": <FocusBoxView />,
+  jumbotron: <JumbotronView />,
 };
 
 export default async function Page({

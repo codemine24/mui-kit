@@ -48,6 +48,7 @@ export const PATHS = {
     TESTIMONIAL_SLIDER: "/blocks/testimonial-slider",
     COMING_SOON: "/blocks/coming-soon",
     FOCUS_BOX: "/blocks/focus-box",
+    JUMBOTRON: "/blocks/jumbotron",
   },
   TEMPLATES: {
     ROOT: "/templates",
