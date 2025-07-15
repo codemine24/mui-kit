@@ -10,6 +10,7 @@ import Divider from "@mui/material/Divider";
 import React from "react";
 import { FancyBgGradientString } from "../code-string/fancy-background/fancy-backgroundString";
 import { FancyBgGradientTwoPreview } from "../components/fancy-background/fancy-bg-gradient-2-preview";
+import { FancyBgGradientThreePreview } from "../components/fancy-background/fancy-bg-gradient-3-preview";
 import { FancyBgGradientPreview } from "../components/fancy-background/fancy-bg-gradient-preview";
 
 const sections = [
@@ -24,8 +25,15 @@ const sections = [
     id: "fancy-bg-2",
     title: "Fancy background bottom gradient radial",
     description: "Standard outlined otp fields with auto-focus navigation.",
-    codeString: FancyBgGradientString,
+    codeString: "",
     preview: <FancyBgGradientTwoPreview />,
+  },
+  {
+    id: "fancy-bg-3",
+    title: "Fancy background bottom gradient radial",
+    description: "Standard outlined otp fields with auto-focus navigation.",
+    codeString: "",
+    preview: <FancyBgGradientThreePreview />,
   },
 ];
 
