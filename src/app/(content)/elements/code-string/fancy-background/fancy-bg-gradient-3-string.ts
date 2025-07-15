@@ -1,5 +1,4 @@
-"use client";
-import BoltIcon from "@mui/icons-material/Bolt";
+export const FancyBgGradient3String = `import BoltIcon from "@mui/icons-material/Bolt";
 import RemoveRedEyeTwoToneIcon from "@mui/icons-material/RemoveRedEyeTwoTone";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { Box, Button, keyframes, Stack, Typography } from "@mui/material";
@@ -31,7 +30,7 @@ export const FancyBgGradientThreePreview = () => {
 };
 
 const YourComponent = () => {
-  const pulse = keyframes`
+  const pulse = keyframes\`
  0% {
     opacity: 0.7;
     transform: scale(1);
@@ -40,7 +39,7 @@ const YourComponent = () => {
     opacity: 0;
     transform: scale(2);
   }
-`;
+\`;
   return (
     <Box sx={{ position: "relative", zIndex: 1 }}>
       <Stack
@@ -79,7 +78,7 @@ const YourComponent = () => {
               borderRadius: "50%",
               bgcolor: "#ffffff",
               opacity: 0.7,
-              animation: `${pulse} 1.5s infinite ease-out`,
+              animation: \`\${pulse} 1.5s infinite ease-out\`,
             },
           }}
         />
@@ -207,3 +206,4 @@ const YourComponent = () => {
     </Box>
   );
 };
+`;

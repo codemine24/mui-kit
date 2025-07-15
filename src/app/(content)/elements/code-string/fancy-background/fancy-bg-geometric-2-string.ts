@@ -1,9 +1,8 @@
-"use client";
-import BoltIcon from "@mui/icons-material/Bolt";
+export const FancyBgGeometric2String = `import BoltIcon from "@mui/icons-material/Bolt";
 import RemoveRedEyeTwoToneIcon from "@mui/icons-material/RemoveRedEyeTwoTone";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { Box, Button, keyframes, Stack, Typography } from "@mui/material";
-export const FancyBgGradientThreePreview = () => {
+export const FancyBgGeometricTwoPreview = () => {
   return (
     <Box
       sx={{
@@ -13,7 +12,7 @@ export const FancyBgGradientThreePreview = () => {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        bgcolor: "#000000",
+        bgcolor: "#ffffff",
       }}
     >
       <Box
@@ -21,8 +20,13 @@ export const FancyBgGradientThreePreview = () => {
           position: "absolute",
           inset: 0,
           zIndex: 0,
-          background:
-            "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(255, 80, 120, 0.25), transparent 70%), #000000",
+          backgroundImage: \`
+        linear-gradient(to right, rgba(229,231,235,0.8) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(229,231,235,0.8) 1px, transparent 1px),
+        radial-gradient(circle 500px at 20% 80%, rgba(139,92,246,0.3), transparent),
+        radial-gradient(circle 500px at 80% 20%, rgba(59,130,246,0.3), transparent)
+      \`,
+          backgroundSize: "48px 48px, 48px 48px, 100% 100%, 100% 100%",
         }}
       />
       <YourComponent />
@@ -31,7 +35,7 @@ export const FancyBgGradientThreePreview = () => {
 };
 
 const YourComponent = () => {
-  const pulse = keyframes`
+  const pulse = keyframes\`
  0% {
     opacity: 0.7;
     transform: scale(1);
@@ -40,7 +44,7 @@ const YourComponent = () => {
     opacity: 0;
     transform: scale(2);
   }
-`;
+\`;
   return (
     <Box sx={{ position: "relative", zIndex: 1 }}>
       <Stack
@@ -51,14 +55,13 @@ const YourComponent = () => {
           justifyContent: "center",
           alignItems: "center",
           gap: 1,
-          bgcolor: "#1D1D1D",
+          bgcolor: "#F7F7FE",
           width: "fit-content",
           px: "10px",
           py: "5px",
           borderRadius: "50px",
           mx: "auto",
           mb: "25px",
-          border: "0.03rem solid #e1e1e187",
           boxShadow: "0 10px 15px -3px #0000001a,0 4px 6px -4px #0000001a",
           textDecoration: "none",
         }}
@@ -77,22 +80,22 @@ const YourComponent = () => {
               width: "100%",
               height: "100%",
               borderRadius: "50%",
-              bgcolor: "#ffffff",
+              backgroundColor: "green",
               opacity: 0.7,
-              animation: `${pulse} 1.5s infinite ease-out`,
+              animation: \`\${pulse} 1.5s infinite ease-out\`,
             },
           }}
         />
         <Typography
           component="span"
-          sx={{ color: "#ffffff", fontSize: "14px", fontWeight: "600" }}
+          sx={{ color: "#101828", fontSize: "14px", fontWeight: "600" }}
         >
           Lorem ipsum
         </Typography>
         <BoltIcon sx={{ color: "#FF6900", fontSize: "18px" }} />
         <Typography
           component="span"
-          sx={{ color: "#ffffff", fontSize: "14px", fontWeight: "600" }}
+          sx={{ color: "#101828", fontSize: "14px", fontWeight: "600" }}
         >
           Read More
         </Typography>
@@ -102,7 +105,7 @@ const YourComponent = () => {
         component="h1"
         gutterBottom
         sx={{
-          color: "#ffffff",
+          color: "#101828",
           fontSize: "36px",
           fontWeight: 500,
           textAlign: "center",
@@ -118,7 +121,7 @@ const YourComponent = () => {
           fontWeight: 700,
           textAlign: "center",
           backgroundImage:
-            "linear-gradient(to right, #F0F1F2, #C9D1DC, #93A4BB)",
+            "linear-gradient(to right, #171717, #64748b, #737373)",
           backgroundSize: "200% auto",
           backgroundClip: "text",
           WebkitBackgroundClip: "text",
@@ -134,7 +137,7 @@ const YourComponent = () => {
         variant="body1"
         paragraph
         sx={{
-          color: "#e5e7eb",
+          color: "#4a5565",
           fontSize: "16px",
           textAlign: "center",
           width: { xs: "100%", sm: "65%" },
@@ -149,27 +152,27 @@ const YourComponent = () => {
       <Box sx={{ display: "flex", justifyContent: "center", gap: 2, mt: 3 }}>
         <Button
           sx={{
-            color: "#ffffff",
+            color: "#101828",
             fontSize: "14px",
             fontWeight: 600,
-            bgcolor: "#0E1016",
+            bgcolor: "#fff",
             p: "10px",
             borderRadius: "10px",
             boxShadow: "0 10px 15px -3px #0000001a,0 4px 6px -4px #0000001a",
             border: "0.01rem solid #99999945",
             transition: "all 0.4s",
             "&:hover": {
-              border: "0.01rem solid #6a6666cc",
+              border: "0.01rem solid #999999cc",
             },
           }}
         >
           <ShoppingCartIcon
             sx={{
-              color: "#C4B4FF",
+              color: "#7F22FE",
               fontSize: "30px",
               p: "5px",
               mr: "10px",
-              bgcolor: "#241A44",
+              bgcolor: "#EDE9FE",
               borderRadius: "10px",
             }}
           />
@@ -177,27 +180,27 @@ const YourComponent = () => {
         </Button>
         <Button
           sx={{
-            color: "#ffffff",
+            color: "#101828",
             fontSize: "14px",
             fontWeight: 600,
-            bgcolor: "#0E1016",
+            bgcolor: "#fff",
             p: "10px",
             borderRadius: "10px",
             boxShadow: "0 10px 15px -3px #0000001a,0 4px 6px -4px #0000001a",
             border: "0.01rem solid #99999945",
             transition: "all 0.4s",
             "&:hover": {
-              border: "0.01rem solid #6a6666cc",
+              border: "0.01rem solid #999999cc",
             },
           }}
         >
           <RemoveRedEyeTwoToneIcon
             sx={{
-              color: "#ED99C7",
+              color: "#E60076",
               fontSize: "30px",
               p: "5px",
               mr: "10px",
-              bgcolor: "#3C1630",
+              bgcolor: "#FCE7F3",
               borderRadius: "10px",
             }}
           />
@@ -207,3 +210,4 @@ const YourComponent = () => {
     </Box>
   );
 };
+`;

@@ -25,7 +25,6 @@ export const FancyBgGradientTwoPreview = () => {
             "radial-gradient(circle 600px at 50% 50%, rgba(59,130,246,0.3), transparent)",
         }}
       />
-      {/* content  */}
       <YourComponent />
     </Box>
   );

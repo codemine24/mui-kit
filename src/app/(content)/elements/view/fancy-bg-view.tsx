@@ -9,7 +9,16 @@ import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
 import React from "react";
 import { FancyBgDecorative1String } from "../code-string/fancy-background/fancy-bg-decorative-1-string";
+import { FancyBgDecorative2String } from "../code-string/fancy-background/fancy-bg-decorative-2-string";
 import { FancyBgDecorative3String } from "../code-string/fancy-background/fancy-bg-decorative-3-string";
+import { FancyBgGeometric1String } from "../code-string/fancy-background/fancy-bg-geometric-1-string";
+import { FancyBgGeometric2String } from "../code-string/fancy-background/fancy-bg-geometric-2-string";
+import { FancyBgGeometric3String } from "../code-string/fancy-background/fancy-bg-geometric-3-string";
+import { FancyBgGeometric4String } from "../code-string/fancy-background/fancy-bg-geometric-4-string";
+import { FancyBgGradient1String } from "../code-string/fancy-background/fancy-bg-gradient-1-string";
+import { FancyBgGradient2String } from "../code-string/fancy-background/fancy-bg-gradient-2-string";
+import { FancyBgGradient3String } from "../code-string/fancy-background/fancy-bg-gradient-3-string";
+import { FancyBgGradient4String } from "../code-string/fancy-background/fancy-bg-gradient-4-string";
 import { FancyBgDecorativePreview } from "../components/fancy-background/fancy-bg-decorative-1-preview";
 import { FancyBgDecorativeTwoPreview } from "../components/fancy-background/fancy-bg-decorative-2-preview";
 import { FancyBgDecorativeThreePreview } from "../components/fancy-background/fancy-bg-decorative-3-preview";
@@ -48,56 +57,56 @@ const sections = [
     id: "fancy-gradient-1",
     title: "Fancy background bottom gradient radial",
     description: "Standard outlined otp fields with auto-focus navigation.",
-    codeString: "",
+    codeString: FancyBgGradient1String,
     preview: <FancyBgGradientPreview />,
   },
   {
     id: "fancy-gradient-2",
     title: "Fancy background bottom gradient radial",
     description: "Standard outlined otp fields with auto-focus navigation.",
-    codeString: "",
+    codeString: FancyBgGradient2String,
     preview: <FancyBgGradientTwoPreview />,
   },
   {
     id: "fancy-gradient-3",
     title: "Fancy background bottom gradient radial",
     description: "Standard outlined otp fields with auto-focus navigation.",
-    codeString: "",
+    codeString: FancyBgGradient3String,
     preview: <FancyBgGradientThreePreview />,
   },
   {
     id: "fancy-gradient-4",
     title: "Fancy background bottom gradient radial",
     description: "Standard outlined otp fields with auto-focus navigation.",
-    codeString: "",
+    codeString: FancyBgGradient4String,
     preview: <FancyBgGradientFourPreview />,
   },
   {
     id: "fancy-bg-geometric-1",
     title: "Fancy background bottom gradient radial",
     description: "Standard outlined otp fields with auto-focus navigation.",
-    codeString: "",
+    codeString: FancyBgGeometric1String,
     preview: <FancyBgGeometricPreview />,
   },
   {
     id: "fancy-geometric-2",
     title: "Fancy background bottom gradient radial",
     description: "Standard outlined otp fields with auto-focus navigation.",
-    codeString: "",
+    codeString: FancyBgGeometric2String,
     preview: <FancyBgGeometricTwoPreview />,
   },
   {
     id: "fancy-geometric-3",
     title: "Fancy background bottom gradient radial",
     description: "Standard outlined otp fields with auto-focus navigation.",
-    codeString: "",
+    codeString: FancyBgGeometric3String,
     preview: <FancyBgGeometricThreePreview />,
   },
   {
     id: "fancy-geometric-4",
     title: "Fancy background bottom gradient radial",
     description: "Standard outlined otp fields with auto-focus navigation.",
-    codeString: "",
+    codeString: FancyBgGeometric4String,
     preview: <FancyBgGeometricFourPreview />,
   },
 ];

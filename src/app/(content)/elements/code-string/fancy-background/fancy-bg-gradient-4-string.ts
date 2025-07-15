@@ -1,9 +1,8 @@
-"use client";
-import BoltIcon from "@mui/icons-material/Bolt";
+export const FancyBgGradient4String = `import BoltIcon from "@mui/icons-material/Bolt";
 import RemoveRedEyeTwoToneIcon from "@mui/icons-material/RemoveRedEyeTwoTone";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { Box, Button, keyframes, Stack, Typography } from "@mui/material";
-export const FancyBgGradientThreePreview = () => {
+export const FancyBgGradientFourPreview = () => {
   return (
     <Box
       sx={{
@@ -22,7 +21,7 @@ export const FancyBgGradientThreePreview = () => {
           inset: 0,
           zIndex: 0,
           background:
-            "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(255, 80, 120, 0.25), transparent 70%), #000000",
+            "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(16, 185, 129, 0.25), transparent 70%), #000000",
         }}
       />
       <YourComponent />
@@ -31,7 +30,7 @@ export const FancyBgGradientThreePreview = () => {
 };
 
 const YourComponent = () => {
-  const pulse = keyframes`
+  const pulse = keyframes\`
  0% {
     opacity: 0.7;
     transform: scale(1);
@@ -40,8 +39,9 @@ const YourComponent = () => {
     opacity: 0;
     transform: scale(2);
   }
-`;
+\`;
   return (
+    
     <Box sx={{ position: "relative", zIndex: 1 }}>
       <Stack
         component="a"
@@ -79,7 +79,7 @@ const YourComponent = () => {
               borderRadius: "50%",
               bgcolor: "#ffffff",
               opacity: 0.7,
-              animation: `${pulse} 1.5s infinite ease-out`,
+              animation: \`\${pulse} 1.5s infinite ease-out\`,
             },
           }}
         />
@@ -118,7 +118,7 @@ const YourComponent = () => {
           fontWeight: 700,
           textAlign: "center",
           backgroundImage:
-            "linear-gradient(to right, #F0F1F2, #C9D1DC, #93A4BB)",
+            "linear-gradient(to right, #ffffff, #CAD1DC, #94A5BC)",
           backgroundSize: "200% auto",
           backgroundClip: "text",
           WebkitBackgroundClip: "text",
@@ -207,3 +207,4 @@ const YourComponent = () => {
     </Box>
   );
 };
+`;
