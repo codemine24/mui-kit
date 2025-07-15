@@ -9,10 +9,16 @@ import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
 import React from "react";
 import { FancyBgGradientString } from "../code-string/fancy-background/fancy-backgroundString";
+import { FancyBgGeometricPreview } from "../components/fancy-background/fancy-bg-geometric-1-preview";
+import { FancyBgGeometricTwoPreview } from "../components/fancy-background/fancy-bg-geometric-2-preview";
+import { FancyBgGeometricThreePreview } from "../components/fancy-background/fancy-bg-geometric-3-preview";
+import { FancyBgGeometricFourPreview } from "../components/fancy-background/fancy-bg-geometric-4-preview";
 import { FancyBgGradientTwoPreview } from "../components/fancy-background/fancy-bg-gradient-2-preview";
 import { FancyBgGradientThreePreview } from "../components/fancy-background/fancy-bg-gradient-3-preview";
 import { FancyBgGradientFourPreview } from "../components/fancy-background/fancy-bg-gradient-4-preview";
 import { FancyBgGradientFivePreview } from "../components/fancy-background/fancy-bg-gradient-5-preview";
+import { FancyBgGradientSixPreview } from "../components/fancy-background/fancy-bg-gradient-6-preview";
+import { FancyBgGradientSevenPreview } from "../components/fancy-background/fancy-bg-gradient-7-preview";
 import { FancyBgGradientPreview } from "../components/fancy-background/fancy-bg-gradient-preview";
 
 const sections = [
@@ -50,6 +56,48 @@ const sections = [
     description: "Standard outlined otp fields with auto-focus navigation.",
     codeString: "",
     preview: <FancyBgGradientFivePreview />,
+  },
+  {
+    id: "fancy-bg-6",
+    title: "Fancy background bottom gradient radial",
+    description: "Standard outlined otp fields with auto-focus navigation.",
+    codeString: "",
+    preview: <FancyBgGradientSixPreview />,
+  },
+  {
+    id: "fancy-bg-7",
+    title: "Fancy background bottom gradient radial",
+    description: "Standard outlined otp fields with auto-focus navigation.",
+    codeString: "",
+    preview: <FancyBgGradientSevenPreview />,
+  },
+  {
+    id: "fancy-bg-geometric-1",
+    title: "Fancy background bottom gradient radial",
+    description: "Standard outlined otp fields with auto-focus navigation.",
+    codeString: "",
+    preview: <FancyBgGeometricPreview />,
+  },
+  {
+    id: "fancy-bg-geometric-2",
+    title: "Fancy background bottom gradient radial",
+    description: "Standard outlined otp fields with auto-focus navigation.",
+    codeString: "",
+    preview: <FancyBgGeometricTwoPreview />,
+  },
+  {
+    id: "fancy-bg-geometric-3",
+    title: "Fancy background bottom gradient radial",
+    description: "Standard outlined otp fields with auto-focus navigation.",
+    codeString: "",
+    preview: <FancyBgGeometricThreePreview />,
+  },
+  {
+    id: "fancy-bg-geometric-4",
+    title: "Fancy background bottom gradient radial",
+    description: "Standard outlined otp fields with auto-focus navigation.",
+    codeString: "",
+    preview: <FancyBgGeometricFourPreview />,
   },
 ];
 
