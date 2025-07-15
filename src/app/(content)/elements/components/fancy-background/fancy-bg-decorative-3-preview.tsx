@@ -20,13 +20,10 @@ export const FancyBgDecorativeThreePreview = () => {
           position: "absolute",
           inset: 0,
           zIndex: 0,
-          //   background:
-          //     "radial-gradient(125% 125% at 50% 90%, #fff 40%, #6366f1 100%)",
           background:
             "radial-gradient(125% 125% at 50% 10%, #fff 40%, #6366f1 100%)",
         }}
       />
-      {/* content  */}
       <YourComponent />
     </Box>
   );

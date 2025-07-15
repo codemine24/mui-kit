@@ -8,7 +8,8 @@ import { PATHS } from "@/router/paths";
 import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
 import React from "react";
-import { FancyBgGradientString } from "../code-string/fancy-background/fancy-backgroundString";
+import { FancyBgDecorative1String } from "../code-string/fancy-background/fancy-bg-decorative-1-string";
+import { FancyBgDecorative3String } from "../code-string/fancy-background/fancy-bg-decorative-3-string";
 import { FancyBgDecorativePreview } from "../components/fancy-background/fancy-bg-decorative-1-preview";
 import { FancyBgDecorativeTwoPreview } from "../components/fancy-background/fancy-bg-decorative-2-preview";
 import { FancyBgDecorativeThreePreview } from "../components/fancy-background/fancy-bg-decorative-3-preview";
@@ -26,21 +27,21 @@ const sections = [
     id: "fancy-decorative-1",
     title: "Basic",
     description: "Standard outlined otp fields with auto-focus navigation.",
-    codeString: FancyBgGradientString,
+    codeString: FancyBgDecorative1String,
     preview: <FancyBgDecorativePreview />,
   },
   {
     id: "fancy-decorative-2",
     title: "Fancy background bottom gradient radial",
     description: "Standard outlined otp fields with auto-focus navigation.",
-    codeString: "",
+    codeString: FancyBgDecorative2String,
     preview: <FancyBgDecorativeTwoPreview />,
   },
   {
     id: "fancy-decorative-3",
     title: "Fancy background bottom gradient radial",
     description: "Standard outlined otp fields with auto-focus navigation.",
-    codeString: "",
+    codeString: FancyBgDecorative3String,
     preview: <FancyBgDecorativeThreePreview />,
   },
   {
