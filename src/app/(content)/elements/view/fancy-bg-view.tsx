@@ -16,60 +16,60 @@ import { FancyBgGeometricPreview } from "../components/fancy-background/fancy-bg
 import { FancyBgGeometricTwoPreview } from "../components/fancy-background/fancy-bg-geometric-2-preview";
 import { FancyBgGeometricThreePreview } from "../components/fancy-background/fancy-bg-geometric-3-preview";
 import { FancyBgGeometricFourPreview } from "../components/fancy-background/fancy-bg-geometric-4-preview";
+import { FancyBgGradientPreview } from "../components/fancy-background/fancy-bg-gradient-1-preview";
+import { FancyBgGradientTwoPreview } from "../components/fancy-background/fancy-bg-gradient-2-preview";
+import { FancyBgGradientThreePreview } from "../components/fancy-background/fancy-bg-gradient-3-preview";
 import { FancyBgGradientFourPreview } from "../components/fancy-background/fancy-bg-gradient-4-preview";
-import { FancyBgGradientFivePreview } from "../components/fancy-background/fancy-bg-gradient-5-preview";
-import { FancyBgGradientSixPreview } from "../components/fancy-background/fancy-bg-gradient-6-preview";
-import { FancyBgGradientSevenPreview } from "../components/fancy-background/fancy-bg-gradient-7-preview";
 
 const sections = [
   {
-    id: "otp-1",
+    id: "fancy-decorative-1",
     title: "Basic",
     description: "Standard outlined otp fields with auto-focus navigation.",
     codeString: FancyBgGradientString,
     preview: <FancyBgDecorativePreview />,
   },
   {
-    id: "fancy-bg-decorative-2",
+    id: "fancy-decorative-2",
     title: "Fancy background bottom gradient radial",
     description: "Standard outlined otp fields with auto-focus navigation.",
     codeString: "",
     preview: <FancyBgDecorativeTwoPreview />,
   },
   {
-    id: "fancy-bg-3",
+    id: "fancy-decorative-3",
     title: "Fancy background bottom gradient radial",
     description: "Standard outlined otp fields with auto-focus navigation.",
     codeString: "",
     preview: <FancyBgDecorativeThreePreview />,
   },
   {
-    id: "fancy-bg-4",
+    id: "fancy-gradient-1",
+    title: "Fancy background bottom gradient radial",
+    description: "Standard outlined otp fields with auto-focus navigation.",
+    codeString: "",
+    preview: <FancyBgGradientPreview />,
+  },
+  {
+    id: "fancy-gradient-2",
+    title: "Fancy background bottom gradient radial",
+    description: "Standard outlined otp fields with auto-focus navigation.",
+    codeString: "",
+    preview: <FancyBgGradientTwoPreview />,
+  },
+  {
+    id: "fancy-gradient-3",
+    title: "Fancy background bottom gradient radial",
+    description: "Standard outlined otp fields with auto-focus navigation.",
+    codeString: "",
+    preview: <FancyBgGradientThreePreview />,
+  },
+  {
+    id: "fancy-gradient-4",
     title: "Fancy background bottom gradient radial",
     description: "Standard outlined otp fields with auto-focus navigation.",
     codeString: "",
     preview: <FancyBgGradientFourPreview />,
-  },
-  {
-    id: "fancy-bg-5",
-    title: "Fancy background bottom gradient radial",
-    description: "Standard outlined otp fields with auto-focus navigation.",
-    codeString: "",
-    preview: <FancyBgGradientFivePreview />,
-  },
-  {
-    id: "fancy-bg-6",
-    title: "Fancy background bottom gradient radial",
-    description: "Standard outlined otp fields with auto-focus navigation.",
-    codeString: "",
-    preview: <FancyBgGradientSixPreview />,
-  },
-  {
-    id: "fancy-bg-7",
-    title: "Fancy background bottom gradient radial",
-    description: "Standard outlined otp fields with auto-focus navigation.",
-    codeString: "",
-    preview: <FancyBgGradientSevenPreview />,
   },
   {
     id: "fancy-bg-geometric-1",
@@ -79,21 +79,21 @@ const sections = [
     preview: <FancyBgGeometricPreview />,
   },
   {
-    id: "fancy-bg-geometric-2",
+    id: "fancy-geometric-2",
     title: "Fancy background bottom gradient radial",
     description: "Standard outlined otp fields with auto-focus navigation.",
     codeString: "",
     preview: <FancyBgGeometricTwoPreview />,
   },
   {
-    id: "fancy-bg-geometric-3",
+    id: "fancy-geometric-3",
     title: "Fancy background bottom gradient radial",
     description: "Standard outlined otp fields with auto-focus navigation.",
     codeString: "",
     preview: <FancyBgGeometricThreePreview />,
   },
   {
-    id: "fancy-bg-geometric-4",
+    id: "fancy-geometric-4",
     title: "Fancy background bottom gradient radial",
     description: "Standard outlined otp fields with auto-focus navigation.",
     codeString: "",
