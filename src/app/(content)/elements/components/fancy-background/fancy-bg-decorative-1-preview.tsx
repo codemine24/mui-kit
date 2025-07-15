@@ -3,7 +3,7 @@ import BoltIcon from "@mui/icons-material/Bolt";
 import RemoveRedEyeTwoToneIcon from "@mui/icons-material/RemoveRedEyeTwoTone";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { Box, Button, keyframes, Stack, Typography } from "@mui/material";
-export const FancyBgGradientThreePreview = () => {
+export const FancyBgDecorativePreview = () => {
   return (
     <Box
       sx={{
@@ -20,10 +20,8 @@ export const FancyBgGradientThreePreview = () => {
           position: "absolute",
           inset: 0,
           zIndex: 0,
-          //   background:
-          //     "radial-gradient(125% 125% at 50% 90%, #fff 40%, #6366f1 100%)",
           background:
-            "radial-gradient(125% 125% at 50% 10%, #fff 40%, #6366f1 100%)",
+            "radial-gradient(125% 125% at 50% 90%, #fff 40%, #6366f1 100%)",
         }}
       />
       {/* content  */}
