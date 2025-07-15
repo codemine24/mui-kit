@@ -13,7 +13,7 @@ import { DialogView } from "../view/dialog-view";
 import { DndView } from "../view/dnd-view";
 import { DrawerView } from "../view/drawer-view";
 import { EditorView } from "../view/editor-view";
-import { FancyBackgroundView } from "../view/fancy-background-view";
+import { FancyBgView } from "../view/fancy-bg-view";
 import { OTPView } from "../view/otp-view";
 import { PaginationView } from "../view/pagination-view";
 import { PopoverView } from "../view/popover-view";
@@ -50,7 +50,7 @@ const componentMap: Record<string, JSX.Element> = {
   editor: <EditorView />,
   otp: <OTPView />,
   rating: <RatingView />,
-  "fancy-background": <FancyBackgroundView />,
+  "fancy-background": <FancyBgView />,
 };
 
 export default async function Page({

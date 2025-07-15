@@ -8,20 +8,28 @@ import { PATHS } from "@/router/paths";
 import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
 import React from "react";
-import { FancyBackgroundString } from "../code-string/fancy-background/fancy-backgroundString";
-import { FancyBackgroundPreview } from "../components/fancy-background/fancy-background-preview";
+import { FancyBgGradientString } from "../code-string/fancy-background/fancy-backgroundString";
+import { FancyBgGradientTwoPreview } from "../components/fancy-background/fancy-bg-gradient-2-preview";
+import { FancyBgGradientPreview } from "../components/fancy-background/fancy-bg-gradient-preview";
 
 const sections = [
   {
     id: "otp-1",
     title: "Basic",
     description: "Standard outlined otp fields with auto-focus navigation.",
-    codeString: FancyBackgroundString,
-    preview: <FancyBackgroundPreview />,
+    codeString: FancyBgGradientString,
+    preview: <FancyBgGradientPreview />,
+  },
+  {
+    id: "fancy-bg-2",
+    title: "Fancy background bottom gradient radial",
+    description: "Standard outlined otp fields with auto-focus navigation.",
+    codeString: FancyBgGradientString,
+    preview: <FancyBgGradientTwoPreview />,
   },
 ];
 
-export const FancyBackgroundView = () => {
+export const FancyBgView = () => {
   const { setSections } = useOnThisPage();
 
   React.useEffect(() => {
@@ -37,7 +45,7 @@ export const FancyBackgroundView = () => {
         ]}
       />
       <PageTitle
-        title="OTP"
+        title="Fancy Background"
         description="Functional OTP fields fully compatible with Material UI. No extra packages required. "
       />
 

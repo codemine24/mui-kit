@@ -3,7 +3,7 @@ import BoltIcon from "@mui/icons-material/Bolt";
 import RemoveRedEyeTwoToneIcon from "@mui/icons-material/RemoveRedEyeTwoTone";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { Box, Button, keyframes, Stack, Typography } from "@mui/material";
-export const FancyBackgroundPreview = () => {
+export const FancyBgGradientTwoPreview = () => {
   return (
     <Box
       sx={{
@@ -20,8 +20,10 @@ export const FancyBackgroundPreview = () => {
           position: "absolute",
           inset: 0,
           zIndex: 0,
+          //   background:
+          //     "radial-gradient(125% 125% at 50% 90%, #fff 40%, #6366f1 100%)",
           background:
-            "radial-gradient(125% 125% at 50% 90%, #fff 40%, #6366f1 100%)",
+            "radial-gradient(125% 125% at 50% 90%, #fff 40%, #7c3aed 100%)",
         }}
       />
       {/* content  */}
@@ -107,7 +109,7 @@ const YourComponent = () => {
           textAlign: "center",
         }}
       >
-        Craft Beautiful
+        Elegant Design
       </Typography>
       <Typography
         variant="h3"
@@ -127,7 +129,7 @@ const YourComponent = () => {
           mb: "25px",
         }}
       >
-        Unlock the potential
+        Elevate Smart Branding
       </Typography>
       <Typography
         variant="body1"
