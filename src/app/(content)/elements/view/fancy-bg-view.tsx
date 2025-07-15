@@ -11,6 +11,8 @@ import React from "react";
 import { FancyBgGradientString } from "../code-string/fancy-background/fancy-backgroundString";
 import { FancyBgGradientTwoPreview } from "../components/fancy-background/fancy-bg-gradient-2-preview";
 import { FancyBgGradientThreePreview } from "../components/fancy-background/fancy-bg-gradient-3-preview";
+import { FancyBgGradientFourPreview } from "../components/fancy-background/fancy-bg-gradient-4-preview";
+import { FancyBgGradientFivePreview } from "../components/fancy-background/fancy-bg-gradient-5-preview";
 import { FancyBgGradientPreview } from "../components/fancy-background/fancy-bg-gradient-preview";
 
 const sections = [
@@ -34,6 +36,20 @@ const sections = [
     description: "Standard outlined otp fields with auto-focus navigation.",
     codeString: "",
     preview: <FancyBgGradientThreePreview />,
+  },
+  {
+    id: "fancy-bg-4",
+    title: "Fancy background bottom gradient radial",
+    description: "Standard outlined otp fields with auto-focus navigation.",
+    codeString: "",
+    preview: <FancyBgGradientFourPreview />,
+  },
+  {
+    id: "fancy-bg-5",
+    title: "Fancy background bottom gradient radial",
+    description: "Standard outlined otp fields with auto-focus navigation.",
+    codeString: "",
+    preview: <FancyBgGradientFivePreview />,
   },
 ];
 
