@@ -32,6 +32,11 @@ const contributors = [
     name: "Fazly",
     avatar: "https://avatars.githubusercontent.com/u/151907553?v=4",
     url: "https://github.com/fazlyalahi01"
+  },
+  {
+    name: "Forhad",
+    avatar: "https://avatars.githubusercontent.com/u/154924977?v=4",
+    url: "https://github.com/devsman-forhad"
   }
 ];
 
