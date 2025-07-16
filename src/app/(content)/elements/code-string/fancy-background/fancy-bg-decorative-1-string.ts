@@ -1,8 +1,8 @@
-export const FancyBgDecorative1String = `import BoltIcon from "@mui/icons-material/Bolt";
+export const fancyBgDecorative1String = `import BoltIcon from "@mui/icons-material/Bolt";
 import RemoveRedEyeTwoToneIcon from "@mui/icons-material/RemoveRedEyeTwoTone";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { Box, Button, keyframes, Stack, Typography } from "@mui/material";
-export const FancyBgDecorativePreview = () => {
+export const FancyBgDecorative1Preview = () => {
   return (
     <Box
       sx={{
