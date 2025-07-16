@@ -39,33 +39,59 @@ const AccordionDetails = styled(MuiAccordionDetails)(() => ({
   borderBottomRightRadius: "8px",
 }));
 
+const accordionData = [
+  {
+    id: 1,
+    title: "Item 1",
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.",
+  },
+  {
+    id: 2,
+    title: "Item 2",
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.",
+  },
+  {
+    id: 3,
+    title: "Item 3",
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.",
+  },
+  {
+    id: 4,
+    title: "Item 4",
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.",
+  },
+];
+
 export default function AccordionExample() {
-  const [expanded, setExpanded] = React.useState<string | false>("panel1");
+  const [expanded, setExpanded] = React.useState<number | false>(1);
 
   const handleChange =
-    (panel: string) => (_event: React.SyntheticEvent, isExpanded: boolean) => {
+    (panel: number) => (_event: React.SyntheticEvent, isExpanded: boolean) => {
       setExpanded(isExpanded ? panel : false);
     };
 
   return (
     <Box sx={{ maxWidth: 600, mx: "auto" }}>
-      {["panel1", "panel2", "panel3"].map((panelId, index) => (
+      {accordionData.map((accordionItem) => (
         <Accordion
-          key={panelId}
-          expanded={expanded === panelId}
-          onChange={handleChange(panelId)}
+          key={accordionItem.id}
+          expanded={expanded === accordionItem.id}
+          onChange={handleChange(accordionItem.id)}
         >
           <AccordionSummary
-            expandIcon={expanded === panelId ? <RemoveIcon /> : <AddIcon />}
-            aria-controls={\`\${panelId}-content\`}
-            id={\`\${panelId}-header\`}
+            expandIcon={
+              expanded === accordionItem.id ? <RemoveIcon /> : <AddIcon />
+            }
+            aria-controls={\`\${accordionItem.id}-content\`}
+            id={\`\${accordionItem.id}-header\`}
           >
-            <Typography component="span">{\`\Accordion \${index + 1}\`}</Typography>
+            <Typography component="span">{accordionItem.title}</Typography>
           </AccordionSummary>
-          <AccordionDetails>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
-          </AccordionDetails>
+          <AccordionDetails>{accordionItem.content}</AccordionDetails>
         </Accordion>
       ))}
     </Box>
