@@ -20,6 +20,7 @@ export const PATHS = {
     TIMELINE: "/elements/timeline",
     OTP: "/elements/otp",
     RATING: "/elements/rating",
+    FANCY_BACKGROUND: "/elements/fancy-background",
   },
   DOCS: {
     ROOT: "/docs",
