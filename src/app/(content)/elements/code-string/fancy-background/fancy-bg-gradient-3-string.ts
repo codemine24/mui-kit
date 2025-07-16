@@ -1,8 +1,8 @@
-export const FancyBgGradient3String = `import BoltIcon from "@mui/icons-material/Bolt";
+export const fancyBgGradient3String = `import BoltIcon from "@mui/icons-material/Bolt";
 import RemoveRedEyeTwoToneIcon from "@mui/icons-material/RemoveRedEyeTwoTone";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { Box, Button, keyframes, Stack, Typography } from "@mui/material";
-export const FancyBgGradientThreePreview = () => {
+export const FancyBgGradient3Preview = () => {
   return (
     <Box
       sx={{

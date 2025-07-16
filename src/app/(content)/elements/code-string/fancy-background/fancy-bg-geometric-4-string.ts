@@ -1,8 +1,8 @@
-export const FancyBgGeometric4String = `import BoltIcon from "@mui/icons-material/Bolt";
+export const fancyBgGeometric4String = `import BoltIcon from "@mui/icons-material/Bolt";
 import RemoveRedEyeTwoToneIcon from "@mui/icons-material/RemoveRedEyeTwoTone";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { Box, Button, keyframes, Stack, Typography } from "@mui/material";
-export const FancyBgGeometricFourPreview = () => {
+export const FancyBgGeometric4Preview = () => {
   return (
     <Box
       sx={{

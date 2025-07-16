@@ -11,25 +11,25 @@ import React from "react";
 import { fancyBgDecorative1String } from "../code-string/fancy-background/fancy-bg-decorative-1-string";
 import { fancyBgDecorative2String } from "../code-string/fancy-background/fancy-bg-decorative-2-string";
 import { fancyBgDecorative3String } from "../code-string/fancy-background/fancy-bg-decorative-3-string";
-import { FancyBgGeometric1String } from "../code-string/fancy-background/fancy-bg-geometric-1-string";
-import { FancyBgGeometric2String } from "../code-string/fancy-background/fancy-bg-geometric-2-string";
-import { FancyBgGeometric3String } from "../code-string/fancy-background/fancy-bg-geometric-3-string";
-import { FancyBgGeometric4String } from "../code-string/fancy-background/fancy-bg-geometric-4-string";
-import { FancyBgGradient1String } from "../code-string/fancy-background/fancy-bg-gradient-1-string";
-import { FancyBgGradient2String } from "../code-string/fancy-background/fancy-bg-gradient-2-string";
-import { FancyBgGradient3String } from "../code-string/fancy-background/fancy-bg-gradient-3-string";
-import { FancyBgGradient4String } from "../code-string/fancy-background/fancy-bg-gradient-4-string";
+import { fancyBgGeometric1String } from "../code-string/fancy-background/fancy-bg-geometric-1-string";
+import { fancyBgGeometric2String } from "../code-string/fancy-background/fancy-bg-geometric-2-string";
+import { fancyBgGeometric3String } from "../code-string/fancy-background/fancy-bg-geometric-3-string";
+import { fancyBgGeometric4String } from "../code-string/fancy-background/fancy-bg-geometric-4-string";
+import { fancyBgGradient1String } from "../code-string/fancy-background/fancy-bg-gradient-1-string";
+import { fancyBgGradient2String } from "../code-string/fancy-background/fancy-bg-gradient-2-string";
+import { fancyBgGradient3String } from "../code-string/fancy-background/fancy-bg-gradient-3-string";
+import { fancyBgGradient4String } from "../code-string/fancy-background/fancy-bg-gradient-4-string";
 import { FancyBgDecorative1Preview } from "../components/fancy-background/fancy-bg-decorative-1-preview";
 import { FancyBgDecorative2Preview } from "../components/fancy-background/fancy-bg-decorative-2-preview";
 import { FancyBgDecorative3Preview } from "../components/fancy-background/fancy-bg-decorative-3-preview";
-import { FancyBgGeometricPreview } from "../components/fancy-background/fancy-bg-geometric-1-preview";
-import { FancyBgGeometricTwoPreview } from "../components/fancy-background/fancy-bg-geometric-2-preview";
-import { FancyBgGeometricThreePreview } from "../components/fancy-background/fancy-bg-geometric-3-preview";
-import { FancyBgGeometricFourPreview } from "../components/fancy-background/fancy-bg-geometric-4-preview";
-import { FancyBgGradientPreview } from "../components/fancy-background/fancy-bg-gradient-1-preview";
-import { FancyBgGradientTwoPreview } from "../components/fancy-background/fancy-bg-gradient-2-preview";
-import { FancyBgGradientThreePreview } from "../components/fancy-background/fancy-bg-gradient-3-preview";
-import { FancyBgGradientFourPreview } from "../components/fancy-background/fancy-bg-gradient-4-preview";
+import { FancyBgGeometric1Preview } from "../components/fancy-background/fancy-bg-geometric-1-preview";
+import { FancyBgGeometric2Preview } from "../components/fancy-background/fancy-bg-geometric-2-preview";
+import { FancyBgGeometric3Preview } from "../components/fancy-background/fancy-bg-geometric-3-preview";
+import { FancyBgGeometric4Preview } from "../components/fancy-background/fancy-bg-geometric-4-preview";
+import { FancyBgGradient1Preview } from "../components/fancy-background/fancy-bg-gradient-1-preview";
+import { FancyBgGradient2Preview } from "../components/fancy-background/fancy-bg-gradient-2-preview";
+import { FancyBgGradient3Preview } from "../components/fancy-background/fancy-bg-gradient-3-preview";
+import { FancyBgGradient4Preview } from "../components/fancy-background/fancy-bg-gradient-4-preview";
 
 const sections = [
   {
@@ -58,59 +58,66 @@ const sections = [
   },
   {
     id: "fancy-bg-4",
-    title: "Fancy background bottom gradient radial",
-    description: "Standard outlined otp fields with auto-focus navigation.",
-    codeString: FancyBgGradient1String,
-    preview: <FancyBgGradientPreview />,
+    title: "Dark radial fancy background",
+    description: "Use this radial gradient fancy background with dark color. ",
+    codeString: fancyBgGradient1String,
+    preview: <FancyBgGradient1Preview />,
   },
   {
     id: "fancy-bg-5",
-    title: "Fancy background bottom gradient radial",
-    description: "Standard outlined otp fields with auto-focus navigation.",
-    codeString: FancyBgGradient2String,
-    preview: <FancyBgGradientTwoPreview />,
+    title: "Blue radial glow",
+    description:
+      "Use this radial gradient fancy background with blue color shades.",
+    codeString: fancyBgGradient2String,
+    preview: <FancyBgGradient2Preview />,
   },
   {
     id: "fancy-bg-6",
-    title: "Fancy background bottom gradient radial",
-    description: "Standard outlined otp fields with auto-focus navigation.",
-    codeString: FancyBgGradient3String,
-    preview: <FancyBgGradientThreePreview />,
+    title: "Crimson radial gradient",
+    description:
+      "Use this radial gradient fancy background with crimson color shades.",
+    codeString: fancyBgGradient3String,
+    preview: <FancyBgGradient3Preview />,
   },
   {
     id: "fancy-bg-7",
-    title: "Fancy background bottom gradient radial",
-    description: "Standard outlined otp fields with auto-focus navigation.",
-    codeString: FancyBgGradient4String,
-    preview: <FancyBgGradientFourPreview />,
+    title: "Emerald radial gradient",
+    description:
+      "Use this radial gradient fancy background with Emerald color shades.",
+    codeString: fancyBgGradient4String,
+    preview: <FancyBgGradient4Preview />,
   },
   {
     id: "fancy-bg-8",
-    title: "Fancy background bottom gradient radial",
-    description: "Standard outlined otp fields with auto-focus navigation.",
-    codeString: FancyBgGeometric1String,
-    preview: <FancyBgGeometricPreview />,
+    title: "Single gradient grid",
+    description:
+      "This grid section has one single color gradient design with material ui.",
+    codeString: fancyBgGeometric1String,
+    preview: <FancyBgGeometric1Preview />,
   },
   {
     id: "fancy-bg-9",
-    title: "Fancy background bottom gradient radial",
-    description: "Standard outlined otp fields with auto-focus navigation.",
-    codeString: FancyBgGeometric2String,
-    preview: <FancyBgGeometricTwoPreview />,
+    title: "Dual gradient grid",
+    description:
+      "Use this section if you need grid effect with dual gradient color.",
+    codeString: fancyBgGeometric2String,
+    preview: <FancyBgGeometric2Preview />,
   },
   {
     id: "fancy-bg-10",
-    title: "Fancy background bottom gradient radial",
-    description: "Standard outlined otp fields with auto-focus navigation.",
-    codeString: FancyBgGeometric3String,
-    preview: <FancyBgGeometricThreePreview />,
+    title: "Top fade grid",
+    description:
+      "Use this faded grid variant to make your section look better.",
+    codeString: fancyBgGeometric3String,
+    preview: <FancyBgGeometric3Preview />,
   },
   {
     id: "fancy-bg-11",
-    title: "Fancy background bottom gradient radial",
-    description: "Standard outlined otp fields with auto-focus navigation.",
-    codeString: FancyBgGeometric4String,
-    preview: <FancyBgGeometricFourPreview />,
+    title: "Diagonal fade grid left",
+    description:
+      "Use this left aligned diagonal fade grid designed with material ui and pure css.",
+    codeString: fancyBgGeometric4String,
+    preview: <FancyBgGeometric4Preview />,
   },
 ];
 
@@ -136,7 +143,7 @@ export const FancyBgView = () => {
 
       <Divider sx={{ my: 4 }} />
 
-      {/* OTP Section */}
+      {/* Fancy background Section */}
       {sections.map((section) => (
         <Box key={section.id} sx={{ mb: 4 }}>
           <SectionTitle
