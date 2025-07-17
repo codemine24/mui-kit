@@ -19,6 +19,7 @@ import { PaginationView } from "../view/pagination-view";
 import { PopoverView } from "../view/popover-view";
 import { RatingView } from "../view/rating-view";
 import { StepperView } from "../view/stepper-view";
+import { TabView } from "../view/tab-view";
 import { TableView } from "../view/table-view";
 import { TimelineView } from "../view/timeline-view";
 export async function generateStaticParams() {
@@ -51,6 +52,7 @@ const componentMap: Record<string, JSX.Element> = {
   otp: <OTPView />,
   rating: <RatingView />,
   "fancy-background": <FancyBgView />,
+  tab: <TabView />,
 };
 
 export default async function Page({
