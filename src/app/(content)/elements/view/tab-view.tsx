@@ -9,6 +9,9 @@ import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
 import React from "react";
 import Tab1Preview from "../components/tab/Tab-1-preview";
+import Tab2Preview from "../components/tab/Tab-2-preview";
+import Tab3Preview from "../components/tab/Tab-3-preview";
+import Tab4Preview from "../components/tab/Tab-4-preview";
 
 const sections = [
   {
@@ -17,6 +20,27 @@ const sections = [
     description: "",
     codeString: "",
     preview: <Tab1Preview />,
+  },
+  {
+    id: "tab-2",
+    title: "",
+    description: "",
+    codeString: "",
+    preview: <Tab2Preview />,
+  },
+  {
+    id: "tab-3",
+    title: "",
+    description: "",
+    codeString: "",
+    preview: <Tab3Preview />,
+  },
+  {
+    id: "tab-4",
+    title: "",
+    description: "",
+    codeString: "",
+    preview: <Tab4Preview />,
   },
 ];
 
