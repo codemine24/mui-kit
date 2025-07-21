@@ -12,6 +12,7 @@ import Tab1Preview from "../components/tab/Tab-1-preview";
 import Tab2Preview from "../components/tab/Tab-2-preview";
 import Tab3Preview from "../components/tab/Tab-3-preview";
 import Tab4Preview from "../components/tab/Tab-4-preview";
+import Tab5Preview from "../components/tab/Tab-5-preview";
 
 const sections = [
   {
@@ -41,6 +42,13 @@ const sections = [
     description: "",
     codeString: "",
     preview: <Tab4Preview />,
+  },
+  {
+    id: "tab-5",
+    title: "Scrollable",
+    description: "",
+    codeString: "",
+    preview: <Tab5Preview />,
   },
 ];
 

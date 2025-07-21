@@ -15,23 +15,25 @@ interface Styles {
 
 const styles: Styles = {
   container: {
-    width: 500,
+    width: "100%",
     bgcolor: "background.paper",
+    borderRadius: "10px",
   },
   appBar: (theme) => ({
-    backgroundColor: theme.palette.mode === "dark" ? "#2d3748" : "#F1F5F9", // Lighter dark mode
+    backgroundColor: theme.palette.mode === "dark" ? "#2d3748" : "#F1F5F9",
     boxShadow: "none",
     color: theme.palette.text.primary,
+    borderRadius: "10px",
   }),
   tabs: (theme) => ({
-    backgroundColor: theme.palette.mode === "dark" ? "#2d3748" : "#e3eaf2", // Lighter dark mode
+    backgroundColor: theme.palette.mode === "dark" ? "#2d3748" : "#e3eaf2",
     "& .MuiTabs-indicator": {
       display: "none",
     },
     padding: "4px",
+    borderRadius: "6px 6px 0 0",
   }),
   tab: (theme) => ({
-    margin: "0 4px",
     borderRadius: "6px",
     minHeight: "36px",
     "&.Mui-selected": {
@@ -43,21 +45,18 @@ const styles: Styles = {
 
 interface TabPanelProps {
   children?: React.ReactNode;
-  dir?: string;
   index: number;
   value: number;
 }
 
 function TabPanel(props: TabPanelProps) {
-  const { children, value, index, ...other } = props;
-
+  const { children, value, index } = props;
   return (
     <div
       role="tabpanel"
       hidden={value !== index}
-      id={`full-width-tabpanel-${index}`}
-      aria-labelledby={`full-width-tab-${index}`}
-      {...other}
+      id={`tabpanel-${index}`}
+      aria-labelledby={`tab-${index}`}
     >
       {value === index && (
         <Box sx={{ p: 3 }}>
@@ -66,13 +65,6 @@ function TabPanel(props: TabPanelProps) {
       )}
     </div>
   );
-}
-
-function a11yProps(index: number) {
-  return {
-    id: `full-width-tab-${index}`,
-    "aria-controls": `full-width-tabpanel-${index}`,
-  };
 }
 
 export default function Tab1Preview() {
@@ -92,25 +84,40 @@ export default function Tab1Preview() {
           indicatorColor="secondary"
           textColor="inherit"
           variant="fullWidth"
-          aria-label="full width tabs example"
+          aria-label="Full-width tabs example"
           sx={styles.tabs(theme)}
         >
-          <Tab label="Dashboard" {...a11yProps(0)} sx={styles.tab(theme)} />
-          <Tab label="Profile" {...a11yProps(1)} sx={styles.tab(theme)} />
-          <Tab label="Setting" {...a11yProps(2)} sx={styles.tab(theme)} />
+          <Tab
+            label="Dashboard"
+            id="tab-0"
+            aria-controls="tabpanel-0"
+            sx={styles.tab(theme)}
+          />
+          <Tab
+            label="Profile"
+            id="tab-1"
+            aria-controls="tabpanel-1"
+            sx={styles.tab(theme)}
+          />
+          <Tab
+            label="Settings"
+            id="tab-1"
+            aria-controls="tabpanel-1"
+            sx={styles.tab(theme)}
+          />
         </Tabs>
       </AppBar>
-      <TabPanel value={value} index={0} dir={theme.direction}>
+      <TabPanel value={value} index={0}>
         Your dashboard shows key metrics: 15 new orders, 32 pending tasks, and 5
         urgent alerts today. Revenue increased by 12% this week. Quick actions
         allow you to manage workflows efficiently.
       </TabPanel>
-      <TabPanel value={value} index={1} dir={theme.direction}>
+      <TabPanel value={value} index={1}>
         John Doe, Senior Developer with 5 years experience. Skills include
         React, Node.js, and UX design. Contact: john@example.com. Currently
         working on the new customer portal project.
       </TabPanel>
-      <TabPanel value={value} index={2} dir={theme.direction}>
+      <TabPanel value={value} index={2}>
         Configure notifications, privacy, and account preferences. Theme
         settings allow switching between light/dark modes. Two-factor
         authentication is currently enabled for security.

@@ -9,7 +9,9 @@ export default function Tab4Preview() {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
-    setValue(newValue);
+    if (newValue >= 0 && newValue <= 2) {
+      setValue(newValue);
+    }
   };
 
   return (
@@ -18,9 +20,9 @@ export default function Tab4Preview() {
       onChange={handleChange}
       aria-label="icon position tabs example"
     >
-      <Tab icon={<HomeIcon />} iconPosition="start" label="start" />
-      <Tab icon={<AccountCircleIcon />} iconPosition="start" label="start" />
-      <Tab icon={<SettingsIcon />} iconPosition="start" label="start" />
+      <Tab icon={<HomeIcon />} iconPosition="start" label="Home" />
+      <Tab icon={<AccountCircleIcon />} iconPosition="start" label="Profile" />
+      <Tab icon={<SettingsIcon />} iconPosition="start" label="Setting" />
     </Tabs>
   );
 }
