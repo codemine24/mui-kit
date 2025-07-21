@@ -1,3 +1,4 @@
+"use client";
 import { Box, Chip, Tab, Tabs, Typography, useTheme } from "@mui/material";
 import { useState } from "react";
 

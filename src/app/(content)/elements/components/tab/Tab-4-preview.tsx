@@ -10,9 +10,7 @@ export default function Tab4Preview() {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
-    if (newValue >= 0 && newValue <= 2) {
-      setValue(newValue);
-    }
+    setValue(newValue);
   };
 
   const CustomTab = styled(Tab)(() => {
