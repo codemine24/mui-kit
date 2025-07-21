@@ -68,6 +68,43 @@ function TabPanel(props: TabPanelProps) {
 }
 
 export default function Tab1Preview() {
+  const tabData = [
+    {
+      id: 0,
+      title: "Dashboard",
+      content: (
+        <Typography component={"span"}>
+          {" "}
+          Your dashboard shows key metrics: 15 new orders, 32 pending tasks, and
+          5 urgent alerts today. Revenue increased by 12% this week. Quick
+          actions allow you to manage workflows efficiently.
+        </Typography>
+      ),
+    },
+
+    {
+      id: 1,
+      title: "Profile",
+      content: (
+        <Box
+          component={"img"}
+          src="https://cdn.pixabay.com/photo/2022/11/05/22/11/channel-7572879_1280.jpg"
+        />
+      ),
+    },
+
+    {
+      id: 2,
+      title: "Settings",
+      content: (
+        <Typography component={"span"}>
+          {" "}
+          Manage your account settings, notifications, and privacy preferences.
+          Customize your experience to match your needs.
+        </Typography>
+      ),
+    },
+  ];
   const theme = useTheme();
   const [value, setValue] = React.useState(0);
 
@@ -87,41 +124,22 @@ export default function Tab1Preview() {
           aria-label="Full-width tabs example"
           sx={styles.tabs(theme)}
         >
-          <Tab
-            label="Dashboard"
-            id="tab-0"
-            aria-controls="tabpanel-0"
-            sx={styles.tab(theme)}
-          />
-          <Tab
-            label="Profile"
-            id="tab-1"
-            aria-controls="tabpanel-1"
-            sx={styles.tab(theme)}
-          />
-          <Tab
-            label="Settings"
-            id="tab-1"
-            aria-controls="tabpanel-1"
-            sx={styles.tab(theme)}
-          />
+          {tabData.map((tab) => (
+            <Tab
+              key={tab.id}
+              label={tab.title}
+              sx={styles.tab(theme)}
+              aria-controls={`tabpanel-${tab.id}`}
+              aria-labelledby={`tab-${tab.id}`}
+            />
+          ))}
         </Tabs>
       </AppBar>
-      <TabPanel value={value} index={0}>
-        Your dashboard shows key metrics: 15 new orders, 32 pending tasks, and 5
-        urgent alerts today. Revenue increased by 12% this week. Quick actions
-        allow you to manage workflows efficiently.
-      </TabPanel>
-      <TabPanel value={value} index={1}>
-        John Doe, Senior Developer with 5 years experience. Skills include
-        React, Node.js, and UX design. Contact: john@example.com. Currently
-        working on the new customer portal project.
-      </TabPanel>
-      <TabPanel value={value} index={2}>
-        Configure notifications, privacy, and account preferences. Theme
-        settings allow switching between light/dark modes. Two-factor
-        authentication is currently enabled for security.
-      </TabPanel>
+      {tabData.map((tab) => (
+        <TabPanel key={tab.id} value={value} index={tab.id}>
+          {tab.content}
+        </TabPanel>
+      ))}
     </Box>
   );
 }

@@ -17,6 +17,7 @@ export const PATHS = {
     POPOVER: "/elements/popover",
     STEPPER: "/elements/stepper",
     TABLE: "/elements/table",
+    TAB: "/elements/tab",
     TIMELINE: "/elements/timeline",
     OTP: "/elements/otp",
     RATING: "/elements/rating",
