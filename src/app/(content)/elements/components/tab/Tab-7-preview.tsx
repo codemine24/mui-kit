@@ -7,12 +7,20 @@ import * as React from "react";
 
 export default function Tab7Preview() {
   const [value, setValue] = React.useState(0);
-
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
-    if (newValue >= 0 && newValue <= 2) {
-      setValue(newValue);
-    }
+    setValue(newValue);
   };
+  const tabs = [
+    { id: 1, icon: <HomeIcon />, label: "Home" },
+    { id: 2, icon: <AccountCircleIcon />, label: "Profile" },
+    { id: 3, icon: <SettingsIcon />, label: "Settings" },
+    { id: 4, icon: <HomeIcon />, label: "Dashboard" },
+    { id: 5, icon: <AccountCircleIcon />, label: "Account" },
+    { id: 6, icon: <SettingsIcon />, label: "Preferences" },
+    { id: 7, icon: <HomeIcon />, label: "Overview" },
+    { id: 8, icon: <AccountCircleIcon />, label: "User" },
+    { id: 9, icon: <SettingsIcon />, label: "Configuration" },
+  ];
 
   return (
     <Tabs
@@ -22,21 +30,19 @@ export default function Tab7Preview() {
       variant="scrollable"
       scrollButtons="auto"
     >
-      <Tab icon={<HomeIcon />} iconPosition="start" label="Home" />
-      <Tab icon={<AccountCircleIcon />} iconPosition="start" label="Profile" />
-      <Tab icon={<SettingsIcon />} iconPosition="start" label="Setting" />
-      <Tab icon={<HomeIcon />} iconPosition="start" label="Home" />
-      <Tab icon={<AccountCircleIcon />} iconPosition="start" label="Profile" />
-      <Tab icon={<SettingsIcon />} iconPosition="start" label="Setting" />
-      <Tab icon={<HomeIcon />} iconPosition="start" label="Home" />
-      <Tab icon={<AccountCircleIcon />} iconPosition="start" label="Profile" />
-      <Tab icon={<SettingsIcon />} iconPosition="start" label="Setting" />
-      <Tab icon={<HomeIcon />} iconPosition="start" label="Home" />
-      <Tab icon={<AccountCircleIcon />} iconPosition="start" label="Profile" />
-      <Tab icon={<SettingsIcon />} iconPosition="start" label="Setting" />
-      <Tab icon={<HomeIcon />} iconPosition="start" label="Home" />
-      <Tab icon={<AccountCircleIcon />} iconPosition="start" label="Profile" />
-      <Tab icon={<SettingsIcon />} iconPosition="start" label="Setting" />
+      {tabs.map((tab) => (
+        <Tab
+          key={tab.id}
+          icon={tab.icon}
+          iconPosition="start"
+          label={tab.label}
+          sx={{
+            "&.MuiButtonBase-root": {
+              py: 0,
+            },
+          }}
+        />
+      ))}
     </Tabs>
   );
 }
