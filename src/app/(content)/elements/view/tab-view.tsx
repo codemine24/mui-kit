@@ -9,6 +9,8 @@ import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
 import React from "react";
 import { Tab1Preview } from "../components/tab/Tab-1-preview";
+import { Tab10Preview } from "../components/tab/Tab-10-preview";
+import { Tab11Preview } from "../components/tab/Tab-11-preview";
 import Tab2Preview from "../components/tab/Tab-2-preview";
 import Tab3Preview from "../components/tab/Tab-3-preview";
 import Tab4Preview from "../components/tab/Tab-4-preview";
@@ -81,6 +83,20 @@ const sections = [
     description: "",
     codeString: "",
     preview: <Tab9Preview />,
+  },
+  {
+    id: "tab-10",
+    title: "Capsule tabs",
+    description: "",
+    codeString: "",
+    preview: <Tab10Preview />,
+  },
+  {
+    id: "tab-11",
+    title: "Capsule tabs",
+    description: "",
+    codeString: "",
+    preview: <Tab11Preview />,
   },
 ];
 
