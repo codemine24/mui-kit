@@ -11,6 +11,7 @@ import React from "react";
 import { Tab1Preview } from "../components/tab/Tab-1-preview";
 import { Tab10Preview } from "../components/tab/Tab-10-preview";
 import { Tab11Preview } from "../components/tab/Tab-11-preview";
+import { Tab12Preview } from "../components/tab/Tab-12-preview";
 import Tab2Preview from "../components/tab/Tab-2-preview";
 import Tab3Preview from "../components/tab/Tab-3-preview";
 import Tab4Preview from "../components/tab/Tab-4-preview";
@@ -97,6 +98,13 @@ const sections = [
     description: "",
     codeString: "",
     preview: <Tab11Preview />,
+  },
+  {
+    id: "tab-12",
+    title: "Capsule tabs",
+    description: "",
+    codeString: "",
+    preview: <Tab12Preview />,
   },
 ];
 
