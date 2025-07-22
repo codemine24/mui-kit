@@ -16,6 +16,7 @@ import Tab5Preview from "../components/tab/Tab-5-preview";
 import Tab6Preview from "../components/tab/Tab-6-preview";
 import Tab7Preview from "../components/tab/Tab-7-preview";
 import { Tab8Preview } from "../components/tab/Tab-8-preview";
+import { Tab9Preview } from "../components/tab/Tab-9-preview";
 
 const sections = [
   {
@@ -73,6 +74,13 @@ const sections = [
     description: "",
     codeString: "",
     preview: <Tab8Preview />,
+  },
+  {
+    id: "tab-8",
+    title: "Tab with icon",
+    description: "",
+    codeString: "",
+    preview: <Tab9Preview />,
   },
 ];
 
