@@ -7,7 +7,7 @@ import Tabs from "@mui/material/Tabs";
 import * as React from "react";
 
 const CustomTab = styled(Tab)({
-  "&.MuiButtonBase-root": {
+  "&.tabClasses": {
     paddingTop: 0,
     paddingBottom: 10,
   },

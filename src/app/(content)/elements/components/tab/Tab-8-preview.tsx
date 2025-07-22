@@ -1,0 +1,131 @@
+import { Typography } from "@mui/material";
+import Box from "@mui/material/Box";
+import Tab from "@mui/material/Tab";
+import Tabs from "@mui/material/Tabs";
+import { useTheme } from "@mui/system";
+import * as React from "react";
+
+interface TabPanelProps {
+  children?: React.ReactNode;
+  index: number;
+  value: number;
+}
+
+function CustomTabPanel(props: TabPanelProps) {
+  const { children, value, index, ...other } = props;
+
+  return (
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`simple-tabpanel-${index}`}
+      aria-labelledby={`simple-tab-${index}`}
+      {...other}
+    >
+      {value === index && <Box sx={{ p: 3 }}>{children}</Box>}
+    </div>
+  );
+}
+
+function a11yProps(index: number) {
+  return {
+    id: `simple-tab-${index}`,
+    "aria-controls": `simple-tabpanel-${index}`,
+  };
+}
+
+export default function Tab8Preview() {
+  const tabData = [
+    {
+      id: 0,
+      title: "Dashboard",
+      content: (
+        <Typography component={"span"}>
+          {" "}
+          Your dashboard shows key metrics: 15 new orders, 32 pending tasks, and
+          5 urgent alerts today. Revenue increased by 12% this week. Quick
+          actions allow you to manage workflows efficiently.
+        </Typography>
+      ),
+    },
+
+    {
+      id: 1,
+      title: "Profile",
+      content: (
+        <>
+          <Box
+            component={"img"}
+            src="https://cdn.pixabay.com/photo/2022/11/05/22/11/channel-7572879_1280.jpg"
+          />
+          <Typography>
+            Explore in-depth information, including technical specifications,
+            materials, dimensions, and usage instructions. This section provides
+            everything you need to fully understand the product or item.
+          </Typography>
+        </>
+      ),
+    },
+
+    {
+      id: 2,
+      title: "Settings",
+      content: (
+        <Typography component={"span"}>
+          {" "}
+          Manage your account settings, notifications, and privacy preferences.
+          Customize your experience to match your needs.
+        </Typography>
+      ),
+    },
+  ];
+  const [value, setValue] = React.useState(0);
+  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+    setValue(newValue);
+  };
+  const theme = useTheme();
+  const colors = {
+    light: {
+      text: "#9c27b0",
+      indicator: "#9c27b0",
+    },
+    dark: {
+      text: "#ba68c8",
+      indicator: "#ba68c8",
+    },
+  };
+  const currentColors =
+    theme.palette.mode === "dark" ? colors.dark : colors.light;
+
+  return (
+    <Box sx={{ width: "100%" }}>
+      <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+        <Tabs
+          value={value}
+          onChange={handleChange}
+          sx={{
+            "& .MuiTab-root": {
+              color: currentColors.text,
+              "&.Mui-selected": {
+                color: currentColors.text,
+              },
+            },
+            "& .MuiTabs-indicator": {
+              backgroundColor: currentColors.indicator,
+            },
+          }}
+          aria-label="basic tabs example"
+        >
+          {tabData.map((tab) => (
+            <Tab key={tab.id} label={tab.title} {...a11yProps(tab.id)} />
+          ))}
+        </Tabs>
+      </Box>
+      {tabData.map((tab) => (
+        <CustomTabPanel key={tab.id} value={value} index={tab.id}>
+          {tab.content}
+        </CustomTabPanel>
+      ))}
+    </Box>
+  );
+}
