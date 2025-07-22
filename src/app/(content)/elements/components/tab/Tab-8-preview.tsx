@@ -1,8 +1,7 @@
-import { Typography } from "@mui/material";
+import { styled, Typography } from "@mui/material";
 import Box from "@mui/material/Box";
-import Tab from "@mui/material/Tab";
-import Tabs from "@mui/material/Tabs";
-import { useTheme } from "@mui/system";
+import Tab, { tabClasses } from "@mui/material/Tab";
+import Tabs, { tabsClasses } from "@mui/material/Tabs";
 import * as React from "react";
 
 interface TabPanelProps {
@@ -11,11 +10,33 @@ interface TabPanelProps {
   value: number;
 }
 
-function CustomTabPanel(props: TabPanelProps) {
+// please replace it with your actual theme color
+const colors = (mode: "light" | "dark") => {
+  return {
+    text: mode === "light" ? "#9c27b0" : "#ba68c8",
+    indicator: mode === "light" ? "#9c27b0" : "#ba68c8",
+  };
+};
+
+const CustomTabs = styled(Tabs)(({ theme }) => {
+  return {
+    [`& .${tabsClasses.root}`]: {
+      color: colors(theme.palette.mode).text,
+      [`& .${tabClasses.selected}`]: {
+        color: colors(theme.palette.mode).text,
+      },
+    },
+    [`& .${tabsClasses.indicator}`]: {
+      backgroundColor: colors(theme.palette.mode).indicator,
+    },
+  };
+});
+
+const CustomTabPanel = (props: TabPanelProps) => {
   const { children, value, index, ...other } = props;
 
   return (
-    <div
+    <Box
       role="tabpanel"
       hidden={value !== index}
       id={`simple-tabpanel-${index}`}
@@ -23,18 +44,11 @@ function CustomTabPanel(props: TabPanelProps) {
       {...other}
     >
       {value === index && <Box sx={{ p: 3 }}>{children}</Box>}
-    </div>
+    </Box>
   );
-}
+};
 
-function a11yProps(index: number) {
-  return {
-    id: `simple-tab-${index}`,
-    "aria-controls": `simple-tabpanel-${index}`,
-  };
-}
-
-export default function Tab8Preview() {
+export const Tab8Preview = () => {
   const tabData = [
     {
       id: 0,
@@ -83,43 +97,19 @@ export default function Tab8Preview() {
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
   };
-  const theme = useTheme();
-  const colors = {
-    light: {
-      text: "#9c27b0",
-      indicator: "#9c27b0",
-    },
-    dark: {
-      text: "#ba68c8",
-      indicator: "#ba68c8",
-    },
-  };
-  const currentColors =
-    theme.palette.mode === "dark" ? colors.dark : colors.light;
 
   return (
     <Box sx={{ width: "100%" }}>
       <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-        <Tabs
+        <CustomTabs
           value={value}
           onChange={handleChange}
-          sx={{
-            "& .MuiTab-root": {
-              color: currentColors.text,
-              "&.Mui-selected": {
-                color: currentColors.text,
-              },
-            },
-            "& .MuiTabs-indicator": {
-              backgroundColor: currentColors.indicator,
-            },
-          }}
-          aria-label="basic tabs example"
+          aria-label="custom colored tabs"
         >
           {tabData.map((tab) => (
-            <Tab key={tab.id} label={tab.title} {...a11yProps(tab.id)} />
+            <Tab key={tab.id} label={tab.title} />
           ))}
-        </Tabs>
+        </CustomTabs>
       </Box>
       {tabData.map((tab) => (
         <CustomTabPanel key={tab.id} value={value} index={tab.id}>
@@ -128,4 +118,4 @@ export default function Tab8Preview() {
       ))}
     </Box>
   );
-}
+};

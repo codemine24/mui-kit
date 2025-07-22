@@ -8,14 +8,14 @@ import { PATHS } from "@/router/paths";
 import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
 import React from "react";
-import Tab1Preview from "../components/tab/Tab-1-preview";
+import { Tab1Preview } from "../components/tab/Tab-1-preview";
 import Tab2Preview from "../components/tab/Tab-2-preview";
 import Tab3Preview from "../components/tab/Tab-3-preview";
 import Tab4Preview from "../components/tab/Tab-4-preview";
 import Tab5Preview from "../components/tab/Tab-5-preview";
 import Tab6Preview from "../components/tab/Tab-6-preview";
 import Tab7Preview from "../components/tab/Tab-7-preview";
-import Tab8Preview from "../components/tab/Tab-8-preview";
+import { Tab8Preview } from "../components/tab/Tab-8-preview";
 
 const sections = [
   {

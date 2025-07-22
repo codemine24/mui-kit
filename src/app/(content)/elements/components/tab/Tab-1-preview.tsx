@@ -67,7 +67,7 @@ function TabPanel(props: TabPanelProps) {
   );
 }
 
-export default function Tab1Preview() {
+export const Tab1Preview = () => {
   const tabData = [
     {
       id: 0,
@@ -142,4 +142,4 @@ export default function Tab1Preview() {
       ))}
     </Box>
   );
-}
+};
