@@ -76,7 +76,7 @@ const sections = [
     preview: <Tab8Preview />,
   },
   {
-    id: "tab-8",
+    id: "tab-9",
     title: "Tab with icon",
     description: "",
     codeString: "",

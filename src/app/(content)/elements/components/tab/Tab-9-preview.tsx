@@ -1,3 +1,7 @@
+"use client";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import AutoAwesomeMotionIcon from "@mui/icons-material/AutoAwesomeMotion";
+import SettingsIcon from "@mui/icons-material/Settings";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import { SxProps, Theme, useTheme } from "@mui/material/styles";
@@ -72,6 +76,7 @@ export const Tab9Preview = () => {
     {
       id: 0,
       title: "Dashboard",
+      icon: <AutoAwesomeMotionIcon sx={{ mr: 10 }} />,
       content: (
         <Typography component={"span"}>
           {" "}
@@ -85,6 +90,7 @@ export const Tab9Preview = () => {
     {
       id: 1,
       title: "Profile",
+      icon: <AccountCircleIcon />,
       content: (
         <Box
           component={"img"}
@@ -96,6 +102,7 @@ export const Tab9Preview = () => {
     {
       id: 2,
       title: "Settings",
+      icon: <SettingsIcon />,
       content: (
         <Typography component={"span"}>
           {" "}
@@ -131,6 +138,8 @@ export const Tab9Preview = () => {
               sx={styles.tab(theme)}
               aria-controls={`tabpanel-${tab.id}`}
               aria-labelledby={`tab-${tab.id}`}
+              icon={tab.icon}
+              iconPosition="start"
             />
           ))}
         </Tabs>

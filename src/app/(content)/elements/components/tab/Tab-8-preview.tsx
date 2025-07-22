@@ -94,12 +94,6 @@ export const Tab8Preview = () => {
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
   };
-  function getTabAccessibilityProps(index: number) {
-    return {
-      id: `tab-${index}`,
-      "aria-controls": `tabpanel-${index}`,
-    };
-  }
 
   return (
     <Box sx={{ width: "100%" }}>
@@ -110,11 +104,7 @@ export const Tab8Preview = () => {
           aria-label="custom colored tabs"
         >
           {tabData.map((tab) => (
-            <CustomTab
-              key={tab.id}
-              label={tab.title}
-              {...getTabAccessibilityProps(tab.id)}
-            />
+            <CustomTab key={tab.id} label={tab.title} />
           ))}
         </CustomTabs>
       </Box>
