@@ -6,13 +6,6 @@ import Tab, { tabClasses } from "@mui/material/Tab";
 import Tabs from "@mui/material/Tabs";
 import * as React from "react";
 
-const CustomTab = styled(Tab)({
-  "&.tabClasses": {
-    paddingTop: 0,
-    paddingBottom: 10,
-  },
-});
-
 export default function Tab4Preview() {
   const [value, setValue] = React.useState(0);
 
