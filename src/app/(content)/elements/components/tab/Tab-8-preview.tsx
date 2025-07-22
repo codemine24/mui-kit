@@ -11,26 +11,22 @@ interface TabPanelProps {
 }
 
 // please replace it with your actual theme color
-const colors = (mode: "light" | "dark") => {
-  return {
-    text: mode === "light" ? "#9c27b0" : "#ba68c8",
-    indicator: mode === "light" ? "#9c27b0" : "#ba68c8",
-  };
-};
-
-const CustomTabs = styled(Tabs)(({ theme }) => {
-  return {
-    [`& .${tabsClasses.root}`]: {
-      color: colors(theme.palette.mode).text,
-      [`& .${tabClasses.selected}`]: {
-        color: colors(theme.palette.mode).text,
-      },
-    },
-    [`& .${tabsClasses.indicator}`]: {
-      backgroundColor: colors(theme.palette.mode).indicator,
-    },
-  };
+const tabColors = (mode: "light" | "dark") => ({
+  text: mode === "light" ? "#9c27b0" : "#ba68c8",
+  indicator: mode === "light" ? "#9c27b0" : "#ba68c8",
 });
+
+const CustomTabs = styled(Tabs)(({ theme }) => ({
+  [`& .${tabsClasses.indicator}`]: {
+    backgroundColor: tabColors(theme.palette.mode).indicator,
+  },
+}));
+
+const CustomTab = styled(Tab)(({ theme }) => ({
+  [`&.${tabClasses.selected}`]: {
+    color: tabColors(theme.palette.mode).text,
+  },
+}));
 
 const CustomTabPanel = (props: TabPanelProps) => {
   const { children, value, index, ...other } = props;
@@ -107,7 +103,7 @@ export const Tab8Preview = () => {
           aria-label="custom colored tabs"
         >
           {tabData.map((tab) => (
-            <Tab key={tab.id} label={tab.title} />
+            <CustomTab key={tab.id} label={tab.title} />
           ))}
         </CustomTabs>
       </Box>
