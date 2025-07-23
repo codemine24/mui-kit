@@ -17,9 +17,8 @@ import { tabCustomColoredString } from "../code-string/tab/tab-custom-colored-st
 import { tabIconString } from "../code-string/tab/tab-icon-string";
 import { tabScrollableIconString } from "../code-string/tab/tab-scrollable-icon-string";
 import { TabScrollableString } from "../code-string/tab/tab-scrollable-string";
+import { tabVerticalString } from "../code-string/tab/tab-vertical-string";
 import { tabWrappedString } from "../code-string/tab/tab-wrapped-string";
-import { Tab11Preview } from "../components/tab/Tab-11-preview";
-import { Tab12Preview } from "../components/tab/Tab-12-preview";
 import { TabBadgePreview } from "../components/tab/tab-badge-preview";
 import TabBasicPreview from "../components/tab/tab-basic-preview";
 import { TabButtonIconPreview } from "../components/tab/tab-button-icon-preview";
@@ -29,6 +28,7 @@ import { TabCustomColoredPreview } from "../components/tab/tab-custom-colored-pr
 import { TabIconPreview } from "../components/tab/tab-icon-preview";
 import { TabScrollableIconPreview } from "../components/tab/tab-scrollable-icon-preview";
 import { TabScrollablePreview } from "../components/tab/tab-scrollable-preview";
+import { TabVerticalPreview } from "../components/tab/tab-vertical-preview";
 import { TabWrappedPreview } from "../components/tab/tabs-wrapped-preview";
 
 const sections = [
@@ -106,18 +106,19 @@ const sections = [
   },
   {
     id: "tab-11",
-    title: "Capsule tabs",
-    description: "",
-    codeString: "",
-    preview: <Tab11Preview />,
+    title: "Vertical tabs",
+    description:
+      "Vertical tab variant designed using raw material ui and nothing else. ",
+    codeString: tabVerticalString,
+    preview: <TabVerticalPreview />,
   },
-  {
-    id: "tab-12",
-    title: "Capsule tabs",
-    description: "",
-    codeString: "",
-    preview: <Tab12Preview />,
-  },
+  // {
+  //   id: "tab-12",
+  //   title: "Vertical tabs with icon",
+  //   description: "",
+  //   codeString: "",
+  //   preview: <Tab12Preview />,
+  // },
 ];
 
 export const TabView = () => {
