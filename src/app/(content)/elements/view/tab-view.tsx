@@ -12,18 +12,19 @@ import { tabBadgeString } from "../code-string/tab/tab-badge-string";
 import { tabBasicString } from "../code-string/tab/tab-basic-string";
 import { tabButtonIconString } from "../code-string/tab/tab-button-icon-string";
 import { tabButtonString } from "../code-string/tab/tab-button-string";
+import { tabCapsuleString } from "../code-string/tab/tab-capsule-string";
 import { tabCustomColoredString } from "../code-string/tab/tab-custom-colored-string";
 import { tabIconString } from "../code-string/tab/tab-icon-string";
 import { tabScrollableIconString } from "../code-string/tab/tab-scrollable-icon-string";
 import { TabScrollableString } from "../code-string/tab/tab-scrollable-string";
 import { tabWrappedString } from "../code-string/tab/tab-wrapped-string";
-import { Tab10Preview } from "../components/tab/Tab-10-preview";
 import { Tab11Preview } from "../components/tab/Tab-11-preview";
 import { Tab12Preview } from "../components/tab/Tab-12-preview";
 import { TabBadgePreview } from "../components/tab/tab-badge-preview";
 import TabBasicPreview from "../components/tab/tab-basic-preview";
 import { TabButtonIconPreview } from "../components/tab/tab-button-icon-preview";
 import { TabButtonPreview } from "../components/tab/tab-button-preview";
+import { TabCapsulePreview } from "../components/tab/tab-capsule-preview";
 import { TabCustomColoredPreview } from "../components/tab/tab-custom-colored-preview";
 import { TabIconPreview } from "../components/tab/tab-icon-preview";
 import { TabScrollableIconPreview } from "../components/tab/tab-scrollable-icon-preview";
@@ -99,9 +100,9 @@ const sections = [
   {
     id: "tab-10",
     title: "Capsule tabs",
-    description: "",
-    codeString: "",
-    preview: <Tab10Preview />,
+    description: "Instead of boring text, you can use capsule tabs.",
+    codeString: tabCapsuleString,
+    preview: <TabCapsulePreview />,
   },
   {
     id: "tab-11",
