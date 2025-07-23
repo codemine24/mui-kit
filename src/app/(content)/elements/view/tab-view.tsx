@@ -10,18 +10,20 @@ import Divider from "@mui/material/Divider";
 import React from "react";
 import { tabBadgeString } from "../code-string/tab/tab-badge-string";
 import { tabBasicString } from "../code-string/tab/tab-basic-string";
-import { customColoredString } from "../code-string/tab/tab-custom-colored-string";
+import { tabButtonIconString } from "../code-string/tab/tab-button-icon-string";
+import { tabButtonString } from "../code-string/tab/tab-button-string";
+import { tabCustomColoredString } from "../code-string/tab/tab-custom-colored-string";
 import { tabIconString } from "../code-string/tab/tab-icon-string";
 import { tabScrollableIconString } from "../code-string/tab/tab-scrollable-icon-string";
 import { TabScrollableString } from "../code-string/tab/tab-scrollable-string";
 import { tabWrappedString } from "../code-string/tab/tab-wrapped-string";
-import { TabButtonPreview } from "../components/tab/tab-button-preview";
 import { Tab10Preview } from "../components/tab/Tab-10-preview";
 import { Tab11Preview } from "../components/tab/Tab-11-preview";
 import { Tab12Preview } from "../components/tab/Tab-12-preview";
-import { Tab9Preview } from "../components/tab/Tab-9-preview";
 import { TabBadgePreview } from "../components/tab/tab-badge-preview";
 import TabBasicPreview from "../components/tab/tab-basic-preview";
+import { TabButtonIconPreview } from "../components/tab/tab-button-icon-preview";
+import { TabButtonPreview } from "../components/tab/tab-button-preview";
 import { TabCustomColoredPreview } from "../components/tab/tab-custom-colored-preview";
 import { TabIconPreview } from "../components/tab/tab-icon-preview";
 import { TabScrollableIconPreview } from "../components/tab/tab-scrollable-icon-preview";
@@ -77,22 +79,22 @@ const sections = [
     id: "tab-7",
     title: "Custom colored",
     description: "This variant has fully customizable tab color. ",
-    codeString: customColoredString,
+    codeString: tabCustomColoredString,
     preview: <TabCustomColoredPreview />,
   },
   {
     id: "tab-8",
-    title: "",
-    description: "",
-    codeString: "",
+    title: "Tab button variant",
+    description: "Basic tab variant with custom icon.",
+    codeString: tabButtonString,
     preview: <TabButtonPreview />,
   },
   {
     id: "tab-9",
-    title: "Tab with icon",
-    description: "",
-    codeString: "",
-    preview: <Tab9Preview />,
+    title: "Button with icon",
+    description: "This variant has icon along with each tab.",
+    codeString: tabButtonIconString,
+    preview: <TabButtonIconPreview />,
   },
   {
     id: "tab-10",

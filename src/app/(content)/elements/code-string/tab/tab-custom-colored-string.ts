@@ -1,4 +1,4 @@
-export const customColoredString = `"use client";
+export const tabCustomColoredString = `"use client";
 import { styled, Typography } from "@mui/material";
 import Box from "@mui/material/Box";
 import Tab, { tabClasses } from "@mui/material/Tab";

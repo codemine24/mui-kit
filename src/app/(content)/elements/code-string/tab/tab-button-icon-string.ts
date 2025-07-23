@@ -1,4 +1,8 @@
-export const tabButtonString = `import { Typography } from "@mui/material";
+export const tabButtonIconString = `"use client";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import AutoAwesomeMotionIcon from "@mui/icons-material/AutoAwesomeMotion";
+import SettingsIcon from "@mui/icons-material/Settings";
+import { Typography } from "@mui/material";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import { SxProps, Theme, useTheme } from "@mui/material/styles";
@@ -43,23 +47,7 @@ const styles: Styles = {
   }),
 };
 
-export const TabButtonPreview = () => {
-  const tabs = [
-    {
-      id: 0,
-      title: "Dashboard",
-    },
-
-    {
-      id: 1,
-      title: "Profile",
-    },
-
-    {
-      id: 2,
-      title: "Settings",
-    },
-  ];
+export const TabButtonIconPreview = () => {
   const theme = useTheme();
   const [activeTab, setActiveTab] = React.useState(0);
 
@@ -67,6 +55,25 @@ export const TabButtonPreview = () => {
     setActiveTab(newValue);
   };
 
+  const tabData = [
+    {
+      id: 0,
+      title: "Dashboard",
+      icon: <AutoAwesomeMotionIcon sx={{ mr: 10 }} />,
+    },
+
+    {
+      id: 1,
+      title: "Profile",
+      icon: <AccountCircleIcon />,
+    },
+
+    {
+      id: 2,
+      title: "Settings",
+      icon: <SettingsIcon />,
+    },
+  ];
   const renderContent = () => {
     switch (activeTab) {
       case 0:
@@ -97,19 +104,22 @@ export const TabButtonPreview = () => {
           aria-label="Full-width tabs example"
           sx={styles.tabs(theme)}
         >
-          {tabs.map((tab) => (
+          {tabData.map((tab) => (
             <Tab
               key={tab.id}
               label={tab.title}
               sx={styles.tab(theme)}
               aria-controls={\`tabpanel-\${tab.id}\`}
               aria-labelledby={\`tab-\${tab.id}\`}
+              icon={tab.icon}
+              iconPosition="start"
             />
           ))}
         </Tabs>
       </AppBar>
+
       <Box sx={{ mt: 3 }}>{renderContent()}</Box>
     </Box>
   );
 };
-`;
+`
