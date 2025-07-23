@@ -10,11 +10,12 @@ import Divider from "@mui/material/Divider";
 import React from "react";
 import { tabBadgeString } from "../code-string/tab/tab-badge-string";
 import { tabBasicString } from "../code-string/tab/tab-basic-string";
+import { customColoredString } from "../code-string/tab/tab-custom-colored-string";
 import { tabIconString } from "../code-string/tab/tab-icon-string";
 import { tabScrollableIconString } from "../code-string/tab/tab-scrollable-icon-string";
 import { TabScrollableString } from "../code-string/tab/tab-scrollable-string";
 import { tabWrappedString } from "../code-string/tab/tab-wrapped-string";
-import { Tab1Preview } from "../components/tab/Tab-1-preview";
+import { TabButtonPreview } from "../components/tab/tab-button-preview";
 import { Tab10Preview } from "../components/tab/Tab-10-preview";
 import { Tab11Preview } from "../components/tab/Tab-11-preview";
 import { Tab12Preview } from "../components/tab/Tab-12-preview";
@@ -72,11 +73,11 @@ const sections = [
     codeString: tabScrollableIconString,
     preview: <TabScrollableIconPreview />,
   },
-   {
+  {
     id: "tab-7",
     title: "Custom colored",
-    description: "",
-    codeString: "",
+    description: "This variant has fully customizable tab color. ",
+    codeString: customColoredString,
     preview: <TabCustomColoredPreview />,
   },
   {
@@ -84,7 +85,7 @@ const sections = [
     title: "",
     description: "",
     codeString: "",
-    preview: <Tab1Preview />,
+    preview: <TabButtonPreview />,
   },
   {
     id: "tab-9",
