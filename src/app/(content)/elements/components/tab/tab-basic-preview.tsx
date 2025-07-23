@@ -1,88 +1,84 @@
-import { Typography } from "@mui/material";
+import { SxProps, Typography } from "@mui/material";
 import Box from "@mui/material/Box";
-import Tab from "@mui/material/Tab";
 import Tabs from "@mui/material/Tabs";
 import * as React from "react";
 
 interface TabPanelProps {
+  id: string;
+  activeTab: string;
   children?: React.ReactNode;
-  index: number;
-  value: number;
+  sx?: SxProps;
 }
 
 const CustomTabPanel = (props: TabPanelProps) => {
-  const { children, value, index, ...other } = props;
+  const { children, id, activeTab, ...other } = props;
 
   return (
     <div
       role="tabpanel"
-      hidden={value !== index}
-      id={`simple-tabpanel-${index}`}
-      aria-labelledby={`simple-tab-${index}`}
+      hidden={id !== activeTab}
+      id={`simple-tabpanel-${id}`}
+      aria-labelledby={`simple-tab-${id}`}
       {...other}
     >
-      {value === index && <Box sx={{ p: 3 }}>{children}</Box>}
+      {activeTab === id && <Box sx={{ p: 3 }}>{children}</Box>}
     </div>
   );
 };
 
-const tabData = [
+const tabs = [
   {
-    id: 0,
-    title: "Dashboard",
-    content: (
-      <Box
-        component="img"
-        src="https://images.unsplash.com/photo-1752436365654-de0ebc45784b?&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        sx={{ width: "100%", height: "300px", objectFit: "cover" }}
-      />
-    ),
+    id: "one",
+    label:
+      "Find helpful answers and guides to improve your experience with our tools and services",
   },
   {
-    id: 1,
-    title: "Overview",
-    content: (
-      <Typography component={"span"}>
-        {" "}
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto unde
-        labore sint exercitationem voluptatem accusantium sunt nihil quo
-        perferendis, asperiores neque, ipsa ratione et ipsam dicta dolores modi
-        ea vel!
-      </Typography>
-    ),
+    id: "two",
+    label: "Guide",
   },
   {
-    id: 2,
-    title: "Overview",
-    content: (
-      <Typography component={"span"}>
-        {" "}
-        Your dashboard shows key metrics: 15 new orders, 32 pending tasks, and 5
-        urgent alerts today. Revenue increased by 12% this week. Quick actions
-        allow you to manage workflows efficiently.
-      </Typography>
-    ),
+    id: "three",
+    label: "Help",
   },
 ];
 
 export default function TabBasicPreview() {
-  const [value, setValue] = React.useState(0);
+  const [activeTab, setActiveTab] = React.useState<string>("one");
 
-  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
-    setValue(newValue);
+  const handleChange = (event: React.SyntheticEvent, newValue: string) => {
+    setActiveTab(newValue);
+  };
+
+  const renderContent = () => {
+    switch (activeTab) {
+      case "one":
+        return (
+          <Typography>
+            Find helpful answers and guides to improve your experience with our
+            tools and services
+          </Typography>
+        );
+      case "two":
+        return <Typography>Guide</Typography>;
+      case "three":
+        return <Typography>Help</Typography>;
+      default:
+        return null;
+    }
   };
 
   return (
     <Box sx={{ width: "100%" }}>
       <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
         <Tabs
-          value={value}
+          value={activeTab}
           onChange={handleChange}
           aria-label="basic tabs example"
         >
-          {tabData.map((tab) => (
-            <Tab
-              label={tab.title}
+          {tabs.map((tab) => (
+            <CustomTabPanel
+              id={tab.label}
+              activeTab={activeTab}
               key={tab.id}
               sx={{ textTransform: "none" }}
             />
@@ -90,11 +86,7 @@ export default function TabBasicPreview() {
         </Tabs>
       </Box>
 
-      {tabData.map((tab) => (
-        <CustomTabPanel value={value} index={tab.id} key={tab.id}>
-          {tab.content}
-        </CustomTabPanel>
-      ))}
+      <Box sx={{ mt: 3 }}>{renderContent()}</Box>
     </Box>
   );
 }
