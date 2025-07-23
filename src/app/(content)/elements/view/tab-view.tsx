@@ -12,7 +12,7 @@ import { Tab1Preview } from "../components/tab/Tab-1-preview";
 import { Tab10Preview } from "../components/tab/Tab-10-preview";
 import { Tab11Preview } from "../components/tab/Tab-11-preview";
 import { Tab12Preview } from "../components/tab/Tab-12-preview";
-import Tab2Preview from "../components/tab/Tab-2-preview";
+import TabBasicPreview from "../components/tab/tab-basic-preview";
 import Tab3Preview from "../components/tab/Tab-3-preview";
 import Tab4Preview from "../components/tab/Tab-4-preview";
 import Tab5Preview from "../components/tab/Tab-5-preview";
@@ -20,21 +20,22 @@ import Tab6Preview from "../components/tab/Tab-6-preview";
 import Tab7Preview from "../components/tab/Tab-7-preview";
 import { Tab8Preview } from "../components/tab/Tab-8-preview";
 import { Tab9Preview } from "../components/tab/Tab-9-preview";
+import { tabBasicString } from "../code-string/tab/tab-basic-string";
 
 const sections = [
   {
     id: "tab-1",
-    title: "",
-    description: "",
-    codeString: "",
-    preview: <Tab1Preview />,
+    title: "Basic Tabs",
+    description: "You can use this basic tabs build with material ui.",
+    codeString: tabBasicString,
+    preview: <TabBasicPreview />,
   },
   {
     id: "tab-2",
     title: "",
     description: "",
     codeString: "",
-    preview: <Tab2Preview />,
+    preview: <Tab1Preview />,
   },
   {
     id: "tab-3",
@@ -120,12 +121,12 @@ export const TabView = () => {
       <CustomBreadCrumbs
         pathArr={[
           { label: "Elements", path: PATHS.ELEMENTS.OVERVIEW },
-          { label: "Accordion", path: "" },
+          { label: "Tabs", path: "" },
         ]}
       />
       <PageTitle
-        title="Accordion"
-        description="Use material ui accordion with different styles to show your FAQ's and other info."
+        title="Tabs"
+        description="Material UI core tabs with extended design, and functionality."
       />
 
       <Divider sx={{ my: 4 }} />
