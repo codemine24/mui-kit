@@ -8,22 +8,23 @@ import { PATHS } from "@/router/paths";
 import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
 import React from "react";
+import { tabBadgeString } from "../code-string/tab/tab-badge-string";
 import { tabBasicString } from "../code-string/tab/tab-basic-string";
+import { tabIconString } from "../code-string/tab/tab-icon-string";
 import { TabScrollableString } from "../code-string/tab/tab-scrollable-string";
 import { tabWrappedString } from "../code-string/tab/tab-wrapped-string";
 import { Tab1Preview } from "../components/tab/Tab-1-preview";
 import { Tab10Preview } from "../components/tab/Tab-10-preview";
 import { Tab11Preview } from "../components/tab/Tab-11-preview";
 import { Tab12Preview } from "../components/tab/Tab-12-preview";
-import Tab6Preview from "../components/tab/Tab-6-preview";
 import Tab7Preview from "../components/tab/Tab-7-preview";
 import { Tab8Preview } from "../components/tab/Tab-8-preview";
 import { Tab9Preview } from "../components/tab/Tab-9-preview";
+import { TabBadgePreview } from "../components/tab/tab-badge-preview";
 import TabBasicPreview from "../components/tab/tab-basic-preview";
 import { TabIconPreview } from "../components/tab/tab-icon-preview";
 import { TabScrollablePreview } from "../components/tab/tab-scrollable-preview";
 import { TabWrappedPreview } from "../components/tab/tabs-wrapped-preview";
-import { tabIconString } from "../code-string/tab/tab-icon-string";
 
 const sections = [
   {
@@ -57,19 +58,20 @@ const sections = [
   },
   {
     id: "tab-5",
+    title: "Custom badge",
+    description:
+      "This variant has badge along with each tab. You can customize the badge style.",
+    codeString: tabBadgeString,
+    preview: <TabBadgePreview />,
+  },
+  {
+    id: "tab-6",
     title: "",
     description: "",
     codeString: "",
     preview: <Tab1Preview />,
   },
 
-  {
-    id: "tab-6",
-    title: "Custom badge",
-    description: "",
-    codeString: "",
-    preview: <Tab6Preview />,
-  },
   {
     id: "tab-7",
     title: "Scrollable",
