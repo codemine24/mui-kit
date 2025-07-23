@@ -5,40 +5,40 @@ import Tabs from "@mui/material/Tabs";
 import * as React from "react";
 
 export const TabWrappedPreview = () => {
-  const [activeTab, setActiveTab] = React.useState("one");
+  const [activeTab, setActiveTab] = React.useState(0);
 
-  const handleChange = (event: React.SyntheticEvent, newValue: string) => {
+  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setActiveTab(newValue);
   };
 
   const tabs = [
     {
-      id: "one",
+      id: 0,
       label:
         "Find helpful answers and guides to improve your experience with our tools and services",
     },
     {
-      id: "two",
+      id: 1,
       label: "Guide",
     },
     {
-      id: "three",
+      id: 2,
       label: "Help",
     },
   ];
 
   const renderContent = () => {
     switch (activeTab) {
-      case "one":
+      case 0:
         return (
           <Typography>
             Find helpful answers and guides to improve your experience with our
             tools and services
           </Typography>
         );
-      case "two":
+      case 1:
         return <Typography>Guide</Typography>;
-      case "three":
+      case 2:
         return <Typography>Help</Typography>;
       default:
         return null;

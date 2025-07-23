@@ -1,66 +1,42 @@
-import { SxProps, Typography } from "@mui/material";
+import { Tab, Typography } from "@mui/material";
 import Box from "@mui/material/Box";
 import Tabs from "@mui/material/Tabs";
 import * as React from "react";
 
-interface TabPanelProps {
-  id: string;
-  activeTab: string;
-  children?: React.ReactNode;
-  sx?: SxProps;
-}
-
-const CustomTabPanel = (props: TabPanelProps) => {
-  const { children, id, activeTab, ...other } = props;
-
-  return (
-    <div
-      role="tabpanel"
-      hidden={id !== activeTab}
-      id={`simple-tabpanel-${id}`}
-      aria-labelledby={`simple-tab-${id}`}
-      {...other}
-    >
-      {activeTab === id && <Box sx={{ p: 3 }}>{children}</Box>}
-    </div>
-  );
-};
-
 const tabs = [
   {
-    id: "one",
-    label:
-      "Find helpful answers and guides to improve your experience with our tools and services",
+    id: 0,
+    label: "General",
   },
   {
-    id: "two",
+    id: 1,
     label: "Guide",
   },
   {
-    id: "three",
+    id: 2,
     label: "Help",
   },
 ];
 
 export default function TabBasicPreview() {
-  const [activeTab, setActiveTab] = React.useState<string>("one");
+  const [activeTab, setActiveTab] = React.useState<number>(0);
 
-  const handleChange = (event: React.SyntheticEvent, newValue: string) => {
+  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setActiveTab(newValue);
   };
 
   const renderContent = () => {
     switch (activeTab) {
-      case "one":
+      case 0:
         return (
           <Typography>
             Find helpful answers and guides to improve your experience with our
             tools and services
           </Typography>
         );
-      case "two":
+      case 1:
         return <Typography>Guide</Typography>;
-      case "three":
+      case 2:
         return <Typography>Help</Typography>;
       default:
         return null;
@@ -76,10 +52,9 @@ export default function TabBasicPreview() {
           aria-label="basic tabs example"
         >
           {tabs.map((tab) => (
-            <CustomTabPanel
-              id={tab.label}
-              activeTab={activeTab}
+            <Tab
               key={tab.id}
+              label={tab.label}
               sx={{ textTransform: "none" }}
             />
           ))}

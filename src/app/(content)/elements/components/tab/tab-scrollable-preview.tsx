@@ -5,65 +5,66 @@ import Tabs from "@mui/material/Tabs";
 import * as React from "react";
 
 export const TabScrollablePreview = () => {
-  const [activeTab, setActiveTab] = React.useState<string>("one");
-  const handleChange = (event: React.SyntheticEvent, newValue: string) => {
+  const [activeTab, setActiveTab] = React.useState<number>(0);
+  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setActiveTab(newValue);
   };
+
   const tabs = [
     {
-      id: "one",
-      label: "1",
+      id: 1,
+      label: "one",
     },
     {
-      id: "two",
-      label: "2",
+      id: 2,
+      label: "two",
     },
     {
-      id: "three",
-      label: "3",
+      id: 3,
+      label: "three",
     },
     {
-      id: "four",
-      label: "4",
+      id: 4,
+      label: "four",
     },
     {
-      id: "five",
-      label: "5",
+      id: 5,
+      label: "five",
     },
     {
-      id: "six",
-      label: "6",
+      id: 6,
+      label: "six",
     },
     {
-      id: "seven",
-      label: "7",
+      id: 7,
+      label: "seven",
     },
     {
-      id: "eight",
-      label: "8",
+      id: 8,
+      label: "eight",
     },
     {
-      id: "nine",
-      label: "9",
+      id: 9,
+      label: "nine",
     },
     {
-      id: "ten",
-      label: "10",
+      id: 10,
+      label: "ten",
     },
   ];
 
   const renderContent = () => {
     switch (activeTab) {
-      case "one":
+      case 0:
         return (
           <Typography>
             Find helpful answers and guides to improve your experience with our
             tools and services
           </Typography>
         );
-      case "two":
+      case 1:
         return <Typography>Guide</Typography>;
-      case "three":
+      case 2:
         return <Typography>Help</Typography>;
       default:
         return <Typography>Default</Typography>;

@@ -9,19 +9,21 @@ import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
 import React from "react";
 import { tabBasicString } from "../code-string/tab/tab-basic-string";
+import { TabScrollableString } from "../code-string/tab/tab-scrollable-string";
 import { tabWrappedString } from "../code-string/tab/tab-wrapped-string";
 import { Tab1Preview } from "../components/tab/Tab-1-preview";
 import { Tab10Preview } from "../components/tab/Tab-10-preview";
 import { Tab11Preview } from "../components/tab/Tab-11-preview";
 import { Tab12Preview } from "../components/tab/Tab-12-preview";
-import Tab4Preview from "../components/tab/Tab-4-preview";
 import Tab6Preview from "../components/tab/Tab-6-preview";
 import Tab7Preview from "../components/tab/Tab-7-preview";
 import { Tab8Preview } from "../components/tab/Tab-8-preview";
 import { Tab9Preview } from "../components/tab/Tab-9-preview";
 import TabBasicPreview from "../components/tab/tab-basic-preview";
+import { TabIconPreview } from "../components/tab/tab-icon-preview";
 import { TabScrollablePreview } from "../components/tab/tab-scrollable-preview";
 import { TabWrappedPreview } from "../components/tab/tabs-wrapped-preview";
+import { tabIconString } from "../code-string/tab/tab-icon-string";
 
 const sections = [
   {
@@ -43,22 +45,22 @@ const sections = [
     title: "Scrollable",
     description:
       "Based on width and total number of tabs, tabs will be scrollable automatically.",
-    codeString: "",
+    codeString: TabScrollableString,
     preview: <TabScrollablePreview />,
   },
   {
-    id: "tab-3",
+    id: "tab-4",
+    title: "With icons",
+    description: "This variant has icon along with each tab. ",
+    codeString: tabIconString,
+    preview: <TabIconPreview />,
+  },
+  {
+    id: "tab-5",
     title: "",
     description: "",
     codeString: "",
     preview: <Tab1Preview />,
-  },
-  {
-    id: "tab-4",
-    title: "",
-    description: "",
-    codeString: "",
-    preview: <Tab4Preview />,
   },
 
   {
