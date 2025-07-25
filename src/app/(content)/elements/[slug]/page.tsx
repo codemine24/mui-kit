@@ -14,6 +14,7 @@ import { DndView } from "../view/dnd-view";
 import { DrawerView } from "../view/drawer-view";
 import { EditorView } from "../view/editor-view";
 import { FancyBgView } from "../view/fancy-bg-view";
+import { KbdView } from "../view/kbd-view";
 import { OTPView } from "../view/otp-view";
 import { PaginationView } from "../view/pagination-view";
 import { PopoverView } from "../view/popover-view";
@@ -53,6 +54,7 @@ const componentMap: Record<string, JSX.Element> = {
   rating: <RatingView />,
   "fancy-background": <FancyBgView />,
   tab: <TabView />,
+  kbd: <KbdView />,
 };
 
 export default async function Page({
