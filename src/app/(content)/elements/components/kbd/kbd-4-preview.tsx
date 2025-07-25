@@ -1,8 +1,8 @@
 "use client";
-import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
-import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
-import ArrowLeftIcon from "@mui/icons-material/ArrowLeft";
-import ArrowRightIcon from "@mui/icons-material/ArrowRight";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
+import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
+import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import { Stack } from "@mui/material";
 import Box from "@mui/material/Box";
 import { styled } from "@mui/material/styles";
@@ -33,16 +33,16 @@ export const Kbd4Preview = () => {
     <>
       <Stack direction="row" spacing={2}>
         <IconKey component="kbd">
-          <ArrowDropUpIcon sx={iconStyles} />
+          <KeyboardArrowUpIcon sx={iconStyles} />
         </IconKey>
         <IconKey component="kbd">
-          <ArrowRightIcon sx={iconStyles} />
+          <KeyboardArrowRightIcon sx={iconStyles} />
         </IconKey>
         <IconKey component="kbd">
-          <ArrowDropDownIcon sx={iconStyles} />
+          <KeyboardArrowDownIcon sx={iconStyles} />
         </IconKey>
         <IconKey component="kbd">
-          <ArrowLeftIcon sx={iconStyles} />
+          <KeyboardArrowLeftIcon sx={iconStyles} />
         </IconKey>
       </Stack>
     </>

@@ -12,6 +12,9 @@ import { Kbd1Preview } from "../components/kbd/kbd-1-preview";
 import { Kbd2Preview } from "../components/kbd/kbd-2-preview";
 import { Kbd3Preview } from "../components/kbd/kbd-3-preview";
 import { Kbd4Preview } from "../components/kbd/kbd-4-preview";
+import { Kbd5Preview } from "../components/kbd/kbd-5-preview";
+import { Kbd6Preview } from "../components/kbd/kbd-6-preview";
+import { Kbd7Preview } from "../components/kbd/kbd-7-preview";
 
 const sections = [
   {
@@ -45,6 +48,30 @@ const sections = [
       "Use this decorative top radial fancy background for modern look. ",
     codeString: "",
     preview: <Kbd4Preview />,
+  },
+  {
+    id: "kbd-5",
+    title: "Number",
+    description:
+      "Use this decorative top radial fancy background for modern look. ",
+    codeString: "",
+    preview: <Kbd5Preview />,
+  },
+  {
+    id: "kbd-6",
+    title: "Letter",
+    description:
+      "Use this decorative top radial fancy background for modern look. ",
+    codeString: "",
+    preview: <Kbd6Preview />,
+  },
+  {
+    id: "kbd-7",
+    title: "Letter",
+    description:
+      "Use this decorative top radial fancy background for modern look. ",
+    codeString: "",
+    preview: <Kbd7Preview />,
   },
 ];
 
