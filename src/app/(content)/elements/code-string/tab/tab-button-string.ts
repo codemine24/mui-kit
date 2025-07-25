@@ -1,9 +1,9 @@
+export const tabButtonString = `import { Typography } from "@mui/material";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import { SxProps, Theme, useTheme } from "@mui/material/styles";
 import Tab from "@mui/material/Tab";
 import Tabs from "@mui/material/Tabs";
-import Typography from "@mui/material/Typography";
 import * as React from "react";
 
 interface Styles {
@@ -43,80 +43,53 @@ const styles: Styles = {
   }),
 };
 
-interface TabPanelProps {
-  children?: React.ReactNode;
-  index: number;
-  value: number;
-}
-
-function TabPanel(props: TabPanelProps) {
-  const { children, value, index } = props;
-  return (
-    <Box
-      role="tabpanel"
-      hidden={value !== index}
-      id={`tabpanel-${index}`}
-      aria-labelledby={`tab-${index}`}
-    >
-      {value === index && (
-        <Box sx={{ p: 3 }}>
-          <Typography>{children}</Typography>
-        </Box>
-      )}
-    </Box>
-  );
-}
-
-export const Tab1Preview = () => {
-  const tabData = [
+export const TabButtonPreview = () => {
+  const tabs = [
     {
       id: 0,
       title: "Dashboard",
-      content: (
-        <Typography component={"span"}>
-          {" "}
-          Your dashboard shows key metrics: 15 new orders, 32 pending tasks, and
-          5 urgent alerts today. Revenue increased by 12% this week. Quick
-          actions allow you to manage workflows efficiently.
-        </Typography>
-      ),
     },
 
     {
       id: 1,
       title: "Profile",
-      content: (
-        <Box
-          component={"img"}
-          src="https://cdn.pixabay.com/photo/2022/11/05/22/11/channel-7572879_1280.jpg"
-        />
-      ),
     },
 
     {
       id: 2,
       title: "Settings",
-      content: (
-        <Typography component={"span"}>
-          {" "}
-          Manage your account settings, notifications, and privacy preferences.
-          Customize your experience to match your needs.
-        </Typography>
-      ),
     },
   ];
   const theme = useTheme();
-  const [value, setValue] = React.useState(0);
+  const [activeTab, setActiveTab] = React.useState(0);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
-    setValue(newValue);
+    setActiveTab(newValue);
+  };
+
+  const renderContent = () => {
+    switch (activeTab) {
+      case 0:
+        return (
+          <Typography>
+            Find helpful answers and guides to improve your experience with our
+            tools and services
+          </Typography>
+        );
+      case 1:
+        return <Typography>Guide</Typography>;
+      case 2:
+        return <Typography>Help</Typography>;
+      default:
+        return <Typography>Default</Typography>;
+    }
   };
 
   return (
     <Box sx={styles.container}>
       <AppBar position="static" sx={styles.appBar(theme)}>
         <Tabs
-          value={value}
+          value={activeTab}
           onChange={handleChange}
           indicatorColor="secondary"
           textColor="inherit"
@@ -124,22 +97,19 @@ export const Tab1Preview = () => {
           aria-label="Full-width tabs example"
           sx={styles.tabs(theme)}
         >
-          {tabData.map((tab) => (
+          {tabs.map((tab) => (
             <Tab
               key={tab.id}
               label={tab.title}
               sx={styles.tab(theme)}
-              aria-controls={`tabpanel-${tab.id}`}
-              aria-labelledby={`tab-${tab.id}`}
+              aria-controls={\`tabpanel-\${tab.id}\`}
+              aria-labelledby={\`tab-\${tab.id}\`}
             />
           ))}
         </Tabs>
       </AppBar>
-      {tabData.map((tab) => (
-        <TabPanel key={tab.id} value={value} index={tab.id}>
-          {tab.content}
-        </TabPanel>
-      ))}
+      <Box sx={{ mt: 3 }}>{renderContent()}</Box>
     </Box>
   );
 };
+`;

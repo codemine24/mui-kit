@@ -1,42 +1,46 @@
-import SettingsIcon from "@mui/icons-material/Settings";
 import Box from "@mui/material/Box";
 import Tab from "@mui/material/Tab";
 import Tabs from "@mui/material/Tabs";
 import Typography from "@mui/material/Typography";
 import * as React from "react";
 
-const tabData = [
-  {
-    id: 1,
-    title: "Item One",
-    icon: <SettingsIcon />,
-  },
-  {
-    id: 2,
-    title: "Item Two",
-    icon: <SettingsIcon />,
-  },
-  {
-    id: 3,
-    title: "Item Three",
-    icon: <SettingsIcon />,
-  },
-  {
-    id: 4,
-    title: "Item Four",
-  },
-  {
-    id: 5,
-    title: "Item Five",
-  },
-];
-
-export const Tab12Preview = () => {
+export const TabVerticalPreview = () => {
   const [activeTab, setActiveTab] = React.useState(0);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setActiveTab(newValue);
   };
+
+  const tabs = [
+    {
+      id: 1,
+      title: "Item One",
+    },
+    {
+      id: 2,
+      title: "Item Two",
+    },
+    {
+      id: 3,
+      title: "Item Three",
+    },
+    {
+      id: 4,
+      title: "Item Four",
+    },
+    {
+      id: 5,
+      title: "Item Five",
+    },
+    {
+      id: 6,
+      title: "Item Six",
+    },
+    {
+      id: 7,
+      title: "Item Seven",
+    },
+  ];
 
   const renderContent = () => {
     switch (activeTab) {
@@ -59,53 +63,31 @@ export const Tab12Preview = () => {
   return (
     <Box
       sx={{
+        flexGrow: 1,
+        bgcolor: "background.paper",
         display: "flex",
-        height: 300,
+        height: 224,
       }}
     >
       <Tabs
         orientation="vertical"
+        variant="scrollable"
         value={activeTab}
         onChange={handleChange}
         aria-label="Vertical tabs example"
-        sx={{
-          borderRight: 1,
-          borderColor: "divider",
-          minWidth: 540,
-          "& .MuiTabs-indicator": {
-            display: "none",
-          },
-          border: 1, 
-          width: "100%",
-        }}
+        sx={{ borderRight: 1, borderColor: "divider", minWidth: 120 }}
       >
-        {tabData.map((tab, index) => (
+        {tabs.map((tab, index) => (
           <Tab
             key={tab.id}
-            icon={tab.icon}
-            iconPosition="start"
             label={tab.title}
             id={`vertical-tab-${index}`}
             aria-controls={`vertical-tabpanel-${index}`}
-            sx={{
-              textTransform: "none",
-              alignItems: "flex-start",
-              justifyContent: "flex-start",
-              borderRadius: "8px",
-              bgcolor: "background.paper",
-              my: 0.5,
-              "&.Mui-selected": {
-                bgcolor: "action.selected",
-              },
-              "&:hover": {
-                bgcolor: "action.hover",
-              },
-            }}
           />
         ))}
       </Tabs>
 
-      {tabData.map((tab, index) => (
+      {tabs.map((tab, index) => (
         <Box
           key={tab.id}
           role="tabpanel"
@@ -114,10 +96,8 @@ export const Tab12Preview = () => {
           aria-labelledby={`vertical-tab-${index}`}
           sx={{
             flex: 1,
-            flexGrow: 1,
             overflow: "auto",
-            border: 1, 
-            width: "100%",
+            maxHeight: "100%",
           }}
         >
           {renderContent()}

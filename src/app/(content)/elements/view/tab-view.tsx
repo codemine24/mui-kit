@@ -8,104 +8,117 @@ import { PATHS } from "@/router/paths";
 import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
 import React from "react";
-import { Tab1Preview } from "../components/tab/Tab-1-preview";
-import { Tab10Preview } from "../components/tab/Tab-10-preview";
-import { Tab11Preview } from "../components/tab/Tab-11-preview";
-import { Tab12Preview } from "../components/tab/Tab-12-preview";
-import Tab2Preview from "../components/tab/Tab-2-preview";
-import Tab3Preview from "../components/tab/Tab-3-preview";
-import Tab4Preview from "../components/tab/Tab-4-preview";
-import Tab5Preview from "../components/tab/Tab-5-preview";
-import Tab6Preview from "../components/tab/Tab-6-preview";
-import Tab7Preview from "../components/tab/Tab-7-preview";
-import { Tab8Preview } from "../components/tab/Tab-8-preview";
-import { Tab9Preview } from "../components/tab/Tab-9-preview";
+import { tabBadgeString } from "../code-string/tab/tab-badge-string";
+import { tabBasicString } from "../code-string/tab/tab-basic-string";
+import { tabButtonIconString } from "../code-string/tab/tab-button-icon-string";
+import { tabButtonString } from "../code-string/tab/tab-button-string";
+import { tabCapsuleString } from "../code-string/tab/tab-capsule-string";
+import { tabCustomColoredString } from "../code-string/tab/tab-custom-colored-string";
+import { tabIconString } from "../code-string/tab/tab-icon-string";
+import { tabScrollableIconString } from "../code-string/tab/tab-scrollable-icon-string";
+import { TabScrollableString } from "../code-string/tab/tab-scrollable-string";
+import { tabVerticalString } from "../code-string/tab/tab-vertical-string";
+import { tabWrappedString } from "../code-string/tab/tab-wrapped-string";
+import { TabBadgePreview } from "../components/tab/tab-badge-preview";
+import TabBasicPreview from "../components/tab/tab-basic-preview";
+import { TabButtonIconPreview } from "../components/tab/tab-button-icon-preview";
+import { TabButtonPreview } from "../components/tab/tab-button-preview";
+import { TabCapsulePreview } from "../components/tab/tab-capsule-preview";
+import { TabCustomColoredPreview } from "../components/tab/tab-custom-colored-preview";
+import { TabIconPreview } from "../components/tab/tab-icon-preview";
+import { TabScrollableIconPreview } from "../components/tab/tab-scrollable-icon-preview";
+import { TabScrollablePreview } from "../components/tab/tab-scrollable-preview";
+import { TabVerticalPreview } from "../components/tab/tab-vertical-preview";
+import { TabWrappedPreview } from "../components/tab/tabs-wrapped-preview";
 
 const sections = [
   {
     id: "tab-1",
-    title: "",
-    description: "",
-    codeString: "",
-    preview: <Tab1Preview />,
+    title: "Basic Tabs",
+    description: "You can use this basic tabs build with material ui.",
+    codeString: tabBasicString,
+    preview: <TabBasicPreview />,
   },
   {
     id: "tab-2",
-    title: "",
-    description: "",
-    codeString: "",
-    preview: <Tab2Preview />,
+    title: "Wrapped tabs",
+    description: "Long labels will automatically wrap on tabs. ",
+    codeString: tabWrappedString,
+    preview: <TabWrappedPreview />,
   },
   {
     id: "tab-3",
-    title: "",
-    description: "",
-    codeString: "",
-    preview: <Tab3Preview />,
+    title: "Scrollable",
+    description:
+      "Based on width and total number of tabs, tabs will be scrollable automatically.",
+    codeString: TabScrollableString,
+    preview: <TabScrollablePreview />,
   },
   {
     id: "tab-4",
-    title: "",
-    description: "",
-    codeString: "",
-    preview: <Tab4Preview />,
+    title: "With icons",
+    description: "This variant has icon along with each tab. ",
+    codeString: tabIconString,
+    preview: <TabIconPreview />,
   },
   {
     id: "tab-5",
-    title: "Scrollable",
-    description: "",
-    codeString: "",
-    preview: <Tab5Preview />,
+    title: "Custom badge",
+    description:
+      "This variant has badge along with each tab. You can customize the badge style.",
+    codeString: tabBadgeString,
+    preview: <TabBadgePreview />,
   },
   {
     id: "tab-6",
-    title: "Custom badge",
-    description: "",
-    codeString: "",
-    preview: <Tab6Preview />,
+    title: "Scrollable tab icons",
+    description: "This scrollable variant has icon along with each tab.",
+    codeString: tabScrollableIconString,
+    preview: <TabScrollableIconPreview />,
   },
   {
     id: "tab-7",
-    title: "Scrollable",
-    description: "",
-    codeString: "",
-    preview: <Tab7Preview />,
+    title: "Custom colored",
+    description: "This variant has fully customizable tab color. ",
+    codeString: tabCustomColoredString,
+    preview: <TabCustomColoredPreview />,
   },
   {
     id: "tab-8",
-    title: "Custom colored",
-    description: "",
-    codeString: "",
-    preview: <Tab8Preview />,
+    title: "Tab button variant",
+    description: "Basic tab variant with custom icon.",
+    codeString: tabButtonString,
+    preview: <TabButtonPreview />,
   },
   {
     id: "tab-9",
-    title: "Tab with icon",
-    description: "",
-    codeString: "",
-    preview: <Tab9Preview />,
+    title: "Button with icon",
+    description: "This variant has icon along with each tab.",
+    codeString: tabButtonIconString,
+    preview: <TabButtonIconPreview />,
   },
   {
     id: "tab-10",
     title: "Capsule tabs",
-    description: "",
-    codeString: "",
-    preview: <Tab10Preview />,
+    description: "Instead of boring text, you can use capsule tabs.",
+    codeString: tabCapsuleString,
+    preview: <TabCapsulePreview />,
   },
   {
     id: "tab-11",
-    title: "Capsule tabs",
-    description: "",
-    codeString: "",
-    preview: <Tab11Preview />,
+    title: "Vertical tabs",
+    description:
+      "Vertical tab variant designed using raw material ui and nothing else. ",
+    codeString: tabVerticalString,
+    preview: <TabVerticalPreview />,
   },
-  {
-    id: "tab-12",
-    title: "Capsule tabs",
-    description: "",
-    codeString: "",
-    preview: <Tab12Preview />,
-  },
+  // {
+  //   id: "tab-12",
+  //   title: "Vertical tabs with icon",
+  //   description: "",
+  //   codeString: "",
+  //   preview: <Tab12Preview />,
+  // },
 ];
 
 export const TabView = () => {
@@ -120,12 +133,12 @@ export const TabView = () => {
       <CustomBreadCrumbs
         pathArr={[
           { label: "Elements", path: PATHS.ELEMENTS.OVERVIEW },
-          { label: "Accordion", path: "" },
+          { label: "Tabs", path: "" },
         ]}
       />
       <PageTitle
-        title="Accordion"
-        description="Use material ui accordion with different styles to show your FAQ's and other info."
+        title="Tabs"
+        description="Material UI core tabs with extended design, and functionality."
       />
 
       <Divider sx={{ my: 4 }} />
