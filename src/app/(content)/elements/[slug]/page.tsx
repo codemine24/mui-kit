@@ -22,6 +22,8 @@ import { StepperView } from "../view/stepper-view";
 import { TabView } from "../view/tab-view";
 import { TableView } from "../view/table-view";
 import { TimelineView } from "../view/timeline-view";
+import { ProgressbarView } from "../view/progressbar-view";
+
 export async function generateStaticParams() {
   return elementsArr.map((element) => ({
     slug: element.path?.split("/").pop(),
@@ -53,6 +55,7 @@ const componentMap: Record<string, JSX.Element> = {
   rating: <RatingView />,
   "fancy-background": <FancyBgView />,
   tab: <TabView />,
+  progressbar: <ProgressbarView />,
 };
 
 export default async function Page({
