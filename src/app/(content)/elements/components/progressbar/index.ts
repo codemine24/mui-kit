@@ -8,3 +8,4 @@ export * from "./progressbar-custom-with-label-preview";
 export * from "./progressbar-floating-label-preview";
 export * from "./progressbar-vertical-preview";
 export * from "./progressbar-steps-preview";
+export * from "./progressbar-circular-basic-preview";
