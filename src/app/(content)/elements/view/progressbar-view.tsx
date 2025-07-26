@@ -16,7 +16,8 @@ import {
     ProgressbarTitleLabelPreview,
     ProgressbarCustomPreview,
     ProgressbarCustomWithLabelPreview,
-    ProgressbarFloatingLabelPreview
+    ProgressbarFloatingLabelPreview,
+    ProgressbarVerticalPreview
 } from "../components/progressbar";
 
 
@@ -84,6 +85,14 @@ const sections = [
             "A basic customizable progressbar component built with Material UI.",
         codeString: '',
         preview: <ProgressbarFloatingLabelPreview />,
+    },
+    {
+        id: "progressbar-9",
+        title: "Progressbar vertical",
+        description:
+            "A basic customizable progressbar component built with Material UI.",
+        codeString: '',
+        preview: <ProgressbarVerticalPreview />,
     },
 ];
 
