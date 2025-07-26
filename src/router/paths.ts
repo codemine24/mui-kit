@@ -22,6 +22,7 @@ export const PATHS = {
     OTP: "/elements/otp",
     RATING: "/elements/rating",
     FANCY_BACKGROUND: "/elements/fancy-background",
+    kbd: "/elements/kbd",
   },
   DOCS: {
     ROOT: "/docs",

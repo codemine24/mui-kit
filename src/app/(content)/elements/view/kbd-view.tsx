@@ -8,22 +8,22 @@ import { PATHS } from "@/router/paths";
 import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
 import React from "react";
-import { Kbd1Preview } from "../components/kbd/kbd-1-preview";
-import { Kbd2Preview } from "../components/kbd/kbd-2-preview";
-import { Kbd3Preview } from "../components/kbd/kbd-3-preview";
-import { Kbd4Preview } from "../components/kbd/kbd-4-preview";
-import { Kbd5Preview } from "../components/kbd/kbd-5-preview";
-import { Kbd6Preview } from "../components/kbd/kbd-6-preview";
-import { Kbd7Preview } from "../components/kbd/kbd-7-preview";
+import { KbdCtrlPreview } from "../components/kbd/kbd-ctrl-preview";
+import { KbdIconPreview } from "../components/kbd/kbd-icon-preview";
+import { KbdArrowFilledPreview } from "../components/kbd/kbd-arrow-filled-preview";
+import { KbdArrowOutlinePreview } from "../components/kbd/kbd-arrow-outline-preview";
+import { KbdNumberPreview } from "../components/kbd/kbd-number-preview";
+import { KbdLetterPreview } from "../components/kbd/kbd-letter-preview";
+import { KbdGroupKeyPreview } from "../components/kbd/kbd-group-key-preview";
 
 const sections = [
   {
     id: "kbd-1",
-    title: "Keyboard crtl",
+    title: "Keyboard ctrl key",
     description:
       "Use this decorative top radial fancy background for modern look. ",
     codeString: "",
-    preview: <Kbd1Preview />,
+    preview: <KbdCtrlPreview />,
   },
   {
     id: "kbd-2",
@@ -31,7 +31,7 @@ const sections = [
     description:
       "Use this decorative top radial fancy background for modern look. ",
     codeString: "",
-    preview: <Kbd2Preview />,
+    preview: <KbdIconPreview />,
   },
   {
     id: "kbd-3",
@@ -39,7 +39,7 @@ const sections = [
     description:
       "Use this decorative top radial fancy background for modern look. ",
     codeString: "",
-    preview: <Kbd3Preview />,
+    preview: <KbdArrowFilledPreview />,
   },
   {
     id: "kbd-4",
@@ -47,7 +47,7 @@ const sections = [
     description:
       "Use this decorative top radial fancy background for modern look. ",
     codeString: "",
-    preview: <Kbd4Preview />,
+    preview: <KbdArrowOutlinePreview />,
   },
   {
     id: "kbd-5",
@@ -55,7 +55,7 @@ const sections = [
     description:
       "Use this decorative top radial fancy background for modern look. ",
     codeString: "",
-    preview: <Kbd5Preview />,
+    preview: <KbdNumberPreview />,
   },
   {
     id: "kbd-6",
@@ -63,7 +63,7 @@ const sections = [
     description:
       "Use this decorative top radial fancy background for modern look. ",
     codeString: "",
-    preview: <Kbd6Preview />,
+    preview: <KbdLetterPreview />,
   },
   {
     id: "kbd-7",
@@ -71,7 +71,7 @@ const sections = [
     description:
       "Use this decorative top radial fancy background for modern look. ",
     codeString: "",
-    preview: <Kbd7Preview />,
+    preview: <KbdGroupKeyPreview />,
   },
 ];
 
