@@ -8,7 +8,7 @@ import { PATHS } from "@/router/paths";
 import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
 import React from "react";
-import { ProgressbarAllVariantPreview } from "../components/progressbar";
+import { ProgressbarAllVariantPreview, ProgressbarDifferentHeightPreview } from "../components/progressbar";
 
 
 const sections = [
@@ -19,6 +19,14 @@ const sections = [
             "A basic customizable progressbar component built with Material UI.",
         codeString: '',
         preview: <ProgressbarAllVariantPreview />,
+    },
+    {
+        id: "progressbar-2",
+        title: "Different height",
+        description:
+            "A basic customizable progressbar component built with Material UI.",
+        codeString: '',
+        preview: <ProgressbarDifferentHeightPreview />,
     },
 ];
 

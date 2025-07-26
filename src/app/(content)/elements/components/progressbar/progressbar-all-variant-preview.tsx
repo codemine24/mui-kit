@@ -7,7 +7,7 @@ export const ProgressbarAllVariantPreview = () => {
     const isDarkMode = theme.palette.mode === 'dark';
 
     return (
-        <Stack width="100%" spacing={2}>
+        <Stack width={['100%', '80%']} spacing={2}>
             {/* Blue */}
             <LinearProgress
                 variant="determinate"

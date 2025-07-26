@@ -1,0 +1,60 @@
+import { LinearProgress, Stack } from "@mui/material";
+import { linearProgressClasses } from "@mui/material/LinearProgress";
+import { useTheme } from "@mui/material/styles";
+
+export const ProgressbarDifferentHeightPreview = () => {
+    const theme = useTheme();
+    const isDarkMode = theme.palette.mode === 'dark';
+
+    return (
+        <Stack width={['100%', '80%']} spacing={2}>
+            <LinearProgress
+                variant="determinate"
+                value={50}
+                sx={{
+                    height: 5,
+                    borderRadius: 5,
+                    [`&.${linearProgressClasses.colorPrimary}`]: {
+                        backgroundColor: isDarkMode ? theme.palette.grey[800] : theme.palette.grey[200],
+                    },
+                    [`& .${linearProgressClasses.bar}`]: {
+                        borderRadius: 5,
+                        backgroundColor: isDarkMode ? '#308fe8' : '#1a90ff',
+                    },
+                }}
+            />
+
+            <LinearProgress
+                variant="determinate"
+                value={75}
+                sx={{
+                    height: 10,
+                    borderRadius: 5,
+                    [`&.${linearProgressClasses.colorPrimary}`]: {
+                        backgroundColor: isDarkMode ? theme.palette.grey[800] : theme.palette.grey[200],
+                    },
+                    [`& .${linearProgressClasses.bar}`]: {
+                        borderRadius: 5,
+                        backgroundColor: isDarkMode ? '#308fe8' : '#1a90ff',
+                    },
+                }}
+            />
+
+            <LinearProgress
+                variant="determinate"
+                value={90}
+                sx={{
+                    height: 15,
+                    borderRadius: 5,
+                    [`&.${linearProgressClasses.colorPrimary}`]: {
+                        backgroundColor: isDarkMode ? theme.palette.grey[800] : theme.palette.grey[200],
+                    },
+                    [`& .${linearProgressClasses.bar}`]: {
+                        borderRadius: 5,
+                        backgroundColor: isDarkMode ? '#308fe8' : '#1a90ff',
+                    },
+                }}
+            />
+        </Stack>
+    )
+}
