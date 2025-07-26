@@ -8,7 +8,10 @@ import { PATHS } from "@/router/paths";
 import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
 import React from "react";
-import BtnGroupContainedPreview from "../components/btn-group/btn-contained-preview";
+import { BtnGroupContainedPreview } from "../components/btn-group/btn-contained-preview";
+import { BtnGroupOutlinePreview } from "../components/btn-group/btn-outline-preview";
+import { BtnGroupTextPreview } from "../components/btn-group/btn-text-preview";
+import { BtnGroupSoftBgPreview } from "../components/btn-group/btn-soft-bg-preview";
 
 const sections = [
   {
@@ -17,6 +20,27 @@ const sections = [
     description: "A regular but elegant accordion with solid background color",
     codeString: "",
     preview: <BtnGroupContainedPreview />,
+  },
+  {
+    id: "btn-group-2",
+    title: "Button outline",
+    description: "A regular but elegant accordion with solid background color",
+    codeString: "",
+    preview: <BtnGroupOutlinePreview />,
+  },
+  {
+    id: "btn-group-3",
+    title: "Button group text",
+    description: "A regular but elegant accordion with solid background color",
+    codeString: "",
+    preview: <BtnGroupTextPreview />,
+  },
+  {
+    id: "btn-group-4",
+    title: "Button Soft Background",
+    description: "A regular but elegant accordion with solid background color",
+    codeString: "",
+    preview: <BtnGroupSoftBgPreview />,
   },
 ];
 

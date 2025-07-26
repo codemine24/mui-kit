@@ -7,51 +7,50 @@ const buttons = [
   <Button key="two">Two</Button>,
   <Button key="three">Three</Button>,
 ];
-
-export const BtnGroupContainedPreview = () => {
+export const BtnGroupOutlinePreview = () => {
   return (
     <>
       <Stack spacing={2}>
-        <ButtonGroup variant="contained" aria-label="Basic button group">
+        <ButtonGroup variant="outlined" aria-label="Basic button group">
           {buttons}
         </ButtonGroup>
         <ButtonGroup
-          variant="contained"
+          variant="outlined"
           color="secondary"
           aria-label="Basic button group"
         >
           {buttons}
         </ButtonGroup>
         <ButtonGroup
-          variant="contained"
+          variant="outlined"
           color="error"
           aria-label="Basic button group"
         >
           {buttons}
         </ButtonGroup>
         <ButtonGroup
-          variant="contained"
+          variant="outlined"
           color="warning"
           aria-label="Basic button group"
         >
           {buttons}
         </ButtonGroup>
         <ButtonGroup
-          variant="contained"
+          variant="outlined"
           color="info"
           aria-label="Basic button group"
         >
           {buttons}
         </ButtonGroup>
         <ButtonGroup
-          variant="contained"
+          variant="outlined"
           color="success"
           aria-label="Basic button group"
         >
           {buttons}
         </ButtonGroup>
         <ButtonGroup
-          variant="contained"
+          variant="outlined"
           color="inherit"
           aria-label="Basic button group"
         >
