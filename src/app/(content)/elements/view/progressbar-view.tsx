@@ -8,7 +8,11 @@ import { PATHS } from "@/router/paths";
 import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
 import React from "react";
-import { ProgressbarAllVariantPreview, ProgressbarDifferentHeightPreview } from "../components/progressbar";
+import {
+    ProgressbarAllVariantPreview,
+    ProgressbarDifferentHeightPreview,
+    ProgressbarNoBorderRadiusPreview
+} from "../components/progressbar";
 
 
 const sections = [
@@ -27,6 +31,14 @@ const sections = [
             "A basic customizable progressbar component built with Material UI.",
         codeString: '',
         preview: <ProgressbarDifferentHeightPreview />,
+    },
+    {
+        id: "progressbar-3",
+        title: "Without border radius",
+        description:
+            "A basic customizable progressbar component built with Material UI.",
+        codeString: '',
+        preview: <ProgressbarNoBorderRadiusPreview />,
     },
 ];
 
