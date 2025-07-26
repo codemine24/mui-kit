@@ -6,7 +6,6 @@ import { useTheme } from "@mui/material/styles";
 export const ProgressbarCustomPreview = () => {
     const theme = useTheme();
     const isDarkMode = theme.palette.mode === 'dark';
-    const progressValue = 50;
 
     return (
         <Stack width={['100%', '80%']} spacing={2}>
@@ -25,7 +24,7 @@ export const ProgressbarCustomPreview = () => {
                     <Box
                         sx={{
                             height: '100%',
-                            width: `${progressValue}%`,
+                            width: 50,
                             backgroundColor: '#1a90ff',
                             borderRadius: 5,
                             position: 'relative',
@@ -46,7 +45,7 @@ export const ProgressbarCustomPreview = () => {
                                 pointerEvents: 'none',
                             }}
                         >
-                            {`${progressValue}%`}
+                            50%
                         </Typography>
                     </Box>
                 </Box>
