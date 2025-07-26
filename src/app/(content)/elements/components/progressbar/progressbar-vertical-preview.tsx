@@ -43,7 +43,6 @@ const VerticalProgressBar = ({ progress }: { progress: number }) => (
     </Box>
 );
 
-
 export const ProgressbarVerticalPreview = () => {
     return (
         <Stack width={['100%', '80%']} direction="row" spacing={4}>
