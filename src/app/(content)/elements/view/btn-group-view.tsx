@@ -12,6 +12,8 @@ import { BtnGroupContainedPreview } from "../components/btn-group/btn-contained-
 import { BtnGroupOutlinePreview } from "../components/btn-group/btn-outline-preview";
 import { BtnGroupTextPreview } from "../components/btn-group/btn-text-preview";
 import { BtnGroupSoftBgPreview } from "../components/btn-group/btn-soft-bg-preview";
+import { BtnGroupDifferentSizePreview } from "../components/btn-group/btn-different-size-preview";
+import { BtnGroupDifferentSizeContainedPreview } from "../components/btn-group/btn-different-size-contained-preview";
 
 const sections = [
   {
@@ -41,6 +43,20 @@ const sections = [
     description: "A regular but elegant accordion with solid background color",
     codeString: "",
     preview: <BtnGroupSoftBgPreview />,
+  },
+  {
+    id: "btn-group-5",
+    title: "Button different size outlineed",
+    description: "A regular but elegant accordion with solid background color",
+    codeString: "",
+    preview: <BtnGroupDifferentSizePreview />,
+  },
+  {
+    id: "btn-group-6",
+    title: "Button different size contained",
+    description: "A regular but elegant accordion with solid background color",
+    codeString: "",
+    preview: <BtnGroupDifferentSizeContainedPreview />,
   },
 ];
 
