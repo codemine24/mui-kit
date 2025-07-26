@@ -14,6 +14,7 @@ import { BtnGroupTextPreview } from "../components/btn-group/btn-text-preview";
 import { BtnGroupSoftBgPreview } from "../components/btn-group/btn-soft-bg-preview";
 import { BtnGroupDifferentSizePreview } from "../components/btn-group/btn-different-size-preview";
 import { BtnGroupDifferentSizeContainedPreview } from "../components/btn-group/btn-different-size-contained-preview";
+import { BtnGroupVerticalPreview } from "../components/btn-group/btn-vertical-preview";
 
 const sections = [
   {
@@ -57,6 +58,13 @@ const sections = [
     description: "A regular but elegant accordion with solid background color",
     codeString: "",
     preview: <BtnGroupDifferentSizeContainedPreview />,
+  },
+  {
+    id: "btn-group-7",
+    title: "Vertical button group ",
+    description: "A regular but elegant accordion with solid background color",
+    codeString: "",
+    preview: <BtnGroupVerticalPreview />,
   },
 ];
 
