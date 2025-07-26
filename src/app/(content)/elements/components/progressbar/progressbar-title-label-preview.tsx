@@ -11,7 +11,7 @@ export const ProgressbarTitleLabelPreview = () => {
         <Stack width={['100%', '80%']} spacing={2}>
             <Box>
                 <Box display="flex" alignItems="center" justifyContent="space-between" mb={1}>
-                    <Typography variant="body2" color="text.secondary">Progress 60%</Typography>
+                    <Typography variant="body2" color="text.secondary">Progress</Typography>
                     <Typography variant="body2" color="text.secondary">60%</Typography>
                 </Box>
                 <LinearProgress
@@ -32,7 +32,7 @@ export const ProgressbarTitleLabelPreview = () => {
             </Box>
             <Box>
                 <Box display="flex" alignItems="center" justifyContent="space-between" mb={1}>
-                    <Typography variant="body2" color="text.secondary">Progress 80%</Typography>
+                    <Typography variant="body2" color="text.secondary">Progress</Typography>
                     <Typography variant="body2" color="text.secondary">80%</Typography>
                 </Box>
                 <LinearProgress
@@ -54,7 +54,7 @@ export const ProgressbarTitleLabelPreview = () => {
 
             <Box>
                 <Box display="flex" alignItems="center" justifyContent="space-between" mb={1}>
-                    <Typography variant="body2" color="text.secondary">Progress 100%</Typography>
+                    <Typography variant="body2" color="text.secondary">Progress</Typography>
                     <Typography variant="body2" color="text.secondary">100%</Typography>
                 </Box>
                 <LinearProgress
