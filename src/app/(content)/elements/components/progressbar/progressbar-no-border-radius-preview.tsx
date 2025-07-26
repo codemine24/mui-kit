@@ -1,4 +1,4 @@
-import { Stack } from "@mui/material";
+import Stack from "@mui/material/Stack";
 import LinearProgress, { linearProgressClasses } from "@mui/material/LinearProgress";
 import { useTheme } from "@mui/material/styles";
 

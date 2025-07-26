@@ -1,6 +1,9 @@
 "use client";
 
-import { Stack, Box, Typography, LinearProgress, linearProgressClasses } from "@mui/material";
+import Stack from "@mui/material/Stack";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import LinearProgress, { linearProgressClasses } from "@mui/material/LinearProgress";
 import { useTheme } from "@mui/material/styles";
 import CancelIcon from '@mui/icons-material/Cancel';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
