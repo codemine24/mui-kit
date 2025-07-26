@@ -114,7 +114,7 @@ export const ProgressbarCustomWithLabelPreview = () => {
                 {/* The label centered in the filled area */}
                 <Typography
                     variant="body2"
-                    color="white"
+                    color="text.secondary"
                     sx={{
                         fontWeight: 500,
                         whiteSpace: 'nowrap',

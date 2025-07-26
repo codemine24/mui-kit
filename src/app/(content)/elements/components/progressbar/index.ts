@@ -5,3 +5,4 @@ export * from "./progressbar-with-label-preview";
 export * from "./progressbar-title-label-preview";
 export * from "./progressbar-custom-preview";
 export * from "./progressbar-custom-with-label-preview";
+export * from "./progressbar-floating-label-preview";
