@@ -19,7 +19,7 @@ export const ProgressbarDifferentHeightPreview = () => {
                     },
                     [`& .${linearProgressClasses.bar}`]: {
                         borderRadius: 5,
-                        backgroundColor: isDarkMode ? '#308fe8' : '#1a90ff',
+                        backgroundColor: 'secondary.main',
                     },
                 }}
             />
@@ -35,7 +35,7 @@ export const ProgressbarDifferentHeightPreview = () => {
                     },
                     [`& .${linearProgressClasses.bar}`]: {
                         borderRadius: 5,
-                        backgroundColor: isDarkMode ? '#308fe8' : '#1a90ff',
+                        backgroundColor: 'secondary.main',
                     },
                 }}
             />
@@ -51,7 +51,7 @@ export const ProgressbarDifferentHeightPreview = () => {
                     },
                     [`& .${linearProgressClasses.bar}`]: {
                         borderRadius: 5,
-                        backgroundColor: isDarkMode ? '#308fe8' : '#1a90ff',
+                        backgroundColor: 'secondary.main',
                     },
                 }}
             />

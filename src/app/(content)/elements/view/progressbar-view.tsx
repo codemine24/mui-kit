@@ -11,7 +11,8 @@ import React from "react";
 import {
     ProgressbarAllVariantPreview,
     ProgressbarDifferentHeightPreview,
-    ProgressbarNoBorderRadiusPreview
+    ProgressbarNoBorderRadiusPreview,
+    ProgressbarWithLabelPreview
 } from "../components/progressbar";
 
 
@@ -39,6 +40,14 @@ const sections = [
             "A basic customizable progressbar component built with Material UI.",
         codeString: '',
         preview: <ProgressbarNoBorderRadiusPreview />,
+    },
+    {
+        id: "progressbar-4",
+        title: "With label",
+        description:
+            "A basic customizable progressbar component built with Material UI.",
+        codeString: '',
+        preview: <ProgressbarWithLabelPreview />,
     },
 ];
 

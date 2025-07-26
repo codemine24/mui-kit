@@ -1,0 +1,82 @@
+"use client";
+
+import { Stack, Box, Typography, LinearProgress, linearProgressClasses } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
+
+export const ProgressbarWithLabelPreview = () => {
+    const theme = useTheme();
+    const isDarkMode = theme.palette.mode === 'dark';
+
+    return (
+        <Stack width={['100%', '80%']} spacing={2}>
+            <Box display="flex" alignItems="center">
+                <Box width="100%" mr={1}>
+                    <LinearProgress
+                        variant="determinate"
+                        value={50}
+                        sx={{
+                            height: 10,
+                            borderRadius: 5,
+                            [`&.${linearProgressClasses.colorPrimary}`]: {
+                                backgroundColor: isDarkMode ? theme.palette.grey[800] : theme.palette.grey[200],
+                            },
+                            [`& .${linearProgressClasses.bar}`]: {
+                                borderRadius: 5,
+                                backgroundColor: 'secondary.main',
+                            },
+                        }}
+                    />
+                </Box>
+                <Box minWidth={35}>
+                    <Typography variant="body2" color="text.secondary">50%</Typography>
+                </Box>
+            </Box>
+
+            <Box display="flex" alignItems="center">
+                <Box width="100%" mr={1}>
+                    <LinearProgress
+                        variant="determinate"
+                        value={60}
+                        sx={{
+                            height: 10,
+                            borderRadius: 5,
+                            [`&.${linearProgressClasses.colorPrimary}`]: {
+                                backgroundColor: isDarkMode ? theme.palette.grey[800] : theme.palette.grey[200],
+                            },
+                            [`& .${linearProgressClasses.bar}`]: {
+                                borderRadius: 5,
+                                backgroundColor: 'secondary.main',
+                            },
+                        }}
+                    />
+                </Box>
+                <Box minWidth={35}>
+                    <Typography variant="body2" color="text.secondary">60%</Typography>
+                </Box>
+            </Box>
+
+            <Box display="flex" alignItems="center">
+                <Box width="100%" mr={1}>
+                    <LinearProgress
+                        variant="determinate"
+                        value={100}
+                        sx={{
+                            height: 10,
+                            borderRadius: 5,
+                            [`&.${linearProgressClasses.colorPrimary}`]: {
+                                backgroundColor: isDarkMode ? theme.palette.grey[800] : theme.palette.grey[200],
+                            },
+                            [`& .${linearProgressClasses.bar}`]: {
+                                borderRadius: 5,
+                                backgroundColor: theme.palette.secondary.main,
+                            },
+                        }}
+                    />
+                </Box>
+                <Box minWidth={35}>
+                    <Typography variant="body2" color="text.secondary">100%</Typography>
+                </Box>
+            </Box>
+        </Stack>
+    );
+}
