@@ -8,8 +8,11 @@ import { PATHS } from "@/router/paths";
 import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
 import React from "react";
+import { kbdArrowFilledString } from "../code-string/kbd/kbd-arrow-filled-string";
+import { kbdArrowOutlineString } from "../code-string/kbd/kbd-arrow-outline-string";
 import { kbdCtrlString } from "../code-string/kbd/kbd-ctrl-string";
 import { kbdIconString } from "../code-string/kbd/kbd-icon-string";
+import { kbdNumberString } from "../code-string/kbd/kbd-number-string";
 import { KbdArrowFilledPreview } from "../components/kbd/kbd-arrow-filled-preview";
 import { KbdArrowOutlinePreview } from "../components/kbd/kbd-arrow-outline-preview";
 import { KbdCtrlPreview } from "../components/kbd/kbd-ctrl-preview";
@@ -18,7 +21,7 @@ import { KbdIconPreview } from "../components/kbd/kbd-icon-preview";
 import { KbdInputPreview } from "../components/kbd/kbd-input-preview";
 import { KbdLetterPreview } from "../components/kbd/kbd-letter-preview";
 import { KbdNumberPreview } from "../components/kbd/kbd-number-preview";
-import { kbdArrowFilledString } from "../code-string/kbd/kbd-arrow-filled-string";
+import { kbdLetterString } from "../code-string/kbd/kbd-letter-string";
 
 const sections = [
   {
@@ -46,9 +49,8 @@ const sections = [
   {
     id: "kbd-4",
     title: "Arrow Outline icon",
-    description:
-      "Use this decorative top radial fancy background for modern look. ",
-    codeString: "",
+    description: "Keyboard arrow outline icon with different sizes. ",
+    codeString: kbdArrowOutlineString,
     preview: <KbdArrowOutlinePreview />,
   },
   {
@@ -56,15 +58,14 @@ const sections = [
     title: "Number",
     description:
       "Use this decorative top radial fancy background for modern look. ",
-    codeString: "",
+    codeString: kbdNumberString,
     preview: <KbdNumberPreview />,
   },
   {
     id: "kbd-6",
     title: "Letter",
-    description:
-      "Use this decorative top radial fancy background for modern look. ",
-    codeString: "",
+    description: "Keyboard letter icon that fit with any project.",
+    codeString: kbdLetterString,
     preview: <KbdLetterPreview />,
   },
   {
