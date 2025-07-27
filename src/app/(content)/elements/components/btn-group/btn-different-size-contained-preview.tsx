@@ -9,7 +9,7 @@ const buttons = [
   <Button key="three">Three</Button>,
 ];
 
-export const BtnGroupDifferentSizeContainedPreview = () => {
+export const BtnDifferentSizeContainedPreview = () => {
   return (
     <Stack spacing={2} sx={{ alignItems: "center" }}>
       <ButtonGroup

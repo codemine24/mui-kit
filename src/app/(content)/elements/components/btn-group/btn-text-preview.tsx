@@ -8,7 +8,7 @@ const buttons = [
   <Button key="two">Two</Button>,
   <Button key="three">Three</Button>,
 ];
-export const BtnGroupTextPreview = () => {
+export const BtnTextPreview = () => {
   return (
     <>
       <Stack spacing={2}>

@@ -15,6 +15,7 @@ import { KbdArrowOutlinePreview } from "../components/kbd/kbd-arrow-outline-prev
 import { KbdNumberPreview } from "../components/kbd/kbd-number-preview";
 import { KbdLetterPreview } from "../components/kbd/kbd-letter-preview";
 import { KbdGroupKeyPreview } from "../components/kbd/kbd-group-key-preview";
+import { KbdInputPreview } from "../components/kbd/kbd-input-preview";
 
 const sections = [
   {
@@ -72,6 +73,14 @@ const sections = [
       "Use this decorative top radial fancy background for modern look. ",
     codeString: "",
     preview: <KbdGroupKeyPreview />,
+  },
+  {
+    id: "kbd-8",
+    title: "Input",
+    description:
+      "Use this decorative top radial fancy background for modern look. ",
+    codeString: "",
+    preview: <KbdInputPreview />,
   },
 ];
 

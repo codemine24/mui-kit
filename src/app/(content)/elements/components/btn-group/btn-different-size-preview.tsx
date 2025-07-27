@@ -9,7 +9,7 @@ const buttons = [
   <Button key="three">Three</Button>,
 ];
 
-export const BtnGroupDifferentSizePreview = () => {
+export const BtnDifferentSizePreview = () => {
   return (
     <Stack spacing={2} sx={{ alignItems: "center" }}>
       <ButtonGroup size="small" aria-label="Small button group">
