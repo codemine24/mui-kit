@@ -11,7 +11,10 @@ import React from "react";
 import { kbdArrowFilledString } from "../code-string/kbd/kbd-arrow-filled-string";
 import { kbdArrowOutlineString } from "../code-string/kbd/kbd-arrow-outline-string";
 import { kbdCtrlString } from "../code-string/kbd/kbd-ctrl-string";
+import { kbdGroupKeyString } from "../code-string/kbd/kbd-group-key-string";
 import { kbdIconString } from "../code-string/kbd/kbd-icon-string";
+import { kbdInputString } from "../code-string/kbd/kbd-input-string";
+import { kbdLetterString } from "../code-string/kbd/kbd-letter-string";
 import { kbdNumberString } from "../code-string/kbd/kbd-number-string";
 import { KbdArrowFilledPreview } from "../components/kbd/kbd-arrow-filled-preview";
 import { KbdArrowOutlinePreview } from "../components/kbd/kbd-arrow-outline-preview";
@@ -21,7 +24,6 @@ import { KbdIconPreview } from "../components/kbd/kbd-icon-preview";
 import { KbdInputPreview } from "../components/kbd/kbd-input-preview";
 import { KbdLetterPreview } from "../components/kbd/kbd-letter-preview";
 import { KbdNumberPreview } from "../components/kbd/kbd-number-preview";
-import { kbdLetterString } from "../code-string/kbd/kbd-letter-string";
 
 const sections = [
   {
@@ -70,18 +72,16 @@ const sections = [
   },
   {
     id: "kbd-7",
-    title: "Letter",
-    description:
-      "Use this decorative top radial fancy background for modern look. ",
-    codeString: "",
+    title: "Kbd input preview",
+    description: "This variant has builtin search input and keyboard shortcut.",
+    codeString: kbdInputString,
     preview: <KbdInputPreview />,
   },
   {
     id: "kbd-8",
-    title: "Letter",
-    description:
-      "Use this decorative top radial fancy background for modern look. ",
-    codeString: "",
+    title: "Input group",
+    description: "Kbd group with text and key icons.",
+    codeString: kbdGroupKeyString,
     preview: <KbdGroupKeyPreview />,
   },
 ];
@@ -98,12 +98,12 @@ export const KbdView = () => {
       <CustomBreadCrumbs
         pathArr={[
           { label: "Elements", path: PATHS.ELEMENTS.OVERVIEW },
-          { label: "Fancy Background", path: "" },
+          { label: "KBD", path: "" },
         ]}
       />
       <PageTitle
-        title="Fancy Background"
-        description="Use modern section background with different styles. Each section build with material ui and pure css."
+        title="KBD"
+        description="This keyboard shortcut key component has different size icon buttons built with material ui."
       />
 
       <Divider sx={{ my: 4 }} />
