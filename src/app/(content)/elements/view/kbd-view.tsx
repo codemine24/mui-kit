@@ -8,29 +8,31 @@ import { PATHS } from "@/router/paths";
 import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
 import React from "react";
-import { KbdCtrlPreview } from "../components/kbd/kbd-ctrl-preview";
-import { KbdIconPreview } from "../components/kbd/kbd-icon-preview";
+import { kbdCtrlString } from "../code-string/kbd/kbd-ctrl-string";
+import { kbdIconString } from "../code-string/kbd/kbd-icon-string";
 import { KbdArrowFilledPreview } from "../components/kbd/kbd-arrow-filled-preview";
 import { KbdArrowOutlinePreview } from "../components/kbd/kbd-arrow-outline-preview";
-import { KbdNumberPreview } from "../components/kbd/kbd-number-preview";
-import { KbdLetterPreview } from "../components/kbd/kbd-letter-preview";
+import { KbdCtrlPreview } from "../components/kbd/kbd-ctrl-preview";
 import { KbdGroupKeyPreview } from "../components/kbd/kbd-group-key-preview";
+import { KbdIconPreview } from "../components/kbd/kbd-icon-preview";
+import { KbdInputPreview } from "../components/kbd/kbd-input-preview";
+import { KbdLetterPreview } from "../components/kbd/kbd-letter-preview";
+import { KbdNumberPreview } from "../components/kbd/kbd-number-preview";
 
 const sections = [
   {
     id: "kbd-1",
     title: "Keyboard ctrl key",
     description:
-      "Use this decorative top radial fancy background for modern look. ",
-    codeString: "",
+      "Control keys with different sizes. Build with material ui, nothing else.",
+    codeString: kbdCtrlString,
     preview: <KbdCtrlPreview />,
   },
   {
     id: "kbd-2",
     title: "Keyboard icon",
-    description:
-      "Use this decorative top radial fancy background for modern look. ",
-    codeString: "",
+    description: "Fully customizable keyboard icons. ",
+    codeString: kbdIconString,
     preview: <KbdIconPreview />,
   },
   {
@@ -67,6 +69,14 @@ const sections = [
   },
   {
     id: "kbd-7",
+    title: "Letter",
+    description:
+      "Use this decorative top radial fancy background for modern look. ",
+    codeString: "",
+    preview: <KbdInputPreview />,
+  },
+  {
+    id: "kbd-8",
     title: "Letter",
     description:
       "Use this decorative top radial fancy background for modern look. ",
