@@ -18,6 +18,7 @@ import { KbdIconPreview } from "../components/kbd/kbd-icon-preview";
 import { KbdInputPreview } from "../components/kbd/kbd-input-preview";
 import { KbdLetterPreview } from "../components/kbd/kbd-letter-preview";
 import { KbdNumberPreview } from "../components/kbd/kbd-number-preview";
+import { kbdArrowFilledString } from "../code-string/kbd/kbd-arrow-filled-string";
 
 const sections = [
   {
@@ -38,9 +39,8 @@ const sections = [
   {
     id: "kbd-3",
     title: "Arrow icon",
-    description:
-      "Use this decorative top radial fancy background for modern look. ",
-    codeString: "",
+    description: "Keyboard arrow icon with different sizes. ",
+    codeString: kbdArrowFilledString,
     preview: <KbdArrowFilledPreview />,
   },
   {
