@@ -9,12 +9,12 @@ import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
 import React from "react";
 import { BtnContainedPreview } from "../components/btn-group/btn-contained-preview";
-import {  BtnOutlinePreview } from "../components/btn-group/btn-outline-preview";
-import {  BtnTextPreview } from "../components/btn-group/btn-text-preview";
-import {  BtnSoftBgPreview } from "../components/btn-group/btn-soft-bg-preview";
+import { BtnOutlinePreview } from "../components/btn-group/btn-outline-preview";
+import { BtnTextPreview } from "../components/btn-group/btn-text-preview";
+import { BtnSoftBgPreview } from "../components/btn-group/btn-soft-bg-preview";
 import { BtnDifferentSizePreview } from "../components/btn-group/btn-different-size-preview";
 import { BtnDifferentSizeContainedPreview } from "../components/btn-group/btn-different-size-contained-preview";
-import {  BtnVerticalPreview } from "../components/btn-group/btn-vertical-preview";
+import { BtnVerticalPreview } from "../components/btn-group/btn-vertical-preview";
 
 const sections = [
   {
@@ -47,7 +47,7 @@ const sections = [
   },
   {
     id: "btn-group-5",
-    title: "Button different size outlineed",
+    title: "Button different size outlined",
     description: "A regular but elegant accordion with solid background color",
     codeString: "",
     preview: <BtnDifferentSizePreview />,

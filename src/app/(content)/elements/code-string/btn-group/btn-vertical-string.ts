@@ -1,4 +1,4 @@
-"use client";
+export const btnVerticalString = `"use client";
 import * as React from "react";
 import Button from "@mui/material/Button";
 import ButtonGroup, { buttonGroupClasses } from "@mui/material/ButtonGroup";
@@ -47,7 +47,7 @@ export const BtnVerticalPreview = () => {
           variant="outlined"
           aria-label="Basic button group"
           sx={{
-            [`& .${buttonGroupClasses.root}`]: {
+            [\`& .\${buttonGroupClasses.root}\`]: {
               color: "#1976d2",
               backgroundColor: "rgba(25, 118, 210, 0.08)",
               "&:hover": {
@@ -71,3 +71,4 @@ export const BtnVerticalPreview = () => {
     </>
   );
 };
+`;
