@@ -6,6 +6,9 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { Box } from "@mui/material";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import SubscriptionsIcon from "@mui/icons-material/Subscriptions";
+import DashboardIcon from "@mui/icons-material/Dashboard";
+import SignalCellularAltIcon from "@mui/icons-material/SignalCellularAlt";
 
 export const BtnContainedIconPreview = () => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
@@ -29,6 +32,7 @@ export const BtnContainedIconPreview = () => {
           [`& .${buttonGroupClasses.grouped}`]: {
             p: "10px 20px",
             borderRadius: "0px !important",
+            bgcolor: "#5046E4",
           },
           [`& .${buttonGroupClasses.grouped}:first-of-type`]: {
             borderTopLeftRadius: "50px !important",
@@ -45,11 +49,11 @@ export const BtnContainedIconPreview = () => {
           Settings
         </Button>
         <Button sx={{ gap: 1 }}>
-          <SettingsIcon />
+          <DashboardIcon />
           Dashboard
         </Button>
         <Button sx={{ gap: 1 }}>
-          <SettingsIcon />
+          <SignalCellularAltIcon />
           Analytics
         </Button>
         <Button
@@ -60,6 +64,7 @@ export const BtnContainedIconPreview = () => {
           onClick={handleClick}
           sx={{ minWidth: "40px", gap: 1 }}
         >
+          <SubscriptionsIcon />
           Subscription
           <KeyboardArrowDownIcon />
         </Button>

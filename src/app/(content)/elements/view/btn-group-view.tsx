@@ -27,6 +27,7 @@ import { BtnToggleVerticalPreview } from "../components/btn-group/btn-toggle-ver
 import { BtnCheckBoxPreview } from "../components/btn-group/btn-check-box-preview";
 import { BtnVerticalTogglePreview } from "../components/btn-group/btn-vertical-toggle-preview";
 import { BtnDifferentSizeContainedPreview } from "../components/btn-group/btn-different-size-contained-preview";
+import { BtnModernPreview } from "../components/btn-group/btn-modern-preview";
 
 const sections = [
   {
@@ -112,6 +113,13 @@ const sections = [
     description: "A regular but elegant accordion with solid background color",
     codeString: "",
     preview: <BtnContainedIconPreview />,
+  },
+  {
+    id: "btn-group-13",
+    title: "Vertical toggle button and checkbox ",
+    description: "A regular but elegant accordion with solid background color",
+    codeString: "",
+    preview: <BtnModernPreview />,
   },
 ];
 
