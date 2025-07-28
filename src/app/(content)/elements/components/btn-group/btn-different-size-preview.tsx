@@ -7,6 +7,7 @@ const buttons = [
   <Button key="one">One</Button>,
   <Button key="two">Two</Button>,
   <Button key="three">Three</Button>,
+  <Button key="four">Four</Button>,
 ];
 
 export const BtnDifferentSizePreview = () => {
