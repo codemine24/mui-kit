@@ -14,6 +14,7 @@ import { DndView } from "../view/dnd-view";
 import { DrawerView } from "../view/drawer-view";
 import { EditorView } from "../view/editor-view";
 import { FancyBgView } from "../view/fancy-bg-view";
+import { KbdView } from "../view/kbd-view";
 import { OTPView } from "../view/otp-view";
 import { PaginationView } from "../view/pagination-view";
 import { PopoverView } from "../view/popover-view";
@@ -22,8 +23,6 @@ import { StepperView } from "../view/stepper-view";
 import { TabView } from "../view/tab-view";
 import { TableView } from "../view/table-view";
 import { TimelineView } from "../view/timeline-view";
-import { BtnGroupView } from "../view/btn-group-view";
-import { KbdView } from "../view/kbd-view";
 export async function generateStaticParams() {
   return elementsArr.map((element) => ({
     slug: element.path?.split("/").pop(),
@@ -55,7 +54,6 @@ const componentMap: Record<string, JSX.Element> = {
   rating: <RatingView />,
   "fancy-background": <FancyBgView />,
   tab: <TabView />,
-  "btn-group": <BtnGroupView />,
   kbd: <KbdView />,
 };
 

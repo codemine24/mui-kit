@@ -1,4 +1,4 @@
-import { KeyboardCommandKey, Search } from "@mui/icons-material";
+export const kbdInputString = `import { KeyboardCommandKey, Search } from "@mui/icons-material";
 import { Box, Divider, IconButton, InputBase, Paper } from "@mui/material";
 export const KbdInputPreview = () => {
   return (
@@ -31,3 +31,4 @@ export const KbdInputPreview = () => {
     </Paper>
   );
 };
+`;

@@ -16,7 +16,6 @@ import { KbdNumberPreview } from "../components/kbd/kbd-number-preview";
 import { KbdLetterPreview } from "../components/kbd/kbd-letter-preview";
 import { KbdGroupKeyPreview } from "../components/kbd/kbd-group-key-preview";
 import { KbdInputPreview } from "../components/kbd/kbd-input-preview";
-import { kbdArrowFilledString } from "../code-string/kbd/kbd-arrow-filled-string";
 
 const sections = [
   {
@@ -40,7 +39,7 @@ const sections = [
     title: "Arrow icon",
     description:
       "Use this decorative top radial fancy background for modern look. ",
-    codeString: kbdArrowFilledString,
+    codeString: "",
     preview: <KbdArrowFilledPreview />,
   },
   {
