@@ -85,7 +85,7 @@ const sections = [
     preview: <KbdGroupKeyPreview />,
   },
   {
-    id: "kbd-8",
+    id: "kbd-9",
     title: "Input",
     description:
       "Use this decorative top radial fancy background for modern look. ",
