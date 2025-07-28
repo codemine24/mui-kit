@@ -18,9 +18,9 @@ export const KbdInputPreview = () => {
         <InputBase
           sx={{ ml: 1, flex: 1 }}
           placeholder="Search or type a command"
-          inputProps={{ "aria-label": "Search or type a comman" }}
+          inputProps={{ "aria-label": "Search or type a command" }}
         />
-        <IconButton sx={{ p: "10px" }} aria-label="directions">
+        <IconButton sx={{ p: "10px" }} aria-label="microphone">
           <MicNoneIcon />
         </IconButton>
       </Paper>
