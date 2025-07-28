@@ -24,6 +24,7 @@ import { btnDifferentSizeString } from "../code-string/btn-group/btn-different-s
 import { btnDifferentSizeContainedString } from "../code-string/btn-group/btn-different-size-contained-string";
 import { btnVerticalString } from "../code-string/btn-group/btn-vertical-string";
 import { BtnToggleVerticalPreview } from "../components/btn-group/btn-toggle-vertical-preview";
+import { BtnCheckBoxPreview } from "../components/btn-group/btn-check-box-preview";
 
 const sections = [
   {
@@ -88,6 +89,13 @@ const sections = [
     description: "A regular but elegant accordion with solid background color",
     codeString: "",
     preview: <BtnToggleVerticalPreview />,
+  },
+  {
+    id: "btn-group-10",
+    title: "Check box Toggle button ",
+    description: "A regular but elegant accordion with solid background color",
+    codeString: "",
+    preview: <BtnCheckBoxPreview />,
   },
 ];
 
