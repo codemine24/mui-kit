@@ -13,10 +13,7 @@ import { BtnOutlinePreview } from "../components/btn-group/btn-outline-preview";
 import { BtnTextPreview } from "../components/btn-group/btn-text-preview";
 import { BtnSoftBgPreview } from "../components/btn-group/btn-soft-bg-preview";
 import { BtnDifferentSizePreview } from "../components/btn-group/btn-different-size-preview";
-import {
-  BtnContainedIconPreview,
-  BtnDifferentSizeContainedPreview,
-} from "../components/btn-group/btn-contained-icon-preview";
+import { BtnContainedIconPreview } from "../components/btn-group/btn-contained-icon-preview";
 import { BtnVerticalPreview } from "../components/btn-group/btn-vertical-preview";
 import { BtnTogglePreview } from "../components/btn-group/btn-toggle-preview";
 import { buttonContainedString } from "../code-string/button";
@@ -29,6 +26,7 @@ import { btnVerticalString } from "../code-string/btn-group/btn-vertical-string"
 import { BtnToggleVerticalPreview } from "../components/btn-group/btn-toggle-vertical-preview";
 import { BtnCheckBoxPreview } from "../components/btn-group/btn-check-box-preview";
 import { BtnVerticalTogglePreview } from "../components/btn-group/btn-vertical-toggle-preview";
+import { BtnDifferentSizeContainedPreview } from "../components/btn-group/btn-different-size-contained-preview";
 
 const sections = [
   {
