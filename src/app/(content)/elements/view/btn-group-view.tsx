@@ -13,7 +13,10 @@ import { BtnOutlinePreview } from "../components/btn-group/btn-outline-preview";
 import { BtnTextPreview } from "../components/btn-group/btn-text-preview";
 import { BtnSoftBgPreview } from "../components/btn-group/btn-soft-bg-preview";
 import { BtnDifferentSizePreview } from "../components/btn-group/btn-different-size-preview";
-import { BtnDifferentSizeContainedPreview } from "../components/btn-group/btn-different-size-contained-preview";
+import {
+  BtnContainedIconPreview,
+  BtnDifferentSizeContainedPreview,
+} from "../components/btn-group/btn-contained-icon-preview";
 import { BtnVerticalPreview } from "../components/btn-group/btn-vertical-preview";
 import { BtnTogglePreview } from "../components/btn-group/btn-toggle-preview";
 import { buttonContainedString } from "../code-string/button";
@@ -104,6 +107,13 @@ const sections = [
     description: "A regular but elegant accordion with solid background color",
     codeString: "",
     preview: <BtnVerticalTogglePreview />,
+  },
+  {
+    id: "btn-group-12",
+    title: "Vertical toggle button and checkbox ",
+    description: "A regular but elegant accordion with solid background color",
+    codeString: "",
+    preview: <BtnContainedIconPreview />,
   },
 ];
 
