@@ -15,56 +15,79 @@ import { BtnSoftBgPreview } from "../components/btn-group/btn-soft-bg-preview";
 import { BtnDifferentSizePreview } from "../components/btn-group/btn-different-size-preview";
 import { BtnDifferentSizeContainedPreview } from "../components/btn-group/btn-different-size-contained-preview";
 import { BtnVerticalPreview } from "../components/btn-group/btn-vertical-preview";
+import { BtnTogglePreview } from "../components/btn-group/btn-toggle-preview";
+import { buttonContainedString } from "../code-string/button";
+import { btnOutlineString } from "../code-string/btn-group/btn-outline-string";
+import { btnTextString } from "../code-string/btn-group/btn-text-string";
+import { btnSoftBgString } from "../code-string/btn-group/btn-soft-bg-string";
+import { btnDifferentSizeString } from "../code-string/btn-group/btn-different-size-string";
+import { btnDifferentSizeContainedString } from "../code-string/btn-group/btn-different-size-contained-string";
+import { btnVerticalString } from "../code-string/btn-group/btn-vertical-string";
+import { BtnToggleVerticalPreview } from "../components/btn-group/btn-toggle-vertical-preview";
 
 const sections = [
   {
     id: "btn-group-1",
     title: "Button contained",
     description: "A regular but elegant accordion with solid background color",
-    codeString: "",
+    codeString: buttonContainedString,
     preview: <BtnContainedPreview />,
   },
   {
     id: "btn-group-2",
     title: "Button outline",
     description: "A regular but elegant accordion with solid background color",
-    codeString: "",
+    codeString: btnOutlineString,
     preview: <BtnOutlinePreview />,
   },
   {
     id: "btn-group-3",
     title: "Button group text",
     description: "A regular but elegant accordion with solid background color",
-    codeString: "",
+    codeString: btnTextString,
     preview: <BtnTextPreview />,
   },
   {
     id: "btn-group-4",
     title: "Button Soft Background",
     description: "A regular but elegant accordion with solid background color",
-    codeString: "",
+    codeString: btnSoftBgString,
     preview: <BtnSoftBgPreview />,
   },
   {
     id: "btn-group-5",
     title: "Button different size outlined",
     description: "A regular but elegant accordion with solid background color",
-    codeString: "",
+    codeString: btnDifferentSizeString,
     preview: <BtnDifferentSizePreview />,
   },
   {
     id: "btn-group-6",
     title: "Button different size contained",
     description: "A regular but elegant accordion with solid background color",
-    codeString: "",
+    codeString: btnDifferentSizeContainedString,
     preview: <BtnDifferentSizeContainedPreview />,
   },
   {
     id: "btn-group-7",
     title: "Vertical button group ",
     description: "A regular but elegant accordion with solid background color",
-    codeString: "",
+    codeString: btnVerticalString,
     preview: <BtnVerticalPreview />,
+  },
+  {
+    id: "btn-group-8",
+    title: "Vertical Toggle button ",
+    description: "A regular but elegant accordion with solid background color",
+    codeString: "",
+    preview: <BtnTogglePreview />,
+  },
+  {
+    id: "btn-group-9",
+    title: "Horizontal Toggle button ",
+    description: "A regular but elegant accordion with solid background color",
+    codeString: "",
+    preview: <BtnToggleVerticalPreview />,
   },
 ];
 
