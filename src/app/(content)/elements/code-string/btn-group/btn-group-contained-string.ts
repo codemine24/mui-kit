@@ -1,4 +1,4 @@
-import * as React from "react";
+export const btnGroupContainedString = `import * as React from "react";
 import Button from "@mui/material/Button";
 import ButtonGroup from "@mui/material/ButtonGroup";
 import { Stack } from "@mui/material";
@@ -9,7 +9,7 @@ const buttons = [
   <Button key="four">Four</Button>,
 ];
 
-export const BtnContainedPreview = () => {
+export const BtnGroupContainedPreview = () => {
   return (
     <>
       <Stack spacing={2}>
@@ -61,4 +61,4 @@ export const BtnContainedPreview = () => {
       </Stack>
     </>
   );
-};
+};`

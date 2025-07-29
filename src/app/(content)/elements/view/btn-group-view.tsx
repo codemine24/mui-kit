@@ -8,37 +8,46 @@ import { PATHS } from "@/router/paths";
 import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
 import React from "react";
-import { BtnContainedPreview } from "../components/btn-group/btn-contained-preview";
-import { BtnOutlinePreview } from "../components/btn-group/btn-outline-preview";
-import { BtnTextPreview } from "../components/btn-group/btn-text-preview";
-import { BtnSoftBgPreview } from "../components/btn-group/btn-soft-bg-preview";
-import { BtnDifferentSizePreview } from "../components/btn-group/btn-different-size-preview";
-import { BtnContainedIconPreview } from "../components/btn-group/btn-contained-icon-preview";
-import { BtnVerticalPreview } from "../components/btn-group/btn-vertical-preview";
-import { BtnTogglePreview } from "../components/btn-group/btn-toggle-preview";
-import { buttonContainedString } from "../code-string/button";
-import { btnOutlineString } from "../code-string/btn-group/btn-outline-string";
-import { btnTextString } from "../code-string/btn-group/btn-text-string";
-import { btnSoftBgString } from "../code-string/btn-group/btn-soft-bg-string";
-import { btnDifferentSizeString } from "../code-string/btn-group/btn-different-size-string";
 import { btnDifferentSizeContainedString } from "../code-string/btn-group/btn-different-size-contained-string";
+import { btnDifferentSizeString } from "../code-string/btn-group/btn-different-size-string";
+import { btnGroupContainedString } from "../code-string/btn-group/btn-group-contained-string";
+import { btnGroupModernString } from "../code-string/btn-group/btn-group-modern-string";
+import { btnOutlineString } from "../code-string/btn-group/btn-outline-string";
+import { btnSoftBgString } from "../code-string/btn-group/btn-soft-bg-string";
+import { btnTextString } from "../code-string/btn-group/btn-text-string";
 import { btnVerticalString } from "../code-string/btn-group/btn-vertical-string";
-import { BtnToggleVerticalPreview } from "../components/btn-group/btn-toggle-vertical-preview";
 import { BtnCheckBoxPreview } from "../components/btn-group/btn-check-box-preview";
-import { BtnVerticalTogglePreview } from "../components/btn-group/btn-vertical-toggle-preview";
+import { BtnContainedIconPreview } from "../components/btn-group/btn-contained-icon-preview";
 import { BtnDifferentSizeContainedPreview } from "../components/btn-group/btn-different-size-contained-preview";
-import { BtnModernPreview } from "../components/btn-group/btn-modern-preview";
+import { BtnDifferentSizePreview } from "../components/btn-group/btn-different-size-preview";
+import { BtnGroupContainedPreview } from "../components/btn-group/btn-group-contained-preview";
+import { BtnGroupModernPreview } from "../components/btn-group/btn-group-modern-preview";
+import { BtnOutlinePreview } from "../components/btn-group/btn-outline-preview";
+import { BtnSoftBgPreview } from "../components/btn-group/btn-soft-bg-preview";
+import { BtnTextPreview } from "../components/btn-group/btn-text-preview";
+import { BtnTogglePreview } from "../components/btn-group/btn-toggle-preview";
+import { BtnToggleVerticalPreview } from "../components/btn-group/btn-toggle-vertical-preview";
+import { BtnVerticalPreview } from "../components/btn-group/btn-vertical-preview";
+import { BtnVerticalTogglePreview } from "../components/btn-group/btn-vertical-toggle-preview";
 
 const sections = [
   {
     id: "btn-group-1",
-    title: "Button contained",
-    description: "A regular but elegant accordion with solid background color",
-    codeString: buttonContainedString,
-    preview: <BtnContainedPreview />,
+    title: "Modern button pair",
+    description:
+      "Use this modern look button group build using material ui only. ",
+    codeString: btnGroupModernString,
+    preview: <BtnGroupModernPreview />,
   },
   {
     id: "btn-group-2",
+    title: "Button contained",
+    description: "Contained button group has solid background color.",
+    codeString: btnGroupContainedString,
+    preview: <BtnGroupContainedPreview />,
+  },
+  {
+    id: "btn-group-22",
     title: "Button outline",
     description: "A regular but elegant accordion with solid background color",
     codeString: btnOutlineString,
@@ -113,13 +122,6 @@ const sections = [
     description: "A regular but elegant accordion with solid background color",
     codeString: "",
     preview: <BtnContainedIconPreview />,
-  },
-  {
-    id: "btn-group-13",
-    title: "Vertical toggle button and checkbox ",
-    description: "A regular but elegant accordion with solid background color",
-    codeString: "",
-    preview: <BtnModernPreview />,
   },
 ];
 
