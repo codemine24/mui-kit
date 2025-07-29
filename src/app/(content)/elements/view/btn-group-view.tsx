@@ -44,14 +44,14 @@ const sections = [
   },
   {
     id: "btn-group-2",
-    title: "Button contained",
+    title: "Contained button group",
     description: "Contained button group has solid background color.",
     codeString: btnGroupContainedString,
     preview: <BtnGroupContainedPreview />,
   },
   {
     id: "btn-group-3",
-    title: "Button outline",
+    title: "Mui outlined button group",
     description:
       "Use this outlined button group build using material ui only. ",
     codeString: btnGroupOutlineString,
@@ -59,21 +59,21 @@ const sections = [
   },
   {
     id: "btn-group-4",
-    title: "Button group text",
+    title: "Text button group",
     description: "mui button group with text buttons.",
     codeString: btnGroupTextString,
     preview: <BtnGroupTextPreview />,
   },
   {
     id: "btn-group-5",
-    title: "Button soft background",
+    title: "Soft background",
     description: "This material ui button group has soft background color.",
     codeString: btnGroupSoftBgString,
     preview: <BtnGroupSoftBgPreview />,
   },
   {
     id: "btn-group-6",
-    title: "Button different size outlined",
+    title: "Different size outlined",
     description:
       "material ui button group with different size and outlined border.",
     codeString: btnGroupDifferentSizeString,
@@ -81,7 +81,7 @@ const sections = [
   },
   {
     id: "btn-group-7",
-    title: "Button different size contained",
+    title: "Different size contained buttons",
     description:
       "Use this material ui custom button group with different size and solid background color.",
     codeString: btnGroupDifferentSizeContainedString,
@@ -89,7 +89,7 @@ const sections = [
   },
   {
     id: "btn-group-8",
-    title: "Vertical button group",
+    title: "Regular vertical button group",
     description:
       "Regular vertical button group designed with material ui only.",
     codeString: btnGroupVerticalString,
@@ -97,14 +97,14 @@ const sections = [
   },
   {
     id: "btn-group-9",
-    title: "Vertical toggle button ",
+    title: "Vertical toggle button",
     description: "Another vertical button group with toggle functionality.",
     codeString: btnGroupVerticalToggleString,
     preview: <BtnGroupVerticalTogglePreview />,
   },
   {
     id: "btn-group-10",
-    title: "Horizontal Toggle button ",
+    title: "Horizontal Toggle button",
     description:
       "Horizontal button group variant but this one has toggle functionality.",
     codeString: btnGroupHorizontalToggleString,
