@@ -16,6 +16,7 @@ import { btnGroupOutlineString } from "../code-string/btn-group/btn-group-outlin
 import { btnGroupSoftBgString } from "../code-string/btn-group/btn-group-soft-bg-string";
 import { btnGroupTextString } from "../code-string/btn-group/btn-group-text-string";
 import { btnGroupVerticalString } from "../code-string/btn-group/btn-group-vertical-string";
+import { btnGroupVerticalToggleString } from "../code-string/btn-group/btn-group-vertical-toggle-string";
 import { BtnCheckBoxPreview } from "../components/btn-group/btn-check-box-preview";
 import { BtnContainedIconPreview } from "../components/btn-group/btn-contained-icon-preview";
 import { BtnGroupContainedPreview } from "../components/btn-group/btn-group-contained-preview";
@@ -26,7 +27,7 @@ import { BtnGroupOutlinePreview } from "../components/btn-group/btn-group-outlin
 import { BtnGroupSoftBgPreview } from "../components/btn-group/btn-group-soft-bg-preview";
 import { BtnGroupTextPreview } from "../components/btn-group/btn-group-text-preview";
 import { BtnGroupVerticalPreview } from "../components/btn-group/btn-group-vertical-preview";
-import { BtnTogglePreview } from "../components/btn-group/btn-toggle-preview";
+import { BtnGroupVerticalTogglePreview } from "../components/btn-group/btn-group-vertical-toggle-preview";
 import { BtnToggleVerticalPreview } from "../components/btn-group/btn-toggle-vertical-preview";
 import { BtnVerticalTogglePreview } from "../components/btn-group/btn-vertical-toggle-preview";
 
@@ -93,11 +94,12 @@ const sections = [
     preview: <BtnGroupVerticalPreview />,
   },
   {
-    id: "btn-group-8",
+    id: "btn-group-9",
     title: "Vertical Toggle button ",
-    description: "A regular but elegant accordion with solid background color",
-    codeString: "",
-    preview: <BtnTogglePreview />,
+    description:
+      "Another vertical button group variant but this one has toggle functionality.",
+    codeString: btnGroupVerticalToggleString,
+    preview: <BtnGroupVerticalTogglePreview />,
   },
   {
     id: "btn-group-9",

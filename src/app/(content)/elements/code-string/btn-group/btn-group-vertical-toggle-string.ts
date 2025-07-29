@@ -1,14 +1,14 @@
-import * as React from "react";
-import ViewListIcon from "@mui/icons-material/ViewList";
+export const btnGroupVerticalToggleString = `import ViewListIcon from "@mui/icons-material/ViewList";
 import ViewModuleIcon from "@mui/icons-material/ViewModule";
 import ViewQuiltIcon from "@mui/icons-material/ViewQuilt";
-import ToggleButton, { toggleButtonClasses } from "@mui/material/ToggleButton";
+import { alpha, Stack } from "@mui/material";
+import ToggleButton from "@mui/material/ToggleButton";
 import ToggleButtonGroup, {
   toggleButtonGroupClasses,
 } from "@mui/material/ToggleButtonGroup";
-import { alpha, Stack } from "@mui/material";
+import * as React from "react";
 
-export const BtnTogglePreview = () => {
+export const BtnGroupVerticalTogglePreview = () => {
   const [view, setView] = React.useState("list");
 
   const handleChange = (
@@ -26,7 +26,7 @@ export const BtnTogglePreview = () => {
           exclusive
           onChange={handleChange}
           sx={{
-            [`& .${toggleButtonGroupClasses.selected}`]: {
+            [\`& .\${toggleButtonGroupClasses.selected}\`]: {
               bgcolor: alpha("#00A66E", 0.1),
               color: "#00A66E",
             },
@@ -47,7 +47,7 @@ export const BtnTogglePreview = () => {
           exclusive
           onChange={handleChange}
           sx={{
-            [`& .${toggleButtonGroupClasses.selected}`]: {
+            [\`& .\${toggleButtonGroupClasses.selected}\`]: {
               bgcolor: alpha("#FFAB00", 0.1),
               color: "#FFAB00",
             },
@@ -68,7 +68,7 @@ export const BtnTogglePreview = () => {
           exclusive
           onChange={handleChange}
           sx={{
-            [`& .${toggleButtonGroupClasses.selected}`]: {
+            [\`& .\${toggleButtonGroupClasses.selected}\`]: {
               bgcolor: alpha("##8D33FF", 0.1),
               color: "#8D33FF",
             },
@@ -87,4 +87,4 @@ export const BtnTogglePreview = () => {
       </Stack>
     </>
   );
-};
+};`;
