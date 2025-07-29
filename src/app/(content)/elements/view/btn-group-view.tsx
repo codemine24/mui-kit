@@ -140,12 +140,12 @@ export const BtnGroupView = () => {
       <CustomBreadCrumbs
         pathArr={[
           { label: "Elements", path: PATHS.ELEMENTS.OVERVIEW },
-          { label: "Accordion", path: "" },
+          { label: "Button group", path: "" },
         ]}
       />
       <PageTitle
-        title="Accordion"
-        description="Use material ui accordion with different styles to show your FAQ's and other info."
+        title="Button group"
+        description="Material ui button group is one of the most used components. We tried to add different variants of button group. "
       />
 
       <Divider sx={{ my: 4 }} />
