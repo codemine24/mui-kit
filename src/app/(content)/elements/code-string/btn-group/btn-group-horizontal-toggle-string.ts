@@ -1,4 +1,4 @@
-export const btnGroupVerticalToggleString = `import ViewListIcon from "@mui/icons-material/ViewList";
+export const btnGroupHorizontalToggleString = `import ViewListIcon from "@mui/icons-material/ViewList";
 import ViewModuleIcon from "@mui/icons-material/ViewModule";
 import ViewQuiltIcon from "@mui/icons-material/ViewQuilt";
 import { alpha, Stack } from "@mui/material";

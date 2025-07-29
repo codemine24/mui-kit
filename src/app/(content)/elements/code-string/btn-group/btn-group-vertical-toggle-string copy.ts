@@ -1,4 +1,4 @@
-import ViewListIcon from "@mui/icons-material/ViewList";
+export const btnGroupVerticalToggleString = `import ViewListIcon from "@mui/icons-material/ViewList";
 import ViewModuleIcon from "@mui/icons-material/ViewModule";
 import ViewQuiltIcon from "@mui/icons-material/ViewQuilt";
 import { alpha, Stack } from "@mui/material";
@@ -27,7 +27,7 @@ export const BtnGroupVerticalTogglePreview = () => {
           onChange={handleChange}
           orientation="vertical"
           sx={{
-            [`& .${toggleButtonGroupClasses.selected}`]: {
+            [\`& .\${toggleButtonGroupClasses.selected}\`]: {
               bgcolor: alpha("#00A66E", 0.1),
               color: "#00A66E",
             },
@@ -49,7 +49,7 @@ export const BtnGroupVerticalTogglePreview = () => {
           onChange={handleChange}
           orientation="vertical"
           sx={{
-            [`& .${toggleButtonGroupClasses.selected}`]: {
+            [\`& .\${toggleButtonGroupClasses.selected}\`]: {
               bgcolor: alpha("#8D33FF", 0.1),
               color: "#8D33FF",
             },
@@ -71,7 +71,7 @@ export const BtnGroupVerticalTogglePreview = () => {
           onChange={handleChange}
           orientation="vertical"
           sx={{
-            [`& .${toggleButtonGroupClasses.selected}`]: {
+            [\`& .\${toggleButtonGroupClasses.selected}\`]: {
               bgcolor: alpha("#FFAB00", 0.1),
               color: "#FFAB00",
             },
@@ -90,4 +90,4 @@ export const BtnGroupVerticalTogglePreview = () => {
       </Stack>
     </>
   );
-};
+};`;

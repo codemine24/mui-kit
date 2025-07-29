@@ -11,24 +11,25 @@ import React from "react";
 import { btnGroupContainedString } from "../code-string/btn-group/btn-group-contained-string";
 import { btnGroupDifferentSizeContainedString } from "../code-string/btn-group/btn-group-different-size-contained-string";
 import { btnGroupDifferentSizeString } from "../code-string/btn-group/btn-group-different-size-string";
+import { btnGroupHorizontalToggleString } from "../code-string/btn-group/btn-group-horizontal-toggle-string";
 import { btnGroupModernString } from "../code-string/btn-group/btn-group-modern-string";
 import { btnGroupOutlineString } from "../code-string/btn-group/btn-group-outline-string";
 import { btnGroupSoftBgString } from "../code-string/btn-group/btn-group-soft-bg-string";
 import { btnGroupTextString } from "../code-string/btn-group/btn-group-text-string";
 import { btnGroupVerticalString } from "../code-string/btn-group/btn-group-vertical-string";
-import { btnGroupVerticalToggleString } from "../code-string/btn-group/btn-group-vertical-toggle-string";
+import { btnGroupVerticalToggleString } from "../code-string/btn-group/btn-group-vertical-toggle-string copy";
 import { BtnCheckBoxPreview } from "../components/btn-group/btn-check-box-preview";
 import { BtnContainedIconPreview } from "../components/btn-group/btn-contained-icon-preview";
 import { BtnGroupContainedPreview } from "../components/btn-group/btn-group-contained-preview";
 import { BtnGroupDifferentSizeContainedPreview } from "../components/btn-group/btn-group-different-size-contained-preview";
 import { BtnGroupDifferentSizePreview } from "../components/btn-group/btn-group-different-size-preview";
+import { BtnGroupHorizontalTogglePreview } from "../components/btn-group/btn-group-Horizontal-toggle-preview";
 import { BtnGroupModernPreview } from "../components/btn-group/btn-group-modern-preview";
 import { BtnGroupOutlinePreview } from "../components/btn-group/btn-group-outline-preview";
 import { BtnGroupSoftBgPreview } from "../components/btn-group/btn-group-soft-bg-preview";
 import { BtnGroupTextPreview } from "../components/btn-group/btn-group-text-preview";
 import { BtnGroupVerticalPreview } from "../components/btn-group/btn-group-vertical-preview";
 import { BtnGroupVerticalTogglePreview } from "../components/btn-group/btn-group-vertical-toggle-preview";
-import { BtnToggleVerticalPreview } from "../components/btn-group/btn-toggle-vertical-preview";
 import { BtnVerticalTogglePreview } from "../components/btn-group/btn-vertical-toggle-preview";
 
 const sections = [
@@ -95,19 +96,20 @@ const sections = [
   },
   {
     id: "btn-group-9",
-    title: "Vertical Toggle button ",
-    description:
-      "Another vertical button group variant but this one has toggle functionality.",
+    title: "Vertical toggle button ",
+    description: "Another vertical button group with toggle functionality.",
     codeString: btnGroupVerticalToggleString,
     preview: <BtnGroupVerticalTogglePreview />,
   },
   {
-    id: "btn-group-9",
+    id: "btn-group-10",
     title: "Horizontal Toggle button ",
-    description: "A regular but elegant accordion with solid background color",
-    codeString: "",
-    preview: <BtnToggleVerticalPreview />,
+    description:
+      "Horizontal button group variant but this one has toggle functionality.",
+    codeString: btnGroupHorizontalToggleString,
+    preview: <BtnGroupHorizontalTogglePreview />,
   },
+
   {
     id: "btn-group-10",
     title: "Check box Toggle button ",

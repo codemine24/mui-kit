@@ -1,14 +1,14 @@
-import * as React from "react";
 import ViewListIcon from "@mui/icons-material/ViewList";
 import ViewModuleIcon from "@mui/icons-material/ViewModule";
 import ViewQuiltIcon from "@mui/icons-material/ViewQuilt";
-import ToggleButton, { toggleButtonClasses } from "@mui/material/ToggleButton";
+import { alpha, Stack } from "@mui/material";
+import ToggleButton from "@mui/material/ToggleButton";
 import ToggleButtonGroup, {
   toggleButtonGroupClasses,
 } from "@mui/material/ToggleButtonGroup";
-import { alpha, Stack } from "@mui/material";
+import * as React from "react";
 
-export const BtnToggleVerticalPreview = () => {
+export const BtnGroupHorizontalTogglePreview = () => {
   const [view, setView] = React.useState("list");
 
   const handleChange = (
@@ -20,12 +20,11 @@ export const BtnToggleVerticalPreview = () => {
 
   return (
     <>
-      <Stack spacing={2} direction="row">
+      <Stack spacing={2}>
         <ToggleButtonGroup
           value={view}
           exclusive
           onChange={handleChange}
-          orientation="vertical"
           sx={{
             [`& .${toggleButtonGroupClasses.selected}`]: {
               bgcolor: alpha("#00A66E", 0.1),
@@ -47,11 +46,10 @@ export const BtnToggleVerticalPreview = () => {
           value={view}
           exclusive
           onChange={handleChange}
-          orientation="vertical"
           sx={{
             [`& .${toggleButtonGroupClasses.selected}`]: {
-              bgcolor: alpha("#8D33FF", 0.1),
-              color: "#8D33FF",
+              bgcolor: alpha("#FFAB00", 0.1),
+              color: "#FFAB00",
             },
           }}
         >
@@ -69,11 +67,10 @@ export const BtnToggleVerticalPreview = () => {
           value={view}
           exclusive
           onChange={handleChange}
-          orientation="vertical"
           sx={{
             [`& .${toggleButtonGroupClasses.selected}`]: {
-              bgcolor: alpha("#FFAB00", 0.1),
-              color: "#FFAB00",
+              bgcolor: alpha("##8D33FF", 0.1),
+              color: "#8D33FF",
             },
           }}
         >
