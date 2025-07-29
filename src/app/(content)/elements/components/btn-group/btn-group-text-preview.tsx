@@ -9,7 +9,7 @@ const buttons = [
   <Button key="three">Three</Button>,
   <Button key="four">Four</Button>,
 ];
-export const BtnTextPreview = () => {
+export const BtnGroupTextPreview = () => {
   return (
     <>
       <Stack spacing={2}>

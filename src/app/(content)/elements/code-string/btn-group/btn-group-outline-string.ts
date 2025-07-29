@@ -1,58 +1,57 @@
-export const btnTextString = `import * as React from "react";
+export const btnGroupOutlineString = `import * as React from "react";
 import Button from "@mui/material/Button";
 import ButtonGroup from "@mui/material/ButtonGroup";
 import { Stack } from "@mui/material";
-
 const buttons = [
   <Button key="one">One</Button>,
   <Button key="two">Two</Button>,
   <Button key="three">Three</Button>,
   <Button key="four">Four</Button>,
 ];
-export const BtnTextPreview = () => {
+export const BtnGroupOutlinePreview = () => {
   return (
     <>
       <Stack spacing={2}>
-        <ButtonGroup variant="text" aria-label="Basic button group">
+        <ButtonGroup variant="outlined" aria-label="Basic button group">
           {buttons}
         </ButtonGroup>
         <ButtonGroup
-          variant="text"
+          variant="outlined"
           color="secondary"
           aria-label="Basic button group"
         >
           {buttons}
         </ButtonGroup>
         <ButtonGroup
-          variant="text"
+          variant="outlined"
           color="error"
           aria-label="Basic button group"
         >
           {buttons}
         </ButtonGroup>
         <ButtonGroup
-          variant="text"
+          variant="outlined"
           color="warning"
           aria-label="Basic button group"
         >
           {buttons}
         </ButtonGroup>
         <ButtonGroup
-          variant="text"
+          variant="outlined"
           color="info"
           aria-label="Basic button group"
         >
           {buttons}
         </ButtonGroup>
         <ButtonGroup
-          variant="text"
+          variant="outlined"
           color="success"
           aria-label="Basic button group"
         >
           {buttons}
         </ButtonGroup>
         <ButtonGroup
-          variant="text"
+          variant="outlined"
           color="inherit"
           aria-label="Basic button group"
         >
@@ -61,5 +60,4 @@ export const BtnTextPreview = () => {
       </Stack>
     </>
   );
-};
-`;
+};`;
