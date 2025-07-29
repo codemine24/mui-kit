@@ -1,4 +1,4 @@
-import * as React from "react";
+export const btnGroupToggleMenuString = `import * as React from "react";
 import Button from "@mui/material/Button";
 import ButtonGroup, { buttonGroupClasses } from "@mui/material/ButtonGroup";
 import SettingsIcon from "@mui/icons-material/Settings";
@@ -10,7 +10,7 @@ import SubscriptionsIcon from "@mui/icons-material/Subscriptions";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import SignalCellularAltIcon from "@mui/icons-material/SignalCellularAlt";
 
-export const BtnContainedIconPreview = () => {
+export const BtnGroupToggleMenuPreview = () => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
 
@@ -29,16 +29,16 @@ export const BtnContainedIconPreview = () => {
         aria-label="Basic button group"
         sx={{
           borderRadius: "50px",
-          [`& .${buttonGroupClasses.grouped}`]: {
+          [\`& .\${buttonGroupClasses.grouped}\`]: {
             p: "10px 20px",
             borderRadius: "0px !important",
             bgcolor: "#5046E4",
           },
-          [`& .${buttonGroupClasses.grouped}:first-of-type`]: {
+          [\`& .\${buttonGroupClasses.grouped}:first-of-type\`]: {
             borderTopLeftRadius: "50px !important",
             borderBottomLeftRadius: "50px !important",
           },
-          [`& .${buttonGroupClasses.grouped}:last-of-type`]: {
+          [\`& .\${buttonGroupClasses.grouped}:last-of-type\`]: {
             borderTopRightRadius: "50px !important",
             borderBottomRightRadius: "50px !important",
           },
@@ -82,4 +82,4 @@ export const BtnContainedIconPreview = () => {
       </Menu>
     </Box>
   );
-};
+};`

@@ -7,7 +7,7 @@ import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 import { Box, Stack } from "@mui/material";
 import CheckIcon from "@mui/icons-material/Check";
 
-export const BtnVerticalTogglePreview = () => {
+export const BtnGroupVerticalRegularTogglePreview = () => {
   const [view, setView] = React.useState("list");
   const [selected, setSelected] = React.useState(false);
 

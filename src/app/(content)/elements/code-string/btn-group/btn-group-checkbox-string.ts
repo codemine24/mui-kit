@@ -1,4 +1,4 @@
-export const btnGroupCheckboxString = `src/app/(content)/elements/code-string/btn-group/btn-group-modern-string.tsimport * as React from "react";
+export const btnGroupCheckboxString = `import * as React from "react";
 import CheckIcon from "@mui/icons-material/Check";
 import ToggleButton, { toggleButtonClasses } from "@mui/material/ToggleButton";
 import { alpha, Stack } from "@mui/material";

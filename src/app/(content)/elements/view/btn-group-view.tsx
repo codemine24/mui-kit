@@ -17,9 +17,9 @@ import { btnGroupModernString } from "../code-string/btn-group/btn-group-modern-
 import { btnGroupOutlineString } from "../code-string/btn-group/btn-group-outline-string";
 import { btnGroupSoftBgString } from "../code-string/btn-group/btn-group-soft-bg-string";
 import { btnGroupTextString } from "../code-string/btn-group/btn-group-text-string";
+import { btnGroupToggleMenuString } from "../code-string/btn-group/btn-group-toggle-menu-string";
 import { btnGroupVerticalString } from "../code-string/btn-group/btn-group-vertical-string";
-import { btnGroupVerticalToggleString } from "../code-string/btn-group/btn-group-vertical-toggle-string copy";
-import { BtnContainedIconPreview } from "../components/btn-group/btn-contained-icon-preview";
+import { btnGroupVerticalToggleString } from "../code-string/btn-group/btn-group-vertical-toggle-string";
 import { BtnGroupCheckBoxPreview } from "../components/btn-group/btn-group-check-box-preview";
 import { BtnGroupContainedPreview } from "../components/btn-group/btn-group-contained-preview";
 import { BtnGroupDifferentSizeContainedPreview } from "../components/btn-group/btn-group-different-size-contained-preview";
@@ -29,9 +29,9 @@ import { BtnGroupModernPreview } from "../components/btn-group/btn-group-modern-
 import { BtnGroupOutlinePreview } from "../components/btn-group/btn-group-outline-preview";
 import { BtnGroupSoftBgPreview } from "../components/btn-group/btn-group-soft-bg-preview";
 import { BtnGroupTextPreview } from "../components/btn-group/btn-group-text-preview";
+import { BtnGroupToggleMenuPreview } from "../components/btn-group/btn-group-toggle-menu-preview";
 import { BtnGroupVerticalPreview } from "../components/btn-group/btn-group-vertical-preview";
 import { BtnGroupVerticalTogglePreview } from "../components/btn-group/btn-group-vertical-toggle-preview";
-import { BtnVerticalTogglePreview } from "../components/btn-group/btn-vertical-toggle-preview";
 
 const sections = [
   {
@@ -120,17 +120,11 @@ const sections = [
   },
   {
     id: "btn-group-12",
-    title: "Vertical toggle button and checkbox ",
-    description: "A regular but elegant accordion with solid background color",
-    codeString: "",
-    preview: <BtnVerticalTogglePreview />,
-  },
-  {
-    id: "btn-group-13",
-    title: "Vertical toggle button and checkbox ",
-    description: "A regular but elegant accordion with solid background color",
-    codeString: "",
-    preview: <BtnContainedIconPreview />,
+    title: "Horizontal toggle menu with popover",
+    description:
+      "This is an advance example of horizontal toggle menu. Is has builtin popover.",
+    codeString: btnGroupToggleMenuString,
+    preview: <BtnGroupToggleMenuPreview />,
   },
 ];
 
