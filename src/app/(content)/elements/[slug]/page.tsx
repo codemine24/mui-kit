@@ -56,7 +56,7 @@ const componentMap: Record<string, JSX.Element> = {
   "fancy-background": <FancyBgView />,
   tab: <TabView />,
   kbd: <KbdView />,
-  "btn-group": <BtnGroupView />,
+  "button-group": <BtnGroupView />,
 };
 
 export default async function Page({

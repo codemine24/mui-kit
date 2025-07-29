@@ -23,7 +23,7 @@ export const PATHS = {
     RATING: "/elements/rating",
     FANCY_BACKGROUND: "/elements/fancy-background",
     kbd: "/elements/kbd",
-    "btn-group": "/elements/btn-group",
+    "button-group": "/elements/button-group",
   },
   DOCS: {
     ROOT: "/docs",
