@@ -5,7 +5,10 @@ import { alpha } from "@mui/system";
 
 export const ChipSoftBgPreview = () => {
   return (
-    <Stack direction="row" spacing={1}>
+    <Stack
+      sx={{ flexWrap: "wrap", gap: 1 }}
+      direction={{ xs: "column", sm: "row" }}
+    >
       <Chip
         label="Lorem ipsum"
         sx={{

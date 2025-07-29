@@ -3,9 +3,12 @@ import Chip from "@mui/material/Chip";
 import Stack from "@mui/material/Stack";
 import { alpha } from "@mui/system";
 
-export const ChipSoftBgPreview = () => {
+export const ChipSoftBgOutlinedPreview = () => {
   return (
-    <Stack direction="row" spacing={1}>
+    <Stack
+      sx={{ flexWrap: "wrap", gap: 1 }}
+      direction={{ xs: "column", sm: "row" }}
+    >
       <Chip
         label="Lorem ipsum"
         sx={{
@@ -13,10 +16,12 @@ export const ChipSoftBgPreview = () => {
           color: "#367BF5",
           borderRadius: 1,
           fontWeight: "bold",
+          border: "1px solid #367BF5",
         }}
       />
       <Chip
         label="Lorem ipsum"
+        variant="outlined"
         sx={{
           borderRadius: 1,
           fontWeight: "bold",
@@ -24,11 +29,13 @@ export const ChipSoftBgPreview = () => {
       />
       <Chip
         label="Lorem ipsum"
+        variant="outlined"
         sx={{
           bgcolor: `${alpha("#A22F2D", 0.3)}`,
           color: "#A22F2D",
           borderRadius: 1,
           fontWeight: "bold",
+          border: "1px solid #A22F2D",
         }}
       />
       <Chip
@@ -38,6 +45,7 @@ export const ChipSoftBgPreview = () => {
           color: "#045f45",
           borderRadius: 1,
           fontWeight: "bold",
+          border: "1px solid #045f45",
         }}
       />
       <Chip
@@ -47,6 +55,7 @@ export const ChipSoftBgPreview = () => {
           color: "#93410e",
           borderRadius: 1,
           fontWeight: "bold",
+          border: "1px solid #93410e",
         }}
       />
       <Chip
@@ -56,6 +65,7 @@ export const ChipSoftBgPreview = () => {
           color: "#413ba9",
           borderRadius: 1,
           fontWeight: "bold",
+          border: "1px solid #413ba9",
         }}
       />
       <Chip
@@ -65,6 +75,7 @@ export const ChipSoftBgPreview = () => {
           color: "#5e25b7",
           borderRadius: 1,
           fontWeight: "bold",
+          border: "1px solid #5e25b7",
         }}
       />
     </Stack>
