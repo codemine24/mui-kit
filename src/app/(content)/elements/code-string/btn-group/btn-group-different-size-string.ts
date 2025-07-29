@@ -1,4 +1,4 @@
-export const btnDifferentSizeString = `import * as React from "react";
+export const btnGroupDifferentSizeString = `import * as React from "react";
 import Button from "@mui/material/Button";
 import ButtonGroup from "@mui/material/ButtonGroup";
 import { Stack } from "@mui/material";

@@ -9,8 +9,8 @@ import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
 import React from "react";
 import { btnDifferentSizeContainedString } from "../code-string/btn-group/btn-different-size-contained-string";
-import { btnDifferentSizeString } from "../code-string/btn-group/btn-different-size-string";
 import { btnGroupContainedString } from "../code-string/btn-group/btn-group-contained-string";
+import { btnGroupDifferentSizeString } from "../code-string/btn-group/btn-group-different-size-string";
 import { btnGroupModernString } from "../code-string/btn-group/btn-group-modern-string";
 import { btnGroupOutlineString } from "../code-string/btn-group/btn-group-outline-string";
 import { btnGroupSoftBgString } from "../code-string/btn-group/btn-group-soft-bg-string";
@@ -19,8 +19,8 @@ import { btnVerticalString } from "../code-string/btn-group/btn-vertical-string"
 import { BtnCheckBoxPreview } from "../components/btn-group/btn-check-box-preview";
 import { BtnContainedIconPreview } from "../components/btn-group/btn-contained-icon-preview";
 import { BtnDifferentSizeContainedPreview } from "../components/btn-group/btn-different-size-contained-preview";
-import { BtnDifferentSizePreview } from "../components/btn-group/btn-different-size-preview";
 import { BtnGroupContainedPreview } from "../components/btn-group/btn-group-contained-preview";
+import { BtnGroupDifferentSizePreview } from "../components/btn-group/btn-group-different-size-preview";
 import { BtnGroupModernPreview } from "../components/btn-group/btn-group-modern-preview";
 import { BtnGroupOutlinePreview } from "../components/btn-group/btn-group-outline-preview";
 import { BtnGroupSoftBgPreview } from "../components/btn-group/btn-group-soft-bg-preview";
@@ -57,7 +57,7 @@ const sections = [
   {
     id: "btn-group-4",
     title: "Button group text",
-    description: "A regular but elegant accordion with solid background color",
+    description: "mui button group with text buttons.",
     codeString: btnGroupTextString,
     preview: <BtnGroupTextPreview />,
   },
@@ -69,21 +69,22 @@ const sections = [
     preview: <BtnGroupSoftBgPreview />,
   },
   {
-    id: "btn-group-5",
+    id: "btn-group-6",
     title: "Button different size outlined",
-    description: "A regular but elegant accordion with solid background color",
-    codeString: btnDifferentSizeString,
-    preview: <BtnDifferentSizePreview />,
+    description:
+      "material ui button group with different size and outlined border.",
+    codeString: btnGroupDifferentSizeString,
+    preview: <BtnGroupDifferentSizePreview />,
   },
   {
-    id: "btn-group-6",
+    id: "btn-group-7",
     title: "Button different size contained",
     description: "A regular but elegant accordion with solid background color",
     codeString: btnDifferentSizeContainedString,
     preview: <BtnDifferentSizeContainedPreview />,
   },
   {
-    id: "btn-group-7",
+    id: "btn-group-8",
     title: "Vertical button group ",
     description: "A regular but elegant accordion with solid background color",
     codeString: btnVerticalString,
