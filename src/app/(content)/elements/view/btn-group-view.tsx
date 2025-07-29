@@ -8,6 +8,7 @@ import { PATHS } from "@/router/paths";
 import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
 import React from "react";
+import { btnGroupCheckboxString } from "../code-string/btn-group/btn-group-checkbox-string";
 import { btnGroupContainedString } from "../code-string/btn-group/btn-group-contained-string";
 import { btnGroupDifferentSizeContainedString } from "../code-string/btn-group/btn-group-different-size-contained-string";
 import { btnGroupDifferentSizeString } from "../code-string/btn-group/btn-group-different-size-string";
@@ -18,8 +19,8 @@ import { btnGroupSoftBgString } from "../code-string/btn-group/btn-group-soft-bg
 import { btnGroupTextString } from "../code-string/btn-group/btn-group-text-string";
 import { btnGroupVerticalString } from "../code-string/btn-group/btn-group-vertical-string";
 import { btnGroupVerticalToggleString } from "../code-string/btn-group/btn-group-vertical-toggle-string copy";
-import { BtnCheckBoxPreview } from "../components/btn-group/btn-check-box-preview";
 import { BtnContainedIconPreview } from "../components/btn-group/btn-contained-icon-preview";
+import { BtnGroupCheckBoxPreview } from "../components/btn-group/btn-group-check-box-preview";
 import { BtnGroupContainedPreview } from "../components/btn-group/btn-group-contained-preview";
 import { BtnGroupDifferentSizeContainedPreview } from "../components/btn-group/btn-group-different-size-contained-preview";
 import { BtnGroupDifferentSizePreview } from "../components/btn-group/btn-group-different-size-preview";
@@ -111,21 +112,21 @@ const sections = [
   },
 
   {
-    id: "btn-group-10",
+    id: "btn-group-11",
     title: "Check box Toggle button ",
-    description: "A regular but elegant accordion with solid background color",
-    codeString: "",
-    preview: <BtnCheckBoxPreview />,
+    description: "A simple and minimal checkbox toggle button. ",
+    codeString: btnGroupCheckboxString,
+    preview: <BtnGroupCheckBoxPreview />,
   },
   {
-    id: "btn-group-11",
+    id: "btn-group-12",
     title: "Vertical toggle button and checkbox ",
     description: "A regular but elegant accordion with solid background color",
     codeString: "",
     preview: <BtnVerticalTogglePreview />,
   },
   {
-    id: "btn-group-12",
+    id: "btn-group-13",
     title: "Vertical toggle button and checkbox ",
     description: "A regular but elegant accordion with solid background color",
     codeString: "",
