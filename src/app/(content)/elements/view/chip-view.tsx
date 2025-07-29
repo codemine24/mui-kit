@@ -12,6 +12,7 @@ import { ChipSoftBgPreview } from "../components/chip/chip-soft-bg-preview";
 import { ChipSoftBgOutlinedPreview } from "../components/chip/chip-soft-bg-outlined-preview";
 import { ChipCustomSizePreview } from "../components/chip/chip-custom-size-preview";
 import { ChipGradientBgPreview } from "../components/chip/chip-gradient-bg-preview";
+import { ChipPillBadgePreview } from "../components/chip/chip-pill-badge-preview";
 
 const sections = [
   {
@@ -41,6 +42,13 @@ const sections = [
     description: "",
     codeString: "",
     preview: <ChipGradientBgPreview />,
+  },
+  {
+    id: "chip-8",
+    title: "Chip with pill badge",
+    description: "",
+    codeString: "",
+    preview: <ChipPillBadgePreview />,
   },
 ];
 
