@@ -10,7 +10,7 @@ export const ChipRoundedPreview = () => {
         sx={{
           color: "#ffffff",
           bgcolor: "primary.main",
-          borderRadius: 2,
+          fontSize: "20px",
         }}
       />
     </Stack>
