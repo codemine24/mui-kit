@@ -1,4 +1,4 @@
-import * as React from "react";
+export const btnGroupDifferentSizeString = `import * as React from "react";
 import Button from "@mui/material/Button";
 import ButtonGroup from "@mui/material/ButtonGroup";
 import { Stack } from "@mui/material";
@@ -7,9 +7,10 @@ const buttons = [
   <Button key="one">One</Button>,
   <Button key="two">Two</Button>,
   <Button key="three">Three</Button>,
+  <Button key="four">Four</Button>,
 ];
 
-export const BtnGroupDifferentSizePreview = () => {
+export const BtnDifferentSizePreview = () => {
   return (
     <Stack spacing={2} sx={{ alignItems: "center" }}>
       <ButtonGroup size="small" aria-label="Small button group">
@@ -24,3 +25,4 @@ export const BtnGroupDifferentSizePreview = () => {
     </Stack>
   );
 };
+`;
