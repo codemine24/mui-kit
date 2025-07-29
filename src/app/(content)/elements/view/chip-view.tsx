@@ -10,6 +10,7 @@ import Divider from "@mui/material/Divider";
 import React from "react";
 import { ChipSolidBgPreview } from "../components/chip/chip-solid-bg-preview";
 import { ChipRoundedPreview } from "../components/chip/chip-rounded-preview";
+import { ChipOutlinedPreview } from "../components/chip/chip-outlined-preview";
 
 const sections = [
   {
@@ -25,6 +26,13 @@ const sections = [
     description: "A regular but elegant accordion with solid background color",
     codeString: "",
     preview: <ChipRoundedPreview />,
+  },
+  {
+    id: "chip-3",
+    title: "Chip with outlined",
+    description: "A regular but elegant accordion with solid background color",
+    codeString: "",
+    preview: <ChipOutlinedPreview />,
   },
 ];
 
