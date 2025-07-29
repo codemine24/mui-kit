@@ -1,4 +1,4 @@
-export const btnVerticalString = `"use client";
+export const btnGroupVerticalString = `"use client";
 import * as React from "react";
 import Button from "@mui/material/Button";
 import ButtonGroup, { buttonGroupClasses } from "@mui/material/ButtonGroup";

@@ -10,7 +10,7 @@ const buttons = [
   <Button key="four">Four</Button>,
 ];
 
-export const BtnVerticalPreview = () => {
+export const BtnGroupVerticalPreview = () => {
   return (
     <>
       <Box

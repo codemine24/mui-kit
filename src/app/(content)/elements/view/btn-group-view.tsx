@@ -9,29 +9,25 @@ import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
 import React from "react";
 import { btnGroupContainedString } from "../code-string/btn-group/btn-group-contained-string";
-import {
-  btnGroupDifferentSizeContainedString
-} from "../code-string/btn-group/btn-group-different-size-contained-string";
+import { btnGroupDifferentSizeContainedString } from "../code-string/btn-group/btn-group-different-size-contained-string";
 import { btnGroupDifferentSizeString } from "../code-string/btn-group/btn-group-different-size-string";
 import { btnGroupModernString } from "../code-string/btn-group/btn-group-modern-string";
 import { btnGroupOutlineString } from "../code-string/btn-group/btn-group-outline-string";
 import { btnGroupSoftBgString } from "../code-string/btn-group/btn-group-soft-bg-string";
 import { btnGroupTextString } from "../code-string/btn-group/btn-group-text-string";
-import { btnVerticalString } from "../code-string/btn-group/btn-vertical-string";
+import { btnGroupVerticalString } from "../code-string/btn-group/btn-group-vertical-string";
 import { BtnCheckBoxPreview } from "../components/btn-group/btn-check-box-preview";
 import { BtnContainedIconPreview } from "../components/btn-group/btn-contained-icon-preview";
 import { BtnGroupContainedPreview } from "../components/btn-group/btn-group-contained-preview";
-import {
-  BtnGroupDifferentSizeContainedPreview
-} from "../components/btn-group/btn-group-different-size-contained-preview";
+import { BtnGroupDifferentSizeContainedPreview } from "../components/btn-group/btn-group-different-size-contained-preview";
 import { BtnGroupDifferentSizePreview } from "../components/btn-group/btn-group-different-size-preview";
 import { BtnGroupModernPreview } from "../components/btn-group/btn-group-modern-preview";
 import { BtnGroupOutlinePreview } from "../components/btn-group/btn-group-outline-preview";
 import { BtnGroupSoftBgPreview } from "../components/btn-group/btn-group-soft-bg-preview";
 import { BtnGroupTextPreview } from "../components/btn-group/btn-group-text-preview";
+import { BtnGroupVerticalPreview } from "../components/btn-group/btn-group-vertical-preview";
 import { BtnTogglePreview } from "../components/btn-group/btn-toggle-preview";
 import { BtnToggleVerticalPreview } from "../components/btn-group/btn-toggle-vertical-preview";
-import { BtnVerticalPreview } from "../components/btn-group/btn-vertical-preview";
 import { BtnVerticalTogglePreview } from "../components/btn-group/btn-vertical-toggle-preview";
 
 const sections = [
@@ -90,10 +86,11 @@ const sections = [
   },
   {
     id: "btn-group-8",
-    title: "Vertical button group ",
-    description: "A regular but elegant accordion with solid background color",
-    codeString: btnVerticalString,
-    preview: <BtnVerticalPreview />,
+    title: "Vertical button group",
+    description:
+      "Regular vertical button group designed with material ui only.",
+    codeString: btnGroupVerticalString,
+    preview: <BtnGroupVerticalPreview />,
   },
   {
     id: "btn-group-8",
