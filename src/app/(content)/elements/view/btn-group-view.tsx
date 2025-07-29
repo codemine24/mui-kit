@@ -8,8 +8,10 @@ import { PATHS } from "@/router/paths";
 import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
 import React from "react";
-import { btnDifferentSizeContainedString } from "../code-string/btn-group/btn-different-size-contained-string";
 import { btnGroupContainedString } from "../code-string/btn-group/btn-group-contained-string";
+import {
+  btnGroupDifferentSizeContainedString
+} from "../code-string/btn-group/btn-group-different-size-contained-string";
 import { btnGroupDifferentSizeString } from "../code-string/btn-group/btn-group-different-size-string";
 import { btnGroupModernString } from "../code-string/btn-group/btn-group-modern-string";
 import { btnGroupOutlineString } from "../code-string/btn-group/btn-group-outline-string";
@@ -18,8 +20,10 @@ import { btnGroupTextString } from "../code-string/btn-group/btn-group-text-stri
 import { btnVerticalString } from "../code-string/btn-group/btn-vertical-string";
 import { BtnCheckBoxPreview } from "../components/btn-group/btn-check-box-preview";
 import { BtnContainedIconPreview } from "../components/btn-group/btn-contained-icon-preview";
-import { BtnDifferentSizeContainedPreview } from "../components/btn-group/btn-different-size-contained-preview";
 import { BtnGroupContainedPreview } from "../components/btn-group/btn-group-contained-preview";
+import {
+  BtnGroupDifferentSizeContainedPreview
+} from "../components/btn-group/btn-group-different-size-contained-preview";
 import { BtnGroupDifferentSizePreview } from "../components/btn-group/btn-group-different-size-preview";
 import { BtnGroupModernPreview } from "../components/btn-group/btn-group-modern-preview";
 import { BtnGroupOutlinePreview } from "../components/btn-group/btn-group-outline-preview";
@@ -79,9 +83,10 @@ const sections = [
   {
     id: "btn-group-7",
     title: "Button different size contained",
-    description: "A regular but elegant accordion with solid background color",
-    codeString: btnDifferentSizeContainedString,
-    preview: <BtnDifferentSizeContainedPreview />,
+    description:
+      "Use this material ui custom button group with different size and solid background color.",
+    codeString: btnGroupDifferentSizeContainedString,
+    preview: <BtnGroupDifferentSizeContainedPreview />,
   },
   {
     id: "btn-group-8",
