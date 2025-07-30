@@ -10,11 +10,10 @@ export const ChipPillBadgePreview = () => {
       <Box>
         <Chip
           label="Default"
+          size="small"
           sx={{
             bgcolor: `${alpha("#367BF5", 0.3)}`,
             color: "#367BF5",
-            borderRadius: "2rem",
-            p: "0.1rem",
             fontWeight: 500,
           }}
         />
@@ -22,6 +21,7 @@ export const ChipPillBadgePreview = () => {
       <Box>
         <Chip
           label="Dark"
+          size="small"
           sx={{
             borderRadius: "2rem",
             p: "0.1rem",
@@ -33,6 +33,7 @@ export const ChipPillBadgePreview = () => {
         {" "}
         <Chip
           label="Red"
+          size="small"
           sx={{
             bgcolor: `${alpha("#A22F2D", 0.3)}`,
             color: "#A22F2D",
@@ -46,6 +47,7 @@ export const ChipPillBadgePreview = () => {
       <Box>
         <Chip
           label="green"
+          size="small"
           sx={{
             bgcolor: `${alpha("#045f45", 0.3)}`,
             color: "#045f45",
@@ -58,6 +60,7 @@ export const ChipPillBadgePreview = () => {
       <Box>
         <Chip
           label="Yellow"
+          size="small"
           sx={{
             bgcolor: `${alpha("#fef3c7", 1)}`,
             color: "#93410e",
@@ -70,6 +73,7 @@ export const ChipPillBadgePreview = () => {
       <Box>
         <Chip
           label="Indigo"
+          size="small"
           sx={{
             bgcolor: `${alpha("#413ba9", 0.3)}`,
             color: "#413ba9",
@@ -82,6 +86,7 @@ export const ChipPillBadgePreview = () => {
       <Box>
         <Chip
           label="Purple"
+          size="small"
           sx={{
             bgcolor: `${alpha("#5e25b7", 0.3)}`,
             color: "#5e25b7",
