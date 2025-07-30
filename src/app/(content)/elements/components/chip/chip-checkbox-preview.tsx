@@ -1,18 +1,21 @@
 import * as React from "react";
-import Chip from "@mui/material/Chip";
+import Chip, { chipClasses } from "@mui/material/Chip";
 import Stack from "@mui/material/Stack";
 import Checkbox from "@mui/material/Checkbox";
+import { Box } from "@mui/material";
 
 interface CheckboxChipProps {
   label: string;
   checked: boolean;
   onChange: (checked: boolean) => void;
+  useErrorColor?: boolean;
 }
 
 const CheckboxChip: React.FC<CheckboxChipProps> = ({
   label,
   checked,
   onChange,
+  useErrorColor = false,
 }) => {
   const handleClick = () => {
     onChange(!checked);
@@ -21,9 +24,9 @@ const CheckboxChip: React.FC<CheckboxChipProps> = ({
   return (
     <Chip
       label={
-        <div style={{ display: "flex", alignItems: "center" }}>
+        <Box style={{ display: "flex", alignItems: "center" }}>
           <Checkbox
-            size="small"
+            size="medium"
             checked={checked}
             style={{ padding: 0, marginRight: 4, color: "inherit" }}
             onClick={(e) => e.stopPropagation()}
@@ -33,14 +36,16 @@ const CheckboxChip: React.FC<CheckboxChipProps> = ({
             }}
           />
           {label}
-        </div>
+        </Box>
       }
-      variant={checked ? "filled" : "outlined"}
+      variant="filled"
       onClick={handleClick}
-      color={checked ? "primary" : "default"}
+      color={checked ? (useErrorColor ? "error" : "primary") : "default"}
       sx={{
+        textTransform: "uppercase",
+        borderRadius: 2,
         cursor: "pointer",
-        "& .MuiChip-label": {
+        [`& .${chipClasses.label}`]: {
           paddingLeft: "4px",
         },
       }}
@@ -49,14 +54,21 @@ const CheckboxChip: React.FC<CheckboxChipProps> = ({
 };
 
 export const ChipCheckboxPreview = () => {
-  const [checked, setChecked] = React.useState(false);
+  const [onlineChecked, setOnlineChecked] = React.useState(false);
+  const [offlineChecked, setOfflineChecked] = React.useState(false);
 
   return (
-    <Stack direction="row" spacing={1}>
+    <Stack direction="row" spacing={2}>
       <CheckboxChip
-        label="Checkable Chip"
-        checked={checked}
-        onChange={setChecked}
+        label="Online"
+        checked={onlineChecked}
+        onChange={setOnlineChecked}
+      />
+      <CheckboxChip
+        label="Offline"
+        checked={offlineChecked}
+        onChange={setOfflineChecked}
+        useErrorColor={true}
       />
     </Stack>
   );

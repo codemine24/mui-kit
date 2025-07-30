@@ -124,7 +124,7 @@ const sections = [
     preview: <ChipActionClickableDeletablePreview />,
   },
   {
-    id: "chip-17",
+    id: "chip-18",
     title: "Chip with checkbox",
     description: "",
     codeString: "",
