@@ -17,6 +17,7 @@ import { ChipCustomAvatarPreview } from "../components/chip/chip-custom-avatar-p
 import { ChipIconPreview } from "../components/chip/chip-icon-preview";
 import { ChipCustomNumberPreview } from "../components/chip/chip-custom-number-preview";
 import { ChipDeletableIconPreview } from "../components/chip/chip-deletable-icon-preview";
+import { ChipStatusPreview } from "../components/chip/chip-status-preview";
 
 const sections = [
   {
@@ -81,6 +82,13 @@ const sections = [
     description: "",
     codeString: "",
     preview: <ChipDeletableIconPreview />,
+  },
+  {
+    id: "chip-13",
+    title: "Chip with avatar",
+    description: "",
+    codeString: "",
+    preview: <ChipStatusPreview />,
   },
 ];
 
