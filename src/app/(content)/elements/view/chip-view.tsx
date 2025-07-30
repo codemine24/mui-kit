@@ -16,6 +16,7 @@ import { ChipPillBadgePreview } from "../components/chip/chip-pill-badge-preview
 import { ChipCustomAvatarPreview } from "../components/chip/chip-custom-avatar-preview";
 import { ChipIconPreview } from "../components/chip/chip-icon-preview";
 import { ChipCustomNumberPreview } from "../components/chip/chip-custom-number-preview";
+import { ChipDeletableIconPreview } from "../components/chip/chip-deletable-icon-preview";
 
 const sections = [
   {
@@ -73,6 +74,13 @@ const sections = [
     description: "",
     codeString: "",
     preview: <ChipCustomNumberPreview />,
+  },
+  {
+    id: "chip-12",
+    title: "Chip with avatar",
+    description: "",
+    codeString: "",
+    preview: <ChipDeletableIconPreview />,
   },
 ];
 
