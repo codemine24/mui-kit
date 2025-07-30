@@ -18,6 +18,7 @@ import { ChipIconPreview } from "../components/chip/chip-icon-preview";
 import { ChipCustomNumberPreview } from "../components/chip/chip-custom-number-preview";
 import { ChipDeletableIconPreview } from "../components/chip/chip-deletable-icon-preview";
 import { ChipStatusPreview } from "../components/chip/chip-status-preview";
+import { ChipOnlyIconPreview } from "../components/chip/chip-only-icon";
 
 const sections = [
   {
@@ -89,6 +90,13 @@ const sections = [
     description: "",
     codeString: "",
     preview: <ChipStatusPreview />,
+  },
+  {
+    id: "chip-14",
+    title: "Chip with only icon",
+    description: "",
+    codeString: "",
+    preview: <ChipOnlyIconPreview />,
   },
 ];
 
