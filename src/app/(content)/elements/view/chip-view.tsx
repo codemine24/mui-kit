@@ -13,7 +13,8 @@ import { ChipSoftBgOutlinedPreview } from "../components/chip/chip-soft-bg-outli
 import { ChipCustomSizePreview } from "../components/chip/chip-custom-size-preview";
 import { ChipGradientBgPreview } from "../components/chip/chip-gradient-bg-preview";
 import { ChipPillBadgePreview } from "../components/chip/chip-pill-badge-preview";
-import ChipIconPreview from "../components/chip/chip-icon-preview";
+import { ChipCustomAvatarPreview } from "../components/chip/chip-custom-avatar-preview";
+import { ChipIconPreview } from "../components/chip/chip-icon-preview";
 
 const sections = [
   {
@@ -57,6 +58,13 @@ const sections = [
     description: "",
     codeString: "",
     preview: <ChipIconPreview />,
+  },
+  {
+    id: "chip-10",
+    title: "Chip with avatar",
+    description: "",
+    codeString: "",
+    preview: <ChipCustomAvatarPreview />,
   },
 ];
 

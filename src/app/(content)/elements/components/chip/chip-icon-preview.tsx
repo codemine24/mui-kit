@@ -4,7 +4,7 @@ import Stack from "@mui/material/Stack";
 import FaceIcon from "@mui/icons-material/Face";
 import { alpha } from "@mui/system";
 
-export default function ChipIconPreview() {
+export const ChipIconPreview = () => {
   return (
     <Stack
       sx={{ flexWrap: "wrap", gap: 1 }}
@@ -53,4 +53,4 @@ export default function ChipIconPreview() {
       />
     </Stack>
   );
-}
+};
