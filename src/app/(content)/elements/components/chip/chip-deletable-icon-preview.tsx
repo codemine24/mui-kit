@@ -1,7 +1,6 @@
 import * as React from "react";
 import Chip from "@mui/material/Chip";
 import Stack from "@mui/material/Stack";
-import FaceIcon from "@mui/icons-material/Face";
 import { Avatar } from "@mui/material";
 
 export const ChipDeletableIconPreview = () => {
