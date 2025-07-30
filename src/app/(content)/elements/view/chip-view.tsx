@@ -20,7 +20,9 @@ import { ChipDeletableIconPreview } from "../components/chip/chip-deletable-icon
 import { ChipStatusPreview } from "../components/chip/chip-status-preview";
 import { ChipOnlyIconPreview } from "../components/chip/chip-only-icon";
 import { ChipActionClickablePreview } from "../components/chip/chip-action-clickable-preview";
-import ChipActionDeletablePreview from "../components/chip/chip-action-deletable-preview";
+import { ChipActionDeletablePreview } from "../components/chip/chip-action-deletable-preview";
+import { ChipActionClickableDeletablePreview } from "../components/chip/chip-action-clickable-deletable-preview";
+import { ChipCheckboxPreview } from "../components/chip/chip-checkbox-preview";
 
 const sections = [
   {
@@ -113,6 +115,20 @@ const sections = [
     description: "",
     codeString: "",
     preview: <ChipActionDeletablePreview />,
+  },
+  {
+    id: "chip-17",
+    title: "Chip with clickable deletable",
+    description: "",
+    codeString: "",
+    preview: <ChipActionClickableDeletablePreview />,
+  },
+  {
+    id: "chip-17",
+    title: "Chip with checkbox",
+    description: "",
+    codeString: "",
+    preview: <ChipCheckboxPreview />,
   },
 ];
 

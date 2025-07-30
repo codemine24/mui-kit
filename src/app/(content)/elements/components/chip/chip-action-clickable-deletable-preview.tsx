@@ -14,7 +14,7 @@ const ListItem = styled("li")(({ theme }) => ({
   margin: theme.spacing(0.5),
 }));
 
-export const ChipActionDeletablePreview = () => {
+export const ChipActionClickableDeletablePreview = () => {
   const [chipData, setChipData] = React.useState<readonly ChipData[]>([
     { key: 0, label: "Angular" },
     { key: 1, label: "jQuery" },
@@ -49,6 +49,9 @@ export const ChipActionDeletablePreview = () => {
               icon={icon}
               label={data.label}
               onDelete={handleDelete(data)}
+              component="a"
+              href="#"
+              clickable
             />
           </ListItem>
         );

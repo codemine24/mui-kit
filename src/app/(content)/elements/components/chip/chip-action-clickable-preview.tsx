@@ -9,7 +9,7 @@ export const ChipActionClickablePreview = () => {
       <Chip
         label="Clickable Link"
         component="a"
-        href="#basic-chip"
+        href="#"
         variant="outlined"
         clickable
       />
