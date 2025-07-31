@@ -5,3 +5,4 @@ export * from "./skeleton-social-post-preview";
 export * from "./skeleton-without-content";
 export * from "./skeleton-card-preview";
 export * from "./skeleton-vertical-preview";
+export * from "./skeleton-list-preview";
