@@ -13,8 +13,8 @@ export const SkeletonTestimonialPreview = () => {
 
             <Box display="flex" justifyContent="center" alignItems="center" gap={2} mt={2}>
                 <Skeleton variant="circular" width={40} height={40} />
-                <Skeleton variant="text" width={200} height={20} />
-                <Skeleton variant="text" width={200} height={20} />
+                <Skeleton variant="text" width={200} height={15} />
+                <Skeleton variant="text" width={200} height={15} />
             </Box>
 
         </Stack>

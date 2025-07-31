@@ -7,3 +7,4 @@ export * from "./skeleton-card-preview";
 export * from "./skeleton-vertical-preview";
 export * from "./skeleton-list-preview";
 export * from "./skeleton-testimonial-preview";
+export * from "./skeleton-card-action-button-preview";
