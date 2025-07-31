@@ -24,6 +24,7 @@ import { TabView } from "../view/tab-view";
 import { TableView } from "../view/table-view";
 import { TimelineView } from "../view/timeline-view";
 import { ProgressbarView } from "../view/progressbar-view";
+import { SkeletonView } from "../view/skeleton-view";
 
 export async function generateStaticParams() {
   return elementsArr.map((element) => ({
@@ -58,6 +59,7 @@ const componentMap: Record<string, JSX.Element> = {
   tab: <TabView />,
   progressbar: <ProgressbarView />,
   kbd: <KbdView />,
+  skeleton: <SkeletonView />,
 };
 
 export default async function Page({
