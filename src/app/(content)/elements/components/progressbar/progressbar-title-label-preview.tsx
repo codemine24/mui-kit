@@ -30,6 +30,7 @@ export const ProgressbarTitleLabelPreview = () => {
                     }}
                 />
             </Box>
+            
             <Box>
                 <Box display="flex" alignItems="center" justifyContent="space-between" mb={1}>
                     <Typography variant="body2" color="text.secondary">Progress</Typography>
