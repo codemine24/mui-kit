@@ -6,7 +6,7 @@ import { useTheme, useMediaQuery } from "@mui/material"
 
 type ResponsiveValue<T> = T | T[]
 
-export function useResponsiveValue<T>(value: ResponsiveValue<T>): T {
+function useResponsiveValue<T>(value: ResponsiveValue<T>): T {
   const theme = useTheme()
 
   const isXl = useMediaQuery(theme.breakpoints.up("xl"))
