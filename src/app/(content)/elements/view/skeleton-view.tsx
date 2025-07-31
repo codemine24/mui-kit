@@ -8,7 +8,7 @@ import { PATHS } from "@/router/paths";
 import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
 import React from "react";
-import { SkeletonSimplePreview } from "../components/skeleton";
+import { SkeletonBasicPreview } from "../components/skeleton";
 
 const sections = [
     {
@@ -17,7 +17,7 @@ const sections = [
         description:
             "A basic customizable skeleton component built with Material UI.",
         codeString: "",
-        preview: <SkeletonSimplePreview />,
+        preview: <SkeletonBasicPreview />,
     },
 ];
 
