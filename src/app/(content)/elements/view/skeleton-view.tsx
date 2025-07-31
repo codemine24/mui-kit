@@ -14,7 +14,8 @@ import {
     SkeletonSquireBlockPreview,
     SkeletonSocialPostPreview,
     SkeletonWithoutContent,
-    SkeletonCardPreview
+    SkeletonCardPreview,
+    SkeletonVerticalPreview
 } from "../components/skeleton";
 
 const sections = [
@@ -65,6 +66,14 @@ const sections = [
             "A basic customizable skeleton component built with Material UI.",
         codeString: "",
         preview: <SkeletonCardPreview />,
+    },
+    {
+        id: "skeleton-7",
+        title: "Vertical MUI Skeleton",
+        description:
+            "A basic customizable skeleton component built with Material UI.",
+        codeString: "",
+        preview: <SkeletonVerticalPreview />,
     },
 ];
 
