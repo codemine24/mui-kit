@@ -1,4 +1,4 @@
-import Box from "@mui/material/Box";
+export const ProgressbarFloatingLabelString = `import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
 import { useTheme } from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
@@ -15,7 +15,7 @@ const ProgressBar = ({ progress }: { progress: number }) => {
         sx={{
           position: "absolute",
           top: -30,
-          left: `${progress}%`,
+          left: \`\${progress}%\`,
           transform:
             progress === 0
               ? "translateX(0%)"
@@ -52,7 +52,7 @@ const ProgressBar = ({ progress }: { progress: number }) => {
         <Box
           sx={{
             height: "100%",
-            width: `${progress}%`,
+            width: \`\${progress}%\`,
             backgroundColor: "#1a90ff",
             borderRadius: 5,
             transition: "width 0.3s ease",
@@ -73,4 +73,4 @@ export const ProgressbarFloatingLabelPreview = () => {
       <ProgressBar progress={100} />
     </Stack>
   );
-};
+};`;

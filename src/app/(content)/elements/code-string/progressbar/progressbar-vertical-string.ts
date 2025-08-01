@@ -1,4 +1,4 @@
-import { Stack } from "@mui/material";
+export const progressbarVerticalString = `import { Stack } from "@mui/material";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 
@@ -18,7 +18,7 @@ const VerticalProgressBar = ({ progress }: { progress: number }) => (
       sx={{
         position: "absolute",
         bottom: 0,
-        height: `${progress}%`,
+        height: \`\${progress}%\`,
         width: "100%",
         backgroundColor: "#E60076",
         transition: "height 0.3s ease",
@@ -53,4 +53,4 @@ export const ProgressbarVerticalPreview = () => {
       <VerticalProgressBar progress={100} />
     </Stack>
   );
-};
+};`;

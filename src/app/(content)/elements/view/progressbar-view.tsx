@@ -12,8 +12,10 @@ import { progressbarBasicString } from "../code-string/progressbar/progressbar-b
 import { progressbarCustomString } from "../code-string/progressbar/progressbar-custom-string";
 import { progressbarCustomWithLabelString } from "../code-string/progressbar/progressbar-custom-with-label-string";
 import { progressbarDifferentHeightString } from "../code-string/progressbar/progressbar-different-height-string";
+import { ProgressbarFloatingLabelString } from "../code-string/progressbar/progressbar-floating-label-string";
 import { progressbarNoBorderRadiusString } from "../code-string/progressbar/progressbar-no-border-radius-string";
 import { progressbarTitleLabelString } from "../code-string/progressbar/progressbar-title-label-string";
+import { progressbarVerticalString } from "../code-string/progressbar/progressbar-vertical-string";
 import { progressbarWithLabelString } from "../code-string/progressbar/progressbar-with-label-string";
 import {
   ProgressbarBasicPreview,
@@ -88,16 +90,16 @@ const sections = [
     id: "progressbar-8",
     title: "Progressbar with floating label",
     description:
-      "A basic customizable progressbar component built with Material UI.",
-    codeString: "",
+      "Mui progressbar with floating label. If you want to give your progressbar a modern look, go with this variant. ",
+    codeString: ProgressbarFloatingLabelString,
     preview: <ProgressbarFloatingLabelPreview />,
   },
   {
     id: "progressbar-9",
     title: "Progressbar vertical",
     description:
-      "A basic customizable progressbar component built with Material UI.",
-    codeString: "",
+      "Use vertical material ui progressbar. Raw material ui and nothing else. ",
+    codeString: progressbarVerticalString,
     preview: <ProgressbarVerticalPreview />,
   },
   {
