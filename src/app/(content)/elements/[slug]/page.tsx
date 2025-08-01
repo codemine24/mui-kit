@@ -24,6 +24,7 @@ import { StepperView } from "../view/stepper-view";
 import { TabView } from "../view/tab-view";
 import { TableView } from "../view/table-view";
 import { TimelineView } from "../view/timeline-view";
+import { SkeletonView } from "../view/skeleton-view";
 
 import { BtnGroupView } from "../view/btn-group-view";
 import { ChipView } from "../view/chip-view";
@@ -60,6 +61,7 @@ const componentMap: Record<string, JSX.Element> = {
   tab: <TabView />,
   progressbar: <ProgressbarView />,
   kbd: <KbdView />,
+  skeleton: <SkeletonView />,
   "button-group": <BtnGroupView />,
   chip: <ChipView />,
 };

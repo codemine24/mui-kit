@@ -24,6 +24,7 @@ export const PATHS = {
     FANCY_BACKGROUND: "/elements/fancy-background",
     PROGRESSBAR: "/elements/progressbar",
     kbd: "/elements/kbd",
+    SKELETON: "/elements/skeleton",
     BUTTON_GROUP: "/elements/button-group",
     CHIP: "/elements/chip",
   },
