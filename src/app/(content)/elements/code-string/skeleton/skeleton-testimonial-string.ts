@@ -1,4 +1,4 @@
-import { Box, Stack, Skeleton } from "@mui/material";
+export const skeletonTestimonialString = `import { Box, Stack, Skeleton } from "@mui/material";
 
 export const SkeletonTestimonialPreview = () => {
   return (
@@ -31,4 +31,4 @@ export const SkeletonTestimonialPreview = () => {
       </Box>
     </Stack>
   );
-};
+};`;

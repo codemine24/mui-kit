@@ -1,4 +1,4 @@
-import { Box, Skeleton } from "@mui/material";
+export const skeletonCardActionButtonString = `import { Box, Skeleton } from "@mui/material";
 import ImageIcon from "@mui/icons-material/Image";
 
 export const SkeletonCardActionButtonPreview = () => {
@@ -39,4 +39,4 @@ export const SkeletonCardActionButtonPreview = () => {
       </Box>
     </Box>
   );
-};
+};`;

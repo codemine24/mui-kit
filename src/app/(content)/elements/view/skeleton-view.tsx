@@ -10,10 +10,12 @@ import Divider from "@mui/material/Divider";
 import React from "react";
 import { skeletonAnimationString } from "../code-string/skeleton/skeleton-animation-string";
 import { skeletonBasicString } from "../code-string/skeleton/skeleton-basic-string";
+import { skeletonCardActionButtonString } from "../code-string/skeleton/skeleton-card-action-button-string";
 import { skeletonCardString } from "../code-string/skeleton/skeleton-card-string";
 import { skeletonListString } from "../code-string/skeleton/skeleton-list-string";
 import { skeletonSocialPostString } from "../code-string/skeleton/skeleton-social-post-string";
 import { skeletonSquareBlockString } from "../code-string/skeleton/skeleton-square-block-string";
+import { skeletonTestimonialString } from "../code-string/skeleton/skeleton-testimonial-string";
 import { skeletonVerticalString } from "../code-string/skeleton/skeleton-vertical-string";
 import { skeletonWithoutContentString } from "../code-string/skeleton/skeleton-without-content-string";
 import {
@@ -90,16 +92,17 @@ const sections = [
   },
   {
     id: "skeleton-9",
-    title: "Testimonial MUI Skeleton",
-    description: "",
-    codeString: "",
+    title: "Testimonial skeleton",
+    description:
+      "This skeleton is perfect for client testimonial section designed with material ui.",
+    codeString: skeletonTestimonialString,
     preview: <SkeletonTestimonialPreview />,
   },
   {
     id: "skeleton-10",
-    title: "Card Action Button MUI Skeleton",
-    description: "",
-    codeString: "",
+    title: "Card action button skeleton",
+    description: "Use this card action button skeleton. ",
+    codeString: skeletonCardActionButtonString,
     preview: <SkeletonCardActionButtonPreview />,
   },
 ];
@@ -121,7 +124,7 @@ export const SkeletonView = () => {
       />
       <PageTitle
         title="Skeleton"
-        description="Material UI provides a base skeleton component, but we’ve extended it with multiple advanced use-cases like emoji labels, text feedback, precision control, animated interactions, and icon customizations."
+        description="Skeleton is one of the most commonly used for any website. All these skeleton designed with purely material ui and fully customizable. "
       />
 
       <Divider sx={{ my: 4 }} />
