@@ -11,6 +11,7 @@ import React from "react";
 import { skeletonAnimationString } from "../code-string/skeleton/skeleton-animation-string";
 import { skeletonBasicString } from "../code-string/skeleton/skeleton-basic-string";
 import { skeletonCardString } from "../code-string/skeleton/skeleton-card-string";
+import { skeletonListString } from "../code-string/skeleton/skeleton-list-string";
 import { skeletonSocialPostString } from "../code-string/skeleton/skeleton-social-post-string";
 import { skeletonSquareBlockString } from "../code-string/skeleton/skeleton-square-block-string";
 import { skeletonVerticalString } from "../code-string/skeleton/skeleton-vertical-string";
@@ -82,9 +83,9 @@ const sections = [
   },
   {
     id: "skeleton-8",
-    title: "List MUI Skeleton",
-    description: "",
-    codeString: "",
+    title: "List Skeleton",
+    description: "If you need list skeleton, use this.",
+    codeString: skeletonListString,
     preview: <SkeletonListPreview />,
   },
   {
