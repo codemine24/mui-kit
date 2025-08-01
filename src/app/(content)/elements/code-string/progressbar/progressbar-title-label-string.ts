@@ -1,4 +1,4 @@
-import Box from "@mui/material/Box";
+export const progressbarTitleLabelString = `import Box from "@mui/material/Box";
 import LinearProgress, {
     linearProgressClasses,
 } from "@mui/material/LinearProgress";
@@ -31,12 +31,12 @@ export const ProgressbarTitleLabelPreview = () => {
           sx={{
             height: 10,
             borderRadius: 5,
-            [`&.${linearProgressClasses.colorPrimary}`]: {
+            [\`&.\${linearProgressClasses.colorPrimary}\`]: {
               backgroundColor: isDarkMode
                 ? theme.palette.grey[800]
                 : theme.palette.grey[200],
             },
-            [`& .${linearProgressClasses.bar}`]: {
+            [\`& .\${linearProgressClasses.bar}\`]: {
               borderRadius: 5,
               backgroundColor: theme.palette.secondary.main,
             },
@@ -64,12 +64,12 @@ export const ProgressbarTitleLabelPreview = () => {
           sx={{
             height: 10,
             borderRadius: 5,
-            [`&.${linearProgressClasses.colorPrimary}`]: {
+            [\`&.\${linearProgressClasses.colorPrimary}\`]: {
               backgroundColor: isDarkMode
                 ? theme.palette.grey[800]
                 : theme.palette.grey[200],
             },
-            [`& .${linearProgressClasses.bar}`]: {
+            [\`& .\${linearProgressClasses.bar}\`]: {
               borderRadius: 5,
               backgroundColor: theme.palette.secondary.main,
             },
@@ -97,12 +97,12 @@ export const ProgressbarTitleLabelPreview = () => {
           sx={{
             height: 10,
             borderRadius: 5,
-            [`&.${linearProgressClasses.colorPrimary}`]: {
+            [\`&.\${linearProgressClasses.colorPrimary}\`]: {
               backgroundColor: isDarkMode
                 ? theme.palette.grey[800]
                 : theme.palette.grey[200],
             },
-            [`& .${linearProgressClasses.bar}`]: {
+            [\`& .\${linearProgressClasses.bar}\`]: {
               borderRadius: 5,
               backgroundColor: theme.palette.secondary.main,
             },
@@ -112,3 +112,4 @@ export const ProgressbarTitleLabelPreview = () => {
     </Stack>
   );
 };
+`;

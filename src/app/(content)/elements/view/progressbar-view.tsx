@@ -9,22 +9,25 @@ import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
 import React from "react";
 import { progressbarBasicString } from "../code-string/progressbar/progressbar-basic-string";
-import {
-  ProgressbarBasicPreview,
-  ProgressbarCircularBasicPreview,
-  ProgressbarCustomPreview,
-  ProgressbarCustomWithLabelPreview,
-  ProgressbarDifferentHeightPreview,
-  ProgressbarFloatingLabelPreview,
-  ProgressbarNoBorderRadiusPreview,
-  ProgressbarSemiCircularProgressPreview,
-  ProgressbarStepsPreview,
-  ProgressbarTitleLabelPreview,
-  ProgressbarVerticalPreview,
-  ProgressbarWithLabelPreview,
-} from "../components/progressbar";
+import { progressbarCustomString } from "../code-string/progressbar/progressbar-custom-string";
 import { progressbarDifferentHeightString } from "../code-string/progressbar/progressbar-different-height-string";
 import { progressbarNoBorderRadiusString } from "../code-string/progressbar/progressbar-no-border-radius-string";
+import { progressbarTitleLabelString } from "../code-string/progressbar/progressbar-title-label-string";
+import { progressbarWithLabelString } from "../code-string/progressbar/progressbar-with-label-string";
+import {
+    ProgressbarBasicPreview,
+    ProgressbarCircularBasicPreview,
+    ProgressbarCustomPreview,
+    ProgressbarCustomWithLabelPreview,
+    ProgressbarDifferentHeightPreview,
+    ProgressbarFloatingLabelPreview,
+    ProgressbarNoBorderRadiusPreview,
+    ProgressbarSemiCircularProgressPreview,
+    ProgressbarStepsPreview,
+    ProgressbarTitleLabelPreview,
+    ProgressbarVerticalPreview,
+    ProgressbarWithLabelPreview,
+} from "../components/progressbar";
 
 const sections = [
   {
@@ -53,24 +56,23 @@ const sections = [
     id: "progressbar-4",
     title: "With label",
     description:
-      "A basic customizable progressbar component built with Material UI.",
-    codeString: "",
+      "This progressbar has label. You can use text or icon as label.",
+    codeString: progressbarWithLabelString,
     preview: <ProgressbarWithLabelPreview />,
   },
   {
     id: "progressbar-5",
     title: "With title & label",
-    description:
-      "A basic customizable progressbar component built with Material UI.",
-    codeString: "",
+    description: "Material ui progressbar with title and label. ",
+    codeString: progressbarTitleLabelString,
     preview: <ProgressbarTitleLabelPreview />,
   },
   {
     id: "progressbar-6",
-    title: "Custom",
+    title: "Custom design",
     description:
-      "A basic customizable progressbar component built with Material UI.",
-    codeString: "",
+      "If you don't want to use Material ui native progressbar component, you can use this variant. We designed it with other raw components. ",
+    codeString: progressbarCustomString,
     preview: <ProgressbarCustomPreview />,
   },
   {

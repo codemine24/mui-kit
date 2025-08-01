@@ -1,6 +1,4 @@
-"use client";
-
-import CancelIcon from "@mui/icons-material/Cancel";
+export const progressbarWithLabelString = `import CancelIcon from "@mui/icons-material/Cancel";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import Box from "@mui/material/Box";
 import LinearProgress, {
@@ -24,12 +22,12 @@ export const ProgressbarWithLabelPreview = () => {
             sx={{
               height: 10,
               borderRadius: 5,
-              [`&.${linearProgressClasses.colorPrimary}`]: {
+              [\`&.\${linearProgressClasses.colorPrimary}\`]: {
                 backgroundColor: isDarkMode
                   ? theme.palette.grey[800]
                   : theme.palette.grey[200],
               },
-              [`& .${linearProgressClasses.bar}`]: {
+              [\`& .\${linearProgressClasses.bar}\`]: {
                 borderRadius: 5,
                 backgroundColor: "secondary.main",
               },
@@ -51,12 +49,12 @@ export const ProgressbarWithLabelPreview = () => {
             sx={{
               height: 10,
               borderRadius: 5,
-              [`&.${linearProgressClasses.colorPrimary}`]: {
+              [\`&.\${linearProgressClasses.colorPrimary}\`]: {
                 backgroundColor: isDarkMode
                   ? theme.palette.grey[800]
                   : theme.palette.grey[200],
               },
-              [`& .${linearProgressClasses.bar}`]: {
+              [\`& .\${linearProgressClasses.bar}\`]: {
                 borderRadius: 5,
                 backgroundColor: "secondary.main",
               },
@@ -78,12 +76,12 @@ export const ProgressbarWithLabelPreview = () => {
             sx={{
               height: 10,
               borderRadius: 5,
-              [`&.${linearProgressClasses.colorPrimary}`]: {
+              [\`&.\${linearProgressClasses.colorPrimary}\`]: {
                 backgroundColor: isDarkMode
                   ? theme.palette.grey[800]
                   : theme.palette.grey[200],
               },
-              [`& .${linearProgressClasses.bar}`]: {
+              [\`& .\${linearProgressClasses.bar}\`]: {
                 borderRadius: 5,
                 backgroundColor: theme.palette.secondary.main,
               },
@@ -105,12 +103,12 @@ export const ProgressbarWithLabelPreview = () => {
             sx={{
               height: 10,
               borderRadius: 5,
-              [`&.${linearProgressClasses.colorPrimary}`]: {
+              [\`&.\${linearProgressClasses.colorPrimary}\`]: {
                 backgroundColor: isDarkMode
                   ? theme.palette.grey[800]
                   : theme.palette.grey[200],
               },
-              [`& .${linearProgressClasses.bar}`]: {
+              [\`& .\${linearProgressClasses.bar}\`]: {
                 borderRadius: 5,
                 backgroundColor: theme.palette.error.main,
               },
@@ -132,12 +130,12 @@ export const ProgressbarWithLabelPreview = () => {
             sx={{
               height: 10,
               borderRadius: 5,
-              [`&.${linearProgressClasses.colorPrimary}`]: {
+              [\`&.\${linearProgressClasses.colorPrimary}\`]: {
                 backgroundColor: isDarkMode
                   ? theme.palette.grey[800]
                   : theme.palette.grey[200],
               },
-              [`& .${linearProgressClasses.bar}`]: {
+              [\`& .\${linearProgressClasses.bar}\`]: {
                 borderRadius: 5,
                 backgroundColor: theme.palette.success.main,
               },
@@ -152,4 +150,4 @@ export const ProgressbarWithLabelPreview = () => {
       </Box>
     </Stack>
   );
-};
+};`;
