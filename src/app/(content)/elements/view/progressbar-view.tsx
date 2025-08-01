@@ -31,6 +31,7 @@ import {
   ProgressbarVerticalPreview,
   ProgressbarWithLabelPreview,
 } from "../components/progressbar";
+import { progressbarStepsString } from "../code-string/progressbar/progressbar-steps-string";
 
 const sections = [
   {
@@ -106,8 +107,8 @@ const sections = [
     id: "progressbar-10",
     title: "Progressbar steps",
     description:
-      "A basic customizable progressbar component built with Material UI.",
-    codeString: "",
+      "This different looking modern progressbar shows the progress in steps. You can define the number of steps and completed steps. ",
+    codeString: progressbarStepsString,
     preview: <ProgressbarStepsPreview />,
   },
   {

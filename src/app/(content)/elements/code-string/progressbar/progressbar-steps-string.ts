@@ -1,4 +1,4 @@
-import React from "react";
+export const progressbarStepsString = `import React from "react";
 import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
@@ -31,14 +31,14 @@ export const StepProgressBar = ({
 
   return (
     <Box display="flex" alignItems="center" flexWrap="wrap" gap={1}>
-      <Box display="flex" gap={`${gap}px`}>
+      <Box display="flex" gap={\`\${gap}px\`}>
         {Array.from({ length: totalSteps }).map((_, i) => (
           <Box
             key={i}
             sx={{
               width: stepSize,
               height: 8,
-              backgroundColor: i < completedSteps ? color : `${color}33`,
+              backgroundColor: i < completedSteps ? color : \`\${color}33\`,
               borderRadius: rounded ? "4px" : "2px",
               transition: "background-color 0.3s",
             }}
@@ -90,4 +90,4 @@ export const ProgressbarStepsPreview = () => {
       />
     </Stack>
   );
-};
+};`;
