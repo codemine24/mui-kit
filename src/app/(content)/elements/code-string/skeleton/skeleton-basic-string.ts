@@ -1,4 +1,4 @@
-import Skeleton from "@mui/material/Skeleton";
+export const skeletonBasicString = `import Skeleton from "@mui/material/Skeleton";
 import Stack from "@mui/material/Stack";
 
 export const SkeletonBasicPreview = () => {
@@ -11,3 +11,4 @@ export const SkeletonBasicPreview = () => {
     </Stack>
   );
 };
+`;
