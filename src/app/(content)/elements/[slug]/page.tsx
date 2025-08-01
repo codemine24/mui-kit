@@ -18,11 +18,14 @@ import { KbdView } from "../view/kbd-view";
 import { OTPView } from "../view/otp-view";
 import { PaginationView } from "../view/pagination-view";
 import { PopoverView } from "../view/popover-view";
+import { ProgressbarView } from "../view/progressbar-view";
 import { RatingView } from "../view/rating-view";
 import { StepperView } from "../view/stepper-view";
 import { TabView } from "../view/tab-view";
 import { TableView } from "../view/table-view";
 import { TimelineView } from "../view/timeline-view";
+import { SkeletonView } from "../view/skeleton-view";
+
 import { BtnGroupView } from "../view/btn-group-view";
 import { ChipView } from "../view/chip-view";
 import { UploaderView } from "../view/uploader-view";
@@ -58,7 +61,9 @@ const componentMap: Record<string, JSX.Element> = {
   rating: <RatingView />,
   "fancy-background": <FancyBgView />,
   tab: <TabView />,
+  progressbar: <ProgressbarView />,
   kbd: <KbdView />,
+  skeleton: <SkeletonView />,
   "button-group": <BtnGroupView />,
   chip: <ChipView />,
   uploader: <UploaderView />,

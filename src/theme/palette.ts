@@ -3,7 +3,7 @@ import { PaletteOptions } from "@mui/material/styles";
 export const lightPalette: PaletteOptions = {
   mode: "light",
   primary: { main: "#007074" },
-  secondary: { main: "#333" },
+  secondary: { main: "#3e9" },
   background: {
     default: "#fafbff",
     paper: "#F2F3F4"

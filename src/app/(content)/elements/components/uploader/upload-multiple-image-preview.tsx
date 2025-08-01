@@ -132,13 +132,13 @@ const FileUploader: React.FC<FileUploaderProps> = ({
 
 
 
-export const UploadSingleImagePreview = () => {
+export const UploadMultipleImagePreview = () => {
     const handleFilesChange = (files: File[]) => {
         console.log("Selected files:", files);
     };
     return (
         <Box>
-            <FileUploader onFilesChange={handleFilesChange} />
+            <FileUploader multiple onFilesChange={handleFilesChange} />
         </Box>
     )
 }

@@ -7,56 +7,80 @@ import { SectionTitle } from "@/components/core/section-title";
 import { Box, Divider } from "@mui/material";
 import { useOnThisPage } from "@/contexts/on-thispage-context";
 import { PATHS } from "@/router/paths";
-import { UploadSingleImagePreview } from "../components/uploader";
+import { UploadSingleImagePreview, UploadAvatarPreview, UploadSimplePreview, UploadMultipleImagePreview } from "../components/uploader";
 
 const sections = [
-  {
-    id: "uploader-1",
-    title: "Single Image Upload",
-    description:
-      "Use Material UI soft alerts with extended design. No extra package required.",
-    codeString: '',
-    preview: <UploadSingleImagePreview />,
-  },
+    {
+        id: "uploader-1",
+        title: "Simple Image Upload",
+        description:
+            "Use Material UI uploader with extended design. No extra package required.",
+        codeString: '',
+        preview: <UploadSimplePreview />,
+    },
+    {
+        id: "uploader-2",
+        title: "Single Image Upload",
+        description:
+            "Use Material UI uploader with extended design. No extra package required.",
+        codeString: '',
+        preview: <UploadSingleImagePreview />,
+    },
+    {
+        id: "uploader-3",
+        title: "Multiple Image Upload",
+        description:
+            "Use Material UI uploader with extended design. No extra package required.",
+        codeString: '',
+        preview: <UploadMultipleImagePreview />,
+    },
+    {
+        id: "uploader-4",
+        title: "Avatar Upload",
+        description:
+            "Use Material UI uploader with extended design. No extra package required.",
+        codeString: '',
+        preview: <UploadAvatarPreview />,
+    }
 ];
 
 export const UploaderView = () => {
-  const { setSections } = useOnThisPage();
+    const { setSections } = useOnThisPage();
 
-  React.useEffect(() => {
-    setSections(sections.map((s) => ({ title: s.title, id: s.id })));
-  }, [setSections]);
+    React.useEffect(() => {
+        setSections(sections.map((s) => ({ title: s.title, id: s.id })));
+    }, [setSections]);
 
-  return (
-    <Box>
-      <CustomBreadCrumbs
-        pathArr={[
-          { label: "Elements", path: PATHS.ELEMENTS.OVERVIEW },
-          { label: "Uploader", path: "" },
-        ]}
-      />
-      <PageTitle
-        title="Uploader"
-        description="Material UI core uploader with extended design, and functionality. "
-      />
+    return (
+        <Box>
+            <CustomBreadCrumbs
+                pathArr={[
+                    { label: "Elements", path: PATHS.ELEMENTS.OVERVIEW },
+                    { label: "Uploader", path: "" },
+                ]}
+            />
+            <PageTitle
+                title="Uploader"
+                description="Material UI core uploader with extended design, and functionality. "
+            />
 
-      <Divider sx={{ my: 4 }} />
+            <Divider sx={{ my: 4 }} />
 
-      {/* Uploader Section */}
-      {sections.map((section) => (
-        <Box key={section.id} sx={{ mb: 4 }}>
-          <SectionTitle
-            title={section.title}
-            description={section.description || ""}
-            id={section.id}
-          />
+            {/* Uploader Section */}
+            {sections.map((section) => (
+                <Box key={section.id} sx={{ mb: 4 }}>
+                    <SectionTitle
+                        title={section.title}
+                        description={section.description || ""}
+                        id={section.id}
+                    />
 
-          <CodePreviewCopyWrapper
-            codeString={section.codeString}
-            preview={section.preview}
-          />
+                    <CodePreviewCopyWrapper
+                        codeString={section.codeString}
+                        preview={section.preview}
+                    />
+                </Box>
+            ))}
         </Box>
-      ))}
-    </Box>
-  );
+    );
 };
