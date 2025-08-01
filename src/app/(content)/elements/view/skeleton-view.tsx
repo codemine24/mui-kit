@@ -8,20 +8,21 @@ import { PATHS } from "@/router/paths";
 import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
 import React from "react";
-import { skeletonBasicString } from "../code-string/skeleton/skeleton-basic-string";
-import {
-  SkeletonAnimationPreview,
-  SkeletonBasicPreview,
-  SkeletonCardActionButtonPreview,
-  SkeletonCardPreview,
-  SkeletonListPreview,
-  SkeletonSocialPostPreview,
-  SkeletonSquireBlockPreview,
-  SkeletonTestimonialPreview,
-  SkeletonVerticalPreview,
-  SkeletonWithoutContent,
-} from "../components/skeleton";
 import { skeletonAnimationString } from "../code-string/skeleton/skeleton-animation-string";
+import { skeletonBasicString } from "../code-string/skeleton/skeleton-basic-string";
+import { skeletonSquareBlockString } from "../code-string/skeleton/skeleton-square-block-string";
+import {
+    SkeletonAnimationPreview,
+    SkeletonBasicPreview,
+    SkeletonCardActionButtonPreview,
+    SkeletonCardPreview,
+    SkeletonListPreview,
+    SkeletonSocialPostPreview,
+    SkeletonSquareBlockPreview,
+    SkeletonTestimonialPreview,
+    SkeletonVerticalPreview,
+    SkeletonWithoutContent,
+} from "../components/skeleton";
 
 const sections = [
   {
@@ -41,10 +42,10 @@ const sections = [
   },
   {
     id: "skeleton-3",
-    title: "Squire block MUI skeleton",
-    description: "",
-    codeString: "",
-    preview: <SkeletonSquireBlockPreview />,
+    title: "Square block MUI skeleton",
+    description: "Material ui skeleton square blocks.",
+    codeString: skeletonSquareBlockString,
+    preview: <SkeletonSquareBlockPreview />,
   },
   {
     id: "skeleton-4",
