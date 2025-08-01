@@ -1,4 +1,4 @@
-import { Card, CardContent, CardHeader, Skeleton } from "@mui/material";
+export const skeletonSocialPostString = `import { Card, CardContent, CardHeader, Skeleton } from "@mui/material";
 
 export const SkeletonSocialPostPreview = () => {
   return (
@@ -30,4 +30,4 @@ export const SkeletonSocialPostPreview = () => {
       </CardContent>
     </Card>
   );
-};
+};`;

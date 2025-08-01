@@ -12,17 +12,18 @@ import { skeletonAnimationString } from "../code-string/skeleton/skeleton-animat
 import { skeletonBasicString } from "../code-string/skeleton/skeleton-basic-string";
 import { skeletonSquareBlockString } from "../code-string/skeleton/skeleton-square-block-string";
 import {
-    SkeletonAnimationPreview,
-    SkeletonBasicPreview,
-    SkeletonCardActionButtonPreview,
-    SkeletonCardPreview,
-    SkeletonListPreview,
-    SkeletonSocialPostPreview,
-    SkeletonSquareBlockPreview,
-    SkeletonTestimonialPreview,
-    SkeletonVerticalPreview,
-    SkeletonWithoutContent,
+  SkeletonAnimationPreview,
+  SkeletonBasicPreview,
+  SkeletonCardActionButtonPreview,
+  SkeletonCardPreview,
+  SkeletonListPreview,
+  SkeletonSocialPostPreview,
+  SkeletonSquareBlockPreview,
+  SkeletonTestimonialPreview,
+  SkeletonVerticalPreview,
+  SkeletonWithoutContent,
 } from "../components/skeleton";
+import { skeletonSocialPostString } from "../code-string/skeleton/skeleton-social-post-string";
 
 const sections = [
   {
@@ -49,9 +50,9 @@ const sections = [
   },
   {
     id: "skeleton-4",
-    title: "Social Post MUI Skeleton",
-    description: "",
-    codeString: "",
+    title: "Social post skeleton",
+    description: "Use this social card skeleton for multiple purposes.",
+    codeString: skeletonSocialPostString,
     preview: <SkeletonSocialPostPreview />,
   },
   {
