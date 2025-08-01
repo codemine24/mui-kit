@@ -1,4 +1,4 @@
-import Box from "@mui/material/Box";
+export const progressbarCustomWithLabelString = `import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
 import { useTheme } from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
@@ -139,4 +139,4 @@ export const ProgressbarCustomWithLabelPreview = () => {
       </Box>
     </Stack>
   );
-};
+};`;

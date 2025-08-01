@@ -10,23 +10,24 @@ import Divider from "@mui/material/Divider";
 import React from "react";
 import { progressbarBasicString } from "../code-string/progressbar/progressbar-basic-string";
 import { progressbarCustomString } from "../code-string/progressbar/progressbar-custom-string";
+import { progressbarCustomWithLabelString } from "../code-string/progressbar/progressbar-custom-with-label-string";
 import { progressbarDifferentHeightString } from "../code-string/progressbar/progressbar-different-height-string";
 import { progressbarNoBorderRadiusString } from "../code-string/progressbar/progressbar-no-border-radius-string";
 import { progressbarTitleLabelString } from "../code-string/progressbar/progressbar-title-label-string";
 import { progressbarWithLabelString } from "../code-string/progressbar/progressbar-with-label-string";
 import {
-    ProgressbarBasicPreview,
-    ProgressbarCircularBasicPreview,
-    ProgressbarCustomPreview,
-    ProgressbarCustomWithLabelPreview,
-    ProgressbarDifferentHeightPreview,
-    ProgressbarFloatingLabelPreview,
-    ProgressbarNoBorderRadiusPreview,
-    ProgressbarSemiCircularProgressPreview,
-    ProgressbarStepsPreview,
-    ProgressbarTitleLabelPreview,
-    ProgressbarVerticalPreview,
-    ProgressbarWithLabelPreview,
+  ProgressbarBasicPreview,
+  ProgressbarCircularBasicPreview,
+  ProgressbarCustomPreview,
+  ProgressbarCustomWithLabelPreview,
+  ProgressbarDifferentHeightPreview,
+  ProgressbarFloatingLabelPreview,
+  ProgressbarNoBorderRadiusPreview,
+  ProgressbarSemiCircularProgressPreview,
+  ProgressbarStepsPreview,
+  ProgressbarTitleLabelPreview,
+  ProgressbarVerticalPreview,
+  ProgressbarWithLabelPreview,
 } from "../components/progressbar";
 
 const sections = [
@@ -79,8 +80,8 @@ const sections = [
     id: "progressbar-7",
     title: "Custom progressbar with label",
     description:
-      "A basic customizable progressbar component built with Material UI.",
-    codeString: "",
+      "This variant build without native mui progressbar. It also has title and label. If you want to avoid native progressbar component, you can go with this one.",
+    codeString: progressbarCustomWithLabelString,
     preview: <ProgressbarCustomWithLabelPreview />,
   },
   {
