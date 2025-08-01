@@ -25,6 +25,8 @@ import { TableView } from "../view/table-view";
 import { TimelineView } from "../view/timeline-view";
 import { BtnGroupView } from "../view/btn-group-view";
 import { ChipView } from "../view/chip-view";
+import { UploaderView } from "../view/uploader-view";
+
 export async function generateStaticParams() {
   return elementsArr.map((element) => ({
     slug: element.path?.split("/").pop(),
@@ -59,6 +61,7 @@ const componentMap: Record<string, JSX.Element> = {
   kbd: <KbdView />,
   "button-group": <BtnGroupView />,
   chip: <ChipView />,
+  uploader: <UploaderView />,
 };
 
 export default async function Page({
