@@ -43,4 +43,5 @@ export const KbdArrowFilledPreview = () => {
       </IconKey>
     </Stack>
   );
-};`
+};
+`;

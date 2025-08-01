@@ -8,63 +8,123 @@ import { PATHS } from "@/router/paths";
 import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
 import React from "react";
-import { BtnGroupContainedPreview } from "../components/btn-group/btn-contained-preview";
-import { BtnGroupOutlinePreview } from "../components/btn-group/btn-outline-preview";
-import { BtnGroupTextPreview } from "../components/btn-group/btn-text-preview";
-import { BtnGroupSoftBgPreview } from "../components/btn-group/btn-soft-bg-preview";
-import { BtnGroupDifferentSizePreview } from "../components/btn-group/btn-different-size-preview";
-import { BtnGroupDifferentSizeContainedPreview } from "../components/btn-group/btn-different-size-contained-preview";
-import { BtnGroupVerticalPreview } from "../components/btn-group/btn-vertical-preview";
+import { btnGroupCheckboxString } from "../code-string/btn-group/btn-group-checkbox-string";
+import { btnGroupContainedString } from "../code-string/btn-group/btn-group-contained-string";
+import { btnGroupDifferentSizeContainedString } from "../code-string/btn-group/btn-group-different-size-contained-string";
+import { btnGroupDifferentSizeString } from "../code-string/btn-group/btn-group-different-size-string";
+import { btnGroupHorizontalToggleString } from "../code-string/btn-group/btn-group-horizontal-toggle-string";
+import { btnGroupModernString } from "../code-string/btn-group/btn-group-modern-string";
+import { btnGroupOutlineString } from "../code-string/btn-group/btn-group-outline-string";
+import { btnGroupSoftBgString } from "../code-string/btn-group/btn-group-soft-bg-string";
+import { btnGroupTextString } from "../code-string/btn-group/btn-group-text-string";
+import { btnGroupToggleMenuString } from "../code-string/btn-group/btn-group-toggle-menu-string";
+import { btnGroupVerticalString } from "../code-string/btn-group/btn-group-vertical-string";
+import { btnGroupVerticalToggleString } from "../code-string/btn-group/btn-group-vertical-toggle-string";
+import { BtnGroupCheckBoxPreview } from "../components/btn-group/btn-group-check-box-preview";
+import { BtnGroupContainedPreview } from "../components/btn-group/btn-group-contained-preview";
+import { BtnGroupDifferentSizeContainedPreview } from "../components/btn-group/btn-group-different-size-contained-preview";
+import { BtnGroupDifferentSizePreview } from "../components/btn-group/btn-group-different-size-preview";
+import { BtnGroupHorizontalTogglePreview } from "../components/btn-group/btn-group-Horizontal-toggle-preview";
+import { BtnGroupModernPreview } from "../components/btn-group/btn-group-modern-preview";
+import { BtnGroupOutlinePreview } from "../components/btn-group/btn-group-outline-preview";
+import { BtnGroupSoftBgPreview } from "../components/btn-group/btn-group-soft-bg-preview";
+import { BtnGroupTextPreview } from "../components/btn-group/btn-group-text-preview";
+import { BtnGroupToggleMenuPreview } from "../components/btn-group/btn-group-toggle-menu-preview";
+import { BtnGroupVerticalPreview } from "../components/btn-group/btn-group-vertical-preview";
+import { BtnGroupVerticalTogglePreview } from "../components/btn-group/btn-group-vertical-toggle-preview";
 
 const sections = [
   {
     id: "btn-group-1",
-    title: "Button contained",
-    description: "A regular but elegant accordion with solid background color",
-    codeString: "",
-    preview: <BtnGroupContainedPreview />,
+    title: "Modern button pair",
+    description:
+      "Use this modern look button group build using material ui only. ",
+    codeString: btnGroupModernString,
+    preview: <BtnGroupModernPreview />,
   },
   {
     id: "btn-group-2",
-    title: "Button outline",
-    description: "A regular but elegant accordion with solid background color",
-    codeString: "",
-    preview: <BtnGroupOutlinePreview />,
+    title: "Contained button group",
+    description: "Contained button group has solid background color.",
+    codeString: btnGroupContainedString,
+    preview: <BtnGroupContainedPreview />,
   },
   {
     id: "btn-group-3",
-    title: "Button group text",
-    description: "A regular but elegant accordion with solid background color",
-    codeString: "",
-    preview: <BtnGroupTextPreview />,
+    title: "Mui outlined button group",
+    description:
+      "Use this outlined button group build using material ui only. ",
+    codeString: btnGroupOutlineString,
+    preview: <BtnGroupOutlinePreview />,
   },
   {
     id: "btn-group-4",
-    title: "Button Soft Background",
-    description: "A regular but elegant accordion with solid background color",
-    codeString: "",
-    preview: <BtnGroupSoftBgPreview />,
+    title: "Text button group",
+    description: "mui button group with text buttons.",
+    codeString: btnGroupTextString,
+    preview: <BtnGroupTextPreview />,
   },
   {
     id: "btn-group-5",
-    title: "Button different size outlineed",
-    description: "A regular but elegant accordion with solid background color",
-    codeString: "",
-    preview: <BtnGroupDifferentSizePreview />,
+    title: "Soft background",
+    description: "This material ui button group has soft background color.",
+    codeString: btnGroupSoftBgString,
+    preview: <BtnGroupSoftBgPreview />,
   },
   {
     id: "btn-group-6",
-    title: "Button different size contained",
-    description: "A regular but elegant accordion with solid background color",
-    codeString: "",
-    preview: <BtnGroupDifferentSizeContainedPreview />,
+    title: "Different size outlined",
+    description:
+      "material ui button group with different size and outlined border.",
+    codeString: btnGroupDifferentSizeString,
+    preview: <BtnGroupDifferentSizePreview />,
   },
   {
     id: "btn-group-7",
-    title: "Vertical button group ",
-    description: "A regular but elegant accordion with solid background color",
-    codeString: "",
+    title: "Different size contained buttons",
+    description:
+      "Use this material ui custom button group with different size and solid background color.",
+    codeString: btnGroupDifferentSizeContainedString,
+    preview: <BtnGroupDifferentSizeContainedPreview />,
+  },
+  {
+    id: "btn-group-8",
+    title: "Regular vertical button group",
+    description:
+      "Regular vertical button group designed with material ui only.",
+    codeString: btnGroupVerticalString,
     preview: <BtnGroupVerticalPreview />,
+  },
+  {
+    id: "btn-group-9",
+    title: "Vertical toggle button",
+    description: "Another vertical button group with toggle functionality.",
+    codeString: btnGroupVerticalToggleString,
+    preview: <BtnGroupVerticalTogglePreview />,
+  },
+  {
+    id: "btn-group-10",
+    title: "Horizontal Toggle button",
+    description:
+      "Horizontal button group variant but this one has toggle functionality.",
+    codeString: btnGroupHorizontalToggleString,
+    preview: <BtnGroupHorizontalTogglePreview />,
+  },
+
+  {
+    id: "btn-group-11",
+    title: "Check box Toggle button ",
+    description: "A simple and minimal checkbox toggle button. ",
+    codeString: btnGroupCheckboxString,
+    preview: <BtnGroupCheckBoxPreview />,
+  },
+  {
+    id: "btn-group-12",
+    title: "Horizontal toggle menu with popover",
+    description:
+      "This is an advance example of horizontal toggle menu. Is has builtin popover.",
+    codeString: btnGroupToggleMenuString,
+    preview: <BtnGroupToggleMenuPreview />,
   },
 ];
 
@@ -80,12 +140,12 @@ export const BtnGroupView = () => {
       <CustomBreadCrumbs
         pathArr={[
           { label: "Elements", path: PATHS.ELEMENTS.OVERVIEW },
-          { label: "Accordion", path: "" },
+          { label: "Button group", path: "" },
         ]}
       />
       <PageTitle
-        title="Accordion"
-        description="Use material ui accordion with different styles to show your FAQ's and other info."
+        title="Button group"
+        description="Material ui button group is one of the most used components. We tried to add different variants of button group. "
       />
 
       <Divider sx={{ my: 4 }} />

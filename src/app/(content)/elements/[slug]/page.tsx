@@ -18,13 +18,15 @@ import { KbdView } from "../view/kbd-view";
 import { OTPView } from "../view/otp-view";
 import { PaginationView } from "../view/pagination-view";
 import { PopoverView } from "../view/popover-view";
+import { ProgressbarView } from "../view/progressbar-view";
 import { RatingView } from "../view/rating-view";
 import { StepperView } from "../view/stepper-view";
 import { TabView } from "../view/tab-view";
 import { TableView } from "../view/table-view";
 import { TimelineView } from "../view/timeline-view";
-import { ProgressbarView } from "../view/progressbar-view";
 
+import { BtnGroupView } from "../view/btn-group-view";
+import { ChipView } from "../view/chip-view";
 export async function generateStaticParams() {
   return elementsArr.map((element) => ({
     slug: element.path?.split("/").pop(),
@@ -58,6 +60,8 @@ const componentMap: Record<string, JSX.Element> = {
   tab: <TabView />,
   progressbar: <ProgressbarView />,
   kbd: <KbdView />,
+  "button-group": <BtnGroupView />,
+  chip: <ChipView />,
 };
 
 export default async function Page({

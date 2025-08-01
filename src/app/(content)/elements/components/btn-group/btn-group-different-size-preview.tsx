@@ -7,32 +7,19 @@ const buttons = [
   <Button key="one">One</Button>,
   <Button key="two">Two</Button>,
   <Button key="three">Three</Button>,
+  <Button key="four">Four</Button>,
 ];
 
-export const BtnGroupDifferentSizeContainedPreview = () => {
+export const BtnGroupDifferentSizePreview = () => {
   return (
     <Stack spacing={2} sx={{ alignItems: "center" }}>
-      <ButtonGroup
-        variant="contained"
-        size="small"
-        aria-label="Small button group"
-        color="secondary"
-      >
+      <ButtonGroup size="small" aria-label="Small button group">
         {buttons}
       </ButtonGroup>
-      <ButtonGroup
-        variant="contained"
-        color="primary"
-        aria-label="Medium-sized button group"
-      >
+      <ButtonGroup color="secondary" aria-label="Medium-sized button group">
         {buttons}
       </ButtonGroup>
-      <ButtonGroup
-        variant="contained"
-        size="large"
-        aria-label="Large button group"
-        color="success"
-      >
+      <ButtonGroup size="large" aria-label="Large button group">
         {buttons}
       </ButtonGroup>
     </Stack>
