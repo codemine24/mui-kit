@@ -10,8 +10,10 @@ import Divider from "@mui/material/Divider";
 import React from "react";
 import { skeletonAnimationString } from "../code-string/skeleton/skeleton-animation-string";
 import { skeletonBasicString } from "../code-string/skeleton/skeleton-basic-string";
+import { skeletonCardString } from "../code-string/skeleton/skeleton-card-string";
 import { skeletonSocialPostString } from "../code-string/skeleton/skeleton-social-post-string";
 import { skeletonSquareBlockString } from "../code-string/skeleton/skeleton-square-block-string";
+import { skeletonVerticalString } from "../code-string/skeleton/skeleton-vertical-string";
 import { skeletonWithoutContentString } from "../code-string/skeleton/skeleton-without-content-string";
 import {
   SkeletonAnimationPreview,
@@ -65,16 +67,17 @@ const sections = [
   },
   {
     id: "skeleton-6",
-    title: "Card MUI Skeleton",
-    description: "",
-    codeString: "",
+    title: "Card skeleton",
+    description:
+      "Use this card skeleton for multiple purposes. Build with material ui only. ",
+    codeString: skeletonCardString,
     preview: <SkeletonCardPreview />,
   },
   {
     id: "skeleton-7",
-    title: "Vertical MUI Skeleton",
-    description: "",
-    codeString: "",
+    title: "Vertical Skeleton",
+    description: "Use this vertical material ui skeleton.",
+    codeString: skeletonVerticalString,
     preview: <SkeletonVerticalPreview />,
   },
   {
