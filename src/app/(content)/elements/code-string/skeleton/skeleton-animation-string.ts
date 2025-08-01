@@ -1,4 +1,4 @@
-import Stack from "@mui/material/Stack";
+export const skeletonAnimationString = `import Stack from "@mui/material/Stack";
 import Skeleton from "@mui/material/Skeleton";
 
 export const SkeletonAnimationPreview = () => {
@@ -17,3 +17,4 @@ export const SkeletonAnimationPreview = () => {
     </Stack>
   );
 };
+`;

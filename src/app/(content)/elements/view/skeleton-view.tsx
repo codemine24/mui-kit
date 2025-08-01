@@ -21,6 +21,7 @@ import {
   SkeletonVerticalPreview,
   SkeletonWithoutContent,
 } from "../components/skeleton";
+import { skeletonAnimationString } from "../code-string/skeleton/skeleton-animation-string";
 
 const sections = [
   {
@@ -33,73 +34,64 @@ const sections = [
   },
   {
     id: "skeleton-2",
-    title: "Animation MUI Skeleton",
-    description:
-      "A basic customizable skeleton component built with Material UI.",
-    codeString: "",
+    title: "Animation MUI skeleton",
+    description: "Basic horizontal skeleton with animation. ",
+    codeString: skeletonAnimationString,
     preview: <SkeletonAnimationPreview />,
   },
   {
     id: "skeleton-3",
-    title: "Squire Block MUI Skeleton",
-    description:
-      "A basic customizable skeleton component built with Material UI.",
+    title: "Squire block MUI skeleton",
+    description: "",
     codeString: "",
     preview: <SkeletonSquireBlockPreview />,
   },
   {
     id: "skeleton-4",
     title: "Social Post MUI Skeleton",
-    description:
-      "A basic customizable skeleton component built with Material UI.",
+    description: "",
     codeString: "",
     preview: <SkeletonSocialPostPreview />,
   },
   {
     id: "skeleton-5",
     title: "Without Content MUI Skeleton",
-    description:
-      "A basic customizable skeleton component built with Material UI.",
+    description: "",
     codeString: "",
     preview: <SkeletonWithoutContent />,
   },
   {
     id: "skeleton-6",
     title: "Card MUI Skeleton",
-    description:
-      "A basic customizable skeleton component built with Material UI.",
+    description: "",
     codeString: "",
     preview: <SkeletonCardPreview />,
   },
   {
     id: "skeleton-7",
     title: "Vertical MUI Skeleton",
-    description:
-      "A basic customizable skeleton component built with Material UI.",
+    description: "",
     codeString: "",
     preview: <SkeletonVerticalPreview />,
   },
   {
     id: "skeleton-8",
     title: "List MUI Skeleton",
-    description:
-      "A basic customizable skeleton component built with Material UI.",
+    description: "",
     codeString: "",
     preview: <SkeletonListPreview />,
   },
   {
     id: "skeleton-9",
     title: "Testimonial MUI Skeleton",
-    description:
-      "A basic customizable skeleton component built with Material UI.",
+    description: "",
     codeString: "",
     preview: <SkeletonTestimonialPreview />,
   },
   {
     id: "skeleton-10",
     title: "Card Action Button MUI Skeleton",
-    description:
-      "A basic customizable skeleton component built with Material UI.",
+    description: "",
     codeString: "",
     preview: <SkeletonCardActionButtonPreview />,
   },
