@@ -1,8 +1,8 @@
-import * as React from "react";
+import { Box } from "@mui/material";
+import Checkbox from "@mui/material/Checkbox";
 import Chip, { chipClasses } from "@mui/material/Chip";
 import Stack from "@mui/material/Stack";
-import Checkbox from "@mui/material/Checkbox";
-import { Box } from "@mui/material";
+import * as React from "react";
 
 interface CheckboxChipProps {
   label: string;

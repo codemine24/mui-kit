@@ -122,50 +122,52 @@ const sections = [
   },
   {
     id: "chip-11",
-    title: "Chip with avatar",
-    description: "",
+    title: "Deletable chip",
+    description: "If you need deletable chip, use this variant.",
     codeString: chipDeletableIconString,
     preview: <ChipDeletableIconPreview />,
   },
   {
     id: "chip-12",
-    title: "Chip with avatar",
-    description: "",
+    title: "Status chip",
+    description: "You can add status icon inside chip.",
     codeString: chipStatusString,
     preview: <ChipStatusPreview />,
   },
   {
     id: "chip-13",
-    title: "Chip with only icon",
-    description: "",
+    title: "Icon only",
+    description:
+      "Sometimes we need only icon inside chip. Use this mui icon chip. ",
     codeString: chipOnlyIconString,
     preview: <ChipOnlyIconPreview />,
   },
   {
     id: "chip-14",
-    title: "Chip with clickable",
-    description: "",
+    title: "Clickable chip",
+    description: "Use this clickable chip to perform custom action.",
     codeString: chipActionClickableString,
     preview: <ChipActionClickablePreview />,
   },
   {
     id: "chip-15",
-    title: "Chip with deletable",
-    description: "",
+    title: "Deletable chip",
+    description: "This variant is deletable.",
     codeString: chipActionDeletableString,
     preview: <ChipActionDeletablePreview />,
   },
   {
     id: "chip-16",
-    title: "Chip with clickable deletable",
-    description: "",
+    title: "Clickable + deletable",
+    description:
+      "You can trigger two actions. Click for any specific action or delete it. ",
     codeString: chipActionClickableDeletableString,
     preview: <ChipActionClickableDeletablePreview />,
   },
   {
     id: "chip-17",
     title: "Chip with checkbox",
-    description: "",
+    description: "You can use custom checkbox along with chip. ",
     codeString: chipCheckboxString,
     preview: <ChipCheckboxPreview />,
   },
@@ -188,7 +190,7 @@ export const ChipView = () => {
       />
       <PageTitle
         title="Chip"
-        description="Use MUI-KIT Chip to display compact, interactive elements for selections, filters, or input triggers"
+        description="Material ui chip is small but useful component. We tried to add all possible use case that a chip can be used. "
       />
 
       <Divider sx={{ my: 4 }} />

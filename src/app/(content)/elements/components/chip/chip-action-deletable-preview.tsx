@@ -1,7 +1,7 @@
-import * as React from "react";
-import { styled } from "@mui/material/styles";
-import Chip from "@mui/material/Chip";
 import { Box } from "@mui/material";
+import Chip from "@mui/material/Chip";
+import { styled } from "@mui/material/styles";
+import * as React from "react";
 
 interface ChipData {
   key: number;

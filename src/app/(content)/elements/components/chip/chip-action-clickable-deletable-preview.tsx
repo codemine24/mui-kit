@@ -47,8 +47,8 @@ export const ChipActionClickableDeletablePreview = () => {
               icon={icon}
               label={data.label}
               onDelete={handleDelete(data)}
-              component="a"
-              href="#"
+              component="div"
+              onClick={() => alert(`You clicked ${data.label}`)}
               clickable
             />
           </ListItem>
