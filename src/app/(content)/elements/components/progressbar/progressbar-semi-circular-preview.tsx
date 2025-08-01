@@ -1,35 +1,35 @@
-"use client"
-import Box from "@mui/material/Box"
-import Stack from "@mui/material/Stack"
-import Typography from "@mui/material/Typography"
-import { useTheme, useMediaQuery } from "@mui/material"
+"use client";
+import { useMediaQuery, useTheme } from "@mui/material";
+import Box from "@mui/material/Box";
+import Stack from "@mui/material/Stack";
+import Typography from "@mui/material/Typography";
 
-type ResponsiveValue<T> = T | T[]
+type ResponsiveValue<T> = T | T[];
 
 function useResponsiveValue<T>(value: ResponsiveValue<T>): T {
-  const theme = useTheme()
+  const theme = useTheme();
 
-  const isXl = useMediaQuery(theme.breakpoints.up("xl"))
-  const isLg = useMediaQuery(theme.breakpoints.up("lg"))
-  const isMd = useMediaQuery(theme.breakpoints.up("md"))
-  const isSm = useMediaQuery(theme.breakpoints.up("sm"))
+  const isXl = useMediaQuery(theme.breakpoints.up("xl"));
+  const isLg = useMediaQuery(theme.breakpoints.up("lg"));
+  const isMd = useMediaQuery(theme.breakpoints.up("md"));
+  const isSm = useMediaQuery(theme.breakpoints.up("sm"));
 
-  if (!Array.isArray(value)) return value
+  if (!Array.isArray(value)) return value;
 
-  if (isXl && value.length > 4) return value[4]
-  if (isLg && value.length > 3) return value[3]
-  if (isMd && value.length > 2) return value[2]
-  if (isSm && value.length > 1) return value[1]
+  if (isXl && value.length > 4) return value[4];
+  if (isLg && value.length > 3) return value[3];
+  if (isMd && value.length > 2) return value[2];
+  if (isSm && value.length > 1) return value[1];
 
-  return value[0]
+  return value[0];
 }
 
 interface SemiCircularProgressProps {
-  value: number // 0 - 100
-  label: string
-  color: string
-  size?: number | number[]
-  thickness?: number
+  value: number; // 0 - 100
+  label: string;
+  color: string;
+  size?: number | number[];
+  thickness?: number;
 }
 
 const SemiCircularProgress = ({
@@ -39,19 +39,19 @@ const SemiCircularProgress = ({
   size = 150,
   thickness = 12,
 }: SemiCircularProgressProps) => {
-  const circleSize = useResponsiveValue(size)
-  const radius = (circleSize - thickness) / 2
-  const circumference = 2 * Math.PI * radius
+  const circleSize = useResponsiveValue(size);
+  const radius = (circleSize - thickness) / 2;
+  const circumference = 2 * Math.PI * radius;
 
-  const arcFraction = 240 / 360 // fraction of full circle
-  const arcLength = circumference * arcFraction
+  const arcFraction = 240 / 360; // fraction of full circle
+  const arcLength = circumference * arcFraction;
 
   // Progress offset
-  const progressLength = (value / 100) * arcLength
-  const progressOffset = arcLength - progressLength
+  const progressLength = (value / 100) * arcLength;
+  const progressOffset = arcLength - progressLength;
 
   // SVG rotation so arc starts bottom-left and ends bottom-right
-  const rotation = 150
+  const rotation = 150;
 
   return (
     <Box
@@ -117,20 +117,35 @@ const SemiCircularProgress = ({
         </Typography>
       </Box>
     </Box>
-  )
-}
+  );
+};
 
-export const ProgressbarSemiCircularProgressPreview = () => {
+export const ProgressbarSemiCircularPreview = () => {
   return (
     <Stack
-      width={['100%', '80%']}
+      width={["100%", "80%"]}
       direction="row"
       spacing={4}
       justifyContent="center"
     >
-      <SemiCircularProgress value={25} label="25" size={[100, 150]} color="#9c27b0" />
-      <SemiCircularProgress value={75} label="75" size={[100, 150]} color="#4caf50" />
-      <SemiCircularProgress value={50} label="50" size={[100, 150]} color="#ff9800" />
+      <SemiCircularProgress
+        value={25}
+        label="25"
+        size={[100, 150]}
+        color="#9c27b0"
+      />
+      <SemiCircularProgress
+        value={75}
+        label="75"
+        size={[100, 150]}
+        color="#4caf50"
+      />
+      <SemiCircularProgress
+        value={50}
+        label="50"
+        size={[100, 150]}
+        color="#ff9800"
+      />
     </Stack>
-  )
-}
+  );
+};

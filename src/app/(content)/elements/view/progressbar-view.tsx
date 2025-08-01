@@ -9,11 +9,14 @@ import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
 import React from "react";
 import { progressbarBasicString } from "../code-string/progressbar/progressbar-basic-string";
+import { progressbarCircularBasicString } from "../code-string/progressbar/progressbar-circular-basic-string";
 import { progressbarCustomString } from "../code-string/progressbar/progressbar-custom-string";
 import { progressbarCustomWithLabelString } from "../code-string/progressbar/progressbar-custom-with-label-string";
 import { progressbarDifferentHeightString } from "../code-string/progressbar/progressbar-different-height-string";
 import { ProgressbarFloatingLabelString } from "../code-string/progressbar/progressbar-floating-label-string";
 import { progressbarNoBorderRadiusString } from "../code-string/progressbar/progressbar-no-border-radius-string";
+import { progressbarSemiCircularString } from "../code-string/progressbar/progressbar-semi-circular-string";
+import { progressbarStepsString } from "../code-string/progressbar/progressbar-steps-string";
 import { progressbarTitleLabelString } from "../code-string/progressbar/progressbar-title-label-string";
 import { progressbarVerticalString } from "../code-string/progressbar/progressbar-vertical-string";
 import { progressbarWithLabelString } from "../code-string/progressbar/progressbar-with-label-string";
@@ -25,13 +28,12 @@ import {
   ProgressbarDifferentHeightPreview,
   ProgressbarFloatingLabelPreview,
   ProgressbarNoBorderRadiusPreview,
-  ProgressbarSemiCircularProgressPreview,
+  ProgressbarSemiCircularPreview,
   ProgressbarStepsPreview,
   ProgressbarTitleLabelPreview,
   ProgressbarVerticalPreview,
   ProgressbarWithLabelPreview,
 } from "../components/progressbar";
-import { progressbarStepsString } from "../code-string/progressbar/progressbar-steps-string";
 
 const sections = [
   {
@@ -114,18 +116,16 @@ const sections = [
   {
     id: "progressbar-11",
     title: "Progressbar circular basic",
-    description:
-      "A basic customizable progressbar component built with Material UI.",
-    codeString: "",
+    description: "Material ui circular progressbar with different colors. ",
+    codeString: progressbarCircularBasicString,
     preview: <ProgressbarCircularBasicPreview />,
   },
   {
     id: "progressbar-12",
     title: "Progressbar semi circular",
-    description:
-      "A basic customizable progressbar component built with Material UI.",
-    codeString: "",
-    preview: <ProgressbarSemiCircularProgressPreview />,
+    description: "You can control the circle radius to make it semi circular. ",
+    codeString: progressbarSemiCircularString,
+    preview: <ProgressbarSemiCircularPreview />,
   },
 ];
 

@@ -1,4 +1,4 @@
-import { useMediaQuery, useTheme } from "@mui/material";
+export const progressbarCircularBasicString = `import { useMediaQuery, useTheme } from "@mui/material";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { Stack } from "@mui/system";
@@ -68,7 +68,7 @@ const CircularProgress = ({
           strokeDasharray={circumference}
           strokeDashoffset={offset}
           strokeLinecap="round"
-          transform={`rotate(-90 ${responsiveSize / 2} ${responsiveSize / 2})`}
+          transform={\`rotate(-90 \${responsiveSize / 2} \${responsiveSize / 2})\`}
         />
       </svg>
       {/* Centered Label */}
@@ -101,3 +101,4 @@ export const ProgressbarCircularBasicPreview = () => {
     </Stack>
   );
 };
+`;
