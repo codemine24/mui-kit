@@ -1,4 +1,4 @@
-import LinearProgress, {
+export const progressbarDifferentHeightString = `import LinearProgress, {
   linearProgressClasses,
 } from "@mui/material/LinearProgress";
 import Stack from "@mui/material/Stack";
@@ -16,12 +16,12 @@ export const ProgressbarDifferentHeightPreview = () => {
         sx={{
           height: 5,
           borderRadius: 5,
-          [`&.${linearProgressClasses.colorPrimary}`]: {
+          [\`&.\${linearProgressClasses.colorPrimary}\`]: {
             backgroundColor: isDarkMode
               ? theme.palette.grey[800]
               : theme.palette.grey[200],
           },
-          [`& .${linearProgressClasses.bar}`]: {
+          [\`& .\${linearProgressClasses.bar}\`]: {
             borderRadius: 5,
             backgroundColor: "secondary.main",
           },
@@ -34,12 +34,12 @@ export const ProgressbarDifferentHeightPreview = () => {
         sx={{
           height: 10,
           borderRadius: 5,
-          [`&.${linearProgressClasses.colorPrimary}`]: {
+          [\`&.\${linearProgressClasses.colorPrimary}\`]: {
             backgroundColor: isDarkMode
               ? theme.palette.grey[800]
               : theme.palette.grey[200],
           },
-          [`& .${linearProgressClasses.bar}`]: {
+          [\`& .\${linearProgressClasses.bar}\`]: {
             borderRadius: 5,
             backgroundColor: "secondary.main",
           },
@@ -52,12 +52,12 @@ export const ProgressbarDifferentHeightPreview = () => {
         sx={{
           height: 15,
           borderRadius: 5,
-          [`&.${linearProgressClasses.colorPrimary}`]: {
+          [\`&.\${linearProgressClasses.colorPrimary}\`]: {
             backgroundColor: isDarkMode
               ? theme.palette.grey[800]
               : theme.palette.grey[200],
           },
-          [`& .${linearProgressClasses.bar}`]: {
+          [\`& .\${linearProgressClasses.bar}\`]: {
             borderRadius: 5,
             backgroundColor: "secondary.main",
           },
@@ -65,4 +65,4 @@ export const ProgressbarDifferentHeightPreview = () => {
       />
     </Stack>
   );
-};
+};`;

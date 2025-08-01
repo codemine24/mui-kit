@@ -1,4 +1,4 @@
-import LinearProgress, {
+export const progressbarNoBorderRadiusString = `import LinearProgress, {
   linearProgressClasses,
 } from "@mui/material/LinearProgress";
 import Stack from "@mui/material/Stack";
@@ -16,12 +16,12 @@ export const ProgressbarNoBorderRadiusPreview = () => {
         sx={{
           height: 10,
           borderRadius: 0,
-          [`&.${linearProgressClasses.colorPrimary}`]: {
+          [\`&.\${linearProgressClasses.colorPrimary}\`]: {
             backgroundColor: isDarkMode
               ? theme.palette.grey[800]
               : theme.palette.grey[200],
           },
-          [`& .${linearProgressClasses.bar}`]: {
+          [\`& .\${linearProgressClasses.bar}\`]: {
             borderRadius: 0,
             backgroundColor: isDarkMode ? "#308fe8" : "#1a90ff",
           },
@@ -35,12 +35,12 @@ export const ProgressbarNoBorderRadiusPreview = () => {
         sx={{
           height: 10,
           borderRadius: 0,
-          [`&.${linearProgressClasses.colorPrimary}`]: {
+          [\`&.\${linearProgressClasses.colorPrimary}\`]: {
             backgroundColor: isDarkMode
               ? theme.palette.grey[800]
               : theme.palette.grey[200],
           },
-          [`& .${linearProgressClasses.bar}`]: {
+          [\`& .\${linearProgressClasses.bar}\`]: {
             borderRadius: 0,
             backgroundColor: isDarkMode ? "#F44336" : "#F44336",
           },
@@ -54,12 +54,12 @@ export const ProgressbarNoBorderRadiusPreview = () => {
         sx={{
           height: 10,
           borderRadius: 0,
-          [`&.${linearProgressClasses.colorPrimary}`]: {
+          [\`&.\${linearProgressClasses.colorPrimary}\`]: {
             backgroundColor: isDarkMode
               ? theme.palette.grey[800]
               : theme.palette.grey[200],
           },
-          [`& .${linearProgressClasses.bar}`]: {
+          [\`& .\${linearProgressClasses.bar}\`]: {
             borderRadius: 0,
             backgroundColor: isDarkMode ? "#4CAF50" : "#4CAF50",
           },
@@ -73,12 +73,12 @@ export const ProgressbarNoBorderRadiusPreview = () => {
         sx={{
           height: 10,
           borderRadius: 0,
-          [`&.${linearProgressClasses.colorPrimary}`]: {
+          [\`&.\${linearProgressClasses.colorPrimary}\`]: {
             backgroundColor: isDarkMode
               ? theme.palette.grey[800]
               : theme.palette.grey[200],
           },
-          [`& .${linearProgressClasses.bar}`]: {
+          [\`& .\${linearProgressClasses.bar}\`]: {
             borderRadius: 0,
             backgroundColor: isDarkMode ? "#FF9800" : "#FF9800",
           },
@@ -92,12 +92,12 @@ export const ProgressbarNoBorderRadiusPreview = () => {
         sx={{
           height: 10,
           borderRadius: 0,
-          [`&.${linearProgressClasses.colorPrimary}`]: {
+          [\`&.\${linearProgressClasses.colorPrimary}\`]: {
             backgroundColor: isDarkMode
               ? theme.palette.grey[800]
               : theme.palette.grey[200],
           },
-          [`& .${linearProgressClasses.bar}`]: {
+          [\`& .\${linearProgressClasses.bar}\`]: {
             borderRadius: 0,
             backgroundColor: isDarkMode ? "#FFC107" : "#FFC107",
           },
@@ -111,12 +111,12 @@ export const ProgressbarNoBorderRadiusPreview = () => {
         sx={{
           height: 10,
           borderRadius: 0,
-          [`&.${linearProgressClasses.colorPrimary}`]: {
+          [\`&.\${linearProgressClasses.colorPrimary}\`]: {
             backgroundColor: isDarkMode
               ? theme.palette.grey[800]
               : theme.palette.grey[200],
           },
-          [`& .${linearProgressClasses.bar}`]: {
+          [\`& .\${linearProgressClasses.bar}\`]: {
             borderRadius: 0,
             backgroundColor: isDarkMode ? "#E91E63" : "#E91E63",
           },
@@ -125,3 +125,4 @@ export const ProgressbarNoBorderRadiusPreview = () => {
     </Stack>
   );
 };
+`;

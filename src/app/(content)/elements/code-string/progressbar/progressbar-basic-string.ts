@@ -1,4 +1,4 @@
-import Stack from '@mui/material/Stack';
+export const progressbarBasicString = `import Stack from '@mui/material/Stack';
 import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress';
 import { useTheme } from '@mui/material/styles';
 
@@ -15,10 +15,10 @@ export const ProgressbarBasicPreview = () => {
                 sx={{
                     height: 10,
                     borderRadius: 5,
-                    [`&.${linearProgressClasses.colorPrimary}`]: {
+                    [\`&.\${linearProgressClasses.colorPrimary}\`]: {
                         backgroundColor: isDarkMode ? theme.palette.grey[800] : theme.palette.grey[200],
                     },
-                    [`& .${linearProgressClasses.bar}`]: {
+                    [\`& .\${linearProgressClasses.bar}\`]: {
                         borderRadius: 5,
                         backgroundColor: isDarkMode ? '#308fe8' : '#1a90ff',
                     },
@@ -32,10 +32,10 @@ export const ProgressbarBasicPreview = () => {
                 sx={{
                     height: 10,
                     borderRadius: 5,
-                    [`&.${linearProgressClasses.colorPrimary}`]: {
+                    [\`&.\${linearProgressClasses.colorPrimary}\`]: {
                         backgroundColor: isDarkMode ? theme.palette.grey[800] : theme.palette.grey[200],
                     },
-                    [`& .${linearProgressClasses.bar}`]: {
+                    [\`& .\${linearProgressClasses.bar}\`]: {
                         borderRadius: 5,
                         backgroundColor: isDarkMode ? '#F44336' : '#F44336',
                     },
@@ -49,10 +49,10 @@ export const ProgressbarBasicPreview = () => {
                 sx={{
                     height: 10,
                     borderRadius: 5,
-                    [`&.${linearProgressClasses.colorPrimary}`]: {
+                    [\`&.\${linearProgressClasses.colorPrimary}\`]: {
                         backgroundColor: isDarkMode ? theme.palette.grey[800] : theme.palette.grey[200],
                     },
-                    [`& .${linearProgressClasses.bar}`]: {
+                    [\`& .\${linearProgressClasses.bar}\`]: {
                         borderRadius: 5,
                         backgroundColor: isDarkMode ? '#4CAF50' : '#4CAF50',
                     },
@@ -66,10 +66,10 @@ export const ProgressbarBasicPreview = () => {
                 sx={{
                     height: 10,
                     borderRadius: 5,
-                    [`&.${linearProgressClasses.colorPrimary}`]: {
+                    \`&\${linearProgressClasses.colorPrimary}\`]: {
                         backgroundColor: isDarkMode ? theme.palette.grey[800] : theme.palette.grey[200],
                     },
-                    [`& .${linearProgressClasses.bar}`]: {
+                    [\`& .\${linearProgressClasses.bar}\`]: {
                         borderRadius: 5,
                         backgroundColor: isDarkMode ? '#FF9800' : '#FF9800',
                     },
@@ -83,10 +83,10 @@ export const ProgressbarBasicPreview = () => {
                 sx={{
                     height: 10,
                     borderRadius: 5,
-                    [`&.${linearProgressClasses.colorPrimary}`]: {
+                    [\`&.\${linearProgressClasses.colorPrimary}\`]: {
                         backgroundColor: isDarkMode ? theme.palette.grey[800] : theme.palette.grey[200],
                     },
-                    [`& .${linearProgressClasses.bar}`]: {
+                    [\`& .\${linearProgressClasses.bar}\`]: {
                         borderRadius: 5,
                         backgroundColor: isDarkMode ? '#FFC107' : '#FFC107',
                     },
@@ -100,10 +100,10 @@ export const ProgressbarBasicPreview = () => {
                 sx={{
                     height: 10,
                     borderRadius: 5,
-                    [`&.${linearProgressClasses.colorPrimary}`]: {
+                    [\`&.\${linearProgressClasses.colorPrimary}\`]: {
                         backgroundColor: isDarkMode ? theme.palette.grey[800] : theme.palette.grey[200],
                     },
-                    [`& .${linearProgressClasses.bar}`]: {
+                    [\`& .\${linearProgressClasses.bar}\`]: {
                         borderRadius: 5,
                         backgroundColor: isDarkMode ? '#E91E63' : '#E91E63',
                     },
@@ -111,4 +111,4 @@ export const ProgressbarBasicPreview = () => {
             />
         </Stack>
     )
-}
+}`; 
