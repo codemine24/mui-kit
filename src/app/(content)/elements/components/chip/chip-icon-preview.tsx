@@ -1,7 +1,6 @@
-import * as React from "react";
+import FaceIcon from "@mui/icons-material/Face";
 import Chip, { chipClasses } from "@mui/material/Chip";
 import Stack from "@mui/material/Stack";
-import FaceIcon from "@mui/icons-material/Face";
 import { alpha } from "@mui/system";
 
 export const ChipIconPreview = () => {

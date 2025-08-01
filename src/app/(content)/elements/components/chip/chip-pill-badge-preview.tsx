@@ -1,8 +1,7 @@
-import * as React from "react";
+import { Box } from "@mui/material";
 import Chip from "@mui/material/Chip";
 import Stack from "@mui/material/Stack";
 import { alpha } from "@mui/system";
-import { Box } from "@mui/material";
 
 export const ChipPillBadgePreview = () => {
   return (

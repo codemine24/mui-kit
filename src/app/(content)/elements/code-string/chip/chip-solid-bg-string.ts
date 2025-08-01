@@ -13,7 +13,15 @@ export const ChipSolidBgPreview = () => {
           borderRadius: 2,
         }}
       />
+      {/* rounded */}
+      <Chip
+        label="Lorem ipsum"
+        sx={{
+          color: "#ffffff",
+          bgcolor: "primary.main",
+          fontSize: "20px",
+        }}
+      />
     </Stack>
   );
-};
-`;
+};`;
