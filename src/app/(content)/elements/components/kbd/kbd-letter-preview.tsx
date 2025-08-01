@@ -19,7 +19,7 @@ const LetterBox = styled(Box)<{ component: string }>(({ theme }) => ({
 }));
 
 export const KbdLetterPreview = () => {
-  const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+        const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 
   return (
     <Stack direction="row" flexWrap="wrap" gap={2}>

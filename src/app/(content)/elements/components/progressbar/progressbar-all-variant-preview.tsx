@@ -2,7 +2,7 @@ import Stack from '@mui/material/Stack';
 import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress';
 import { useTheme } from '@mui/material/styles';
 
-export const ProgressbarAllVariantPreview = () => {
+export const ProgressbarBasicPreview = () => {
     const theme = useTheme();
     const isDarkMode = theme.palette.mode === 'dark';
 

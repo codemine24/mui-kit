@@ -25,6 +25,8 @@ export const PATHS = {
     PROGRESSBAR: "/elements/progressbar",
     kbd: "/elements/kbd",
     SKELETON: "/elements/skeleton",
+    BUTTON_GROUP: "/elements/button-group",
+    CHIP: "/elements/chip",
   },
   DOCS: {
     ROOT: "/docs",

@@ -1,73 +1,64 @@
-import * as React from "react";
+export const btnGroupContainedString = `import * as React from "react";
 import Button from "@mui/material/Button";
 import ButtonGroup from "@mui/material/ButtonGroup";
-import { Box } from "@mui/material";
+import { Stack } from "@mui/material";
 const buttons = [
   <Button key="one">One</Button>,
   <Button key="two">Two</Button>,
   <Button key="three">Three</Button>,
+  <Button key="four">Four</Button>,
 ];
 
-export const BtnGroupVerticalPreview = () => {
+export const BtnGroupContainedPreview = () => {
   return (
     <>
-      <Box
-        sx={{
-          display: "flex",
-          flexWrap: "wrap",
-          "& > *": {
-            m: 1,
-          },
-        }}
-      >
-        <ButtonGroup
-          orientation="vertical"
-          variant="contained"
-          aria-label="Basic button group"
-        >
+      <Stack spacing={2}>
+        <ButtonGroup variant="contained" aria-label="Basic button group">
           {buttons}
         </ButtonGroup>
         <ButtonGroup
-          orientation="vertical"
-          variant="outlined"
+          variant="contained"
           color="secondary"
           aria-label="Basic button group"
         >
           {buttons}
         </ButtonGroup>
         <ButtonGroup
-          orientation="vertical"
-          variant="text"
+          variant="contained"
+          color="error"
           aria-label="Basic button group"
         >
           {buttons}
         </ButtonGroup>
         <ButtonGroup
-          orientation="vertical"
-          variant="outlined"
+          variant="contained"
+          color="warning"
           aria-label="Basic button group"
-          sx={{
-            "& .MuiButton-root": {
-              color: "#1976d2",
-              backgroundColor: "rgba(25, 118, 210, 0.08)",
-              "&:hover": {
-                backgroundColor: "rgba(25, 118, 210, 0.12)",
-              },
-            },
-          }}
         >
           {buttons}
         </ButtonGroup>
         <ButtonGroup
-          orientation="vertical"
           variant="contained"
           color="info"
-          disabled={true}
           aria-label="Basic button group"
         >
           {buttons}
         </ButtonGroup>
-      </Box>
+        <ButtonGroup
+          variant="contained"
+          color="success"
+          aria-label="Basic button group"
+        >
+          {buttons}
+        </ButtonGroup>
+        <ButtonGroup
+          variant="contained"
+          color="inherit"
+          aria-label="Basic button group"
+        >
+          {buttons}
+        </ButtonGroup>
+      </Stack>
     </>
   );
-};
+};`
