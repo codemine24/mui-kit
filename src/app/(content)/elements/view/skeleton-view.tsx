@@ -10,7 +10,9 @@ import Divider from "@mui/material/Divider";
 import React from "react";
 import { skeletonAnimationString } from "../code-string/skeleton/skeleton-animation-string";
 import { skeletonBasicString } from "../code-string/skeleton/skeleton-basic-string";
+import { skeletonSocialPostString } from "../code-string/skeleton/skeleton-social-post-string";
 import { skeletonSquareBlockString } from "../code-string/skeleton/skeleton-square-block-string";
+import { skeletonWithoutContentString } from "../code-string/skeleton/skeleton-without-content-string";
 import {
   SkeletonAnimationPreview,
   SkeletonBasicPreview,
@@ -23,7 +25,6 @@ import {
   SkeletonVerticalPreview,
   SkeletonWithoutContent,
 } from "../components/skeleton";
-import { skeletonSocialPostString } from "../code-string/skeleton/skeleton-social-post-string";
 
 const sections = [
   {
@@ -57,9 +58,9 @@ const sections = [
   },
   {
     id: "skeleton-5",
-    title: "Without Content MUI Skeleton",
-    description: "",
-    codeString: "",
+    title: "Social card without content",
+    description: "This social post content skeleton doesn't have content.",
+    codeString: skeletonWithoutContentString,
     preview: <SkeletonWithoutContent />,
   },
   {
