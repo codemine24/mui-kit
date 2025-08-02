@@ -13,6 +13,7 @@ import { ClipboardV2Preview } from "../components/clipboard/clipboard-v2-preview
 import { ClipboardV3Preview } from "../components/clipboard/clipboard-v3-preview";
 import { ClipboardV4Preview } from "../components/clipboard/clipboard-v4-preview";
 import { ClipboardV5Preview } from "../components/clipboard/clipboard-v5-preview";
+import { ClipboardV6Preview } from "../components/clipboard/clipboard-v6-preview";
 
 const sections = [
   {
@@ -49,6 +50,13 @@ const sections = [
     description: "",
     codeString: "",
     preview: <ClipboardV5Preview />,
+  },
+  {
+    id: "clipboard-6",
+    title: "Clipboard version 6",
+    description: "",
+    codeString: "",
+    preview: <ClipboardV6Preview />,
   },
 ];
 
