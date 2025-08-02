@@ -25,6 +25,7 @@ import { TabView } from "../view/tab-view";
 import { TableView } from "../view/table-view";
 import { TimelineView } from "../view/timeline-view";
 import { SkeletonView } from "../view/skeleton-view";
+import { SnackbarView } from "../view/snackbar-view";
 
 import { BtnGroupView } from "../view/btn-group-view";
 import { ChipView } from "../view/chip-view";
@@ -64,6 +65,7 @@ const componentMap: Record<string, JSX.Element> = {
   skeleton: <SkeletonView />,
   "button-group": <BtnGroupView />,
   chip: <ChipView />,
+  snackbar: <SnackbarView />,
 };
 
 export default async function Page({

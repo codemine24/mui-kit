@@ -140,7 +140,7 @@ export const ProgressbarView = () => {
     <Box>
       <CustomBreadCrumbs
         pathArr={[
-          { label: "Elements", path: PATHS.ELEMENTS.PROGRESSBAR },
+          { label: "Elements", path: PATHS.ELEMENTS.OVERVIEW },
           { label: "Progressbar", path: "" },
         ]}
       />

@@ -118,7 +118,7 @@ export const SkeletonView = () => {
     <Box>
       <CustomBreadCrumbs
         pathArr={[
-          { label: "Elements", path: PATHS.ELEMENTS.SKELETON },
+          { label: "Elements", path: PATHS.ELEMENTS.OVERVIEW },
           { label: "Skeleton", path: "" },
         ]}
       />
