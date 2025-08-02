@@ -12,6 +12,8 @@ import {
 } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+import CancelIcon from '@mui/icons-material/Cancel';
+import InfoIcon from '@mui/icons-material/Info';
 import { useTheme } from "@mui/material/styles";
 
 type SnackbarType = "success" | "error" | "info";
@@ -45,18 +47,29 @@ export const SnackbarBasicPreview = () => {
         }
     };
 
+    const getIcon = () => {
+        switch (type) {
+            case "error":
+                return <CancelIcon />;
+            case "info":
+                return <InfoIcon />;
+            default:
+                return <CheckCircleIcon />;
+        }
+    };
+
     const Message = () => (
         <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
             <Button
                 size="small"
                 sx={{
-                    backgroundColor: alpha(getColor(), 0.1),
+                    backgroundColor: alpha(getColor(), 0.2),
                     color: getColor(),
                     borderRadius: "10px",
                     minWidth: "auto",
                 }}
             >
-                <CheckCircleIcon />
+                {getIcon()}
             </Button>
             <Typography>
                 {type === "error"
@@ -76,7 +89,7 @@ export const SnackbarBasicPreview = () => {
 
             <Snackbar
                 open={open}
-                autoHideDuration={3000}
+                autoHideDuration={2500}
                 onClose={handleClose}
                 message={<Message />}
                 action={
