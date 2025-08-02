@@ -26,14 +26,24 @@ export const ClipboardNonEditablePreview = () => {
           gap: 1,
         }}
       >
-        <TextField value={textToCopy} fullWidth />
+        <Box
+          component="code"
+          sx={{
+            fontWeight: 500,
+            border: "1px solid #e0e0e0",
+            p: "15px 25px",
+            borderRadius: "8px",
+          }}
+        >
+          {textToCopy}
+        </Box>
 
         <Button
           variant="contained"
           color={copied ? "success" : "primary"}
           onClick={handleCopyClick}
           startIcon={copied ? <Check /> : <ContentCopy />}
-          sx={{ p: "15px 25px" }}
+          sx={{ p: "15px 25px", borderRadius: "8px" }}
         >
           Copy
         </Button>

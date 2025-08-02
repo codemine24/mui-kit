@@ -27,7 +27,9 @@ export const ClipboardV2Preview = () => {
         minWidth: 300,
       }}
     >
-      <Box sx={{ fontWeight: 500 }}>{textToCopy}</Box>
+      <Box component="code" sx={{ fontWeight: 500 }}>
+        {textToCopy}
+      </Box>
       <IconButton onClick={handleCopy} color={copied ? "success" : "default"}>
         {copied ? <Check fontSize="small" /> : <ContentCopy fontSize="small" />}
       </IconButton>

@@ -11,6 +11,7 @@ import React from "react";
 import { ClipboardNonEditablePreview } from "../components/clipboard/clipboard-non editable-preview";
 import { ClipboardV2Preview } from "../components/clipboard/clipboard-v2-preview";
 import { ClipboardV3Preview } from "../components/clipboard/clipboard-v3-preview";
+import { ClipboardV4Preview } from "../components/clipboard/clipboard-v4-preview";
 
 const sections = [
   {
@@ -33,6 +34,13 @@ const sections = [
     description: "",
     codeString: "",
     preview: <ClipboardV3Preview />,
+  },
+  {
+    id: "clipboard-4",
+    title: "Clipboard version 4",
+    description: "",
+    codeString: "",
+    preview: <ClipboardV4Preview />,
   },
 ];
 
