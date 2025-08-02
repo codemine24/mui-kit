@@ -9,7 +9,12 @@ import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
 import React from "react";
 
-import { SnackbarBasicPreview, SnackbarSimpleMessagePreview, SnackbarUndoButtonPreview } from "../components/snackbar";
+import {
+    SnackbarBasicPreview,
+    SnackbarSimpleMessagePreview,
+    SnackbarUndoButtonPreview,
+    SnackbarNotificationPreview,
+} from "../components/snackbar";
 
 const sections = [
     {
@@ -35,6 +40,14 @@ const sections = [
             "Undo button snackbar component built with material ui.",
         codeString: "",
         preview: <SnackbarUndoButtonPreview />,
+    },
+    {
+        id: "snackbar-4",
+        title: "Notification snackbar",
+        description:
+            "Notification snackbar component built with material ui.",
+        codeString: "",
+        preview: <SnackbarNotificationPreview />,
     },
 ];
 
