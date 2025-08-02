@@ -1,24 +1,22 @@
 "use-client";
 import * as React from "react";
 import { useState } from "react";
-
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 import CheckIcon from "@mui/icons-material/Check";
 
-export const ClipboardV4Preview = () => {
+export const ClipboardV5Preview = () => {
   const [copied, setCopied] = useState(false);
-  const textToCopy = "www.muikit.com";
+  const textToCopy = "https://www.muikit.com";
 
   const handleCopy = () => {
     navigator.clipboard.writeText(textToCopy).then(() => {
       setCopied(true);
       setTimeout(() => {
         setCopied(false);
-      }, 2000);
+      }, 1000);
     });
   };
 
@@ -31,34 +29,51 @@ export const ClipboardV4Preview = () => {
         borderRadius: "4px",
         display: "flex",
         alignItems: "center",
-        paddingLeft: "16px",
         overflow: "hidden",
+        height: 48,
       }}
     >
-      <Typography
-        variant="body1"
-        sx={{ color: "text.secondary", fontWeight: "bold" }}
-      >
-        URL
-      </Typography>
-      <Divider orientation="vertical" sx={{ mx: 2, borderColor: "#e0e0e0" }} />
-      <Typography variant="body1" sx={{ flexGrow: 1 }}>
-        {textToCopy}
-      </Typography>
-      <IconButton
+      <Box
         sx={{
-          p: "10px",
+          display: "flex",
+          alignItems: "center",
+          height: "100%",
           bgcolor: "blue",
           color: "white",
-          borderRadius: "0",
-          "&:hover": {
-            bgcolor: "#1C4ED8",
-          },
+          px: "16px",
+        }}
+      >
+        <Typography
+          variant="body1"
+          sx={{
+            fontWeight: "bold",
+            whiteSpace: "nowrap",
+          }}
+        >
+          Generate
+        </Typography>
+      </Box>
+      <Box
+        component="kbd"
+        sx={{
+          flexGrow: 1,
+          mx: 2,
+          fontFamily: "15px",
+        }}
+      >
+        {textToCopy}
+      </Box>
+
+      <IconButton
+        sx={{
+          borderRadius: 0,
+          p: "11px",
+          borderLeft: "1px solid #e0e0e0",
         }}
         aria-label="copy"
         onClick={handleCopy}
       >
-        {copied ? <CheckIcon /> : <ContentCopyIcon />}
+        {copied ? <CheckIcon color="success" /> : <ContentCopyIcon />}
       </IconButton>
     </Box>
   );

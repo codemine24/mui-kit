@@ -1,3 +1,4 @@
+"use-client";
 import React from "react";
 import { Box, Button } from "@mui/material";
 import { ContentCopy, Check } from "@mui/icons-material";
