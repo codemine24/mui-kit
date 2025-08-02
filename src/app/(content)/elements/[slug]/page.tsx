@@ -24,6 +24,7 @@ import { TabView } from "../view/tab-view";
 import { TableView } from "../view/table-view";
 import { TimelineView } from "../view/timeline-view";
 import { BtnGroupView } from "../view/btn-group-view";
+import { ClipboardView } from "../view/clipboard-view";
 export async function generateStaticParams() {
   return elementsArr.map((element) => ({
     slug: element.path?.split("/").pop(),
@@ -57,6 +58,7 @@ const componentMap: Record<string, JSX.Element> = {
   tab: <TabView />,
   kbd: <KbdView />,
   "button-group": <BtnGroupView />,
+  clipboard: <ClipboardView />,
 };
 
 export default async function Page({
