@@ -9,7 +9,7 @@ import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
 import React from "react";
 
-import { SnackbarBasicPreview } from "../components/snackbar";
+import { SnackbarBasicPreview, SnackbarSimpleMessagePreview } from "../components/snackbar";
 
 const sections = [
     {
@@ -19,6 +19,14 @@ const sections = [
             "Basic customizable snackbar component built with material ui.",
         codeString: "",
         preview: <SnackbarBasicPreview />,
+    },
+    {
+        id: "snackbar-2",
+        title: "Simple message snackbar",
+        description:
+            "Simple message snackbar component built with material ui.",
+        codeString: "",
+        preview: <SnackbarSimpleMessagePreview />,
     },
 ];
 
