@@ -12,7 +12,8 @@ import {
     UploadAvatarPreview,
     UploadSimplePreview,
     UploadMultipleImagePreview,
-    UploadSingleFileInputPreview
+    UploadSingleFileInputPreview,
+    UploadMultipleFileInputPreview
 } from "../components/uploader";
 
 const sections = [
@@ -55,6 +56,14 @@ const sections = [
             "Use Material UI uploader with extended design. No extra package required.",
         codeString: '',
         preview: <UploadSingleFileInputPreview />,
+    },
+    {
+        id: "uploader-6",
+        title: "Multiple File Input Upload",
+        description:
+            "Use Material UI uploader with extended design. No extra package required.",
+        codeString: '',
+        preview: <UploadMultipleFileInputPreview />,
     }
 ];
 

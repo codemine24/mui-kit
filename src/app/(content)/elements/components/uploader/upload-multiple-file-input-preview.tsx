@@ -186,13 +186,14 @@ const FileUploader: React.FC<FileUploaderProps> = ({
 
 
 
-export const UploadSingleFileInputPreview = () => {
+export const UploadMultipleFileInputPreview = () => {
     const handleFilesChange = (files: File[]) => {
         console.log("Selected files:", files);
     };
     return (
         <Box>
             <FileUploader
+                multiple
                 label="SVG, PNG, JPG or GIF (MAX. 800×400px)."
                 accept=".svg,.png,.jpg,.gif"
                 onFilesChange={handleFilesChange}
