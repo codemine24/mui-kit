@@ -7,7 +7,13 @@ import { SectionTitle } from "@/components/core/section-title";
 import { Box, Divider } from "@mui/material";
 import { useOnThisPage } from "@/contexts/on-thispage-context";
 import { PATHS } from "@/router/paths";
-import { UploadSingleImagePreview, UploadAvatarPreview, UploadSimplePreview, UploadMultipleImagePreview } from "../components/uploader";
+import {
+    UploadSingleImagePreview,
+    UploadAvatarPreview,
+    UploadSimplePreview,
+    UploadMultipleImagePreview,
+    UploadSingleFileInputPreview
+} from "../components/uploader";
 
 const sections = [
     {
@@ -41,6 +47,14 @@ const sections = [
             "Use Material UI uploader with extended design. No extra package required.",
         codeString: '',
         preview: <UploadAvatarPreview />,
+    },
+    {
+        id: "uploader-5",
+        title: "Single File Input Upload",
+        description:
+            "Use Material UI uploader with extended design. No extra package required.",
+        codeString: '',
+        preview: <UploadSingleFileInputPreview />,
     }
 ];
 

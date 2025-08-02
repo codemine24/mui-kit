@@ -27,6 +27,7 @@ export const PATHS = {
     SKELETON: "/elements/skeleton",
     BUTTON_GROUP: "/elements/button-group",
     CHIP: "/elements/chip",
+    UPLOADER: "/elements/uploader",
   },
   DOCS: {
     ROOT: "/docs",
