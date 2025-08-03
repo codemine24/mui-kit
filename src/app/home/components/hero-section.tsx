@@ -1,17 +1,17 @@
 "use client";
 import { BodyText } from "@/components/core/body-text";
-import { Iconify } from "@/components/iconify";
 import InfiniteScroll from "@/components/infinity-scroll";
 import { PATHS } from "@/router/paths";
 import { pxToRem } from "@/utils/pxToRem";
+import { Icon } from "@iconify/react/dist/iconify.js";
 import GridViewIcon from "@mui/icons-material/GridView";
 import Alert from "@mui/material/Alert";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
-import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 import Link from "next/link";
 import PathSVG from "./PathSVG";
 import { HeroInfinityCard } from "./hero-infinity-card";
@@ -66,8 +66,8 @@ export const HeroSection = () => {
   // Define theme-aware colors for background elements
   const gradientFrom =
     theme.palette.mode === "dark"
-      ? "rgba(30, 136, 229, 0.2)"
-      : "rgba(33, 150, 243, 0.2)";
+      ? "rgba(0, 229, 255, 0.2)"
+      : "rgba(0, 188, 212, 0.2)";
   const gradientTo =
     theme.palette.mode === "dark"
       ? "rgba(0, 229, 255, 0.2)"
@@ -147,13 +147,23 @@ export const HeroSection = () => {
           </Box>
           <Alert
             severity="info"
-            icon={<Iconify icon="line-md:check-all" width={24} height={24} />}
+            icon={
+              <Icon
+                icon="line-md:check-all"
+                width={24}
+                height={24}
+                color={theme.palette.text.primary}
+              />
+            }
             sx={{
               borderRadius: "50px",
               width: "fit-content",
               padding: "0 1rem",
               mb: 2,
               fontSize: { xs: pxToRem(12), md: pxToRem(14) },
+              background: "transparent",
+              color: theme.palette.text.primary,
+              border: `1px solid ${theme.palette.divider}`,
             }}
           >
             No Installation Required. Copy and paste directly into your mui
