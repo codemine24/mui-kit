@@ -81,7 +81,6 @@ export const HeroInfinityCard = ({ title, url }: { title: string; url: string })
           component="h3"
           align="center"
           gutterBottom
-          fontWeight="bold"
           sx={{ color: isDarkMode ? "common.white" : "text.primary" }}>
           {title}
         </Typography>

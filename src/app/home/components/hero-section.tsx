@@ -19,31 +19,44 @@ import { HeroInfinityCard } from "./hero-infinity-card";
 const items = [
   { content: <HeroInfinityCard title="Editor" url={PATHS.ELEMENTS.EDITOR} /> },
   {
-    content: <HeroInfinityCard title="DND" url={PATHS.ELEMENTS.DND} />
+    content: <HeroInfinityCard title="DND" url={PATHS.ELEMENTS.DND} />,
   },
   {
-    content: <HeroInfinityCard title="Carousel" url={PATHS.ELEMENTS.CAROUSEL} />
+    content: (
+      <HeroInfinityCard title="Carousel" url={PATHS.ELEMENTS.CAROUSEL} />
+    ),
   },
   {
-    content: <HeroInfinityCard title="Timeline" url={PATHS.ELEMENTS.TIMELINE} />
+    content: (
+      <HeroInfinityCard title="Timeline" url={PATHS.ELEMENTS.TIMELINE} />
+    ),
   },
   {
-    content: <HeroInfinityCard title="Stepper" url={PATHS.ELEMENTS.STEPPER} />
+    content: <HeroInfinityCard title="Stepper" url={PATHS.ELEMENTS.STEPPER} />,
   },
   {
-    content: <HeroInfinityCard title="OTP" url={PATHS.ELEMENTS.OTP} />
+    content: <HeroInfinityCard title="OTP" url={PATHS.ELEMENTS.OTP} />,
   },
   {
-    content: <HeroInfinityCard title="Pagination" url={PATHS.ELEMENTS.PAGINATION} />
+    content: (
+      <HeroInfinityCard title="Pagination" url={PATHS.ELEMENTS.PAGINATION} />
+    ),
   },
   { content: <HeroInfinityCard title="Hero" url={PATHS.BLOCKS.HERO} /> },
   { content: <HeroInfinityCard title="About" url={PATHS.BLOCKS.ABOUT} /> },
   {
-    content: <HeroInfinityCard title="PricingTable" url={PATHS.BLOCKS.PRICING_MENU} />
+    content: (
+      <HeroInfinityCard title="PricingTable" url={PATHS.BLOCKS.PRICING_MENU} />
+    ),
   },
   {
-    content: <HeroInfinityCard title="Testimonial" url={PATHS.BLOCKS.TESTIMONIAL_GRID} />
-  }
+    content: (
+      <HeroInfinityCard
+        title="Testimonial"
+        url={PATHS.BLOCKS.TESTIMONIAL_GRID}
+      />
+    ),
+  },
 ];
 
 export const HeroSection = () => {
@@ -52,9 +65,13 @@ export const HeroSection = () => {
 
   // Define theme-aware colors for background elements
   const gradientFrom =
-    theme.palette.mode === "dark" ? "rgba(30, 136, 229, 0.2)" : "rgba(33, 150, 243, 0.2)";
+    theme.palette.mode === "dark"
+      ? "rgba(30, 136, 229, 0.2)"
+      : "rgba(33, 150, 243, 0.2)";
   const gradientTo =
-    theme.palette.mode === "dark" ? "rgba(0, 229, 255, 0.2)" : "rgba(0, 188, 212, 0.2)";
+    theme.palette.mode === "dark"
+      ? "rgba(0, 229, 255, 0.2)"
+      : "rgba(0, 188, 212, 0.2)";
 
   return (
     <Box
@@ -63,16 +80,18 @@ export const HeroSection = () => {
         overflow: "hidden",
         py: { xs: 8, md: 0 },
         width: "100%",
-        maxWidth: "100%"
-      }}>
+        maxWidth: "100%",
+      }}
+    >
       {/* Background Elements */}
       <Box
         sx={{
           position: "absolute",
           inset: 0,
           overflow: "hidden",
-          zIndex: -1
-        }}>
+          zIndex: -1,
+        }}
+      >
         {/* Gradient Circles */}
         <Box
           sx={{
@@ -83,7 +102,7 @@ export const HeroSection = () => {
             height: { xs: "16rem", md: "24rem" },
             borderRadius: "50%",
             background: `linear-gradient(135deg, ${gradientFrom}, ${gradientTo})`,
-            filter: "blur(80px)"
+            filter: "blur(80px)",
           }}
         />
         <Box
@@ -95,7 +114,7 @@ export const HeroSection = () => {
             height: { xs: "14rem", md: "20rem" },
             borderRadius: "50%",
             background: `linear-gradient(135deg, ${gradientFrom}, ${gradientTo})`,
-            filter: "blur(80px)"
+            filter: "blur(80px)",
           }}
         />
       </Box>
@@ -111,8 +130,9 @@ export const HeroSection = () => {
           zIndex: 1,
           maxWidth: "xl",
           mx: "auto",
-          px: { xs: 2, md: 3 }
-        }}>
+          px: { xs: 2, md: 3 },
+        }}
+      >
         {/* Left text box */}
         <Box sx={{ maxWidth: 800, position: "relative" }}>
           <Box
@@ -120,8 +140,9 @@ export const HeroSection = () => {
               position: "absolute",
               top: -60,
               left: 0,
-              zIndex: 1
-            }}>
+              zIndex: 1,
+            }}
+          >
             <PathSVG />
           </Box>
           <Alert
@@ -132,24 +153,34 @@ export const HeroSection = () => {
               width: "fit-content",
               padding: "0 1rem",
               mb: 2,
-              fontSize: { xs: pxToRem(12), md: pxToRem(14) }
-            }}>
-            No Installation Required. Copy and paste directly into your project.
+              fontSize: { xs: pxToRem(12), md: pxToRem(14) },
+            }}
+          >
+            No Installation Required. Copy and paste directly into your mui
+            project.
           </Alert>
 
           <Typography
             gutterBottom
             sx={{
-              fontSize: { xs: pxToRem(34), md: pxToRem(40), lg: pxToRem(50) },
-              fontWeight: 800,
+              fontSize: { xs: pxToRem(38), md: pxToRem(50), lg: pxToRem(60) },
+              fontWeight: 600,
               lineHeight: { xs: 1.1, md: 1.3 },
-              "& span": { color: "primary.main" }
-            }}>
+              letterSpacing: 0,
+              "& span": {
+                background: "linear-gradient(90deg, #007074 0%, #24a76b 100%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+                display: "inline",
+              },
+            }}
+          >
             We&apos;ve covered, what <span>Material UI</span> is missing!
           </Typography>
 
           <BodyText
-            text="MUI KIT is a open-source library that offers customized versions of
+            text="MUI KIT is an open-source library that offers customized versions of
             material ui core components. Also we have added some extra
             components that material ui is missing, but very common
             in real world projects."
@@ -161,16 +192,21 @@ export const HeroSection = () => {
               flexDirection: { xs: "column", md: "row" },
               justifyContent: "start",
               gap: 2,
-              mt: 4
-            }}>
+              mt: 4,
+            }}
+          >
             <Button
               LinkComponent={Link}
               href={PATHS.DOCS.INSTALL}
               variant="contained"
               sx={{
                 borderRadius: theme.shape.borderRadius,
-                width: "fit-content"
-              }}>
+                width: "fit-content",
+                background: theme.palette.text.primary,
+                color: theme.palette.background.default,
+                textTransform: "none",
+              }}
+            >
               Get Started
             </Button>
 
@@ -181,9 +217,11 @@ export const HeroSection = () => {
               color="primary"
               sx={{
                 borderRadius: theme.shape.borderRadius,
-                width: "fit-content"
+                width: "fit-content",
+                textTransform: "none",
               }}
-              startIcon={<GridViewIcon />}>
+              startIcon={<GridViewIcon />}
+            >
               Explore Elements
             </Button>
           </Box>
@@ -197,8 +235,9 @@ export const HeroSection = () => {
             maxWidth: { xs: 300, lg: 600 },
             height: isMobile ? 400 : 500,
             display: { xs: "none", md: "flex" },
-            overflowX: "visible"
-          }}>
+            overflowX: "visible",
+          }}
+        >
           <InfiniteScroll
             items={items}
             isTilted={true}

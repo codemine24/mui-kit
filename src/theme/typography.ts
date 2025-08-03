@@ -1,7 +1,7 @@
 import { TypographyVariantsOptions } from "@mui/material/styles";
 
 export const typography: TypographyVariantsOptions = {
-  fontFamily: `"Inter", "Roboto", "Helvetica", "Arial", sans-serif`,
+  fontFamily: `"Poppins", "Inter", "Roboto", "Helvetica", "Arial", sans-serif`,
   fontWeightLight: 300,
   fontWeightRegular: 400,
   fontWeightMedium: 600,
@@ -13,5 +13,5 @@ export const typography: TypographyVariantsOptions = {
   h5: { fontSize: "1.25rem", fontWeight: 500 },
   h6: { fontSize: "1rem", fontWeight: 500 },
   body1: { fontSize: "1rem", fontWeight: 400 },
-  body2: { fontSize: "0.875rem", fontWeight: 400 }
+  body2: { fontSize: "0.875rem", fontWeight: 400 },
 };
