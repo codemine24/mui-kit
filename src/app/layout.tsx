@@ -7,13 +7,13 @@ import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
 import GlobalStyles from "@mui/material/GlobalStyles";
 import { Metadata } from "next";
-import { JetBrains_Mono, Roboto } from "next/font/google";
+import { JetBrains_Mono, Manrope } from "next/font/google";
 import "../styles/globals.css";
 import Script from "next/script";
 
-const roboto = Roboto({
+const roboto = Manrope({
   subsets: ["latin"],
-  variable: "--font-roboto",
+  variable: "--font-sans",
   weight: ["400", "500", "700"], // adjust weights as needed
   display: "swap"
 });
