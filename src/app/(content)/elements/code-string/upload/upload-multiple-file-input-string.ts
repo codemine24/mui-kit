@@ -1,6 +1,4 @@
-"use client";
-
-import React, { useState } from "react";
+export const uploadMultipleFileInputString = `import React, { useState } from "react";
 import {
   Box,
   Typography,
@@ -46,7 +44,7 @@ const FileUploader: React.FC<FileUploaderProps> = ({
 
   const labelText = multiple
     ? files.length > 0
-      ? `${files.length} file(s) selected`
+      ? \`\${files.length} file(s) selected\`
       : "No files chosen"
     : files.length > 0
     ? files[0].name
@@ -186,13 +184,14 @@ const FileUploader: React.FC<FileUploaderProps> = ({
   );
 };
 
-export const UploadSingleFileInputPreview = () => {
+export const UploadMultipleFileInputPreview = () => {
   const handleFilesChange = (files: File[]) => {
     console.log("Selected files:", files);
   };
   return (
     <Box>
       <FileUploader
+        multiple
         label="SVG, PNG, JPG or GIF (MAX. 800×400px)."
         accept=".svg,.png,.jpg,.gif"
         onFilesChange={handleFilesChange}
@@ -200,3 +199,4 @@ export const UploadSingleFileInputPreview = () => {
     </Box>
   );
 };
+`

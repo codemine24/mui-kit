@@ -1,4 +1,4 @@
-"use client";
+export const uploadMultipleImageString = `"use client";
 
 import { Iconify } from "@/components/iconify";
 import CloseIcon from "@mui/icons-material/Close";
@@ -135,3 +135,4 @@ export const UploadMultipleImagePreview = () => {
     </Box>
   );
 };
+`;

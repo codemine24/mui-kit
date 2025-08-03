@@ -1,6 +1,4 @@
-"use client";
-
-import React, { useState } from "react";
+export const uploadSingleFileInputString = `import React, { useState } from "react";
 import {
   Box,
   Typography,
@@ -46,7 +44,7 @@ const FileUploader: React.FC<FileUploaderProps> = ({
 
   const labelText = multiple
     ? files.length > 0
-      ? `${files.length} file(s) selected`
+      ? \`\${files.length} file(s) selected\`
       : "No files chosen"
     : files.length > 0
     ? files[0].name
@@ -200,3 +198,4 @@ export const UploadSingleFileInputPreview = () => {
     </Box>
   );
 };
+`

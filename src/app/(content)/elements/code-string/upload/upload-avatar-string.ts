@@ -1,6 +1,4 @@
-"use client";
-
-import CameraAltIcon from "@mui/icons-material/CameraAlt";
+export const uploadAvatarString = `import CameraAltIcon from "@mui/icons-material/CameraAlt";
 import { Avatar, Box, Typography } from "@mui/material";
 import React, { useRef, useState } from "react";
 
@@ -151,3 +149,4 @@ export const UploadAvatarPreview = () => {
     </Box>
   );
 };
+`;
