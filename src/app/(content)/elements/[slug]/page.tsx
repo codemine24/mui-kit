@@ -28,6 +28,8 @@ import { SkeletonView } from "../view/skeleton-view";
 
 import { BtnGroupView } from "../view/btn-group-view";
 import { ChipView } from "../view/chip-view";
+import { UploaderView } from "../view/upload-view";
+
 export async function generateStaticParams() {
   return elementsArr.map((element) => ({
     slug: element.path?.split("/").pop(),
@@ -64,6 +66,7 @@ const componentMap: Record<string, JSX.Element> = {
   skeleton: <SkeletonView />,
   "button-group": <BtnGroupView />,
   chip: <ChipView />,
+  uploader: <UploaderView />,
 };
 
 export default async function Page({
