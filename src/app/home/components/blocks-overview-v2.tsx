@@ -19,15 +19,18 @@ export const BlockOverviewV2 = () => {
   return (
     <Box
       sx={{
-        bgcolor: "background.paper",
-        py: { xs: 6, md: 12 }
-      }}>
+        py: { xs: 6, md: 12 },
+      }}
+    >
       <Container maxWidth={"xl"}>
         <Grid container>
           <Grid size={{ xs: 12, md: 4 }} sx={{ mb: { xs: 2, md: 0 } }}>
             <Box>
               <Heading1 text="20+" />
-              <BodyText text="Ready made blocks" sx={{ fontWeight: 600, fontSize: 20 }} />
+              <BodyText
+                text="Ready made blocks"
+                sx={{ fontWeight: 600, fontSize: 20 }}
+              />
               <BodyText
                 text="Have you ever wondered why material ui doesn't have ready made blocks like Header, Footer, Slider etc? Well, we have. Simply copy and paste into your project."
                 sx={{ mb: { xs: 0, md: 2 } }}
@@ -37,8 +40,9 @@ export const BlockOverviewV2 = () => {
                 style={{
                   color: theme.palette.primary.main,
                   textDecoration: "none",
-                  fontSize: pxToRem(16)
-                }}>
+                  fontSize: pxToRem(16),
+                }}
+              >
                 View all
               </Link>
             </Box>
@@ -47,7 +51,10 @@ export const BlockOverviewV2 = () => {
             {featuredBlocks.map((item) => (
               <Button
                 startIcon={
-                  <Iconify icon={item.icon} style={{ color: theme.palette.text.secondary }} />
+                  <Iconify
+                    icon={item.icon}
+                    style={{ color: theme.palette.text.secondary }}
+                  />
                 }
                 key={item.label}
                 variant="outlined"
@@ -62,10 +69,11 @@ export const BlockOverviewV2 = () => {
                   color: "text.secondary",
                   fontSize: { xs: pxToRem(15), md: pxToRem(16) },
                   "&:hover": {
-                    color: "text.primary"
-                  }
+                    color: "text.primary",
+                  },
                 }}
-                onClick={() => router.push(item.url)}>
+                onClick={() => router.push(item.url)}
+              >
                 {item.label}
               </Button>
             ))}
