@@ -14,4 +14,5 @@ export const typography: TypographyVariantsOptions = {
   h6: { fontSize: "1rem", fontWeight: 500 },
   body1: { fontSize: "1rem", fontWeight: 400 },
   body2: { fontSize: "0.875rem", fontWeight: 400 },
+  button: { fontSize: "0.875rem", fontWeight: 500 },
 };
