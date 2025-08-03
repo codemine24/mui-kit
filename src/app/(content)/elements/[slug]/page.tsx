@@ -28,7 +28,7 @@ import { SkeletonView } from "../view/skeleton-view";
 
 import { BtnGroupView } from "../view/btn-group-view";
 import { ChipView } from "../view/chip-view";
-import { UploaderView } from "../view/uploader-view";
+import { UploaderView } from "../view/upload-view";
 
 export async function generateStaticParams() {
   return elementsArr.map((element) => ({
