@@ -15,6 +15,7 @@ import {
     SnackbarUndoButtonPreview,
     SnackbarNotificationPreview,
     SnackbarInteractivePreview,
+    PositionedSnackbarPreview,
 } from "../components/snackbar";
 
 const sections = [
@@ -57,6 +58,14 @@ const sections = [
             "Interactive snackbar component built with material ui.",
         codeString: "",
         preview: <SnackbarInteractivePreview />,
+    },
+    {
+        id: "snackbar-6",
+        title: "Positioned snackbar",
+        description:
+            "Positioned snackbar component built with material ui.",
+        codeString: "",
+        preview: <PositionedSnackbarPreview />,
     },
 ];
 
