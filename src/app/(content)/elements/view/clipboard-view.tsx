@@ -14,6 +14,9 @@ import { ClipboardV3Preview } from "../components/clipboard/clipboard-v3-preview
 import { ClipboardV4Preview } from "../components/clipboard/clipboard-v4-preview";
 import { ClipboardV5Preview } from "../components/clipboard/clipboard-v5-preview";
 import { ClipboardV6Preview } from "../components/clipboard/clipboard-v6-preview";
+import { ClipboardV7Preview } from "../components/clipboard/clipboard-v7-preview";
+import { ClipboardV8Preview } from "../components/clipboard/clipboard-v8-preview";
+import { ClipboardV9Preview } from "../components/clipboard/clipboard-v9-preview";
 
 const sections = [
   {
@@ -57,6 +60,27 @@ const sections = [
     description: "",
     codeString: "",
     preview: <ClipboardV6Preview />,
+  },
+  {
+    id: "clipboard-7",
+    title: "Clipboard version 7",
+    description: "",
+    codeString: "",
+    preview: <ClipboardV7Preview />,
+  },
+  {
+    id: "clipboard-8",
+    title: "Clipboard version 8",
+    description: "",
+    codeString: "",
+    preview: <ClipboardV8Preview />,
+  },
+  {
+    id: "clipboard-9",
+    title: "Clipboard version 9",
+    description: "",
+    codeString: "",
+    preview: <ClipboardV9Preview />,
   },
 ];
 
