@@ -7,7 +7,7 @@ export const Heading2 = ({ text, sx }: { text: string; sx?: SxProps<Theme> }) =>
     <Typography
       gutterBottom
       sx={{
-        fontSize: { xs: pxToRem(24), md: pxToRem(30), lg: pxToRem(36) },
+        fontSize: { xs: pxToRem(24), md: pxToRem(28), lg: pxToRem(32) },
         fontWeight: 600,
         marginBottom: 0,
         "& span": { color: "primary.main" },

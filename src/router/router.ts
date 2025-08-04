@@ -111,56 +111,73 @@ export const featuredComponents = [
     label: "DND",
     url: PATHS.ELEMENTS.DND,
     icon: "bi:grid-1x2",
+    count: 2,
   },
   {
     label: "Editor",
     url: PATHS.ELEMENTS.EDITOR,
     icon: "material-symbols-light:text-ad-outline-sharp",
+    count: 2,
   },
   {
     label: "Carousel",
     url: PATHS.ELEMENTS.CAROUSEL,
     icon: "bx:carousel",
+    count: 2,
   },
   {
     label: "Timeline",
     url: PATHS.ELEMENTS.TIMELINE,
     icon: "gravity-ui:list-timeline",
+    count: 2,
   },
   {
     label: "Accordion",
     url: PATHS.ELEMENTS.ACCORDION,
     icon: "tabler:layout-list",
+    count: 2,
   },
   {
     label: "Alert",
     url: PATHS.ELEMENTS.ALERT,
     icon: "tabler:alert-triangle",
+    count: 2,
   },
   {
     label: "Avatar",
     url: PATHS.ELEMENTS.AVATAR,
     icon: "tabler:user-circle",
+    count: 2,
   },
   {
     label: "Button",
     url: PATHS.ELEMENTS.BUTTON,
     icon: "proicons:button",
+    count: 2,
   },
   {
     label: "Card",
     url: PATHS.ELEMENTS.CARD,
     icon: "solar:card-linear",
+    count: 2,
   },
   {
     label: "Dialog",
     url: PATHS.ELEMENTS.DIALOG,
     icon: "carbon:popup",
+    count: 2,
   },
   {
     label: "Stepper",
     url: PATHS.ELEMENTS.STEPPER,
     icon: "tabler:list-numbers",
+    count: 2,
+  },
+  {
+    label: "Progressbar",
+    url: PATHS.ELEMENTS.PROGRESSBAR,
+    icon: "ri:progress-3-line",
+    count: 12,
   },
 ];
 
