@@ -2,6 +2,7 @@
 import { BodyText } from "@/components/core/body-text";
 import { GradientSectionTitle } from "@/components/core/gradient-section-title";
 import { Heading2 } from "@/components/core/heading-2";
+import { useFadeInOnScroll } from "@/hooks/use-fade-in";
 import { PATHS } from "@/router/paths";
 import { featuredComponents } from "@/router/router";
 import { pxToRem } from "@/utils/pxToRem";
@@ -10,24 +11,18 @@ import { Button, Grid, Stack, Typography } from "@mui/material";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import { useTheme } from "@mui/material/styles";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/all";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 export const ComponentOverviewV2 = () => {
   const theme = useTheme();
   const router = useRouter();
-  gsap.registerPlugin(ScrollTrigger);
-  gsap.to(".box", {
-    scrollTrigger: ".box",
-    x: 500,
-  });
+  useFadeInOnScroll(".component-overview-animation");
   return (
     <Box
       sx={{
-        pt: { xs: 0, md: 12 },
-        pb: { xs: 6, md: 12 },
+        paddingTop: { xs: "40px", md: "80px" },
+        paddingBottom: { xs: "60px", md: "80px" },
       }}
     >
       <Container maxWidth={"xl"}>
@@ -44,13 +39,14 @@ export const ComponentOverviewV2 = () => {
 
           <BodyText
             text="Fully functional components designed with Material ui. Simply copy and paste into your project."
-            sx={{ mb: { xs: 0, md: 2 } }}
+            sx={{ mb: { xs: 2, md: 4, textAlign: "center" } }}
           />
         </Box>
 
         <Grid container spacing={2}>
           {featuredComponents.map((item) => (
             <Grid
+              className="component-overview-animation"
               size={{ xs: 6, md: 3 }}
               key={item.label}
               sx={{
@@ -68,7 +64,7 @@ export const ComponentOverviewV2 = () => {
                 router.push(item.url);
               }}
             >
-              <Box className="box">
+              <Box>
                 <Box
                   sx={{
                     background: theme.palette.background.paper,

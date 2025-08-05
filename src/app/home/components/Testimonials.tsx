@@ -1,13 +1,13 @@
 "use client";
 import { BodyText } from "@/components/core/body-text";
 import { Heading2 } from "@/components/core/heading-2";
+import { useFadeInOnScroll } from "@/hooks/use-fade-in";
 import { Facebook, LinkedIn, X } from "@mui/icons-material";
 import Masonry from "@mui/lab/Masonry";
 import { Stack } from "@mui/material";
 import Avatar from "@mui/material/Avatar";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
-import Fade from "@mui/material/Fade";
 import { useTheme } from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
 
@@ -83,10 +83,10 @@ const testimonials: ITestimonial[] = [
     platform: "linkedin",
     url: "/images/contributors_saffaullah.jpeg",
   },
-  
 ];
 
 const PlatformIcon = ({ platform }: { platform: string }) => {
+  useFadeInOnScroll(".testimonial-animation");
   switch (platform.toLowerCase()) {
     case "facebook":
       return <Facebook sx={{ color: "#1877F2" }} />;
@@ -105,8 +105,8 @@ export const Testimonials = () => {
   return (
     <Box
       sx={{
-        bgcolor: "background.default",
-        py: { xs: 6, md: 12 },
+        paddingTop: { xs: "60px", md: "100px" },
+        paddingBottom: { xs: "60px", md: "80px" },
       }}
     >
       <Container maxWidth="xl">
@@ -123,57 +123,52 @@ export const Testimonials = () => {
 
         <Masonry
           columns={{ xs: 1, sm: 2, md: 3 }}
-          spacing={2}
-          sx={{ width: "auto", m: 0 }}
+          spacing={1}
+          sx={{ width: "auto", mx: -0.5 }}
         >
           {testimonials.map((testimonial, index) => (
-            <Fade
-              in={true}
-              timeout={500}
+            <Box
               key={index}
-              style={{ transitionDelay: `${index * 100}ms` }}
+              className="testimonial-animation"
+              sx={{
+                p: 3,
+                display: "flex",
+                flexDirection: "column",
+                border: "1px solid var(--divider-color)",
+                borderRadius: (theme) => theme.shape.borderRadius,
+              }}
             >
-              <Box
-                sx={{
-                  p: 3,
-                  display: "flex",
-                  flexDirection: "column",
-                  border: "1px solid var(--divider-color)",
-                  borderRadius: (theme) => theme.shape.borderRadius,
-                }}
+              <Stack
+                direction="row"
+                justifyContent={"space-between"}
+                alignItems={"start"}
               >
-                <Stack
-                  direction="row"
-                  justifyContent={"space-between"}
-                  alignItems={"start"}
-                >
-                  <Box display="flex" alignItems="center" mb={2}>
-                    <Avatar
-                      sx={{
-                        width: 56,
-                        height: 56,
-                        mr: 2,
-                        color: theme.palette.primary.contrastText,
-                      }}
-                      src={testimonial.url}
-                    />
-                    <Box>
-                      <Typography variant="h6" fontWeight="bold">
-                        {testimonial.name}
-                      </Typography>
-                      <Typography variant="body2" color="text.secondary">
-                        {testimonial.title}
-                      </Typography>
-                    </Box>
+                <Box display="flex" alignItems="center" mb={2}>
+                  <Avatar
+                    sx={{
+                      width: 56,
+                      height: 56,
+                      mr: 2,
+                      color: theme.palette.primary.contrastText,
+                    }}
+                    src={testimonial.url}
+                  />
+                  <Box>
+                    <Typography variant="h6" fontWeight="bold">
+                      {testimonial.name}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                      {testimonial.title}
+                    </Typography>
                   </Box>
+                </Box>
 
-                  <PlatformIcon platform={testimonial.platform} />
-                </Stack>
-                <Typography variant="body1" color="text.secondary" mb={2}>
-                  {testimonial.message}
-                </Typography>
-              </Box>
-            </Fade>
+                <PlatformIcon platform={testimonial.platform} />
+              </Stack>
+              <Typography variant="body1" color="text.secondary" mb={2}>
+                {testimonial.message}
+              </Typography>
+            </Box>
           ))}
         </Masonry>
       </Container>
