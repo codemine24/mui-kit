@@ -26,35 +26,35 @@ import { PATHS } from "@/router/paths";
 
 const sections = [
   {
-    id: "pagination-solid",
+    id: "pagination-1",
     title: "Solid",
     description: "Material UI core pagination with extended design, and functionality.",
     codeString: paginationSolidString,
     preview: <PaginationSolidPreview />
   },
   {
-    id: "pagination-outlined",
+    id: "pagination-2",
     title: "Outlined",
     description: "Material UI core pagination with extended design, and functionality.",
     codeString: paginationOutlinedString,
     preview: <PaginationOutlinedPreview />
   },
   {
-    id: "pagination-soft-bg",
+    id: "pagination-3",
     title: "Soft Background",
     description: "Material UI core pagination with extended design, and functionality.",
     codeString: paginationSoftBgString,
     preview: <PaginationSoftBgPreview />
   },
   {
-    id: "pagination-go-to-page",
+    id: "pagination-4",
     title: "Go To Page",
     description: "Material UI core pagination with extended design, and functionality.",
     codeString: paginationGoToPageString,
     preview: <PaginationGoToPagePreview />
   },
   {
-    id: "pagination-button-only",
+    id: "pagination-5",
     title: "Button Only",
     description: "Material UI core pagination with extended design, and functionality.",
     codeString: paginationButtonOnlyString,

@@ -3,15 +3,15 @@ import { BodyText } from "@/components/core/body-text";
 import { Heading2 } from "@/components/core/heading-2";
 import Add from "@mui/icons-material/Add";
 import Remove from "@mui/icons-material/Remove";
+import MuiAccordion from "@mui/material/Accordion";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import AccordionSummary from "@mui/material/AccordionSummary";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Link from "@mui/material/Link";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import { styled } from "@mui/material/styles";
-import MuiAccordion from "@mui/material/Accordion";
-import AccordionDetails from "@mui/material/AccordionDetails";
-import AccordionSummary from "@mui/material/AccordionSummary";
 import React from "react";
 
 const leftQuestions = [
@@ -96,7 +96,8 @@ export const FrequentlyAskedQuestion = () => {
   return (
     <Box
       sx={{
-        py: { xs: 6, md: 12 },
+        paddingTop: { xs: "40px", md: "80px" },
+        paddingBottom: { xs: "60px", md: "80px" },
       }}
     >
       <Container maxWidth={"xl"}>

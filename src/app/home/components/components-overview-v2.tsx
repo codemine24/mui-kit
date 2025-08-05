@@ -35,10 +35,10 @@ export const ComponentOverviewV2 = () => {
           }}
         >
           <GradientSectionTitle text="40+" />
-          <Heading2 text="Ready made components" sx={{ textAlign: "center" }} />
+          <Heading2 text="Core elements" sx={{ textAlign: "center" }} />
 
           <BodyText
-            text="Fully functional components designed with Material ui. Simply copy and paste into your project."
+            text="We tried to extend the feature of mui core components also created some extra components that material ui is missing right now."
             sx={{ mb: { xs: 2, md: 4, textAlign: "center" } }}
           />
         </Box>
