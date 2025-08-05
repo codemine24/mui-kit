@@ -22,7 +22,7 @@ export const GradientSectionTitle = ({ text }: { text: string }) => {
           bottom: 0,
           zIndex: -1,
           padding: "2px",
-          borderRadius: "4px",
+          borderRadius: (theme) => theme.shape.borderRadius,
           background: "linear-gradient(90deg, #007074 0%, #24a76b 100%)",
           WebkitMask:
             "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",

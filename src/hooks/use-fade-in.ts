@@ -13,12 +13,12 @@ export const useFadeInOnScroll = (selector: string = ".fade-in", options = {}) =
       const element = el as HTMLElement;
       gsap.fromTo(
         element,
-        { opacity: 0, y: 40 },
+        { opacity: 0, y: 60 },
         {
           scrollTrigger: {
             trigger: element,
             start: "top 95%",
-            toggleActions: "play none none reverse",
+            toggleActions: "play none none none",
             ...options,
           },
           opacity: 1,
