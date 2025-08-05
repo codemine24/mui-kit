@@ -119,7 +119,7 @@ export const ComponentOverviewV2 = () => {
               textTransform: "none",
             }}
           >
-            Get Started
+            View all
           </Button>
         </Stack>
       </Container>
