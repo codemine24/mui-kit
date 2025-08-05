@@ -1,151 +1,188 @@
 "use client";
+import { BodyText } from "@/components/core/body-text";
+import { Heading2 } from "@/components/core/heading-2";
+import { useFadeInOnScroll } from "@/hooks/use-fade-in";
+import { Facebook, LinkedIn, X } from "@mui/icons-material";
+import Masonry from "@mui/lab/Masonry";
+import { Stack } from "@mui/material";
+import Avatar from "@mui/material/Avatar";
 import Box from "@mui/material/Box";
-import Paper from "@mui/material/Paper";
+import Container from "@mui/material/Container";
+import { useTheme } from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
-import { useTheme, keyframes } from "@mui/material/styles";
 
-// Single left-to-right animation
-const slide = keyframes`
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-`;
-
-interface Testimonial {
-  username: string;
-  handle: string;
-  review: string;
+interface ITestimonial {
+  name: string;
+  title: string;
+  message: string;
+  platform: string;
+  url?: string;
 }
 
-const testimonials: Testimonial[] = [
+const testimonials: ITestimonial[] = [
   {
-    username: "Sarah Johnson",
-    handle: "@sarahj_dev",
-    review: "MUI Kit is a game-changer! The components are so easy to use and look amazing."
+    name: "Rejown Ahmed Zisan",
+    title: "Founder @ Web Makers LTD",
+    message:
+      "They have done an amazing thing! There was no open source UI Kit for the MUI in React. MUI is missing a lot of important components and features which needed to be written fully custom. However, Fazly Alahi and His team made this easier for us. Please like comment share and spread this library with your own community. ",
+    platform: "linkedin",
+    url: "/images/contributors_rejown.jpeg",
   },
   {
-    username: "Mike Chen",
-    handle: "@mikechen_ui",
-    review: "I’m blown away by MUI Kit’s animations. Building interfaces has never been this fun!"
+    name: "Arpit Awasthi",
+    title: "CEO @ EdgeNRoots",
+    message: "Great Fazly , Great to see such work",
+    platform: "linkedin",
+    url: "/images/contributors_arpit.jpeg",
   },
   {
-    username: "Emily Davis",
-    handle: "@emilyd_codes",
-    review: "The best UI library I’ve used. MUI Kit saves me so much time! 🚀"
+    name: "Azim Uddin Ahamed",
+    title: "Top rated plus @ Upwork",
+    message:
+      "It could be a game changer for material ui community. Will definitely use it for my next project.",
+    platform: "linkedin",
+    url: "/images/contributors_azim.jpg",
   },
   {
-    username: "Alex Turner",
-    handle: "@alexturner_dev",
-    review: "MUI Kit’s responsive design is top-notch. My apps look great on every device!"
+    name: "Minhajul Karim",
+    title: "Software Engineer at Zaag",
+    message:
+      "Looks awesome, bhaiya. I've become a fan of the Blocks section, particularly.",
+    platform: "facebook",
+    url: "/images/contributors_Minhajul Karim.jpg",
+  },
+
+  {
+    name: "Muhammad Rabbi",
+    title: "Frontend developer",
+    message:
+      "Huge congrats on launching MUI Kit! 🎉 This is an amazing initiative for the open-source and MUI community. Love how you've extended core components, added missing elements, and included ready-made sections — super practical for real-world use. 🔥 Just bookmarked the repo and site — excited to explore and use it in future projects. Great work by the whole team! 🙌",
+    platform: "linkedin",
+    url: "/images/contributos_rabbi.jpeg",
   },
   {
-    username: "Priya Sharma",
-    handle: "@priya_sharma",
-    review: "Loving the customization options in MUI Kit. It’s perfect for my projects! 💖"
+    name: "Abu Bokkor Siddik",
+    title: "MERN Stack Developer",
+    message:
+      "Do you realize what you've done?! Congrats, man! And congrats to everyone!",
+    platform: "linkedin",
+    url: "/images/contributors_abu.jpeg",
   },
   {
-    username: "James Carter",
-    handle: "@jamesc_dev",
-    review: "Have you tried MUI Kit yet? It’s packed with awesome features. Highly recommend!"
-  }
+    name: "Serge A.",
+    title: "Project manager @ Peppermint",
+    message:
+      "pretty cool tbh i always have a better time working when stuff like this pops up you think open source keeps getting stronger because more ppl contribute or because it lets anybody build whatever they want",
+    platform: "linkedin",
+    url: "/images/contributors_serge.jpeg",
+  },
+  {
+    name: "Saffaullah Shuvo",
+    title: "Web Developer",
+    message: "The UI looks super cool.",
+    platform: "linkedin",
+    url: "/images/contributors_saffaullah.jpeg",
+  },
 ];
 
-const duplicatedTestimonials = [...testimonials, ...testimonials];
-
-const TestimonialCard: React.FC<Testimonial> = ({ username, handle, review }) => {
-  const theme = useTheme();
-  return (
-    <Paper
-      elevation={0}
-      sx={{
-        p: 3,
-        borderRadius: 2,
-        minHeight: 120,
-        width: { xs: 200, md: 250 },
-        backdropFilter: "blur(8px)",
-        backgroundColor:
-          theme.palette.mode === "dark" ? "rgba(30,30,30,0.9)" : "rgba(255,255,255,0.1)",
-        border: `.5px solid ${
-          theme.palette.mode === "dark" ? "rgba(255,255,255,0.1)" : "rgba(0,0,0,0.1)"
-        }`,
-        color: theme.palette.mode === "dark" ? "white" : "text.primary",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "space-between"
-      }}>
-      <Box>
-        <Typography variant="body2" color="text.secondary">
-          {handle}
-        </Typography>
-        <Typography variant="body1" sx={{ mt: 1 }}>
-          {review}
-        </Typography>
-      </Box>
-      <Typography variant="subtitle2" fontWeight={600} sx={{ mt: 2 }}>
-        {username}
-      </Typography>
-    </Paper>
-  );
+const PlatformIcon = ({ platform }: { platform: string }) => {
+  useFadeInOnScroll(".testimonial-animation");
+  switch (platform.toLowerCase()) {
+    case "facebook":
+      return <Facebook sx={{ color: "#1877F2" }} />;
+    case "linkedin":
+      return <LinkedIn sx={{ color: "#0A66C2" }} />;
+    case "twitter":
+      return <X sx={{ color: (theme) => theme.palette.primary.main }} />;
+    default:
+      return <Facebook color="primary" />;
+  }
 };
 
 export const Testimonials = () => {
+  const theme = useTheme();
+
   return (
     <Box
       sx={{
-        py: 8,
-        textAlign: "center",
-        bgcolor: "background.default",
-        width: "100%"
-      }}>
-      <Typography variant="h4" fontWeight={600} gutterBottom>
-        Loved by thousands of developers
-      </Typography>
-      <Typography variant="body1" color="text.secondary" sx={{ mb: 6 }}>
-        Here&apos;s what some of our users have to say about MUI Kit.
-      </Typography>
-
-      {/* Testimonial Rows */}
-      <Box
-        sx={{
-          display: "grid",
-          gridTemplateRows: { xs: "1fr", md: "1fr 1fr" },
-          gap: 4,
-          overflow: "hidden"
-        }}>
-        {/* Top Row */}
-        <Box sx={{ width: "100%", overflow: "hidden" }}>
-          <Box
+        paddingTop: { xs: "40px", md: "80px" },
+        paddingBottom: { xs: "60px", md: "80px" },
+        position: "relative",
+        ":after": {
+          content: '""',
+          position: "absolute",
+          bottom: 0,
+          left: 0,
+          right: 0,
+          height: "1px",
+          background:
+            "radial-gradient(circle at center, #24a76b 0%, transparent 80%)",
+        },
+      }}
+    >
+      <Container maxWidth="xl">
+        <Box mb={4}>
+          <Heading2 text="Wall of love" sx={{ textAlign: "center" }} />
+          <BodyText
+            text={<>What people are saying about MUI Kit</>}
             sx={{
-              display: "flex",
-              gap: 3,
-              animation: `${slide} 30s linear infinite`,
-              width: "max-content"
-            }}>
-            {duplicatedTestimonials.map((t, i) => (
-              <TestimonialCard key={`top-${i}`} {...t} />
-            ))}
-          </Box>
+              textAlign: "center",
+              px: { xs: "0%", md: "25%" },
+            }}
+          />
         </Box>
 
-        {/* Bottom Row */}
-        <Box sx={{ width: "100%", overflow: "hidden", display: { xs: "none", md: "block" } }}>
-          <Box
-            sx={{
-              display: "flex",
-              gap: 3,
-              flexDirection: "row-reverse",
-              animation: `${slide} 30s linear infinite`,
-              width: "max-content"
-            }}>
-            {duplicatedTestimonials.map((t, i) => (
-              <TestimonialCard key={`bottom-${i}`} {...t} />
-            ))}
-          </Box>
-        </Box>
-      </Box>
+        <Masonry
+          columns={{ xs: 1, sm: 2, md: 3 }}
+          spacing={1}
+          sx={{ width: "auto", mx: -0.5 }}
+        >
+          {testimonials.map((testimonial, index) => (
+            <Box
+              key={index}
+              className="testimonial-animation"
+              sx={{
+                p: 3,
+                display: "flex",
+                flexDirection: "column",
+                border: "1px solid var(--divider-color)",
+                borderRadius: (theme) => theme.shape.borderRadius,
+              }}
+            >
+              <Stack
+                direction="row"
+                justifyContent={"space-between"}
+                alignItems={"start"}
+              >
+                <Box display="flex" alignItems="center" mb={2}>
+                  <Avatar
+                    sx={{
+                      width: 56,
+                      height: 56,
+                      mr: 2,
+                      color: theme.palette.primary.contrastText,
+                    }}
+                    src={testimonial.url}
+                  />
+                  <Box>
+                    <Typography variant="h6" fontWeight="bold">
+                      {testimonial.name}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                      {testimonial.title}
+                    </Typography>
+                  </Box>
+                </Box>
+
+                <PlatformIcon platform={testimonial.platform} />
+              </Stack>
+              <Typography variant="body1" color="text.secondary" mb={2}>
+                {testimonial.message}
+              </Typography>
+            </Box>
+          ))}
+        </Masonry>
+      </Container>
     </Box>
   );
 };

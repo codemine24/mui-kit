@@ -108,108 +108,129 @@ export const footerItems = [
 // featured components
 export const featuredComponents = [
   {
-    label: "DND",
-    url: PATHS.ELEMENTS.DND,
-    icon: "bi:grid-1x2",
-  },
-  {
-    label: "Editor",
-    url: PATHS.ELEMENTS.EDITOR,
-    icon: "material-symbols-light:text-ad-outline-sharp",
-  },
-  {
-    label: "Carousel",
-    url: PATHS.ELEMENTS.CAROUSEL,
-    icon: "bx:carousel",
-  },
-  {
-    label: "Timeline",
-    url: PATHS.ELEMENTS.TIMELINE,
-    icon: "gravity-ui:list-timeline",
-  },
-  {
     label: "Accordion",
     url: PATHS.ELEMENTS.ACCORDION,
-    icon: "tabler:layout-list",
+    icon: "vaadin:accordion-menu",
+    count: 8,
   },
   {
-    label: "Alert",
-    url: PATHS.ELEMENTS.ALERT,
-    icon: "tabler:alert-triangle",
+    label: "Breadcrumbs",
+    url: PATHS.ELEMENTS.BREADCRUMB,
+    icon: "tdesign:component-breadcrumb",
+    count: 7,
   },
   {
-    label: "Avatar",
-    url: PATHS.ELEMENTS.AVATAR,
-    icon: "tabler:user-circle",
+    label: "Button Group",
+    url: PATHS.ELEMENTS.BUTTON_GROUP,
+    icon: "fluent:tab-group-20-regular",
+    count: 12,
   },
   {
-    label: "Button",
-    url: PATHS.ELEMENTS.BUTTON,
-    icon: "proicons:button",
+    label: "carousel",
+    url: PATHS.ELEMENTS.CAROUSEL,
+    icon: "material-symbols-light:view-carousel-outline",
+    count: 14,
   },
   {
-    label: "Card",
-    url: PATHS.ELEMENTS.CARD,
-    icon: "solar:card-linear",
+    label: "DND",
+    url: PATHS.ELEMENTS.DND,
+    icon: "stash:drag-squares-horizontal",
+    count: 5,
   },
   {
-    label: "Dialog",
-    url: PATHS.ELEMENTS.DIALOG,
-    icon: "carbon:popup",
+    label: "Fancy Background",
+    url: PATHS.ELEMENTS.FANCY_BACKGROUND,
+    icon: "material-symbols-light:square-outline-rounded",
+    count: 11,
+  },
+  {
+    label: "pagination",
+    url: PATHS.ELEMENTS.PAGINATION,
+    icon: "lineicons:pagination",
+    count: 5,
+  },
+  {
+    label: "Progress",
+    url: PATHS.ELEMENTS.PROGRESSBAR,
+    icon: "ri:progress-1-line",
+    count: 12,
+  },
+  {
+    label: "Skeleton",
+    url: PATHS.ELEMENTS.SKELETON,
+    icon: "heroicons:bars-3-bottom-left-20-solid",
+    count: 10,
   },
   {
     label: "Stepper",
     url: PATHS.ELEMENTS.STEPPER,
-    icon: "tabler:list-numbers",
+    icon: "carbon:popup",
+    count: 15,
+  },
+  {
+    label: "Timeline",
+    url: PATHS.ELEMENTS.TIMELINE,
+    icon: "clarity:timeline-line",
+    count: 13,
+  },
+  {
+    label: "Uploader",
+    url: PATHS.ELEMENTS.UPLOADER,
+    icon: "solar:upload-outline",
+    count: 6,
   },
 ];
 
 // featured blocks
 export const featuredBlocks = [
   {
-    label: "Pricing Table",
-    url: PATHS.BLOCKS.PRICING_TABLE,
-    icon: "tabler:currency-dollar",
-  },
-  {
     label: "About",
     url: PATHS.BLOCKS.ABOUT,
-    icon: "mdi:account-question-outline",
+    icon: "ix:about",
+    count: 5,
   },
   {
     label: "Call To Action",
     url: PATHS.BLOCKS.CALL_TO_ACTION,
-    icon: "tabler:click",
+    icon: "material-symbols-light:call-to-action-outline",
+    count: 3,
   },
+
   {
     label: "Coming Soon",
     url: PATHS.BLOCKS.COMING_SOON,
-    icon: "tabler:clock-hour-10",
-  },
-  { label: "Contact", url: PATHS.BLOCKS.CONTACT, icon: "tabler:phone-call" },
-  { label: "Copyright", url: PATHS.BLOCKS.COPYRIGHT, icon: "mdi:copyright" },
-  { label: "FAQ", url: PATHS.BLOCKS.FAQ, icon: "tabler:question-mark" },
-  {
-    label: "Feature",
-    url: PATHS.BLOCKS.FEATURE_BENEFIT,
-    icon: "tabler:star",
+    icon: "hugeicons:coming-soon-02",
+    count: 3,
   },
   {
-    label: "Feature Product",
-    url: PATHS.BLOCKS.FEATURE_PRODUCT,
-    icon: "tabler:package",
+    label: "Contact",
+    url: PATHS.BLOCKS.CONTACT,
+    icon: "hugeicons:contact",
+    count: 3,
+  },
+  {
+    label: "Faq",
+    url: PATHS.BLOCKS.FAQ,
+    icon: "qlementine-icons:faq-16",
+    count: 3,
+  },
+  {
+    label: "Pricing Table",
+    url: PATHS.BLOCKS.PRICING_TABLE,
+    icon: "material-symbols-light:table-outline",
+    count: 2,
+  },
+  {
+    label: "Hero",
+    url: PATHS.BLOCKS.HERO,
+    icon: "pixelarticons:section",
+    count: 3,
   },
   {
     label: "Footer",
     url: PATHS.BLOCKS.FOOTER,
-    icon: "tabler:layout-navbar-collapse",
-  },
-  { label: "Hero", url: PATHS.BLOCKS.HERO, icon: "tabler:layout-dashboard" },
-
-  {
-    label: "Testimonial",
-    url: PATHS.BLOCKS.TESTIMONIAL_SLIDER,
-    icon: "tabler:message-chatbot",
+    icon: "fluent-mdl2:footer",
+    count: 3,
   },
 ];
 
