@@ -5,6 +5,7 @@ import { Heading2 } from "@/components/core/heading-2";
 import { useFadeInOnScroll } from "@/hooks/use-fade-in";
 import { PATHS } from "@/router/paths";
 import { featuredComponents } from "@/router/router";
+import { gradientFrom, gradientTo } from "@/utils/getGradientColor";
 import { pxToRem } from "@/utils/pxToRem";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { Button, Grid, Stack, Typography } from "@mui/material";
@@ -25,7 +26,22 @@ export const ComponentOverviewV2 = () => {
         paddingBottom: { xs: "60px", md: "80px" },
       }}
     >
-      <Container maxWidth={"xl"}>
+      <Container maxWidth={"xl"} sx={{ position: "relative" }}>
+        {/* Gradient */}
+        <Box
+          sx={{
+            position: "absolute",
+            bottom: "0",
+            left: "50%  ",
+            width: { xs: "14rem", md: "20rem" },
+            height: { xs: "14rem", md: "20rem" },
+            borderRadius: "50%",
+            background: `linear-gradient(135deg, ${gradientFrom(
+              theme.palette.mode
+            )}, ${gradientTo(theme.palette.mode)})`,
+            filter: "blur(80px)",
+          }}
+        />
         <Box
           sx={{
             display: "flex",
@@ -86,7 +102,9 @@ export const ComponentOverviewV2 = () => {
                     height={40}
                   />
                 </Box>
-                <Box sx={{ p: 2 }}>
+                <Box
+                  sx={{ p: 2, background: theme.palette.background.default }}
+                >
                   <Typography
                     sx={{
                       fontWeight: 500,

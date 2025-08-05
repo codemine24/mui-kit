@@ -5,6 +5,7 @@ import { Heading2 } from "@/components/core/heading-2";
 import { useFadeInOnScroll } from "@/hooks/use-fade-in";
 import { PATHS } from "@/router/paths";
 import { featuredBlocks } from "@/router/router";
+import { gradientFrom, gradientTo } from "@/utils/getGradientColor";
 import { pxToRem } from "@/utils/pxToRem";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { Button, Grid, Stack, Typography } from "@mui/material";
@@ -23,9 +24,35 @@ export const BlockOverviewV2 = () => {
       sx={{
         paddingTop: { xs: "40px", md: "80px" },
         paddingBottom: { xs: "60px", md: "80px" },
+        position: "relative",
+        ":after": {
+          content: '""',
+          position: "absolute",
+          bottom: 0,
+          left: 0,
+          right: 0,
+          height: "1px",
+          background:
+            "radial-gradient(circle at center, #24a76b 0%, transparent 80%)",
+        },
       }}
     >
-      <Container maxWidth={"xl"}>
+      <Container maxWidth={"xl"} sx={{ position: "relative" }}>
+        {/* gradient  */}
+        <Box
+          sx={{
+            position: "absolute",
+            bottom: "10rem",
+            left: "-5rem",
+            width: { xs: "14rem", md: "20rem" },
+            height: { xs: "14rem", md: "20rem" },
+            borderRadius: "50%",
+            background: `linear-gradient(135deg, ${gradientFrom(
+              theme.palette.mode
+            )}, ${gradientTo(theme.palette.mode)})`,
+            filter: "blur(80px)",
+          }}
+        />
         <Box
           sx={{
             display: "flex",
@@ -86,7 +113,9 @@ export const BlockOverviewV2 = () => {
                     height={40}
                   />
                 </Box>
-                <Box sx={{ p: 2 }}>
+                <Box
+                  sx={{ p: 2, background: theme.palette.background.default }}
+                >
                   <Typography
                     sx={{
                       fontWeight: 500,

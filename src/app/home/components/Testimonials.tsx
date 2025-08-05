@@ -105,7 +105,7 @@ export const Testimonials = () => {
   return (
     <Box
       sx={{
-        paddingTop: { xs: "60px", md: "100px" },
+        paddingTop: { xs: "40px", md: "80px" },
         paddingBottom: { xs: "60px", md: "80px" },
         position: "relative",
         ":after": {
@@ -115,7 +115,8 @@ export const Testimonials = () => {
           left: 0,
           right: 0,
           height: "1px",
-          background: "radial-gradient(circle at center, #24a76b 0%, transparent 80%)",
+          background:
+            "radial-gradient(circle at center, #24a76b 0%, transparent 80%)",
         },
       }}
     >

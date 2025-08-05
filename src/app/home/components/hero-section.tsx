@@ -2,6 +2,7 @@
 import { BodyText } from "@/components/core/body-text";
 import InfiniteScroll from "@/components/infinity-scroll";
 import { PATHS } from "@/router/paths";
+import { gradientFrom, gradientTo } from "@/utils/getGradientColor";
 import { pxToRem } from "@/utils/pxToRem";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import GridViewIcon from "@mui/icons-material/GridView";
@@ -63,19 +64,11 @@ export const HeroSection = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
-  // Define theme-aware colors for background elements
-  const gradientFrom =
-    theme.palette.mode === "dark"
-      ? "rgba(0, 229, 255, 0.2)"
-      : "rgba(0, 188, 212, 0.2)";
-  const gradientTo =
-    theme.palette.mode === "dark"
-      ? "rgba(0, 229, 255, 0.2)"
-      : "rgba(0, 188, 212, 0.2)";
-
   return (
     <Box
       sx={{
+        paddingTop: { xs: "60px", md: "100px" },
+        paddingBottom: { xs: "60px", md: "80px" },
         position: "relative",
         overflow: "hidden",
         py: { xs: 8, md: 0 },
@@ -101,19 +94,9 @@ export const HeroSection = () => {
             width: { xs: "16rem", md: "24rem" },
             height: { xs: "16rem", md: "24rem" },
             borderRadius: "50%",
-            background: `linear-gradient(135deg, ${gradientFrom}, ${gradientTo})`,
-            filter: "blur(80px)",
-          }}
-        />
-        <Box
-          sx={{
-            position: "absolute",
-            top: "10rem",
-            left: "-5rem",
-            width: { xs: "14rem", md: "20rem" },
-            height: { xs: "14rem", md: "20rem" },
-            borderRadius: "50%",
-            background: `linear-gradient(135deg, ${gradientFrom}, ${gradientTo})`,
+            background: `linear-gradient(135deg, ${gradientFrom(
+              theme.palette.mode
+            )}, ${gradientTo(theme.palette.mode)})`,
             filter: "blur(80px)",
           }}
         />

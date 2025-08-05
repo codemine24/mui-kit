@@ -10,10 +10,10 @@ export const RootView = () => {
   return (
     <Box>
       <HeroSection />
-      <Testimonials />
       <ComponentOverviewV2 />
       <BlockOverviewV2 />
       <ContributorsOverview />
+      <Testimonials />
       <FrequentlyAskedQuestion />
     </Box>
   );
