@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function Contribute() {
   return (
-    <Container maxWidth={"xl"}>
+    <Container maxWidth={"xl"} sx={{ pt: 10 }}>
       <AboutView />
     </Container>
   );
