@@ -19,6 +19,8 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { Logo } from "./core/logo";
 import { Iconify } from "./iconify";
+import { Divider } from "@mui/material";
+import StarIcon from '@mui/icons-material/Star';
 
 // Navigation items
 
@@ -42,14 +44,27 @@ export const Header = () => {
 
   return (
     <AppBar
-      position="sticky"
-      color="default"
       elevation={0}
+      color="transparent"
       sx={{
-        backdropFilter: "blur(12px)",
-        backgroundColor: alpha(theme.palette.background.default, 0.7),
-        transition: "background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease"
-      }}>
+        bgcolor: { xs: alpha(theme.palette.background.paper, 0.01), md: "transparent" },
+        backdropFilter: { xs: "blur(10px)", md: "none" },
+        top: 0,
+        transition: "top 0.3s ease-in-out",
+        pt: { xs: 0, md: 3 },
+      }}
+    >
+
+      <Box sx={{
+        background: (theme) => `linear-gradient(to bottom, ${theme.palette.background.default}, transparent)`,
+        position: "absolute",
+        top: 0,
+        left: 0,
+        width: "100%",
+        height: 100,
+        zIndex: -1,
+      }} />
+
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Box sx={{ display: { xs: "none", md: "block" } }}>
@@ -83,25 +98,93 @@ export const Header = () => {
             sx={{
               flexGrow: 1,
               display: { xs: "none", md: "flex" },
-              marginLeft: 6
+              marginLeft: 6,
             }}>
-            {navItems.map((page) => (
-              <Button
-                key={page?.path}
-                onClick={handleNavigate(page?.path)}
-                sx={{
-                  color: "text.primary",
-                  fontSize: { md: pxToRem(14), lg: pxToRem(15) },
-                  fontWeight: 400,
-                  textTransform: "capitalize"
-                }}>
-                {page?.label}
-              </Button>
-            ))}
+            <Box
+              sx={{
+                width: "fit-content",
+                bgcolor: '#ffffff03',
+                border: '1px solid',
+                borderColor: "divider",
+                backdropFilter: "blur(12px)",
+                borderRadius: 999,
+                display: "flex",
+                alignItems: "center",
+                gap: 2,
+                py: 1.5,
+                px: 2
+              }}>
+              {navItems.map((page) => (
+                <Button
+                  key={page?.path}
+                  onClick={handleNavigate(page?.path)}
+                  sx={{
+                    color: "text.primary",
+                    fontSize: { md: pxToRem(14), lg: pxToRem(15) },
+                    fontWeight: 400,
+                    textTransform: "capitalize",
+                    borderRadius: '999px'
+                  }}>
+                  {page?.label}
+                </Button>
+              ))}
+            </Box>
           </Box>
 
           {/* Desktop action buttons */}
-          <Stack gap={2} direction={"row"}>
+          <Stack sx={{ display: { xs: "none", md: "flex" } }}>
+            <Box
+              sx={{
+                display: "flex",
+                gap: 2,
+                py: 2,
+                px: 3,
+                alignItems: "center",
+                justifyContent: "center",
+                bgcolor: '#ffffff03',
+                border: '1px solid',
+                borderColor: "divider",
+                backdropFilter: "blur(12px)",
+                borderRadius: "999px",
+              }}
+            >
+              <Box
+                component={Link}
+                href={"https://github.com/codemine24/mui-kit"}
+                target="_blank"
+                sx={{
+                  display: "flex",
+                  gap: 1.5,
+                  alignItems: "center",
+                  color: '#fff',
+                  cursor: "pointer",
+                  textDecoration: "none",
+                }}
+              >
+                <Typography color="text.primary">Star On GitHub</Typography>
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 0.5,
+                    bgcolor: "primary.main",
+                    borderRadius: "999px",
+                    py: '3px',
+                    px: '13px'
+                  }}>
+                  <StarIcon sx={{ fontSize: 15 }} />
+                  <Typography fontSize={14} fontWeight={400}>14</Typography>
+                </Box>
+              </Box>
+              <Divider orientation="vertical" flexItem sx={{ height: 25 }} />
+              <span onClick={toggleColorMode} style={{ cursor: "pointer", }}>
+                <Iconify icon={mode === "light" ? "tdesign:mode-dark" : "iconoir:sun-light"} />
+              </span>
+            </Box>
+          </Stack>
+
+          {/* Mobile action buttons */}
+          <Stack gap={2} direction={"row"} sx={{ display: { xs: "flex", md: "none" } }}>
             <Typography
               component={Link}
               href={"https://github.com/codemine24/mui-kit"}
@@ -112,6 +195,7 @@ export const Header = () => {
               <Iconify icon={mode === "light" ? "tdesign:mode-dark" : "iconoir:sun-light"} />
             </span>
           </Stack>
+
         </Toolbar>
       </Container>
 

@@ -2,26 +2,26 @@ import { PaletteOptions } from "@mui/material/styles";
 
 export const lightPalette: PaletteOptions = {
   mode: "light",
-  primary: { main: "#007074" },
+  primary: { main: "#814AE7" },
   secondary: { main: "#24a76b" },
   background: {
-    default: "#fafbff",
-    paper: "#f3f5f7",
+    default: "#ffff",
+    paper: "#fafafa",
   },
   text: {
     primary: "#111",
     secondary: "#555",
   },
-  divider: "#ebebeb",
+  divider: "#ccc",
 };
 
 export const darkPalette: PaletteOptions = {
   mode: "dark",
-  primary: { main: "#007074" },
+  primary: { main: "#814AE7" },
   secondary: { main: "#24a76b" },
   background: {
-    default: "#161616",
-    paper: "#1C1C1C",
+    default: "#060010",
+    paper: "#0f0c1a",
   },
   text: {
     primary: "#fafbff",

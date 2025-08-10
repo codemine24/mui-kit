@@ -8,7 +8,7 @@ import { Testimonials } from "./components/Testimonials";
 
 export const RootView = () => {
   return (
-    <Box>
+    <Box sx={{ overflow: "hidden" }}>
       <HeroSection />
       <ComponentOverviewV2 />
       <BlockOverviewV2 />

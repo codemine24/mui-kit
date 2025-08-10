@@ -1,9 +1,12 @@
+'use client'
+
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import { useTheme } from "@mui/material/styles";
 import { useRouter } from "next/navigation";
+import { alpha } from "@mui/material/styles";
 
 export const HeroInfinityCard = ({ title, url }: { title: string; url: string }) => {
   const theme = useTheme();
@@ -34,19 +37,15 @@ export const HeroInfinityCard = ({ title, url }: { title: string; url: string })
           position: "relative",
           border: (theme) => `.5px solid ${theme.palette.divider}`,
           borderRadius: (theme) => theme.shape.borderRadius,
-          background: `linear-gradient(180deg, ${
-            isDarkMode ? theme.palette.grey[900] : theme.palette.grey[200]
-          }99 0%, transparent 100%)`,
+          background: (theme) => alpha(theme.palette.background.paper, 0.45),
           overflow: "hidden",
+          transition: "transform 0.3s, background 0.3s",
           "&:before": {
             content: '""',
             position: "absolute",
             inset: 0,
             borderRadius: "12px",
             padding: "1px",
-            background:
-              "radial-gradient(500px circle at var(--cursor-x, -9999px) var(--cursor-y, -9999px), rgba(34, 211, 238, 0.8) 10%, transparent 90%)",
-            WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
             WebkitMaskComposite: "xor",
             maskComposite: "exclude",
             pointerEvents: "none",
@@ -54,9 +53,12 @@ export const HeroInfinityCard = ({ title, url }: { title: string; url: string })
             transition: "opacity 0.3s ease"
           },
           "&:hover": {
-            transform: "translateY(-4px)"
+            transform: "translateY(-4px)",
+            bgcolor: 'primary.main',
           },
-          transition: "transform 0.3s, background 0.3s"
+          "&:hover .card-text": {
+            color: 'common.white',
+          },
         }}>
         {/* Background Grid */}
         <Box
@@ -67,10 +69,6 @@ export const HeroInfinityCard = ({ title, url }: { title: string; url: string })
             width: "100%",
             height: "100%",
             zIndex: 0,
-            backgroundImage: isDarkMode
-              ? "linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px)"
-              : "linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px)",
-            backgroundSize: "20px 20px",
             opacity: 0.5,
             borderRadius: "12px"
           }}
@@ -81,6 +79,7 @@ export const HeroInfinityCard = ({ title, url }: { title: string; url: string })
           component="h3"
           align="center"
           gutterBottom
+          className="card-text"
           sx={{ color: isDarkMode ? "common.white" : "text.primary" }}>
           {title}
         </Typography>

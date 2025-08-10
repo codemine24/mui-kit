@@ -1,6 +1,5 @@
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
-import { TopHeader } from "@/components/top-header";
 import { OnThisPageProvider } from "@/contexts/on-thispage-context";
 import AppProvider from "@/providers/app-provider";
 import Box from "@mui/material/Box";
@@ -13,7 +12,7 @@ import "../styles/globals.css";
 
 const poppins = Poppins({
   subsets: ["latin"],
-  
+
   weight: ["400", "500", "700"], // adjust weights as needed
   display: "swap"
 });
@@ -78,7 +77,7 @@ export default function RootLayout({
             }}
           />
           <OnThisPageProvider>
-            <TopHeader />
+            {/* <TopHeader /> */}
             <Header />
             <Box>{children}</Box>
             <Footer />

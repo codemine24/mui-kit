@@ -161,7 +161,6 @@ export default function InfiniteScroll({
 
         .infinite-scroll-container {
           width: ${width};
-          
         }
 
         .infinite-scroll-item {
@@ -186,6 +185,7 @@ export default function InfiniteScroll({
             </div>
           ))}
         </div>
+
       </div>
     </>
   );

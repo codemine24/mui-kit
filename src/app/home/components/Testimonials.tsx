@@ -1,4 +1,5 @@
 "use client";
+import AnimatedDotBg from "@/components/core/animated-dot-bg";
 import { BodyText } from "@/components/core/body-text";
 import { Heading2 } from "@/components/core/heading-2";
 import { useFadeInOnScroll } from "@/hooks/use-fade-in";
@@ -8,7 +9,7 @@ import { Stack } from "@mui/material";
 import Avatar from "@mui/material/Avatar";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
-import { useTheme } from "@mui/material/styles";
+import { alpha, useTheme } from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
 
 interface ITestimonial {
@@ -116,10 +117,35 @@ export const Testimonials = () => {
           right: 0,
           height: "1px",
           background:
-            "radial-gradient(circle at center, #24a76b 0%, transparent 80%)",
+            `radial-gradient(circle at center, ${theme.palette.primary.main} 0%, transparent 80%)`,
         },
       }}
     >
+      <AnimatedDotBg />
+
+      <Box
+        sx={{
+          background: `linear-gradient(to bottom, ${theme.palette.mode === "dark" ? alpha(theme.palette.primary.main, 0.1) : alpha(theme.palette.primary.main, 0.05)}, transparent)`,
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: 160,
+          zIndex: 1,
+          display: { xs: "none", lg: "block" },
+        }}
+      />
+
+      {/* Gradient Background in center */}
+      <Box
+        sx={{
+          position: "absolute",
+          inset: 0, // equivalent to top: 0, right: 0, bottom: 0, left: 0
+          background: theme.palette.mode === "dark" ? "radial-gradient(at 50% 20%, rgba(255, 255, 255, 0.04), transparent 70%)" : `radial-gradient(at 50% 20%, ${alpha(theme.palette.primary.main, 0.22)}, transparent 70%)`,
+          zIndex: 0,
+        }}
+      />
+
       <Container maxWidth="xl">
         <Box mb={4}>
           <Heading2 text="Wall of love" sx={{ textAlign: "center" }} />

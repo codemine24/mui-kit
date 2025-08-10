@@ -1,11 +1,10 @@
 "use client";
 import { BodyText } from "@/components/core/body-text";
-import { GradientSectionTitle } from "@/components/core/gradient-section-title";
+import { GradientSectionTitleV2 } from "@/components/core/gradient-section-title-v2";
 import { Heading2 } from "@/components/core/heading-2";
 import { useFadeInOnScroll } from "@/hooks/use-fade-in";
 import { PATHS } from "@/router/paths";
 import { featuredBlocks } from "@/router/router";
-import { gradientFrom, gradientTo } from "@/utils/getGradientColor";
 import { pxToRem } from "@/utils/pxToRem";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { Button, Grid, Stack, Typography } from "@mui/material";
@@ -33,26 +32,11 @@ export const BlockOverviewV2 = () => {
           right: 0,
           height: "1px",
           background:
-            "radial-gradient(circle at center, #24a76b 0%, transparent 80%)",
+            `radial-gradient(circle at center, ${theme.palette.primary.main} 0%, transparent 80%)`,
         },
       }}
     >
       <Container maxWidth={"xl"} sx={{ position: "relative" }}>
-        {/* gradient  */}
-        <Box
-          sx={{
-            position: "absolute",
-            bottom: "10rem",
-            left: "-5rem",
-            width: { xs: "14rem", md: "20rem" },
-            height: { xs: "14rem", md: "20rem" },
-            borderRadius: "50%",
-            background: `linear-gradient(135deg, ${gradientFrom(
-              theme.palette.mode
-            )}, ${gradientTo(theme.palette.mode)})`,
-            filter: "blur(80px)",
-          }}
-        />
         <Box
           sx={{
             display: "flex",
@@ -61,7 +45,7 @@ export const BlockOverviewV2 = () => {
             alignItems: "center",
           }}
         >
-          <GradientSectionTitle text="20+" />
+          <GradientSectionTitleV2 value={20} />
           <Heading2 text="Ready made blocks" sx={{ textAlign: "center" }} />
 
           <BodyText
@@ -140,14 +124,7 @@ export const BlockOverviewV2 = () => {
           <Button
             LinkComponent={Link}
             href={PATHS.BLOCKS.OVERVIEW}
-            variant="contained"
-            sx={{
-              borderRadius: theme.shape.borderRadius,
-              width: "fit-content",
-              background: theme.palette.text.primary,
-              color: theme.palette.background.default,
-              textTransform: "none",
-            }}
+            variant="outlined"
           >
             View all
           </Button>

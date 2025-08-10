@@ -9,7 +9,22 @@ export const Logo = () => {
     <Box
       sx={{
         position: "relative",
-        display: "inline-flex"
+        display: "inline-flex",
+        "&::before": {
+          content: "''",
+          position: "absolute",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+          width: "200px",
+          height: "140px",
+          background: "transparent",
+          backdropFilter: "blur(8px)",
+          mask: "radial-gradient(ellipse at center, black 0%, black 20%, transparent 80%)",
+          WebkitMask: "radial-gradient(ellipse at center, black 0%, black 20%, transparent 80%)",
+          zIndex: -1,
+          pointerEvents: "none"
+        }
       }}>
       <Box
         component={Link}
@@ -18,11 +33,11 @@ export const Logo = () => {
           display: "inline-flex",
           alignItems: "center",
           color: "inherit",
-          textDecoration: "none"
+          textDecoration: "none",
         }}>
         <Image src="/images/logo.png" alt="logo" width={24} height={24} />
         <Typography
-          variant="h6"
+          variant="h5"
           noWrap
           sx={{
             mr: 2,

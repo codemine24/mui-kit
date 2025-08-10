@@ -1,7 +1,6 @@
 "use client";
 import { BodyText } from "@/components/core/body-text";
 import { Heading2 } from "@/components/core/heading-2";
-import { gradientFrom, gradientTo } from "@/utils/getGradientColor";
 import Add from "@mui/icons-material/Add";
 import Remove from "@mui/icons-material/Remove";
 import MuiAccordion from "@mui/material/Accordion";
@@ -12,7 +11,7 @@ import Container from "@mui/material/Container";
 import Link from "@mui/material/Link";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
-import { styled, useTheme } from "@mui/material/styles";
+import { styled } from "@mui/material/styles";
 import React from "react";
 
 const leftQuestions = [
@@ -89,7 +88,6 @@ const Accordion = styled(MuiAccordion)(({ theme }) => ({
 
 export const FrequentlyAskedQuestion = () => {
   const [expanded, setExpanded] = React.useState<string | false>("");
-  const theme = useTheme();
 
   const handleChange =
     (panel: string) => (_event: React.SyntheticEvent, isExpanded: boolean) => {
@@ -105,20 +103,6 @@ export const FrequentlyAskedQuestion = () => {
       {/* Gradient */}
 
       <Container maxWidth={"xl"} sx={{ position: "relative" }}>
-        <Box
-          sx={{
-            position: "absolute",
-            top: "-5rem",
-            right: "-5rem",
-            width: { xs: "16rem", md: "24rem" },
-            height: { xs: "16rem", md: "24rem" },
-            borderRadius: "50%",
-            background: `linear-gradient(135deg, ${gradientFrom(
-              theme.palette.mode
-            )}, ${gradientTo(theme.palette.mode)})`,
-            filter: "blur(80px)",
-          }}
-        />
         <Box mb={4}>
           <Heading2
             text="Frequently Asked Questions"

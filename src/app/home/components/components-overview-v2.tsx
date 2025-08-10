@@ -1,11 +1,11 @@
 "use client";
+
 import { BodyText } from "@/components/core/body-text";
-import { GradientSectionTitle } from "@/components/core/gradient-section-title";
+import { GradientSectionTitleV2 } from "@/components/core/gradient-section-title-v2";
 import { Heading2 } from "@/components/core/heading-2";
 import { useFadeInOnScroll } from "@/hooks/use-fade-in";
 import { PATHS } from "@/router/paths";
 import { featuredComponents } from "@/router/router";
-import { gradientFrom, gradientTo } from "@/utils/getGradientColor";
 import { pxToRem } from "@/utils/pxToRem";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { Button, Grid, Stack, Typography } from "@mui/material";
@@ -19,29 +19,16 @@ export const ComponentOverviewV2 = () => {
   const theme = useTheme();
   const router = useRouter();
   useFadeInOnScroll(".component-overview-animation");
+
   return (
     <Box
       sx={{
-        paddingTop: { xs: "40px", md: "80px" },
+        paddingTop: { xs: "40px", md: 0 },
         paddingBottom: { xs: "60px", md: "80px" },
+        position: "relative",
       }}
     >
       <Container maxWidth={"xl"} sx={{ position: "relative" }}>
-        {/* Gradient */}
-        <Box
-          sx={{
-            position: "absolute",
-            bottom: "0",
-            left: "50%  ",
-            width: { xs: "14rem", md: "20rem" },
-            height: { xs: "14rem", md: "20rem" },
-            borderRadius: "50%",
-            background: `linear-gradient(135deg, ${gradientFrom(
-              theme.palette.mode
-            )}, ${gradientTo(theme.palette.mode)})`,
-            filter: "blur(80px)",
-          }}
-        />
         <Box
           sx={{
             display: "flex",
@@ -50,7 +37,9 @@ export const ComponentOverviewV2 = () => {
             alignItems: "center",
           }}
         >
-          <GradientSectionTitle text="40+" />
+
+          <GradientSectionTitleV2 value={40} />
+
           <Heading2 text="Core elements" sx={{ textAlign: "center" }} />
 
           <BodyText
@@ -98,7 +87,7 @@ export const ComponentOverviewV2 = () => {
                       alignItems: "center",
                       width: "100%",
                       color: "#555555",
-                    }}                    
+                    }}
                     width={40}
                     height={40}
                   />
@@ -129,14 +118,7 @@ export const ComponentOverviewV2 = () => {
           <Button
             LinkComponent={Link}
             href={PATHS.ELEMENTS.OVERVIEW}
-            variant="contained"
-            sx={{
-              borderRadius: theme.shape.borderRadius,
-              width: "fit-content",
-              background: theme.palette.text.primary,
-              color: theme.palette.background.default,
-              textTransform: "none",
-            }}
+            variant="outlined"
           >
             View all
           </Button>

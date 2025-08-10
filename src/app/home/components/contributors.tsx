@@ -45,10 +45,8 @@ export const ContributorsOverview = () => {
     <Box
       sx={{
         bgcolor: "background.default",
-
         paddingTop: { xs: "40px", md: "80px" },
         paddingBottom: { xs: "60px", md: "80px" },
-        
       }}
     >
       <Container maxWidth={"xl"}>
