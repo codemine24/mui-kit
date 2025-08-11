@@ -59,10 +59,21 @@ export const ComponentOverviewV2 = () => {
                 borderRadius: (theme) => theme.shape.borderRadius,
                 cursor: "pointer",
                 overflow: "hidden",
+                position: "relative",
                 "&:hover": {
                   "& .icon-container": {
                     color: theme.palette.primary.main,
                   },
+                },
+                ":after": {
+                  content: '""',
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  height: "1px",
+                  background:
+                    `radial-gradient(circle at center, ${theme.palette.primary.main} 0%, transparent 80%)`,
                 },
               }}
               onClick={() => {
