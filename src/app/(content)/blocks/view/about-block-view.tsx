@@ -4,6 +4,7 @@ import { CustomBreadCrumbs } from "@/components/core/breadcrumbs";
 import { PageTitle } from "@/components/core/page-title";
 import { SectionTitle } from "@/components/core/section-title";
 import { useOnThisPage } from "@/contexts/on-thispage-context";
+import { PATHS } from "@/router/paths";
 import { Box, Divider } from "@mui/material";
 import React from "react";
 import { aboutBasicString } from "../code-string/about/about-basic-string";
@@ -16,7 +17,6 @@ import { AboutImageBgPreview } from "../components/about/about-image-bg-preview"
 import { AboutImagePreview } from "../components/about/about-image-preview";
 import { AboutReversedSectionsPreview } from "../components/about/about-reversed-sections-preview";
 import { AboutVideoPreview } from "../components/about/about-video-preview";
-import { PATHS } from "@/router/paths";
 
 const sections = [
   {

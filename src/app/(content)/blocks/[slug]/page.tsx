@@ -10,12 +10,15 @@ import { CTAView } from "../view/cta-block-view";
 import { FaqView } from "../view/faq-view";
 import { FeatureProductView } from "../view/feature-product-view";
 import { FeatureView } from "../view/feature-view";
+import { FocusBoxView } from "../view/focus-box-view";
 import { FooterView } from "../view/footer-view";
 import { HeroView } from "../view/hero-view";
+import { JumbotronView } from "../view/jumbotron-view";
 import { NewsletterSubscriptionView } from "../view/newsletter-subscription-view";
 import { PricingMenuView } from "../view/pricing-menu-view";
 import { PricingTableView } from "../view/pricing-table-view";
 import { ServicesView } from "../view/services-view";
+import { SubHeroView } from "../view/sub-hero-view";
 import { TeamView } from "../view/team-view";
 import { TestimonialGridView } from "../view/testimonial-grid-view";
 import { TestimonialSliderView } from "../view/testimonial-slider-view";
@@ -48,6 +51,9 @@ const componentMap: Record<string, JSX.Element> = {
   "testimonial-slider": <TestimonialSliderView />,
   team: <TeamView />,
   hero: <HeroView />,
+  "sub-hero": <SubHeroView />,
+  "focus-box": <FocusBoxView />,
+  jumbotron: <JumbotronView />,
 };
 
 export default async function Page({

@@ -7,22 +7,17 @@ import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
 import GlobalStyles from "@mui/material/GlobalStyles";
 import { Metadata } from "next";
-import { JetBrains_Mono, Roboto } from "next/font/google";
-import "../styles/globals.css";
+import { Poppins } from "next/font/google";
 import Script from "next/script";
+import "../styles/globals.css";
 
-const roboto = Roboto({
+const poppins = Poppins({
   subsets: ["latin"],
-  variable: "--font-roboto",
+  
   weight: ["400", "500", "700"], // adjust weights as needed
   display: "swap"
 });
 
-const jetBrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-mono",
-  display: "swap"
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_PRODUCTION_URL || "https://www.muikit.com"),
@@ -42,7 +37,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${roboto.variable} ${jetBrainsMono.variable}`}
+      className={`${poppins.className}`}
       suppressHydrationWarning>
       <head>
         {/* GTM Script */}
