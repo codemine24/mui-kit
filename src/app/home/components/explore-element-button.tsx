@@ -67,7 +67,7 @@ const ExploreElementButton = () => {
                     position: "absolute",
                     inset: "var(--offset)",
                     borderRadius: "inherit",
-                    backgroundImage: (theme) => `linear-gradient(135deg, ${theme.palette.primary.main} , #4C2CCA )`,
+                    backgroundImage: (theme) => `linear-gradient(135deg, ${theme.palette.primary.main} , ${theme.palette.primary.dark} )`,
                     zIndex: 2,
                 }}
             />

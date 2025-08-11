@@ -132,56 +132,55 @@ export const Header = () => {
           </Box>
 
           {/* Desktop action buttons */}
-          <Stack sx={{ display: { xs: "none", md: "flex" } }}>
+          <Box
+            sx={{
+              display: { xs: "none", md: "flex" },
+              gap: 2,
+              py: 2,
+              px: 3,
+              alignItems: "center",
+              justifyContent: "center",
+              bgcolor: '#ffffff03',
+              border: '1px solid',
+              borderColor: "divider",
+              backdropFilter: "blur(12px)",
+              borderRadius: "999px",
+            }}
+          >
             <Box
+              component={Link}
+              href={"https://github.com/codemine24/mui-kit"}
+              target="_blank"
               sx={{
                 display: "flex",
-                gap: 2,
-                py: 2,
-                px: 3,
+                gap: 1.5,
                 alignItems: "center",
-                justifyContent: "center",
-                bgcolor: '#ffffff03',
-                border: '1px solid',
-                borderColor: "divider",
-                backdropFilter: "blur(12px)",
-                borderRadius: "999px",
+                color: '#fff',
+                cursor: "pointer",
+                textDecoration: "none",
               }}
             >
+              <Typography color="text.primary">Star On GitHub</Typography>
               <Box
-                component={Link}
-                href={"https://github.com/codemine24/mui-kit"}
-                target="_blank"
                 sx={{
                   display: "flex",
-                  gap: 1.5,
                   alignItems: "center",
-                  color: '#fff',
-                  cursor: "pointer",
-                  textDecoration: "none",
-                }}
-              >
-                <Typography color="text.primary">Star On GitHub</Typography>
-                <Box
-                  sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: 0.5,
-                    bgcolor: "primary.main",
-                    borderRadius: "999px",
-                    py: '3px',
-                    px: '13px'
-                  }}>
-                  <StarIcon sx={{ fontSize: 15 }} />
-                  <Typography fontSize={14} fontWeight={400}>14</Typography>
-                </Box>
+                  gap: 0.5,
+                  bgcolor: "primary.main",
+                  borderRadius: "999px",
+                  py: '3px',
+                  px: '13px'
+                }}>
+                <StarIcon sx={{ fontSize: 15 }} />
+                <Typography fontSize={14} fontWeight={400}>14</Typography>
               </Box>
-              <Divider orientation="vertical" flexItem sx={{ height: 25 }} />
-              <span onClick={toggleColorMode} style={{ cursor: "pointer", }}>
-                <Iconify icon={mode === "light" ? "tdesign:mode-dark" : "iconoir:sun-light"} />
-              </span>
             </Box>
-          </Stack>
+            <Divider orientation="vertical" flexItem sx={{ height: 25 }} />
+            <span onClick={toggleColorMode} style={{ cursor: "pointer", display: "inline-flex", alignItems: "center", }}>
+              <Iconify icon={mode === "light" ? "tdesign:mode-dark" : "iconoir:sun-light"} />
+            </span>
+          </Box>
+
 
           {/* Mobile action buttons */}
           <Stack gap={2} direction={"row"} sx={{ display: { xs: "flex", md: "none" } }}>

@@ -6,14 +6,19 @@ import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
 import GlobalStyles from "@mui/material/GlobalStyles";
 import { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Poppins, Raleway } from "next/font/google";
 import Script from "next/script";
 import "../styles/globals.css";
 
 const poppins = Poppins({
   subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  display: "swap"
+});
 
-  weight: ["400", "500", "700"], // adjust weights as needed
+const raleway = Raleway({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
   display: "swap"
 });
 
@@ -36,7 +41,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${poppins.className}`}
+      className={`${raleway.className}`}
       suppressHydrationWarning>
       <head>
         {/* GTM Script */}

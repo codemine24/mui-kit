@@ -140,7 +140,7 @@ export const HeroSection = () => {
               letterSpacing: 0,
               "& span": {
                 background: (theme) =>
-                  `linear-gradient(90deg, ${theme.palette.primary.main} 0%, #4C2CCA 100%)`,
+                  `linear-gradient(90deg, ${theme.palette.primary.main} 0%, ${theme.palette.primary.dark} 100%)`,
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
                 backgroundClip: "text",
@@ -202,6 +202,19 @@ export const HeroSection = () => {
             autoplaySpeed={1.1}
             autoplayDirection="up"
             pauseOnHover={true}
+          />
+
+          <Box
+            sx={{
+              background: `linear-gradient(to left, ${theme.palette.background.default}, transparent)`,
+              position: "absolute",
+              bottom: 0,
+              right: -145,
+              width: 250,
+              height: '50%',
+              zIndex: 1,
+              display: { xs: "none", lg: "block" },
+            }}
           />
         </Box>
       </Stack>

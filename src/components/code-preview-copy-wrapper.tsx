@@ -107,7 +107,7 @@ export const CodePreviewCopyWrapper: React.FC<CodePreviewWrapperProps> = ({
             sx={{
               width: "100%",
               p: 2,
-              bgcolor: "background.default",
+              bgcolor: "background.paper",
               display: "flex",
               justifyContent: "center"
             }}>
@@ -118,7 +118,7 @@ export const CodePreviewCopyWrapper: React.FC<CodePreviewWrapperProps> = ({
             sx={{
               height: "500px",
               overflow: "auto",
-              bgcolor: "background.default",
+              bgcolor: "background.paper",
               p: 2,
               width: "100%"
             }}>

@@ -28,14 +28,14 @@ export const GradientSectionTitleV2 = ({ value }: { value: number }) => {
                     zIndex: -1,
                     padding: "2px",
                     borderRadius: (theme) => theme.shape.borderRadius,
-                    background: `linear-gradient(90deg, ${theme.palette.primary.main} 0%, #4C2CCA 100%)`,
+                    background: `linear-gradient(90deg, ${theme.palette.primary.main} 0%, ${theme.palette.primary.dark} 100%)`,
                     WebkitMask:
                         "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
                     WebkitMaskComposite: "xor",
                     maskComposite: "exclude",
                 },
                 "& span": {
-                    background: `linear-gradient(90deg, ${theme.palette.primary.main} 0%, #4C2CCA 100%)`,
+                    background: `linear-gradient(90deg, ${theme.palette.primary.main} 0%, ${theme.palette.primary.dark} 100%)`,
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
                     backgroundClip: "text",

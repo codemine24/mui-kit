@@ -1,7 +1,7 @@
 import { TypographyVariantsOptions } from "@mui/material/styles";
 
 export const typography: TypographyVariantsOptions = {
-  fontFamily: `"Poppins", "Inter", "Roboto", "Helvetica", "Arial", sans-serif`,
+  fontFamily: `"Raleway", "Poppins", "Inter", "Roboto", "Helvetica", "Arial", sans-serif`,
   fontWeightLight: 300,
   fontWeightRegular: 400,
   fontWeightMedium: 600,

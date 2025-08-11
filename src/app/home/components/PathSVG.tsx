@@ -43,9 +43,9 @@ const PathSVG = () => {
             x2="229.579"
             y2="32.925"
             gradientUnits="userSpaceOnUse">
-            <stop stopColor="#2EB9DF" stopOpacity="0" />
-            <stop stopColor="#2EB9DF" />
-            <stop offset="1" stopColor="#9E00FF" stopOpacity="0" />
+            <stop stopColor="#814AE7" stopOpacity="0" />
+            <stop stopColor="#4C2CCA" />
+            <stop offset="1" stopColor="#6e569a" stopOpacity="0" />
           </linearGradient>
         </defs>
       </svg>
