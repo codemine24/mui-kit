@@ -18,7 +18,6 @@ import { KbdView } from "../view/kbd-view";
 import { OTPView } from "../view/otp-view";
 import { PaginationView } from "../view/pagination-view";
 import { PopoverView } from "../view/popover-view";
-import { ProfileCard } from "../view/profile-card";
 import { ProgressbarView } from "../view/progressbar-view";
 import { RatingView } from "../view/rating-view";
 import { SkeletonView } from "../view/skeleton-view";
@@ -59,7 +58,6 @@ const componentMap: Record<string, JSX.Element> = {
   dnd: <DndView />,
   editor: <EditorView />,
   otp: <OTPView />,
-  "profile-card": <ProfileCard/>,
   rating: <RatingView />,
   "fancy-background": <FancyBgView />,
   tab: <TabView />,

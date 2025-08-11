@@ -96,7 +96,7 @@ const sections = [
 ];
 
 
-export const ProfileCard = () => {
+export const ProfileCardView = () => {
   const { setSections } = useOnThisPage();
 
   React.useEffect(() => {
@@ -107,7 +107,7 @@ export const ProfileCard = () => {
     <Box>
       <CustomBreadCrumbs
         pathArr={[
-          { label: "Elements", path: PATHS.ELEMENTS.PROFILE_CARD },
+          { label: "Elements", path: PATHS.BLOCKS.PROFILE_CARD },
           { label: "Profile Card", path: "" }
         ]}
       />
