@@ -2,6 +2,7 @@ import { ComingSoon } from "@/components/coming-soon";
 import { PATHS } from "@/router/paths";
 import { blocksArr } from "@/router/router";
 import { JSX } from "react";
+import { ProfileCardView } from "../../elements/view/profile-card";
 import { AboutBlockView } from "../view/about-block-view";
 import { ContactBlockView } from "../view/contact-block-view";
 import { CopyrightView } from "../view/copyright-view";
@@ -46,6 +47,7 @@ const componentMap: Record<string, JSX.Element> = {
   "pricing-table": <PricingTableView />,
   services: <ServicesView />,
   "pricing-menu": <PricingMenuView />,
+  "profile-card": <ProfileCardView />,
   "single-profile": <CSView />,
   "testimonial-grid": <TestimonialGridView />,
   "testimonial-slider": <TestimonialSliderView />,
