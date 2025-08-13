@@ -1,25 +1,25 @@
-'use client';
+"use client";
 
-import { Card, Avatar, Typography,Stack, IconButton } from "@mui/material";
+import { Card, Avatar, Typography, Stack, IconButton } from "@mui/material";
 import Link from "next/link";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
-export function OutlineProfileCard() {
-    const socials = [
+export const OutlineProfileCardView = () => {
+  const socials = [
     {
       icon: <GitHubIcon />,
-      url: "https://github.com/janedoe"
+      url: "https://github.com/janedoe",
     },
     {
       icon: <TwitterIcon />,
-      url: "https://twitter.com/janedoe"
+      url: "https://twitter.com/janedoe",
     },
     {
       icon: <LinkedInIcon />,
-      url: "https://linkedin.com/in/janedoe"
-    }
+      url: "https://linkedin.com/in/janedoe",
+    },
   ];
 
   return (
@@ -49,24 +49,27 @@ export function OutlineProfileCard() {
           "&:hover": { borderColor: (theme) => theme.palette.secondary.main },
         }}
       />
-      <Typography variant="h6" mt={2}>Jane Doe</Typography>
-    <Typography variant="body2" color="text.secondary">
-      Frontend Developer passionate about UI/UX and building beautiful web experiences.
-    </Typography>
-    <Stack direction="row" justifyContent="center" spacing={2}>
-          {socials.map(({ icon, url }, idx) => (
-            <Link
-              href={url}
-              key={idx}
-              target="_blank"
-              rel="noopener noreferrer"
-              color="inherit"
-              aria-label={`Link to social profile ${url}`}
-            >
-              <IconButton color="primary">{icon}</IconButton>
-            </Link>
-          ))}
-        </Stack>
+      <Typography variant="h6" mt={2}>
+        Jane Doe
+      </Typography>
+      <Typography variant="body2" color="text.secondary">
+        Frontend Developer passionate about UI/UX and building beautiful web
+        experiences.
+      </Typography>
+      <Stack direction="row" justifyContent="center" spacing={2}>
+        {socials.map(({ icon, url }, idx) => (
+          <Link
+            href={url}
+            key={idx}
+            target="_blank"
+            rel="noopener noreferrer"
+            color="inherit"
+            aria-label={`Link to social profile ${url}`}
+          >
+            <IconButton color="primary">{icon}</IconButton>
+          </Link>
+        ))}
+      </Stack>
     </Card>
   );
-}
+};

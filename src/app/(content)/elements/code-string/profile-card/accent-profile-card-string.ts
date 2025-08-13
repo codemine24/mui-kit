@@ -1,7 +1,4 @@
-export const accentProfileCardString = `
-'use client';
-
-import { Card, Avatar, Typography, Box } from "@mui/material";
+export const accentProfileCardString = `import { Card, Avatar, Typography, Box } from "@mui/material";
 
 export function AccentProfileCard() {
     const name = 'Jone Doe'

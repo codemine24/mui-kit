@@ -44,7 +44,7 @@ const GlassCard = styled(Card, {
 }));
 
 
-export const GlassProfileCard = () => {
+export const GlassProfileCardView = () => {
   const theme = useTheme();
   const blurIntensity = 10; // default blur intensity
   const socials = [

@@ -16,7 +16,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 
-export function BannerProfileCard() {
+export const BannerProfileCardView =()=> {
   const theme = useTheme();
   const bannerUrl="https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=800&q=80"
   const avatarUrl="https://randomuser.me/api/portraits/men/75.jpg"

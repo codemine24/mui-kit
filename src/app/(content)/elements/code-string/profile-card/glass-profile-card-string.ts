@@ -1,8 +1,7 @@
-export const glassProfileCard = `"use client";
-
-import React from "react";
+export const glassProfileCardString = `import React from "react";
 import {
   Avatar,
+//   Box,
   Card,
   CardContent,
   IconButton,
@@ -20,10 +19,9 @@ const GlassCard = styled(Card, {
   shouldForwardProp: (prop) => prop !== "blurIntensity",
 })<{ blurIntensity: number }>(({ theme, blurIntensity }) => ({
   position: "relative",
-  background:
-    theme.palette.mode === "dark"
-      ? "linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.15) 100%)"
-      : "linear-gradient(135deg, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0.85) 100%)",
+  background: theme.palette.mode === "dark"
+    ? "linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.15) 100%)"
+    : "linear-gradient(135deg, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0.85) 100%)",
   backdropFilter: \`blur(\${blurIntensity}px) saturate(180%)\`,
   WebkitBackdropFilter: \`blur(\${blurIntensity}px) saturate(180%)\`,
   borderRadius: theme.shape.borderRadius,
@@ -43,22 +41,23 @@ const GlassCard = styled(Card, {
   overflow: "hidden",
 }));
 
-export const GlassProfileCard = () => {
+
+export const GlassProfileCardView = () => {
   const theme = useTheme();
   const blurIntensity = 10; // default blur intensity
   const socials = [
     {
       icon: <GitHubIcon />,
-      url: "https://github.com/janedoe",
+      url: "https://github.com/janedoe"
     },
     {
       icon: <TwitterIcon />,
-      url: "https://twitter.com/janedoe",
+      url: "https://twitter.com/janedoe"
     },
     {
       icon: <LinkedInIcon />,
-      url: "https://linkedin.com/in/janedoe",
-    },
+      url: "https://linkedin.com/in/janedoe"
+    }
   ];
 
   return (

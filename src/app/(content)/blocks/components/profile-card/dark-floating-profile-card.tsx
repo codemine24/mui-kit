@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import {
   Card,
@@ -12,7 +12,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
-export function DarkFloatingProfileCard() {
+export const DarkFloatingProfileCardView = () => {
   const theme = useTheme();
   const isDark = theme.palette.mode === "dark";
 
@@ -57,8 +57,8 @@ export function DarkFloatingProfileCard() {
       </Typography>
       <Typography variant="body2" sx={{ mb: 3, opacity: 0.75 }}>
         Frontend developer passionate about UI/UX, crafting beautiful interfaces
-        and seamless user experiences. Loves React, design systems, and
-        building for the web.
+        and seamless user experiences. Loves React, design systems, and building
+        for the web.
       </Typography>
       <Stack direction="row" justifyContent="center" spacing={2}>
         {socials.map(({ icon, url }, idx) => (
@@ -84,4 +84,4 @@ export function DarkFloatingProfileCard() {
       </Stack>
     </Card>
   );
-}
+};

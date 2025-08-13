@@ -1,7 +1,4 @@
-export const bannerProfileCard = `
-'use client';
-
-import React from "react";
+export const bannerProfileCardString = `import React from "react";
 import {
   Card,
   Avatar,

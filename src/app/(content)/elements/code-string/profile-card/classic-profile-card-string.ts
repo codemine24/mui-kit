@@ -1,7 +1,4 @@
-export const classicProfileCard = `
-'use client'
-
-import {
+export const classicProfileCardString = `import {
   Card,
   Avatar,
   Typography,

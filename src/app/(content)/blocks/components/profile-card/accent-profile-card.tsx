@@ -1,15 +1,14 @@
-'use client';
+"use client";
 
 import { Card, Avatar, Typography, Box } from "@mui/material";
 
-
-
-export function AccentProfileCard() {
-    const name = 'Jone Doe'
-    const avatar = "https://randomuser.me/api/portraits/women/71.jpg"
-    const role= "Full-stack developer passionate about UI/UX and open source."
-    const bio = "Loves working with React and building beautiful web applications."
-    const accentColor = "primary.main";
+export const AccentProfileCardView = () =>{
+  const name = "Jone Doe";
+  const avatar = "https://randomuser.me/api/portraits/women/71.jpg";
+  const role = "Full-stack developer passionate about UI/UX and open source.";
+  const bio =
+    "Loves working with React and building beautiful web applications.";
+  const accentColor = "primary.main";
   return (
     <Card
       sx={{

@@ -11,7 +11,7 @@ import {
 } from "@mui/material";
 
 
-export function ClassicProfileCard() {
+export const ClassicProfileCardView = ()=> {
     const avatar = "https://randomuser.me/api/portraits/women/70.jpg";
     const name = "Jane Doe";
     const position = "Frontend Developer";

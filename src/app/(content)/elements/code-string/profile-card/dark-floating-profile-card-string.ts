@@ -1,7 +1,4 @@
-export const darkFloatingProfileCardString = `
-'use client';
-
-import {
+export const darkFloatingProfileCardString = `import {
   Card,
   Avatar,
   Typography,

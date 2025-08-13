@@ -13,7 +13,7 @@ import {
 } from "@mui/material";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
-export function SidePhotoProfileCard() {
+export const SidePhotoProfileCardView = ()=> {
   const avatar = "https://randomuser.me/api/portraits/women/70.jpg";
   const name = "Jane Doe";
   const position = "Frontend Developer";

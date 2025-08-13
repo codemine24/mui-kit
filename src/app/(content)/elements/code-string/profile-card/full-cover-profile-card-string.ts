@@ -1,7 +1,4 @@
-export const fullCoverProfileCardString = `
-'use client'
-
-import {
+export const fullCoverProfileCardString = `import {
   Box,
   Typography,
   Stack,

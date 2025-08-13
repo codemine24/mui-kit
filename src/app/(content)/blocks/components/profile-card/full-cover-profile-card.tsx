@@ -1,30 +1,30 @@
-'use client'
+"use client";
 
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import {
   Box,
-  Typography,
-  Stack,
   Chip,
   IconButton,
   Link,
+  Stack,
+  Typography,
   useTheme,
 } from "@mui/material";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
-
-
-export function FullCoverProfileCard() {
+export const FullCoverProfileCardView = () => {
   const theme = useTheme();
 
- const  coverImageUrl="https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=800&q=80"
- const  avatarUrl="https://randomuser.me/api/portraits/men/75.jpg"
- const  name="Michael Scott"
- const  role="Regional Manager"
- const bio="Dunder Mifflin Paper Company — Leading the Scranton branch with enthusiasm and humor."
-  const techStack=["Leadership", "Sales", "Comedy"]
-  const  linkedInUrl="https://linkedin.com/in/michaelscott"
-  const githubUrl="https://github.com/michaelscott"
+  const coverImageUrl =
+    "https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=800&q=80";
+  const avatarUrl = "https://randomuser.me/api/portraits/men/75.jpg";
+  const name = "Michael Scott";
+  const role = "Regional Manager";
+  const bio =
+    "Dunder Mifflin Paper Company — Leading the Scranton branch with enthusiasm and humor.";
+  const techStack = ["Leadership", "Sales", "Comedy"];
+  const linkedInUrl = "https://linkedin.com/in/michaelscott";
+  const githubUrl = "https://github.com/michaelscott";
 
   return (
     <Box
@@ -153,4 +153,4 @@ export function FullCoverProfileCard() {
       </Box>
     </Box>
   );
-}
+};
