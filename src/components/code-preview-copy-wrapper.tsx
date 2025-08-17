@@ -1,7 +1,6 @@
 "use client";
 
 import { Iconify } from "@/components/iconify";
-import { getCustomSyntaxStyle } from "@/utils/getCustomSyntaxStyle";
 import Box from "@mui/material/Box";
 import Tab from "@mui/material/Tab";
 import Tabs from "@mui/material/Tabs";
@@ -9,7 +8,8 @@ import ToggleButton from "@mui/material/ToggleButton";
 import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 import { useTheme } from "@mui/material/styles";
 import React, { useState } from "react";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { Highlight, themes } from "prism-react-renderer"
+import { IconButton, Typography } from "@mui/material";
 
 interface CodePreviewWrapperProps {
   codeString: string | { name: string; code: string }[];
@@ -45,32 +45,23 @@ export const CodePreviewCopyWrapper: React.FC<CodePreviewWrapperProps> = ({
   };
 
   return (
-    <Box
-      sx={{
-        border: `.5px solid ${theme.palette.divider}`,
-        borderRadius: theme.shape.borderRadius,
-        px: 2,
-        pb: 2,
-        bgcolor: "background.paper"
-      }}>
+    <Box>
       <ToggleButtonGroup
         value={tab}
         exclusive
         onChange={(_, newTab) => {
           if (newTab !== null) setTab(newTab);
         }}
-        sx={{
-          py: 1
-        }}>
+        sx={{ py: 1 }}>
         {["preview", "code"].map((value) => (
           <ToggleButton
             key={value}
             value={value}
+            size="small"
             sx={{
-              textTransform: "uppercase",
-              px: 2.5,
+              textTransform: "capitalize",
+              px: 1.5,
               py: 1,
-              fontWeight: 500,
               border: `1px solid ${theme.palette.primary.main}`,
               color: "primary.main",
               "&.Mui-selected": {
@@ -86,21 +77,21 @@ export const CodePreviewCopyWrapper: React.FC<CodePreviewWrapperProps> = ({
                 color: "white"
               }
             }}>
-            {value.charAt(0).toUpperCase() + value.slice(1)}
+            {value}
           </ToggleButton>
         ))}
       </ToggleButtonGroup>
 
       <Box
         sx={{
+          mt: 1,
           position: "relative",
           overflow: "hidden",
           display: "flex",
           justifyContent: "center",
-          backgroundImage: isDarkMode
-            ? "linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px)"
-            : "linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px)",
-          backgroundSize: "20px 20px"
+          bgcolor: "background.paper",
+          border: `.5px solid ${theme.palette.divider}`,
+          borderRadius: theme.shape.borderRadius,
         }}>
         {tab === "preview" ? (
           <Box
@@ -116,57 +107,99 @@ export const CodePreviewCopyWrapper: React.FC<CodePreviewWrapperProps> = ({
         ) : (
           <Box
             sx={{
-              height: "500px",
-              overflow: "auto",
+              height: 500,
+              width: "100%",
+              overflowX: "hidden",
+              overflowY: "scroll",
               bgcolor: "background.paper",
-              p: 2,
-              width: "100%"
-            }}>
-            <Box
+              scrollbarWidth: "thin",
+              scrollbarColor: "#888 transparent",
+              "&::-webkit-scrollbar-button": {
+                display: "none",
+                height: 0,
+                width: 0,
+              },
+            }}
+          >
+
+            <IconButton
               onClick={handleCopy}
+              size="small"
               sx={{
+                bgcolor: "background.paper",
+                borderRadius: theme.shape.borderRadius,
                 position: "absolute",
                 top: 10,
                 right: 10,
-                cursor: "pointer",
-                zIndex: 10
+                zIndex: 99,
               }}>
               <Iconify
                 icon={icon}
                 style={{
-                  height: 32,
-                  width: 32,
+                  height: 24,
+                  width: 24,
+                  padding: 1,
                   transition: "box-shadow 0.2s ease",
-                  borderRadius: "3px",
-                  padding: 4
                 }}
               />
+            </IconButton>
+
+            <Box sx={{ scrollbarColor: "transparent transparent", py: 2, px: 3 }}>
+              {isMultiFile && (
+                <Tabs
+                  value={activeFile}
+                  onChange={(_, newFile) => setActiveFile(newFile)}
+                  variant="scrollable"
+                  scrollButtons="auto"
+                  sx={{ mb: 2 }}>
+                  {codeString.map((file) => (
+                    <Tab
+                      key={file.name}
+                      value={file.name}
+                      label={file.name}
+                      sx={{ textTransform: "none" }}
+                    />
+                  ))}
+                </Tabs>
+              )}
+
+              <Highlight
+                theme={isDarkMode ? themes.dracula : themes.github}
+                code={currentCode}
+                language="tsx"
+              >
+                {({ style, tokens, getLineProps, getTokenProps }) => (
+                  <Box
+                    sx={{
+                      backgroundColor: (theme) => theme.palette.background.paper,
+                      overflowX: "auto"
+                    }}
+                  >
+                    <pre style={{ ...style, backgroundColor: "transparent", margin: 0 }}>
+                      {tokens.map((line, i) => (
+                        <div key={i} {...getLineProps({ line })}>
+                          <Typography
+                            component="span"
+                            sx={{
+                              fontSize: 14,
+                              mr: 2,
+                              fontWeight: 500,
+                              color: "text.primary",
+                            }}
+                          >
+                            {i + 1}
+                          </Typography>
+                          {line.map((token, key) => (
+                            <span key={key} {...getTokenProps({ token })} />
+                          ))}
+                        </div>
+                      ))}
+                    </pre>
+                  </Box>
+                )}
+              </Highlight>
             </Box>
 
-            {isMultiFile && (
-              <Tabs
-                value={activeFile}
-                onChange={(_, newFile) => setActiveFile(newFile)}
-                variant="scrollable"
-                scrollButtons="auto"
-                sx={{ mb: 2 }}>
-                {codeString.map((file) => (
-                  <Tab
-                    key={file.name}
-                    value={file.name}
-                    label={file.name}
-                    sx={{ textTransform: "none" }}
-                  />
-                ))}
-              </Tabs>
-            )}
-
-            <SyntaxHighlighter
-              language="tsx"
-              style={getCustomSyntaxStyle(theme.palette.mode)}
-              customStyle={{ margin: 0 }}>
-              {currentCode}
-            </SyntaxHighlighter>
           </Box>
         )}
       </Box>

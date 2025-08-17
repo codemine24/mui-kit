@@ -37,7 +37,7 @@ export const HeroInfinityCard = ({ title, url }: { title: string; url: string })
           position: "relative",
           border: (theme) => `.5px solid ${theme.palette.divider}`,
           borderRadius: (theme) => theme.shape.borderRadius,
-          background: (theme) => alpha(theme.palette.background.paper, 0.45),
+          background: (theme) => theme.palette.mode === "dark" ? alpha(theme.palette.background.paper, 0.45) : theme.palette.background.paper,
           overflow: "hidden",
           transition: "transform 0.3s, background 0.3s",
           "&:before": {

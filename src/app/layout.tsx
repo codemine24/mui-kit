@@ -6,15 +6,9 @@ import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
 import GlobalStyles from "@mui/material/GlobalStyles";
 import { Metadata } from "next";
-import { Poppins, Raleway } from "next/font/google";
+import { Raleway } from "next/font/google";
 import Script from "next/script";
 import "../styles/globals.css";
-
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-  display: "swap"
-});
 
 const raleway = Raleway({
   subsets: ["latin"],
@@ -74,10 +68,15 @@ export default function RootLayout({
           <GlobalStyles
             styles={{
               "html, body, #__next": {
-                transition: "background-color 0.3s ease, color 0.3s ease"
+                // transition: "background-color 0.3s ease, color 0.3s ease"
               },
               "*": {
-                transition: "background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease"
+                // transition: "background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease"
+              },
+              "pre": {
+                fontFamily: "Operator Mono Lig",
+                fontWeight: 300,
+                fontSize: "14px"
               }
             }}
           />

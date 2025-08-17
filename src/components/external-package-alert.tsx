@@ -17,8 +17,7 @@ export const ExternalPackageAlert = ({ packages, force = false, sx }: IProps) =>
   const handleCopy = async () => {
     try {
       await navigator.clipboard.writeText(
-        `npm install ${packages.map((pkg) => pkg.name).join(" ")} ${
-          force ? "--force" : ""
+        `npm install ${packages.map((pkg) => pkg.name).join(" ")} ${force ? "--force" : ""
         }`
       );
       setIcon("eva:checkmark-fill");
@@ -46,6 +45,7 @@ export const ExternalPackageAlert = ({ packages, force = false, sx }: IProps) =>
         </Box>
       }
       sx={{
+        mb: 3,
         borderRadius: (theme) => theme.shape.borderRadius,
         alignItems: "center",
         ...sx
