@@ -49,6 +49,7 @@ export const PATHS = {
     NEWSLETTER_SUBSCRIPTION: "/blocks/newsletter-subscription",
     PRICING_MENU: "/blocks/pricing-menu",
     PRICING_TABLE: "/blocks/pricing-table",
+    PROFILE_CARD: "/blocks/profile-card",
     SERVICES: "/blocks/services",
     SINGLE_PROFILE: "/blocks/single-profile",
     TEAM: "/blocks/team",
