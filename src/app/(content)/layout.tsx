@@ -1,52 +1,72 @@
-"use client";
-import { OnThisPage } from "@/components/on-this-page";
-import { useOnThisPage } from "@/contexts/on-thispage-context";
-import Container from "@mui/material/Container";
-import Grid from "@mui/material/Grid";
-import React from "react";
-import { ContentSidebar } from "./components/content-sidebar";
+import AppProvider from "@/providers/app-provider";
+import { Metadata } from "next";
+import { Raleway } from "next/font/google";
+import Script from "next/script";
+import "@/styles/globals.css";
+import { ContentLayout } from "./_components/content-layout";
+import { OnThisPageProvider } from "@/contexts/on-thispage-context";
 
-export default function ContentLayout({ children }: { children: React.ReactNode }) {
-  const { isOnThisPage } = useOnThisPage();
+const raleway = Raleway({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  display: "swap"
+});
+
+
+export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_PRODUCTION_URL || "https://www.muikit.com"),
+  title: {
+    default: "MUI Kit - Open Source Material UI Components library",
+    template: "%s | MUI Kit"
+  },
+  description: "A complete set of open source components for Material UI"
+};
+
+export default function ContentRootLayout({
+  children
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  const gtmId = process.env.NEXT_PUBLIC_GTM_ID;
   return (
-    <Container maxWidth="xl" sx={{ position: "relative" }}>
-      <Grid container spacing={0}>
-        <Grid
-          size={{ xs: 0, md: 2 }}
-          sx={{
-            display: { xs: "none", md: "block" },
-            position: "sticky",
-            top: 60,
-            height: "calc(100vh - 80px)",
-            overflowY: "auto"
-          }}>
-          <ContentSidebar variant="sidebar" />
-        </Grid>
+    <html
+      lang="en"
+      className={`${raleway.className}`}
+      suppressHydrationWarning>
+      <head>
+        {/* GTM Script */}
+        <Script
+          id="gtm-script"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+              })(window,document,'script','dataLayer','${gtmId}');
+            `
+          }}
+        />
+      </head>
+      <body>
+        {/* GTM NoScript fallback */}
+        <noscript>
+          <iframe
+            src={`https://www.googletagmanager.com/ns.html?id=${gtmId}`}
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}></iframe>
+        </noscript>
 
-        <Grid
-          size={{ xs: 12, md: isOnThisPage ? 8 : 10 }}
-          sx={{
-            pl: { md: 2, lg: 4 },
-            pr: { md: isOnThisPage ? 2 : 0, lg: isOnThisPage ? 4 : 0 },
-            pt: { xs: 2, md: 3 },
-            overflowY: "auto",
-            scrollbarWidth: "none",
-            minHeight: "calc(100vh - 175px)"
-          }}>
-          {children}
-        </Grid>
-        <Grid
-          size={{ xs: 0, md: isOnThisPage ? 2 : 0 }}
-          sx={{
-            display: { xs: "none", md: "block" },
-            position: "sticky",
-            top: 62,
-            height: "calc(100vh - 20px)",
-            overflowY: "auto"
-          }}>
-          <OnThisPage />
-        </Grid>
-      </Grid>
-    </Container>
+        <AppProvider>
+          <OnThisPageProvider>
+            <ContentLayout>
+              {children}
+            </ContentLayout>
+          </OnThisPageProvider>
+        </AppProvider>
+      </body>
+    </html>
   );
 }

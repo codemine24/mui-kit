@@ -12,7 +12,7 @@ export const TopHeader = () => {
   return (
     <Box
       sx={{
-        background: `linear-gradient(95deg, ${theme.palette.primary.main} 0%, ${theme.palette.secondary.main} 100%)`,
+        background: `linear-gradient(95deg, ${theme.palette.primary.main} 0%, ${theme.palette.primary.dark} 100%)`,
         color: theme.palette.common.white,
         py: 1,
         textAlign: "center",

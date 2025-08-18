@@ -1,16 +1,16 @@
 import Container from "@mui/material/Container";
 import { Metadata } from "next";
-import { ChangeLogView } from "./change-log-view";
+import { ReportBugView } from "./report-bug";
 
 export const metadata: Metadata = {
-  title: "Change Log",
+  title: "Report a Bug",
   description: "A complete set of open source components for Material UI"
 };
 
 export default function Contribute() {
   return (
-    <Container maxWidth={"xl"}>
-      <ChangeLogView />
+    <Container maxWidth={"xl"} sx={{ pt: 10 }}>
+      <ReportBugView />
     </Container>
   );
 }

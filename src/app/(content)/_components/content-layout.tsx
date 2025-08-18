@@ -1,0 +1,61 @@
+"use client";
+
+import { OnThisPage } from "@/components/on-this-page";
+import { useOnThisPage } from "@/contexts/on-thispage-context";
+import Container from "@mui/material/Container";
+import Grid from "@mui/material/Grid";
+import React from "react";
+import { ContentSidebar } from "../components/content-sidebar";
+import { ContentHeader } from "./content-header";
+import Box from "@mui/material/Box";
+import { TopHeader } from "@/components/top-header";
+
+export const ContentLayout = ({ children }: { children: React.ReactNode }) => {
+    const { isOnThisPage } = useOnThisPage();
+    return (
+        <Box>
+            <TopHeader />
+            <ContentHeader />
+            <Container maxWidth="xl" sx={{ position: "relative" }}>
+                <Grid container spacing={0}>
+                    <Grid
+                        size={{ xs: 0, md: 2 }}
+                        sx={{
+                            display: { xs: "none", md: "block" },
+                            position: "sticky",
+                            top: 60,
+                            height: "calc(100vh - 80px)",
+                            overflowY: "auto"
+                        }}>
+                        <ContentSidebar variant="sidebar" />
+                    </Grid>
+
+                    <Grid
+                        size={{ xs: 12, md: isOnThisPage ? 8 : 10 }}
+                        sx={{
+                            pl: { md: 2, lg: 4 },
+                            pr: { md: isOnThisPage ? 2 : 0, lg: isOnThisPage ? 4 : 0 },
+                            pt: { xs: 2, md: 3 },
+                            pb: 2,
+                            overflowY: "auto",
+                            scrollbarWidth: "none",
+                            minHeight: "calc(100vh - 175px)"
+                        }}>
+                        {children}
+                    </Grid>
+                    <Grid
+                        size={{ xs: 0, md: isOnThisPage ? 2 : 0 }}
+                        sx={{
+                            display: { xs: "none", md: "block" },
+                            position: "sticky",
+                            top: 62,
+                            height: "calc(100vh - 20px)",
+                            overflowY: "auto"
+                        }}>
+                        <OnThisPage />
+                    </Grid>
+                </Grid>
+            </Container>
+        </Box>
+    );
+}

@@ -50,10 +50,10 @@ export const ContentSidebar = ({ variant = "sidebar", onClose }: ContentSidebarP
         .flatMap((group) =>
           group.items.length > 0
             ? group.items.map((item) => ({
-                key: item.path,
-                label: item.label,
-                path: item.path
-              }))
+              key: item.path,
+              label: item.label,
+              path: item.path
+            }))
             : [{ key: group.key, label: group.label, path: group.path || "" }]
         )
         .filter((item) => item.label.toLowerCase().includes(value.toLowerCase()));
@@ -86,7 +86,7 @@ export const ContentSidebar = ({ variant = "sidebar", onClose }: ContentSidebarP
         display: "flex",
         flexDirection: "column",
         p: variant === "drawer" ? 3 : 0,
-        pt: variant === "drawer" ? 3 : 0,
+        pt: 2,
         scrollbarWidth: "none",
         "&::-webkit-scrollbar": {
           display: "none"
@@ -99,7 +99,7 @@ export const ContentSidebar = ({ variant = "sidebar", onClose }: ContentSidebarP
       )}
 
       {/* Search */}
-      <Box
+      {/* <Box
         sx={(theme) => ({
           py: variant === "drawer" ? 0 : 2,
           pt: 2,
@@ -141,7 +141,7 @@ export const ContentSidebar = ({ variant = "sidebar", onClose }: ContentSidebarP
             }
           }}
         />
-      </Box>
+      </Box> */}
       <List>
         {/* search results */}
         {searchValue ? (
@@ -351,9 +351,10 @@ export const ContentSidebar = ({ variant = "sidebar", onClose }: ContentSidebarP
                               <ListItemButton
                                 disableRipple
                                 sx={{
+                                  ml: 1,
+                                  py: 0,
                                   borderRadius: 1,
                                   position: "relative",
-                                  ml: 1,
                                   "&:hover": {
                                     bgcolor: "transparent"
                                   },
@@ -364,8 +365,9 @@ export const ContentSidebar = ({ variant = "sidebar", onClose }: ContentSidebarP
                                     content: '""',
                                     position: "absolute",
                                     left: 0,
-                                    top: "25%",
-                                    height: "50%",
+                                    top: "50%",
+                                    transform: "translateY(-50%)",
+                                    height: "90%",
                                     width: "2px",
                                     bgcolor: "primary.main",
                                     borderRadius: "0 2px 2px 0"
@@ -374,30 +376,24 @@ export const ContentSidebar = ({ variant = "sidebar", onClose }: ContentSidebarP
                                     content: '""',
                                     position: "absolute",
                                     left: 0,
-                                    top: "25%",
-                                    height: "50%",
+                                    top: "50%",
+                                    transform: "translateY(-50%)",
+                                    height: "90%",
                                     width: "2px",
                                     bgcolor: isActive(item.path) ? "primary.main" : "transparent",
                                     borderRadius: "0 2px 2px 0"
                                   },
                                   ".MuiTypography-root": {
-                                    fontSize: {
-                                      md: pxToRem(14),
-                                      lg: pxToRem(15)
-                                    }
+                                    fontSize: pxToRem(14)
                                   }
                                 }}>
                                 <ListItemText
                                   primary={item.label}
                                   primaryTypographyProps={{
                                     variant: "body2",
-                                    color: "text.primary",
+                                    color: isActive(item.path) ? "primary.main" : "text.secondary",
                                     fontWeight: isActive(item.path) ? 500 : 400,
-
-                                    fontSize: {
-                                      md: pxToRem(14),
-                                      lg: pxToRem(15)
-                                    }
+                                    fontSize: pxToRem(14)
                                   }}
                                 />
                               </ListItemButton>

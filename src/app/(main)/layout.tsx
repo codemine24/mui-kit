@@ -1,14 +1,12 @@
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
-import { OnThisPageProvider } from "@/contexts/on-thispage-context";
 import AppProvider from "@/providers/app-provider";
 import Box from "@mui/material/Box";
-import CssBaseline from "@mui/material/CssBaseline";
-import GlobalStyles from "@mui/material/GlobalStyles";
 import { Metadata } from "next";
 import { Raleway } from "next/font/google";
 import Script from "next/script";
-import "../styles/globals.css";
+import "@/styles/globals.css";
+import { SponsorshipPopup } from "@/components/sponsorship-popup";
 
 const raleway = Raleway({
   subsets: ["latin"],
@@ -64,28 +62,11 @@ export default function RootLayout({
         </noscript>
 
         <AppProvider>
-          <CssBaseline />
-          <GlobalStyles
-            styles={{
-              "html, body, #__next": {
-                // transition: "background-color 0.3s ease, color 0.3s ease"
-              },
-              "*": {
-                // transition: "background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease"
-              },
-              "pre": {
-                fontFamily: "Operator Mono Lig",
-                fontWeight: 300,
-                fontSize: "14px"
-              }
-            }}
-          />
-          <OnThisPageProvider>
-            {/* <TopHeader /> */}
-            <Header />
-            <Box>{children}</Box>
-            <Footer />
-          </OnThisPageProvider>
+          {/* <TopHeader /> */}
+          <Header />
+          <Box>{children}</Box>
+          <Footer />
+          <SponsorshipPopup />
         </AppProvider>
       </body>
     </html>

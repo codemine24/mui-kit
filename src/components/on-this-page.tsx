@@ -110,7 +110,7 @@ export const OnThisPage = () => {
                         color: isActive ? "text.primary" : "text.secondary",
                         pl: 2,
                         textAlign: "left",
-                        fontSize: { xs: 13, sm: 14 },
+                        fontSize: 13,
                         textDecoration: "none",
                         fontWeight: isActive ? 500 : 400,
                         "&:hover": {

@@ -1,11 +1,10 @@
 "use client";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import { useTheme } from "@mui/material/styles";
 import Link from "next/link";
+import Button from "@mui/material/Button";
 
 export default function NotFound() {
-  const theme = useTheme();
   return (
     <Box
       sx={{
@@ -37,9 +36,9 @@ export default function NotFound() {
         }}>
         Oops! The page you&apos;re looking for doesn&apos;t exist.
       </Typography>
-      <Link href="/" style={{ textDecoration: "none", color: theme.palette.primary.main }}>
+      <Button variant="contained" color="primary" component={Link} href="/">
         Back to home
-      </Link>
+      </Button>
     </Box>
   );
 }
