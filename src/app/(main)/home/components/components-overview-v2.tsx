@@ -97,7 +97,7 @@ export const ComponentOverviewV2 = () => {
                       justifyContent: "center",
                       alignItems: "center",
                       width: "100%",
-                      color: "#555555",
+                      color: "text.secondary",
                     }}
                     width={40}
                     height={40}
