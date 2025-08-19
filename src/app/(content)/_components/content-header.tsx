@@ -14,7 +14,6 @@ import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
 import Stack from "@mui/material/Stack";
 import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
 import { alpha, useTheme } from "@mui/material/styles";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -106,15 +105,29 @@ export const ContentHeader = () => {
                     {/* Desktop action buttons */}
                     <Stack gap={2} alignItems="center" direction="row">
                         <SearchBox />
-                        <Typography
+                        <IconButton
                             component={Link}
                             href={"https://github.com/codemine24/mui-kit"}
-                            target="_blank">
+                            target="_blank"
+                            sx={{
+                                border: `1px solid ${theme.palette.divider}`,
+                                borderRadius: "8px",
+                                p: '11px'
+                            }}
+                        >
                             <Iconify icon="mdi:github" style={{ color: theme.palette.text.secondary }} />
-                        </Typography>
-                        <span onClick={toggleColorMode} style={{ cursor: "pointer" }}>
+                        </IconButton>
+
+                        <IconButton
+                            onClick={toggleColorMode}
+                            sx={{
+                                cursor: "pointer",
+                                border: `1px solid ${theme.palette.divider}`,
+                                borderRadius: "8px",
+                                p: '11px'
+                            }}>
                             <Iconify icon={mode === "light" ? "tdesign:mode-dark" : "iconoir:sun-light"} />
-                        </span>
+                        </IconButton>
                     </Stack>
                 </Toolbar>
             </Container>

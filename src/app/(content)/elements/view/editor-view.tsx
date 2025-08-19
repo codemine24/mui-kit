@@ -85,7 +85,6 @@ export const EditorView = () => {
         description="Material ui is missing rich text editor. So we've added it using a light weight but powerful package @tiptap/react which is fully compatible with mui."
       />
       <Divider sx={{ my: 4 }} />
-      <Divider sx={{ my: 4 }} />
       <ExternalPackageAlert
         packages={[
           {

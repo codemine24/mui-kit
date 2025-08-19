@@ -107,7 +107,7 @@ export const CodePreviewCopyWrapper: React.FC<CodePreviewWrapperProps> = ({
         ) : (
           <Box
             sx={{
-              height: 500,
+              maxHeight: 500,
               width: "100%",
               overflowX: "hidden",
               overflowY: "scroll",

@@ -69,7 +69,6 @@ export const PATHS = {
     ROOT: "/form",
   },
   ABOUT: "/about",
-
   FOOTER: {
     REPORT_BUG: "/report-bug",
     CHANGE_LOG: "/change-log",

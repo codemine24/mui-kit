@@ -14,7 +14,6 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
-import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import { useTheme } from "@mui/material/styles";
 import Link from "next/link";
@@ -40,28 +39,6 @@ export const ContentSidebar = ({ variant = "sidebar", onClose }: ContentSidebarP
   };
 
   const isActive = (path: string) => pathname === path;
-
-  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value;
-    setSearchValue(value);
-
-    if (value) {
-      const results = contentSidebarPathGroups
-        .flatMap((group) =>
-          group.items.length > 0
-            ? group.items.map((item) => ({
-              key: item.path,
-              label: item.label,
-              path: item.path
-            }))
-            : [{ key: group.key, label: group.label, path: group.path || "" }]
-        )
-        .filter((item) => item.label.toLowerCase().includes(value.toLowerCase()));
-      setSearchResults(results);
-    } else {
-      setSearchResults([]);
-    }
-  };
 
   const delayedSidebarClose = () => {
     if (onClose) {
@@ -98,50 +75,6 @@ export const ContentSidebar = ({ variant = "sidebar", onClose }: ContentSidebarP
         </Box>
       )}
 
-      {/* Search */}
-      {/* <Box
-        sx={(theme) => ({
-          py: variant === "drawer" ? 0 : 2,
-          pt: 2,
-          mb: variant === "drawer" ? 2 : 0,
-          px: variant === "drawer" ? 0 : 0.5,
-          position: "sticky",
-          top: variant === "drawer" ? -26 : 0,
-          zIndex: 10,
-          backgroundColor:
-            variant === "drawer" ? theme.palette.background.paper : theme.palette.background.default
-        })}>
-        <TextField
-          placeholder="Search components..."
-          size="small"
-          variant="outlined"
-          value={searchValue}
-          onChange={handleSearch}
-          fullWidth
-          InputProps={{
-            startAdornment: (
-              <Iconify icon="eva:search-outline" width={20} style={{ marginRight: "10px" }} />
-            )
-          }}
-          sx={{
-            mb: 0,
-
-            backgroundColor: theme.palette.background.paper,
-            "& .MuiOutlinedInput-root": {
-              borderRadius: theme.shape.borderRadius,
-              paddingLeft: 1,
-              fontSize: { md: pxToRem(14), lg: pxToRem(15) },
-              "&.Mui-focused fieldset": {
-                borderColor: "primary.main",
-                boxShadow: theme.shadows[1]
-              }
-            },
-            "& .MuiOutlinedInput-notchedOutline": {
-              borderColor: theme.palette.divider
-            }
-          }}
-        />
-      </Box> */}
       <List>
         {/* search results */}
         {searchValue ? (
