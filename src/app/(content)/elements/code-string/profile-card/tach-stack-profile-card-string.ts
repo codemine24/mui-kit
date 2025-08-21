@@ -1,12 +1,8 @@
-export const TachStackProfileCardString = `
-'use client';
-
-import React from "react";
+export const TachStackProfileCardString = `import React from "react";
 import {
   Card,
   Avatar,
   Typography,
-//   Box,
   Chip,
   Stack,
 } from "@mui/material";

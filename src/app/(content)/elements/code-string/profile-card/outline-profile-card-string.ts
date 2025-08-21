@@ -1,7 +1,4 @@
-export const outlineProfileCardString = `
-'use client';
-
-import { Card, Avatar, Typography,Stack, IconButton } from "@mui/material";
+export const outlineProfileCardString = `import { Card, Avatar, Typography,Stack, IconButton } from "@mui/material";
 import Link from "next/link";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import TwitterIcon from "@mui/icons-material/Twitter";

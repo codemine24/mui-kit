@@ -12,28 +12,36 @@ export const TopHeader = () => {
   return (
     <Box
       sx={{
-        bgcolor: theme.palette.primary.main,
+        background: `linear-gradient(95deg, ${theme.palette.primary.main} 0%, ${theme.palette.secondary.main} 100%)`,
         color: theme.palette.common.white,
         py: 1,
-        textAlign: "center"
-      }}>
+        textAlign: "center",
+      }}
+    >
       <Container maxWidth="xl">
-        <Stack direction={"row"} justifyContent={"center"} alignItems={"center"} gap={1}>
+        <Stack
+          direction={"row"}
+          justifyContent={"center"}
+          alignItems={"center"}
+          gap={1}
+        >
           {" "}
           <Typography
             variant="body1"
             fontSize={{ xs: 12, sm: 14, md: 14 }}
             sx={{
-              fontWeight: 400
-            }}>
+              fontWeight: 400,
+            }}
+          >
             Please support us running this open source project by{" "}
             <Link
               href="/contact"
               rel="noopener noreferrer"
               style={{
                 color: theme.palette.common.white,
-                textDecoration: "underline"
-              }}>
+                textDecoration: "underline",
+              }}
+            >
               sponsoring
             </Link>
           </Typography>

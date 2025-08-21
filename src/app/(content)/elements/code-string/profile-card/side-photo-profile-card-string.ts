@@ -1,7 +1,4 @@
-export const sidePhotoProfileCard = `
-'use client';
-
-import React from "react";
+export const sidePhotoProfileCardString = `import React from "react";
 import {
   Card,
   Avatar,

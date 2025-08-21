@@ -2,6 +2,7 @@ import { ComingSoon } from "@/components/coming-soon";
 import { PATHS } from "@/router/paths";
 import { blocksArr } from "@/router/router";
 import { JSX } from "react";
+import { ProfileCardView } from "../../elements/view/profile-card";
 import { AboutBlockView } from "../view/about-block-view";
 import { ContactBlockView } from "../view/contact-block-view";
 import { CopyrightView } from "../view/copyright-view";
@@ -10,12 +11,15 @@ import { CTAView } from "../view/cta-block-view";
 import { FaqView } from "../view/faq-view";
 import { FeatureProductView } from "../view/feature-product-view";
 import { FeatureView } from "../view/feature-view";
+import { FocusBoxView } from "../view/focus-box-view";
 import { FooterView } from "../view/footer-view";
 import { HeroView } from "../view/hero-view";
+import { JumbotronView } from "../view/jumbotron-view";
 import { NewsletterSubscriptionView } from "../view/newsletter-subscription-view";
 import { PricingMenuView } from "../view/pricing-menu-view";
 import { PricingTableView } from "../view/pricing-table-view";
 import { ServicesView } from "../view/services-view";
+import { SubHeroView } from "../view/sub-hero-view";
 import { TeamView } from "../view/team-view";
 import { TestimonialGridView } from "../view/testimonial-grid-view";
 import { TestimonialSliderView } from "../view/testimonial-slider-view";
@@ -44,12 +48,16 @@ const componentMap: Record<string, JSX.Element> = {
   "pricing-table": <PricingTableView />,
   services: <ServicesView />,
   "pricing-menu": <PricingMenuView />,
+  "profile-card": <ProfileCardView />,
   "single-profile": <CSView />,
   "testimonial-grid": <TestimonialGridView />,
   "testimonial-slider": <TestimonialSliderView />,
   team: <TeamView />,
   hero: <HeroView />,
-  'product-card': <ProductCard/>
+  'product-card': <ProductCard/>,
+  "sub-hero": <SubHeroView />,
+  "focus-box": <FocusBoxView />,
+  jumbotron: <JumbotronView />,
 };
 
 export default async function Page({

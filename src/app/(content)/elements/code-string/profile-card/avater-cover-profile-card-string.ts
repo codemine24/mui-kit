@@ -1,8 +1,4 @@
-export const avaterCoverProileCardString = `
-
-'use client';
-
-import {
+export const avatarCoverProfileCardString = `import {
   Box,
   Typography,
   Stack,
