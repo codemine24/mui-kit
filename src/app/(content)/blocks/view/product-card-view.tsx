@@ -24,7 +24,6 @@ import { glassProductCardString } from "../code-string/product-card/glass-produc
 import { discountProductCardString } from "../code-string/product-card/discount-product-card-string";
 import { coverBottomProductCardString } from "../code-string/product-card/cover-bottom-product-card-string";
 
-
 const sections = [
   {
     id: "product-card-1",
@@ -33,42 +32,42 @@ const sections = [
     codeString: productShowCaseCardString,
     preview: <ProductShowcaseCard />,
   },
-{
+  {
     id: "product-card-2",
     title: "Gradient Product Card",
     description: "Glassmorphism overlay with modern blur effect",
     codeString: gradientProductCardString,
     preview: <GradientProductCard />,
   },
-{
+  {
     id: "product-card-3",
     title: "Side Image Product Card",
     description: "Left side product image with full details on the right side",
     codeString: horizontalProductCardString,
     preview: <HorizontalProductCard />,
   },
- {
+  {
     id: "product-card-4",
     title: "Full Cover Product Card",
-    description: "Full cover image card with details inside overlay", 
-    codeString:fullCoverProductCardString,
+    description: "Full cover image card with details inside overlay",
+    codeString: fullCoverProductCardString,
     preview: <FullCoverProductCard />,
   },
-   {
+  {
     id: "product-card-5",
     title: "Side Image Product Card",
     description: "Left side product image with full details on the right side",
     codeString: splitProductCardString,
     preview: <SplitProductCard />,
   },
-     {
+  {
     id: "product-card-6",
     title: "Glass Overlay Product Card",
     description: "Glassmorphism overlay with details inside cover card",
     codeString: glassProductCardString,
     preview: <GlassProductCard />,
   },
-       {
+  {
     id: "product-card-7",
     title: "Discount Badge Card",
     description: "Cover card with discount badge on the top right corner",
@@ -76,12 +75,13 @@ const sections = [
     preview: <DiscountProductCard />,
   },
   {
-    id: 'product-card-8',
+    id: "product-card-8",
     title: "Bottom Cover Card",
-    description: "Product image covers 67% of the card height with details displayed in the remaining 33%.",
+    description:
+      "Product image covers 67% of the card height with details displayed in the remaining 33%.",
     codeString: coverBottomProductCardString,
-    preview: <CoverBottomProductCard/>
-  }
+    preview: <CoverBottomProductCard />,
+  },
 ];
 
 export const ProductCard = () => {
@@ -101,7 +101,6 @@ export const ProductCard = () => {
         title="Product Cards"
         description="Showcase products with modern, responsive Material UI card designs featuring price, badges, and actions."
       />
-
 
       <Divider sx={{ my: 4 }} />
 
